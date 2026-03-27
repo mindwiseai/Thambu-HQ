@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RaceSims — Facebook Page Fix Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: #18191a; color: #e4e6eb; line-height: 1.6; padding: 40px 20px; }
+  .container { max-width: 750px; margin: 0 auto; }
+  h1 { font-size: 2em; font-weight: 700; color: #2d88ff; margin-bottom: 4px; }
+  .subtitle { color: #b0b3b8; margin-bottom: 40px; }
+  .current-state { background: #242526; border: 1px solid #3e4042; border-radius: 12px; padding: 20px; margin-bottom: 28px; }
+  .current-state h3 { color: #e84545; font-size: 0.9em; margin-bottom: 12px; }
+  .stat-row { display: flex; gap: 20px; flex-wrap: wrap; }
+  .stat { text-align: center; flex: 1; min-width: 100px; }
+  .stat .num { font-size: 2em; font-weight: 700; color: #e84545; }
+  .stat .label { font-size: 0.75em; color: #b0b3b8; }
+  .section { background: #242526; border: 1px solid #3e4042; border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+  .section-header { padding: 16px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+  .section-header:hover { background: rgba(255,255,255,0.03); }
+  .section-header h2 { font-size: 1.05em; font-weight: 700; }
+  .section-header .arrow { color: #b0b3b8; transition: transform 0.2s; }
+  .section.open .arrow { transform: rotate(90deg); }
+  .section-body { padding: 0 20px 20px; display: none; }
+  .section.open .section-body { display: block; }
+  .step { display: flex; align-items: flex-start; gap: 14px; padding: 14px 0; border-bottom: 1px solid #3e4042; }
+  .step:last-child { border: none; }
+  .step-num { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: rgba(45,136,255,0.15); color: #2d88ff; font-weight: 700; font-size: 0.85em; flex-shrink: 0; }
+  .step-content h4 { font-size: 0.92em; margin-bottom: 4px; }
+  .step-content p { font-size: 0.82em; color: #b0b3b8; }
+  .copy-block { background: #1c1e21; border: 1px solid #3e4042; border-radius: 8px; padding: 14px; margin: 10px 0; position: relative; font-size: 0.85em; white-space: pre-wrap; line-height: 1.6; }
+  .copy-btn { position: absolute; top: 8px; right: 8px; padding: 4px 12px; border-radius: 6px; border: 1px solid #3e4042; background: rgba(45,136,255,0.1); color: #2d88ff; font-size: 0.75em; font-weight: 600; cursor: pointer; font-family: inherit; }
+  .copy-btn:hover { background: rgba(45,136,255,0.2); }
+  .note { background: rgba(45,136,255,0.06); border-left: 3px solid #2d88ff; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 14px 0; font-size: 0.85em; color: #b0b3b8; }
+  .warn { background: rgba(232,69,69,0.06); border-left: 3px solid #e84545; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 14px 0; font-size: 0.85em; color: #b0b3b8; }
+  p { color: #b0b3b8; font-size: 0.9em; margin-bottom: 8px; }
+  h3 { font-size: 0.95em; font-weight: 700; margin: 18px 0 10px; }
+  ul { padding-left: 20px; color: #b0b3b8; font-size: 0.85em; }
+  ul li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Facebook Page Fix Guide</h1>
+<p class="subtitle">Quick fixes to stop your Facebook page from hurting your brand. Minimal effort, maximum cleanup.</p>
+
+<!-- CURRENT STATE -->
+<div class="current-state">
+  <h3>Current State (as of 25 Mar 2026)</h3>
+  <div class="stat-row">
+    <div class="stat"><div class="num">6</div><div class="label">Followers</div></div>
+    <div class="stat"><div class="num">0</div><div class="label">Reviews</div></div>
+    <div class="stat"><div class="num" style="font-size:1em; padding-top: 12px;">Electronics Store</div><div class="label">Wrong Category</div></div>
+    <div class="stat"><div class="num" style="font-size:1em; padding-top: 12px;">No vanity URL</div><div class="label">Numeric ID only</div></div>
+  </div>
+</div>
+
+<!-- FIX 1: CATEGORY -->
+<div class="section open">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Fix 1: Change Category (2 minutes)</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <div class="warn">Your page is categorized as "Electronics Store." This hurts discoverability for anyone searching for racing/motorsports/gaming.</div>
+    <div class="step"><span class="step-num">1</span><div class="step-content"><h4>Go to your Facebook Page</h4><p>facebook.com/profile.php?id=61568502809846</p></div></div>
+    <div class="step"><span class="step-num">2</span><div class="step-content"><h4>Click "Edit Page" or go to Page Settings</h4><p>Look for the "..." menu or "Manage Page" option</p></div></div>
+    <div class="step"><span class="step-num">3</span><div class="step-content"><h4>Find "Categories" or "Page Category"</h4><p>Click Edit next to the current category</p></div></div>
+    <div class="step"><span class="step-num">4</span><div class="step-content"><h4>Change to one of these:</h4><p>Primary: <strong>"Sports & Recreation"</strong> or <strong>"Motorsport Store"</strong><br>Secondary: Add <strong>"Gaming"</strong> and <strong>"Automotive"</strong> if available</p></div></div>
+  </div>
+</div>
+
+<!-- FIX 2: VANITY URL -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Fix 2: Claim Vanity URL (2 minutes)</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <p>Your current URL is <code>facebook.com/profile.php?id=61568502809846</code> — unmemorable and looks sketchy.</p>
+    <div class="step"><span class="step-num">1</span><div class="step-content"><h4>Go to Page Settings → General</h4><p>Or try: facebook.com/settings → Username</p></div></div>
+    <div class="step"><span class="step-num">2</span><div class="step-content"><h4>Click "Edit" next to Username</h4><p>Enter: <strong>RaceSimsIndia</strong></p></div></div>
+    <div class="step"><span class="step-num">3</span><div class="step-content"><h4>Confirm</h4><p>Your new URL will be: <strong>facebook.com/RaceSimsIndia</strong></p></div></div>
+    <div class="note">If "RaceSimsIndia" is taken, try: "RaceSimsIN", "RaceSims.India", or "RaceSimsOfficial"</div>
+  </div>
+</div>
+
+<!-- FIX 3: COVER + ABOUT -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Fix 3: Cover Photo + About Section (10 minutes)</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <h3>Cover Photo</h3>
+    <p>Use the same banner image as YouTube for brand consistency. Recommended size: 820x312px. Use Canva — search "Facebook Cover" template.</p>
+
+    <h3>About Section (copy-paste)</h3>
+    <div class="copy-block">RaceSims — India's professional sim racing company. Founded by Thambu, a race engineer with 14 years of motorsport experience.
+
+We build competition-grade racing simulators for drivers, sim cafes, and motorsport enthusiasts. Every cockpit is designed using real race car ergonomics — the correct seating position, pedal distance, and steering angle from day one.
+
+Authorized Conspit & VNM distributor in India.
+
+🌐 Website: racesims.in
+📸 Instagram: @race.sims
+🎬 YouTube: @RaceSimsIndia
+💬 Discord: discord.gg/aUvGtzthy
+📱 WhatsApp: +91-7358229224
+✉️ Email: thambu@racesims.in
+
+📍 No.2, First Cross Street, Second Avenue, Ashok Nagar, Chennai 600083<button class="copy-btn" onclick="copyText(this)">Copy</button></div>
+
+    <h3>Business Hours</h3>
+    <p>Change from "Always open" to actual business hours. If you operate Mon-Sat 10 AM - 7 PM, set that. Accuracy builds trust.</p>
+  </div>
+</div>
+
+<!-- FIX 4: AUTO CROSS-POST -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Fix 4: Set Up Auto Cross-Posting (15 minutes)</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <p>Don't create separate Facebook content. Just auto-cross-post from Instagram using Meta Business Suite.</p>
+    <div class="step"><span class="step-num">1</span><div class="step-content"><h4>Go to business.facebook.com</h4><p>Log in with your Facebook account</p></div></div>
+    <div class="step"><span class="step-num">2</span><div class="step-content"><h4>Link your Instagram account</h4><p>Settings → Accounts → Instagram → Connect</p></div></div>
+    <div class="step"><span class="step-num">3</span><div class="step-content"><h4>Enable cross-posting</h4><p>When posting from Instagram, toggle "Also share to Facebook" ON</p></div></div>
+    <div class="step"><span class="step-num">4</span><div class="step-content"><h4>For existing posts</h4><p>Use Meta Business Suite → Content → select IG posts → Share to Facebook</p></div></div>
+    <div class="note">This means every Instagram post automatically appears on Facebook too. Zero extra effort. Facebook page stays active without any additional work.</div>
+  </div>
+</div>
+
+<!-- FIX 5: REVIEWS -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Fix 5: Get Reviews (Ongoing)</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <p>0 reviews = no social proof. Even 3-5 genuine reviews dramatically improve credibility.</p>
+    <h3>How to Get Reviews</h3>
+    <ul>
+      <li>After delivering a rig, send a WhatsApp message: "Hey [name], hope you're enjoying the setup! If you have a minute, a quick review on our Facebook page would really help us out: [link]"</li>
+      <li>Include a QR code linking to your Facebook review page in your delivery packaging</li>
+      <li>Ask your most active Instagram followers who are also on Facebook</li>
+      <li>Ask Conspit/VNM partners for professional endorsement reviews</li>
+    </ul>
+    <div class="note">Don't incentivize reviews (against Facebook policy). Just ask politely after a positive customer interaction. 5 genuine reviews > 50 fake ones.</div>
+  </div>
+</div>
+
+<!-- GOOGLE BUSINESS PROFILE -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Bonus: Google Business Profile (30 minutes)</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <p>This was a task in your dashboard. A Google Business Profile helps you appear in Google Maps and local search results.</p>
+    <div class="step"><span class="step-num">1</span><div class="step-content"><h4>Go to business.google.com</h4><p>Sign in with your Google account</p></div></div>
+    <div class="step"><span class="step-num">2</span><div class="step-content"><h4>Add your business</h4><p>Name: RaceSims Solutions Pvt Ltd<br>Category: "Racing Simulator" or "Sporting Goods Store"<br>Address: No.2, First Cross Street, Second Avenue, Ashok Nagar, Chennai 600083</p></div></div>
+    <div class="step"><span class="step-num">3</span><div class="step-content"><h4>Verify ownership</h4><p>Google will send a postcard or offer phone verification. Complete this ASAP.</p></div></div>
+    <div class="step"><span class="step-num">4</span><div class="step-content"><h4>Optimize the profile</h4><p>Add photos (workshop, products, rigs), business hours, phone number, website, services offered. Add posts weekly (same as Instagram cross-posts).</p></div></div>
+    <div class="note">Google Business Profile is free and directly impacts your visibility when people search "sim racing near me" or "racing simulator Chennai." High ROI for minimal effort.</div>
+  </div>
+</div>
+
+</div>
+
+<script>
+function copyText(btn) {
+  const block = btn.parentElement;
+  const text = block.textContent.replace('Copy', '').replace('Copied!', '').trim();
+  navigator.clipboard.writeText(text).then(() => { btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = 'Copy', 2000); });
+}
+</script>
+</body>
+</html>

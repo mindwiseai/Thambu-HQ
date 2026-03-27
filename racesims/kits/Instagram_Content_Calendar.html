@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaceSims Solutions - 30-Day Instagram Content Calendar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            color: #e0e0e0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            border-bottom: 2px solid #ff6b35;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ff6b35;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(255, 107, 53, 0.3);
+        }
+
+        .header-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 0.95em;
+            color: #b0b0b0;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-icon {
+            color: #ff6b35;
+            font-size: 1.2em;
+        }
+
+        .legend {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 107, 53, 0.05);
+            border: 1px solid #ff6b35;
+            border-radius: 8px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9em;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .type-reel { background: linear-gradient(135deg, #ff6b35, #ff8a5b); }
+        .type-carousel { background: linear-gradient(135deg, #6366f1, #818cf8); }
+        .type-story { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
+        .type-static { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        thead {
+            background: linear-gradient(135deg, #1f1f1f 0%, #2a2a2a 100%);
+            border-bottom: 2px solid #ff6b35;
+        }
+
+        th {
+            padding: 18px;
+            text-align: left;
+            font-weight: 600;
+            color: #ff6b35;
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #333;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        tbody tr:hover {
+            background: rgba(255, 107, 53, 0.08);
+            border-left: 4px solid #ff6b35;
+        }
+
+        tbody tr.expanded {
+            background: rgba(255, 107, 53, 0.12);
+        }
+
+        td {
+            padding: 16px 18px;
+            vertical-align: top;
+            font-size: 0.9em;
+        }
+
+        .day-cell {
+            font-weight: 600;
+            color: #ff6b35;
+            min-width: 60px;
+        }
+
+        .day-label {
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 4px;
+        }
+
+        .content-type {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .type-reel { background: linear-gradient(135deg, #ff6b35, #ff8a5b); }
+        .type-carousel { background: linear-gradient(135deg, #6366f1, #818cf8); }
+        .type-story { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
+        .type-static { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
+
+        .topic {
+            font-weight: 500;
+            color: #e0e0e0;
+            margin-bottom: 6px;
+        }
+
+        .hashtags {
+            font-size: 0.8em;
+            color: #888;
+            display: none;
+        }
+
+        .hashtags.show {
+            display: block;
+        }
+
+        .expanded-content {
+            display: none;
+            padding: 20px 18px;
+            background: rgba(255, 107, 53, 0.08);
+            border-top: 1px solid #333;
+        }
+
+        .expanded-content.show {
+            display: block;
+        }
+
+        .section-title {
+            color: #ff6b35;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+            text-transform: uppercase;
+        }
+
+        .caption-text {
+            line-height: 1.6;
+            color: #d0d0d0;
+            margin-bottom: 15px;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 3px solid #ff6b35;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .hashtag-text {
+            color: #ff6b35;
+            word-break: break-word;
+            line-height: 1.5;
+            font-size: 0.85em;
+            font-family: 'Courier New', monospace;
+        }
+
+        .copy-btn {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8em;
+            margin-right: 8px;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .copy-btn:hover {
+            background: #ff8a5b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+
+        .week-section {
+            margin-bottom: 40px;
+        }
+
+        .week-header {
+            background: linear-gradient(135deg, #ff6b35, #ff8a5b);
+            color: white;
+            padding: 12px 18px;
+            font-weight: 600;
+            font-size: 1em;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .giveaway-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #fbbf24, #fcd34d);
+            color: #1f2937;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 8px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 8px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            color: #ff6b35;
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📱 RaceSims Solutions - 30-Day Content Calendar</h1>
+            <div class="header-info">
+                <div class="info-item">
+                    <span class="info-icon">📅</span>
+                    <span>March 26 - April 24, 2026</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📊</span>
+                    <span>5 Posts/Week + Stories</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🏁</span>
+                    <span>@race.sims</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">30</div>
+                <div class="stat-label">Total Days</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20</div>
+                <div class="stat-label">Feed Posts</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10-15</div>
+                <div class="stat-label">Stories</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Giveaway</div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color type-reel"></div>
+                <span>Reel - Trending, Movement, Quick Tips</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color type-carousel"></div>
+                <span>Carousel - Multi-Part Content, Guides</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color type-story"></div>
+                <span>Story - Behind-the-Scenes, Polls, Quick Updates</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color type-static"></div>
+                <span>Static - Aesthetic, Quotes, Testimonials</span>
+            </div>
+        </div>
+
+        <!-- WEEK 1 -->
+        <div class="week-section">
+            <div class="week-header">📍 WEEK 1: March 26 - April 1 (Kickoff & Product Showcase)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Day</th>
+                        <th style="width: 12%;">Type</th>
+                        <th style="width: 30%;">Topic</th>
+                        <th style="width: 48%;">Caption Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">26 Mar<div class="day-label">Thursday</div></td>
+                        <td><span class="content-type type-reel">REEL</span></td>
+                        <td class="topic">Race Engineer Unboxing: Conspit Pedals Pro Series</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 500;">Click to expand caption & hashtags →</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+From championship-winning teams to your home office. Conspit Pro Series pedals are the foundation of any serious setup. Watch as we unbox and get our hands on what we've been testing for weeks. This isn't just a pedal set—it's load cell precision engineering that bridges the gap between sim and real track. The load cell technology means zero latency, instant feedback, and that authentic race car feel. Whether you're serious about improving your racecraft or just love the feel of true immersion, this one hits different. Swipe to see why our champion-level drivers are calling this a game-changer.
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#SimRacing #ConspitPedals #LoadCell #RaceEngineer #SimRacingGear #Racecraft #VirtualRacing #RaceSims #IndianGamer #RaceSimSetup #PedalSetup #SimRacerLife #RacingSimulator #GamingPC #PerformanceGrip</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">27 Mar<div class="day-label">Friday</div></td>
+                        <td><span class="content-type type-story">STORY</span></td>
+                        <td class="topic">Behind-the-Scenes: Warehouse Tour Pt1</td>
+                        <td>
+                            <div style="color: #888;">Quick warehouse peek + "Guess the product" poll</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Story Content:</div>
+                                <div class="caption-text">
+Show 2-3 quick cuts of warehouse shelves with Conspit, VNM, and entry-level Moza products. Use upbeat music. Add text overlay: "What's your next upgrade? 🏁" Include sticker poll: "Conspit or VNM?" Frame some products with hands/tools to add personality.
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">28 Mar<div class="day-label">Saturday</div></td>
+                        <td><span class="content-type type-carousel">CAROUSEL</span></td>
+                        <td class="topic">5 Setup Mistakes That Hurt Your Pace</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 500;">Click to expand caption & hashtags →</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+We've tested thousands of setups. These 5 mistakes are costing you tenths. Swipe through to see what championship-level engineers look for: 1) Sensitivity too high—lose precision 2) Damping imbalance—wheel feels twitchy 3) Missing deadzone—triggers phantom inputs 4) Wrong pedal curve—brake inconsistency 5) Gain too aggressive—disconnect from feedback. Each carousel card breaks down the mistake and the fix. Your fastest lap starts with a setup that listens. Save this carousel and share it with your sim racing crew. Let's build better drivers, together.
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#SimRacingSetup #RaceEngineer #SetupGuide #SimRacingTips #Wheelbase #DrivingTechnique #PerfectSetup #RaceSimCommunity #IndianSimRacing #VirtualRacing #SetupAdjustment #FasterLaps #RacingLine #SimRacerLife #EliteSetup</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">30 Mar<div class="day-label">Monday</div></td>
+                        <td><span class="content-type type-story">STORY</span></td>
+                        <td class="topic">Quick Tip: Throttle Linearity</td>
+                        <td>
+                            <div style="color: #888;">30-second racing tip + call to comment</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Story Content:</div>
+                                <div class="caption-text">
+Quick screen recording or animation showing throttle curve adjustment. Text overlay: "This one setting changed everything 🎮" Caption: "Are you using linear throttle? Drop a comment 👇" Make it snappy, 15-20 seconds max.
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">31 Mar<div class="day-label">Tuesday</div></td>
+                        <td><span class="content-type type-reel">REEL</span></td>
+                        <td class="topic">Conspit vs VNM: Premium Setup Comparison</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 500;">Click to expand caption & hashtags →</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+The winning debate: Conspit vs VNM. After testing both on the track and off, here's the honest breakdown. Conspit pedals deliver that snappy feedback and incredible precision—perfect if you want authentic braking feel without compromise. VNM shifters focus on tactile consistency and gate precision—you're building an ecosystem of precision tools. Both are championship-grade, built for drivers who believe in 8Nm minimum torque philosophy. Conspit = pedal excellence. VNM = shifter precision. Which side are you on? Your choice depends on your setup goals, your technique, and your commitment to the sport. We carry both because the best setup is the one that matches your racing DNA. Drop a comment: which would YOU choose and why?
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#SimRacing #ConspitPedals #VNMShifter #LoadCell #PedalComparison #RacingGear #SimRacingCommunity #IndianGamer #RaceSims #VirtualRacing #SetupGuide #RacingSimulator #Racecraft #CommunityFirst #ChooseYourPath</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">1 Apr<div class="day-label">Wednesday</div></td>
+                        <td><span class="content-type type-static">STATIC</span></td>
+                        <td class="topic">Customer Feature: Arjun's Champion Rig</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 500;">Click to expand caption & hashtags →</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+Meet Arjun, one of India's rising sim racing talents. His setup? Conspit pedals + VNM shifter + custom rig frame with 12Nm direct drive. When we asked what made the difference, he said: "It's not about the most expensive gear. It's about gear that talks to you." He's gone from casual sim racer to podium finisher in 8 months. His secret? Consistency, quality equipment with proper torque specs, and relentless focus. Arjun runs a full championship season on RaceSims gear and he's crushing it. Big props to him for letting us feature his rig. Want to see your setup here? Tag us in your posts or drop a comment below. We love spotlighting our community heroes.
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#SetupOfTheWeek #CommunityFeature #IndianSimRacer #RaceSims #SimRacingRig #MozaPower #MotorsportDreams #RacingCommunity #SimRacerLife #GearTalk #VirtualRacing #RacingPodium #IndianTalent #FeatureYourRig #RacecraftMatters</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- WEEK 2 -->
+        <div class="week-section">
+            <div class="week-header">📍 WEEK 2: April 2-8 (Education & Community Building)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Day</th>
+                        <th style="width: 12%;">Type</th>
+                        <th style="width: 30%;">Topic</th>
+                        <th style="width: 48%;">Caption Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">2 Apr<div class="day-label">Thursday</div></td>
+                        <td><span class="content-type type-reel">REEL</span></td>
+                        <td class="topic">Telemetry 101: Read Your Data</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 500;">Click to expand caption & hashtags →</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+Your telemetry is screaming at you. Most drivers don't know how to listen. Here's what a race engineer reads in 30 seconds: throttle application angle—are you smooth? Braking pressure curves—do you have confidence? Steering inputs—dead weight or precision? Tire slip ratio—are you on the edge or over it? Watch this reel as we break down a real telemetry chart from one of our drivers. See those spike patterns? That's where three tenths per lap are hiding. Telemetry isn't intimidating—it's your feedback loop. Every lap gives you data. Champions read that data. This is how you separate yourself from the field. Ready to decode your driving? The tools are there, the data is there. You just need someone to show you how. We can help with that.
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#Telemetry #RaceEngineer #DataDriven #SimRacing #RacingTips #PerformanceOptimization #DrivingAnalysis #RacecraftMastery #RacingLine #Motorsport #VirtualRacing #IndianSimRacer #SetupTuning #PerformanceData #ChampionMindset</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">3 Apr<div class="day-label">Friday</div></td>
+                        <td><span class="content-type type-story">STORY</span></td>
+                        <td class="topic">Interactive Poll: Favorite Track</td>
+                        <td>
+                            <div style="color: #888;">"Spa or Monza?" with animated track visuals</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Story Content:</div>
+                                <div class="caption-text">
+Story poll: "Pick your poison 🏁 Spa chaos or Monza speed?" Add mini clips from each track (YouTube footage fine). Encourage comments. Use sticker overlays. Make it playful and interactive. This drives engagement metrics.
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">4 Apr<div class="day-label">Saturday</div></td>
+                        <td><span class="content-type type-carousel">CAROUSEL</span></td>
+                        <td class="topic">Buyer Guide: Choosing Your First Wheelbase</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 500;">Click to expand caption & hashtags →</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+Your first wheelbase is a big decision. Don't overthink it. Here's what we tell every beginner: Budget matters—start with what you can afford, upgrade when you can. Force feedback strength—8Nm is the MINIMUM for serious learning. Anything below 8Nm doesn't cut it for championship-level training. 12Nm is ideal for intermediate drivers, 18Nm+ for pros. Brand reliability—we only stock brands we'd bet our reputation on. Compatibility—make sure it fits your ecosystem. Driver quality—a mediocre wheel won't teach you bad habits; poor technique will. We compare entry-level Moza, VNM, and Conspit across 6 categories. Swipe through to see which checks your boxes. Every wheelbase we carry is a winning choice IF it matches your needs and meets our 8Nm minimum standard. No wheel makes you faster. Your brain and your hours do. The gear just helps you hear what your car is telling you. What's holding you back from upgrading? Drop a comment.
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#BuyerGuide #SimRacingGear #FirstWheelbase #ConspitVsVNM #RacingEquipment #DirectDrive #SetupGuide #SimRacingCommunity #IndianGamer #RaceSims #GearComparison #8NmMinimum #GamingPC #PerformanceGrip #SimRacerJourney</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">6 Apr<div class="day-label">Monday</div></td>
+                        <td><span class="content-type type-reel">REEL</span></td>
+                        <td class="topic">Braking Technique: Trail Braking Master</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 500;">Click to expand caption & hashtags →</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+Trail braking separates amateurs from aliens. Here's why: most drivers brake in a straight line, then turn. Champions brake while turning. You carry more speed into the corner because your braking zone extends further. Your front tires have grip left—use it. The technique: hard initial braking, progressive release into the corner apex, smooth throttle application on exit. It's a dance. Your brake pressure decreases as your steering angle increases. This is THE move at Monaco, Suzuka, and every high-speed circuit. Watch how this translates in real-time telemetry. Your pedal curve matters here. Good resolution, responsive feel, and confidence in your equipment is essential. This is why we stock Conspit pedals—they're built for this level of precision. Want to learn more? Our engineers are here to help you nail this technique.
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#TrailBraking #BrakingTechnique #RacingTips #SimRacing #RaceEngineer #CornerSpeed #AdvancedTechnique #RacecraftMastery #ConspiTpedals #VirtualRacing #DrivingLine #MotorsportSkills #RacingSimulator #PerfectionMatters #IndianSimRacer</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">7 Apr<div class="day-label">Tuesday</div></td>
+                        <td><span class="content-type type-story">STORY</span></td>
+                        <td class="topic">Behind-the-Scenes: Testing New Gear</td>
+                        <td>
+                            <div style="color: #888;">Quick cuts of testing, hands-on feel, reaction shots</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Story Content:</div>
+                                <div class="caption-text">
+Behind-the-scenes clips of hands testing new products, adjusting setups, reaction to feels, maybe a funny moment. Add text: "All day testing = all night content 🏁" Frame it as "real work" that goes into product knowledge. Short, punchy, authentic.
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">8 Apr<div class="day-label">Wednesday</div></td>
+                        <td><span class="content-type type-static">STATIC</span></td>
+                        <td class="topic">Quote: Champions Are Made, Not Born</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 500;">Click to expand caption & hashtags →</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+"Champions are made through repetition, data analysis, and refusing to accept good enough." Every sim racer has raw talent. What separates the podium from the backmarker is consistency, focus, and the guts to review telemetry and admit where you're weak. We've worked with drivers from championship-winning teams. They all say the same thing: talent is half the battle. The other half is obsessive attention to detail. Your gear should match your ambition. Your setup should support your technique. Your community should push you to be better. We're here to provide the first two. The third one? That's on you and your crew. But we're building something special. You in?
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#RacingMindset #ChampionTalk #Dedication #SimRacingCommunity #RacecraftMatters #GrindNeverStops #PodiumMentality #MotorsportDreams #IndianRacer #VirtualRacing #RaceEngineer #AmbitioN #RacingSeason #BelieveInYourself #RaceSims</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- WEEK 3 -->
+        <div class="week-section">
+            <div class="week-header">📍 WEEK 3: April 9-15 (Giveaway Week + Engagement Push)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Day</th>
+                        <th style="width: 12%;">Type</th>
+                        <th style="width: 30%;">Topic</th>
+                        <th style="width: 48%;">Caption Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">9 Apr<div class="day-label">Thursday</div></td>
+                        <td><span class="content-type type-reel">REEL</span></td>
+                        <td class="topic">Sim vs Real: F1 Braking Lines Comparison</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 500;">Click to expand caption & hashtags →</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+Side-by-side: Real F1 footage vs. our sim racing telemetry. The braking lines are IDENTICAL. The inputs are IDENTICAL. The only difference? Real drivers have 3Gs of lateral force trying to kill them. In sim, you have precision feedback and the freedom to push limits without consequences. That's the superpower of sim racing. You can practice the exact technique that works on real track. You can repeat it 50 times in an evening. You can feel the margin and build confidence. Then when you get to real track, your muscle memory is already wired. We've had drivers go from sim podiums to real podiums because they trained on equipment that talks truth. This is why we're obsessed with equipment quality and driver education. Your setup should teach you the right habits. We'll make sure it does. Watch the full comparison in this reel.
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#SimVsReal #F1Racing #SimRacing #BrakingLine #RaceEngineer #RealTrackTraining #MotorsportSkills #VirtualRacing #IndianRacer #TelemetryComparison #TrackDay #RacingSeason #PrecisionDriving #SimRacerLife #ChampionTechnik</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">10 Apr<div class="day-label">Friday</div></td>
+                        <td><span class="content-type type-story">STORY</span></td>
+                        <td class="topic">Giveaway Announcement (Early Teaser)</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 600;">🎉 GIVEAWAY HYPE BUILD</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Story Content:</div>
+                                <div class="caption-text">
+Teaser stories: "Something big is coming Monday 🎁" Show mystery product shots, zoomed-in details, cryptic emoji hints. Build FOMO. Make it clear there's a giveaway tomorrow. Use sticker: "Follow to not miss!" Create anticipation.
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">11 Apr<div class="day-label">Saturday</div></td>
+                        <td><span class="content-type type-reel">REEL</span></td>
+                        <td class="topic">🎁 GIVEAWAY: 10,000 Follower Celebration</td>
+                        <td>
+                            <div style="color: #fbbf24; font-weight: 700;">🎉 MAJOR GIVEAWAY POST 🎉</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+WE'RE GIVING AWAY A COMPLETE SIM RACING RIG (worth ₹50,000+) to celebrate our growing community! Here's what you're winning: Conspit Pro Pedals + VNM H-Pattern Shifter + 12Nm Direct Drive Wheelbase + RaceSims branded rig frame. That's a full championship-level setup ready to dominate competitive racing. TO ENTER: 1) Follow @race.sims (if not already) 2) Like this post 3) Tag 3 sim racing friends in the comments 4) Follow our partner brands (@conspit_official, @vnmshifters) BONUS ENTRY: Share this post to your Stories and tag us for a second chance to win. Drawing happens April 15th. This giveaway is HUGE because you represent our community. We're not some faceless gear shop—we're engineers, racers, and community builders. Your support means we can invest in better products, better education, and better content. Thank you for 10k journey. Let's hit 50k together. GOOD LUCK! 🏁
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#GiveAway #FreeMoza #FreeRig #SimRacing #RaceSims #WheelbaseGiveaway #IndianSimRacer #CommunityLove #RaceEngineer #JoinTheRace #VirtualRacing #RacingGear #MotorsportDreams #Follow #ShareTheLove</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">12 Apr<div class="day-label">Sunday</div></td>
+                        <td><span class="content-type type-story">STORY</span></td>
+                        <td class="topic">Giveaway Boost: Prize Showcase Stories</td>
+                        <td>
+                            <div style="color: #888;">Unboxing each prize, highlighting value, reminder to enter</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Story Content:</div>
+                                <div class="caption-text">
+Break down the giveaway prizes across 4-5 stories. Show each piece (Conspit Pro Pedals, VNM H-Pattern Shifter, 12Nm Wheelbase, Rig Frame). Quick close-ups, value callouts, "This could be YOU" vibe. Link to giveaway post in swipe-up/link. High energy, celebrate what they could win.
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">13 Apr<div class="day-label">Monday</div></td>
+                        <td><span class="content-type type-carousel">CAROUSEL</span></td>
+                        <td class="topic">Pedal Setup Guide: Consistency is Key</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 500;">Click to expand caption & hashtags →</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+Your pedals are the gateway to consistent braking and throttle control. Bad pedals = inconsistent input = slower times. Here's what separates championship-level pedals from budget tier: Load cell technology—measures pressure, not just position. Consistency—same input = same output, lap after lap. Resolution—picks up micro-adjustments in throttle. Durability—built for thousands of hours. We stock Conspit, and they nail all four. This carousel breaks down pedal setup from mounting to sensitivity curves. Swipe to see: 1) Mounting position matters 2) Your brake curve is personal 3) Throttle linearity changes everything 4) Pedal height affects your posture 5) Test, adjust, repeat. Pedals are where confidence is built. Your foot's feedback shapes your entire technique. Invest here. Thank you for giveaway participation—drawing happens this Friday!
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#PedalSetup #Conspit #LoadCell #BrakingTechnique #ThrottleControl #SimRacingGear #SetupGuide #PerfectionMatters #RaceEngineer #IndianSimRacer #ConsistencyWins #RacingSeason #VirtualRacing #GiveAwayWeek #ChampionTools</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">15 Apr<div class="day-label">Wednesday</div></td>
+                        <td><span class="content-type type-reel">REEL</span></td>
+                        <td class="topic">🎯 Giveaway Winner Announcement + Recap</td>
+                        <td>
+                            <div style="color: #fbbf24; font-weight: 700;">✅ GIVEAWAY RESULT</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+THE MOMENT YOU'VE ALL BEEN WAITING FOR... Our giveaway winner is [WINNER NAME]! 🎉 Massive congratulations—your championship-ready rig is on the way. A huge thank you to everyone who participated, shared, and supported this giveaway. We saw entries from across India and it was INCREDIBLE. This is what our community means to us. From 537 followers to now—this growth is real and it's because of drivers like you. NEXT UP: We're doing this again. Subscribe so you don't miss our next giveaway, workshop announcement, or exclusive community event. The energy has been unreal this week. Let's keep it going. Tell me: what gear are you most curious about? Drop a comment and let's start a conversation. We're here to help you level up.
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#WinnerAnnounced #Congratulations #RaceSims #GiveAwayComplete #CommunityLove #IndianSimRacing #ThankYou #NextGiveaway #RaceReady #SupportLocal #VirtualRacing #RacingCommunity #MotorsportFamily #JoinUs #StayTuned</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- WEEK 4 -->
+        <div class="week-section">
+            <div class="week-header">📍 WEEK 4: April 16-22 (Momentum & Product Launches)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Day</th>
+                        <th style="width: 12%;">Type</th>
+                        <th style="width: 30%;">Topic</th>
+                        <th style="width: 48%;">Caption Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">17 Apr<div class="day-label">Thursday</div></td>
+                        <td><span class="content-type type-reel">REEL</span></td>
+                        <td class="topic">VNM Shifter Unboxing & First Feel</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 500;">Click to expand caption & hashtags →</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+People ask: "Do I really need a shifter for sim racing?" Our answer: "No. But if you're serious about immersion and championship racing, yes." The VNM shifter changes your entire feel of the car. Manual shifting = deeper connection to the machine. Every gear change becomes intentional, not automatic. Watch us unbox and test the VNM H-pattern shifter. Feel that satisfying click? That's precision engineering. That's built for consistency across thousands of shifts. This isn't a toy—it's a tool for building muscle memory that transfers to real track. The tactile feedback, the gate resistance, the resistance curves—all designed for racing discipline. If you're running a racing rig seriously, a good shifter takes you to the next level. VNM delivers. Your championship season starts with gear that inspires confidence. We're stocking these now.
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#VNMShifter #SimRacing #Unboxing #Shifter #ManualGear #RacingRig #FullSetup #ImmersionMatters #RaceEngineer #IndianSimRacer #GearReview #RacingSeason #ChampionshipReady #VirtualRacing #PerformanceGear</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">18 Apr<div class="day-label">Friday</div></td>
+                        <td><span class="content-type type-story">STORY</span></td>
+                        <td class="topic">Behind-the-Scenes: Packing Orders</td>
+                        <td>
+                            <div style="color: #888;">Real packing footage, care detail shots, sticker swag</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Story Content:</div>
+                                <div class="caption-text">
+Quick BTS of packing orders—show care being taken, wrapping gear carefully, stickers/branding inside. Text: "Your gear arrives like a gift 📦" Show someone unboxing in a warehouse, genuine excitement. Humanize the process. Quick, authentic, relatable.
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">19 Apr<div class="day-label">Saturday</div></td>
+                        <td><span class="content-type type-carousel">CAROUSEL</span></td>
+                        <td class="topic">Common Mistakes: Budget Rig Edition</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 500;">Click to expand caption & hashtags →</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+You don't need to spend ₹2 lakhs to build a competitive rig. You DO need to avoid these mistakes: 1) Cheap wheel without load-cell feedback—you won't feel what you need to improve. 2) Cheap pedals with spongy brake feel—inconsistency kills your confidence. 3) No rig frame—loose wheelbases change every session. 4) Ignoring wheel settings—wrong sensitivity loses you tenths. 5) Mismatched components—your shifter should match your wheel's ecosystem. 6) No desk mount—vibration fatigue is real. Budget ≠ bad. Budget WISELY = good. Spend where it matters: wheel, pedals, mount. Save elsewhere. We have competitive setups at every price point. Entry level (₹25k), mid-tier (₹50k), championship ready (₹1L+). Each is viable. Each is built by someone who knows racing. This carousel shows what to invest in, what to skip, and why. Your budget is part of your strategy. Let's make it work for you.
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#BudgetGaming #SimRacingSetup #GearAdvice #SmartBudget #RaceEngineer #IndianGamer #AffordableSetup #RaceSims #VirtualRacing #GamingPC #PerformanceValue #RacingRig #SetupGuide #ChoicesMatter #StartSmart</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">20 Apr<div class="day-label">Sunday</div></td>
+                        <td><span class="content-type type-story">STORY</span></td>
+                        <td class="topic">Customer Testimonial Highlight</td>
+                        <td>
+                            <div style="color: #888;">Happy customer talking about gear, smiling, real vibe</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Story Content:</div>
+                                <div class="caption-text">
+Feature a real customer giving a 15-20 second testimonial: "This gear changed how I race. The feedback is incredible." Interview format, ask them about their journey. Natural, genuine, no script. Makes community feel real and relatable.
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">22 Apr<div class="day-label">Tuesday</div></td>
+                        <td><span class="content-type type-static">STATIC</span></td>
+                        <td class="topic">Customer Feature: Priya's Comeback Story</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 500;">Click to expand caption & hashtags →</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+Meet Priya. She quit sim racing 2 years ago because she didn't feel connected to her old gear. Then she discovered RaceSims, upgraded her setup with Conspit pedals and VNM shifter on a 12Nm wheelbase, and she's back. Not just back—DOMINATING. She just placed 3rd in a national championship qualifier. When we asked what changed, she said: "It wasn't the gear alone. It was feeling like someone believed in me enough to stock the right stuff." That hit us hard. Because that's EXACTLY why we exist. Not to sell wheels and pedals. To help drivers realize their potential. Priya's comeback isn't just her story—it's a reminder that gear matters, community matters, and belief matters. She's racing with championship-grade equipment and purpose. Now she's unstoppable. Want to be featured here? Tag us in your wins. Share your story. We want to celebrate drivers like Priya who grind and achieve. You're the reason we do this.
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#ComebackStory #FeatureYourStory #IndianRacer #ChampionshipQualifier #RaceSims #SimRacingCommunity #WomenInRacing #Inspiration #DreamBig #Podium #VirtualRacing #RacingJourney #BelieveInYourself #CommunityFeature #GoalAchieved</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- WEEK 5 -->
+        <div class="week-section">
+            <div class="week-header">📍 WEEK 5: April 23-24 (Wrap-Up & Season Launch)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Day</th>
+                        <th style="width: 12%;">Type</th>
+                        <th style="width: 30%;">Topic</th>
+                        <th style="width: 48%;">Caption Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="toggleExpand(this)">
+                        <td class="day-cell">24 Apr<div class="day-label">Thursday</div></td>
+                        <td><span class="content-type type-reel">REEL</span></td>
+                        <td class="topic">Season Launch: Race With Pride Campaign</td>
+                        <td>
+                            <div style="color: #ff6b35; font-weight: 500;">Click to expand caption & hashtags →</div>
+                        </td>
+                    </tr>
+                    <tr class="expanded-row" style="display: none;">
+                        <td colspan="4">
+                            <div class="expanded-content show">
+                                <div class="section-title">📝 Caption:</div>
+                                <div class="caption-text">
+Racing season is HERE. This is the moment you've trained for. Your rig is dialed. Your technique is sharp. Your mentality is locked in. The next 30 days, you're going to push harder than ever. You're going to analyze every tenth. You're going to trust your gear and trust your preparation. This reel is a celebration of that journey. From Day 1 of the calendar to TODAY—this is what we've built together. This is what 30 days of intentional content, community engagement, and shared passion looks like. You're not racing alone. You're part of a growing family of drivers who believe sim racing matters. Who invest in their technique. Who support each other's wins. This is RaceSims. Let's show what championship season looks like. Race with pride. Race with purpose. Race to WIN.
+                                </div>
+                                <div class="section-title">🏷️ Hashtags:</div>
+                                <div class="hashtag-text">#RaceWithPride #ChampionshipSeason #SimRacingLeague #RaceEngineer #IndianRacer #RaceSims #PreparedToWin #VirtualRacing #MotorsportDreams #CommunityPower #NextLevel #PodiumBound #RacingFamily #BelieveInThisProcess #GoForGold</div>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Caption</button>
+                                <button class="copy-btn" onclick="copyToClipboard(this)">Copy Hashtags</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer class="footer">
+            <p>📊 <strong>30-Day Calendar Summary:</strong> 20 feed posts (8 Reels, 4 Carousels, 4 Static, 4 Stories) | Giveaway activation week 3 | 1 winner announcement | Race Engineer voice throughout</p>
+            <p>📱 <strong>Engagement Strategy:</strong> Each post includes CTA, community poll in stories, customer features, educational content, and product-centric messaging</p>
+            <p>💡 <strong>Growth Target:</strong> 537 → 2,000+ followers in 30 days through giveaway, consistent posting, and community engagement</p>
+            <p style="margin-top: 20px; font-size: 0.85em;">Generated for RaceSims Solutions Pvt Ltd | @race.sims | Race Engineer Mindset | Champion-Level Sim Racing Gear</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleExpand(row) {
+            const nextRow = row.nextElementSibling;
+            if (nextRow && nextRow.classList.contains('expanded-row')) {
+                nextRow.style.display = nextRow.style.display === 'none' ? 'table-row' : 'none';
+                row.classList.toggle('expanded');
+            }
+        }
+
+        function copyToClipboard(button) {
+            const expandedContent = button.closest('.expanded-content');
+            let textToCopy = '';
+
+            if (button.textContent.includes('Caption')) {
+                const captionText = expandedContent.querySelector('.caption-text');
+                textToCopy = captionText.textContent.trim();
+            } else if (button.textContent.includes('Hashtag')) {
+                const hashtagText = expandedContent.querySelector('.hashtag-text');
+                textToCopy = hashtagText.textContent.trim();
+            }
+
+            if (textToCopy) {
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    const originalText = button.textContent;
+                    button.textContent = '✓ Copied!';
+                    button.style.background = '#10b981';
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.background = '#ff6b35';
+                    }, 2000);
+                });
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thambu's Command Center</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+:root{
+  --bg:#07070b;--s1:#0e0e14;--s2:#151520;--s3:#1c1c2a;--s4:#232336;
+  --brd:rgba(255,255,255,.06);--brd2:rgba(255,255,255,.1);
+  --tx:#e2e2ec;--tx2:#9898b0;--tx3:#5e5e78;
+  --red:#e84545;--green:#34d399;--amber:#fbbf24;--blue:#60a5fa;--purple:#a78bfa;--cyan:#22d3ee;--pink:#f472b6;--orange:#fb923c;
+  --red-g:rgba(232,69,69,.12);--green-g:rgba(52,211,153,.1);--amber-g:rgba(251,191,36,.1);--blue-g:rgba(96,165,250,.1);--purple-g:rgba(167,139,250,.1);--cyan-g:rgba(34,211,238,.1);--pink-g:rgba(244,114,182,.1);
+  --rs:#e84545;--mw:#22d3ee;--rs-g:rgba(232,69,69,.1);--mw-g:rgba(34,211,238,.1);
+  --font:'DM Sans',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);background:var(--bg);color:var(--tx);min-height:100vh;display:flex}
+button,input,select,textarea{font-family:var(--font);color:var(--tx)}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--s3);border-radius:3px}
+
+.sidebar{width:200px;min-height:100vh;background:var(--s1);border-right:1px solid var(--brd);display:flex;flex-direction:column;position:fixed;top:0;left:0;z-index:50}
+.sidebar-logo{padding:18px 16px;font-weight:800;font-size:.95em;color:var(--red);border-bottom:1px solid var(--brd)}
+.sidebar-logo span{color:var(--tx3);font-weight:400;font-size:.78em;display:block;margin-top:2px}
+.nav-section{padding:14px 10px 4px;font-size:.62em;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--tx3)}
+.nav-item{display:flex;align-items:center;gap:9px;padding:8px 12px;border-radius:7px;font-size:.84em;font-weight:500;color:var(--tx2);cursor:pointer;border:none;background:none;width:100%;text-align:left;transition:all .1s}
+.nav-item:hover{background:var(--s2);color:var(--tx)}
+.nav-item.active{background:var(--s2);color:var(--tx);font-weight:600}
+.nav-item .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.nav-item .cnt{margin-left:auto;font-size:.7em;font-family:var(--mono);color:var(--tx3);background:var(--s3);padding:1px 6px;border-radius:6px}
+.sidebar-footer{padding:12px 16px;border-top:1px solid var(--brd);font-size:.7em;color:var(--tx3);margin-top:auto}
+
+.main{margin-left:200px;flex:1;min-height:100vh;display:flex;flex-direction:column}
+.topbar{height:48px;border-bottom:1px solid var(--brd);display:flex;align-items:center;padding:0 20px;gap:10px;background:rgba(7,7,11,.7);backdrop-filter:blur(12px);position:sticky;top:0;z-index:40}
+.topbar-title{font-weight:700;font-size:.9em}
+.topbar-spacer{flex:1}
+.pf{padding:4px 12px;border-radius:6px;font-size:.75em;font-weight:600;border:1px solid var(--brd);background:none;color:var(--tx3);cursor:pointer;transition:all .1s}
+.pf:hover{border-color:var(--brd2);color:var(--tx)}
+.pf.active{background:var(--s2);color:var(--tx);border-color:var(--brd2)}
+.pf-rs.active{color:var(--rs);border-color:var(--rs);background:var(--rs-g)}
+.pf-mw.active{color:var(--mw);border-color:var(--mw);background:var(--mw-g)}
+
+.content{padding:20px;flex:1;overflow-y:auto}
+.page{display:none}.page.active{display:block}
+
+/* CARDS & METRICS */
+.mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:20px}
+.mc{background:var(--s1);border:1px solid var(--brd);border-radius:9px;padding:14px;cursor:pointer;transition:border-color .1s}
+.mc:hover{border-color:var(--brd2)}
+.mc-l{font-size:.68em;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--tx3);margin-bottom:4px}
+.mc-v{font-size:1.5em;font-weight:800;letter-spacing:-.02em}
+.mc-s{font-size:.72em;color:var(--tx3);margin-top:2px}
+.mc-bar{height:3px;background:var(--s3);border-radius:2px;margin-top:6px;overflow:hidden}
+.mc-fill{height:100%;border-radius:2px}
+
+/* KANBAN */
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
+@media(max-width:900px){.board{grid-template-columns:1fr}}
+.col{background:var(--s1);border:1px solid var(--brd);border-radius:9px;display:flex;flex-direction:column;min-height:140px}
+.col-h{padding:12px 14px;border-bottom:1px solid var(--brd);display:flex;align-items:center;justify-content:space-between}
+.col-t{font-size:.74em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--tx2)}
+.col-c{font-family:var(--mono);font-size:.78em;background:var(--s3);padding:1px 6px;border-radius:6px;color:var(--tx3)}
+.col-b{padding:6px;flex:1;display:flex;flex-direction:column;gap:5px;overflow-y:auto;max-height:450px}
+
+.card{border:1px solid var(--brd);border-radius:7px;padding:10px 12px;cursor:pointer;transition:all .1s;position:relative;border-left:3px solid transparent}
+.card:hover{border-color:var(--brd2);transform:translateY(-1px)}
+.card.rs{background:rgba(232,69,69,.03);border-left-color:var(--rs)}
+.card.mw{background:rgba(34,211,238,.03);border-left-color:var(--mw)}
+.card.dn{opacity:.4}.card.dn .ct{text-decoration:line-through}
+.ct{font-size:.84em;font-weight:600;margin-bottom:4px;padding-right:18px;line-height:1.3}
+.cm{display:flex;gap:3px;flex-wrap:wrap;align-items:center}
+.tag{font-size:.62em;padding:2px 6px;border-radius:4px;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+.cd{font-size:.65em;font-family:var(--mono);color:var(--tx3)}
+.cpri{position:absolute;top:10px;right:10px;width:6px;height:6px;border-radius:50%}
+.pri-critical{background:var(--red);box-shadow:0 0 5px var(--red)}.pri-high{background:var(--amber);box-shadow:0 0 4px var(--amber)}.pri-medium{background:var(--blue)}.pri-low{background:var(--tx3)}
+.pbadge{font-size:.58em;padding:1px 5px;border-radius:3px;font-weight:700}
+.pbadge-rs{background:var(--rs-g);color:var(--rs)}
+.pbadge-mw{background:var(--mw-g);color:var(--mw)}
+
+.add-btn{width:100%;padding:6px;border-radius:5px;border:1px dashed var(--brd);background:none;color:var(--tx3);font-size:.78em;cursor:pointer}
+.add-btn:hover{border-color:var(--brd2);color:var(--tx2)}
+
+/* FILTERS */
+.tb{display:flex;gap:5px;margin-bottom:12px;flex-wrap:wrap;align-items:center}
+.fb{padding:4px 10px;border-radius:5px;font-size:.74em;font-weight:500;border:1px solid var(--brd);background:none;color:var(--tx3);cursor:pointer;transition:all .1s}
+.fb:hover,.fb.active{background:var(--s2);color:var(--tx);border-color:var(--brd2)}
+.sp{flex:1}
+
+/* SECTIONS */
+.stitle{font-size:.85em;font-weight:700;color:var(--tx2);margin-bottom:10px}
+
+/* PROJECTS */
+.proj{background:var(--s1);border:1px solid var(--brd);border-radius:9px;overflow:hidden;margin-bottom:10px}
+.proj-h{padding:14px 18px;display:flex;align-items:center;gap:10px;cursor:pointer}
+.proj-h:hover{background:var(--s2)}
+.proj-n{font-weight:700;font-size:.9em;flex:1}
+.proj-st{font-size:.68em;font-weight:600;padding:2px 8px;border-radius:5px;text-transform:uppercase}
+.proj-p{font-family:var(--mono);font-size:.76em;color:var(--tx3)}
+.proj-bar{height:3px;background:var(--s3)}.proj-fill{height:100%;border-radius:2px}
+.proj-body{padding:0 18px 14px;display:none}
+.proj.open .proj-body{display:block}
+.ms{padding:8px 0;border-bottom:1px solid var(--brd);display:flex;align-items:flex-start;gap:9px}
+.ms:last-child{border:none}
+.ms-ck{width:18px;height:18px;border-radius:5px;border:2px solid var(--brd);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:transparent;font-size:.65em}
+.ms-ck:hover{border-color:var(--green)}.ms-ck.done{background:var(--green);border-color:var(--green);color:#fff}
+.ms-t{font-size:.84em;flex:1}.ms-t.x{text-decoration:line-through;color:var(--tx3)}
+
+/* EVENTS */
+.ev{background:var(--s1);border:1px solid var(--brd);border-radius:9px;padding:14px;margin-bottom:8px;display:flex;gap:14px;align-items:flex-start;border-left:3px solid transparent}
+.ev.rs{border-left-color:var(--rs)}.ev.mw{border-left-color:var(--mw)}
+.ev-d{background:var(--s3);border-radius:7px;padding:8px 12px;text-align:center;min-width:50px}
+.ev-d .day{font-size:1.2em;font-weight:800;line-height:1}
+.ev-d .mon{font-size:.65em;font-weight:600;color:var(--tx3);text-transform:uppercase}
+.ev-i{flex:1}.ev-i h4{font-size:.88em;font-weight:700;margin-bottom:3px}
+.ev-i p{font-size:.8em;color:var(--tx2)}
+
+/* TODAY */
+.today-section{background:var(--s1);border:1px solid var(--brd);border-radius:9px;padding:16px;margin-bottom:14px}
+.today-section h3{font-size:.88em;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.today-task{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--brd)}
+.today-task:last-child{border:none}
+.today-task input[type=checkbox]{margin-top:3px;accent-color:var(--green);width:15px;height:15px;cursor:pointer}
+.today-task .tt-text{font-size:.86em;flex:1}
+.today-task .tt-text.done{text-decoration:line-through;color:var(--tx3)}
+
+/* NOTES */
+.notes-box{background:var(--s1);border:1px solid var(--brd);border-radius:9px;padding:14px}
+.note-row{padding:8px 0;border-bottom:1px solid var(--brd);display:flex;gap:8px}
+.note-row:last-child{border:none}
+.note-dt{font-family:var(--mono);font-size:.68em;color:var(--tx3);min-width:72px;padding-top:2px}
+.note-tx{font-size:.84em;color:var(--tx2);line-height:1.4;flex:1}
+
+/* ARTICLES TABLE */
+table{width:100%;border-collapse:collapse;font-size:.82em}
+th{text-align:left;padding:8px 10px;background:var(--s2);color:var(--tx2);font-weight:600;font-size:.82em}
+td{padding:8px 10px;border-bottom:1px solid var(--brd)}
+
+/* SOCIAL */
+.social-link{display:inline-block;padding:5px 12px;border-radius:5px;font-size:.78em;font-weight:600;text-decoration:none;margin:3px}
+.pillar{background:var(--s2);border:1px solid var(--brd);border-radius:8px;padding:14px;border-left:3px solid var(--red)}
+.pillar h4{font-size:.88em;margin-bottom:4px}
+.pillar p{font-size:.76em;color:var(--tx2);line-height:1.4}
+
+/* MODAL */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(3px);z-index:200;align-items:center;justify-content:center}
+.modal-bg.show{display:flex}
+.modal{background:var(--s1);border:1px solid var(--brd);border-radius:12px;width:480px;max-width:94vw;max-height:88vh;overflow-y:auto;padding:22px}
+.modal h3{font-size:1em;font-weight:700;margin-bottom:16px}
+.fg{margin-bottom:12px}
+.fl{font-size:.72em;font-weight:600;color:var(--tx2);margin-bottom:4px;display:block}
+.fi,.fs,.ft{width:100%;padding:8px 10px;border-radius:6px;border:1px solid var(--brd);background:var(--s2);color:var(--tx);font-size:.84em}
+.fi:focus,.fs:focus,.ft:focus{outline:none;border-color:var(--red)}
+.ft{resize:vertical;min-height:60px}.fs{cursor:pointer}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.fa{display:flex;gap:6px;justify-content:flex-end;margin-top:16px}
+.btn{padding:7px 16px;border-radius:6px;font-size:.82em;font-weight:600;border:none;cursor:pointer}
+.btn-p{background:var(--red);color:#fff}.btn-p:hover{opacity:.9}
+.btn-s{background:var(--s3);color:var(--tx2)}.btn-s:hover{color:var(--tx)}
+.btn-d{background:var(--red-g);color:var(--red)}
+.btn-sm{padding:5px 12px;font-size:.78em}
+
+/* CTX MENU */
+.ctx{position:fixed;background:var(--s2);border:1px solid var(--brd);border-radius:7px;padding:3px;min-width:150px;box-shadow:0 6px 20px rgba(0,0,0,.4);z-index:300;display:none}
+.ctx-i{padding:6px 10px;border-radius:4px;font-size:.78em;cursor:pointer;color:var(--tx2);border:none;background:none;width:100%;text-align:left;font-family:var(--font)}
+.ctx-i:hover{background:var(--s3);color:var(--tx)}
+.ctx-i.danger{color:var(--red)}.ctx-i.danger:hover{background:var(--red-g)}
+
+/* TAG COLORS */
+.tag-seo{background:var(--blue-g);color:var(--blue)}.tag-instagram{background:var(--red-g);color:var(--pink)}.tag-youtube{background:rgba(255,0,0,.12);color:#ff4444}.tag-twitter{background:var(--cyan-g);color:var(--cyan)}.tag-facebook{background:rgba(66,103,178,.12);color:#6488c4}.tag-discord{background:var(--purple-g);color:var(--purple)}.tag-reddit{background:rgba(251,146,60,.12);color:var(--orange)}.tag-content{background:var(--green-g);color:var(--green)}.tag-pr{background:var(--amber-g);color:var(--amber)}.tag-geo{background:rgba(168,85,247,.12);color:#a855f7}.tag-website{background:var(--cyan-g);color:var(--cyan)}.tag-product{background:var(--amber-g);color:var(--amber)}.tag-training{background:var(--green-g);color:var(--green)}.tag-brand{background:var(--amber-g);color:var(--amber)}.tag-ops{background:var(--amber-g);color:var(--amber)}.tag-packaging{background:var(--mw-g);color:var(--mw)}.tag-supply-chain{background:var(--mw-g);color:var(--mw)}.tag-social{background:var(--pink-g);color:var(--pink)}.tag-growth{background:var(--green-g);color:var(--green)}
+
+@media(max-width:768px){.sidebar{width:56px}.sidebar-logo span,.nav-section,.nav-item span:not(.dot),.nav-item .cnt,.sidebar-footer{display:none}.main{margin-left:56px}.nav-item{justify-content:center;padding:9px}}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-logo">TC<span>Thambu's Command Center</span></div>
+  <div style="padding:8px 8px 0;display:flex;flex-direction:column;gap:2px;flex:1">
+    <div class="nav-section">Command</div>
+    <button class="nav-item active" data-page="today"><span class="dot" style="background:var(--amber)"></span><span>Today</span></button>
+    <button class="nav-item" data-page="dashboard"><span class="dot" style="background:var(--red)"></span><span>Dashboard</span></button>
+
+    <div class="nav-section">Work</div>
+    <button class="nav-item" data-page="tasks"><span class="dot" style="background:var(--green)"></span><span>Tasks</span><span class="cnt" id="cnt-tasks">0</span></button>
+    <button class="nav-item" data-page="projects"><span class="dot" style="background:var(--purple)"></span><span>Projects</span></button>
+    <button class="nav-item" data-page="ops"><span class="dot" style="background:var(--amber)"></span><span>Operations</span></button>
+
+    <div class="nav-section">Growth</div>
+    <button class="nav-item" data-page="social"><span class="dot" style="background:var(--pink)"></span><span>Social Media</span></button>
+    <button class="nav-item" data-page="contentpage"><span class="dot" style="background:var(--cyan)"></span><span>Content</span></button>
+
+    <div class="nav-section">System</div>
+    <button class="nav-item" data-page="log"><span class="dot" style="background:var(--tx3)"></span><span>Activity Log</span></button>
+    <button class="nav-item" data-page="settings"><span class="dot" style="background:var(--tx3)"></span><span>Settings</span></button>
+  </div>
+  <div class="sidebar-footer">v2.0 &bull; Unified</div>
+</div>
+
+<div class="main">
+<div class="topbar">
+  <div class="topbar-title" id="page-title">Today</div>
+  <div class="topbar-spacer"></div>
+  <button class="pf active" data-pf="all" onclick="setPF('all')">All</button>
+  <button class="pf pf-rs" data-pf="racesims" onclick="setPF('racesims')">RaceSims</button>
+  <button class="pf pf-mw" data-pf="mindwise" onclick="setPF('mindwise')">Mindwise</button>
+  <button class="btn btn-p btn-sm" onclick="openAdd()" style="margin-left:8px">+ Task</button>
+</div>
+<div class="content">
+
+<!-- TODAY -->
+<div class="page active" id="page-today">
+  <div style="margin-bottom:18px"><span style="font-size:1.3em;font-weight:800">Good morning, Thambu</span><br><span style="color:var(--tx3);font-size:.85em" id="today-date"></span></div>
+  <div id="today-focus"></div>
+  <div id="today-week"></div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="page" id="page-dashboard">
+  <div class="mg" id="dash-metrics"></div>
+  <div style="display:grid;grid-template-columns:2fr 1fr;gap:14px" id="dash-grid">
+    <div><div class="stitle">Priority Tasks</div><div id="dash-pri"></div></div>
+    <div><div class="stitle">Upcoming</div><div id="dash-ev"></div><div class="stitle" style="margin-top:14px">Active Projects</div><div id="dash-proj"></div></div>
+  </div>
+</div>
+
+<!-- TASKS -->
+<div class="page" id="page-tasks">
+  <div class="tb" id="task-filters"></div>
+  <div class="board" id="task-board"></div>
+</div>
+
+<!-- PROJECTS -->
+<div class="page" id="page-projects">
+  <div class="tb"><button class="btn btn-p btn-sm" onclick="openAddProj()">+ Project</button></div>
+  <div id="proj-list"></div>
+</div>
+
+<!-- OPERATIONS -->
+<div class="page" id="page-ops">
+  <div class="stitle">Travel Schedule</div>
+  <div id="ops-travel"></div>
+  <div class="stitle" style="margin-top:18px">Operations Tasks</div>
+  <div class="tb" id="ops-filters"></div>
+  <div class="board" id="ops-board"></div>
+</div>
+
+<!-- SOCIAL MEDIA -->
+<div class="page" id="page-social">
+  <div class="mg" id="social-metrics"></div>
+  <div class="tb" id="social-filters"></div>
+  <div class="board" id="social-board"></div>
+  <div style="margin-top:18px">
+    <div class="stitle">Platform Audit (25 Mar 2026)</div>
+    <div class="mg">
+      <div class="mc" style="cursor:default"><div class="mc-l">📸 Instagram</div><div class="mc-v" style="color:var(--pink);font-size:1.3em">538</div><div class="mc-s">Followers &bull; 56 posts &bull; Verified</div></div>
+      <div class="mc" style="cursor:default"><div class="mc-l">🎬 YouTube</div><div class="mc-v" style="color:var(--red);font-size:1.3em">4</div><div class="mc-s">Subs &bull; 2 videos &bull; 700 views</div></div>
+      <div class="mc" style="cursor:default"><div class="mc-l">📘 Facebook</div><div class="mc-v" style="color:var(--blue);font-size:1.3em">6</div><div class="mc-s">Followers &bull; 0 reviews</div></div>
+      <div class="mc" style="cursor:default"><div class="mc-l">𝕏 Twitter</div><div class="mc-v" style="color:var(--cyan);font-size:1.3em">0</div><div class="mc-s">Ghost account</div></div>
+      <div class="mc" style="cursor:default"><div class="mc-l">💬 Discord</div><div class="mc-v" style="color:var(--purple);font-size:1.3em">—</div><div class="mc-s">Server live</div></div>
+    </div>
+    <div class="stitle">Social Links</div>
+    <div style="margin-bottom:16px">
+      <a href="https://www.instagram.com/race.sims/" target="_blank" class="social-link" style="background:var(--pink-g);color:var(--pink)">@race.sims</a>
+      <a href="https://www.youtube.com/@RaceSimsIndia" target="_blank" class="social-link" style="background:var(--red-g);color:var(--red)">@RaceSimsIndia</a>
+      <a href="https://www.facebook.com/profile.php?id=61568502809846" target="_blank" class="social-link" style="background:var(--blue-g);color:var(--blue)">Facebook</a>
+      <a href="https://x.com/race_sims_india" target="_blank" class="social-link" style="background:var(--cyan-g);color:var(--cyan)">@race_sims_india</a>
+      <a href="https://discord.gg/aUvGtzthy" target="_blank" class="social-link" style="background:var(--purple-g);color:var(--purple)">Discord</a>
+      <a href="https://www.reddit.com/user/RaceSims_India" target="_blank" class="social-link" style="background:rgba(251,146,60,.12);color:var(--orange)">u/RaceSims_India</a>
+      <a href="https://wa.me/917358229224" target="_blank" class="social-link" style="background:var(--green-g);color:var(--green)">WhatsApp</a>
+    </div>
+    <div class="stitle">Content Pillars</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px">
+      <div class="pillar" style="border-left-color:var(--red)"><h4>🏎️ Race Engineer Insights</h4><p>Telemetry, setup, sim-to-real. YT + IG Reels + X threads + Discord tips.</p></div>
+      <div class="pillar" style="border-left-color:var(--blue)"><h4>🔧 Gear & Product Reviews</h4><p>Conspit, VNM deep dives. YT main + IG clips + Reddit reviews.</p></div>
+      <div class="pillar" style="border-left-color:var(--green)"><h4>🛠️ Rig Builds & Setups</h4><p>Build timelapses, customer reveals. IG Reels + YT + Discord.</p></div>
+      <div class="pillar" style="border-left-color:var(--amber)"><h4>🏁 Race Weekend & Community</h4><p>F1 commentary, polls, memes. X live + IG Stories + Discord.</p></div>
+      <div class="pillar" style="border-left-color:var(--purple)"><h4>🎓 Sim Racing 101</h4><p>Beginner guides, budget setups. YT + Blog + Reddit.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="page" id="page-contentpage">
+  <div class="stitle">Blog Pipeline</div>
+  <table id="article-table"><thead><tr><th>Title</th><th>Category</th><th>Status</th><th>Date</th></tr></thead><tbody></tbody></table>
+  <div class="stitle" style="margin-top:20px">Competitor Intel — RaceSims vs VRH</div>
+  <div id="competitor-grid" class="mg"></div>
+</div>
+
+<!-- ACTIVITY LOG -->
+<div class="page" id="page-log">
+  <div class="notes-box">
+    <div id="notes-list"></div>
+    <div style="display:flex;gap:6px;margin-top:8px">
+      <select class="fs" id="note-proj" style="width:120px;font-size:.8em"><option value="racesims">RaceSims</option><option value="mindwise">Mindwise</option></select>
+      <input class="fi" id="note-input" placeholder="Log an activity..." style="flex:1" onkeydown="if(event.key==='Enter')addNote()">
+      <button class="btn btn-p btn-sm" onclick="addNote()">Add</button>
+    </div>
+  </div>
+</div>
+
+<!-- SETTINGS -->
+<div class="page" id="page-settings">
+  <div style="max-width:560px">
+    <div class="today-section">
+      <h3>Data Management</h3>
+      <div style="display:flex;gap:6px;margin-top:8px">
+        <button class="btn btn-s btn-sm" onclick="exportD()">Export JSON</button>
+        <button class="btn btn-s btn-sm" onclick="document.getElementById('imp').click()">Import JSON</button>
+        <input type="file" id="imp" accept=".json" style="display:none" onchange="importD(event)">
+        <button class="btn btn-d btn-sm" onclick="if(confirm('Reset all data?')){localStorage.removeItem(SK);location.reload()}">Reset</button>
+      </div>
+    </div>
+    <div class="today-section">
+      <h3>Discord Voice Integration</h3>
+      <p style="font-size:.84em;color:var(--tx2);line-height:1.5">Send voice notes or text to the Discord bot. Claude processes and updates this dashboard automatically.<br><br>
+      <strong>Setup:</strong> Install the Claude Code Channels Discord plugin, create a bot, and launch with <code>claude --channels plugin:discord@claude-plugins-official</code>.<br><br>
+      <strong>Detailed guide:</strong> See <a href="https://code.claude.com/docs/en/channels" target="_blank" style="color:var(--blue)">Claude Code Channels docs</a></p>
+    </div>
+    <div class="today-section">
+      <h3>About</h3>
+      <p style="font-size:.84em;color:var(--tx2)">Thambu's Command Center v2.0. Unified dashboard for RaceSims + Mindwise. Built with Claude Code.</p>
+    </div>
+  </div>
+</div>
+
+</div></div>
+
+<!-- MODALS -->
+<div class="modal-bg" id="m-task"><div class="modal">
+  <h3 id="mt-title">New Task</h3>
+  <div class="fr" style="margin-bottom:12px">
+    <div class="fg"><label class="fl">Project</label><select class="fs" id="mt-proj"><option value="racesims">RaceSims</option><option value="mindwise">Mindwise</option></select></div>
+    <div class="fg"><label class="fl">Priority</label><select class="fs" id="mt-pri"><option value="critical">Critical</option><option value="high">High</option><option value="medium" selected>Medium</option><option value="low">Low</option></select></div>
+  </div>
+  <div class="fg"><label class="fl">Title</label><input class="fi" id="mt-name" placeholder="What needs to be done?"></div>
+  <div class="fg"><label class="fl">Description</label><textarea class="ft" id="mt-desc" placeholder="Details..."></textarea></div>
+  <div class="fr">
+    <div class="fg"><label class="fl">Category</label><select class="fs" id="mt-cat">
+      <option value="seo">SEO</option><option value="instagram">Instagram</option><option value="youtube">YouTube</option><option value="twitter">Twitter/X</option><option value="facebook">Facebook</option><option value="discord">Discord</option><option value="reddit">Reddit</option><option value="content">Content</option><option value="pr">PR</option><option value="geo">GEO</option><option value="website">Website</option><option value="product">Product</option><option value="training">Training</option><option value="brand">Brand</option><option value="ops">Operations</option><option value="packaging">Packaging</option><option value="supply-chain">Supply Chain</option>
+    </select></div>
+    <div class="fg"><label class="fl">Due Date</label><input type="date" class="fi" id="mt-date"></div>
+  </div>
+  <div class="fg"><label style="font-size:.78em;color:var(--tx2)"><input type="checkbox" id="mt-today" style="accent-color:var(--amber)"> Pin to Today's Plan</label></div>
+  <div class="fa">
+    <button class="btn btn-s" onclick="closeM('m-task')">Cancel</button>
+    <button class="btn btn-d" id="mt-del" style="display:none" onclick="delTask()">Delete</button>
+    <button class="btn btn-p" id="mt-save" onclick="saveTask()">Add Task</button>
+  </div>
+</div></div>
+
+<div class="modal-bg" id="m-proj"><div class="modal">
+  <h3 id="mp-title">New Project</h3>
+  <div class="fr">
+    <div class="fg"><label class="fl">Project</label><select class="fs" id="mp-proj"><option value="racesims">RaceSims</option><option value="mindwise">Mindwise</option></select></div>
+    <div class="fg"><label class="fl">Status</label><select class="fs" id="mp-st"><option value="planning">Planning</option><option value="active">Active</option><option value="on_hold">On Hold</option><option value="completed">Completed</option></select></div>
+  </div>
+  <div class="fg"><label class="fl">Name</label><input class="fi" id="mp-name"></div>
+  <div class="fg"><label class="fl">Description</label><textarea class="ft" id="mp-desc"></textarea></div>
+  <div class="fg"><label class="fl">Color</label><select class="fs" id="mp-color"><option value="var(--red)">Red</option><option value="var(--amber)">Amber</option><option value="var(--green)">Green</option><option value="var(--blue)">Blue</option><option value="var(--purple)">Purple</option><option value="var(--cyan)">Cyan</option><option value="var(--pink)">Pink</option></select></div>
+  <div class="fg"><label class="fl">Milestones (one per line)</label><textarea class="ft" id="mp-ms"></textarea></div>
+  <div class="fa">
+    <button class="btn btn-s" onclick="closeM('m-proj')">Cancel</button>
+    <button class="btn btn-d" id="mp-del" style="display:none" onclick="delProj()">Delete</button>
+    <button class="btn btn-p" id="mp-save" onclick="saveProj()">Save</button>
+  </div>
+</div></div>
+
+<div class="modal-bg" id="m-metric"><div class="modal">
+  <h3>Update Metric</h3>
+  <div class="fg"><label class="fl" id="mm-l">Value</label><input class="fi" id="mm-v" type="number"></div>
+  <div class="fa"><button class="btn btn-s" onclick="closeM('m-metric')">Cancel</button><button class="btn btn-p" onclick="saveMet()">Save</button></div>
+</div></div>
+
+<div class="ctx" id="ctx">
+  <button class="ctx-i" onclick="ctxMv('todo')">To Do</button>
+  <button class="ctx-i" onclick="ctxMv('in_progress')">In Progress</button>
+  <button class="ctx-i" onclick="ctxMv('done')">Done</button>
+  <button class="ctx-i" onclick="ctxEdit()">Edit</button>
+  <button class="ctx-i danger" onclick="ctxDel()">Delete</button>
+</div>
+
+<script>
+const SK='thambu_cc_v2';
+const priOrd={critical:0,high:1,medium:2,low:3};
+let AP='all',TF='all',SF='all',OF='all',editTID=null,editPID=null,editMK=null,ctxTID=null;
+
+function def(){return{
+tasks:[
+  // RACESIMS — Growth & Social
+  {id:1,title:'Post 3 Instagram Reels this week',desc:'Product showcases + race engineer tips.',project:'racesims',cat:'instagram',pri:'critical',status:'todo',date:'2026-03-28',today:false},
+  {id:2,title:'Create Discord server with full channel structure',desc:'Use Discord Setup Kit.',project:'racesims',cat:'discord',pri:'critical',status:'todo',date:'2026-03-28',today:false},
+  {id:3,title:'Bulk-add product image alt texts',desc:'Format: [Product] - [desc] | RaceSims',project:'racesims',cat:'seo',pri:'high',status:'todo',date:'2026-03-27',today:false},
+  {id:4,title:'Write blog: Best Sim Racing Setup India 2026',desc:'Cover every price point. Use race engineer authority.',project:'racesims',cat:'content',pri:'critical',status:'todo',date:'2026-04-05',today:false},
+  {id:5,title:'Create r/SimRacingIndia subreddit',desc:'Claim before VRH.',project:'racesims',cat:'reddit',pri:'high',status:'todo',date:'2026-03-30',today:false},
+  {id:6,title:'Add all social links to racesims.in',desc:'IG, YT, X, Discord, Reddit, WhatsApp in header/footer.',project:'racesims',cat:'website',pri:'critical',status:'todo',date:'2026-03-27',today:false},
+  {id:7,title:'Claim/optimize Google Business Profile',desc:'Photos, hours, categories, reviews.',project:'racesims',cat:'seo',pri:'high',status:'todo',date:'2026-03-30',today:false},
+  {id:8,title:'Upload YouTube channel banner',desc:'2560x1440px. Canva. Logo + tagline + schedule.',project:'racesims',cat:'youtube',pri:'critical',status:'todo',date:'2026-03-28',today:false},
+  {id:9,title:'Set up X/Twitter profile + post first 10 tweets',desc:'Bio, banner, pinned tweet from Twitter Launch Kit.',project:'racesims',cat:'twitter',pri:'critical',status:'todo',date:'2026-03-28',today:false},
+  {id:10,title:'Change Facebook category + claim vanity URL',desc:'Electronics Store → Sports & Recreation. facebook.com/RaceSimsIndia.',project:'racesims',cat:'facebook',pri:'critical',status:'todo',date:'2026-03-27',today:false},
+  {id:11,title:'Set up Meta Business Suite auto cross-posting',desc:'Link IG to FB. Auto cross-post all future posts.',project:'racesims',cat:'facebook',pri:'high',status:'todo',date:'2026-03-28',today:false},
+  {id:12,title:'Shift Instagram to 80% Reels strategy',desc:'3-4 posts/week. Trending audio. Reply to every comment.',project:'racesims',cat:'instagram',pri:'critical',status:'todo',date:'2026-03-28',today:false},
+  {id:13,title:'Record YouTube channel trailer',desc:'60-90s: Who is RaceSims, what you do, why different.',project:'racesims',cat:'youtube',pri:'high',status:'todo',date:'2026-04-01',today:false},
+  {id:14,title:'Post Reddit AMA on r/simracing',desc:'Race engineer AMA. Saturday 2-4 PM IST.',project:'racesims',cat:'reddit',pri:'medium',status:'todo',date:'2026-04-15',today:false},
+  {id:15,title:'Contact 5 Indian motorsport micro-influencers',desc:'1K-10K followers. Offer product for content.',project:'racesims',cat:'instagram',pri:'medium',status:'todo',date:'2026-04-15',today:false},
+  // RACESIMS — Operations (voice brief)
+  {id:300,title:'Reconcile Zoho Books for year-end tax filing',desc:'Startup tax exemption this year (first of 3 in 10-year window).',project:'racesims',cat:'ops',pri:'critical',status:'todo',date:'2026-03-31',today:true},
+  {id:301,title:'Bill and close remaining motion system sale',desc:'Close before year end.',project:'racesims',cat:'ops',pri:'critical',status:'todo',date:'2026-03-31',today:true},
+  {id:302,title:'Close maximum sales before year end',desc:'Maximize revenue under startup exemption.',project:'racesims',cat:'ops',pri:'high',status:'todo',date:'2026-03-31',today:false},
+  {id:303,title:'Coordinate with dealer Raghav (Coimbatore)',desc:'Get products he wants, have them built.',project:'racesims',cat:'ops',pri:'high',status:'todo',date:'2026-03-30',today:false},
+  {id:304,title:'Set up simulator at ARKA Motorsports',desc:'Coimbatore. Racing team Thambu is associated with.',project:'racesims',cat:'ops',pri:'high',status:'todo',date:'2026-03-30',today:false},
+  {id:305,title:'Meet Leela Krishnan — next gen rig design',desc:'ARKA boss. Cast aluminum brackets + mounting hardware.',project:'racesims',cat:'product',pri:'high',status:'todo',date:'2026-03-30',today:false},
+  {id:306,title:'Disassemble Jeeva Rathnam sim → ship to Sim Racing HQ',desc:'Ship to Bangalore dealer Trayas.',project:'racesims',cat:'ops',pri:'high',status:'todo',date:'2026-03-30',today:false},
+  {id:307,title:'Finalize exterior cladding at Shahid Moto Mind',desc:'Bangalore. Using OWN renders, not theirs.',project:'racesims',cat:'product',pri:'high',status:'todo',date:'2026-03-31',today:false},
+  {id:308,title:'Visit dealers Trayas + Lakshay (Bangalore)',desc:'Sim Racing HQ + Racing Rigs. Both have motion systems.',project:'racesims',cat:'brand',pri:'high',status:'todo',date:'2026-03-31',today:false},
+  {id:309,title:'Install 2 motion systems in Bangalore',desc:'Trayas + Lakshay. Coordinate with Abdul.',project:'racesims',cat:'ops',pri:'critical',status:'todo',date:'2026-03-31',today:false},
+  {id:310,title:'Install Jay Kularia motion system (Mumbai)',desc:'Mumbai trip Mar 31 - Apr 2.',project:'racesims',cat:'ops',pri:'critical',status:'todo',date:'2026-04-02',today:false},
+  // RACESIMS — Done
+  {id:100,title:'Fix robots.txt for AI crawlers',desc:'GPTBot, ClaudeBot allowed.',project:'racesims',cat:'seo',pri:'critical',status:'done',date:'2026-03-25',today:false},
+  {id:101,title:'Fix duplicate H1 tags',desc:'Header logo H1 → div.',project:'racesims',cat:'seo',pri:'high',status:'done',date:'2026-03-25',today:false},
+  {id:102,title:'Fix duplicate Organization schema',desc:'Kept comprehensive one.',project:'racesims',cat:'seo',pri:'high',status:'done',date:'2026-03-25',today:false},
+  {id:103,title:'Add BreadcrumbList structured data',desc:'JSON-LD for product pages.',project:'racesims',cat:'seo',pri:'medium',status:'done',date:'2026-03-25',today:false},
+  {id:104,title:'Shorten title tags',desc:'Hardcoded RaceSims suffix.',project:'racesims',cat:'seo',pri:'medium',status:'done',date:'2026-03-25',today:false},
+  {id:105,title:'Create 404 redirects',desc:'3 broken URL redirects.',project:'racesims',cat:'seo',pri:'high',status:'done',date:'2026-03-25',today:false},
+  // MINDWISE
+  {id:400,title:'Finalize bottle design with Patco',desc:'Mumbai trip. Patco Packing Solutions.',project:'mindwise',cat:'packaging',pri:'critical',status:'todo',date:'2026-04-02',today:false},
+  {id:401,title:'Meet IMCD — extracts + bitter-free Bacopa',desc:'Mumbai trip. Explore new extracts. Beta-free Bacopa for gummies/syrups.',project:'mindwise',cat:'supply-chain',pri:'high',status:'todo',date:'2026-04-02',today:false},
+  {id:402,title:'Mindwise website development',desc:'Due before Jun 1 launch.',project:'mindwise',cat:'website',pri:'high',status:'todo',date:'2026-05-31',today:false},
+  {id:403,title:'Pre-launch social media campaigns',desc:'Build audience before Jun 1.',project:'mindwise',cat:'content',pri:'medium',status:'todo',date:'2026-05-15',today:false},
+  {id:404,title:'Hire Senior Brand & Content Manager',desc:'Chennai, work from office. JD drafted.',project:'mindwise',cat:'ops',pri:'high',status:'todo',date:'2026-04-15',today:false},
+  {id:405,title:'Packaging design completion',desc:'Final designs for all SKUs.',project:'mindwise',cat:'packaging',pri:'critical',status:'todo',date:'2026-04-15',today:false},
+],
+projects:[
+  {id:1,name:'Rig Cladding Development',project:'racesims',desc:'Exterior cladding panels. Shahid Moto Mind.',color:'var(--amber)',status:'active',milestones:[{text:'Finalize design direction (own renders)',done:false},{text:'Material sourcing',done:false},{text:'Prototype',done:false},{text:'Testing',done:false},{text:'Production',done:false}]},
+  {id:2,name:'Rig V2 — Next Generation',project:'racesims',desc:'Cast aluminum brackets. Meet Leela Krishnan for inputs.',color:'var(--red)',status:'planning',milestones:[{text:'Requirements from Leela Krishnan',done:false},{text:'Engineering design',done:false},{text:'FEA simulation',done:false},{text:'Prototype',done:false},{text:'Driver testing',done:false},{text:'Launch',done:false}]},
+  {id:3,name:'Brand Partnerships',project:'racesims',desc:'Expand beyond Conspit + VNM.',color:'var(--blue)',status:'active',milestones:[{text:'Fanatec pricing received',done:false},{text:'Fanatec terms negotiated',done:false},{text:'Products listed',done:false}]},
+  {id:100,name:'Mindwise Product Launch',project:'mindwise',desc:'Launch Jun 1 2026. 25L budget.',color:'var(--cyan)',status:'active',milestones:[{text:'Packaging design finalized',done:false},{text:'Website live',done:false},{text:'Pre-launch campaigns',done:false},{text:'Distribution setup',done:false},{text:'Launch day',done:false}]},
+  {id:101,name:'Mindwise Packaging',project:'mindwise',desc:'Bottle design with Patco Packing Solutions.',color:'var(--cyan)',status:'active',milestones:[{text:'Initial concepts',done:true},{text:'Meet Patco in Mumbai',done:false},{text:'Final design approval',done:false},{text:'Production run',done:false}]},
+],
+events:[
+  {id:1,name:'Coimbatore Trip',project:'racesims',desc:'ARKA sim setup + Leela Krishnan + Jeeva sim + Raghav',date:'2026-03-29',type:'travel'},
+  {id:2,name:'Bangalore Trip',project:'racesims',desc:'Shahid cladding + dealers Trayas/Lakshay + 2 motion installs (Abdul)',date:'2026-03-30',type:'travel'},
+  {id:3,name:'Mumbai Trip',project:'racesims',desc:'Jay Kularia motion install + Patco (MW) + IMCD (MW)',date:'2026-03-31',type:'travel'},
+  {id:4,name:'Community Race #1',project:'racesims',desc:'ACC at Monza, GT3. Discord voice.',date:'2026-04-06',type:'community_race'},
+  {id:5,name:'Mindwise Launch',project:'mindwise',desc:'Product launch. 25L budget.',date:'2026-06-01',type:'launch'},
+],
+articles:[
+  {id:1,title:'Best Sim Racing Setup in India 2026',cat:'Buyer Guide',status:'idea',date:'2026-04-05',project:'racesims'},
+  {id:2,title:'Moza R5 vs R9 vs R12: Which to Buy?',cat:'Comparison',status:'idea',date:'2026-04-12',project:'racesims'},
+  {id:3,title:'Simagic vs Moza vs Fanatec India Price',cat:'Comparison',status:'idea',date:'2026-04-19',project:'racesims'},
+  {id:4,title:'Best Sim Racing Pedals India',cat:'Buyer Guide',status:'idea',date:'2026-04-26',project:'racesims'},
+  {id:5,title:'Sim Racing for Real Racing Drivers',cat:'Industry',status:'idea',date:'2026-05-03',project:'racesims'},
+],
+metrics:{ig:538,ig_target:3000,yt:4,yt_target:500,discord:0,discord_target:200,blog:0,blog_target:10,backlinks:0,bl_target:15},
+competitor:{vrh_ig:8115,vrh_discord:537,vrh_blog:12,vrh_bl:25},
+notes:[
+  {id:1,date:'2026-03-25',project:'racesims',text:'SEO audit complete: robots.txt, H1, schema, titles, 404s fixed.'},
+  {id:2,date:'2026-03-25',project:'racesims',text:'Competitive analysis: IG 538 vs VRH 8115. No Discord/blog/press.'},
+  {id:3,date:'2026-03-26',project:'racesims',text:'Voice brief: 14 tasks. Year-end finance urgent. Coimbatore/Bangalore/Mumbai travel.'},
+  {id:4,date:'2026-03-27',project:'racesims',text:'Mumbai trip confirmed Mar 31-Apr 2. Jay Kularia install + Mindwise meetings.'},
+  {id:5,date:'2026-03-27',project:'racesims',text:'Social media audit done. Full overhaul: YouTube/Twitter/Facebook kits built.'},
+  {id:6,date:'2026-03-27',project:'mindwise',text:'Bottle design meeting with Patco scheduled for Mumbai trip.'},
+],
+}}
+
+let D;try{const s=localStorage.getItem(SK);D=s?JSON.parse(s):def()}catch(e){D=def()}
+function save(){try{localStorage.setItem(SK,JSON.stringify(D))}catch(e){}}
+
+// NAV
+const titles={today:'Today',dashboard:'Dashboard',tasks:'Tasks',projects:'Projects',ops:'Operations',social:'Social Media',contentpage:'Content & Strategy',log:'Activity Log',settings:'Settings'};
+document.querySelectorAll('.nav-item').forEach(n=>{n.addEventListener('click',()=>{
+  document.querySelectorAll('.nav-item').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  n.classList.add('active');const p=n.dataset.page;
+  document.getElementById('page-'+p).classList.add('active');
+  document.getElementById('page-title').textContent=titles[p]||p;
+})});
+
+// PROJECT FILTER
+function setPF(v){AP=v;document.querySelectorAll('.pf').forEach(b=>{b.classList.toggle('active',b.dataset.pf===v)});renderAll()}
+function fpj(arr){return AP==='all'?arr:arr.filter(i=>i.project===AP)}
+
+// UTILS
+function closeM(id){document.getElementById(id).classList.remove('show')}
+document.querySelectorAll('.modal-bg').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('show')})});
+function fd(d){if(!d)return'';const p=d.split('-');return p[2]+'/'+p[1]}
+function pclass(t){return t.project==='mindwise'?'mw':'rs'}
+function pbadge(t){return t.project==='mindwise'?'<span class="pbadge pbadge-mw">MW</span>':'<span class="pbadge pbadge-rs">RS</span>'}
+
+// METRICS
+function editMet(k,l){editMK=k;document.getElementById('mm-l').textContent=l;document.getElementById('mm-v').value=D.metrics[k]||0;document.getElementById('m-metric').classList.add('show')}
+function saveMet(){D.metrics[editMK]=parseInt(document.getElementById('mm-v').value)||0;save();renderAll();closeM('m-metric')}
+
+// TASKS
+function openAdd(){editTID=null;document.getElementById('mt-title').textContent='New Task';['mt-name','mt-desc','mt-date'].forEach(x=>document.getElementById(x).value='');document.getElementById('mt-pri').value='medium';document.getElementById('mt-proj').value=AP!=='all'?AP:'racesims';document.getElementById('mt-today').checked=false;document.getElementById('mt-del').style.display='none';document.getElementById('mt-save').textContent='Add Task';document.getElementById('m-task').classList.add('show')}
+function openEdit(id){const t=D.tasks.find(x=>x.id===id);if(!t)return;editTID=id;document.getElementById('mt-title').textContent='Edit Task';document.getElementById('mt-name').value=t.title;document.getElementById('mt-desc').value=t.desc||'';document.getElementById('mt-proj').value=t.project||'racesims';document.getElementById('mt-cat').value=t.cat||'ops';document.getElementById('mt-pri').value=t.pri;document.getElementById('mt-date').value=t.date||'';document.getElementById('mt-today').checked=!!t.today;document.getElementById('mt-del').style.display='inline-block';document.getElementById('mt-save').textContent='Save';document.getElementById('m-task').classList.add('show')}
+function saveTask(){const n=document.getElementById('mt-name').value.trim();if(!n)return;const obj={title:n,desc:document.getElementById('mt-desc').value.trim(),project:document.getElementById('mt-proj').value,cat:document.getElementById('mt-cat').value,pri:document.getElementById('mt-pri').value,date:document.getElementById('mt-date').value,today:document.getElementById('mt-today').checked};if(editTID){Object.assign(D.tasks.find(x=>x.id===editTID),obj)}else{D.tasks.push({id:Date.now(),status:'todo',...obj})}save();renderAll();closeM('m-task')}
+function delTask(){if(!editTID)return;D.tasks=D.tasks.filter(t=>t.id!==editTID);save();renderAll();closeM('m-task')}
+
+// CTX
+function showCtx(e,id){e.preventDefault();e.stopPropagation();ctxTID=id;const m=document.getElementById('ctx');m.style.display='block';m.style.left=Math.min(e.clientX,innerWidth-170)+'px';m.style.top=Math.min(e.clientY,innerHeight-170)+'px'}
+document.addEventListener('click',()=>{document.getElementById('ctx').style.display='none'});
+function ctxMv(s){const t=D.tasks.find(x=>x.id===ctxTID);if(t){t.status=s;save();renderAll()}}
+function ctxEdit(){openEdit(ctxTID)}
+function ctxDel(){D.tasks=D.tasks.filter(t=>t.id!==ctxTID);save();renderAll()}
+
+// RENDER BOARD
+function renderBoard(cid,tasks){
+  const cols={todo:[],in_progress:[],done:[]};
+  tasks.forEach(t=>{if(cols[t.status])cols[t.status].push(t)});
+  Object.values(cols).forEach(a=>a.sort((a,b)=>priOrd[a.pri]-priOrd[b.pri]));
+  const cfg=[{k:'todo',l:'To Do',c:'var(--tx2)'},{k:'in_progress',l:'In Progress',c:'var(--amber)'},{k:'done',l:'Done',c:'var(--green)'}];
+  document.getElementById(cid).innerHTML=cfg.map(c=>`<div class="col"><div class="col-h"><div class="col-t" style="color:${c.c}">${c.l}</div><span class="col-c">${cols[c.k].length}</span></div><div class="col-b">${cols[c.k].map(t=>`<div class="card ${pclass(t)} ${t.status==='done'?'dn':''}" onclick="openEdit(${t.id})" oncontextmenu="showCtx(event,${t.id})"><div class="cpri pri-${t.pri}"></div><div class="ct">${t.title}</div><div class="cm">${pbadge(t)}<span class="tag tag-${t.cat}">${t.cat}</span>${t.date?`<span class="cd">${fd(t.date)}</span>`:''}</div></div>`).join('')}${c.k!=='done'?`<button class="add-btn" onclick="openAdd()">+</button>`:''}</div></div>`).join('')}
+
+// TODAY
+function renderToday(){
+  const now=new Date().toISOString().slice(0,10);
+  document.getElementById('today-date').textContent=new Date().toLocaleDateString('en-IN',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+  const allTasks=fpj(D.tasks);
+  // Today's focus: pinned + due today/overdue
+  const todayTasks=allTasks.filter(t=>t.status!=='done'&&(t.today||t.date<=now)).sort((a,b)=>priOrd[a.pri]-priOrd[b.pri]);
+  // This week
+  const weekEnd=new Date();weekEnd.setDate(weekEnd.getDate()+7);const we=weekEnd.toISOString().slice(0,10);
+  const weekTasks=allTasks.filter(t=>t.status!=='done'&&!t.today&&t.date>now&&t.date<=we).sort((a,b)=>a.date.localeCompare(b.date)||priOrd[a.pri]-priOrd[b.pri]);
+  const weekEvents=fpj(D.events).filter(e=>e.date>=now&&e.date<=we).sort((a,b)=>a.date.localeCompare(b.date));
+
+  let h='<div class="today-section"><h3><span style="color:var(--amber)">&#9733;</span> Today\'s Focus</h3>';
+  if(todayTasks.length){h+=todayTasks.map(t=>`<div class="today-task"><input type="checkbox" ${t.status==='done'?'checked':''} onchange="toggleToday(${t.id},this.checked)"><div class="tt-text ${t.status==='done'?'done':''}" style="border-left:3px solid var(--${t.project==='mindwise'?'mw':'rs'});padding-left:8px">${pbadge(t)} ${t.title}<br><span style="font-size:.72em;color:var(--tx3)">${t.cat} &bull; ${fd(t.date)}</span></div></div>`).join('')}else{h+='<p style="color:var(--tx3);font-size:.85em">No tasks for today. Nice work!</p>'}
+  h+='</div>';
+
+  h+='<div class="today-section"><h3><span style="color:var(--blue)">&#8862;</span> This Week</h3>';
+  if(weekEvents.length){h+=weekEvents.map(e=>{const d=new Date(e.date+'T00:00:00');return`<div class="ev ${pclass(e)}" style="margin-bottom:6px;padding:10px"><div class="ev-d" style="padding:6px 10px"><div class="day" style="font-size:1em">${d.getDate()}</div><div class="mon">${d.toLocaleString('en',{month:'short'})}</div></div><div class="ev-i"><h4 style="font-size:.84em">${e.name} ${pbadge(e)}</h4><p style="font-size:.76em">${e.desc||''}</p></div></div>`}).join('')}
+  if(weekTasks.length){h+=weekTasks.map(t=>`<div style="padding:6px 0;border-bottom:1px solid var(--brd);font-size:.84em;display:flex;gap:8px;align-items:center"><span style="color:var(--tx3);font-family:var(--mono);font-size:.78em;min-width:40px">${fd(t.date)}</span><span style="border-left:2px solid var(--${t.project==='mindwise'?'mw':'rs'});padding-left:8px">${t.title}</span>${pbadge(t)}<span class="tag tag-${t.cat}" style="margin-left:auto">${t.cat}</span></div>`).join('')}
+  if(!weekEvents.length&&!weekTasks.length){h+='<p style="color:var(--tx3);font-size:.85em">Nothing scheduled this week.</p>'}
+  h+='</div>';
+  document.getElementById('today-focus').innerHTML=h;
+}
+function toggleToday(id,checked){const t=D.tasks.find(x=>x.id===id);if(t){t.status=checked?'done':'todo';save();renderAll()}}
+
+// DASHBOARD
+function renderDash(){
+  const m=D.metrics,done=fpj(D.tasks).filter(t=>t.status==='done').length,total=fpj(D.tasks).length;
+  const mwLaunch=Math.ceil((new Date('2026-06-01')-new Date())/(1000*60*60*24));
+  document.getElementById('dash-metrics').innerHTML=[
+    {l:'Instagram',v:m.ig,t:m.ig_target,c:'var(--pink)',k:'ig'},{l:'YouTube',v:m.yt,t:m.yt_target,c:'var(--red)',k:'yt'},
+    {l:'Discord',v:m.discord,t:m.discord_target,c:'var(--purple)',k:'discord'},{l:'Tasks Done',v:done,t:total,c:'var(--amber)'},
+    {l:'MW Launch',v:mwLaunch+'d',t:1,c:'var(--cyan)',sub:'Jun 1 2026'},
+  ].map(x=>{const pct=x.t&&typeof x.v==='number'?Math.min(100,Math.round(x.v/x.t*100)):0;return`<div class="mc" ${x.k?`onclick="editMet('${x.k}','${x.l}')"`:''}>
+    <div class="mc-l">${x.l}</div><div class="mc-v" style="color:${x.c}">${typeof x.v==='number'?x.v.toLocaleString():x.v}</div><div class="mc-s">${x.sub||''}</div>
+    ${typeof x.v==='number'?`<div class="mc-bar"><div class="mc-fill" style="width:${pct}%;background:${x.c}"></div></div>`:''}</div>`}).join('');
+
+  const urgent=fpj(D.tasks).filter(t=>t.status!=='done'&&(t.pri==='critical'||t.pri==='high')).sort((a,b)=>priOrd[a.pri]-priOrd[b.pri]).slice(0,8);
+  document.getElementById('dash-pri').innerHTML=urgent.length?urgent.map(t=>`<div class="card ${pclass(t)}" style="margin-bottom:5px" onclick="openEdit(${t.id})" oncontextmenu="showCtx(event,${t.id})"><div class="cpri pri-${t.pri}"></div><div class="ct">${t.title}</div><div class="cm">${pbadge(t)}<span class="tag tag-${t.cat}">${t.cat}</span>${t.date?`<span class="cd">${fd(t.date)}</span>`:''}</div></div>`).join(''):'<p style="color:var(--tx3);font-size:.84em">No urgent tasks!</p>';
+
+  const upcoming=fpj(D.events).filter(e=>e.date>=new Date().toISOString().slice(0,10)).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,4);
+  document.getElementById('dash-ev').innerHTML=upcoming.map(e=>{const d=new Date(e.date+'T00:00:00');return`<div class="ev ${pclass(e)}" style="margin-bottom:6px;padding:10px"><div class="ev-d" style="padding:6px 10px"><div class="day" style="font-size:1em">${d.getDate()}</div><div class="mon">${d.toLocaleString('en',{month:'short'})}</div></div><div class="ev-i"><h4 style="font-size:.84em">${e.name}</h4><p style="font-size:.76em">${e.type}</p></div></div>`}).join('')||'<p style="color:var(--tx3);font-size:.84em">No upcoming events</p>';
+
+  document.getElementById('dash-proj').innerHTML=fpj(D.projects).filter(p=>p.status==='active'||p.status==='planning').slice(0,4).map(p=>{const dn=p.milestones.filter(m=>m.done).length,tt=p.milestones.length,pc=tt?Math.round(dn/tt*100):0;return`<div style="background:var(--s1);border:1px solid var(--brd);border-radius:7px;padding:10px;margin-bottom:5px;border-left:3px solid ${p.color}"><div style="display:flex;align-items:center;gap:6px;margin-bottom:4px"><span style="font-size:.82em;font-weight:600">${p.name}</span>${p.project==='mindwise'?'<span class="pbadge pbadge-mw">MW</span>':'<span class="pbadge pbadge-rs">RS</span>'}<span style="margin-left:auto;font-family:var(--mono);font-size:.7em;color:var(--tx3)">${dn}/${tt}</span></div><div class="proj-bar"><div class="proj-fill" style="width:${pc}%;background:${p.color}"></div></div></div>`}).join('')||'<p style="color:var(--tx3);font-size:.84em">No active projects</p>';
+}
+
+// TASKS PAGE
+function renderTasks(){
+  const cats=['all','seo','instagram','youtube','twitter','facebook','discord','reddit','content','pr','ops','product','brand','packaging','supply-chain','website'];
+  document.getElementById('task-filters').innerHTML=cats.map(c=>`<button class="fb ${TF===c?'active':''}" onclick="TF='${c}';renderTasks()">${c}</button>`).join('')+'<span class="sp"></span><button class="btn btn-p btn-sm" onclick="openAdd()">+ Task</button>';
+  let tasks=fpj(D.tasks);if(TF!=='all')tasks=tasks.filter(t=>t.cat===TF);
+  renderBoard('task-board',tasks);
+  document.getElementById('cnt-tasks').textContent=fpj(D.tasks).filter(t=>t.status!=='done').length;
+}
+
+// PROJECTS
+function renderProjs(){
+  document.getElementById('proj-list').innerHTML=fpj(D.projects).map(p=>{const dn=p.milestones.filter(m=>m.done).length,tt=p.milestones.length,pc=tt?Math.round(dn/tt*100):0;
+    return`<div class="proj" data-id="${p.id}"><div class="proj-h" onclick="this.parentElement.classList.toggle('open')">
+      <div class="dot" style="width:9px;height:9px;border-radius:50%;background:${p.color};flex-shrink:0"></div><div class="proj-n">${p.name} ${p.project==='mindwise'?'<span class="pbadge pbadge-mw">MW</span>':'<span class="pbadge pbadge-rs">RS</span>'}</div>
+      <div class="proj-st" style="background:var(--${p.status==='active'?'green':'blue'}-g);color:var(--${p.status==='active'?'green':'blue'})">${p.status}</div>
+      <div class="proj-p">${dn}/${tt}</div></div>
+      <div class="proj-bar"><div class="proj-fill" style="width:${pc}%;background:${p.color}"></div></div>
+      <div class="proj-body">${p.desc?`<p style="font-size:.82em;color:var(--tx2);margin-bottom:10px">${p.desc}</p>`:''}
+      ${p.milestones.map((m,i)=>`<div class="ms"><button class="ms-ck ${m.done?'done':''}" onclick="event.stopPropagation();togMS(${p.id},${i})">${m.done?'&#10003;':''}</button><span class="ms-t ${m.done?'x':''}">${m.text}</span></div>`).join('')}
+      <div style="margin-top:10px"><button class="btn btn-s btn-sm" onclick="openEditProj(${p.id})">Edit</button></div>
+      </div></div>`}).join('')||'<p style="color:var(--tx3)">No projects.</p>';
+}
+function togMS(pid,mi){const p=D.projects.find(x=>x.id===pid);p.milestones[mi].done=!p.milestones[mi].done;save();renderAll()}
+function openAddProj(){editPID=null;document.getElementById('mp-title').textContent='New Project';['mp-name','mp-desc','mp-ms'].forEach(x=>document.getElementById(x).value='');document.getElementById('mp-proj').value=AP!=='all'?AP:'racesims';document.getElementById('mp-st').value='planning';document.getElementById('mp-del').style.display='none';document.getElementById('m-proj').classList.add('show')}
+function openEditProj(id){const p=D.projects.find(x=>x.id===id);if(!p)return;editPID=id;document.getElementById('mp-title').textContent='Edit Project';document.getElementById('mp-name').value=p.name;document.getElementById('mp-desc').value=p.desc||'';document.getElementById('mp-proj').value=p.project;document.getElementById('mp-st').value=p.status;document.getElementById('mp-color').value=p.color;document.getElementById('mp-ms').value=p.milestones.map(m=>m.text).join('\n');document.getElementById('mp-del').style.display='inline-block';document.getElementById('m-proj').classList.add('show')}
+function saveProj(){const n=document.getElementById('mp-name').value.trim();if(!n)return;const ms=document.getElementById('mp-ms').value.trim().split('\n').filter(Boolean);if(editPID){const p=D.projects.find(x=>x.id===editPID);p.name=n;p.desc=document.getElementById('mp-desc').value.trim();p.project=document.getElementById('mp-proj').value;p.status=document.getElementById('mp-st').value;p.color=document.getElementById('mp-color').value;const ex=p.milestones.map(m=>m.text);ms.forEach(t=>{if(!ex.includes(t))p.milestones.push({text:t,done:false})});p.milestones=p.milestones.filter(m=>ms.includes(m.text))}else{D.projects.push({id:Date.now(),name:n,desc:document.getElementById('mp-desc').value.trim(),project:document.getElementById('mp-proj').value,status:document.getElementById('mp-st').value,color:document.getElementById('mp-color').value,milestones:ms.map(t=>({text:t,done:false}))})}save();renderAll();closeM('m-proj')}
+function delProj(){if(!editPID)return;D.projects=D.projects.filter(p=>p.id!==editPID);save();renderAll();closeM('m-proj')}
+
+// OPERATIONS
+function renderOps(){
+  const now=new Date().toISOString().slice(0,10);
+  const trips=fpj(D.events).filter(e=>e.type==='travel'&&e.date>=now).sort((a,b)=>a.date.localeCompare(b.date));
+  document.getElementById('ops-travel').innerHTML=trips.length?`<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">${trips.map(e=>{const d=new Date(e.date+'T00:00:00');return`<div class="ev ${pclass(e)}" style="flex:1;min-width:200px"><div class="ev-d"><div class="day">${d.getDate()}</div><div class="mon">${d.toLocaleString('en',{month:'short'})}</div></div><div class="ev-i"><h4 style="font-size:.84em">${e.name}</h4><p style="font-size:.76em">${e.desc||''}</p></div></div>`}).join('')}</div>`:'<p style="color:var(--tx3);font-size:.84em;margin-bottom:14px">No upcoming travel</p>';
+
+  const cats=['all','ops','product','brand'];
+  document.getElementById('ops-filters').innerHTML=cats.map(c=>`<button class="fb ${OF===c?'active':''}" onclick="OF='${c}';renderOps()">${c}</button>`).join('')+'<span class="sp"></span><button class="btn btn-p btn-sm" onclick="openAdd()">+ Task</button>';
+  let tasks=fpj(D.tasks).filter(t=>['ops','product','brand','packaging','supply-chain'].includes(t.cat));
+  if(OF!=='all')tasks=tasks.filter(t=>t.cat===OF);
+  renderBoard('ops-board',tasks);
+}
+
+// SOCIAL
+function renderSocial(){
+  const m=D.metrics;
+  document.getElementById('social-metrics').innerHTML=[
+    {l:'Instagram',v:m.ig,t:m.ig_target,c:'var(--pink)',k:'ig'},{l:'YouTube',v:m.yt,t:m.yt_target,c:'var(--red)',k:'yt'},{l:'Discord',v:m.discord,t:m.discord_target,c:'var(--purple)',k:'discord'},
+  ].map(x=>{const pc=x.t?Math.min(100,Math.round(x.v/x.t*100)):0;return`<div class="mc" onclick="editMet('${x.k}','${x.l}')"><div class="mc-l">${x.l}</div><div class="mc-v" style="color:${x.c};font-size:1.3em">${x.v.toLocaleString()} <span style="font-size:.4em;color:var(--tx3)">/ ${x.t.toLocaleString()}</span></div><div class="mc-bar"><div class="mc-fill" style="width:${pc}%;background:${x.c}"></div></div></div>`}).join('');
+  const cats=['all','instagram','youtube','twitter','facebook','discord','reddit'];
+  document.getElementById('social-filters').innerHTML=cats.map(c=>`<button class="fb ${SF===c?'active':''}" onclick="SF='${c}';renderSocial()">${c}</button>`).join('')+'<span class="sp"></span><button class="btn btn-p btn-sm" onclick="openAdd()">+ Task</button>';
+  let tasks=fpj(D.tasks).filter(t=>['instagram','youtube','twitter','facebook','discord','reddit'].includes(t.cat));
+  if(SF!=='all')tasks=tasks.filter(t=>t.cat===SF);
+  renderBoard('social-board',tasks);
+}
+
+// CONTENT
+function renderContent(){
+  const arts=fpj(D.articles||[]);
+  const stColors={idea:'var(--tx3)',writing:'var(--amber)',draft:'var(--blue)',published:'var(--green)'};
+  document.querySelector('#article-table tbody').innerHTML=arts.map(a=>`<tr><td style="font-weight:600">${a.title}</td><td><span class="tag" style="background:var(--s3);color:var(--tx2)">${a.cat}</span></td><td><span style="color:${stColors[a.status]};font-weight:600;font-size:.84em">${a.status}</span></td><td style="font-family:var(--mono);font-size:.8em;color:var(--tx3)">${fd(a.date)}</td></tr>`).join('')||'<tr><td colspan="4" style="color:var(--tx3)">No articles yet</td></tr>';
+
+  const m=D.metrics,c=D.competitor;
+  document.getElementById('competitor-grid').innerHTML=[
+    {l:'Instagram',rs:m.ig,vrh:c.vrh_ig,c:'var(--pink)'},{l:'Discord',rs:m.discord,vrh:c.vrh_discord,c:'var(--purple)'},{l:'Blog Articles',rs:m.blog,vrh:c.vrh_blog,c:'var(--green)'},{l:'Backlinks',rs:m.backlinks,vrh:c.vrh_bl,c:'var(--blue)'},
+  ].map(x=>`<div class="mc" style="cursor:default"><div class="mc-l">${x.l}</div><div style="display:flex;justify-content:space-between;margin-top:6px"><div><div style="font-size:1.2em;font-weight:800;color:${x.c}">${x.rs.toLocaleString()}</div><div style="font-size:.68em;color:var(--tx3)">RaceSims</div></div><div style="text-align:right"><div style="font-size:1.2em;font-weight:800;color:var(--tx3)">${x.vrh.toLocaleString()}</div><div style="font-size:.68em;color:var(--tx3)">VRH</div></div></div></div>`).join('');
+}
+
+// NOTES
+function renderNotes(){
+  const sorted=fpj([...D.notes]).sort((a,b)=>b.date.localeCompare(a.date));
+  document.getElementById('notes-list').innerHTML=sorted.map(n=>`<div class="note-row"><div class="note-dt">${n.date}</div><div class="note-tx">${n.project==='mindwise'?'<span class="pbadge pbadge-mw">MW</span>':'<span class="pbadge pbadge-rs">RS</span>'} ${n.text}</div></div>`).join('')||'<p style="color:var(--tx3);padding:8px">No notes yet.</p>'}
+function addNote(){const i=document.getElementById('note-input'),t=i.value.trim();if(!t)return;D.notes.push({id:Date.now(),date:new Date().toISOString().slice(0,10),project:document.getElementById('note-proj').value,text:t});i.value='';save();renderNotes()}
+
+// SETTINGS
+function exportD(){const b=new Blob([JSON.stringify(D,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='thambu_cc_backup.json';a.click()}
+function importD(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{D=JSON.parse(ev.target.result);save();renderAll();alert('Imported!')}catch(err){alert('Invalid file')}};r.readAsText(f)}
+
+// RENDER ALL
+function renderAll(){renderToday();renderDash();renderTasks();renderProjs();renderOps();renderSocial();renderContent();renderNotes()}
+renderAll();
+</script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RaceSims — X/Twitter Launch Kit</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: #000; color: #e7e9ea; line-height: 1.6; padding: 40px 20px; }
+  .container { max-width: 700px; margin: 0 auto; }
+  h1 { font-size: 2em; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .subtitle { color: #71767b; margin-bottom: 40px; }
+  .section { background: #16181c; border: 1px solid #2f3336; border-radius: 16px; margin-bottom: 16px; overflow: hidden; }
+  .section-header { padding: 16px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+  .section-header:hover { background: rgba(255,255,255,0.03); }
+  .section-header h2 { font-size: 1.05em; font-weight: 700; }
+  .section-header .arrow { color: #71767b; transition: transform 0.2s; }
+  .section.open .arrow { transform: rotate(90deg); }
+  .section-body { padding: 0 20px 20px; display: none; }
+  .section.open .section-body { display: block; }
+  .copy-block { background: #1d1f23; border: 1px solid #2f3336; border-radius: 12px; padding: 16px; margin: 10px 0; position: relative; font-size: 0.88em; white-space: pre-wrap; line-height: 1.7; }
+  .copy-btn { position: absolute; top: 8px; right: 8px; padding: 4px 12px; border-radius: 20px; border: 1px solid #536471; background: transparent; color: #1d9bf0; font-size: 0.78em; font-weight: 700; cursor: pointer; font-family: inherit; }
+  .copy-btn:hover { background: rgba(29,155,240,0.1); }
+  .note { background: rgba(29,155,240,0.08); border-left: 3px solid #1d9bf0; padding: 12px 16px; border-radius: 0 12px 12px 0; margin: 14px 0; font-size: 0.85em; color: #8b98a5; }
+  h3 { font-size: 0.95em; font-weight: 700; margin: 20px 0 10px; color: #e7e9ea; }
+  p { color: #8b98a5; font-size: 0.9em; margin-bottom: 8px; }
+  .tweet-card { background: #1d1f23; border: 1px solid #2f3336; border-radius: 16px; padding: 16px; margin: 10px 0; position: relative; }
+  .tweet-card .tweet-type { font-size: 0.72em; color: #1d9bf0; font-weight: 700; text-transform: uppercase; margin-bottom: 6px; }
+  .tweet-card .tweet-text { font-size: 0.92em; color: #e7e9ea; line-height: 1.5; white-space: pre-wrap; }
+  .tweet-card .copy-btn { top: 12px; right: 12px; }
+  .hashtag-grid { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .hashtag { background: rgba(29,155,240,0.1); color: #1d9bf0; padding: 4px 12px; border-radius: 20px; font-size: 0.8em; font-weight: 500; }
+  ul { padding-left: 20px; color: #8b98a5; font-size: 0.88em; }
+  ul li { margin-bottom: 8px; }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid #2f3336; font-size: 0.88em; color: #e7e9ea; }
+  .checklist li:last-child { border: none; }
+  .checklist input[type="checkbox"] { margin-top: 3px; accent-color: #1d9bf0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>𝕏 Twitter Launch Kit</h1>
+<p class="subtitle">@race_sims_india — From zero tweets to active presence. 30 ready-to-post tweets included.</p>
+
+<!-- PROFILE SETUP -->
+<div class="section open">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Profile Setup</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <h3>Bio (copy-paste)</h3>
+    <div class="copy-block">India's Pro-Grade Sim Racing Company 🏁
+Run by Motorsport Professionals | 14 years race engineering
+Conspit & VNM Authorized Distributor
+Racing simulators for drivers, cafes & enthusiasts
+📍 Chennai | 🌐 racesims.in<button class="copy-btn" onclick="copyText(this)">Copy</button></div>
+
+    <h3>Profile Checklist</h3>
+    <ul class="checklist">
+      <li><input type="checkbox"> Upload profile pic (same as Instagram — RaceSims logo)</li>
+      <li><input type="checkbox"> Upload banner (same as YouTube banner for consistency)</li>
+      <li><input type="checkbox"> Set location: Chennai, India</li>
+      <li><input type="checkbox"> Add website: racesims.in</li>
+      <li><input type="checkbox"> Paste bio from above</li>
+      <li><input type="checkbox"> Pin intro tweet (Tweet #1 below)</li>
+      <li><input type="checkbox"> Follow 50 key accounts (list below)</li>
+    </ul>
+
+    <h3>Accounts to Follow First</h3>
+    <p>Follow these to establish your network and fill your feed with relevant content to engage with:</p>
+    <ul>
+      <li><strong>Sim Racing:</strong> @iaborginern, @simaborginacing, @ACC_Esports, @iRacing, @assaborginetocorsa</li>
+      <li><strong>F1/Motorsport:</strong> @F1, @IndianOilF1, @ABORGINEFIAFIA, @motorsaborginport, Indian racing drivers</li>
+      <li><strong>Brands:</strong> @ConspaborgineitOfficial, @VNMSimulaborgineration (if they exist on X)</li>
+      <li><strong>Indian Gaming:</strong> @IGNaborginIndia, Indian gaming influencers, esports accounts</li>
+      <li><strong>Sim Racing Creators:</strong> @BoostaborginedMedia, @DaveAborgineCam, @JimmeraborginCross (big sim racing YouTubers)</li>
+    </ul>
+    <div class="note">Search X for "sim racing india" and follow everyone active in that conversation. Also follow your Instagram followers who are on X.</div>
+  </div>
+</div>
+
+<!-- READY TO POST TWEETS -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>30 Ready-to-Post Tweets</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+
+    <h3>Launch Tweets (Post Day 1-3)</h3>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Pin This Tweet</div>
+      <div class="tweet-text">We're RaceSims — India's pro-grade sim racing company, run by motorsport professionals.
+
+14 years of race engineering. Now building racing simulators that put you in the correct race car position from day one.
+
+Authorized Conspit & VNM distributor 🇮🇳
+
+racesims.in</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Launch Tweet #2</div>
+      <div class="tweet-text">Fun fact: I've spent more time reading telemetry data than most people spend on social media.
+
+Now I'm using that same obsession to build racing simulators that actually teach you how to drive faster.
+
+If you're into sim racing in India, you're in the right place. 🏁</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Launch Tweet #3</div>
+      <div class="tweet-text">What makes our rigs different from everything else in India?
+
+They're designed using real race car ergonomics. Not gaming chair angles. Not desk clamp setups.
+
+The same seating position, pedal distance, and steering angle you'd find in an actual race car.
+
+That's the RaceSims difference.</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <h3>Race Engineer Tips (Weekly)</h3>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Race Engineer Tip</div>
+      <div class="tweet-text">Race engineer tip 🧠
+
+In a real race car, drivers brake with 80-150kg of force.
+
+If your sim pedals max out at 20kg, you're training muscle memory that won't transfer to reality.
+
+Load cell pedals with 40-50kg+ range = actual training value.
+
+This is why we only sell serious pedals.</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Race Engineer Tip</div>
+      <div class="tweet-text">Race engineer tip 🧠
+
+Trail braking isn't about the brake pedal. It's about weight transfer.
+
+When you trail the brakes into a corner, you're keeping load on the front tires = more grip for turning.
+
+Release too early = understeer
+Release too late = oversteer
+
+The sweet spot? That's where lap time lives.</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Race Engineer Tip</div>
+      <div class="tweet-text">Race engineer tip 🧠
+
+The fastest lap isn't always the one with the highest top speed.
+
+It's the one with the most consistent corner exits.
+
+Good exit speed compounds through the next straight. That's basic race engineering — optimize the system, not individual parts.</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <h3>Product & Brand Tweets</h3>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Product</div>
+      <div class="tweet-text">Just shipped another Conspit Ares Platinum setup 🔥
+
+18Nm of pure torque. You feel everything — weight transfer, tire slip, kerb strikes.
+
+This is what separates "playing a game" from "training on a simulator."
+
+If you're in India and serious about sim racing, DM us.</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Product</div>
+      <div class="tweet-text">People ask why our cockpits cost more than a gaming chair + wheel stand combo.
+
+Because a gaming chair puts your legs straight and your arms high — the opposite of a race car.
+
+Our rigs put you in the correct position from day one. Your muscle memory thanks you later.</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <h3>Engagement & Hot Takes</h3>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Hot Take</div>
+      <div class="tweet-text">Controversial opinion:
+
+Sim racing is harder than real racing.
+
+In a real car, you feel G-forces, heat, vibration through your whole body.
+
+In a sim, you only have visual + FFB. You're driving with less information.
+
+The fact that sim lap times are this close to real ones is incredible.</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Hot Take</div>
+      <div class="tweet-text">The Indian sim racing scene in 2026 is where Indian esports was in 2018.
+
+Small but growing fast. Talent everywhere. Infrastructure catching up.
+
+In 5 years, Indian sim racers will be competing at the highest global level.
+
+We're building the hardware foundation for that.</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Engagement</div>
+      <div class="tweet-text">Quick poll for Indian sim racers:
+
+What's your primary sim?
+
+🔄 Assetto Corsa Competizione
+❤️ iRacing
+💬 Assetto Corsa (modded)
+🔖 Other (reply below)</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Engagement</div>
+      <div class="tweet-text">Your sim racing journey started with _____.
+
+Reply with your first setup. We'll go first:
+
+Logitech G27 clamped to a desk, playing GT5 on PS3.
+
+Look at us now 😅</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <h3>Race Weekend Tweets (Use During F1 Weekends)</h3>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Race Weekend</div>
+      <div class="tweet-text">[Driver] just pulled off an incredible late braking move into Turn [X].
+
+From a race engineer's perspective, that was pure confidence in brake balance. The car was rotating perfectly on entry.
+
+You can actually practice that exact move in ACC. Same track, same physics model. 🏎️</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Race Weekend</div>
+      <div class="tweet-text">Watching F1 qualifying and analyzing it like I'm back in the pit wall.
+
+The sector time gaps in S2 tell the whole story. It's all about traction out of the slow corners.
+
+Who else watches F1 with telemetry brain? 🧠📊</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Race Weekend</div>
+      <div class="tweet-text">Race day ritual:
+
+1. Watch the race
+2. Load the same track in ACC
+3. Try to match the strategy
+4. Realize F1 drivers are aliens
+5. Repeat next weekend
+
+Anyone else? 😂</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <h3>Educational Threads</h3>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Thread Starter</div>
+      <div class="tweet-text">Building a sim racing setup in India? Here's what nobody tells you 🧵
+
+(A thread from someone who's been building racing simulators professionally for years)</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+    <div class="tweet-card">
+      <div class="tweet-type">Thread (post as replies)</div>
+      <div class="tweet-text">1/ Start with pedals, not the wheel.
+
+Everyone upgrades the wheel first. Wrong move.
+
+Load cell pedals improve your consistency more than any wheel upgrade. Your braking is 70% of your lap time.
+
+2/ Your rig matters more than your wheel.
+
+A ₹50K wheel on a flex-free cockpit beats a ₹1.5L wheel on a desk clamp. Period.
+
+Flex = inconsistent inputs = slower laps. Invest in rigidity first.
+
+3/ Don't buy from Amazon/Flipkart for sim racing gear.
+
+Most "sim racing" products there are gaming peripherals with sim racing in the title.
+
+Buy from authorized distributors who actually understand the hardware.
+
+4/ Triple monitors > VR for training.
+
+VR is immersive but causes fatigue in long sessions. Pro sim racers and real racing drivers train on triples.
+
+If budget is tight, a single 32" ultrawide is the sweet spot.
+
+5/ Your room temperature matters.
+
+Indian heat + a gaming PC + triple monitors = thermal throttling.
+
+A simple exhaust fan upgrade often prevents more issues than any software optimization.
+
+That's it. Questions? Ask below 👇</div>
+      <button class="copy-btn" onclick="copyTweet(this)">Copy</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- HASHTAG STRATEGY -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Hashtag Strategy</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <p>Use 2-3 hashtags per tweet max. X isn't Instagram — too many hashtags looks spammy.</p>
+
+    <h3>Primary (use most often)</h3>
+    <div class="hashtag-grid">
+      <span class="hashtag">#simracing</span>
+      <span class="hashtag">#simracingindia</span>
+      <span class="hashtag">#racesims</span>
+    </div>
+
+    <h3>Topic-Specific</h3>
+    <div class="hashtag-grid">
+      <span class="hashtag">#F1</span>
+      <span class="hashtag">#ACC</span>
+      <span class="hashtag">#iRacing</span>
+      <span class="hashtag">#AssettoCorsaCompetizione</span>
+      <span class="hashtag">#simrig</span>
+      <span class="hashtag">#directdrive</span>
+      <span class="hashtag">#loadcellpedals</span>
+      <span class="hashtag">#motorsport</span>
+    </div>
+
+    <h3>Growth (Indian audience)</h3>
+    <div class="hashtag-grid">
+      <span class="hashtag">#IndianGaming</span>
+      <span class="hashtag">#GamingIndia</span>
+      <span class="hashtag">#esportsindia</span>
+      <span class="hashtag">#ChennaiGaming</span>
+      <span class="hashtag">#IndianMotorsport</span>
+    </div>
+  </div>
+</div>
+
+<!-- POSTING SCHEDULE -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Posting Schedule</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <p>Aim for 3-5 tweets per week minimum. Here's the weekly cadence:</p>
+    <ul>
+      <li><strong>Monday:</strong> Race Engineer Tip (thread or single tweet)</li>
+      <li><strong>Wednesday:</strong> Product/brand tweet OR engagement tweet (poll, question)</li>
+      <li><strong>Friday:</strong> Hot take or industry commentary</li>
+      <li><strong>Race Weekends (Sat/Sun):</strong> 3-5 live tweets during qualifying and race</li>
+    </ul>
+
+    <div class="note">
+      <strong>Best posting times for India + global sim racing audience:</strong><br>
+      • 8-10 AM IST (catches morning India + late night US West Coast)<br>
+      • 6-8 PM IST (catches evening India + morning EU)<br>
+      • During F1 sessions (global attention spike)
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+function copyText(btn) {
+  const block = btn.parentElement;
+  const text = block.textContent.replace('Copy', '').replace('Copied!', '').trim();
+  navigator.clipboard.writeText(text).then(() => { btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = 'Copy', 2000); });
+}
+function copyTweet(btn) {
+  const card = btn.parentElement;
+  const text = card.querySelector('.tweet-text').textContent.trim();
+  navigator.clipboard.writeText(text).then(() => { btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = 'Copy', 2000); });
+}
+</script>
+</body>
+</html>
