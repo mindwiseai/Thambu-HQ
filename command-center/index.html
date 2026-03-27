@@ -383,8 +383,59 @@ td{padding:8px 10px;border-bottom:1px solid var(--brd)}
 
 <script>
 const SK='thambu_cc_v2';
+const SHEET_ID='1Tbdgnnuc7vbPcDkCGTeY7pJ-0rsF05TQez8p4Q_pxRI';
 const priOrd={critical:0,high:1,medium:2,low:3};
 let AP='all',TF='all',SF='all',OF='all',editTID=null,editPID=null,editMK=null,ctxTID=null;
+let syncStatus='local';
+
+// Google Sheets CSV fetch
+async function fetchSheet(sheetName){
+  try{
+    const url=`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent(sheetName)}`;
+    const r=await fetch(url);const t=await r.text();
+    const json=JSON.parse(t.substring(t.indexOf('{'),t.lastIndexOf('}')+1));
+    const cols=json.table.cols.map(c=>c.label);
+    return json.table.rows.map(row=>{
+      const obj={};
+      cols.forEach((col,i)=>{if(col){obj[col]=row.c&&row.c[i]?row.c[i].v:null}});
+      return obj;
+    });
+  }catch(e){console.warn('Sheet fetch failed:',sheetName,e);return null}
+}
+
+async function syncFromSheets(){
+  const [tasks,projects,events,notes,metrics,articles]=await Promise.all([
+    fetchSheet('Tasks'),fetchSheet('Projects'),fetchSheet('Events'),
+    fetchSheet('Notes'),fetchSheet('Metrics'),fetchSheet('Articles')
+  ]);
+  if(!tasks)return false; // offline or error — use local
+
+  D.tasks=tasks.map(r=>({id:Number(r.ID),title:r.Title||'',desc:r.Description||'',project:r.Project||'racesims',cat:r.Category||'ops',pri:r.Priority||'medium',status:r.Status||'todo',date:r.Date||r['Due Date']||'',today:r.Today==='TRUE'||r.Today===true}));
+
+  D.projects=projects.map(r=>{
+    const ms=(r.Milestones||'').split('|').filter(Boolean).map(m=>{
+      const done=m.includes('[DONE]');return{text:m.replace(' [DONE]',''),done}});
+    return{id:Number(r.ID),name:r.Name||'',project:r.Project||'racesims',desc:r.Description||'',status:r.Status||'planning',color:r.Project==='mindwise'?'var(--cyan)':'var(--red)',milestones:ms}});
+
+  D.events=events.map(r=>({id:Number(r.ID),name:r.Name||'',project:r.Project||'racesims',desc:r.Description||'',date:r.Date||'',type:r.Date&&r.Description&&r.Description.includes('install')?'travel':'other'}));
+
+  D.notes=notes.map(r=>({id:Date.now()+Math.random()*1000|0,date:r.Date||'',project:r.Project||'racesims',text:r.Text||''}));
+
+  if(metrics){const m={};metrics.forEach(r=>{if(r.Metric)m[r.Metric]=isNaN(r.Value)?r.Value:Number(r.Value)});
+    Object.assign(D.metrics,m)}
+
+  if(articles)D.articles=articles.map(r=>({id:Number(r.ID),title:r.Title||'',cat:r.Category||'',status:r.Status||'idea',date:r.Date||'',project:'racesims'}));
+
+  save();syncStatus='synced';return true;
+}
+
+// Sync indicator in topbar
+function updateSyncBadge(){
+  let el=document.getElementById('sync-badge');
+  if(!el){el=document.createElement('span');el.id='sync-badge';el.style.cssText='font-size:.68em;padding:2px 8px;border-radius:4px;margin-right:4px;cursor:pointer';el.onclick=()=>{syncFromSheets().then(ok=>{if(ok){renderAll();updateSyncBadge()}})};document.querySelector('.topbar').insertBefore(el,document.querySelector('.topbar-spacer'))}
+  if(syncStatus==='synced'){el.style.background='var(--green-g)';el.style.color='var(--green)';el.textContent='Synced'}
+  else{el.style.background='var(--amber-g)';el.style.color='var(--amber)';el.textContent='Local'}
+}
 
 function def(){return{
 tasks:[
@@ -466,6 +517,15 @@ notes:[
 
 let D;try{const s=localStorage.getItem(SK);D=s?JSON.parse(s):def()}catch(e){D=def()}
 function save(){try{localStorage.setItem(SK,JSON.stringify(D))}catch(e){}}
+
+// Auto-sync from Google Sheets on load
+(async()=>{
+  const ok=await syncFromSheets();
+  if(ok){renderAll();updateSyncBadge();console.log('Synced from Google Sheets')}
+  else{syncStatus='local';updateSyncBadge();console.log('Using local data')}
+})();
+// Re-sync every 5 minutes
+setInterval(async()=>{const ok=await syncFromSheets();if(ok){renderAll();updateSyncBadge()}},300000);
 
 // NAV
 const titles={today:'Today',dashboard:'Dashboard',tasks:'Tasks',projects:'Projects',ops:'Operations',social:'Social Media',contentpage:'Content & Strategy',log:'Activity Log',settings:'Settings'};
@@ -636,7 +696,7 @@ function exportD(){const b=new Blob([JSON.stringify(D,null,2)],{type:'applicatio
 function importD(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{D=JSON.parse(ev.target.result);save();renderAll();alert('Imported!')}catch(err){alert('Invalid file')}};r.readAsText(f)}
 
 // RENDER ALL
-function renderAll(){renderToday();renderDash();renderTasks();renderProjs();renderOps();renderSocial();renderContent();renderNotes()}
+function renderAll(){renderToday();renderDash();renderTasks();renderProjs();renderOps();renderSocial();renderContent();renderNotes();updateSyncBadge()}
 renderAll();
 </script>
 </body>
