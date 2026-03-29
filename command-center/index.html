@@ -190,6 +190,10 @@ td{padding:8px 10px;border-bottom:1px solid var(--brd)}
     <button class="nav-item" data-page="social"><span class="dot" style="background:var(--pink)"></span><span>Social Media</span></button>
     <button class="nav-item" data-page="contentpage"><span class="dot" style="background:var(--cyan)"></span><span>Content</span></button>
 
+    <div class="nav-section">Mindwise</div>
+    <button class="nav-item" data-page="mw-launch"><span class="dot" style="background:var(--mw)"></span><span>Launch Plan</span></button>
+    <button class="nav-item" data-page="mw-social"><span class="dot" style="background:var(--mw)"></span><span>Social Identity</span></button>
+
     <div class="nav-section">System</div>
     <button class="nav-item" data-page="log"><span class="dot" style="background:var(--tx3)"></span><span>Activity Log</span></button>
     <button class="nav-item" data-page="settings"><span class="dot" style="background:var(--tx3)"></span><span>Settings</span></button>
@@ -286,6 +290,166 @@ td{padding:8px 10px;border-bottom:1px solid var(--brd)}
   <table id="article-table"><thead><tr><th>Title</th><th>Category</th><th>Status</th><th>Date</th></tr></thead><tbody></tbody></table>
   <div class="stitle" style="margin-top:20px">Competitor Intel — RaceSims vs VRH</div>
   <div id="competitor-grid" class="mg"></div>
+</div>
+
+<!-- MINDWISE LAUNCH PLAN -->
+<div class="page" id="page-mw-launch">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+    <span style="font-size:1.3em;font-weight:800;color:var(--mw)">MINDWISE</span>
+    <span style="color:var(--tx3);font-size:.85em">Cognitive Wellness Supplements — Launch June 1, 2026</span>
+    <span style="margin-left:auto;font-family:var(--mono);font-size:1.1em;font-weight:700;color:var(--mw)" id="mw-countdown"></span>
+  </div>
+  <div class="mg" id="mw-metrics"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px">
+    <div>
+      <div class="stitle">Launch Timeline</div>
+      <div id="mw-timeline"></div>
+    </div>
+    <div>
+      <div class="stitle">What's Locked</div>
+      <div id="mw-locked" style="margin-bottom:14px"></div>
+      <div class="stitle">Needs Decision</div>
+      <div id="mw-decisions"></div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px">
+    <div>
+      <div class="stitle">Target Audiences</div>
+      <div id="mw-audiences"></div>
+    </div>
+    <div>
+      <div class="stitle">Sales Channels</div>
+      <div id="mw-channels"></div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px">
+    <div>
+      <div class="stitle">Budget — ₹25L Annual</div>
+      <div id="mw-budget"></div>
+    </div>
+    <div>
+      <div class="stitle">Key Contacts</div>
+      <div id="mw-contacts"></div>
+    </div>
+  </div>
+  <div>
+    <div class="stitle">Competitors</div>
+    <div id="mw-competitors" class="mg"></div>
+  </div>
+</div>
+
+<!-- MINDWISE SOCIAL IDENTITY -->
+<div class="page" id="page-mw-social">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+    <span style="font-size:1.3em;font-weight:800;color:var(--mw)">SOCIAL IDENTITY</span>
+    <span style="color:var(--tx3);font-size:.85em">Instagram Design Language — Mar 2026 Brief</span>
+  </div>
+
+  <!-- Brand North Star -->
+  <div style="background:var(--s1);border:1px solid var(--brd);border-radius:9px;padding:20px;margin-bottom:14px;text-align:center">
+    <div style="font-size:.68em;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--tx3);margin-bottom:8px">Brand North Star</div>
+    <div style="font-size:1.8em;font-weight:800;color:var(--mw);letter-spacing:-.02em;margin-bottom:16px">YOUR UNFAIR ADVANTAGE</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+      <div style="background:var(--s2);border-radius:7px;padding:14px"><div style="font-weight:700;color:var(--mw);margin-bottom:4px;font-size:.9em">Proven Science</div><div style="font-size:.8em;color:var(--tx2);line-height:1.4">40 years of research. Patented CDRI-08. Not wellness fluff — actual chemistry.</div></div>
+      <div style="background:var(--s2);border-radius:7px;padding:14px"><div style="font-weight:700;color:var(--mw);margin-bottom:4px;font-size:.9em">Performance Coded</div><div style="font-size:.8em;color:var(--tx2);line-height:1.4">Built for people who compete — in boardrooms, lecture halls, and life.</div></div>
+      <div style="background:var(--s2);border-radius:7px;padding:14px"><div style="font-weight:700;color:var(--mw);margin-bottom:4px;font-size:.9em">Clarity on Demand</div><div style="font-size:.8em;color:var(--tx2);line-height:1.4">Sharper focus. Better memory. Optimum potency. When it matters most.</div></div>
+    </div>
+  </div>
+
+  <!-- Colour System -->
+  <div style="background:var(--s1);border:1px solid var(--brd);border-radius:9px;padding:18px;margin-bottom:14px">
+    <div class="stitle">Colour System</div>
+    <div style="display:flex;gap:10px;margin-bottom:12px">
+      <div style="flex:1;text-align:center"><div style="width:100%;height:48px;border-radius:6px;background:#0A0A0A;border:1px solid var(--brd2);margin-bottom:6px"></div><div style="font-weight:600;font-size:.8em">Pitch Black</div><div style="font-family:var(--mono);font-size:.7em;color:var(--tx3)">#0A0A0A</div><div style="font-size:.68em;color:var(--tx3)">Primary BG</div></div>
+      <div style="flex:1;text-align:center"><div style="width:100%;height:48px;border-radius:6px;background:#181818;border:1px solid var(--brd2);margin-bottom:6px"></div><div style="font-weight:600;font-size:.8em">Surface</div><div style="font-family:var(--mono);font-size:.7em;color:var(--tx3)">#181818</div><div style="font-size:.68em;color:var(--tx3)">Cards / Frames</div></div>
+      <div style="flex:1;text-align:center"><div style="width:100%;height:48px;border-radius:6px;background:#AADC32;margin-bottom:6px"></div><div style="font-weight:600;font-size:.8em">Neon Green</div><div style="font-family:var(--mono);font-size:.7em;color:var(--tx3)">#AADC32</div><div style="font-size:.68em;color:var(--tx3)">Accent — Dominant</div></div>
+      <div style="flex:1;text-align:center"><div style="width:100%;height:48px;border-radius:6px;background:#FFFFFF;border:1px solid var(--brd2);margin-bottom:6px"></div><div style="font-weight:600;font-size:.8em">Pure White</div><div style="font-family:var(--mono);font-size:.7em;color:var(--tx3)">#FFFFFF</div><div style="font-size:.68em;color:var(--tx3)">Headlines</div></div>
+      <div style="flex:1;text-align:center"><div style="width:100%;height:48px;border-radius:6px;background:#888888;margin-bottom:6px"></div><div style="font-weight:600;font-size:.8em">Mid Grey</div><div style="font-family:var(--mono);font-size:.7em;color:var(--tx3)">#888888</div><div style="font-size:.68em;color:var(--tx3)">Body / Supporting</div></div>
+    </div>
+    <div style="padding:10px 14px;background:var(--mw-g);border-radius:6px;font-size:.84em;color:var(--mw);font-weight:500;line-height:1.5">Black is the canvas. Neon green is the weapon. White is the statement. Never use both green and white at equal weight — one always dominates.</div>
+  </div>
+
+  <!-- Reference Landscape -->
+  <div style="background:var(--s1);border:1px solid var(--brd);border-radius:9px;padding:18px;margin-bottom:14px">
+    <div class="stitle">Reference Landscape — What We Borrow & From Where</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+      <div style="background:var(--s2);border-radius:7px;padding:12px"><div style="font-weight:700;font-size:.9em;margin-bottom:4px">WHOOP</div><div style="font-size:.78em;color:var(--tx2);margin-bottom:6px;line-height:1.4">Dark palette, data-led content, athlete intensity. The 'locked in' mindset.</div><div style="font-size:.78em;color:var(--mw);font-weight:500">Borrow: visual seriousness, dark feeds</div></div>
+      <div style="background:var(--s2);border-radius:7px;padding:12px"><div style="font-weight:700;font-size:.9em;margin-bottom:4px">Naked Coffee</div><div style="font-size:.78em;color:var(--tx2);margin-bottom:6px;line-height:1.4">Green in EVERY piece — owned, UGC, paid, hero, hub, hygiene.</div><div style="font-size:.78em;color:var(--mw);font-weight:500">Borrow: ruthless colour-coding across ALL formats</div></div>
+      <div style="background:var(--s2);border-radius:7px;padding:12px"><div style="font-weight:700;font-size:.9em;margin-bottom:4px">AG1</div><div style="font-size:.78em;color:var(--tx2);margin-bottom:6px;line-height:1.4">Clean, premium, aspirational. Science credibility without clinical coldness.</div><div style="font-size:.78em;color:var(--mw);font-weight:500">Borrow: design cues performance — not medicine</div></div>
+      <div style="background:var(--s2);border-radius:7px;padding:12px"><div style="font-weight:700;font-size:.9em;margin-bottom:4px">Nothing Tech</div><div style="font-size:.78em;color:var(--tx2);margin-bottom:6px;line-height:1.4">Brutalist minimalism. Techy, cult following, zero lifestyle fluff.</div><div style="font-size:.78em;color:var(--mw);font-weight:500">Borrow: futuristic without visual noise</div></div>
+      <div style="background:var(--s2);border-radius:7px;padding:12px"><div style="font-weight:700;font-size:.9em;margin-bottom:4px">Ketone-IQ</div><div style="font-size:.78em;color:var(--tx2);margin-bottom:6px;line-height:1.4">Science-forward supplement brand.</div><div style="font-size:.78em;color:var(--mw);font-weight:500">Borrow: clinical credibility feels compelling</div></div>
+      <div style="background:var(--s2);border-radius:7px;padding:12px"><div style="font-weight:700;font-size:.9em;margin-bottom:4px">Gymshark</div><div style="font-size:.78em;color:var(--tx2);margin-bottom:6px;line-height:1.4">Community-first, consistent brand presence.</div><div style="font-size:.78em;color:var(--mw);font-weight:500">Borrow: community-coded UGC, consistent colour</div></div>
+    </div>
+  </div>
+
+  <!-- Deliverables -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+    <div style="background:var(--s1);border:1px solid var(--brd);border-radius:9px;padding:18px">
+      <div class="stitle">Profile Setup</div>
+      <div style="font-size:.84em;color:var(--tx2);line-height:1.8">
+        <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--mw)">→</span><span>Profile picture — brand name, logo or insignia decision</span></div>
+        <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--mw)">→</span><span>Bio: "Your Unfair Advantage. India's only Govt backed daily brain supplement."</span></div>
+        <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--mw)">→</span><span>Custom icon set for 4 pillars — The Mindwise Network, The Enemy, The Brand, Mindwise Movement</span></div>
+      </div>
+    </div>
+    <div style="background:var(--s1);border:1px solid var(--brd);border-radius:9px;padding:18px">
+      <div class="stitle">Instagram Grid System</div>
+      <div style="font-size:.84em;color:var(--tx2);line-height:1.8">
+        <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--mw)">→</span><span>3×3 grid blueprint — product, people, copy-led, colour-block rhythm</span></div>
+        <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--mw)">→</span><span>Grid colour-blocking rule — where neon green dominates vs. recedes</span></div>
+        <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--mw)">→</span><span>Aspect ratio for maximising screen real estate</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+    <div style="background:var(--s1);border:1px solid var(--brd);border-radius:9px;padding:18px">
+      <div class="stitle">Content Templates</div>
+      <div style="font-size:.84em;color:var(--tx2);line-height:1.8">
+        <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--mw)">→</span><span>Static post — Product-hero + People + Copy-only versions</span></div>
+        <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--mw)">→</span><span>Carousel — Hook slide, content slide, image:text ratio, CTA slide</span></div>
+        <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--mw)">→</span><span>Reel thumbnail — text placement, logo bug, colour grade guide</span></div>
+        <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--mw)">→</span><span>Story template</span></div>
+      </div>
+    </div>
+    <div style="background:var(--s1);border:1px solid var(--brd);border-radius:9px;padding:18px">
+      <div class="stitle">Content-Type Visual Coding</div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="background:var(--s2);border-radius:5px;padding:8px 10px"><div style="font-weight:600;font-size:.84em;margin-bottom:2px">Product Reel</div><div style="font-size:.78em;color:var(--tx2)">Clean dark studio, neon product lighting, logo end card</div></div>
+        <div style="background:var(--s2);border-radius:5px;padding:8px 10px"><div style="font-weight:600;font-size:.84em;margin-bottom:2px">UGC Template</div><div style="font-size:.78em;color:var(--tx2)">Colour grade spec + text overlay style + logo/badge placement</div></div>
+        <div style="background:var(--s2);border-radius:5px;padding:8px 10px"><div style="font-weight:600;font-size:.84em;margin-bottom:2px">Founder Story</div><div style="font-size:.78em;color:var(--tx2)">More raw, slightly warmer (still dark), on-screen captions in brand font</div></div>
+        <div style="background:var(--s2);border-radius:5px;padding:8px 10px"><div style="font-weight:600;font-size:.84em;margin-bottom:2px">Science/Ingredient Reel</div><div style="font-size:.78em;color:var(--tx2)">Data-visual style, CDRI-08 badge, stat callout treatment</div></div>
+        <div style="background:var(--s2);border-radius:5px;padding:8px 10px"><div style="font-weight:600;font-size:.84em;margin-bottom:2px">Community/Cohort</div><div style="font-size:.78em;color:var(--tx2)">People-led, rim-lit, locked-in expression. Cohort label tag</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reel Thumbnails -->
+  <div style="background:var(--s1);border:1px solid var(--brd);border-radius:9px;padding:18px">
+    <div class="stitle">Reel Thumbnail Templates — The thumbnail is the post</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+      <div style="padding:24px 16px;background:#0A0A0A;border-radius:8px;text-align:center;border:1px solid var(--brd);aspect-ratio:9/16;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px">
+        <div style="font-size:1.2em;font-weight:800;color:#FFFFFF;line-height:1.1">ONE BOTTLE.</div>
+        <div style="font-family:var(--mono);font-size:.7em;color:#AADC32;font-weight:700">MW</div>
+        <div style="font-size:.65em;color:#888;text-transform:uppercase;letter-spacing:.08em">Product Reel</div>
+      </div>
+      <div style="padding:24px 16px;background:#0A0A0A;border-radius:8px;text-align:center;border:1px solid var(--brd);aspect-ratio:9/16;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px">
+        <div style="font-size:1.2em;font-weight:800;color:#FFFFFF;line-height:1.1">REAL RESULTS.</div>
+        <div style="font-family:var(--mono);font-size:.7em;color:#AADC32;font-weight:700">MW</div>
+        <div style="font-size:.65em;color:#888;text-transform:uppercase;letter-spacing:.08em">UGC Reel</div>
+      </div>
+      <div style="padding:24px 16px;background:#0A0A0A;border-radius:8px;text-align:center;border:1px solid var(--brd);aspect-ratio:9/16;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px">
+        <div style="font-size:1.2em;font-weight:800;color:#FFFFFF;line-height:1.1">WHY WE BUILT IT.</div>
+        <div style="font-family:var(--mono);font-size:.7em;color:#AADC32;font-weight:700">MW</div>
+        <div style="font-size:.65em;color:#888;text-transform:uppercase;letter-spacing:.08em">Founder Story</div>
+      </div>
+      <div style="padding:24px 16px;background:#0A0A0A;border-radius:8px;text-align:center;border:1px solid var(--brd);aspect-ratio:9/16;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px">
+        <div style="font-size:1.2em;font-weight:800;color:#FFFFFF;line-height:1.1">40 YEARS.</div>
+        <div style="font-family:var(--mono);font-size:.7em;color:#AADC32;font-weight:700">MW</div>
+        <div style="font-size:.65em;color:#888;text-transform:uppercase;letter-spacing:.08em">Science Reel</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- ACTIVITY LOG -->
@@ -634,13 +798,14 @@ function save(){try{localStorage.setItem(SK,JSON.stringify(D))}catch(e){}}
 setInterval(async()=>{const ok=await syncFromSheets();if(ok){renderAll();updateSyncBadge()}},300000);
 
 // NAV
-const titles={today:'Today',dashboard:'Dashboard',tasks:'Tasks',projects:'Projects',ops:'Operations',social:'Social Media',contentpage:'Content & Strategy',log:'Activity Log',settings:'Settings'};
+const titles={today:'Today',dashboard:'Dashboard',tasks:'Tasks',projects:'Projects',ops:'Operations',social:'Social Media',contentpage:'Content & Strategy','mw-launch':'Mindwise — Launch Plan','mw-social':'Mindwise — Social Identity',log:'Activity Log',settings:'Settings'};
 document.querySelectorAll('.nav-item').forEach(n=>{n.addEventListener('click',()=>{
   document.querySelectorAll('.nav-item').forEach(x=>x.classList.remove('active'));
   document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
   n.classList.add('active');const p=n.dataset.page;
   document.getElementById('page-'+p).classList.add('active');
   document.getElementById('page-title').textContent=titles[p]||p;
+  if(p==='mw-launch')renderMWLaunch();
 })});
 
 // PROJECT FILTER
@@ -801,8 +966,112 @@ function addNote(){const i=document.getElementById('note-input'),t=i.value.trim(
 function exportD(){const b=new Blob([JSON.stringify(D,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='thambu_cc_backup.json';a.click()}
 function importD(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{D=JSON.parse(ev.target.result);save();renderAll();alert('Imported!')}catch(err){alert('Invalid file')}};r.readAsText(f)}
 
+// MINDWISE LAUNCH
+function renderMWLaunch(){
+  const mwLaunch=new Date('2026-06-01T00:00:00+05:30');
+  const days=Math.max(0,Math.ceil((mwLaunch-new Date())/(1000*60*60*24)));
+  document.getElementById('mw-countdown').textContent=days+' days to launch';
+
+  document.getElementById('mw-metrics').innerHTML=[
+    {l:'Days to Launch',v:days,c:'var(--mw)'},
+    {l:'Amazon Rating',v:'3.6★',c:'var(--amber)',s:'7 reviews — ASIN: B0F1Y6232D'},
+    {l:'Target Price',v:'₹850-900',c:'var(--green)',s:'per bottle (60 caps)'},
+    {l:'Budget',v:'₹25L',c:'var(--mw)',s:'Annual marketing'},
+    {l:'Monthly Target',v:'10K',c:'var(--green)',s:'bottles/month Year 1'},
+  ].map(x=>`<div class="mc" style="cursor:default"><div class="mc-l">${x.l}</div><div class="mc-v" style="color:${x.c};font-size:1.3em">${x.v}</div>${x.s?`<div class="mc-s">${x.s}</div>`:''}</div>`).join('');
+
+  const timeline=[
+    {label:'Brand Strategy Locked',date:'2026-01-23',done:true},
+    {label:'Visual Identity Locked',date:'2026-01-30',done:true},
+    {label:'Content Strategy Finalized',date:'2026-02-12',done:true},
+    {label:'Packaging Brief Sent',date:'2026-03-23',done:true},
+    {label:'Social Identity Brief Complete',date:'2026-03-27',done:true},
+    {label:'Packaging Renders',date:'2026-03-28',done:false},
+    {label:'Visual Identity Presentation',date:'2026-04-02',done:false},
+    {label:'Mumbai In-Person Meeting',date:'2026-04-02',done:false},
+    {label:'Brand Book & Templates Locked',date:'2026-04-15',done:false},
+    {label:'Website Live',date:'2026-05-31',done:false},
+    {label:'LAUNCH',date:'2026-06-01',done:false},
+  ];
+  document.getElementById('mw-timeline').innerHTML=timeline.map(t=>{
+    const isLaunch=t.label==='LAUNCH';
+    return`<div style="display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--brd)">
+      <div style="width:10px;height:10px;border-radius:50%;background:${t.done?'var(--green)':isLaunch?'var(--mw)':'var(--tx3)'};flex-shrink:0;${isLaunch?'box-shadow:0 0 8px var(--mw)':''}"></div>
+      <span style="font-size:.84em;flex:1;font-weight:${isLaunch?700:500};color:${t.done?'var(--tx3)':isLaunch?'var(--mw)':'var(--tx)'};${t.done?'text-decoration:line-through':''}">${t.label}</span>
+      <span style="font-family:var(--mono);font-size:.72em;color:var(--tx3)">${fd(t.date)}</span>
+    </div>`}).join('');
+
+  document.getElementById('mw-locked').innerHTML=[
+    'Brand positioning: "Your Unfair Advantage"','Logo: Route 3 — Architecture of Intelligence',
+    'Visual identity: Neon green + charcoal','Bottle: 100mL, semi-transparent, 60 caps',
+    'Vendor: Patco Pharmaceuticals, Navi Mumbai','Content strategy & campaign hooks',
+    'Pricing direction: ₹850-900/bottle','Social identity brief — colour system, references, content coding',
+  ].map(x=>`<div style="display:flex;align-items:center;gap:6px;padding:4px 0;font-size:.84em"><span style="color:var(--green)">✓</span><span>${x}</span></div>`).join('');
+
+  document.getElementById('mw-decisions').innerHTML=[
+    {t:'Website: Sorted ₹6L vs. ₹3L budget',u:'high'},
+    {t:'Performance/social media agency hire',u:'high'},
+    {t:'Brand Manager vs. freelancer model',u:'medium'},
+    {t:'Colour alignment: #AADC32 vs #b4f441',u:'high'},
+    {t:'Blister pack specs — 2 sizes TBD',u:'medium'},
+    {t:'Product line extension (syrup, Bacopa+)',u:'low'},
+  ].map(x=>`<div style="display:flex;align-items:center;gap:6px;padding:4px 0;font-size:.84em"><span class="tag" style="background:var(--${x.u==='high'?'red':x.u==='medium'?'amber':'tx3'}-g);color:var(--${x.u==='high'?'red':x.u==='medium'?'amber':'tx3'})">${x.u}</span><span>${x.t}</span></div>`).join('');
+
+  document.getElementById('mw-audiences').innerHTML=[
+    {name:'The Student',age:'17-24',hook:'Clarity on Demand',desc:'Exam pressure, assignments, internship competition'},
+    {name:'The Professional',age:'25-38',hook:'Sustained Performance',desc:'Back-to-back meetings, high-stakes decisions'},
+    {name:'The Elder',age:'45+',hook:'Proven Protection',desc:'Staying sharp, mental acuity as legacy'},
+    {name:'The Wired Mind',age:'18+ (ADHD)',hook:'Your Unfair Advantage',desc:'Brilliant, scattered, fighting for focus'},
+  ].map(x=>`<div style="background:var(--s1);border:1px solid var(--brd);border-radius:7px;padding:10px 14px;margin-bottom:6px;border-left:3px solid var(--mw)">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2px"><span style="font-weight:600;font-size:.88em">${x.name}</span><span style="font-size:.72em;color:var(--tx3)">Age: ${x.age}</span></div>
+    <div style="font-size:.8em;color:var(--tx2)">${x.desc}</div>
+    <div style="margin-top:4px;padding:3px 8px;background:var(--mw-g);border-radius:4px;font-size:.75em;color:var(--mw);font-weight:500;display:inline-block">"${x.hook}"</div>
+  </div>`).join('');
+
+  document.getElementById('mw-channels').innerHTML=[
+    {name:'D2C Website',st:'pending',note:'Shopify — decision pending'},
+    {name:'Amazon',st:'live',note:'ASIN: B0F1Y6232D — 3.6★'},
+    {name:'1Mg / Pharmeasy',st:'planned',note:'Post-launch'},
+    {name:'HCP (Doctors)',st:'planned',note:'Neuro, psych, physicians'},
+    {name:'Q-Commerce',st:'planned',note:'Blinkit, Zepto'},
+    {name:'Corporate Wellness',st:'planned',note:'B2B channel'},
+  ].map(x=>`<div style="background:var(--s1);border:1px solid var(--brd);border-radius:7px;padding:10px 14px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center">
+    <div><div style="font-weight:600;font-size:.88em">${x.name}</div><div style="font-size:.78em;color:var(--tx2)">${x.note}</div></div>
+    <span class="tag" style="background:var(--${x.st==='live'?'green':x.st==='pending'?'amber':'tx3'}-g);color:var(--${x.st==='live'?'green':x.st==='pending'?'amber':'tx3'})">${x.st}</span>
+  </div>`).join('');
+
+  document.getElementById('mw-budget').innerHTML=[
+    {name:'Content Creation',amt:'₹10L',pct:40},
+    {name:'Performance Ads',amt:'₹10L',pct:40},
+    {name:'Influencer Marketing',amt:'₹5L',pct:20},
+  ].map(x=>`<div style="background:var(--s1);border:1px solid var(--brd);border-radius:7px;padding:10px 14px;margin-bottom:6px">
+    <div style="display:flex;justify-content:space-between;font-size:.88em;margin-bottom:4px"><span style="font-weight:600">${x.name}</span><span style="font-family:var(--mono);color:var(--tx3)">${x.amt}</span></div>
+    <div class="mc-bar"><div class="mc-fill" style="width:${x.pct}%;background:var(--mw)"></div></div>
+  </div>`).join('')+`<div style="margin-top:8px;font-size:.8em;color:var(--tx3)"><b>Ops costs:</b> Sorted ₹6-8L (active) · Website ₹3-6L · Perf Agency ₹70K-1L/mo · Ad Spend ₹50K/mo · Brand Manager ₹80K-1L/mo · PR ₹1.7L</div>`;
+
+  document.getElementById('mw-contacts').innerHTML=[
+    {name:'Shivendra Selvam',role:'Operations Partner',org:'Race Sims Solutions'},
+    {name:'Manik',role:'Brand & Business Lead',org:'Sorted Agency'},
+    {name:'Aarti Samant',role:'Strategy Director',org:'Sorted Agency'},
+    {name:'Binita Tripathy',role:'Design Execution',org:'Sorted Agency'},
+    {name:'Patco Packing Solutions',role:'Packaging Supplier',org:'Mumbai'},
+    {name:'IMCD',role:'Extracts Supplier',org:'Mumbai'},
+    {name:'Solusta',role:'Manufacturer',org:'Puducherry'},
+  ].map(x=>`<div style="display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--brd)">
+    <div style="width:28px;height:28px;border-radius:5px;background:var(--mw-g);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.78em;color:var(--mw);flex-shrink:0">${x.name.charAt(0)}</div>
+    <div><div style="font-weight:600;font-size:.84em">${x.name}</div><div style="font-size:.75em;color:var(--tx2)">${x.role} · ${x.org}</div></div>
+  </div>`).join('');
+
+  document.getElementById('mw-competitors').innerHTML=[
+    {name:'Himalaya Brahmi',price:'₹180-400',threat:'high',note:'Mass market, strong distribution'},
+    {name:'Organic India',price:'₹190-250',threat:'medium',note:'Organic positioning'},
+    {name:'Mind Lab Pro',price:'₹3,400+',threat:'low',note:'Premium international'},
+    {name:'Alpha Brain',price:'₹5,000+',threat:'low',note:'US nootropic leader'},
+  ].map(x=>`<div class="mc" style="cursor:default"><div class="mc-l">${x.name}</div><div class="mc-v" style="font-size:1.1em;color:var(--tx)">${x.price}</div><div class="mc-s">${x.note}</div><div style="margin-top:4px"><span class="tag" style="background:var(--${x.threat==='high'?'red':x.threat==='medium'?'amber':'tx3'}-g);color:var(--${x.threat==='high'?'red':x.threat==='medium'?'amber':'tx3'})">${x.threat} threat</span></div></div>`).join('');
+}
+
 // RENDER ALL
-function renderAll(){renderToday();renderDash();renderTasks();renderProjs();renderOps();renderSocial();renderContent();renderNotes();updateSyncBadge()}
+function renderAll(){renderToday();renderDash();renderTasks();renderProjs();renderOps();renderSocial();renderContent();renderNotes();renderMWLaunch();updateSyncBadge()}
 renderAll();
 </script>
 </body>
