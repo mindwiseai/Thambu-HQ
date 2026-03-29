@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mindwise — Mission Control</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.344.0/umd/lucide.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --surface-2: #1a1a1a;
+  --surface-3: #222;
+  --border: #2a2a2a;
+  --border-hover: #3a3a3a;
+  --text: #efefef;
+  --text-muted: #9a9a9a;
+  --text-dim: #666;
+  --green: #b4f441;
+  --green-dim: rgba(180, 244, 65, 0.15);
+  --green-glow: rgba(180, 244, 65, 0.3);
+  --red: #ff4444;
+  --red-dim: rgba(255, 68, 68, 0.15);
+  --amber: #ffaa00;
+  --amber-dim: rgba(255, 170, 0, 0.15);
+  --blue: #4488ff;
+  --blue-dim: rgba(68, 136, 255, 0.15);
+  --purple: #aa66ff;
+  --purple-dim: rgba(170, 102, 255, 0.15);
+}
+html { font-size: 15px; }
+body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; line-height: 1.5; letter-spacing: 0.01em; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+code, .mono { font-family: 'IBM Plex Mono', 'Menlo', monospace; }
+::selection { background: var(--green); color: var(--bg); }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+@keyframes slideRight { from { width: 0; } }
+.fade-in { animation: fadeIn 0.4s ease-out forwards; }
+.pulse { animation: pulse 2s ease-in-out infinite; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect, useRef, useMemo, useCallback } = React;
+
+// ─── Data Store ────────────────────────────────────────────────
+const LAUNCH_DATE = new Date('2026-06-01T00:00:00+05:30');
+
+const TIMELINE_DATA = [
+  { id: 1, label: 'Brand Strategy Locked', date: '2026-01-23', status: 'done', detail: 'Tagline, positioning, brand enemy finalized' },
+  { id: 2, label: 'Visual Identity Locked', date: '2026-01-30', status: 'done', detail: 'Route 3 logo, neon green + charcoal palette' },
+  { id: 3, label: 'Content Strategy Finalized', date: '2026-02-12', status: 'done', detail: 'Campaign hooks, 3-piece framework, content pillars' },
+  { id: 4, label: 'Packaging Brief Sent', date: '2026-03-23', status: 'done', detail: 'Google Slides brief + 11-point feedback to Shivendra' },
+  { id: 5, label: 'Social Identity Brief Complete', date: '2026-03-27', status: 'done', detail: 'Instagram design language, colour system, content-type coding, reference landscape' },
+  { id: 6, label: 'Packaging Renders', date: '2026-03-28', status: 'in-progress', detail: 'Two options: premium + realistic backup' },
+  { id: 7, label: 'Visual Identity Presentation', date: '2026-04-02', status: 'in-progress', detail: 'Full brand book from Sorted — Mumbai meeting' },
+  { id: 8, label: 'Mumbai In-Person Meeting', date: '2026-04-02', status: 'upcoming', detail: 'Visual identity + website + agency review' },
+  { id: 9, label: 'Brand Book & Templates Locked', date: '2026-04-15', status: 'upcoming', detail: 'Packaging design, social templates finalized' },
+  { id: 10, label: 'Website Live', date: '2026-05-31', status: 'upcoming', detail: 'Shopify store — Sorted proposal ₹6L' },
+  { id: 11, label: 'LAUNCH', date: '2026-06-01', status: 'upcoming', detail: 'Soft launch + social media begins' },
+];
+
+const BUDGET_DATA = {
+  total: 2500000,
+  categories: [
+    { name: 'Content Creation', allocated: 1000000, spent: 0, color: 'var(--green)' },
+    { name: 'Performance Ads', allocated: 1000000, spent: 0, color: 'var(--blue)' },
+    { name: 'Influencer Marketing', allocated: 500000, spent: 0, color: 'var(--purple)' },
+  ],
+  ops: [
+    { name: 'Sorted Agency (Brand)', est: '₹6-8L', status: 'active' },
+    { name: 'Website (Shopify)', est: '₹3-6L', status: 'pending' },
+    { name: 'Perf Agency Retainer', est: '₹70K-1L/mo', status: 'pending' },
+    { name: 'Ad Spend (Starting)', est: '₹50K/mo', status: 'pending' },
+    { name: 'Brand Manager', est: '₹80K-1L/mo', status: 'pending' },
+    { name: 'PR Freelancer', est: '₹1.7L', status: 'pending' },
+  ]
+};
+
+const TASKS_INIT = [
+  { id: 1, text: 'Review packaging renders from Binita', priority: 'high', category: 'design', done: false, due: '2026-03-28' },
+  { id: 2, text: 'Finalize visual identity presentation', priority: 'high', category: 'brand', done: false, due: '2026-04-02' },
+  { id: 3, text: 'Website decision — Sorted ₹6L vs alternatives', priority: 'high', category: 'website', done: false, due: '2026-04-02' },
+  { id: 4, text: 'Meet performance/social media agency (via Manik)', priority: 'medium', category: 'agency', done: false, due: '2026-04-02' },
+  { id: 5, text: 'Connect with Sid Warrier (influencer target)', priority: 'medium', category: 'influencer', done: false, due: '2026-04-15' },
+  { id: 6, text: 'Lock pricing strategy — ₹850-900/bottle', priority: 'medium', category: 'pricing', done: false, due: '2026-04-15' },
+  { id: 7, text: 'Prepare Mumbai meeting agenda for Apr 2', priority: 'high', category: 'meeting', done: false, due: '2026-03-31' },
+  { id: 8, text: 'Blister pack specs — 2 sizes needed', priority: 'medium', category: 'packaging', done: false, due: '2026-04-10' },
+  { id: 9, text: 'Review Amazon listing (3.6★, 7 reviews)', priority: 'low', category: 'sales', done: false, due: '2026-04-15' },
+  { id: 10, text: 'Explore syrup form / Bacopa+ combinations', priority: 'low', category: 'product', done: false, due: '2026-05-01' },
+];
+
+const CONTACTS = [
+  { name: 'Shivendra Selvam', role: 'Operations Partner', org: 'Race Sims Solutions', email: 'shivendraselvam@gmail.com' },
+  { name: 'Manik', role: 'Brand & Business Lead', org: 'Sorted Agency', email: '' },
+  { name: 'Aarti Samant', role: 'Strategy Director', org: 'Sorted Agency', email: '' },
+  { name: 'Binita Tripathy', role: 'Design Execution', org: 'Sorted Agency', email: '' },
+];
+
+const CHANNELS = [
+  { name: 'D2C Website', status: 'pending', priority: 'primary', note: 'Shopify — decision pending' },
+  { name: 'Amazon', status: 'live', priority: 'primary', note: 'ASIN: B0F1Y6232D — 3.6★' },
+  { name: '1Mg / Pharmeasy', status: 'planned', priority: 'secondary', note: 'Post-launch' },
+  { name: 'HCP (Doctors)', status: 'planned', priority: 'secondary', note: 'Neuro, psych, physicians' },
+  { name: 'Q-Commerce', status: 'planned', priority: 'future', note: 'Blinkit, Zepto etc.' },
+  { name: 'Corporate Wellness', status: 'planned', priority: 'future', note: 'B2B channel' },
+];
+
+const COMPETITORS = [
+  { name: 'Himalaya Brahmi', price: '₹180-400', threat: 'high', note: 'Mass market, strong distribution' },
+  { name: 'Organic India', price: '₹190-250', threat: 'medium', note: 'Organic positioning' },
+  { name: 'Mind Lab Pro', price: '₹3,400+', threat: 'low', note: 'Premium international' },
+  { name: 'Alpha Brain', price: '₹5,000+', threat: 'low', note: 'US nootropic leader' },
+];
+
+const AUDIENCES = [
+  { name: 'The Student', age: '17-24', hook: 'Exam pressure, assignment deadlines, competing for internships', icon: '📚', campaignHook: 'Clarity on Demand', detail: 'They need focus that keeps up with their ambition' },
+  { name: 'The Professional', age: '25-38', hook: 'Back-to-back meetings, high-stakes decisions, output is currency', icon: '💼', campaignHook: 'Sustained Performance', detail: 'They need sustained performance — not just a caffeine spike' },
+  { name: 'The Elder', age: '45+', hook: 'Staying sharp as the game slows down, mental acuity as legacy', icon: '🧠', campaignHook: 'Proven Protection', detail: 'They want proven, not trendy' },
+  { name: 'The Wired Mind', age: '18+ (ADHD)', hook: 'Brilliant, scattered, fighting for focus every single day', icon: '⚡', campaignHook: 'Your Unfair Advantage', detail: 'MindWise is the unlock they\'ve been looking for' },
+];
+
+const SOCIAL_IDENTITY = {
+  brandNorthStar: {
+    tagline: 'YOUR UNFAIR ADVANTAGE',
+    pillars: [
+      { name: 'Proven Science', desc: '40 years of research. Patented CDRI-08. Not wellness fluff — actual chemistry.' },
+      { name: 'Performance Coded', desc: 'Built for people who compete — in boardrooms, lecture halls, and life.' },
+      { name: 'Clarity on Demand', desc: 'Sharper focus. Better memory. Optimum potency. When it matters most.' },
+    ],
+  },
+  colorSystem: [
+    { name: 'Pitch Black', hex: '#0A0A0A', use: 'Primary BG' },
+    { name: 'Surface', hex: '#181818', use: 'Cards / Frames' },
+    { name: 'Neon Green', hex: '#AADC32', use: 'Accent — Dominant' },
+    { name: 'Pure White', hex: '#FFFFFF', use: 'Headlines' },
+    { name: 'Mid Grey', hex: '#888888', use: 'Body / Supporting' },
+  ],
+  colorRule: 'Black is the canvas. Neon green is the weapon. White is the statement. Never use both green and white at equal weight — one always dominates.',
+  references: [
+    { brand: 'WHOOP', borrow: 'Visual seriousness, dark feeds, performance coding', why: 'Dark palette, data-led content, athlete intensity' },
+    { brand: 'Naked Coffee', borrow: 'Ruthless brand-coding of colour across ALL formats', why: 'Green in EVERY piece — owned, UGC, paid, hero, hub, hygiene' },
+    { brand: 'AG1', borrow: 'Social media design cues performance — not medicine', why: 'Clean, premium, aspirational. Science credibility without clinical coldness' },
+    { brand: 'Nothing Tech', borrow: 'How to look futuristic without visual noise', why: 'Brutalist minimalism, techy, cult following, zero lifestyle fluff' },
+    { brand: 'Ketone-IQ', borrow: 'Making clinical credibility feel compelling', why: 'Science-forward supplement brand' },
+    { brand: 'Gymshark', borrow: 'Community-coded UGC, aspirational people, consistent colour', why: 'Community-first, consistent brand presence' },
+  ],
+  deliverables: {
+    profileSetup: [
+      'Profile picture — brand name, logo or insignia decision',
+      'Bio copy: "Your Unfair Advantage. India\'s only Govt backed daily brain supplement. Follow us to upgrade your brain health"',
+      'Custom icon set for 4 content pillars — The Mindwise Network, The Enemy, The Brand, Mindwise Movement',
+    ],
+    gridSystem: [
+      '3×3 grid blueprint — visual rhythm of product, people, copy-led, colour-block cells',
+      'Grid colour-blocking rule — where neon green dominates vs. recedes',
+      'Aspect ratio for maximising screen real estate',
+    ],
+    contentTemplates: [
+      'Static post template — Product-hero + People + Copy-only versions',
+      'Carousel template — Hook slide, content slide, image:text ratio, CTA slide',
+      'Reel thumbnail template — text placement, logo bug, colour grade guide',
+      'Story template',
+    ],
+    contentTypeCoding: [
+      { type: 'Product Reel', signature: 'Clean dark studio, neon product lighting, logo end card' },
+      { type: 'UGC Template', signature: 'Colour grade spec + text overlay style + logo/badge placement' },
+      { type: 'Founder Story', signature: 'More raw, slightly warmer (still dark), on-screen captions in brand font' },
+      { type: 'Science/Ingredient Reel', signature: 'Data-visual style, CDRI-08 badge placement, stat callout treatment' },
+      { type: 'Community/Cohort', signature: 'People-led, rim-lit, locked-in expression. Cohort label tag treatment' },
+    ],
+    reelThumbnails: [
+      { type: 'Product Reel', headline: 'ONE BOTTLE.' },
+      { type: 'UGC Reel', headline: 'REAL RESULTS.' },
+      { type: 'Founder Story', headline: 'WHY WE BUILT IT.' },
+      { type: 'Science Reel', headline: '40 YEARS.' },
+    ],
+  },
+  status: 'brief-complete',
+  briefDate: '2026-03',
+};
+
+const NOTES_INIT = [
+  { id: 1, text: 'Manik: Creative agency and perf agency always clash — consider one entity for both', date: '2026-03-24', tag: 'strategy' },
+  { id: 2, text: 'Premium pricing (₹850+) requires premium creator spend (₹2-3L/creator)', date: '2026-03-24', tag: 'pricing' },
+  { id: 3, text: 'Hybrid approach: freelancer + AI content + Thambu learning = best fit now', date: '2026-03-24', tag: 'team' },
+  { id: 4, text: 'Don\'t hire full agency with one product — build portfolio first', date: '2026-03-24', tag: 'strategy' },
+];
+
+const TOOLS_REGISTRY = [
+  { name: 'Brand Book Builder', icon: '🎨', desc: 'Generate visual identity documents', status: 'active', category: 'brand' },
+  { name: 'Packaging Tracker', icon: '📦', desc: 'Track packaging specs, vendors, renders', status: 'active', category: 'product' },
+  { name: 'Content Calendar', icon: '📅', desc: 'Plan and schedule social content', status: 'coming', category: 'marketing' },
+  { name: 'Ad Performance', icon: '📊', desc: 'Track ROAS, CPA, conversions', status: 'coming', category: 'marketing' },
+  { name: 'SEO Monitor', icon: '🔍', desc: 'Track rankings, organic traffic', status: 'coming', category: 'marketing' },
+  { name: 'Competitor Watch', icon: '👁️', desc: 'Monitor competitor moves & pricing', status: 'coming', category: 'intelligence' },
+  { name: 'Influencer CRM', icon: '🤝', desc: 'Manage influencer relationships', status: 'coming', category: 'marketing' },
+  { name: 'Review Monitor', icon: '⭐', desc: 'Track Amazon, 1Mg reviews', status: 'coming', category: 'sales' },
+  { name: 'Email Sequences', icon: '📧', desc: 'Klaviyo campaign management', status: 'coming', category: 'marketing' },
+  { name: 'Sales Dashboard', icon: '💰', desc: 'Revenue, orders, channel metrics', status: 'coming', category: 'sales' },
+  { name: 'Clinical Evidence', icon: '🧬', desc: 'Manage research & trial data', status: 'active', category: 'product' },
+  { name: 'Doc Generator', icon: '📄', desc: 'One-pagers, decks, proposals', status: 'active', category: 'brand' },
+];
+
+// ─── Utility Components ────────────────────────────────────────
+
+function Badge({ children, color = 'var(--green)', bg }) {
+  return (
+    <span style={{
+      display: 'inline-flex', alignItems: 'center', gap: 4,
+      padding: '3px 9px', borderRadius: 4, fontSize: '0.78rem', fontWeight: 600,
+      color, background: bg || (color === 'var(--green)' ? 'var(--green-dim)' : color === 'var(--red)' ? 'var(--red-dim)' : color === 'var(--amber)' ? 'var(--amber-dim)' : color === 'var(--blue)' ? 'var(--blue-dim)' : 'var(--purple-dim)'),
+      letterSpacing: '0.03em', textTransform: 'uppercase',
+    }}>{children}</span>
+  );
+}
+
+function ProgressBar({ value, max, color = 'var(--green)', height = 4 }) {
+  const pct = Math.min((value / max) * 100, 100);
+  return (
+    <div style={{ width: '100%', height, background: 'var(--surface-3)', borderRadius: height/2, overflow: 'hidden' }}>
+      <div style={{ width: `${pct}%`, height: '100%', background: color, borderRadius: height/2, transition: 'width 0.6s ease', animation: 'slideRight 0.8s ease' }} />
+    </div>
+  );
+}
+
+function Card({ children, style, onClick, hover = false }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      onClick={onClick}
+      style={{
+        background: 'var(--surface)',
+        border: `1px solid ${hovered && hover ? 'var(--border-hover)' : 'var(--border)'}`,
+        borderRadius: 8, padding: 20,
+        transition: 'border-color 0.2s, transform 0.2s',
+        transform: hovered && hover ? 'translateY(-1px)' : 'none',
+        cursor: onClick ? 'pointer' : 'default',
+        ...style,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
+function SectionHeader({ title, subtitle, action }) {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 16 }}>
+      <div>
+        <h2 style={{ fontSize: '1.15rem', fontWeight: 600, color: 'var(--text)', letterSpacing: '-0.01em' }}>{title}</h2>
+        {subtitle && <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', marginTop: 3 }}>{subtitle}</p>}
+      </div>
+      {action}
+    </div>
+  );
+}
+
+// ─── Countdown Component ───────────────────────────────────────
+
+function Countdown() {
+  const [now, setNow] = useState(new Date());
+  useEffect(() => { const t = setInterval(() => setNow(new Date()), 1000); return () => clearInterval(t); }, []);
+
+  const diff = LAUNCH_DATE - now;
+  const days = Math.max(0, Math.floor(diff / 86400000));
+  const hours = Math.max(0, Math.floor((diff % 86400000) / 3600000));
+  const mins = Math.max(0, Math.floor((diff % 3600000) / 60000));
+  const secs = Math.max(0, Math.floor((diff % 60000) / 1000));
+
+  const Unit = ({ val, label }) => (
+    <div style={{ textAlign: 'center' }}>
+      <div className="mono" style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--green)', lineHeight: 1 }}>{String(val).padStart(2, '0')}</div>
+      <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', marginTop: 4, textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 500 }}>{label}</div>
+    </div>
+  );
+
+  return (
+    <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
+      <Unit val={days} label="Days" />
+      <span style={{ color: 'var(--text-dim)', fontSize: '1.5rem', marginTop: -12 }}>:</span>
+      <Unit val={hours} label="Hours" />
+      <span style={{ color: 'var(--text-dim)', fontSize: '1.5rem', marginTop: -12 }}>:</span>
+      <Unit val={mins} label="Mins" />
+      <span style={{ color: 'var(--text-dim)', fontSize: '1.5rem', marginTop: -12 }}>:</span>
+      <Unit val={secs} label="Secs" />
+    </div>
+  );
+}
+
+// ─── Navigation Tabs ───────────────────────────────────────────
+
+const NAV_ITEMS = [
+  { id: 'overview', label: 'Overview' },
+  { id: 'timeline', label: 'Timeline' },
+  { id: 'tasks', label: 'Tasks' },
+  { id: 'budget', label: 'Budget' },
+  { id: 'social', label: 'Social Identity' },
+  { id: 'audiences', label: 'Audiences' },
+  { id: 'channels', label: 'Channels' },
+  { id: 'intel', label: 'Intel' },
+  { id: 'team', label: 'Team' },
+  { id: 'notes', label: 'Notes' },
+  { id: 'tools', label: 'Tools' },
+];
+
+// ─── Overview Panel ────────────────────────────────────────────
+
+function OverviewPanel({ tasks, onNav }) {
+  const now = new Date();
+  const diff = LAUNCH_DATE - now;
+  const days = Math.max(0, Math.floor(diff / 86400000));
+
+  const completedTasks = tasks.filter(t => t.done).length;
+  const highPriOpen = tasks.filter(t => !t.done && t.priority === 'high').length;
+  const lockedItems = TIMELINE_DATA.filter(t => t.status === 'done').length;
+  const totalMilestones = TIMELINE_DATA.length;
+
+  const stats = [
+    { label: 'Days to Launch', value: days, color: 'var(--green)', sub: 'June 1, 2026' },
+    { label: 'Milestones Done', value: `${lockedItems}/${totalMilestones}`, color: 'var(--blue)', sub: `${Math.round(lockedItems/totalMilestones*100)}% complete` },
+    { label: 'Tasks Complete', value: `${completedTasks}/${tasks.length}`, color: 'var(--purple)', sub: `${highPriOpen} high-priority open` },
+    { label: 'Sales Target', value: '10K', color: 'var(--amber)', sub: 'bottles/month Year 1' },
+  ];
+
+  return (
+    <div className="fade-in">
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, marginBottom: 24 }}>
+        {stats.map((s, i) => (
+          <Card key={i} hover>
+            <div style={{ fontSize: '0.73rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, marginBottom: 8 }}>{s.label}</div>
+            <div className="mono" style={{ fontSize: '1.8rem', fontWeight: 700, color: s.color, lineHeight: 1 }}>{s.value}</div>
+            <div style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginTop: 6 }}>{s.sub}</div>
+          </Card>
+        ))}
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+        <Card>
+          <SectionHeader title="What's Locked" subtitle="Confirmed decisions" />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            {[
+              'Brand positioning: "Your Unfair Advantage"',
+              'Logo: Route 3 — Architecture of Intelligence',
+              'Visual identity: Neon green + charcoal',
+              'Bottle: 100mL, semi-transparent, 60 caps',
+              'Vendor: Patco Pharmaceuticals, Navi Mumbai',
+              'Content strategy & campaign hooks',
+              'Social media identity brief — colour system, references, content coding',
+              'Pricing direction: ₹850-900/bottle',
+            ].map((item, i) => (
+              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '0.9rem' }}>
+                <span style={{ color: 'var(--green)', fontSize: '0.9rem' }}>✓</span>
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        </Card>
+
+        <Card>
+          <SectionHeader title="Needs Decision" subtitle="Open items requiring action" />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {[
+              { text: 'Website: Sorted ₹6L vs. ₹3L budget', urgency: 'high' },
+              { text: 'Performance/social media agency hire', urgency: 'high' },
+              { text: 'Brand Manager vs. freelancer model', urgency: 'medium' },
+              { text: 'PR freelancer engagement (₹1.7L)', urgency: 'medium' },
+              { text: 'Blister pack specs — 2 sizes TBD', urgency: 'medium' },
+              { text: 'Product line extension (syrup, Bacopa+)', urgency: 'low' },
+            ].map((item, i) => (
+              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '0.9rem' }}>
+                <Badge color={item.urgency === 'high' ? 'var(--red)' : item.urgency === 'medium' ? 'var(--amber)' : 'var(--text-muted)'}>{item.urgency}</Badge>
+                <span>{item.text}</span>
+              </div>
+            ))}
+          </div>
+        </Card>
+      </div>
+
+      <Card style={{ marginTop: 16 }}>
+        <SectionHeader title="Next Critical Event" />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '8px 0' }}>
+          <div style={{ width: 48, height: 48, borderRadius: 8, background: 'var(--green-dim)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem' }}>🏢</div>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontWeight: 600, fontSize: '1rem' }}>Mumbai In-Person Meeting — April 2</div>
+            <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: 2 }}>Sorted office · Thambu + Shivendra + Manik + agency candidate</div>
+          </div>
+          <div style={{ textAlign: 'right' }}>
+            <div className="mono" style={{ color: 'var(--green)', fontWeight: 600 }}>{Math.max(0, Math.ceil((new Date('2026-04-02') - now) / 86400000))} days</div>
+            <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Visual identity + website + agency</div>
+          </div>
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// ─── Timeline Panel ────────────────────────────────────────────
+
+function TimelinePanel() {
+  return (
+    <div className="fade-in">
+      <SectionHeader title="Launch Timeline" subtitle="From brand strategy to market" />
+      <div style={{ position: 'relative', paddingLeft: 24 }}>
+        <div style={{ position: 'absolute', left: 7, top: 0, bottom: 0, width: 2, background: 'var(--border)' }} />
+        {TIMELINE_DATA.map((item, i) => {
+          const dotColor = item.status === 'done' ? 'var(--green)' : item.status === 'in-progress' ? 'var(--amber)' : 'var(--text-dim)';
+          const isLaunch = item.label === 'LAUNCH';
+          return (
+            <div key={item.id} style={{ position: 'relative', marginBottom: 20, animation: `fadeIn 0.4s ease ${i * 0.05}s both` }}>
+              <div style={{
+                position: 'absolute', left: -20, top: 4,
+                width: isLaunch ? 16 : 12, height: isLaunch ? 16 : 12, borderRadius: '50%',
+                background: dotColor,
+                border: item.status === 'in-progress' ? '2px solid var(--amber)' : 'none',
+                boxShadow: item.status === 'in-progress' ? '0 0 8px var(--amber)' : isLaunch ? '0 0 12px var(--green-glow)' : 'none',
+              }} />
+              <Card hover style={{ marginLeft: 8 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div>
+                    <div style={{ fontWeight: isLaunch ? 700 : 500, fontSize: isLaunch ? '1.1rem' : '0.95rem', color: isLaunch ? 'var(--green)' : 'var(--text)' }}>{item.label}</div>
+                    <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: 2 }}>{item.detail}</div>
+                  </div>
+                  <div style={{ textAlign: 'right' }}>
+                    <div className="mono" style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{item.date}</div>
+                    <Badge color={item.status === 'done' ? 'var(--green)' : item.status === 'in-progress' ? 'var(--amber)' : 'var(--text-muted)'}>{item.status}</Badge>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ─── Tasks Panel ───────────────────────────────────────────────
+
+function TasksPanel({ tasks, setTasks }) {
+  const [filter, setFilter] = useState('all');
+  const [newTask, setNewTask] = useState('');
+  const [newPriority, setNewPriority] = useState('medium');
+
+  const filtered = tasks.filter(t => {
+    if (filter === 'open') return !t.done;
+    if (filter === 'done') return t.done;
+    if (filter === 'high') return !t.done && t.priority === 'high';
+    return true;
+  });
+
+  const toggleTask = (id) => setTasks(prev => prev.map(t => t.id === id ? { ...t, done: !t.done } : t));
+
+  const addTask = () => {
+    if (!newTask.trim()) return;
+    setTasks(prev => [...prev, { id: Date.now(), text: newTask.trim(), priority: newPriority, category: 'general', done: false, due: '' }]);
+    setNewTask('');
+  };
+
+  const removeTask = (id) => setTasks(prev => prev.filter(t => t.id !== id));
+
+  const filters = [
+    { id: 'all', label: `All (${tasks.length})` },
+    { id: 'open', label: `Open (${tasks.filter(t=>!t.done).length})` },
+    { id: 'high', label: `Urgent (${tasks.filter(t=>!t.done && t.priority==='high').length})` },
+    { id: 'done', label: `Done (${tasks.filter(t=>t.done).length})` },
+  ];
+
+  return (
+    <div className="fade-in">
+      <SectionHeader title="Task Board" subtitle="Track and manage all action items" />
+
+      <div style={{ display: 'flex', gap: 6, marginBottom: 16 }}>
+        {filters.map(f => (
+          <button key={f.id} onClick={() => setFilter(f.id)} style={{
+            padding: '6px 12px', borderRadius: 6, border: '1px solid', fontSize: '0.8rem', cursor: 'pointer', fontFamily: 'inherit',
+            background: filter === f.id ? 'var(--green-dim)' : 'transparent',
+            borderColor: filter === f.id ? 'var(--green)' : 'var(--border)',
+            color: filter === f.id ? 'var(--green)' : 'var(--text-muted)',
+          }}>{f.label}</button>
+        ))}
+      </div>
+
+      <Card style={{ marginBottom: 16, padding: 12 }}>
+        <div style={{ display: 'flex', gap: 8 }}>
+          <input
+            value={newTask} onChange={e => setNewTask(e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && addTask()}
+            placeholder="Add a new task..."
+            style={{ flex: 1, padding: '8px 12px', borderRadius: 6, border: '1px solid var(--border)', background: 'var(--surface-2)', color: 'var(--text)', fontSize: '0.9rem', fontFamily: 'inherit', outline: 'none' }}
+          />
+          <select value={newPriority} onChange={e => setNewPriority(e.target.value)} style={{ padding: '8px 10px', borderRadius: 6, border: '1px solid var(--border)', background: 'var(--surface-2)', color: 'var(--text)', fontSize: '0.8rem', fontFamily: 'inherit', cursor: 'pointer' }}>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+          <button onClick={addTask} style={{ padding: '8px 16px', borderRadius: 6, border: 'none', background: 'var(--green)', color: 'var(--bg)', fontWeight: 600, fontSize: '0.9rem', cursor: 'pointer', fontFamily: 'inherit' }}>Add</button>
+        </div>
+      </Card>
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+        {filtered.map((task, i) => (
+          <div key={task.id} style={{
+            display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px',
+            background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 6,
+            opacity: task.done ? 0.5 : 1, animation: `fadeIn 0.3s ease ${i * 0.03}s both`,
+          }}>
+            <button onClick={() => toggleTask(task.id)} style={{
+              width: 20, height: 20, borderRadius: 4, border: `2px solid ${task.done ? 'var(--green)' : 'var(--border-hover)'}`,
+              background: task.done ? 'var(--green)' : 'transparent', cursor: 'pointer',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--bg)', fontSize: '0.7rem', flexShrink: 0,
+            }}>{task.done ? '✓' : ''}</button>
+            <span style={{ flex: 1, fontSize: '0.88rem', textDecoration: task.done ? 'line-through' : 'none', color: task.done ? 'var(--text-muted)' : 'var(--text)' }}>{task.text}</span>
+            <Badge color={task.priority === 'high' ? 'var(--red)' : task.priority === 'medium' ? 'var(--amber)' : 'var(--text-muted)'}>{task.priority}</Badge>
+            {task.due && <span className="mono" style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>{task.due}</span>}
+            <button onClick={() => removeTask(task.id)} style={{ background: 'none', border: 'none', color: 'var(--text-dim)', cursor: 'pointer', fontSize: '1rem', padding: '0 4px' }}>×</button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── Budget Panel ──────────────────────────────────────────────
+
+function BudgetPanel() {
+  const totalSpent = BUDGET_DATA.categories.reduce((s, c) => s + c.spent, 0);
+  return (
+    <div className="fade-in">
+      <SectionHeader title="Budget & Financials" subtitle="₹25L annual marketing budget + operational costs" />
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12, marginBottom: 20 }}>
+        <Card>
+          <div style={{ fontSize: '0.73rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>Total Budget</div>
+          <div className="mono" style={{ fontSize: '1.6rem', fontWeight: 700, color: 'var(--green)', marginTop: 4 }}>₹25L</div>
+          <div style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginTop: 2 }}>Annual marketing</div>
+        </Card>
+        <Card>
+          <div style={{ fontSize: '0.73rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>Spent</div>
+          <div className="mono" style={{ fontSize: '1.6rem', fontWeight: 700, color: 'var(--blue)', marginTop: 4 }}>₹{(totalSpent/100000).toFixed(1)}L</div>
+          <div style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginTop: 2 }}>Pre-launch phase</div>
+        </Card>
+        <Card>
+          <div style={{ fontSize: '0.73rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>Target Price</div>
+          <div className="mono" style={{ fontSize: '1.6rem', fontWeight: 700, color: 'var(--amber)', marginTop: 4 }}>₹850-900</div>
+          <div style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginTop: 2 }}>per bottle (60 caps)</div>
+        </Card>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+        <Card>
+          <SectionHeader title="Marketing Budget Allocation" />
+          {BUDGET_DATA.categories.map((cat, i) => (
+            <div key={i} style={{ marginBottom: 14 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4, fontSize: '0.9rem' }}>
+                <span>{cat.name}</span>
+                <span className="mono" style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>₹{(cat.allocated/100000).toFixed(0)}L / ₹{(cat.spent/100000).toFixed(0)}L spent</span>
+              </div>
+              <ProgressBar value={cat.spent} max={cat.allocated} color={cat.color} height={6} />
+            </div>
+          ))}
+        </Card>
+
+        <Card>
+          <SectionHeader title="Operational Costs" />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            {BUDGET_DATA.ops.map((op, i) => (
+              <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.9rem', padding: '6px 0', borderBottom: i < BUDGET_DATA.ops.length - 1 ? '1px solid var(--border)' : 'none' }}>
+                <span>{op.name}</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span className="mono" style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>{op.est}</span>
+                  <Badge color={op.status === 'active' ? 'var(--green)' : 'var(--amber)'}>{op.status}</Badge>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Card>
+      </div>
+
+      <Card style={{ marginTop: 16 }}>
+        <SectionHeader title="Revenue Model" />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
+          {[
+            { label: 'Price/Bottle', value: '₹850-900' },
+            { label: 'Monthly Target', value: '10,000 bottles' },
+            { label: 'Monthly Rev (est)', value: '₹85-90L' },
+            { label: 'Annual Rev (est)', value: '₹10-11 Cr' },
+          ].map((item, i) => (
+            <div key={i} style={{ textAlign: 'center' }}>
+              <div className="mono" style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--green)' }}>{item.value}</div>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: 2 }}>{item.label}</div>
+            </div>
+          ))}
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// ─── Social Identity Panel ─────────────────────────────────────
+
+function SocialIdentityPanel() {
+  const S = SOCIAL_IDENTITY;
+  return (
+    <div className="fade-in">
+      <SectionHeader title="Social Media Identity" subtitle="Instagram design language — from the Social Identity Brief (Mar 2026)" />
+
+      {/* Brand North Star */}
+      <Card style={{ marginBottom: 16 }}>
+        <div style={{ textAlign: 'center', marginBottom: 20 }}>
+          <div style={{ fontSize: '0.73rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.12em', fontWeight: 500, marginBottom: 8 }}>Brand North Star</div>
+          <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--green)', letterSpacing: '-0.02em' }}>{S.brandNorthStar.tagline}</div>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
+          {S.brandNorthStar.pillars.map((p, i) => (
+            <div key={i} style={{ padding: 16, background: 'var(--surface-2)', borderRadius: 6, textAlign: 'center' }}>
+              <div style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--green)', marginBottom: 6 }}>{p.name}</div>
+              <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: 1.5 }}>{p.desc}</div>
+            </div>
+          ))}
+        </div>
+      </Card>
+
+      {/* Colour System */}
+      <Card style={{ marginBottom: 16 }}>
+        <SectionHeader title="Colour System" subtitle="The visual weapon set" />
+        <div style={{ display: 'flex', gap: 12, marginBottom: 16 }}>
+          {S.colorSystem.map((c, i) => (
+            <div key={i} style={{ flex: 1, textAlign: 'center' }}>
+              <div style={{ width: '100%', height: 56, borderRadius: 6, background: c.hex, border: c.hex === '#FFFFFF' || c.hex === '#0A0A0A' ? '1px solid var(--border)' : 'none', marginBottom: 8 }} />
+              <div style={{ fontWeight: 600, fontSize: '0.85rem' }}>{c.name}</div>
+              <div className="mono" style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{c.hex}</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', marginTop: 2 }}>{c.use}</div>
+            </div>
+          ))}
+        </div>
+        <div style={{ padding: 12, background: 'var(--green-dim)', borderRadius: 6, fontSize: '0.88rem', color: 'var(--green)', fontWeight: 500, lineHeight: 1.5 }}>
+          {S.colorRule}
+        </div>
+      </Card>
+
+      {/* Reference Landscape */}
+      <Card style={{ marginBottom: 16 }}>
+        <SectionHeader title="Reference Landscape" subtitle="What we borrow & from where" />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
+          {S.references.map((r, i) => (
+            <div key={i} style={{ padding: 14, background: 'var(--surface-2)', borderRadius: 6 }}>
+              <div style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: 4 }}>{r.brand}</div>
+              <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: 8, lineHeight: 1.4 }}>{r.why}</div>
+              <div style={{ fontSize: '0.82rem', color: 'var(--green)', fontWeight: 500 }}>Borrow: {r.borrow}</div>
+            </div>
+          ))}
+        </div>
+      </Card>
+
+      {/* Deliverables */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
+        <Card>
+          <SectionHeader title="Profile Setup" />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            {S.deliverables.profileSetup.map((item, i) => (
+              <div key={i} style={{ display: 'flex', gap: 8, fontSize: '0.88rem', alignItems: 'flex-start' }}>
+                <span style={{ color: 'var(--green)', flexShrink: 0 }}>→</span>
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        </Card>
+        <Card>
+          <SectionHeader title="Instagram Grid System" />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            {S.deliverables.gridSystem.map((item, i) => (
+              <div key={i} style={{ display: 'flex', gap: 8, fontSize: '0.88rem', alignItems: 'flex-start' }}>
+                <span style={{ color: 'var(--green)', flexShrink: 0 }}>→</span>
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        </Card>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
+        <Card>
+          <SectionHeader title="Content Templates" />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            {S.deliverables.contentTemplates.map((item, i) => (
+              <div key={i} style={{ display: 'flex', gap: 8, fontSize: '0.88rem', alignItems: 'flex-start' }}>
+                <span style={{ color: 'var(--green)', flexShrink: 0 }}>→</span>
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        </Card>
+        <Card>
+          <SectionHeader title="Content-Type Visual Coding" />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {S.deliverables.contentTypeCoding.map((item, i) => (
+              <div key={i} style={{ padding: 10, background: 'var(--surface-2)', borderRadius: 6 }}>
+                <div style={{ fontWeight: 600, fontSize: '0.88rem', marginBottom: 2 }}>{item.type}</div>
+                <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>{item.signature}</div>
+              </div>
+            ))}
+          </div>
+        </Card>
+      </div>
+
+      {/* Reel Thumbnails */}
+      <Card>
+        <SectionHeader title="Reel Thumbnail Templates" subtitle="The thumbnail is the post — it must stop the scroll before anyone presses play" />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
+          {S.deliverables.reelThumbnails.map((t, i) => (
+            <div key={i} style={{
+              padding: 20, background: '#0A0A0A', borderRadius: 8, textAlign: 'center',
+              border: '1px solid var(--border)', aspectRatio: '9/16', display: 'flex',
+              flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 12,
+            }}>
+              <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#FFFFFF', lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t.headline}</div>
+              <div className="mono" style={{ fontSize: '0.7rem', color: '#AADC32', fontWeight: 700, letterSpacing: '0.05em' }}>MW</div>
+              <div style={{ fontSize: '0.7rem', color: '#888', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{t.type}</div>
+            </div>
+          ))}
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// ─── Audiences Panel ───────────────────────────────────────────
+
+function AudiencesPanel() {
+  const [selected, setSelected] = useState(0);
+  return (
+    <div className="fade-in">
+      <SectionHeader title="Target Audiences" subtitle="4 primary segments for Mindwise India launch" />
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 20 }}>
+        {AUDIENCES.map((aud, i) => (
+          <Card key={i} hover onClick={() => setSelected(i)} style={{
+            borderColor: selected === i ? 'var(--green)' : 'var(--border)',
+            background: selected === i ? 'var(--surface-2)' : 'var(--surface)',
+          }}>
+            <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+              <div style={{ fontSize: '1.8rem' }}>{aud.icon}</div>
+              <div>
+                <div style={{ fontWeight: 600, fontSize: '0.95rem' }}>{aud.name}</div>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: 2 }}>Age: {aud.age} · {aud.hook}</div>
+                {aud.detail && <div style={{ fontSize: '0.82rem', color: 'var(--text-dim)', marginTop: 4 }}>{aud.detail}</div>}
+                <div style={{ marginTop: 8, padding: '6px 10px', background: 'var(--green-dim)', borderRadius: 4, fontSize: '0.8rem', color: 'var(--green)', fontStyle: 'italic' }}>"{aud.campaignHook}"</div>
+              </div>
+            </div>
+          </Card>
+        ))}
+      </div>
+
+      <Card>
+        <SectionHeader title="Content Pillars" subtitle="Strategy for community building" />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 10 }}>
+          {[
+            { name: 'Education', desc: 'Demystify CDRI-08 science', icon: '🔬' },
+            { name: 'Community', desc: 'Real transformation stories', icon: '🤲' },
+            { name: 'Habit', desc: 'Daily rituals, neural maintenance', icon: '🔄' },
+            { name: 'Performance', desc: 'Segment-specific tips', icon: '📈' },
+            { name: 'Research', desc: 'Clinical data, expert validation', icon: '📑' },
+          ].map((p, i) => (
+            <div key={i} style={{ textAlign: 'center', padding: 12, background: 'var(--surface-2)', borderRadius: 6 }}>
+              <div style={{ fontSize: '1.5rem', marginBottom: 6 }}>{p.icon}</div>
+              <div style={{ fontWeight: 600, fontSize: '0.9rem' }}>{p.name}</div>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: 2 }}>{p.desc}</div>
+            </div>
+          ))}
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// ─── Channels Panel ────────────────────────────────────────────
+
+function ChannelsPanel() {
+  const statusColor = { live: 'var(--green)', pending: 'var(--amber)', planned: 'var(--text-muted)' };
+  return (
+    <div className="fade-in">
+      <SectionHeader title="Sales Channels" subtitle="Distribution strategy — D2C first, then expand" />
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12, marginBottom: 20 }}>
+        {CHANNELS.map((ch, i) => (
+          <Card key={i} hover>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
+              <div style={{ fontWeight: 600, fontSize: '0.95rem' }}>{ch.name}</div>
+              <Badge color={statusColor[ch.status]}>{ch.status}</Badge>
+            </div>
+            <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{ch.note}</div>
+            <div style={{ marginTop: 8 }}>
+              <Badge color={ch.priority === 'primary' ? 'var(--green)' : ch.priority === 'secondary' ? 'var(--blue)' : 'var(--purple)'}>{ch.priority}</Badge>
+            </div>
+          </Card>
+        ))}
+      </div>
+
+      <Card>
+        <SectionHeader title="Product SKUs" />
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+          <div style={{ padding: 16, background: 'var(--surface-2)', borderRadius: 6 }}>
+            <div style={{ fontWeight: 600, marginBottom: 4 }}>D2C Bottle</div>
+            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>60 capsules · 100mL bottle · ₹850-900</div>
+            <div style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginTop: 4 }}>Semi-transparent, 48×48mm, height 80mm</div>
+          </div>
+          <div style={{ padding: 16, background: 'var(--surface-2)', borderRadius: 6 }}>
+            <div style={{ fontWeight: 600, marginBottom: 4 }}>B2B / Distributor</div>
+            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>30 capsules · Blister packs (2 sizes TBD)</div>
+            <div style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginTop: 4 }}>For pharmacy, HCP channels</div>
+          </div>
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// ─── Intel Panel ───────────────────────────────────────────────
+
+function IntelPanel() {
+  return (
+    <div className="fade-in">
+      <SectionHeader title="Competitive Intelligence" subtitle="Mindwise vs. the market" />
+
+      <Card style={{ marginBottom: 16 }}>
+        <SectionHeader title="Mindwise Advantage" subtitle="Why we win" />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
+          {[
+            { stat: '40+', label: 'Years of Research', detail: 'CSIR-CDRI, Lucknow' },
+            { stat: '7+', label: 'Gold-Standard Trials', detail: 'Peer-reviewed journals' },
+            { stat: '55%+', label: 'Active Bacosides', detail: 'vs 20-30% competitors' },
+            { stat: '5+', label: 'Global Markets', detail: '20+ years track record' },
+          ].map((item, i) => (
+            <div key={i} style={{ textAlign: 'center', padding: 14, background: 'var(--surface-2)', borderRadius: 6 }}>
+              <div className="mono" style={{ fontSize: '1.6rem', fontWeight: 700, color: 'var(--green)' }}>{item.stat}</div>
+              <div style={{ fontWeight: 600, fontSize: '0.9rem', marginTop: 4 }}>{item.label}</div>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: 2 }}>{item.detail}</div>
+            </div>
+          ))}
+        </div>
+      </Card>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+        <Card>
+          <SectionHeader title="Direct Competitors" />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {COMPETITORS.map((c, i) => (
+              <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0', borderBottom: i < COMPETITORS.length-1 ? '1px solid var(--border)' : 'none' }}>
+                <div>
+                  <div style={{ fontWeight: 500, fontSize: '0.9rem' }}>{c.name}</div>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{c.note}</div>
+                </div>
+                <div style={{ textAlign: 'right' }}>
+                  <div className="mono" style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>{c.price}</div>
+                  <Badge color={c.threat === 'high' ? 'var(--red)' : c.threat === 'medium' ? 'var(--amber)' : 'var(--text-muted)'}>{c.threat} threat</Badge>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Card>
+
+        <Card>
+          <SectionHeader title="Brand Enemy" subtitle='"Placebo Wellness"' />
+          <div style={{ padding: 16, background: 'var(--red-dim)', borderRadius: 6, marginBottom: 12, fontSize: '0.9rem', lineHeight: 1.6 }}>
+            Pretty labels, weak dosages, borrowed research. Generic bacopa powder, under-dosed supplements, fake claims. This is what Mindwise stands against.
+          </div>
+          <div style={{ fontWeight: 600, marginBottom: 8, fontSize: '0.9rem' }}>Global Brand Heritage</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            {[
+              { brand: 'KeenMind', market: 'Australia, SA, Middle East', status: '20+ year flagship' },
+              { brand: 'MemoPlus Gold', market: 'Philippines', status: 'Celebrity-endorsed' },
+              { brand: 'Memory Perfect', market: 'Europe', status: 'Active' },
+              { brand: 'Actif Mind', market: 'Thailand / Malaysia', status: 'Active' },
+            ].map((b, i) => (
+              <div key={i} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.9rem', padding: '4px 0' }}>
+                <span style={{ fontWeight: 500 }}>{b.brand}</span>
+                <span style={{ color: 'var(--text-muted)' }}>{b.market} · {b.status}</span>
+              </div>
+            ))}
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+// ─── Team Panel ────────────────────────────────────────────────
+
+function TeamPanel() {
+  return (
+    <div className="fade-in">
+      <SectionHeader title="Team & Contacts" subtitle="Key people across the Mindwise launch" />
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 20 }}>
+        <Card>
+          <div style={{ fontSize: '0.73rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, marginBottom: 12 }}>Core Team</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {[
+              { name: 'Thambu', role: 'Brand Lead / Face of Brand', org: 'Lumen Marketing Co.', note: 'Transitioning to Brand Manager role' },
+              ...CONTACTS,
+            ].map((c, i) => (
+              <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', padding: '8px 0', borderBottom: i < CONTACTS.length ? '1px solid var(--border)' : 'none' }}>
+                <div style={{ width: 36, height: 36, borderRadius: 6, background: 'var(--surface-3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '0.9rem', color: 'var(--green)', flexShrink: 0 }}>
+                  {c.name.charAt(0)}
+                </div>
+                <div>
+                  <div style={{ fontWeight: 600, fontSize: '0.9rem' }}>{c.name}</div>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{c.role} · {c.org}</div>
+                  {c.note && <div style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginTop: 2 }}>{c.note}</div>}
+                  {c.email && <div className="mono" style={{ fontSize: '0.75rem', color: 'var(--blue)', marginTop: 2 }}>{c.email}</div>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Card>
+
+        <Card>
+          <div style={{ fontSize: '0.73rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, marginBottom: 12 }}>Hiring Plan</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {[
+              { role: 'Brand Manager', budget: '₹80K-1L/mo', status: 'Thambu filling role', urgency: 'active' },
+              { role: 'Performance Agency', budget: '₹70K-1L/mo retainer', status: 'Manik meeting candidate', urgency: 'interviewing' },
+              { role: 'Social Media (Partial)', budget: '~10 posts/mo from agency', status: 'Rest via AI + Thambu', urgency: 'planned' },
+              { role: 'PR Freelancer', budget: '~₹1.7L', status: 'Manik to share contact', urgency: 'planned' },
+              { role: 'Freelancers / Interns', budget: 'Variable', status: '3-6 month bridge', urgency: 'planned' },
+            ].map((h, i) => (
+              <div key={i} style={{ padding: 12, background: 'var(--surface-2)', borderRadius: 6 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
+                  <span style={{ fontWeight: 600, fontSize: '0.9rem' }}>{h.role}</span>
+                  <Badge color={h.urgency === 'active' ? 'var(--green)' : h.urgency === 'interviewing' ? 'var(--amber)' : 'var(--text-muted)'}>{h.urgency}</Badge>
+                </div>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{h.budget} · {h.status}</div>
+              </div>
+            ))}
+          </div>
+        </Card>
+      </div>
+
+      <Card>
+        <SectionHeader title="Influencer Targets" />
+        <div style={{ padding: 12, background: 'var(--surface-2)', borderRadius: 6, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <div style={{ fontWeight: 600, fontSize: '0.95rem' }}>Sid Warrier</div>
+            <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Doctor / Storyteller / Content Creator</div>
+          </div>
+          <div style={{ textAlign: 'right' }}>
+            <Badge color="var(--amber)">intro pending</Badge>
+            <div style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginTop: 4 }}>Manik to facilitate</div>
+          </div>
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// ─── Notes Panel ───────────────────────────────────────────────
+
+function NotesPanel({ notes, setNotes }) {
+  const [newNote, setNewNote] = useState('');
+  const [newTag, setNewTag] = useState('general');
+
+  const addNote = () => {
+    if (!newNote.trim()) return;
+    setNotes(prev => [{ id: Date.now(), text: newNote.trim(), date: new Date().toISOString().split('T')[0], tag: newTag }, ...prev]);
+    setNewNote('');
+  };
+
+  const removeNote = (id) => setNotes(prev => prev.filter(n => n.id !== id));
+
+  const tagColors = { strategy: 'var(--blue)', pricing: 'var(--amber)', team: 'var(--purple)', general: 'var(--text-muted)', product: 'var(--green)' };
+
+  return (
+    <div className="fade-in">
+      <SectionHeader title="Strategic Notes" subtitle="Key insights, advice, and decisions" />
+
+      <Card style={{ marginBottom: 16, padding: 12 }}>
+        <div style={{ display: 'flex', gap: 8 }}>
+          <textarea
+            value={newNote} onChange={e => setNewNote(e.target.value)}
+            placeholder="Capture a note, insight, or decision..."
+            rows={2}
+            style={{ flex: 1, padding: '8px 12px', borderRadius: 6, border: '1px solid var(--border)', background: 'var(--surface-2)', color: 'var(--text)', fontSize: '0.9rem', fontFamily: 'inherit', outline: 'none', resize: 'vertical' }}
+          />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <select value={newTag} onChange={e => setNewTag(e.target.value)} style={{ padding: '6px 8px', borderRadius: 6, border: '1px solid var(--border)', background: 'var(--surface-2)', color: 'var(--text)', fontSize: '0.75rem', fontFamily: 'inherit', cursor: 'pointer' }}>
+              <option value="general">General</option>
+              <option value="strategy">Strategy</option>
+              <option value="pricing">Pricing</option>
+              <option value="team">Team</option>
+              <option value="product">Product</option>
+            </select>
+            <button onClick={addNote} style={{ padding: '6px 14px', borderRadius: 6, border: 'none', background: 'var(--green)', color: 'var(--bg)', fontWeight: 600, fontSize: '0.8rem', cursor: 'pointer', fontFamily: 'inherit' }}>Save</button>
+          </div>
+        </div>
+      </Card>
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        {notes.map((note, i) => (
+          <Card key={note.id} style={{ padding: 14, animation: `fadeIn 0.3s ease ${i * 0.04}s both` }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 6 }}>
+              <Badge color={tagColors[note.tag] || 'var(--text-muted)'}>{note.tag}</Badge>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                <span className="mono" style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>{note.date}</span>
+                <button onClick={() => removeNote(note.id)} style={{ background: 'none', border: 'none', color: 'var(--text-dim)', cursor: 'pointer', fontSize: '0.9rem' }}>×</button>
+              </div>
+            </div>
+            <div style={{ fontSize: '0.88rem', lineHeight: 1.5 }}>{note.text}</div>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── Tools Panel ───────────────────────────────────────────────
+
+function ToolsPanel() {
+  const [filter, setFilter] = useState('all');
+  const categories = ['all', ...new Set(TOOLS_REGISTRY.map(t => t.category))];
+  const filtered = filter === 'all' ? TOOLS_REGISTRY : TOOLS_REGISTRY.filter(t => t.category === filter);
+
+  return (
+    <div className="fade-in">
+      <SectionHeader title="Tools & Integrations" subtitle="Active tools and future capabilities" />
+
+      <div style={{ display: 'flex', gap: 6, marginBottom: 16, flexWrap: 'wrap' }}>
+        {categories.map(c => (
+          <button key={c} onClick={() => setFilter(c)} style={{
+            padding: '5px 10px', borderRadius: 6, border: '1px solid', fontSize: '0.75rem', cursor: 'pointer', fontFamily: 'inherit', textTransform: 'capitalize',
+            background: filter === c ? 'var(--green-dim)' : 'transparent',
+            borderColor: filter === c ? 'var(--green)' : 'var(--border)',
+            color: filter === c ? 'var(--green)' : 'var(--text-muted)',
+          }}>{c}</button>
+        ))}
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
+        {filtered.map((tool, i) => (
+          <Card key={i} hover style={{ animation: `fadeIn 0.3s ease ${i * 0.04}s both` }}>
+            <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+              <div style={{ fontSize: '1.5rem', width: 36, textAlign: 'center', flexShrink: 0 }}>{tool.icon}</div>
+              <div style={{ flex: 1 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 2 }}>
+                  <span style={{ fontWeight: 600, fontSize: '0.9rem' }}>{tool.name}</span>
+                  <Badge color={tool.status === 'active' ? 'var(--green)' : 'var(--text-muted)'}>{tool.status === 'active' ? 'active' : 'coming soon'}</Badge>
+                </div>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{tool.desc}</div>
+              </div>
+            </div>
+          </Card>
+        ))}
+
+        <Card hover style={{ border: '1px dashed var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 80 }}>
+          <div style={{ textAlign: 'center', color: 'var(--text-dim)' }}>
+            <div style={{ fontSize: '1.5rem', marginBottom: 4 }}>+</div>
+            <div style={{ fontSize: '0.9rem' }}>Add New Tool</div>
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+// ─── Main App ──────────────────────────────────────────────────
+
+function App() {
+  const [activeTab, setActiveTab] = useState('overview');
+  const [tasks, setTasks] = useState(TASKS_INIT);
+  const [notes, setNotes] = useState(NOTES_INIT);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+
+  const renderPanel = () => {
+    switch (activeTab) {
+      case 'overview': return <OverviewPanel tasks={tasks} onNav={setActiveTab} />;
+      case 'timeline': return <TimelinePanel />;
+      case 'tasks': return <TasksPanel tasks={tasks} setTasks={setTasks} />;
+      case 'budget': return <BudgetPanel />;
+      case 'social': return <SocialIdentityPanel />;
+      case 'audiences': return <AudiencesPanel />;
+      case 'channels': return <ChannelsPanel />;
+      case 'intel': return <IntelPanel />;
+      case 'team': return <TeamPanel />;
+      case 'notes': return <NotesPanel notes={notes} setNotes={setNotes} />;
+      case 'tools': return <ToolsPanel />;
+      default: return <OverviewPanel tasks={tasks} onNav={setActiveTab} />;
+    }
+  };
+
+  const navIcons = {
+    overview: '◉', timeline: '◎', tasks: '☑', budget: '₹', social: '◐', audiences: '👤',
+    channels: '⊞', intel: '◈', team: '◇', notes: '✎', tools: '⚙',
+  };
+
+  return (
+    <div style={{ display: 'flex', minHeight: '100vh' }}>
+      {/* Sidebar */}
+      <div style={{
+        width: sidebarCollapsed ? 56 : 200, flexShrink: 0, background: 'var(--surface)',
+        borderRight: '1px solid var(--border)', display: 'flex', flexDirection: 'column',
+        transition: 'width 0.25s ease', overflow: 'hidden',
+      }}>
+        {/* Brand header */}
+        <div style={{ padding: sidebarCollapsed ? '16px 8px' : '20px 16px', borderBottom: '1px solid var(--border)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <div style={{
+              width: 32, height: 32, borderRadius: 6, background: 'var(--green)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontWeight: 800, fontSize: '0.9rem', color: 'var(--bg)', flexShrink: 0,
+            }}>M</div>
+            {!sidebarCollapsed && (
+              <div>
+                <div style={{ fontWeight: 700, fontSize: '0.95rem', letterSpacing: '-0.02em' }}>MINDWISE</div>
+                <div style={{ fontSize: '0.68rem', color: 'var(--text-dim)', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 500 }}>Mission Control</div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Nav */}
+        <nav style={{ flex: 1, padding: '8px 6px' }}>
+          {NAV_ITEMS.map(item => (
+            <button
+              key={item.id}
+              onClick={() => setActiveTab(item.id)}
+              style={{
+                width: '100%', display: 'flex', alignItems: 'center', gap: 10,
+                padding: sidebarCollapsed ? '10px 0' : '9px 10px', marginBottom: 2,
+                borderRadius: 6, border: 'none', cursor: 'pointer',
+                fontFamily: 'inherit', fontSize: '0.9rem', textAlign: 'left',
+                justifyContent: sidebarCollapsed ? 'center' : 'flex-start',
+                background: activeTab === item.id ? 'var(--green-dim)' : 'transparent',
+                color: activeTab === item.id ? 'var(--green)' : 'var(--text-muted)',
+                fontWeight: activeTab === item.id ? 600 : 400,
+                transition: 'all 0.15s',
+              }}
+              title={item.label}
+            >
+              <span style={{ fontSize: '0.9rem', width: 20, textAlign: 'center', flexShrink: 0 }}>{navIcons[item.id]}</span>
+              {!sidebarCollapsed && <span>{item.label}</span>}
+            </button>
+          ))}
+        </nav>
+
+        {/* Collapse toggle */}
+        <button
+          onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+          style={{
+            padding: 12, border: 'none', borderTop: '1px solid var(--border)',
+            background: 'transparent', color: 'var(--text-dim)', cursor: 'pointer',
+            fontSize: '0.9rem', fontFamily: 'inherit',
+          }}
+        >
+          {sidebarCollapsed ? '→' : '← Collapse'}
+        </button>
+      </div>
+
+      {/* Main content */}
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+        {/* Top bar */}
+        <header style={{
+          display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+          padding: '12px 24px', borderBottom: '1px solid var(--border)', background: 'var(--surface)',
+        }}>
+          <div>
+            <span style={{ fontSize: '0.8rem', color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              {NAV_ITEMS.find(n => n.id === activeTab)?.label}
+            </span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+            <Countdown />
+            <div style={{
+              padding: '6px 12px', borderRadius: 6, background: 'var(--green-dim)',
+              color: 'var(--green)', fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.05em',
+            }}>
+              LAUNCH: JUN 1
+            </div>
+          </div>
+        </header>
+
+        {/* Content area */}
+        <main style={{ flex: 1, padding: 24, overflowY: 'auto' }}>
+          {renderPanel()}
+        </main>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
