@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARKA Motorsports — INRC Chennai Pit Banners (6x 10ft W × 7ft H)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap');
+
+  /* ARKA MOTORSPORTS BRAND COLORS
+     Primary Dark Navy:  #25305C  (ARKA text, bolt body)
+     Mid Blue:           #303D8C  (bolt mid-section)
+     Accent Cyan-Blue:   #068AC9  (bolt highlights, accent line)
+     Light Blue Glow:    #2B90D0  (transitional blues)
+     Motorsports Gray:   #7A7A7C  (secondary text)
+     Deep Navy:          #002E5D  (body text on site)
+     Black:              #000000  (nav)
+     White:              #FFFFFF  (highlights)
+  */
+
+  :root {
+    --arka-navy: #25305C;
+    --arka-mid-blue: #303D8C;
+    --arka-accent: #068AC9;
+    --arka-light-blue: #2B90D0;
+    --arka-gray: #7A7A7C;
+    --arka-deep-navy: #002E5D;
+    --arka-bg-dark: #080C1A;
+    --arka-bg-mid: #0E1630;
+    --arka-border: rgba(6, 138, 201, 0.18);
+    --arka-border-bright: rgba(6, 138, 201, 0.35);
+    --arka-glow: rgba(6, 138, 201, 0.08);
+    --arka-glow-bright: rgba(6, 138, 201, 0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a0a;
+    font-family: 'Barlow', sans-serif;
+    color: #fff;
+    padding: 40px 20px;
+  }
+
+  h1.page-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: #aaa;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .page-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 50px;
+  }
+
+  .banner-wrapper {
+    max-width: 860px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+
+  .banner-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    color: #555;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .banner {
+    width: 840px;
+    height: 588px; /* 10:7 ratio */
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #1a1f3a;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    margin: 0 auto;
+  }
+
+  /* Shared header bar */
+  .top-bar {
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+    border-bottom: 1px solid var(--arka-border);
+    gap: 16px;
+  }
+
+  .arka-header-logo { height: 36px; }
+  .vline { width: 2px; height: 28px; background: var(--arka-accent); }
+
+  .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: var(--arka-accent);
+    text-transform: uppercase;
+  }
+
+  .bottom-bar {
+    padding: 10px 30px 14px;
+    text-align: center;
+    border-top: 1px solid var(--arka-border);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--arka-gray);
+    text-transform: uppercase;
+  }
+
+  /* ============================================================
+     BANNER 1 — HERO IDENTITY
+     ============================================================ */
+  .b1 {
+    background: linear-gradient(135deg, var(--arka-bg-dark) 0%, var(--arka-bg-mid) 40%, #121D42 60%, var(--arka-bg-dark) 100%);
+    display: flex;
+    align-items: center;
+  }
+
+  .b1 .top-accent {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--arka-navy), var(--arka-accent), var(--arka-navy));
+  }
+
+  .b1 .watermark {
+    position: absolute;
+    top: 50%; left: 22%;
+    transform: translate(-50%, -50%);
+    font-family: 'Oswald', sans-serif;
+    font-size: 320px;
+    font-weight: 700;
+    color: rgba(37, 48, 92, 0.08);
+    pointer-events: none;
+  }
+
+  .b1 .left {
+    flex: 0 0 42%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-right: 1px solid var(--arka-border);
+    position: relative;
+    z-index: 1;
+  }
+
+  .b1 .main-logo { max-width: 280px; height: auto; margin-bottom: 16px; }
+
+  .b1 .since {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    letter-spacing: 5px;
+    color: var(--arka-gray);
+    margin-top: 14px;
+  }
+
+  .b1 .right {
+    flex: 0 0 58%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .b1 .hero-number {
+    font-family: 'Oswald', sans-serif;
+    font-size: 130px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    text-shadow: 0 0 60px rgba(6, 138, 201, 0.2);
+  }
+
+  .b1 .hero-number sup {
+    font-size: 52px;
+    vertical-align: super;
+    color: var(--arka-accent);
+  }
+
+  .b1 .hero-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 7px;
+    color: var(--arka-light-blue);
+    text-transform: uppercase;
+    margin-top: -4px;
+  }
+
+  .b1 .divisions {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 400px;
+  }
+
+  .b1 .div-pill {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--arka-light-blue);
+    padding: 5px 14px;
+    border: 1px solid var(--arka-border);
+    border-radius: 3px;
+    background: var(--arka-glow);
+  }
+
+  .b1 .tagline {
+    position: absolute;
+    bottom: 16px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--arka-gray);
+    text-transform: uppercase;
+  }
+
+  /* ============================================================
+     BANNER 2 — CHAMPIONSHIPS
+     ============================================================ */
+  .b2 {
+    background: linear-gradient(135deg, var(--arka-bg-dark) 0%, var(--arka-bg-mid) 50%, var(--arka-bg-dark) 100%);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .b2 .top-bar { justify-content: space-between; }
+
+  .b2 .total-pill {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    padding: 8px 24px;
+    border: 2px solid var(--arka-border-bright);
+    border-radius: 4px;
+    background: var(--arka-glow-bright);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .b2 .total-pill .total-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--arka-light-blue);
+    text-transform: uppercase;
+  }
+
+  .b2 .wreaths-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding: 18px 24px;
+  }
+
+  .b2 .wreath {
+    border: 1px solid var(--arka-border);
+    border-radius: 6px;
+    background: var(--arka-glow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 6px;
+  }
+
+  .b2 .wreath .trophy { font-size: 30px; margin-bottom: 4px; }
+
+  .b2 .wreath .w-year {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .b2 .wreath .w-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--arka-light-blue);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.3;
+    margin-top: 2px;
+  }
+
+  .b2 .wreath .w-cat {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--arka-gray);
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  /* ============================================================
+     BANNER 3 — FACTORY TEAM / OEM + TIRE PARTNERS
+     ============================================================ */
+  .b3 {
+    background: linear-gradient(135deg, var(--arka-bg-dark) 0%, var(--arka-bg-mid) 50%, var(--arka-bg-dark) 100%);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .b3 .content {
+    flex: 1;
+    display: flex;
+    padding: 14px 20px;
+    gap: 12px;
+  }
+
+  .b3 .oem-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .b3 .oem-card {
+    flex: 1;
+    border: 1px solid var(--arka-border);
+    border-left: 3px solid var(--arka-mid-blue);
+    border-radius: 4px;
+    background: var(--arka-glow);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .b3 .oem-card.active {
+    border-left-color: var(--arka-accent);
+    background: var(--arka-glow-bright);
+  }
+
+  .b3 .oem-logo { height: 42px; max-width: 70px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.85; flex-shrink: 0; }
+  .b3 .oem-logo.color { filter: none; }
+
+  .b3 .oem-info { flex: 1; }
+
+  .b3 .oem-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .b3 .oem-role {
+    font-family: 'Barlow', sans-serif;
+    font-size: 9px;
+    color: var(--arka-accent);
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  .b3 .oem-years {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    color: var(--arka-gray);
+    margin-top: 3px;
+    letter-spacing: 1px;
+  }
+
+  .b3 .oem-badge {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: var(--arka-accent);
+    text-transform: uppercase;
+    margin-top: 4px;
+    padding: 2px 8px;
+    border: 1px solid var(--arka-border-bright);
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  /* ============================================================
+     BANNER 4 — TIRE PARTNERS
+     ============================================================ */
+  .b4 {
+    background: linear-gradient(135deg, var(--arka-bg-dark) 0%, var(--arka-bg-mid) 50%, var(--arka-bg-dark) 100%);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .b4 .content {
+    flex: 1;
+    display: flex;
+    padding: 16px 24px;
+    gap: 14px;
+  }
+
+  .b4 .tire-card {
+    flex: 1;
+    border: 1px solid var(--arka-border);
+    border-radius: 6px;
+    background: var(--arka-glow);
+    padding: 20px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .b4 .tire-card.active {
+    border-color: var(--arka-border-bright);
+    background: var(--arka-glow-bright);
+  }
+
+  .b4 .tire-logo { height: 70px; max-width: 160px; object-fit: contain; margin-bottom: 10px; filter: brightness(0) invert(1); opacity: 0.9; }
+
+  .b4 .tire-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--arka-accent);
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .b4 .tire-years {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    color: var(--arka-gray);
+    margin-top: 10px;
+  }
+
+  .b4 .tire-detail {
+    font-family: 'Barlow', sans-serif;
+    font-size: 10px;
+    color: var(--arka-light-blue);
+    margin-top: 10px;
+    font-style: italic;
+    line-height: 1.5;
+    max-width: 200px;
+  }
+
+  .b4 .tire-badge {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--arka-accent);
+    text-transform: uppercase;
+    margin-top: 12px;
+    padding: 4px 14px;
+    border: 1px solid var(--arka-border-bright);
+    border-radius: 3px;
+  }
+
+  .b4 .stat-col {
+    flex: 0 0 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--arka-border-bright);
+    border-radius: 6px;
+    background: rgba(48, 61, 140, 0.1);
+    padding: 20px;
+  }
+
+  .b4 .stat-number {
+    font-family: 'Oswald', sans-serif;
+    font-size: 76px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .b4 .stat-number sup { font-size: 30px; color: var(--arka-accent); vertical-align: super; }
+
+  .b4 .stat-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--arka-light-blue);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+
+  /* ============================================================
+     BANNER 5 — HALL OF FAME
+     ============================================================ */
+  .b5 {
+    background: linear-gradient(135deg, var(--arka-bg-dark) 0%, var(--arka-bg-mid) 50%, var(--arka-bg-dark) 100%);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .b5 .top-bar { justify-content: space-between; }
+
+  .b5 .top-subtitle {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--arka-gray);
+    text-transform: uppercase;
+  }
+
+  .b5 .champs-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 14px 24px;
+  }
+
+  .b5 .champ-card {
+    border: 1px solid var(--arka-border);
+    border-radius: 4px;
+    background: var(--arka-glow);
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .b5 .champ-card.top-tier {
+    border-color: var(--arka-border-bright);
+    background: var(--arka-glow-bright);
+  }
+
+  .b5 .cc-count {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--arka-accent);
+    line-height: 1;
+    min-width: 36px;
+    text-align: center;
+  }
+
+  .b5 .cc-count span { font-size: 11px; color: var(--arka-gray); font-weight: 400; }
+  .b5 .cc-info { flex: 1; }
+
+  .b5 .cc-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .b5 .cc-detail {
+    font-family: 'Barlow', sans-serif;
+    font-size: 8px;
+    color: var(--arka-gray);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 1px;
+  }
+
+  .b5 .cc-trophy { font-size: 18px; }
+
+  /* ============================================================
+     BANNER 6 — SUPPLIER BRANDS
+     ============================================================ */
+  .b6 {
+    background: linear-gradient(135deg, var(--arka-bg-dark) 0%, var(--arka-bg-mid) 50%, var(--arka-bg-dark) 100%);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .b6 .top-bar { justify-content: space-between; }
+
+  .b6 .website-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--arka-accent);
+  }
+
+  .b6 .brands-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
+    padding: 20px 24px;
+  }
+
+  .b6 .brand-tile {
+    border: 1px solid var(--arka-border);
+    border-radius: 6px;
+    background: var(--arka-glow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 10px;
+    text-align: center;
+  }
+
+  .b6 .brand-logo { height: 60px; max-width: 120px; object-fit: contain; margin-bottom: 8px; filter: brightness(0) invert(1); opacity: 0.85; }
+
+  .b6 .brand-cat {
+    font-family: 'Barlow', sans-serif;
+    font-size: 8px;
+    color: var(--arka-gray);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* ============================================================
+     LAYOUT GUIDE
+     ============================================================ */
+  .layout-guide {
+    max-width: 860px;
+    margin: 0 auto 50px;
+    padding: 28px;
+    background: #060810;
+    border: 1px solid #1a1f3a;
+    border-radius: 6px;
+  }
+
+  .layout-guide h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: var(--arka-accent);
+    margin-bottom: 12px;
+  }
+
+  .layout-guide p {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.7;
+    margin-bottom: 6px;
+  }
+
+  .color-ref { display: flex; gap: 14px; margin-top: 12px; flex-wrap: wrap; }
+  .color-swatch { display: flex; align-items: center; gap: 8px; }
+  .swatch { width: 20px; height: 20px; border-radius: 3px; border: 1px solid #333; }
+  .swatch-label { font-family: 'Barlow', sans-serif; font-size: 11px; color: #666; }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">ARKA Motorsports — INRC Chennai Pit Banners</h1>
+<p class="page-subtitle">6 banners &bull; 10 ft (W) &times; 7 ft (H) each &bull; ARKA Brand Colors &bull; All logos placed</p>
+
+<!-- LAYOUT GUIDE -->
+<div class="layout-guide">
+  <h2>ARKA BRAND COLOR PALETTE (extracted from official logo)</h2>
+  <div class="color-ref">
+    <div class="color-swatch"><div class="swatch" style="background:#25305C"></div><span class="swatch-label">Navy #25305C</span></div>
+    <div class="color-swatch"><div class="swatch" style="background:#303D8C"></div><span class="swatch-label">Mid Blue #303D8C</span></div>
+    <div class="color-swatch"><div class="swatch" style="background:#068AC9"></div><span class="swatch-label">Accent #068AC9</span></div>
+    <div class="color-swatch"><div class="swatch" style="background:#2B90D0"></div><span class="swatch-label">Light Blue #2B90D0</span></div>
+    <div class="color-swatch"><div class="swatch" style="background:#7A7A7C"></div><span class="swatch-label">Gray #7A7A7C</span></div>
+    <div class="color-swatch"><div class="swatch" style="background:#002E5D"></div><span class="swatch-label">Deep Navy #002E5D</span></div>
+    <div class="color-swatch"><div class="swatch" style="background:#fff"></div><span class="swatch-label">White #FFF</span></div>
+  </div>
+  <h2 style="margin-top:16px">PRINT SPECS</h2>
+  <p>Dimensions: 10 ft (W) &times; 7 ft (H) &bull; Material: Flex / vinyl (outdoor, UV-resistant) &bull; Finish: Matte</p>
+  <p>Resolution: 150 DPI min (18,000 &times; 12,600 px) &bull; Bleed: 2" all sides &bull; Eyelets every 2ft</p>
+  <p><strong>Note:</strong> Logo images below are web-resolution mockup placeholders. For print, replace with vector (AI/EPS/SVG) or high-res (300 DPI) files from each brand.</p>
+</div>
+
+
+<!-- ======================== BANNER 1 — HERO ======================== -->
+<div class="banner-wrapper">
+  <div class="banner-label">Banner 1 &mdash; Hero Identity</div>
+  <div class="banner b1">
+    <div class="top-accent"></div>
+    <div class="watermark">A</div>
+
+    <div class="left">
+      <img src="logos/arka.png" alt="ARKA Motorsports" class="main-logo">
+      <div class="since">EST. 1987 &nbsp;&bull;&nbsp; COIMBATORE, INDIA</div>
+    </div>
+
+    <div class="right">
+      <div class="hero-number">123<sup>+</sup></div>
+      <div class="hero-label">Championship Titles</div>
+      <div class="divisions">
+        <div class="div-pill">Racing &amp; Rallying</div>
+        <div class="div-pill">Motorsports Academy</div>
+        <div class="div-pill">Engineering Solutions</div>
+        <div class="div-pill">R&amp;D Facility</div>
+        <div class="div-pill">Track Days &amp; Experience Drives</div>
+      </div>
+    </div>
+
+    <div class="tagline">India's Most Decorated Motorsport Team &nbsp;&bull;&nbsp; WWW.ARKAMOTORSPORTS.COM</div>
+  </div>
+</div>
+
+
+<!-- ======================== BANNER 2 — CHAMPIONSHIPS ======================== -->
+<div class="banner-wrapper">
+  <div class="banner-label">Banner 2 &mdash; Championship Record</div>
+  <div class="banner b2">
+    <div class="top-bar">
+      <div style="display:flex; align-items:center; gap:16px;">
+        <img src="logos/arka.png" alt="ARKA" class="arka-header-logo">
+        <div class="section-title">Championship Record</div>
+      </div>
+      <div class="total-pill">
+        123+
+        <div class="total-label">Titles<br>Since 1987</div>
+      </div>
+    </div>
+
+    <div class="wreaths-grid">
+      <div class="wreath"><div class="trophy">&#127942;</div><div class="w-year">2024</div><div class="w-title">Overall Champions</div><div class="w-cat">INRC</div></div>
+      <div class="wreath"><div class="trophy">&#127942;</div><div class="w-year">2023</div><div class="w-title">Champions</div><div class="w-cat">INRC 2</div></div>
+      <div class="wreath"><div class="trophy">&#127942;</div><div class="w-year">2022</div><div class="w-title">Overall Champions</div><div class="w-cat">INRC</div></div>
+      <div class="wreath"><div class="trophy">&#127942;</div><div class="w-year">2022</div><div class="w-title">Champions</div><div class="w-cat">INRC 2</div></div>
+      <div class="wreath"><div class="trophy">&#127942;</div><div class="w-year">2020</div><div class="w-title">Overall Champion Tuners</div><div class="w-cat">INRC</div></div>
+      <div class="wreath"><div class="trophy">&#127942;</div><div class="w-year">2018</div><div class="w-title">Overall Champion Tuners</div><div class="w-cat">INRC</div></div>
+      <div class="wreath"><div class="trophy">&#127942;</div><div class="w-year">2018</div><div class="w-title">Champions</div><div class="w-cat">INRC 2</div></div>
+      <div class="wreath"><div class="trophy">&#127942;</div><div class="w-year">2018</div><div class="w-title">Champions</div><div class="w-cat">ITC</div></div>
+      <div class="wreath"><div class="trophy">&#127942;</div><div class="w-year">2018</div><div class="w-title">Champions</div><div class="w-cat">IJTC</div></div>
+      <div class="wreath"><div class="trophy">&#127942;</div><div class="w-year">2018</div><div class="w-title">Winning Tuners</div><div class="w-cat">Dakshin Dare</div></div>
+    </div>
+
+    <div class="bottom-bar">The Only Team in the Country to Have This Prestigious Record</div>
+  </div>
+</div>
+
+
+<!-- ======================== BANNER 3 — OEM + TIRE PARTNERS ======================== -->
+<div class="banner-wrapper">
+  <div class="banner-label">Banner 3 &mdash; Official Technical Partners</div>
+  <div class="banner b3">
+    <div class="top-bar">
+      <img src="logos/arka.png" alt="ARKA" class="arka-header-logo">
+      <div class="vline"></div>
+      <div class="section-title">Official Technical Partners</div>
+    </div>
+
+    <div class="content">
+      <!-- OEM column 1 -->
+      <div class="oem-col">
+        <div class="oem-card">
+          <img src="logos/mahindra.png" alt="Mahindra" class="oem-logo">
+          <div class="oem-info">
+            <div class="oem-name">Mahindra Adventure</div>
+            <div class="oem-role">Factory Rally Team &mdash; Technical Partner</div>
+            <div class="oem-years">2011 &ndash; 2020</div>
+          </div>
+        </div>
+        <div class="oem-card">
+          <img src="logos/maruti-suzuki.png" alt="Maruti Suzuki" class="oem-logo">
+          <div class="oem-info">
+            <div class="oem-name">Maruti Suzuki</div>
+            <div class="oem-role">Factory Motorsports Rally Team</div>
+            <div class="oem-years">2011 &ndash; 2018</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OEM column 2 -->
+      <div class="oem-col">
+        <div class="oem-card">
+          <img src="logos/toyota.png" alt="Toyota" class="oem-logo">
+          <div class="oem-info">
+            <div class="oem-name">Toyota India</div>
+            <div class="oem-role">Etios Motor Racing &bull; Rally Team</div>
+            <div class="oem-years">2011 &ndash; 2018</div>
+          </div>
+        </div>
+        <div class="oem-card active">
+          <img src="logos/volkswagen.png" alt="Volkswagen" class="oem-logo">
+          <div class="oem-info">
+            <div class="oem-name">Volkswagen Motorsport</div>
+            <div class="oem-role">VW Polo R2 (FIA Rally4) &mdash; Parts Support</div>
+            <div class="oem-years">2015 &ndash; Present</div>
+            <div class="oem-badge">&#9679; Active Partnership</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tire column -->
+      <div class="oem-col">
+        <div class="oem-card active">
+          <img src="logos/mrf.png" alt="MRF" class="oem-logo">
+          <div class="oem-info">
+            <div class="oem-name">MRF Rally Team</div>
+            <div class="oem-years">1990 &ndash; 2004 &amp; 2020 &ndash; Present</div>
+            <div class="oem-badge">&#9679; Active</div>
+          </div>
+        </div>
+        <div class="oem-card">
+          <img src="logos/jk-tyre.png" alt="JK Tyre" class="oem-logo">
+          <div class="oem-info">
+            <div class="oem-name">JK Rally Team</div>
+            <div class="oem-years">2005 &ndash; 2020</div>
+          </div>
+        </div>
+        <div class="oem-card">
+          <img src="logos/yokohama.png" alt="Yokohama" class="oem-logo">
+          <div class="oem-info">
+            <div class="oem-name">Yokohama India</div>
+            <div class="oem-years">2010 &ndash; 2016</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-bar">Engineering Excellence Since 1987 &nbsp;&bull;&nbsp; WWW.ARKAMOTORSPORTS.COM</div>
+  </div>
+</div>
+
+
+<!-- ======================== BANNER 4 — TIRE PARTNERS ======================== -->
+<div class="banner-wrapper">
+  <div class="banner-label">Banner 4 &mdash; Tire Technical Partners</div>
+  <div class="banner b4">
+    <div class="top-bar">
+      <img src="logos/arka.png" alt="ARKA" class="arka-header-logo">
+      <div class="vline"></div>
+      <div class="section-title">Tire Technical Partners</div>
+    </div>
+
+    <div class="content">
+      <div class="tire-card active">
+        <img src="logos/mrf.png" alt="MRF" class="tire-logo">
+        <div class="tire-sub">Rally Team</div>
+        <div class="tire-years">1990 &ndash; 2004 &amp; 2020 &ndash; Present</div>
+        <div class="tire-detail">MRF won every single INRC title during the ARKA partnership era. Leelakrishnan won the Tuners Trophy 11 times.</div>
+        <div class="tire-badge">Current Partner</div>
+      </div>
+
+      <div class="tire-card">
+        <img src="logos/jk-tyre.png" alt="JK Tyre" class="tire-logo">
+        <div class="tire-sub">Rally Team</div>
+        <div class="tire-years">2004 &ndash; 2006 &amp; 2020</div>
+        <div class="tire-detail">Dedicated JK Rally team with S. Karivardhan</div>
+      </div>
+
+      <div class="tire-card">
+        <img src="logos/yokohama.png" alt="Yokohama" class="tire-logo">
+        <div class="tire-sub">India Rally Team</div>
+        <div class="tire-years">2014 &ndash; 2016</div>
+        <div class="tire-detail">Supporting Indian rally championship campaigns</div>
+      </div>
+
+      <div class="stat-col">
+        <div class="stat-number">35<sup>+</sup></div>
+        <div class="stat-label">Years of Tire<br>Development<br>Expertise</div>
+      </div>
+    </div>
+
+    <div class="bottom-bar">Performance Through Partnership</div>
+  </div>
+</div>
+
+
+<!-- ======================== BANNER 5 — HALL OF FAME ======================== -->
+<div class="banner-wrapper">
+  <div class="banner-label">Banner 5 &mdash; INRC Hall of Fame</div>
+  <div class="banner b5">
+    <div class="top-bar">
+      <div style="display:flex; align-items:center; gap:16px;">
+        <img src="logos/arka.png" alt="ARKA" class="arka-header-logo">
+        <div class="vline"></div>
+        <div class="section-title">INRC Hall of Fame</div>
+      </div>
+      <div class="top-subtitle">Celebrating Decades of Victories with Our Champions</div>
+    </div>
+
+    <div class="champs-grid">
+      <div class="champ-card top-tier"><div class="cc-count">8<span>x</span></div><div class="cc-info"><div class="cc-name">Musa Sherif</div><div class="cc-detail">National Rally Champion (Co-Driver)</div></div><div class="cc-trophy">&#127942;</div></div>
+      <div class="champ-card top-tier"><div class="cc-count">7<span>x</span></div><div class="cc-info"><div class="cc-name">N. Leelakrishnan</div><div class="cc-detail">National Rally Champion</div></div><div class="cc-trophy">&#127942;</div></div>
+      <div class="champ-card top-tier"><div class="cc-count">7<span>x</span></div><div class="cc-info"><div class="cc-name">V.R. Naren Kumar</div><div class="cc-detail">National Rally Champion</div></div><div class="cc-trophy">&#127942;</div></div>
+      <div class="champ-card top-tier"><div class="cc-count">7<span>x</span></div><div class="cc-info"><div class="cc-name">Gaurav Gill</div><div class="cc-detail">National Rally Champion</div></div><div class="cc-trophy">&#127942;</div></div>
+      <div class="champ-card"><div class="cc-count">4<span>x</span></div><div class="cc-info"><div class="cc-name">Arjun Narendran</div><div class="cc-detail">National Racing Champion</div></div></div>
+      <div class="champ-card"><div class="cc-count">3<span>x</span></div><div class="cc-info"><div class="cc-name">Karna Kadur</div><div class="cc-detail">National Rally Champion</div></div></div>
+      <div class="champ-card"><div class="cc-count">3<span>x</span></div><div class="cc-info"><div class="cc-name">Farooq Ahmed</div><div class="cc-detail">National Rally Champion</div></div></div>
+      <div class="champ-card"><div class="cc-count">3<span>x</span></div><div class="cc-info"><div class="cc-name">Harjee Wadia</div><div class="cc-detail">Rally Winner &amp; INRC 2 Champion</div></div></div>
+      <div class="champ-card"><div class="cc-count">2<span>x</span></div><div class="cc-info"><div class="cc-name">Amittrajit Ghosh</div><div class="cc-detail">National Rally Champion</div></div></div>
+      <div class="champ-card"><div class="cc-count">2<span>x</span></div><div class="cc-info"><div class="cc-name">Vikram Mathias</div><div class="cc-detail">National Rally Champion</div></div></div>
+      <div class="champ-card"><div class="cc-count">2<span>x</span></div><div class="cc-info"><div class="cc-name">Ashwin Naik &amp; Nikhil Pai</div><div class="cc-detail">National Rally Champion</div></div></div>
+      <div class="champ-card"><div class="cc-count" style="font-size:18px;">&#127942;</div><div class="cc-info"><div class="cc-name" style="font-size:11px;">Arjun Rao &bull; Sathish R &bull; P.V.S. Murthy</div><div class="cc-detail">National Rally Champions</div></div></div>
+      <div class="champ-card"><div class="cc-count" style="font-size:18px;">&#127942;</div><div class="cc-info"><div class="cc-name">Philippos Matthai</div><div class="cc-detail">National AutoX Champion</div></div></div>
+      <div class="champ-card"><div class="cc-count" style="font-size:18px;">&#127942;</div><div class="cc-info"><div class="cc-name">Druva Chandrashekar</div><div class="cc-detail">National AutoX Champion</div></div></div>
+      <div class="champ-card"><div class="cc-count" style="font-size:18px;">&#127942;</div><div class="cc-info"><div class="cc-name">Jacob K.J</div><div class="cc-detail">Overall Winner &amp; AutoX Champion</div></div></div>
+    </div>
+
+    <div class="bottom-bar">Drivers &amp; Co-Drivers Associated with ARKA Motorsports</div>
+  </div>
+</div>
+
+
+<!-- ======================== BANNER 6 — SUPPLIER BRANDS ======================== -->
+<div class="banner-wrapper">
+  <div class="banner-label">Banner 6 &mdash; Motorsport Supplier Brands (Official Dealers)</div>
+  <div class="banner b6">
+    <div class="top-bar">
+      <div style="display:flex; align-items:center; gap:16px;">
+        <img src="logos/arka.png" alt="ARKA" class="arka-header-logo">
+        <div class="vline"></div>
+        <div class="section-title">Official Dealers</div>
+      </div>
+      <div class="website-link">WWW.ARKAMOTORSPORTS.COM</div>
+    </div>
+
+    <div class="brands-grid">
+      <div class="brand-tile"><img src="logos/reiger.png" alt="Reiger" class="brand-logo"><div class="brand-cat">Suspension</div></div>
+      <div class="brand-tile"><img src="logos/sadev.png" alt="Sadev" class="brand-logo"><div class="brand-cat">Transmissions</div></div>
+      <div class="brand-tile"><img src="logos/motec.png" alt="MoTeC" class="brand-logo"><div class="brand-cat">ECU &amp; Data Logging</div></div>
+      <div class="brand-tile"><img src="logos/haltech.png" alt="Haltech" class="brand-logo"><div class="brand-cat">Engine Management</div></div>
+      <div class="brand-tile"><img src="logos/braid.png" alt="Braid" class="brand-logo"><div class="brand-cat">Racing Wheels</div></div>
+      <div class="brand-tile"><img src="logos/gripper.png" alt="Gripper" class="brand-logo"><div class="brand-cat">Differentials</div></div>
+      <div class="brand-tile"><img src="logos/toorace.png" alt="Toorace" class="brand-logo"><div class="brand-cat">Racing Safety Gear</div></div>
+      <div class="brand-tile"><img src="logos/superpro.png" alt="SuperPro" class="brand-logo"><div class="brand-cat">Suspension Bushings</div></div>
+      <div class="brand-tile"><img src="logos/link-ecu.png" alt="Link ECU" class="brand-logo"><div class="brand-cat">Engine Management</div></div>
+      <div class="brand-tile"><img src="logos/3mo.png" alt="3MO" class="brand-logo"><div class="brand-cat">Performance Parts</div></div>
+    </div>
+
+    <div class="bottom-bar">Official Dealers for Leading Motorsports Suppliers &amp; Manufacturers from Around the World</div>
+  </div>
+</div>
+
+</body>
+</html>
