@@ -86,11 +86,11 @@ These are NOT required but useful:
 
 | Plugin | What it does |
 |---|---|
-| **Outliner** | Better outline editing |
-| **Templater** | Template engine (only if you want to manually scaffold pages) |
 | **Dataview** | Query frontmatter as a database (e.g., "show me all sources with `domain: mindwise` ingested in March") |
-| **Hot Reload** | Auto-refresh when files change externally (Claude is editing files in the background — this matters) |
+| **Outliner** | Better outline editing |
 | **Better Search Views** | Better search UX |
+
+> **Note:** "Hot Reload" was previously recommended but has been removed from the community plugin store. Modern Obsidian (1.12+) auto-detects external file changes when you switch back to the app, so it's no longer needed.
 
 DO NOT install:
 - Obsidian Sync (you don't need it — git is your sync)
@@ -109,14 +109,9 @@ If you need to read the wiki on mobile:
 - Use git push → read the wiki on GitHub
 - Or use a separate mobile-friendly notes app and sync via export
 
-## Hot Reload (important)
+## External file changes
 
-Because Claude is editing files in the background:
-- Install the **Hot Reload** plugin (community plugin store)
-- Enable it
-- Now when Claude updates a wiki page, Obsidian re-renders automatically — no manual refresh
-
-Without Hot Reload, Obsidian will sometimes show stale content. Restart Obsidian if pages look wrong.
+Claude edits wiki files in the background. Obsidian 1.12+ auto-detects these changes when you Cmd+Tab back to it. If a page ever looks stale, just close and reopen the tab, or restart Obsidian.
 
 ## What to do in Obsidian
 

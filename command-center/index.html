@@ -561,7 +561,14 @@ async function fetchSheet(sheetName){
     const cols=json.table.cols.map(c=>c.label);
     return json.table.rows.map(row=>{
       const obj={};
-      cols.forEach((col,i)=>{if(col){obj[col]=row.c&&row.c[i]?row.c[i].v:null}});
+      cols.forEach((col,i)=>{if(col){
+        const cell=row.c&&row.c[i];if(!cell){obj[col]=null;return}
+        // Handle Google Sheets Date format: "Date(year,month,day)" (month is 0-indexed)
+        if(typeof cell.v==='string'&&cell.v.startsWith('Date(')){
+          const m=cell.v.match(/Date\((\d+),(\d+),(\d+)\)/);
+          if(m){obj[col]=m[1]+'-'+String(Number(m[2])+1).padStart(2,'0')+'-'+m[3].padStart(2,'0');return}
+        }
+        obj[col]=cell.v}});
       return obj;
     });
   }catch(e){console.warn('Sheet fetch failed:',sheetName,e);return null}
@@ -815,7 +822,7 @@ function fpj(arr){return AP==='all'?arr:arr.filter(i=>i.project===AP)}
 // UTILS
 function closeM(id){document.getElementById(id).classList.remove('show')}
 document.querySelectorAll('.modal-bg').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('show')})});
-function fd(d){if(!d)return'';const p=d.split('-');return p[2]+'/'+p[1]}
+function fd(d){if(!d||typeof d!=='string'||!d.includes('-'))return'';const p=d.split('-');return(p[2]||'')+'/'+(p[1]||'')}
 function pclass(t){return t.project==='mindwise'?'mw':'rs'}
 function pbadge(t){return t.project==='mindwise'?'<span class="pbadge pbadge-mw">MW</span>':'<span class="pbadge pbadge-rs">RS</span>'}
 
