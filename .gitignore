@@ -1,7 +1,15 @@
 .DS_Store
 *.env
 node_modules/
-.claude/
+
+# Ignore .claude/ contents (personal agent state, settings, memory)
+# EXCEPT .claude/rules/ which contains the wiki schema layer (load-bearing, must be tracked)
+.claude/*
+!.claude/rules/
+
+# Obsidian workspace state — ignore entirely (changes every session)
+.obsidian/
+
 generated_imgs/
 *.log
 .nano-banana-config.json
