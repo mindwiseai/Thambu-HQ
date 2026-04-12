@@ -9,6 +9,8 @@ tags: [person, sorted-agency, packaging-lead]
 
 Packaging strategy and design coordination lead at [[sorted-agency]]. Has emerged as the **primary day-to-day contact** for [[domains/mindwise/_index|Mindwise]] since mid-March 2026, displacing earlier handovers from Jaiman (left late Jan) and frequent [[manik]] coordination.
 
+**WhatsApp:** +91 99304 02027 (captured from [[2026-04-10-to-11-sorted-whatsapp-packaging-push|the April 10-11 WhatsApp snapshot]])
+
 ## Role on Mindwise
 - Owns packaging brief authoring and revisions
 - Coordinates back-of-pack regulatory information requirements
@@ -29,6 +31,9 @@ Packaging strategy and design coordination lead at [[sorted-agency]]. Has emerge
 - [[2026-03-23-binita-packaging-feedback]] ← Thambu's feedback message to her
 
 ## Open items currently with Binita
-- Updated packaging brief incorporating Thambu's 11-point feedback (due April 1)
+- Updated packaging brief incorporating Thambu's 11-point feedback (due April 1 — being actively worked on per April 10-11 WhatsApp)
 - Final two packaging render options: standard + premium
 - Pricing recommendation (in discussion with Manik + Aarti)
+- **Adapting the label design to the new Patco bottle proportions** (bottle is shorter/wider than original design assumption — see [[2026-04-10-to-11-sorted-whatsapp-packaging-push]])
+- **Waiting on Patco for bottle cap height** (Shivendra chasing Patco since April 9-10)
+- **Preparing for the [[outer-cardboard-box-decision|outer-cardboard-box decision]]** — label may need to absorb all regulatory content if outer box is dropped

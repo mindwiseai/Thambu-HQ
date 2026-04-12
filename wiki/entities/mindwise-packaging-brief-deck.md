@@ -13,6 +13,12 @@ The **live Google Slides deck** maintained by [[binita]] at [[sorted-agency|Sort
 
 - **Initial version** shared March 18, 2026 (chat record): https://docs.google.com/presentation/d/1L1AhSj8mmHWhoeV2p7KSKjGaa2z6P5HNo22SdwZzYYU/edit
 - **Updated version** shared March 23, 2026 incorporating week's discussion: https://docs.google.com/presentation/d/1hSioUeYory_hJmLzCb0kDX8hBjmPVqOxW26Jwcph9kM/edit
+- **Current working version** (April 10-11) — same deck being iterated on, now includes:
+  - Both [[blister-pack-specs|blister pack specs]] (`Package(115_75_125).pdf` + `Package(70_10_120).pdf`)
+  - Updated bottle + outer packaging content review (slides 18+)
+  - [[ankita|Ankita's]] standardization comments (hyphens, full stops, nutrition panel child/adult clarification)
+  - ⏳ **Still evolving:** label proportions to match Patco's shorter bottle geometry (pending cap height delivery)
+  - ⏳ **May pivot:** if [[outer-cardboard-box-decision|the outer box is dropped]], the bottle label needs a full re-layout to absorb all regulatory content
 - ⏳ Next revision due **April 1, 2026** — incorporating [[2026-03-23-binita-packaging-feedback|Thambu's 11-point feedback]]
 
 ## What it covers (per the chat record)

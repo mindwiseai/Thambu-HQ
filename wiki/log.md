@@ -9,11 +9,64 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-04-12] ingest | Arka Motorsports website (Browser MCP)
+- **Source:** https://www.arkamotorsports.com (via Browser MCP — WebFetch only got Wix scaffolding because the site is JavaScript-rendered)
+- **Major updates (no new pages, substantial rewrites):**
+  - [[arka-motorsports]] — completely rewritten. **123+ championship titles since 1987**, "the only team in the country to have this prestigious record." Full address, phone, email, 4 social handles.
+  - [[mr-leela-krishnan]] — completely rewritten. Name corrected from "Leela Krishnan" (transcription artifact) to "N. Leelakrishnan" (official one-word spelling). **7-time National Rally Champion + multiple National Racing Champion + 35 years in Indian motorsports.** Filename preserved to avoid breaking backlinks.
+  - [[race-engineer-positioning]] — substantially upgraded with verified ARKA credentials. Moat is now structurally uncopyable.
+  - [[thambu]] — updated with the real ARKA credential stack
+  - [[next-gen-racesims-rigs]] — updated with verified ARKA credentials for the design mentor context
+- **Strategic impact:** RaceSims now has specific, verifiable numbers (123 championships, 7 national rally titles, 35 years) instead of vague credibility claims. Founder-story pitch framing massively upgraded.
+- **Method:** `browser_navigate` + `browser_snapshot`. WebFetch failed because the site is Wix-JS-rendered; Browser MCP renders the actual DOM.
+
+## [2026-04-12] ingest | Gmail Drafts — CSK Pitch + March 24 Meeting Summary + Mission Control Notion
+- User asked me to ingest the Instagram DM (for CSK). While fetching it, discovered 2 other extremely high-value drafts in Gmail
+- **3 new source pages created:**
+  - [[2026-04-08-csk-pitch-draft]] — Instagram DM + detailed email draft to Mr. Radhakrishnan at CSK. **Still unsent as of 2026-04-12.** Zero-cost sim-racing content partnership proposal with 4 content format ideas (Player vs Player, Lap Time Challenge, Guess the Driver, Fan Challenge)
+  - [[2026-03-24-meeting-summary-draft]] — Thambu's own draft summary of the March 24 Manik meeting, with action items for both sides + explicit April 2 agenda. NEVER SENT but confirms everything already in the wiki with cleaner structure
+  - [[2026-03-25-mission-control-notion-setup-draft]] — reveals a **Mindwise Mission Control Notion workspace** built on March 25. NEVER SENT email
+- **4 new entity pages:** [[chennai-super-kings]], [[radhakrishnan-csk]], [[mindwise-mission-control-notion]]
+- **1 new concept page:** [[csk-partnership-pitch]]
+- **Strategic findings:**
+  1. ⏳ The CSK pitch has been sitting in draft since April 8-9 — IPL 2026 window is March-May
+  2. A Notion workspace exists as a parallel "single source of truth" to this wiki
+  3. The March 24 meeting summary confirms everything in [[2026-03-24-meeting-manik-pricing-website]]
+- **Method:** `gmail_list_drafts` + `gmail_read_thread` (drafts fail on `read_message` but succeed on `read_thread`)
+
+## [2026-04-12] ingest | Sorted x Mindwise WhatsApp (April 10-11) via Browser MCP
+- **Captured via Browser MCP** driving WhatsApp Web in Chrome (Browser MCP Chrome extension connected by user)
+- Source page: [[2026-04-10-to-11-sorted-whatsapp-packaging-push]]
+- **Coverage:** April 10-11, 2026 only (~2 days). Browser MCP click/hover timed out when attempting to scroll older history — April 2-9 gap still requires chat export (Path 4)
+- **New page:** [[outer-cardboard-box-decision]] — ship bottle-only vs. with outer box, due week of April 13-17
+- **Updated pages:**
+  - [[ankita|Ankita Duseja]] — full name revealed, UK-based (+44 7724 171784), leading content review (not junior support)
+  - [[binita]] — WhatsApp number captured (+91 99304 02027)
+  - [[website-development]] — ⭐ content + UX APPROVED by Ankita on April 11, designer cleared to build mockup
+  - [[patco-pharmaceuticals]] — bottle prototype being printed, cap height still pending
+  - [[semi-transparent-bottle]] — bottle proportions are now SHORTER than original design, all mockups need re-layout
+  - [[critical-path-bottleneck]] — partial unblock (website content approved) + new blocks (cap height, outer box decision)
+  - [[mindwise-packaging-brief-deck]] — current working state, blister PDFs integrated, slide 18+ comments from Ankita
+- **Strategic impact:** 3 major launch decisions surfaced in one 2-day window: (1) website content approved → design unblocked, (2) bottle proportion change forces mockup redo, (3) outer cardboard box may be dropped entirely for cost reasons
+- **Known gap:** the April 2 Mumbai meeting outcome is STILL not in the wiki — only April 10+ is captured. Recommend chat export for full history.
+
+## [2026-04-12] ingest | Thambu Voice Brief (March 26) + Mumbai travel confirmation
+- **Source fetched via Gmail MCP** (`mindwise.ai1@gmail.com`)
+- Raw saved to `voice-briefs/2026-03-26-thambu-voice-brief.md`
+- Source page: [[2026-03-26-thambu-voice-brief]]
+- **14 new entity pages:** [[arka-motorsports]] ⭐, [[mr-leela-krishnan]], [[raghav-coimbatore-dealer]], [[sim-racing-hq]], [[trayas]], [[racing-rigs]], [[lakshay]], [[jeeva-rathnam]], [[jay-kularia]], [[abdul]], [[shahid-moto-mind]], [[imcd]], [[solusta-puducherry]]
+- **3 new concept pages:** [[next-gen-racesims-rigs]], [[beta-free-bacopa-extract]], [[startup-tax-exemption]]
+- **Updated pages:** [[thambu]] (ARKA relationship + Mindwise ingredient sourcing), [[race-engineer-positioning]] (ARKA as concrete proof of the moat), [[patco-pharmaceuticals]] (aka Patco Packing Solutions name variant), [[ctd-module-2]] (KeenMind/SFI lineage note), [[april-2-mumbai-meeting]] (travel confirmed Mar 31 → Apr 2, 3-reason trip bundle)
+- **Also ingested:** Mumbai travel confirmation from Gmail message `19d2de3109738662` ([[thambu]] March 27 email: "I've decided to travel to Mumbai from the 31st to the second") → enriched [[april-2-mumbai-meeting]]
+- **New meta:** [[meta/ingest-workflow]] — canonical guide for all 6 ingestion paths (voice briefs, documents, Gmail, WhatsApp, Discord bot, screenshots)
+- Domain: cross (both mindwise + racesims)
+- Strategic impact: the [[race-engineer-positioning|race-engineer moat]] is now concrete (ARKA), the [[beta-free-bacopa-extract|Mindwise gummy/syrup path]] is a new roadmap item, and the [[startup-tax-exemption|year-end tax push]] explains the urgency Thambu has been operating with
+
 ## [2026-04-12] cleanup | Full lint cleanup (option C)
 - Re-lint result: **103 pages, 0 real dead links, 0 orphans** (down from 86 pages / 82 dead links)
 - **Phase 1:** Split [[2026-01-to-02-meetings-1-to-5]] into 5 dated source pages — created [[2026-01-06-meeting-1-brief-discussion]], [[2026-01-06-23-meeting-2-written-brief]], [[2026-01-23-meeting-3-brand-strategy-workshop]], [[2026-01-late-meeting-4-brand-identity]], [[2026-02-12-meeting-5-content-strategy]]. Converted the omnibus into a hub page.
 - **Phase 2:** Created 11 Category B stub pages — [[2026-03-23-mindwise-meetings-chat-analysis]], [[monochrome-plus-green-pop]], [[inracing]], [[2026-03-13-quick-meeting-logo-feedback]], [[2026-03-20-aceblend-packaging-reference]], [[mindwise-packaging-brief-deck]], [[blister-pack-specs]], [[ctd-module-2]], [[ctd-references]], [[calabrese-2008-elderly-trial]], [[morgan-stevens-2010-elderly]]
-- **Phase 3:** Converted all `[[../.claude/rules/...]]` cross-tree wikilinks to standard markdown links in [[hot]], [[meta/wiki-schema]], [[meta/obsidian-setup]], [[brand-name-consistency-issue]]
+- **Phase 3:** Converted all `&#91;&#91;../.claude/rules/...&#93;&#93;` cross-tree wikilinks to standard markdown links in [[hot]], [[meta/wiki-schema]], [[meta/obsidian-setup]], [[brand-name-consistency-issue]]
 - **Phase 4:** Escaped schema doc code examples with HTML entities to silence false-positive linter matches
 - **Phase 5:** Two real bugs caught by re-lint and fixed: a `\|` escape that broke wikilinks in [[monochrome-plus-green-pop]] table cells, and one missed code example in [[meta/wiki-schema]]
 - New top hubs (after the new pages): [[cdri-08]] (60), [[your-unfair-advantage]] (56), [[domains/mindwise/_index]] (45), [[thambu]] (43), [[virtual-racing-hub]] (42), [[race-engineer-positioning]] (42), [[manik]] (42)

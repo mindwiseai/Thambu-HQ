@@ -2,13 +2,26 @@
 title: Mindwise Website Development
 type: concept
 domain: mindwise
-status: PENDING DECISION
+status: CONTENT + UX APPROVED → MOCKUP IN PROGRESS
 tags: [website, vendor, budget]
 ---
 
 # Mindwise Website Development
 
-Open strategic decision as of 2026-04-11. Will be resolved at the [[april-2-mumbai-meeting|April 2 in-person meeting]] in Mumbai.
+## ⭐ Update 2026-04-11: Content + UX APPROVED, designer cleared
+
+Per [[2026-04-10-to-11-sorted-whatsapp-packaging-push|the April 11 Sorted WhatsApp]] (8:04 PM), [[ankita|Ankita Duseja]] approved the website content and UX and explicitly told [[binita]]:
+
+> "Thanks Binita! We have reviewed the content for the website mock up and thank you for very quickly making corrections, additions and suggestions. Appreciate it a lot. **Please share it with the designer to create a mock up.**"
+
+This **unblocks the design phase** of the website per [[launch-plan-june-1-2026]]. The designer (still unclear whether Sorted's internal team at ₹6L or the external Ahmedabad developer) can now start building visual mockups against the approved content.
+
+**Original decision point pending resolution:**
+- ⏳ Is the designer Sorted's internal team or the Ahmedabad external developer? (This is the ₹6L vs ₹3L debate — see below.)
+- ⏳ Was the Sorted ₹6L proposal formally accepted or a cheaper alternative chosen?
+- ⏳ What was decided at the [[april-2-mumbai-meeting|April 2 Mumbai meeting]]?
+
+The WhatsApp chat does NOT explicitly resolve which designer is building the mockup — it just says "the designer" without specifying. **Next ingest priority:** confirm the vendor decision from older WhatsApp history or direct confirmation from Thambu.
 
 ## The proposal
 

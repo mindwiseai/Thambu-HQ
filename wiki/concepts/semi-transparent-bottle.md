@@ -24,10 +24,14 @@ This is consistent with high-end performance brands (AG1, Heights, Whoop, Über)
 | Sleeve | Frosted matte sleeve with minimal design elements |
 | Color | [[monochrome-plus-green-pop|Monochrome (charcoal-gray or blue) + GREEN POP]] |
 | Logo | [[route-3-architecture-of-intelligence|Route 3 — Architecture of Intelligence]], dark/monochrome, neon-green accent |
-| Information | Minimal on bottle. Push science to website. |
+| Information | Minimal on bottle. Push science to website. ⚠️ May change if outer box is dropped — see [[outer-cardboard-box-decision]] |
 | Vendor | [[patco-pharmaceuticals|Patco Pharmaceuticals]] (customization confirmed) |
-| Bottle size | 100mL rectangle, 48×48mm × 80mm height (per [[2026-03-23-binita-packaging-feedback]]) |
+| Bottle size | 100mL — **now shorter than original** per April 10 Patco finalization (exact H/W proportions pending cap height confirmation). Earlier spec of 48×48mm × 80mm height (from [[2026-03-23-binita-packaging-feedback]]) is superseded. |
 | Capsule count | [[60-capsule-bottle-decision|60 capsules]] for D2C |
+| Prototype status | ⭐ **Patco printing prototype as of April 10** — first physical sample incoming |
+
+> [!note]
+> **Proportion change (April 10):** The final Patco bottle is SHORTER (height < width) than the proportions Sorted was designing against. This forces a label-layout redesign: font size increases, text tightening, and potentially a full re-do of all current mockups on the new geometry. See [[2026-04-10-to-11-sorted-whatsapp-packaging-push]].
 
 ## Why this solves so many problems at once
 

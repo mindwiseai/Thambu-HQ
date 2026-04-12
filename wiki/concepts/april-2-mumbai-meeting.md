@@ -2,20 +2,37 @@
 title: April 2 Mumbai In-Person Meeting
 type: concept
 domain: mindwise
-status: PAST (status unknown, needs ingestion)
+status: PAST (travel confirmed, meeting outcomes still pending ingestion)
 tags: [meeting, milestone, in-person]
 ---
 
 # April 2, 2026 — Mumbai In-Person Meeting
 
-**Target date:** Wednesday, April 2, 2026 (now ~9 days ago as of 2026-04-11)
-**Location:** [[sorted-agency|Sorted Agency]] / Manik's office, Mumbai
+**Target date:** Wednesday, April 2, 2026
+**Travel window confirmed:** Mar 31 → Apr 2, 2026 (per [[thambu]]'s email March 27: *"I've decided to travel to Mumbai from the 31st to the second"*)
+**Location:** [[sorted-agency|Sorted Agency]] / [[manik|Manik]]'s office, Mumbai
 **Attendees:** [[thambu]], [[shivendra-selvam]], [[manik]], potential performance/social media agency person
 **Note:** virtual link offered for Thambu's father to join/drop
 
 This was the **single most important checkpoint** in the [[launch-plan-june-1-2026|June 1 launch plan]] — the gate that unlocks the [[critical-path-bottleneck|critical path]].
 
-⚠️ As of wiki bootstrap (2026-04-11), the **outcome of this meeting has not been ingested**. This is the highest-priority next ingestion: a status update on what was decided on April 2.
+## ✅ What we know from email ingestion (2026-04-12)
+
+Two email findings from the Gmail ingest confirm the trip structure:
+
+1. **Travel confirmed:** [[thambu]] emailed on March 27 confirming he'd travel Mumbai Mar 31 → Apr 2.
+2. **Three-reason trip bundle:** per the [[2026-03-26-thambu-voice-brief|March 26 voice brief]], the Mumbai leg of the trip was bundled around **three independent reasons**:
+   - [[jay-kularia]] motion system installation (RaceSims customer obligation — the anchor that fixed the dates)
+   - [[patco-pharmaceuticals|Patco Packing Solutions]] — finalize Mindwise bottle design
+   - [[imcd]] — explore other extracts, including [[beta-free-bacopa-extract]]
+
+   The Sorted visual identity presentation was the **brand side** of the trip. The voice brief never explicitly mentioned the visual identity presentation — suggesting the trip might have been planned more around the customer install + supplier meetings, with the Sorted session plugged into the same days.
+
+⚠️ **Still outstanding:** the actual **outcomes** of the April 2 meeting are still not in the wiki. This remains the highest-priority next ingestion. Possible sources:
+- WhatsApp messages from Sorted dated April 2-5 (not yet ingested — WhatsApp access is manual)
+- Email from Manik / Binita / Aarti / Sorted after the meeting (none found in Gmail search — they communicate via WhatsApp, not email)
+- Follow-up voice brief from Thambu post-April 2 (none found yet — if one exists, check `voice-briefs/`)
+- A status note written by Thambu reflecting on the meeting
 
 ## Planned agenda
 

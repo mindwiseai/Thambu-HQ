@@ -11,9 +11,10 @@ Owner and founder of both [[lumen-marketing-company|Lumen Marketing Company]] (w
 
 ## Roles
 
-- **RaceSims:** founder, race engineer (championship-winning teams background — this is the [[race-engineer-positioning|moat]]), primary business driver
-- **Mindwise/Lumen:** founder/CEO, primary decision-maker on brand and strategic direction, owns the relationship with [[sorted-agency]]
+- **RaceSims:** founder, race engineer (championship-winning teams background — this is the [[race-engineer-positioning|moat]]), primary business driver. **Still actively tunes race cars for [[arka-motorsports|ARKA Motorsports]]** (Coimbatore racing team, formerly Red Rooster Performance) — this is a real, ongoing relationship, not a historical credential.
+- **Mindwise/Lumen:** founder/CEO, primary decision-maker on brand and strategic direction, owns the relationship with [[sorted-agency]]. Sourcing new ingredients via [[imcd]] and [[solusta-puducherry|Solusta]] to expand beyond capsules into [[beta-free-bacopa-extract|gummies and syrups]].
 - **Working with [[shivendra-selvam|Shivendra]]:** shared resource across both businesses, handles secondary lead, vendor coordination, follow-up
+- **Email accounts in use:** thambu@racesims.in, thambulumen@gmail.com, and mindwise.ai1@gmail.com (the account connected to the Gmail MCP — also used for voice briefs and the Claude-assisted task-extraction pipeline)
 
 ## Working style (for Claude)
 
@@ -33,4 +34,9 @@ Thambu has been trying to set up a robust personal knowledge system for a long t
 ## Connections
 - Owns [[lumen-marketing-company]], [[domains/mindwise/_index|Mindwise]], [[domains/racesims/_index|RaceSims]]
 - Primary contact for [[sorted-agency|Sorted Agency]]
+- **Race engineer for [[arka-motorsports]]** (live, active relationship — the moat)
+- **Long-term colleague of [[mr-leela-krishnan]]** (ARKA boss, design mentor for [[next-gen-racesims-rigs]])
+- **Employs [[abdul]]** (field technical installer, ex-ARKA / Red Rooster Performance)
+- Dealer network: [[raghav-coimbatore-dealer|Raghav (Coimbatore)]], [[sim-racing-hq|Sim Racing HQ / Trayas (Bangalore)]], [[racing-rigs|Racing Rigs / Lakshay (Bangalore)]]
 - Relationship with CDRI and [[dr-hemant-singh]] dates back to early 2000s — the original [[adam-ritson]] catalyst story
+- Using [[startup-tax-exemption|RaceSims startup income-tax exemption]] for FY2026

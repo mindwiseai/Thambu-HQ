@@ -35,9 +35,23 @@ The launch plan is **already** working backwards from a fixed June 1 date. Sorte
 
 50 days of fixed downstream + April 10 lock = June 1 launch. **Any earlier delay propagates 1:1.**
 
-## What's actually at risk as of 2026-04-11
+## Status update — 2026-04-12 (from [[2026-04-10-to-11-sorted-whatsapp-packaging-push|WhatsApp ingest]])
 
-- **Mid-April brand book deliverables.** These were promised. Today is April 11. Confirmation needed THIS WEEK that the deliverables landed.
+Partial progress + new blocks:
+
+### ✅ Unblocked this week
+- **Website content + UX approved** (April 11, 8:04 PM) — designer cleared to build the mockup
+- **Bottle dimensions finalized** by Patco; prototype being printed
+- **Both blister pack specs** locked (60-bottle + 120-bottle PDFs in the brief deck)
+- **Nutrition panel child/adult dosing confusion** being actively resolved by [[ankita|Ankita]]
+
+### 🔴 New blocks discovered
+- **Bottle cap height** still owed by [[patco-pharmaceuticals|Patco]] — [[shivendra-selvam|Shivendra]] has been chasing "since yesterday" (i.e., from April 10). Without the cap height, Sorted can't finalize the label layout because the bottle proportions are shorter than originally designed and everything must be re-laid-out.
+- **Outer cardboard box decision** — [[outer-cardboard-box-decision|Shivendra raised a NEW question]]: should Mindwise ship bottle-only vs. with outer box? Answer due week of April 13-17 based on cardboard vendor quote. If bottle-only, the label must absorb ALL regulatory info + nutrition + brand story — another full redesign.
+- **Label proportions redesign** — the new Patco bottle is shorter/wider than the original design. All current mockups need to be re-created from scratch on the new geometry.
+
+### ⚠️ Old risks still unresolved
+- **Mid-April brand book deliverables.** These were promised. Today is April 12. Confirmation needed THIS WEEK that the deliverables landed.
 - **April 2 in-person meeting.** Did it happen on schedule? Did the visual identity get presented? See [[april-2-mumbai-meeting]].
 - **Website decision.** Was a decision made on April 5 about Sorted ₹6L vs alternatives? See [[website-development]].
 - **Performance agency.** Was Manik's freelancer vetted and met on April 2?

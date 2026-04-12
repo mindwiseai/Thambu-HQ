@@ -9,6 +9,9 @@ tags: [regulatory, document-set, csir-cdri]
 
 The **ICH Common Technical Document Module 2** package compiled for [[domains/mindwise/_index|Mindwise]] / [[cdri-08|CDRI-08]]. This is the **regulatory backbone** of every clinical and safety claim Mindwise can legitimately make. Every marketing claim that touches science must trace through this dossier.
 
+> [!note]
+> **Document lineage (per Gmail March 31 draft):** The CTD Module 2 documents in the repo were originally **KeenMind** / **SFI (Soho Flordis International)** branded documents. They were converted to Mindwise by doing a find-replace of all references ("KeenMind / Keen Mind" → "Mindwise"; "SFI / Soho Flordis" → "Lumen Marketing Company" equivalent). The underlying clinical trials, CDRI internal reports, dosing, and safety data are **identical** because they refer to the same CDRI-08 extract that KeenMind (Australia) has been selling for decades. But this is important context: when reading the CTD docs and encountering a reference that seems "Mindwise-specific," check whether it was actually a KeenMind-era claim that got mechanically replaced. Anything specific to the Indian launch (FSSAI, Indian market positioning, etc.) would need to be freshly authored, not carried over from the Australian dossier.
+
 ## What CTD Module 2 is
 
 The Common Technical Document is the international format for submitting regulatory data to medicines regulators (FDA, TGA, EMA, CDSCO, etc.). Module 2 contains the **summaries** — the parts a reviewer reads first to understand the safety and efficacy story:

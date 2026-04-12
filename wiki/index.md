@@ -87,6 +87,19 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[discord-server-setup-kit]]
 - [[racesims-bot]]
 
+### Real-world racing connection (the moat proof)
+- [[arka-motorsports]] ⭐ — Thambu's racing team (formerly Red Rooster Performance)
+- [[mr-leela-krishnan]] — ARKA boss, design mentor
+- [[next-gen-racesims-rigs]] — cast aluminum bracket design initiative
+
+### Product expansion (Mindwise)
+- [[beta-free-bacopa-extract]] — unlocks gummies and syrups
+- [[imcd]] — Mumbai ingredient supplier
+- [[solusta-puducherry]] — Puducherry gummy manufacturer
+
+### Operations (RaceSims finance & logistics)
+- [[startup-tax-exemption]] — FY2026 tax strategy, year-end rush driver
+
 ## Entities — Mindwise people & orgs
 
 ### Lumen / Mindwise side
@@ -110,14 +123,36 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[dr-dilip-ghosh]]
 - [[adam-ritson]] — origin story
 
-### Vendors
-- [[patco-pharmaceuticals]]
+### Vendors / Suppliers / Manufacturers
+- [[patco-pharmaceuticals]] — bottle customization (Mumbai)
+- [[imcd]] — ingredient supplier (Mumbai)
+- [[solusta-puducherry]] — gummy manufacturer (Puducherry)
+- [[ctd-module-2]] — regulatory dossier entity
+- [[mindwise-packaging-brief-deck]] — live Google Slides artifact
 
 ## Entities — RaceSims people, brands & competitors
 
 ### Competitors
 - [[virtual-racing-hub]] — primary
 - [[indian-racing-community]] — partnership target
+- [[inracing]] — secondary competitor
+
+### Racing ecosystem (the moat proof)
+- [[arka-motorsports]] ⭐ — Thambu's active racing team
+- [[mr-leela-krishnan]] — ARKA boss, design mentor
+
+### RaceSims dealer network
+- [[raghav-coimbatore-dealer]] — Coimbatore
+- [[sim-racing-hq]] ([[trayas]]) — Bangalore
+- [[racing-rigs]] ([[lakshay]]) — Bangalore
+
+### RaceSims customers (notable)
+- [[jeeva-rathnam]] — race car driver, simulator transfer
+- [[jay-kularia]] — Mumbai motion system buyer
+
+### RaceSims field operations
+- [[abdul]] — field technical installer (Bangalore, ex-ARKA)
+- [[shahid-moto-mind]] — cladding design vendor (direction being rejected)
 
 ### Influencers
 - [[jamie-shaw-racing]]
@@ -134,15 +169,25 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ## Sources (chronological, most recent first)
 
 ### Mindwise
+- [[2026-03-26-thambu-voice-brief]] — voice brief (year-end + travel + ARKA + IMCD unlock)
 - [[2026-03-24-launch-plan-june-1-2026]] — work-backwards plan
-- [[2026-03-24-meeting-manik-pricing-website]] — most recent meeting
+- [[2026-03-24-meeting-manik-pricing-website]]
 - [[2026-03-23-binita-packaging-feedback]] — Thambu's canonical feedback voice
+- [[2026-03-23-mindwise-meetings-chat-analysis]] — WhatsApp + meetings summary
+- [[2026-03-20-aceblend-packaging-reference]]
 - [[2026-03-17-meeting-binita-strategic-decisions]]
-- [[2026-01-to-02-meetings-1-to-5]] — five Sorted strategy meetings (the foundation)
-- [[2026-ctd-module-2.5-clinical-overview]] — CTD clinical
-- [[2026-ctd-module-2.4-nonclinical-overview]] — CTD nonclinical
+- [[2026-03-13-quick-meeting-logo-feedback]]
+- [[2026-01-to-02-meetings-1-to-5]] — five Sorted strategy meetings hub
+- [[2026-01-06-meeting-1-brief-discussion]]
+- [[2026-01-06-23-meeting-2-written-brief]]
+- [[2026-01-23-meeting-3-brand-strategy-workshop]]
+- [[2026-01-late-meeting-4-brand-identity]]
+- [[2026-02-12-meeting-5-content-strategy]]
+- [[2026-ctd-module-2.5-clinical-overview]]
+- [[2026-ctd-module-2.4-nonclinical-overview]]
 
 ### RaceSims
+- [[2026-03-26-thambu-voice-brief]] — also covers RaceSims year-end + ARKA
 - [[2026-03-25-vrh-battle-plan]] — competitive intel
 - [[2026-03-25-seo-geo-audit]] — SEO + GEO state
 
@@ -157,12 +202,18 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[log]] — operation history
 - [[meta/wiki-schema]] — page conventions
 - [[meta/obsidian-setup]] — Obsidian configuration
+- [[meta/ingest-workflow]] — **how to dump files + Gmail + WhatsApp ingestion paths**
+- [[meta/ctd-references]] — CTD bibliography
+- [[meta/lint-2026-04-12]] — first lint report
+- [[meta/lint-2026-04-12-cleanup-verification]] — cleanup verification
 
-## Stats (snapshot 2026-04-12)
+## Stats (snapshot 2026-04-12, post voice brief ingest)
 
-- **Total pages:** 70+
+- **Total pages:** 121+
 - **Domains:** mindwise, racesims, cross
-- **Sources ingested:** 9
-- **Entities:** 22
-- **Concepts:** 35+
+- **Sources ingested:** 17 (was 9 post-bootstrap, 16 post-cleanup)
+- **Entities:** 38 (was 22 post-bootstrap, 24 post-cleanup)
+- **Concepts:** 48 (was 35 post-bootstrap, 45 post-cleanup)
 - **Questions:** 0
+- **Orphans:** 0
+- **Dead links:** 0 (target — verify via lint)
