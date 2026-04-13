@@ -8,18 +8,18 @@ updated: 2026-04-13
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-04-13 (latest) — Gmail check + Avantika split
+## 2026-04-12 (latest) — OneDrive Mindwise Folder Ingest (Packaging, Dibiz, Epaphra)
 
-- **[[dibiz-solution|Dibiz Solution]]** (Mumbai) submitted a **Content Production + Organic/Paid Media Marketing proposal** to Thambu on Apr 7. Snigdha Singh (Co-founder/CMO) sent it after an offline meeting. This may be the **performance agency** the launch plan flagged as pending. Under review.
-- **Shivendra shared "Tool costs and Budgeting"** OneDrive folder (Apr 10) — operational budgeting.
-- **Avantika split confirmed:** [[avantika|Avantika Bhandari]] (Sorted Agency) and [[avantika-bajoria|Avantika Bajoria]] (Adani/ITC) are two different people.
-- **Solista** name fix and SE Asia exclusion reframing applied (see below).
+- **[[cdri-55-brand-name|CDRI-55]]** is the new consumer-facing extract brand name. Decided April 8 call. Bhaskar checking trademark. Follows the Synapsa/KSM-66 model. The "55" hints at 55% without stating it — because CDRI themselves said **do NOT advertise the number** (competitors will copy).
+- **[[packaging-content-layout|4-side bottle layout LOCKED]]** (April 8): Side 1 = hero (Mindwise + tagline + "brain food supplement" + 60 caps). Side 2 = "Not all Bacopa created equal" + optimal formulation. Side 3 = CSIR-CDRI logo + clinically proven CDRI-55 + QR. Side 4 = benefits.
+- **Remove "cruelty free"** — product tested on animals. Remove "vegan" — use "vegetarian capsules."
+- **[[dibiz-solution|Dibiz]] essentially hired** at ~Rs.2.75-2.8L/month. Social media included. Website ~Rs.1.75L. Growth marketing starts May 2026. [[snigdha-singh|Snigdha Singh]] = POC. Sorted handover end of April.
+- **[[epaphra|Epaphra]]** — podcast/content collaboration explored (April 6 meeting with Guhan). Profit-sharing brand ambassador model proposed.
+- **Patco dimensions confirmed:** base 50x50mm, height 75mm incl cap, 100cc HDPE. Mold: Rs.30K bottle + Rs.1L cap.
 
-## 2026-04-12 — Two wiki corrections
+## 2026-04-13 — Gmail check + Avantika split
 
-1. **Solista name fix:** The Puducherry gummy manufacturer is **Solista**, not "Solusta". The incorrect spelling came from a voice-brief transcription artifact. Fixed across all wiki pages. Filename `solusta-puducherry.md` retained to avoid breaking backlinks.
-
-2. **Southeast Asia exclusion reframed:** The SE Asia exclusion applies to **Indus/Vikash specifically** — they cannot enter those 7 markets. The reason: [[lumen-marketing-company|LMC]] is already operating there with MemoPlus Gold (Philippines) and Actif Mind (Thailand). This is **territorial protection for LMC's existing CDRI-08 business**, not a blanket "NO GO" for Bacopa. LMC is strong in SE Asia — this is a moat.
+- Avantika split confirmed. Solista name fix applied. SE Asia exclusion reframed.
 
 ## 2026-04-12 — OneNote Notebook Ingest (Nov 2025 – Mar 2026)
 
@@ -74,9 +74,11 @@ With this ingest, the wiki now has near-complete coverage of RaceSims operations
 ## Blind spots (next ingestion priorities)
 
 1. **April 2 Mumbai meeting outcome** — still not in wiki
-2. **RaceSims 90-day plan execution status** — what actually got done?
-3. **Post-March 26 voice briefs** — check Gmail
-4. **IMCD / Solista meeting outcomes** — bitter-free Bacopa path viable?
+2. **Sorted brand book / visual identity final presentation** — expected end of April
+3. **CDRI-55 trademark status** — Bhaskar checking, no result yet
+4. **Epaphra response** — did they come back with collaboration options?
+5. **IMCD / Solista meeting outcomes** — bitter-free Bacopa path viable?
+6. **Remaining OneDrive files** — visual identity meeting, Binita re-group, brand identity meeting, KeenMind PPTX, content strategy deck still unread
 
 ## Things to flag on next interaction
 

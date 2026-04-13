@@ -9,6 +9,33 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-04-12] ingest | OneDrive Mindwise Folder — Packaging, Dibiz, Epaphra
+- Source: [[2026-onedrive-mindwise-folder]]
+- **Created: 5 new pages:**
+  - [[cdri-55-brand-name]] — trademarked extract brand name (replacing CDRI-08 in consumer materials)
+  - [[packaging-content-layout]] — 4-side bottle label layout (LOCKED Apr 8)
+  - [[epaphra]] — podcast/content collaboration partner (April 6 meeting)
+  - [[snigdha-singh]] — Dibiz Co-founder & CMO
+  - [[2026-onedrive-mindwise-folder]] — source page
+- **Updated: 8 existing pages:**
+  - [[dibiz-solution]] — completely rewritten with 3 meeting summaries, pricing, scope, timeline
+  - [[patco-pharmaceuticals]] — added mold costs (Rs.30K bottle + Rs.1L cap), confirmed dimensions (50x50x75mm), 4 color trials
+  - [[semi-transparent-bottle]] — updated dimensions from April 8 call
+  - [[ankita]] — expanded role: led April 8 packaging content call, proposed "brain food supplement"
+  - [[website-development]] — Dibiz now likely website vendor at Rs.1.75L (vs Sorted's Rs.6L)
+  - [[55-percent-bacosides]] — CRITICAL update: CDRI themselves said do NOT advertise 55%, use "optimum" instead
+  - [[cdri-08]] — added CDRI-55 consumer brand name section
+  - [[sorted-meeting-transcripts]] — added Meeting 11 (Patco) and Meeting 13 (April 8 packaging content)
+- Domain: mindwise
+- **Key revelations:**
+  - **CDRI-55** is the new consumer-facing extract brand name (trademark being checked by Bhaskar)
+  - **Dibiz essentially hired** at ~Rs.2.75-2.8L/month for growth marketing + social + website
+  - **Remove "cruelty free"** from all packaging (product tested on animals)
+  - **Remove "vegan"** — use "vegetarian capsules" instead
+  - **Bottle dimensions confirmed:** 50x50mm base, 75mm height including cap
+  - **Sorted engagement ending** end of April → Dibiz takes over execution in May
+  - **Epaphra** exploring as brand ambassador/podcast partner (profit-sharing model)
+
 ## [2026-04-13] ingest | Gmail check (Apr 7-13) + Avantika split
 - Created: [[dibiz-solution]] — Mumbai growth marketing agency, submitted content production + paid media proposal (Apr 7)
 - Created: [[avantika-bajoria]] — separate person from [[avantika|Avantika Bhandari]], Adani/ITC background

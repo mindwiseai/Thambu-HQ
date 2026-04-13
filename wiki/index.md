@@ -37,6 +37,8 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[60-capsule-bottle-decision]]
 - [[csir-cdri-logo-requirement]]
 - [[tic-tac-seal-concept]]
+- [[packaging-content-layout]] — 4-side bottle label layout (LOCKED Apr 8)
+- [[cdri-55-brand-name]] — trademarked extract brand name (replacing CDRI-08 in consumer materials)
 
 ### Campaigns & content
 - [[learning-is-childs-play-campaign]]
@@ -145,6 +147,11 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[sagar-sali]] — attended Jan 6 meeting
 - [[shipra]] — strategy team, co-presented content strategy
 
+### Marketing agencies
+- [[dibiz-solution]] — growth marketing agency (agreed ~Rs.2.75-2.8L/month, starts May 2026)
+- [[snigdha-singh]] — Dibiz Co-founder & CMO
+- [[epaphra]] — podcast/content collaboration partner (exploratory)
+
 ### Packaging vendors & references
 - [[elicura-bottle-reference]] — frosted bottle reference brand
 
@@ -220,6 +227,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ## Sources (chronological, most recent first)
 
 ### Mindwise
+- [[2026-onedrive-mindwise-folder]] — OneDrive full ingest: packaging, Dibiz, Epaphra (Mar-Apr 2026)
 - [[2025-11-to-2026-03-onenote-notebook]] — OneNote meetings & research (Nov 2025 – Mar 2026)
 - [[2026-04-13-mindwise-raw-dump]] — full raw dump ingest (WhatsApp + meetings + technical catalogs)
 - [[2026-04-13-whatsapp-full-export]] — full WhatsApp chat Dec 19 – Mar 23

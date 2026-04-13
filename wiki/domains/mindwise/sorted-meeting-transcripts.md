@@ -23,10 +23,12 @@ Complete catalog of the 11 [[sorted-agency]] x [[domains/mindwise/_index|Mindwis
 | 08 | Manik Re-group | Early Mar | YES (.docx, ~41 min) | Execution roadmap; timelines; Brand Manager debate | (partially in [[2026-03-24-meeting-manik-pricing-website]]) |
 | 09 | Visual Identity | Mar 13 | YES (.docx, ~35 min) | Logo Route 3 selected | [[2026-03-13-quick-meeting-logo-feedback]] |
 | 10 | Binita Re-group | Mar 17 | YES (.docx, ~20 min) | Packaging two-track; pricing direction | [[2026-03-17-meeting-binita-strategic-decisions]] |
+| 11 | Packaging | ~Mar 2026 | YES (.docx, ~13 min) | Patco meeting; mold costs; bottle specs | [[2026-onedrive-mindwise-folder]] |
 | 12 | Website | Mar 24 | YES (.docx, ~28 min) | Brand Manager hire; website wireframe plan | [[2026-03-24-meeting-manik-pricing-website]] |
+| 13 | Packaging Content | Apr 8 | YES (.docx, ~1:35 hr) | 4-side bottle layout; [[cdri-55-brand-name|CDRI-55]]; remove cruelty free | [[2026-onedrive-mindwise-folder]] |
 
 > [!note]
-> Meeting numbering skips 11. There is no Meeting 11 folder in the raw files.
+> Meeting 11 was the Patco packaging meeting held at Patco's facility with Sorted present. Meeting 13 is the April 8 packaging content call (Thambu, Ankita, Shivendra — no Sorted present, just Mindwise team reviewing Sorted's deck).
 
 ## Strategy arc
 

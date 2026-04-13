@@ -102,9 +102,27 @@ Per [[2026-03-24-meeting-manik-pricing-website|March 24 meeting]] action items, 
 - Build the case for ₹6L using the visual identity presentation as proof point
 - Have external developer quotes as Plan B
 
+## Update 2026-04-13: Dibiz may build the website
+
+Per the [[2026-onedrive-mindwise-folder|Dibiz negotiation call (April 13)]], [[dibiz-solution|Dibiz Solution]] has been **agreed in principle** to build the Mindwise website:
+- **Cost:** ~Rs.1.75L (vs Sorted's Rs.6L)
+- **Approach:** Product page priority first, homepage later. D2C lens: product landing page → add to cart → checkout is the critical funnel.
+- **Timeline:** Technical setup starts mid-April (before Sorted handover). Brand aesthetic applied once Sorted delivers brand book end of April.
+- **Key advantage:** Dibiz media buyers involved in website design — they know what converts (e.g., bundling, trust badges, lab reports)
+- **CRO built-in:** Ongoing minor tweaks to website included in retainer (no extra charge for small changes)
+- **Shipping partner:** Ship Rocket (Dibiz will negotiate checkout rates — starting 2%, target 1.6-1.7%)
+
+This effectively resolves the **₹6L vs ₹3L debate** — neither Sorted nor the Ahmedabad developer, but Dibiz at ₹1.75L with performance marketing expertise baked in.
+
+> [!note]
+> [[snigdha-singh|Snigdha]] specifically said: "I do not trust any other person to delay or, you know, lessen our results" — she wants control of the website because if the landing page is bad and conversions drop, she doesn't want to be held responsible for someone else's work.
+
 ## Connections
 - [[launch-plan-june-1-2026]]
 - [[critical-path-bottleneck]]
 - [[april-2-mumbai-meeting]]
 - [[manik]]
-- [[2026-03-24-meeting-manik-pricing-website]] — where this was discussed
+- [[dibiz-solution]] — now the likely website vendor
+- [[snigdha-singh]] — Dibiz POC
+- [[2026-03-24-meeting-manik-pricing-website]] — where this was first discussed
+- [[2026-onedrive-mindwise-folder]] — Dibiz meeting source

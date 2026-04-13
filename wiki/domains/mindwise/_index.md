@@ -29,6 +29,8 @@ Cognitive wellness supplement (CDRI-08 Bacopa monnieri extract) launching 2026-0
 - [[60-capsule-bottle-decision]] — D2C SKU
 - [[csir-cdri-logo-requirement]] — credit requirement
 - [[tic-tac-seal-concept]] — design exploration
+- [[packaging-content-layout]] — 4-side bottle label layout (LOCKED Apr 8)
+- [[cdri-55-brand-name]] — trademarked extract brand name for consumer use
 
 ## Campaigns & content
 - [[learning-is-childs-play-campaign]] — Kids cohort (Campaign 1)
@@ -90,7 +92,13 @@ Cognitive wellness supplement (CDRI-08 Bacopa monnieri extract) launching 2026-0
 - [[himani]] — project manager / freelancer
 - [[praveen]] — content/awareness contact
 
+## Marketing agencies
+- [[dibiz-solution]] — growth marketing + website (agreed ~Rs.2.75-2.8L/month, May 2026 start)
+- [[snigdha-singh]] — Dibiz CMO, primary contact
+- [[epaphra]] — podcast/content collaboration partner (exploratory, April 2026)
+
 ## Sources (chronological, most recent first)
+- [[2026-onedrive-mindwise-folder]] — OneDrive full ingest: packaging, Dibiz, Epaphra (Mar-Apr 2026)
 - [[2025-11-to-2026-03-onenote-notebook]] — OneNote meetings & research (Nov 2025 – Mar 2026)
 - [[2026-04-13-mindwise-raw-dump]] — full raw dump ingest (WhatsApp + meetings + technical catalogs)
 - [[2026-04-13-whatsapp-full-export]] — full WhatsApp chat (Dec 19 – Mar 23)

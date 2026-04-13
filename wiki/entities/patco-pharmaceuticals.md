@@ -31,6 +31,36 @@ The bottle vendor journey: [[elicura-bottle-reference|Elicura]] frosted bottle r
 - Execute from high-quality renders + exact specs + color palette
 - Confirmed by [[binita]] on March 17 as giving "lot of creative liberty"
 
+## Costs (from Patco-Sorted meeting, ~March 2026, [[2026-onedrive-mindwise-folder]])
+| Item | Cost |
+|---|---|
+| Bottle mold | Rs.30,000 |
+| Cap mold | Rs.1,00,000 |
+| Clear bottle (per unit) | ~Rs.10 |
+| Frosted bottle (per unit) | ~Rs.20 (2x clear) |
+| 3D print prototype | Rs.6,000 |
+| Color trial (green) | Rs.3,000 |
+| Color trial (black) | Rs.1,000 |
+| Mold + first sample timeline | 30-35 days mold → 10 days sample |
+
+## Confirmed bottle dimensions (from April 8 call)
+- **Base: 50mm x 50mm (rectangular)**
+- **Height: 75mm including cap**
+- **OFC volume: 100cc**
+- **Weight: 15g**
+- Cap height: still owed by Patco, but [[shivendra-selvam]] estimated 68-70mm without cap during April 8 call
+- **Cylindrical option** also being 3D printed — will be wider/shorter to maintain 100cc volume
+- Material: **HDPE medical grade** — all components
+
+## Color trials agreed
+In the Patco-Sorted meeting, 4 color trials were agreed:
+1. Clear green (neon green translucent)
+2. Frosted green
+3. Pure black (transparent black / slate gray)
+4. Frosted black
+
+Colors to be tested on existing round bottle shapes first (saves time vs waiting for mold). RGB codes to be provided by [[sorted-agency]]. Once color is confirmed, then proceed with mold for final shape.
+
 ## Current status (updated 2026-04-11 from [[2026-04-10-to-11-sorted-whatsapp-packaging-push|April 10-11 WhatsApp capture]])
 - ✅ Vendor selected
 - ✅ Final bottle dimensions received by Sorted (rectangular + cylinder both)

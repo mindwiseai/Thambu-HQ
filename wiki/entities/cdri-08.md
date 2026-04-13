@@ -71,6 +71,10 @@ See [[cdri-08-safety-profile]] for the regulatory-grade safety package. Headline
 ❌ ADHD treatment claims (CDRI ran ADHD trials but Mindwise is not licensed as a treatment)  
 ❌ "Reverses brain damage" (not even Adam Ritson's case can support this clinically)
 
+## Consumer-facing brand name: CDRI-55
+
+As of April 8, 2026, the consumer-facing extract brand name will be **[[cdri-55-brand-name|CDRI-55]]** — trademarked by [[lumen-marketing-company|LMC]]. CDRI-08 remains the scientific/regulatory name. The 55 references the [[55-percent-bacosides|55% bacoside content]] without explicitly stating the percentage. This follows the Synapsa/KSM-66 model of branding an ingredient.
+
 ## Connections
 - Developed by [[csir-cdri]]
 - Origin story: [[adam-ritson]]

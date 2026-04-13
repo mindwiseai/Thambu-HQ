@@ -23,8 +23,15 @@ Sorted Agency team member. **Not a junior supporter** as the wiki previously imp
 ## Role on Mindwise
 - Reviews content for website, bottle label, blister pack, and outer packaging in detail
 - ⭐ **Approved the website content + UX on April 11, 2026** (8:04 PM in the Sorted group) → unblocked the website designer to start mockup creation. See [[website-development]].
+- ⭐ **Led the April 8, 2026 packaging content call** with [[thambu]] and [[shivendra-selvam]] — drove the complete [[packaging-content-layout|4-side bottle layout]] decision. Key contributions:
+  - Proposed adding "food" → "brain food supplement" (avoid pharmaceutical perception)
+  - Proposed "60 capsules + monthly supply + 2 capsules daily" on front (overruled by Thambu — too cluttered)
+  - Identified cruelty-free and vegan claim issues
+  - Created the modified packaging content deck with bottom 4 alternatives to Sorted's top 4 options
+  - Pushed for AceBlend-style "clinically proven" badge on one face
+  - Reviewed KeenMind Australia pamphlets for benefit language refinement
 - Added detailed comments on every packaging slide starting from slide 18 of [[mindwise-packaging-brief-deck]] — standardizing hyphens, full stops, nutritional info, child/adult serving clarification
-- Actively resolving the [[2026-03-23-binita-packaging-feedback|child vs adult dosing confusion]] that Thambu flagged in the March 23 packaging feedback — explicitly working to "avoid consumer confusion when it comes to servings for child and adult"
+- Actively resolving the [[2026-03-23-binita-packaging-feedback|child vs adult dosing confusion]] that Thambu flagged in the March 23 packaging feedback
 - Coordinates with Patco via [[binita]] on bottle dimensions
 - Attended [[2026-03-17-meeting-binita-strategic-decisions|March 17 Binita strategic meeting]]
 

@@ -38,14 +38,26 @@ Per [[2026-03-23-binita-packaging-feedback]] feedback point 5, the proposed back
 
 This direct comparison is much sharper because it gives the reader an actual contrast number.
 
-## How to use this claim
+## CRITICAL: Do NOT advertise 55% on packaging or consumer materials
 
-✅ Back-of-pack callout (per the feedback above)
-✅ Website science page
-✅ Comparison/buying guide content
-✅ Doctor-facing collateral (numerically specific)
-✅ FAQ schema content (high AI citation rate — see [[geo-content-readiness]] from RaceSims, same principle applies)
-❌ Don't reduce to "high potency" or "more bacosides" — the *number* is the proof
+> [!contradiction]
+> The guidance below partially contradicts the earlier "use the number" recommendation above. The April 8, 2026 call ([[2026-onedrive-mindwise-folder]]) provides authoritative context from [[thambu]] directly quoting CDRI scientists.
+
+Per the April 8 packaging call, [[thambu]] explained why CDRI **themselves** warned against advertising the 55% number:
+
+1. **Competitors will copy:** "Don't push that 55% because everyone will start using your materials" — direct quote from CDRI scientists to Thambu
+2. **KeenMind precedent:** KeenMind Australia's "Volga" highlighted "Brahmi" generically — cheap Brahmi brands flooded Australia and destroyed her market. Same risk with advertising 55%.
+3. **The science is more nuanced:** CDRI tested 75%, 80%, 100% concentrations. 100% is toxic. 80% and 75% didn't deliver results. The remaining 45% contains **other therapeutically relevant constituents** — bacosides A and B plus additional compounds that are essential.
+4. **Use "optimum" instead:** CDRI's own recommendation is to say "optimum bacosides" rather than "55% bacosides"
+5. **Brand the extract instead:** [[cdri-55-brand-name|CDRI-55]] was chosen as the trademarked ingredient name — the "55" hints at the number without stating it explicitly
+
+**Updated usage:**
+- ✅ Website science page (for educated buyers who dig deep)
+- ✅ Doctor-facing collateral (numerically specific)
+- ✅ Comparison/buying guide content (behind a click, not on the bottle)
+- ❌ **NOT on bottle label or packaging** (use "optimum" instead)
+- ❌ **NOT in social media ads** (competitors will ride on it)
+- ✅ The [[cdri-55-brand-name|CDRI-55 brand name]] subtly encodes the number for those who know
 
 ## Regulatory grounding
 

@@ -26,7 +26,7 @@ This is consistent with high-end performance brands (AG1, Heights, Whoop, Über)
 | Logo | [[route-3-architecture-of-intelligence|Route 3 — Architecture of Intelligence]], dark/monochrome, neon-green accent |
 | Information | Minimal on bottle. Push science to website. ⚠️ May change if outer box is dropped — see [[outer-cardboard-box-decision]] |
 | Vendor | [[patco-pharmaceuticals|Patco Pharmaceuticals]] (customization confirmed). Earlier: [[elicura-bottle-reference|Elicura]] was the frosted bottle reference brand (Feb 3), superseded by Patco (Mar 18) |
-| Bottle size | 100mL — **now shorter than original** per April 10 Patco finalization (exact H/W proportions pending cap height confirmation). Earlier spec of 48×48mm × 80mm height (from [[2026-03-23-binita-packaging-feedback]]) is superseded. |
+| Bottle size | 100mL — **base 50x50mm, total height 75mm incl. cap** per April 8 call. Cap height ~68-70mm estimated. Earlier spec of 48×48mm × 80mm (from [[2026-03-23-binita-packaging-feedback]]) superseded. |
 | Capsule count | [[60-capsule-bottle-decision|60 capsules]] for D2C |
 | Prototype status | ⭐ **Patco printing prototype as of April 10** — first physical sample incoming |
 
