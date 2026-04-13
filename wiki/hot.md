@@ -8,7 +8,17 @@ updated: 2026-04-13
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-04-12 (latest) — OneDrive Mindwise Folder Ingest (Packaging, Dibiz, Epaphra)
+## 2026-04-12 (latest) — Raw Mindwise Unique Files Ingest
+
+- **[[fssai-label-regulatory-text]]** created: complete FSSAI label text for bottle. Manufacturer: Dr. Miltons Laboratories (Puducherry). 160mg CDRI Bacopa per capsule. Critical for [[outer-cardboard-box-decision]] — massive amount of regulatory text to fit if box is dropped.
+- **TWO CSIR-CDRI licenses confirmed** for [[lumen-marketing-company|LMC]]: (1) CDRI-08 Bacopa and (2) **Terminalia chebula extract for BPH** (licensed Feb 17, 2019). [[chemiloids-life-sciences]] (Vijayawada) NDA for processing. Second license was unknown until now.
+- **[[aavishkar-oral-strips]]** (Hyderabad): NDA for **Oral Disintegrating Strips** — a fifth product format.
+- **Dosage contradiction:** FSSAI label says 1 capsule/day, brochures say 2/day. Must resolve before printing.
+- **Capsule type contradiction:** FSSAI label says "hard gelatin", current brand says "vegetarian (HPMC)". Filing may need update.
+- **[[adam-ritson]]** story fully documented: Parramatta rugby player, June 23 1996, 14 surgeries, 1998 India visit, recovery, now rugby coach.
+- **Previous India brand name:** "Memory Sure" (confirmed from email template).
+
+## 2026-04-12 — OneDrive Mindwise Folder Ingest (Packaging, Dibiz, Epaphra)
 
 - **[[cdri-55-brand-name|CDRI-55]]** is the new consumer-facing extract brand name. Decided April 8 call. Bhaskar checking trademark. Follows the Synapsa/KSM-66 model. The "55" hints at 55% without stating it — because CDRI themselves said **do NOT advertise the number** (competitors will copy).
 - **[[packaging-content-layout|4-side bottle layout LOCKED]]** (April 8): Side 1 = hero (Mindwise + tagline + "brain food supplement" + 60 caps). Side 2 = "Not all Bacopa created equal" + optimal formulation. Side 3 = CSIR-CDRI logo + clinically proven CDRI-55 + QR. Side 4 = benefits.
@@ -21,39 +31,9 @@ Most recently touched context. Read this first for any query — it often answer
 
 - Avantika split confirmed. Solista name fix applied. SE Asia exclusion reframed.
 
-## 2026-04-12 — OneNote Notebook Ingest (Nov 2025 – Mar 2026)
-
-Major backstory ingest from Thambu's OneNote. **15 new pages, 12 updated.** Key revelations: [[keenmind-agreement-expiry|SFI/KeenMind 10-year agreement expired Dec 2024]] — Mindwise is the replacement. [[cdri-08-global-brands|CDRI-08 sold globally]] under 5+ brand names. [[southeast-asia-exclusion|7 SE Asian countries excluded for Indus]] (LMC territorial protection — LMC already operates there with MemoPlus Gold and Actif Mind). [[andrea-zangara]] writing a 4-year Bacopa monograph. [[pier-campanini]] reports Ginsana factory sale, new KeenMind buyer possible. [[brand-genesis-sorted|Sorted engaged Dec 2, 2025]]. [[avantika]] has Adani/ITC background (surname contradiction: Bhandari vs Bajoria). [[jaiman]] surname is Khatri. [[sagar-sali]] attended Jan 6 meeting. Products: 30-cap + 60-cap versions confirmed. Kids Bacopa deferred. **Total pages: ~161.**
-
-## 2026-04-13 — Mindwise Full Raw Dump (WhatsApp + Meetings + Technical Catalogs)
-
-Largest Mindwise ingest to date. Three catalogs covering 400+ files (~8-9 GB). **14 new pages created, 17 existing pages updated.** Key revelations: [[jaiman]] was original Sorted account manager (departed Jan 29), [[shipra]] co-presented content strategy, [[marketing-budget-25l|₹25L annual marketing budget]] confirmed Feb 12, [[hero-hub-hygiene-framework]] adopted, [[product-range-expansion|kids Bacopa + Bacopa+ + syrup]] confirmed, [[brand-brief-jan-2026|Brand Brief]] is the foundational document, [[life-essence-history|Life Essence]] was the previous brand name, [[lumen-fssai-license|FSSAI license]] found. Avantika = Avantika Bhandari. Tanya Leeds = Tanya Varma. **Security:** Razorpay credentials exposed in repo. **Total pages: ~135+.**
-
-## 2026-04-13 — RaceSims Raw File Dump ingest (Sales, Marketing, Finance, Partners)
-
-Massive operational ingest from two catalog files covering 1,000+ raw files in the `racesims/` directory. **11 new pages created, 5 existing pages substantially updated.** Key revelations:
-
-- **[[racesims-company]]:** Racesims Solutions Pvt Ltd, GSTIN 33AAOCR6378K1ZO, MSME certified, Startup India certified, ICICI Bank KK Nagar. Co-director Aishwarya C. Trademark "RaceSims" filed in Class 9 + Class 41.
-- **[[import-operations]]:** HS Code 9023.00.90 (demonstrational instruments), ~31% effective duty (BCD 10% + SWC 1% + IGST 18%). 7+ [[conspit]] shipments (May 2025 - Mar 2026). Distributor margin 25%, dealer 10-20%.
-- **[[simagic-distributor]]:** RaceSims has **exclusive South India territory** for Simagic (signed Feb 2025, expires May 2026). 128 SKUs, MOQ 50K RMB/order.
-- **[[virtual-racing-hub|VRH]] sold [[moza]] gear TO RaceSims** (Jan 2025, Rs.1.29L) before RaceSims had direct supply. VRH's legal entity: U Tashtri (OPC) Pvt Ltd, Delhi. Now VRH is a **controlled reseller** for [[conspit]] via RaceSims.
-- **[[araya-airport]]:** B2B simulator project at Rs.6.86-6.96L/unit. Fully enclosed, kiosk-mode, zero-staff airport lounges.
-- **[[kit-pricing]]:** 4 tiers from Rally (~Rs.2.5L) to Motion (~Rs.11L+).
-- **[[techxhub]]:** brings Fanatec and Playseat into RaceSims portfolio.
-- **[[asetek]]:** reseller pricelist (Sep 2024), 3 product lines (Invicta/Forte/La Prima).
-- **[[customer-pipeline]]:** 5 confirmed customers, 5+ active prospects (Tikitar with 7+ revisions), B2B pipeline (Araya, Ajit Kumar, CSK, 10 IPL teams).
-- **[[can-bus-telemetry]]:** R&D bridging [[arka-motorsports]] real rally car CAN bus data to sim — the moat proof in technical form.
-
 ## 2026-04-12 — Multiple ingests (WhatsApp Apr 10-11, Voice brief, Gmail drafts, ARKA website)
 
-Key outcomes from this day's 4 ingests:
-- ⭐ **Website content + UX APPROVED** by [[ankita]] on April 11. Designer cleared for mockup. See [[website-development]].
-- ⭐ **Patco printing prototype**, cap height still pending. Bottle is SHORTER than design assumption. See [[patco-pharmaceuticals]], [[semi-transparent-bottle]].
-- ⭐ **[[outer-cardboard-box-decision]]** — may be dropped at launch for cost.
-- ⭐ **[[arka-motorsports]]** = Thambu's racing team (123+ championships since 1987). The [[race-engineer-positioning|moat]] is now structurally uncopyable.
-- ⭐ **[[beta-free-bacopa-extract]]** from [[imcd]] + [[solusta-puducherry]] unlocks gummy/syrup expansion.
-- ⭐ **CSK pitch** still in drafts ([[csk-partnership-pitch]]) — IPL window closing.
-- ⭐ **Mindwise Mission Control Notion workspace** exists ([[mindwise-mission-control-notion]]).
+Key outcomes: Website content + UX APPROVED by [[ankita]]. Patco printing prototype in progress. [[outer-cardboard-box-decision]] live — may be dropped. [[arka-motorsports]] = Thambu's racing team. [[beta-free-bacopa-extract]] from [[imcd]] + [[solusta-puducherry|Solista]] unlocks gummy/syrup expansion.
 
 ## Current state of the businesses (as of 2026-04-13)
 
@@ -78,7 +58,10 @@ With this ingest, the wiki now has near-complete coverage of RaceSims operations
 3. **CDRI-55 trademark status** — Bhaskar checking, no result yet
 4. **Epaphra response** — did they come back with collaboration options?
 5. **IMCD / Solista meeting outcomes** — bitter-free Bacopa path viable?
-6. **Remaining OneDrive files** — visual identity meeting, Binita re-group, brand identity meeting, KeenMind PPTX, content strategy deck still unread
+6. **Dosage discrepancy resolution** — FSSAI label says 1 cap/day, current brand says 2/day
+7. **Capsule type discrepancy** — FSSAI filing may need updating (gelatin -> HPMC)
+8. **Terminalia chebula / BPH product status** — is the second CSIR-CDRI license active?
+9. **Aavishkar oral strips status** — were prototypes ever made?
 
 ## Things to flag on next interaction
 

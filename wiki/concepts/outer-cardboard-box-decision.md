@@ -55,11 +55,29 @@ The cost-driven framing makes Shivendra's version more likely to prevail if budg
 - **Dependent workstream:** [[mindwise-packaging-brief-deck|Packaging brief deck]] cannot be finalized until this is decided — the label layout changes drastically depending on the outcome
 - **Risk to [[launch-plan-june-1-2026|June 1 launch]]:** the April 10 design-lock gate has already slipped because of this. Every day of delay compresses the downstream production timeline.
 
+## FSSAI regulatory text that MUST appear (per [[fssai-label-regulatory-text]])
+
+If the outer box is dropped, the bottle label must include ALL of the following (per the existing FSSAI-approved regulatory content):
+- Full ingredients table (Bacopa Monniera extract CDRI 160mg)
+- Full nutritional information panel (energy, carbs, sugar, protein, sodium, fat)
+- 5 mandatory warnings ("HEALTH SUPPLEMENT / NOT FOR MEDICINAL USE", keep out of reach of children, etc.)
+- Storage instructions (below 25C, protect from light/moisture)
+- Dosage directions
+- FSSAI license number (10017045000129)
+- Manufacturer details (Dr. Miltons Laboratories, Puducherry)
+- Marketer details (Lumen Marketing Company)
+- Customer care number
+- Bilingual text (Hindi translations for batch/date/MRP fields)
+- Batch, manufacture date, expiry date, MRP
+
+This is a LOT of text for a 50x50x75mm bottle with 4 label sides.
+
 ## Open questions
 - What's the threshold cardboard cost at which "bottle only" wins?
 - Can Patco or another manufacturer provide an in-house cardboard option bundled with the bottle?
 - Is there a third hybrid — shrink-sleeve on the bottle + no outer box — that gives premium shelf appeal without box cost?
 - For B2B / distributor channels ([[blister-pack-specs|blister packs]]), is an outer box more/less necessary?
+- The FSSAI label says "hard gelatin capsule" but current product uses HPMC vegetarian capsules — has the FSSAI filing been updated?
 
 ## Connections
 - [[semi-transparent-bottle]] — the bottle being protected (or not)

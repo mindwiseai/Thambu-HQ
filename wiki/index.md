@@ -38,6 +38,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[csir-cdri-logo-requirement]]
 - [[tic-tac-seal-concept]]
 - [[packaging-content-layout]] — 4-side bottle label layout (LOCKED Apr 8)
+- [[fssai-label-regulatory-text]] — complete FSSAI-compliant label text for bottle
 - [[cdri-55-brand-name]] — trademarked extract brand name (replacing CDRI-08 in consumer materials)
 
 ### Campaigns & content
@@ -169,6 +170,8 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[imcd]] — ingredient supplier (Mumbai)
 - [[solusta-puducherry]] — Solista, gummy manufacturer (Puducherry)
 - [[indus-life-sciences]] — Bacopa formulation partnership (international markets)
+- [[chemiloids-life-sciences]] — Terminalia chebula processing (Vijayawada), BacoZest supplier
+- [[aavishkar-oral-strips]] — Oral Disintegrating Strips (Hyderabad)
 - [[sfi-health]] — previous global CDRI-08 distributor (KeenMind)
 - [[ctd-module-2]] — regulatory dossier entity
 - [[mindwise-packaging-brief-deck]] — live Google Slides artifact
@@ -227,6 +230,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ## Sources (chronological, most recent first)
 
 ### Mindwise
+- [[2026-raw-mindwise-unique-files]] — packaging regulatory, NDAs (Chemiloids, Aavishkar), marketing, technical
 - [[2026-onedrive-mindwise-folder]] — OneDrive full ingest: packaging, Dibiz, Epaphra (Mar-Apr 2026)
 - [[2025-11-to-2026-03-onenote-notebook]] — OneNote meetings & research (Nov 2025 – Mar 2026)
 - [[2026-04-13-mindwise-raw-dump]] — full raw dump ingest (WhatsApp + meetings + technical catalogs)

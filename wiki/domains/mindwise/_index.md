@@ -57,7 +57,8 @@ Cognitive wellness supplement (CDRI-08 Bacopa monnieri extract) launching 2026-0
 - [[freelance-pr-strategy]] — ~₹1.7L vs ₹12L agency
 - [[marketing-budget-25l]] — ₹25L annual marketing budget (confirmed Feb 12)
 - [[patco-pharmaceuticals]] — packaging vendor
-- [[product-range-expansion]] — kids Bacopa, Bacopa+, syrup
+- [[product-range-expansion]] — kids Bacopa, Bacopa+, syrup, oral strips
+- [[fssai-label-regulatory-text]] — complete FSSAI label regulatory text for bottle
 - [[brand-brief-jan-2026]] — foundational brand brief (Jan 6)
 
 ## History & archives
@@ -76,6 +77,8 @@ Cognitive wellness supplement (CDRI-08 Bacopa monnieri extract) launching 2026-0
 - [[southeast-asia-exclusion]] — 7 SE Asian countries excluded for Indus (LMC territorial protection)
 - [[bacopa-combination-formulations]] — Bacopa + DHA/Chlorella/Curcumin (Indus)
 - [[indus-life-sciences]] — Bacopa formulation & international market partnership
+- [[chemiloids-life-sciences]] — Terminalia chebula processing (Vijayawada), second CSIR-CDRI license
+- [[aavishkar-oral-strips]] — Oral Disintegrating Strips (Hyderabad)
 
 ## People
 - [[thambu]] (cross) — owner
@@ -98,6 +101,7 @@ Cognitive wellness supplement (CDRI-08 Bacopa monnieri extract) launching 2026-0
 - [[epaphra]] — podcast/content collaboration partner (exploratory, April 2026)
 
 ## Sources (chronological, most recent first)
+- [[2026-raw-mindwise-unique-files]] — packaging regulatory, NDAs, marketing, technical (bulk unique files)
 - [[2026-onedrive-mindwise-folder]] — OneDrive full ingest: packaging, Dibiz, Epaphra (Mar-Apr 2026)
 - [[2025-11-to-2026-03-onenote-notebook]] — OneNote meetings & research (Nov 2025 – Mar 2026)
 - [[2026-04-13-mindwise-raw-dump]] — full raw dump ingest (WhatsApp + meetings + technical catalogs)

@@ -9,6 +9,29 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-04-12] ingest | Raw Mindwise Unique Files (Packaging Regulatory, NDAs, Marketing, Technical)
+- Source: [[2026-raw-mindwise-unique-files]]
+- **Created: 4 new pages:**
+  - [[fssai-label-regulatory-text]] — complete FSSAI-compliant label text for bottle (critical for outer box decision)
+  - [[chemiloids-life-sciences]] — Vijayawada manufacturer, NDA for Terminalia chebula BPH product (second CSIR-CDRI license!)
+  - [[aavishkar-oral-strips]] — Hyderabad manufacturer, NDA for Oral Disintegrating Strips format
+  - [[2026-raw-mindwise-unique-files]] — source page
+- **Updated: 4 existing pages:**
+  - [[adam-ritson]] — full story: Parramatta rugby player, June 23 1996 injury at age 20, 14 surgeries, 1998 India visit, recovery after weeks on Bacopa. Now rugby coach in Australia.
+  - [[lumen-marketing-company]] — added legal structure (Partnership Act 1932), GST (33AABFL1450E1ZZ), full name (Thambusamy T D), TWO CSIR-CDRI licenses, manufacturing partners, pre-Sorted vendors
+  - [[product-range-expansion]] — added oral strip format (Aavishkar) and Dr. Miltons as capsule manufacturer
+  - [[outer-cardboard-box-decision]] — added full FSSAI regulatory text inventory that must fit on bottle if box is dropped
+- Domain: mindwise
+- **Key revelations:**
+  - **Lumen holds TWO CSIR-CDRI licenses** — Bacopa (CDRI-08) + Terminalia chebula (BPH), the second licensed Feb 17, 2019
+  - **Oral Disintegrating Strips** explored as delivery format (NDA April 2023)
+  - **Dr. Miltons Laboratories** (Puducherry) = capsule contract manufacturer
+  - **FSSAI label says "hard gelatin capsule"** but current product uses HPMC vegetarian — discrepancy needs resolution
+  - **FSSAI label says 1 capsule/day** but current packaging says 2 capsules/day — dosage contradiction
+  - **Previous India brand was "Memory Sure"** (not just a generic earlier attempt)
+  - **LMC GST confirmed:** 33AABFL1450E1ZZ
+  - Most of the pre-Sorted marketing materials (framework, plan, email template) are superseded by Sorted brand strategy
+
 ## [2026-04-12] ingest | OneDrive Mindwise Folder — Packaging, Dibiz, Epaphra
 - Source: [[2026-onedrive-mindwise-folder]]
 - **Created: 5 new pages:**

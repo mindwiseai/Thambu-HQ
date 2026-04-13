@@ -21,6 +21,7 @@ Confirmed by [[shivendra-selvam]] on **March 20, 2026** in response to [[binita]
 | **Bacopa+ (combined)** | Adults | Capsules (Bacopa + other elements) | Planning |
 | **Bacopa syrup** | All ages | Oral liquid | Planning |
 | **Gummies** | TBD | Gummy format | Formulated (BacoZest-based) |
+| **Oral Disintegrating Strips** | Adults (on-the-go) | Dissolve-on-tongue strip | NDA signed Apr 2023 ([[aavishkar-oral-strips]]) |
 
 ## Gummy formulation details (from Technical Catalog)
 
@@ -37,8 +38,10 @@ Per the "Calculation of Bacosides in Gummies" documents:
 
 - [[imcd]] (Mumbai) — [[beta-free-bacopa-extract|bitter-free Bacopa extract]] supplier for gummy/syrup formats
 - [[solusta-puducherry]] — gummy manufacturer (already has a corporate client waiting)
-- Chemiloids Life Sciences (Vijayawada) — BacoZest supplier, NDA exists
-- Indus Life Sciences (Chennai) — NDA for development of gummies, tablets, capsules, oral liquids
+- [[chemiloids-life-sciences]] (Vijayawada) — BacoZest supplier, NDA signed April 24, 2023 (also processes Terminalia chebula for BPH — a separate product)
+- [[indus-life-sciences]] (Chennai) — NDA for development of gummies, tablets, capsules, oral liquids
+- [[aavishkar-oral-strips]] (Hyderabad) — NDA signed April 24, 2023 for **Oral Disintegrating Strips** (dissolve-on-tongue Bacopa delivery)
+- **Dr. Miltons Laboratories** (Puducherry) — current capsule contract manufacturer
 
 ## Packaging implications
 
