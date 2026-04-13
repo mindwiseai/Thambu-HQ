@@ -8,7 +8,14 @@ updated: 2026-04-13
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-04-12 (latest) — Two wiki corrections
+## 2026-04-13 (latest) — Gmail check + Avantika split
+
+- **[[dibiz-solution|Dibiz Solution]]** (Mumbai) submitted a **Content Production + Organic/Paid Media Marketing proposal** to Thambu on Apr 7. Snigdha Singh (Co-founder/CMO) sent it after an offline meeting. This may be the **performance agency** the launch plan flagged as pending. Under review.
+- **Shivendra shared "Tool costs and Budgeting"** OneDrive folder (Apr 10) — operational budgeting.
+- **Avantika split confirmed:** [[avantika|Avantika Bhandari]] (Sorted Agency) and [[avantika-bajoria|Avantika Bajoria]] (Adani/ITC) are two different people.
+- **Solista** name fix and SE Asia exclusion reframing applied (see below).
+
+## 2026-04-12 — Two wiki corrections
 
 1. **Solista name fix:** The Puducherry gummy manufacturer is **Solista**, not "Solusta". The incorrect spelling came from a voice-brief transcription artifact. Fixed across all wiki pages. Filename `solusta-puducherry.md` retained to avoid breaking backlinks.
 

@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-04-13] ingest | Gmail check (Apr 7-13) + Avantika split
+- Created: [[dibiz-solution]] — Mumbai growth marketing agency, submitted content production + paid media proposal (Apr 7)
+- Created: [[avantika-bajoria]] — separate person from [[avantika|Avantika Bhandari]], Adani/ITC background
+- Updated: [[avantika]] — removed contradiction callout, added disambiguation note
+- Updated: [[hot]] — latest state
+- Domain: mindwise
+
 ## [2026-04-12] ingest | OneNote Notebook — External Meetings & Research (Nov 2025 – Mar 2026)
 - Source: [[2025-11-to-2026-03-onenote-notebook]]
 - **Created: 15 new pages:**
