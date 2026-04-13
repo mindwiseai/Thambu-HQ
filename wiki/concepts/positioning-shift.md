@@ -23,7 +23,9 @@ The single most important strategic decision in the entire [[domains/mindwise/_i
 
 ## Why the shift was necessary
 
-When [[sorted-agency]] internally distributed sample bottles of the existing Mindwise packaging, the team's reaction was: *"Can I even have this? Should a doctor tell me?"* Over-information on the label made it feel **prescription-required**. See [[scary-drug-problem]] for the full diagnosis.
+The pivot started in **Meeting 01 (late 2025)** — the foundational discovery call between [[thambu]] and [[aarti-samant]]. Aarti gave **blunt feedback**: the brand looked too clinical/medical. She recommended a brand communication strategy before any execution. Per [[2026-04-13-mindwise-raw-dump|the Meetings Catalog]]: *"Aarti gives blunt feedback: the brand looks too clinical/medical. She recommends a brand communication strategy before any execution, emphasizing What/How/Why statements, a brand personality shift away from 'clinical' to 'human,' and positioning more like Whoop or SuperYou than a pharma brand."*
+
+This was reinforced in Meeting 06 (Jan 30) when [[sorted-agency]] internally distributed sample bottles of the existing Mindwise packaging, and the team's reaction was: *"Can I even have this? Should a doctor tell me?"* Current packaging feedback from Meeting 06: "looks too clinical/medicinal/government-body; fear-inducing for younger consumers." Over-information on the label made it feel **prescription-required**. See [[scary-drug-problem]] for the full diagnosis.
 
 The clinical/scary positioning created two compounding problems:
 1. **Killed casual trial.** People felt they needed permission.

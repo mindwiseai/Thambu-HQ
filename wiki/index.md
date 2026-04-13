@@ -42,6 +42,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[learning-is-childs-play-campaign]]
 - [[lead-the-room-campaign]]
 - [[content-strategy-three-piece]]
+- [[hero-hub-hygiene-framework]] — Hero/Hub/Hygiene content model
 
 ### Operations & launch
 - [[launch-plan-june-1-2026]]
@@ -51,6 +52,16 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[pricing-strategy]]
 - [[brand-manager-decision]]
 - [[freelance-pr-strategy]]
+- [[marketing-budget-25l]] — ₹25 lakh annual marketing budget
+- [[brand-brief-jan-2026]] — foundational brand brief (Jan 6)
+- [[product-range-expansion]] — kids Bacopa, Bacopa+, syrup
+
+### History & brand evolution
+- [[life-essence-history]] — previous brand name
+- [[mindcaps-proposal]] — trademark-able capsule term proposal
+- [[sorted-meeting-transcripts]] — all 11 meetings cataloged
+- [[scientific-document-library]] — 93+ research papers
+- [[lumen-fssai-license]] — FSSAI license
 
 ### Clinical & regulatory
 - [[cdri-08]]
@@ -121,8 +132,13 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[manik]] — design / ops broker
 - [[tanya-leeds]] — workshop facilitator (also: Tanya Varma)
 - [[binita]] — packaging lead, current primary contact
-- [[avantika]] — growth
-- [[ankita]] — supports Binita
+- [[avantika]] — Avantika Bhandari, growth
+- [[ankita]] — Ankita Duseja, UK-based, content review lead
+- [[jaiman]] — original account manager (departed Jan 29)
+- [[shipra]] — strategy team, co-presented content strategy
+
+### Packaging vendors & references
+- [[elicura-bottle-reference]] — frosted bottle reference brand
 
 ### Scientific
 - [[csir-cdri]]
@@ -183,6 +199,8 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ## Sources (chronological, most recent first)
 
 ### Mindwise
+- [[2026-04-13-mindwise-raw-dump]] — full raw dump ingest (WhatsApp + meetings + technical catalogs)
+- [[2026-04-13-whatsapp-full-export]] — full WhatsApp chat Dec 19 – Mar 23
 - [[2026-03-26-thambu-voice-brief]] — voice brief (year-end + travel + ARKA + IMCD unlock)
 - [[2026-03-24-launch-plan-june-1-2026]] — work-backwards plan
 - [[2026-03-24-meeting-manik-pricing-website]]
@@ -222,13 +240,13 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[meta/lint-2026-04-12]] — first lint report
 - [[meta/lint-2026-04-12-cleanup-verification]] — cleanup verification
 
-## Stats (snapshot 2026-04-13, post RaceSims raw dump ingest)
+## Stats (snapshot 2026-04-13, post Mindwise + RaceSims raw dump ingests)
 
-- **Total pages:** 132+
+- **Total pages:** 146+
 - **Domains:** mindwise, racesims, cross
-- **Sources ingested:** 18
-- **Entities:** 44 (was 38)
-- **Concepts:** 53 (was 48)
+- **Sources ingested:** 20+
+- **Entities:** 46+
+- **Concepts:** 63+
 - **Questions:** 0
 - **Orphans:** TBD (lint recommended — 10+ ingests since last lint)
 - **Dead links:** TBD (verify via lint)

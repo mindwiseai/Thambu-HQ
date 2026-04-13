@@ -20,9 +20,21 @@ Locked in [[2026-03-24-meeting-manik-pricing-website|the March 24 meeting with M
 | **Above ₹1,000** | ❌ Requires premium creator partnerships (₹2-3L per creator/month). Wellbeing Nutrition / Ace tier. Not viable at current marketing budget. | |
 | **₹4,000-5,000** | ❌ Too premium for the launch market. Top of category. | |
 
+## Three pricing approaches discussed (March 17)
+
+Before the final lock at ₹850–900, three approaches were debated at the [[2026-03-17-meeting-binita-strategic-decisions|March 17 Binita meeting]] (per [[2026-04-13-whatsapp-full-export]]):
+
+1. **High MRP + minimal discounts (max 10%)** — maintains premium positioning
+2. **High MRP + occasional deep discounts (50-60%)** — risks brand perception, customers won't repurchase at full price
+3. **Moderate MRP + no discounts** — consistent brand conduct
+
+Action: [[binita]] to discuss with [[manik]] and [[aarti-samant]], then recommend. The recommendation came March 24 as the ₹850–900 sweet spot.
+
 ## Earlier pricing reference (now superseded)
 
 The original target in [[2026-03-17-meeting-binita-strategic-decisions|the March 17 Binita meeting]] was ₹1,200 — **middle positioning**. This was *deferred* pending Sorted's recommendation, which Manik delivered on March 24 as ₹850–900. Anywhere in the wiki or older docs that mentions ₹1,200 should be considered stale.
+
+The [[brand-brief-jan-2026|Brand Brief]] (Meeting 04) mentioned INR 1.2-1.3 crore annual ad budget and a 10,000 bottles/month target — these were the business-plan-level numbers that informed the pricing discussion.
 
 ## Discount discipline (HARD RULE)
 

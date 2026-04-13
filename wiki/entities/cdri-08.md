@@ -21,6 +21,10 @@ The standardised ethanolic extract of *Bacopa monnieri* (also written *Bacopa mo
 
 This differentiation is the **entire commercial basis** for Mindwise. Conflating CDRI-08 with generic Bacopa kills the [[your-unfair-advantage|positioning]].
 
+## From the Brand Brief (Jan 2026)
+
+The [[brand-brief-jan-2026|foundational brief]] describes the 55% bacosides differentiation as the core scientific advantage: CDRI-08's bacoside concentration is nearly **double** the typical generic Bacopa extract. The brief also establishes the global track record: Philippines 20+ years (MemoPlus Gold, 15L+ capsules sold), Australia (KeenMind, TGA-approved). Product works from 1 week onwards, peak performance at 3 months. Mechanism described as "creates neurolinks, strengthens neurons."
+
 ## Mechanism (very abbreviated — see CTD for detail)
 
 The principal constituents are dammarane-class triterpenoid saponins (bacosides A & B, bacopasides). Pharmacological activity is attributed to the saponins. Proposed mechanisms (none fully proven, all under investigation):

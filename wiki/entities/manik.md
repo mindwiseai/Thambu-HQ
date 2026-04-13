@@ -10,9 +10,11 @@ tags: [person, sorted-agency, design-lead, marketing]
 Marketing and design lead at [[sorted-agency]], co-founder. 11+ years marketing experience. Manik is the **design philosophy voice** and the **operational broker** for the Mindwise relationship — he handles vendor scouting, agency intros, brand manager hiring, pricing recommendations, and the strategic overlay on packaging.
 
 ## Background
-- Co-founder of [[sorted-agency]]; ex-Future Group (FBB, Brand Factory, Big Bazaar, Central)
+- Co-founder of [[sorted-agency]]; ex-Future Group (FBB, Brand Factory, Big Bazaar, Central). Also previously at Blackstone.
+- Met [[aarti-samant]] at Future Group. [[sorted-agency]] ~2 years old as of early 2026.
 - Previously worked with Indian brain-health brand "Define" (NLP-based, non-supplement); grew it from ₹3-4L/month → ₹50-60L/month in ~1.5 years
 - Heavy bias toward performance/aspirational brand language over clinical/medicinal
+- 11+ years marketing experience (per intro call with [[thambu]])
 
 ## Role on Mindwise
 
@@ -21,13 +23,26 @@ Marketing and design lead at [[sorted-agency]], co-founder. 11+ years marketing 
 - Articulated the "[[scary-drug-problem]]" → "FOMO leverage" reframe
 - Logo critique: *"If I slapped your logo on a black wall..."* — drove the [[route-3-architecture-of-intelligence|Route 3]] direction
 
+### Execution roadmap (from Meeting 08 — Manik Re-group, early March)
+Key deliverables and timelines per his "next steps" document:
+- Brand book / social templates / stationery: locked by mid-April
+- Packaging vendor finalization: mid-April
+- Website design locked: mid-April
+- Website live: mid-May (10-day buffer = end of May)
+- Brand Manager hiring: 2 months, start immediately
+- Performance Marketing Agency: budget ~₹70K-1L retainer + ₹50K-2L/month ads
+- Retention specialist: June-July (after website live)
+- Sid Warrier: [[manik]] to introduce/connect via talent agency
+- **Soft launch timeline: May. Full setup by June.** (Mar 10 announcement)
+
 ### Operational broker
 - Vetting performance/social media freelancer for Mindwise (woman who specializes in 0-to-1 brand growth) — meeting in Mumbai April 2
 - Sharing [[freelance-pr-strategy|PR contact (~₹1.7L)]] vs Mad Over Marketing (~₹12L)
-- [[brand-manager-decision|Brand Manager hiring]]: shared JD, will conduct final technical interview
+- [[brand-manager-decision|Brand Manager hiring]]: shared JD, will conduct final technical interview. **Strongly advised against [[thambu]] stepping into Brand Manager role** in [[2026-03-24-meeting-manik-pricing-website|March 24 meeting]] — recommended hiring experienced person or freelancer for 3-6 months instead.
 - Recommended [[pricing-strategy|₹850–900 MRP]] in [[2026-03-24-meeting-manik-pricing-website|March 24 meeting]]
-- Negotiating Ahmedabad-based website developer
+- Negotiating Ahmedabad-based website developer (specialized in optimized landing pages)
 - Holds the relationship with [[patco-pharmaceuticals|Patco]] now that they've been identified
+- Personally building website elements (per Feb 11 status update)
 
 ### Pricing position (canonical)
 - Above ₹1,000 → requires premium creator partnerships (₹2-3L per creator/month — Wellbeing Nutrition / Ace tier). Not viable.

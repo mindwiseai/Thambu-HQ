@@ -14,7 +14,9 @@ Open strategic decision: should [[domains/mindwise/_index|Mindwise]] hire an in-
 
 [[thambu]] and [[shivendra-selvam]] proposed: Thambu transitions into a formal Brand Manager role for Lumen / Mindwise, taking ownership of all marketing while Shivendra focuses on sales.
 
-## [[manik|Manik]]'s recommendation: NOT solo initially
+## [[manik|Manik]]'s recommendation: NOT solo initially (from [[2026-04-13-mindwise-raw-dump|Meeting 12, Mar 24]])
+
+[[manik]] **strongly advised against [[thambu]] stepping into the Brand Manager role**. From the meeting transcript:
 
 > "Don't go solo initially. While Thambu has capability, the role requires domain expertise in algorithms, ad mechanics, and marketing execution. Learning on the job will slow the brand during the critical first year."
 
@@ -37,7 +39,7 @@ Open strategic decision: should [[domains/mindwise/_index|Mindwise]] hire an in-
 
 ## Brand Manager JD (already prepared)
 
-- Manik has prepared the JD (shared via Google Doc on March 19)
+- JD shared by [[avantika|Avantika Bhandari (AB)]] on **March 19** via Google Docs link (title: "Senior Brand & Content Manager")
 - Posting on Naukri, IMjobs, Indeed, LinkedIn
 - Manik conducts final technical interview
 - Role: scripting, content, managing freelance designer & video editor

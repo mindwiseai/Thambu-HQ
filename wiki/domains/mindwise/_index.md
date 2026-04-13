@@ -35,6 +35,7 @@ Cognitive wellness supplement (CDRI-08 Bacopa monnieri extract) launching 2026-0
 - [[lead-the-room-campaign]] — Working Professionals cohort (Campaign 2)
 - [[four-cohorts]] — full audience map
 - [[content-strategy-three-piece]] — film + key visual + sustenance
+- [[hero-hub-hygiene-framework]] — Hero/Hub/Hygiene content model (adopted Feb 12)
 
 ## Product & clinical
 - [[cdri-08]] — the extract
@@ -52,21 +53,37 @@ Cognitive wellness supplement (CDRI-08 Bacopa monnieri extract) launching 2026-0
 - [[website-development]] — Sorted at ₹6L vs alternatives
 - [[brand-manager-decision]] — hire vs freelancer vs agency
 - [[freelance-pr-strategy]] — ~₹1.7L vs ₹12L agency
+- [[marketing-budget-25l]] — ₹25L annual marketing budget (confirmed Feb 12)
 - [[patco-pharmaceuticals]] — packaging vendor
+- [[product-range-expansion]] — kids Bacopa, Bacopa+, syrup
+- [[brand-brief-jan-2026]] — foundational brand brief (Jan 6)
+
+## History & archives
+- [[life-essence-history]] — previous brand name before Mindwise
+- [[mindcaps-proposal]] — proposed trademark-able term for capsules
+- [[lumen-fssai-license]] — FSSAI license
+- [[sorted-meeting-transcripts]] — catalog of all 11 meetings (10/11 have transcripts)
+- [[scientific-document-library]] — 93+ research papers, COAs, clinical trials
+- [[elicura-bottle-reference]] — frosted bottle reference brand (superseded by Patco)
 
 ## People
 - [[thambu]] (cross) — owner
 - [[shivendra-selvam]] — secondary lead
 - [[sorted-agency]] — primary partner
-- [[aarti-samant]], [[manik]], [[tanya-leeds]], [[binita]], [[avantika]], [[ankita]] — Sorted team
+- [[aarti-samant]], [[manik]], [[tanya-leeds]], [[binita]], [[avantika]], [[ankita]] — Sorted team (active)
+- [[jaiman]] — original Sorted account manager (departed Jan 29)
+- [[shipra]] — co-presented content strategy (Feb 12)
 - [[dr-hemant-singh]], [[dr-dilip-ghosh]] — clinical/scientific advisors
 - [[adam-ritson]] — origin story catalyst
 
-## Sources (chronological)
-- [[2026-01-to-02-meetings-1-to-5]] — Sorted strategy meetings (Jan 6 → Feb 12)
-- [[2026-03-17-meeting-binita-strategic-decisions]]
-- [[2026-03-23-binita-packaging-feedback]]
-- [[2026-03-24-meeting-manik-pricing-website]]
+## Sources (chronological, most recent first)
+- [[2026-04-13-mindwise-raw-dump]] — full raw dump ingest (WhatsApp + meetings + technical catalogs)
+- [[2026-04-13-whatsapp-full-export]] — full WhatsApp chat (Dec 19 – Mar 23)
+- [[2026-03-26-thambu-voice-brief]] — voice brief (ARKA + IMCD unlock)
 - [[2026-03-24-launch-plan-june-1-2026]]
+- [[2026-03-24-meeting-manik-pricing-website]]
+- [[2026-03-23-binita-packaging-feedback]]
+- [[2026-03-17-meeting-binita-strategic-decisions]]
+- [[2026-01-to-02-meetings-1-to-5]] — Sorted strategy meetings (Jan 6 → Feb 12)
 - [[2026-ctd-module-2.5-clinical-overview]]
 - [[2026-ctd-module-2.4-nonclinical-overview]]

@@ -8,9 +8,17 @@ tags: [person, sorted-agency, strategist, workshop-facilitator]
 # Tanya Leeds
 
 > [!note]
-> Same person referred to as **Tanya Leeds** in some meeting notes and **Tanya Varma** in WhatsApp chats. Confirm canonical spelling on next ingest. (See [[2026-03-23-mindwise-meetings-chat-analysis]] vs [[2026-01-06-meeting-1-brief-discussion]].)
+> Same person referred to as **Tanya Leeds** in some meeting notes and **Tanya Varma** in WhatsApp chats. The WhatsApp full export ([[2026-04-13-whatsapp-full-export]]) confirms her WhatsApp name is "Tanya Varma." She may use "Leeds" professionally or it may be a transcription artifact.
 
 Strategist and workshop facilitator at [[sorted-agency]]. Tanya owns the workshop format — her job is to extract, frame, and synthesize. She led both the brand communication workshop and the content strategy workshop.
+
+## Additional context (from WhatsApp + Meetings Catalog)
+
+- Facilitated the [[2026-01-23-meeting-3-brand-strategy-workshop|Jan 23 Brand Communication Strategy Workshop]] — agenda was "what, how and why of the brand" + community workshop
+- After [[jaiman]]'s departure (Jan 29), Tanya took over some **scheduling and calendar blocking** duties
+- Requested a meeting on Jan 29 evening to start the brand identity project → scheduled [[2026-01-late-meeting-4-brand-identity|Meeting 4]] for Jan 30 at 2pm
+- Emailed the Meeting 09 (Visual Identity, Mar 13) recording when [[binita]] said [[manik]] would share it (Mar 14)
+- Attended Meeting 09 (Visual Identity, Mar 13) alongside [[binita]]
 
 ## Role on Mindwise
 - Facilitated the [[2026-01-23-meeting-3-brand-strategy-workshop|Jan 23 brand communication workshop]]

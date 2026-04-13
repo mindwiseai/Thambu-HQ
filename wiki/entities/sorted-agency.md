@@ -25,8 +25,12 @@ Mumbai-based strategic consulting and branding firm. Primary brand partner for [
 - [[binita]] — packaging strategy lead, primary contact since mid-March
 - [[avantika]] — growth/scaling partner (joined late January)
 - [[ankita]] — supports Binita
-- AB — administrative
-- Jaiman — left late January 2026, transitioned client to Manik + Avantika
+- [[shipra]] — strategy team, co-presented content strategy (Feb 12)
+- [[jaiman]] — original account manager (Dec 19 – Jan 29). Created the WhatsApp group, handled scheduling and invoices. Left [[sorted-agency]] on Jan 29; handed off to [[manik]] and [[avantika]].
+- Unknown (+91 88263 36685) — added by [[manik]] on Feb 13, never identified
+
+## Office address
+4th Floor, Candelar Building, St. John Baptist Road, Bandra West, Mumbai 400050 (from [[2026-04-13-whatsapp-full-export|WhatsApp chat, Jan 6]])
 
 ## Key deliverables (by April 2026)
 - Brand book + design language (due April 2 in person at Mumbai meeting)
@@ -46,3 +50,6 @@ Mumbai-based strategic consulting and branding firm. Primary brand partner for [
 - [[2026-03-17-meeting-binita-strategic-decisions]]
 - [[2026-03-23-binita-packaging-feedback]]
 - [[2026-03-24-meeting-manik-pricing-website]]
+- [[2026-04-13-whatsapp-full-export]] — full WhatsApp history Dec 19 – Mar 23
+- [[2026-04-13-mindwise-raw-dump]] — meetings catalog (all 11 meetings)
+- [[sorted-meeting-transcripts]] — full catalog of meeting transcripts and availability

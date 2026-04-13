@@ -62,11 +62,19 @@ Manik offered to provide a **one-pager / rough website copy mockup** to help vis
 2. **Negotiate with Sorted** — push for closer to ₹4L–4.5L by trimming scope (e.g., copy in-house)
 3. **External developer with Sorted brand guidelines** — Sorted hands off the brand book, an external developer (Ahmedabad-based, Manik is negotiating) executes
 
+## March 24 meeting details (from [[2026-04-13-mindwise-raw-dump]])
+
+Meeting 12 (Mar 24) with [[manik]] covered:
+- Wireframe to begin after visual identity book is complete
+- Ahmedabad-based vendor identified by [[manik]]
+- Website scope: 3 core pages (Homepage, Product, About Us) + cart/checkout (per Mar 10 re-group)
+- Hybrid content model agreed: agency handles ads + ~10 posts/month; [[thambu]] supplements with AI-generated organic content
+
 ## Developer options being explored
 
-- **Primary:** Ahmedabad-based developer Manik knows (specialized in optimized landing pages)
+- **Primary:** Ahmedabad-based developer [[manik]] knows (specialized in optimized landing pages)
   - Concern: their default aesthetic = "Oziva-like" — not performance-driven enough for Mindwise positioning
-  - Manik negotiating mid-ground
+  - [[manik]] negotiating mid-ground
 - **Backup:** 2 more options being explored (not yet named in source)
 
 ## Performance constraints (from Sorted's designer)

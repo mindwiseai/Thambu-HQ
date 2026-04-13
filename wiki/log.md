@@ -9,6 +9,44 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-04-13] ingest | Mindwise Full Raw Dump (WhatsApp + Meetings Catalog + Technical Catalog)
+- Source: [[2026-04-13-mindwise-raw-dump]] (umbrella), [[2026-04-13-whatsapp-full-export]] (WhatsApp)
+- **Created: 14 new pages:**
+  - [[jaiman]] — original Sorted account manager (departed Jan 29)
+  - [[shipra]] — co-presented content strategy Feb 12
+  - [[mindcaps-proposal]] — Shivendra's trademark-able term proposal
+  - [[marketing-budget-25l]] — ₹25 lakh annual marketing budget
+  - [[elicura-bottle-reference]] — frosted bottle reference brand
+  - [[product-range-expansion]] — kids Bacopa, Bacopa+, syrup confirmed
+  - [[hero-hub-hygiene-framework]] — content strategy framework from Meeting 07
+  - [[brand-brief-jan-2026]] — the foundational brief document
+  - [[sorted-meeting-transcripts]] — catalog of all 11 meetings
+  - [[scientific-document-library]] — 93+ research papers, COAs, clinical trials
+  - [[life-essence-history]] — previous brand name before Mindwise
+  - [[lumen-fssai-license]] — FSSAI license found in old creatives
+  - [[2026-04-13-whatsapp-full-export]] — source page for WhatsApp chat
+  - [[2026-04-13-mindwise-raw-dump]] — source page for entire ingest
+- **Updated: 17 existing pages:**
+  - [[sorted-agency]] — added [[jaiman]], [[shipra]], office address
+  - [[aarti-samant]] — added discovery call details, content strategy context
+  - [[manik]] — added execution roadmap, brand manager advice
+  - [[binita]] — added packaging deep-dive strategic feedback
+  - [[ankita]] — confirmed identity details from WhatsApp
+  - [[avantika]] — full name Avantika Bhandari, Brand Manager JD sharing
+  - [[tanya-leeds]] — confirmed Tanya Varma name, scheduling duties
+  - [[pricing-strategy]] — added three pricing approaches from Mar 17
+  - [[patco-pharmaceuticals]] — added discovery story, AceBlend reference
+  - [[semi-transparent-bottle]] — added Elicura reference
+  - [[website-development]] — added Mar 24 meeting details, Ahmedabad vendor
+  - [[brand-manager-decision]] — added Manik's advice against Thambu
+  - [[content-strategy-three-piece]] — added Hero/Hub/Hygiene framework link
+  - [[your-unfair-advantage]] — added Meeting 05 context, competitive mapping
+  - [[positioning-shift]] — added Aarti's blunt feedback from Meeting 01
+  - [[four-cohorts]] — confirmed audiences from the brief
+  - [[cdri-08]] — added brand brief's 55% bacosides description
+- Domain: mindwise
+- **Largest Mindwise ingest in wiki history.** Fills the entire Dec 2025 – Mar 2026 gap.
+
 ## [2026-04-13] ingest | RaceSims Raw File Dump — Sales, Marketing, Finance, Partners
 - Source: [[2026-04-13-racesims-raw-dump]]
 - Created: 11 new pages

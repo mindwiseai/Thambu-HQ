@@ -23,6 +23,9 @@ Packaging strategy and design coordination lead at [[sorted-agency]]. Has emerge
 - Advocated for ruling out standard-neck bottles once [[patco-pharmaceuticals|Patco]] customization was confirmed (March 23)
 - Maintains the [[mindwise-packaging-brief-deck|packaging brief Google Slides deck]] (link in chat history)
 - Drives packaging design timeline: deliverables due "early next week" (i.e., week of March 24)
+- Provided **strategic brand-level feedback** on March 20 regarding the [[outer-cardboard-box-decision|outer cardboard box]]: warned that contrast between minimal bottle and info-heavy outer box could dilute premium positioning. Key quote: *"The goal would be to avoid the brand slipping into a more clinical/medicinal space and instead feel like a sharp, everyday performance enhancer."*
+- Asked critical [[product-range-expansion|product range expansion]] question that drew confirmation of kids Bacopa, Bacopa+, syrup plans from [[shivendra-selvam]]
+- Led the Mar 17 packaging deep-dive ([[2026-03-17-meeting-binita-strategic-decisions]]) covering [[two-track-bottle-strategy]], [[pricing-strategy|three pricing approaches]], and [[60-capsule-bottle-decision]]
 
 ## Meetings / events
 - [[2026-01-23-meeting-3-brand-strategy-workshop]] (mentioned)

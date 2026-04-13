@@ -8,7 +8,11 @@ updated: 2026-04-13
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-04-13 (latest) — RaceSims Raw File Dump ingest (Sales, Marketing, Finance, Partners)
+## 2026-04-13 (latest) — Mindwise Full Raw Dump (WhatsApp + Meetings + Technical Catalogs)
+
+Largest Mindwise ingest to date. Three catalogs covering 400+ files (~8-9 GB). **14 new pages created, 17 existing pages updated.** Key revelations: [[jaiman]] was original Sorted account manager (departed Jan 29), [[shipra]] co-presented content strategy, [[marketing-budget-25l|₹25L annual marketing budget]] confirmed Feb 12, [[hero-hub-hygiene-framework]] adopted, [[product-range-expansion|kids Bacopa + Bacopa+ + syrup]] confirmed, [[brand-brief-jan-2026|Brand Brief]] is the foundational document, [[life-essence-history|Life Essence]] was the previous brand name, [[lumen-fssai-license|FSSAI license]] found. Avantika = Avantika Bhandari. Tanya Leeds = Tanya Varma. **Security:** Razorpay credentials exposed in repo. **Total pages: ~135+.**
+
+## 2026-04-13 — RaceSims Raw File Dump ingest (Sales, Marketing, Finance, Partners)
 
 Massive operational ingest from two catalog files covering 1,000+ raw files in the `racesims/` directory. **11 new pages created, 5 existing pages substantially updated.** Key revelations:
 
@@ -23,59 +27,16 @@ Massive operational ingest from two catalog files covering 1,000+ raw files in t
 - **[[customer-pipeline]]:** 5 confirmed customers, 5+ active prospects (Tikitar with 7+ revisions), B2B pipeline (Araya, Ajit Kumar, CSK, 10 IPL teams).
 - **[[can-bus-telemetry]]:** R&D bridging [[arka-motorsports]] real rally car CAN bus data to sim — the moat proof in technical form.
 
-## 2026-04-12 (latest) — ARKA Motorsports website ingest via Browser MCP
+## 2026-04-12 — Multiple ingests (WhatsApp Apr 10-11, Voice brief, Gmail drafts, ARKA website)
 
-User pointed me at `arkamotorsports.com`. Ingested the full site via Browser MCP (WebFetch got only Wix scaffolding — the site is JavaScript-rendered). **Major moat upgrade:**
-
-- ⭐⭐ **Arka Motorsports has 123+ championship titles since 1987** — per their own site, *"the only team in the country to have this prestigious record."* Founded 1987. See [[arka-motorsports]].
-- ⭐⭐ **[[mr-leela-krishnan|N. Leelakrishnan]]** (ARKA founder/leader, Thambu's design mentor) is a **7-time National Rally Champion + multiple National Racing Champion** with **35+ years** in Indian motorsports. Name corrected from the voice-brief transcription "Leela Krishnan" to the official one-word spelling "N. Leelakrishnan".
-- ⭐ **Full contact details:** #33B Aerodrome Road, SIHS Colony, Neelikonampalayam Post, Coimbatore 641033. +91 422 227 1692. info@arkamotorsports.com. Facebook / Instagram / Twitter / LinkedIn all captured.
-- ⭐ **The [[race-engineer-positioning|moat]] is now structurally uncopyable.** Thambu isn't "a race engineer" — he's "the race engineer for India's winningest motorsport team, mentored by a 7-time National Rally Champion." Specific verifiable numbers (123, 7, 35) replace vague credibility claims.
-- ⭐ **Content unlocked:** founder story for [[yourstory]]/Inc42, Leelakrishnan Q&A, testimonial from a national champion, telemetry comparison content, academy angle.
-- ⭐ **[[csk-partnership-pitch|CSK pitch]] credibility upgraded.** "Chennai founder pitches CSK" becomes "Chennai-based race engineer for India's winningest motorsport team pitches CSK."
-
-## 2026-04-12 (even later) — Gmail drafts ingest (CSK pitch + 2 bonus finds)
-
-Third ingest of the day. Fetched all Gmail drafts. The user asked for the Instagram DM for CSK — got that plus **2 high-value bonus drafts** I didn't know existed.
-
-- ⭐ **[[csk-partnership-pitch|CSK content pitch]]** ([[2026-04-08-csk-pitch-draft|draft]]) — [[thambu]] has a zero-cost sim-racing content partnership pitch ready for [[chennai-super-kings|Chennai Super Kings]] targeting [[radhakrishnan-csk|Mr. Radhakrishnan]]. **Still in drafts — not sent.** Four content formats (Player vs Player, Lap Time Challenge, Guess the Driver, Fan Challenge). IPL 2026 window is March-May; delay shrinks the opportunity. **Flag to Thambu on next interaction.**
-- ⭐ **[[2026-03-24-meeting-summary-draft|March 24 meeting summary draft]]** — Thambu's own never-sent recap of the Manik meeting, with clean owner/deliverable/deadline tables. Confirms everything in [[2026-03-24-meeting-manik-pricing-website]] and [[april-2-mumbai-meeting]] but in Thambu's own voice.
-- ⭐ **[[mindwise-mission-control-notion|Mindwise Mission Control Notion workspace]]** — revealed via [[2026-03-25-mission-control-notion-setup-draft|another never-sent draft]]. Thambu built a Notion workspace as "single source of truth" for the June 1 push — task tracker, launch timeline, budget, target audiences, strategic notes, etc. **Wiki may overlap with Notion content.** Notion MCP tools are available (`mcp__claude_ai_Notion__*`) — next ingest can pull directly from the Notion workspace to sync.
-
-## 2026-04-12 (late) — Sorted WhatsApp April 10-11 ingest (via Browser MCP)
-
-Second ingest of the day. Connected to WhatsApp Web via Browser MCP extension in Chrome and captured the **Sorted x Mindwise group chat for April 10-11**. Only 2 days captured (browser MCP click/hover timed out on scroll-up attempts) but those 2 days are dense and resolve several critical path gaps:
-
-- ⭐ **Website content + UX APPROVED** — [[ankita|Ankita Duseja]] gave the go-ahead at 8:04 PM on April 11. Designer is cleared to build the mockup. See [[website-development]].
-- ⭐ **Bottle prototype being printed** — [[patco-pharmaceuticals|Patco]] received final rectangular + cylinder dimensions and started prototype production. **Bottle cap height still pending from Patco** (Shivendra chasing since April 9-10). See [[patco-pharmaceuticals]].
-- ⭐ **Bottle proportion change** — the new Patco bottle is SHORTER than the original design assumption. Forces a full label re-layout. See [[semi-transparent-bottle]].
-- ⭐ **NEW DECISION surfaced:** [[outer-cardboard-box-decision|outer cardboard box may be dropped at launch]] due to cost. Shivendra asked for a bottle-only variant; decision due week of April 13-17. If dropped, the bottle label must absorb ALL regulatory + nutrition + brand content.
-- ⭐ **Ankita Duseja clarified** — full name, **UK-based** (+44 7724 171784), leading content review (NOT junior support as previous wiki version implied). She's actively resolving Thambu's [[2026-03-23-binita-packaging-feedback|March 23 child/adult dosing feedback point]].
-- **Binita's WhatsApp:** +91 99304 02027.
-- **Both blister pack PDFs** confirmed in the brief deck: `Package(115_75_125).pdf` (120-bottle) and `Package(70_10_120).pdf` (60-bottle).
-
-⚠️ **Still unknown — highest priority next ingest:** the **April 2 Mumbai meeting outcome + April 3-9 Sorted chatter**. Browser MCP couldn't scroll up reliably. Next step: user exports the Sorted chat on phone → I ingest via Path 4.
-
-## 2026-04-12 (afternoon) — Voice brief + Gmail ingest
-
-Ingested [[thambu]]'s **March 26 voice brief** from Gmail (message `19d281ee3901db43`). The voice brief was one of the highest-value ingestions so far — it revealed:
-
-- ⭐ **[[arka-motorsports|ARKA Motorsports]]** (formerly Red Rooster Performance) is the real racing team Thambu actively tunes race cars for. **This is the concrete proof of the [[race-engineer-positioning|race-engineer moat]]** — it's not a claim, it's a live relationship. A RaceSims simulator is being installed AT ARKA's facility, creating a sim-to-real feedback loop.
-- ⭐ **[[beta-free-bacopa-extract|Bitter-free Bacopa extract]]** from [[imcd]] (Mumbai supplier) + [[solusta-puducherry|Solusta]] (Puducherry manufacturer) potentially unlocks **Mindwise gummies and syrups** beyond the current capsule line. Solusta already has a corporate client waiting. Could also serve the Philippines market that has been asking for gummy format.
-- ⭐ **[[startup-tax-exemption|Startup tax exemption]]** — RaceSims is using one of its 3 allowed years in FY2026. This is driving the year-end sales push and explains the 4-city trip.
-- ⭐ **[[mr-leela-krishnan]]** (ARKA boss) is design mentor for [[next-gen-racesims-rigs]] — cast aluminum brackets + mounting hardware.
-- **Full dealer + customer network** revealed across Coimbatore / Bangalore / Mumbai: 14 new entity pages created.
-- **[[april-2-mumbai-meeting]] travel confirmed** (Mar 31 → Apr 2 per Thambu's March 27 email). The trip was bundled around 3 independent reasons: [[jay-kularia]] motion install, [[patco-pharmaceuticals|Patco]] bottle design, [[imcd]] ingredient meeting — PLUS the Sorted visual identity presentation.
-- **CTD document lineage:** the CTD Module 2 files in the repo are [[ctd-module-2|KeenMind / SFI docs converted to Mindwise branding]] — original Australian dossier with Mindwise-branded find-replace. Clinical content is valid but India-specific content (FSSAI, etc.) still needs to be freshly authored.
-
-## Wiki state (post-March 26 voice brief ingest)
-
-- **Total pages: 121** (up from 103 after the cleanup)
-- **0 orphans, 0 dead links** (lint to verify)
-- **New entities:** [[arka-motorsports]], [[mr-leela-krishnan]], [[raghav-coimbatore-dealer]], [[sim-racing-hq]], [[trayas]], [[racing-rigs]], [[lakshay]], [[jeeva-rathnam]], [[jay-kularia]], [[abdul]], [[shahid-moto-mind]], [[imcd]], [[solusta-puducherry]]
-- **New concepts:** [[next-gen-racesims-rigs]], [[beta-free-bacopa-extract]], [[startup-tax-exemption]]
-- **New sources:** [[2026-03-26-thambu-voice-brief]]
-- **New meta:** [[meta/ingest-workflow]] — the canonical guide for how to dump files
+Key outcomes from this day's 4 ingests:
+- ⭐ **Website content + UX APPROVED** by [[ankita]] on April 11. Designer cleared for mockup. See [[website-development]].
+- ⭐ **Patco printing prototype**, cap height still pending. Bottle is SHORTER than design assumption. See [[patco-pharmaceuticals]], [[semi-transparent-bottle]].
+- ⭐ **[[outer-cardboard-box-decision]]** — may be dropped at launch for cost.
+- ⭐ **[[arka-motorsports]]** = Thambu's racing team (123+ championships since 1987). The [[race-engineer-positioning|moat]] is now structurally uncopyable.
+- ⭐ **[[beta-free-bacopa-extract]]** from [[imcd]] + [[solusta-puducherry]] unlocks gummy/syrup expansion.
+- ⭐ **CSK pitch** still in drafts ([[csk-partnership-pitch]]) — IPL window closing.
+- ⭐ **Mindwise Mission Control Notion workspace** exists ([[mindwise-mission-control-notion]]).
 
 ## Current state of the businesses (as of 2026-04-13)
 

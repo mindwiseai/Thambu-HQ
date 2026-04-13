@@ -7,7 +7,9 @@ tags: [audience, segmentation, marketing]
 
 # Four Target Cohorts
 
-The four target audiences for [[domains/mindwise/_index|Mindwise]], crystallized in [[2026-01-06-meeting-1-brief-discussion|Meeting 1]] and reinforced in [[2026-02-12-meeting-5-content-strategy|Meeting 5]]. All four share the [[your-unfair-advantage|"Your Unfair Advantage"]] positioning but receive different campaign content.
+The four target audiences for [[domains/mindwise/_index|Mindwise]], first defined in **Meeting 01 (late 2025)** — the discovery call between [[thambu]] and [[aarti-samant]] (per [[2026-04-13-mindwise-raw-dump|Meetings Catalog]]) — and confirmed in the [[brand-brief-jan-2026|Brand Brief]] (Jan 6) and reinforced in [[2026-02-12-meeting-5-content-strategy|Meeting 5]]. All four share the [[your-unfair-advantage|"Your Unfair Advantage"]] positioning but receive different campaign content.
+
+The brief specifically lists: (1) mothers of school-going children, (2) competitive exam takers, (3) people under stress/anxiety, (4) elderly concerned about cognitive decline.
 
 ## The four
 

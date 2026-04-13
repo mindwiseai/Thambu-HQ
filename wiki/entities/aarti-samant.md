@@ -12,6 +12,15 @@ Strategy Director / co-founder at [[sorted-agency]]. Aarti is the strategic anch
 ## Background
 - Co-founder of [[sorted-agency]] (~2 years old)
 - Previously at Future Group (FBB, Brand Factory, Big Bazaar, Central)
+- Met [[manik]] at Future Group
+
+## Discovery call (Meeting 01)
+
+In the foundational discovery call with [[thambu]] (late 2025), Aarti gave **blunt feedback**: the brand looked too clinical/medical. She recommended a brand communication strategy before any execution, emphasizing What/How/Why statements, a personality shift from "clinical" to "human," and positioning more like Whoop or SuperYou than a pharma brand. This feedback was the catalyst for the entire [[positioning-shift]]. She also helped define the [[four-cohorts|four target audiences]] in this first meeting.
+
+## Content strategy (Meeting 07, Feb 12)
+
+Co-presented the content strategy with [[shipra]]. Introduced the [[hero-hub-hygiene-framework]] and the principle that 70-80% of Instagram content should be value-driven, not selling. At her brother's wedding Feb 4-9, causing the content strategy meeting to be postponed from Feb 7 (at [[thambu]]'s insistence that she be present).
 
 ## Role on Mindwise
 - Lead strategist; opens and closes major workshops

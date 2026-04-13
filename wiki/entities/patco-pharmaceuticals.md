@@ -12,8 +12,18 @@ Navi-Mumbai pharmaceutical packaging vendor identified by [[shivendra-selvam]] i
 > [!note]
 > **Name variants:** The WhatsApp chat history (via [[2026-03-23-mindwise-meetings-chat-analysis]]) calls them *"Patco Pharmaceuticals Pvt Ltd"*. [[thambu]]'s [[2026-03-26-thambu-voice-brief|March 26 voice brief]] calls them *"Patco Packing Solutions"*. These are almost certainly the same vendor — confirm formal legal name on next vendor-document ingest. The wiki uses "Patco Pharmaceuticals" as the canonical form to match the earliest reference.
 
+## Discovery story (from [[2026-04-13-whatsapp-full-export]])
+
+Discovered by [[shivendra-selvam]] on **March 18, 2026** and announced in the WhatsApp group:
+
+> "Based on the initial discussion we've had with them [Patco] - they can customise both bottle and cap to our exact requirement... We technically have a free hand to innovate here I suppose."
+
+[[shivendra-selvam]] showed Patco the **AceBlend** bottle as a reference, and they confirmed capability to replicate it. [[binita]]'s reaction: *"That's good news — that we can customise the packaging and don't have to settle for the easiest to source bottle."*
+
 ## Why this matters
-Before Patco, Indian bottle vendors were "very average" and the only path to a custom premium bottle was sourcing from China (1-week delivery if specs provided — same source as AceBlend). Patco changes that — they can customize **both bottle AND cap** to exact requirements, including replicating the AceBlend reference bottle.
+Before Patco, Indian bottle vendors were "very average" (India Mart vendors too generic per Meeting 08) and the only path to a custom premium bottle was sourcing from China (1-week delivery if specs provided — same source as AceBlend). Patco changes that — they can customize **both bottle AND cap** to exact requirements, including replicating the AceBlend reference bottle.
+
+The bottle vendor journey: [[elicura-bottle-reference|Elicura]] frosted bottle reference (Feb 3) → China sourcing explored (Mar 17) → **Patco found (Mar 18)** → China sourcing abandoned.
 
 ## What Patco can do
 - Replicate the AceBlend bottle shape (square / rectangular / cylindrical with flush cap)

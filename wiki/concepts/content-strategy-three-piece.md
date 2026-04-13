@@ -34,6 +34,15 @@ The content format that wraps every [[four-cohorts|cohort campaign]]. Locked in 
 - Targets behavior change (productivity habits, learning techniques, etc.)
 - Creator partnerships (mom creators, productivity experts, doctors)
 
+## Relationship to Hero/Hub/Hygiene framework
+
+The three-piece strategy maps directly to the [[hero-hub-hygiene-framework]] adopted in the same meeting (Feb 12):
+- **Brand Film** = Hero content (big moments, high production)
+- **Key Visuals** = Hub content (community building, value-driven)
+- **Sustenance** = Hygiene content (always-on, daily/regular)
+
+The Hero/Hub/Hygiene lens adds a **frequency and investment** dimension to the three-piece format structure.
+
 ## Why three pieces
 
 **One piece is not enough.** A film alone doesn't drive performance ads. Static ads alone don't build emotional connection. Sustenance alone doesn't convert. The three pieces work together:

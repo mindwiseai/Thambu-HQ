@@ -1,19 +1,29 @@
 ---
-title: Avantika
+title: Avantika Bhandari
 type: entity
 domain: mindwise
 tags: [person, sorted-agency, growth]
 ---
 
-# Avantika
+# Avantika Bhandari
 
-Growth / scaling partner at [[sorted-agency]]. Joined the Mindwise team in late January 2026, taking over communication responsibilities alongside [[manik]] when Jaiman left.
+Growth / scaling partner at [[sorted-agency]]. **Full name: Avantika Bhandari** (WhatsApp name "AB"). Joined the Mindwise team on **January 21, 2026** (added to WhatsApp group). Took over communication responsibilities alongside [[manik]] when [[jaiman]] left on Jan 29.
 
 ## Role on Mindwise
-- Joined for [[2026-02-12-meeting-5-content-strategy|content strategy workshop]] (Feb 12)
-- Picks up on growth/scaling execution
-- Took over client communication after Jaiman's departure (Jan 29)
+- Added to group Jan 21, introduced as growth/scaling person at [[2026-01-23-meeting-3-brand-strategy-workshop|Meeting 05 (Jan 23)]]
+- Took over client communication after [[jaiman]]'s departure (Jan 29) alongside [[manik]]
+- **Shared the Brand Manager JD** on **March 19** (Google Docs link for "Senior Brand & Content Manager" position) — see [[brand-manager-decision]]
+- Attended [[2026-02-12-meeting-5-content-strategy|content strategy workshop]] (Feb 12)
 
 ## Notes
-- Less prominent in subsequent meetings — Binita has emerged as the primary day-to-day contact
-- Need to clarify her current role on the project (status as of 2026-04-11 unclear)
+- Less prominent in subsequent meetings — [[binita]] has emerged as the primary day-to-day contact
+- Current role on the project unclear as of April 2026
+
+## Sources
+- [[2026-04-13-whatsapp-full-export]] — Jan 21 addition, Jan 29 handoff, Mar 19 JD sharing
+
+## Connections
+- [[sorted-agency]]
+- [[jaiman]] (took over from)
+- [[manik]]
+- [[brand-manager-decision]]

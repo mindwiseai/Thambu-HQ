@@ -25,7 +25,7 @@ This is consistent with high-end performance brands (AG1, Heights, Whoop, Über)
 | Color | [[monochrome-plus-green-pop|Monochrome (charcoal-gray or blue) + GREEN POP]] |
 | Logo | [[route-3-architecture-of-intelligence|Route 3 — Architecture of Intelligence]], dark/monochrome, neon-green accent |
 | Information | Minimal on bottle. Push science to website. ⚠️ May change if outer box is dropped — see [[outer-cardboard-box-decision]] |
-| Vendor | [[patco-pharmaceuticals|Patco Pharmaceuticals]] (customization confirmed) |
+| Vendor | [[patco-pharmaceuticals|Patco Pharmaceuticals]] (customization confirmed). Earlier: [[elicura-bottle-reference|Elicura]] was the frosted bottle reference brand (Feb 3), superseded by Patco (Mar 18) |
 | Bottle size | 100mL — **now shorter than original** per April 10 Patco finalization (exact H/W proportions pending cap height confirmation). Earlier spec of 48×48mm × 80mm height (from [[2026-03-23-binita-packaging-feedback]]) is superseded. |
 | Capsule count | [[60-capsule-bottle-decision|60 capsules]] for D2C |
 | Prototype status | ⭐ **Patco printing prototype as of April 10** — first physical sample incoming |
@@ -67,4 +67,6 @@ In other words: the bottle is solved but the **outer box** must carry the same m
 - [[two-track-bottle-strategy]]
 - [[csir-cdri-logo-requirement]] — must appear somewhere on this design
 - [[patco-pharmaceuticals]] — vendor
+- [[elicura-bottle-reference]] — original frosted bottle reference brand
 - [[2026-01-late-meeting-4-brand-identity]] — where this was decided
+- [[2026-04-13-whatsapp-full-export]] — full bottle sourcing journey
