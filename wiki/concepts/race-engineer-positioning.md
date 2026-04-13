@@ -111,15 +111,21 @@ The same positioning sells the [[yourstory|YourStory]] pitch: *"Race engineer tu
 ## Fundamental rule
 **If a piece of content could have been written by anyone with a Google search, rewrite it to use the race-engineer voice. Otherwise the moat is inactive.**
 
+## CAN bus telemetry — the moat in action (2026-04-13 update)
+
+[[can-bus-telemetry]] R&D is the most concrete technical proof of this positioning. [[thambu]] is actively working on connecting real rally car CAN bus data from [[arka-motorsports]] to sim platforms — reading throttle, brake, steering, suspension telemetry from the real car and comparing it with sim data. No other Indian sim-racing company has access to this capability. See [[can-bus-telemetry]] for full details.
+
 ## Connections
 - [[virtual-racing-hub]] — what this is asymmetric against
 - [[arka-motorsports]] ⭐ — the concrete proof of the moat (live racing team)
 - [[mr-leela-krishnan]] — real-world race team boss, design mentor for next-gen rigs
 - [[next-gen-racesims-rigs]] — product line being designed WITH real-world racing input
+- [[can-bus-telemetry]] — sim-to-real R&D, the moat in technical form
 - [[abdul]] — field installer with ARKA/Red Rooster lineage
 - [[blog-content-pipeline]] — content where this voice lives
 - [[discord-server-setup-kit]] — community where this voice lives
 - [[yourstory]] — press angle
 - [[2026-03-25-vrh-battle-plan]] — original framing
 - [[2026-03-26-thambu-voice-brief]] — source that revealed the active ARKA relationship
+- [[2026-04-13-racesims-raw-dump]] — source for CAN bus context
 - [[thambu]]

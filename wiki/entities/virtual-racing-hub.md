@@ -69,13 +69,22 @@ RaceSims SHOULD compete with VRH on:
 - ✅ **Discord community** (asymmetric advantage: race-engineer-tips channel)
 - ✅ **Press coverage** (race-engineer-turned-entrepreneur founder story)
 
+## Legal entity (2026-04-13 update)
+
+VRH's legal entity is **U Tashtri (OPC) Pvt Ltd**, registered in Dwarka, New Delhi. This was revealed via a purchase invoice (#3224, 21/01/2025) where VRH sold Rs.1,29,196 of [[moza]] gear to [[lumen-marketing-company|Lumen Marketing Company]] (RaceSims' parent). Items: Moza SGP Sequential Shifter, SRP Pedals w/ Clutch, R9 V2 Wheelbase, HBP Handbrake, Brook Ras1ution 2, CSV2 Steering Wheel.
+
+**Significant:** RaceSims was buying from its primary competitor before establishing direct supply chains. This relationship has since inverted — VRH is now a **controlled reseller** for [[conspit]] products, required to procure exclusively through RaceSims (contract signed 22 Jul 2025). See [[conspit]] for contract details.
+
 ## Don't trash VRH publicly
 
 The VRH battle plan is internal. Public content positions on RaceSims' strengths. **Never name VRH in public content.** Punch the gap, not the brand.
 
 ## Connections
 - [[2026-03-25-vrh-battle-plan]] — primary source
+- [[2026-04-13-racesims-raw-dump]] — legal entity + Moza purchase + Conspit reseller contract
 - [[race-engineer-positioning]] — the moat
+- [[conspit]] — VRH is controlled reseller for Conspit via RaceSims
+- [[moza]] — VRH sold Moza to RaceSims (Jan 2025)
 - [[seo-content-gap]] — content gap diagnosis
 - [[discord-community-gap]] — community gap diagnosis
 - [[geo-first-mover-advantage]]

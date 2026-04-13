@@ -1,12 +1,27 @@
 ---
 title: Hot Cache
 type: meta
-updated: 2026-04-12
+updated: 2026-04-13
 ---
 
 # Hot Cache
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
+
+## 2026-04-13 (latest) — RaceSims Raw File Dump ingest (Sales, Marketing, Finance, Partners)
+
+Massive operational ingest from two catalog files covering 1,000+ raw files in the `racesims/` directory. **11 new pages created, 5 existing pages substantially updated.** Key revelations:
+
+- **[[racesims-company]]:** Racesims Solutions Pvt Ltd, GSTIN 33AAOCR6378K1ZO, MSME certified, Startup India certified, ICICI Bank KK Nagar. Co-director Aishwarya C. Trademark "RaceSims" filed in Class 9 + Class 41.
+- **[[import-operations]]:** HS Code 9023.00.90 (demonstrational instruments), ~31% effective duty (BCD 10% + SWC 1% + IGST 18%). 7+ [[conspit]] shipments (May 2025 - Mar 2026). Distributor margin 25%, dealer 10-20%.
+- **[[simagic-distributor]]:** RaceSims has **exclusive South India territory** for Simagic (signed Feb 2025, expires May 2026). 128 SKUs, MOQ 50K RMB/order.
+- **[[virtual-racing-hub|VRH]] sold [[moza]] gear TO RaceSims** (Jan 2025, Rs.1.29L) before RaceSims had direct supply. VRH's legal entity: U Tashtri (OPC) Pvt Ltd, Delhi. Now VRH is a **controlled reseller** for [[conspit]] via RaceSims.
+- **[[araya-airport]]:** B2B simulator project at Rs.6.86-6.96L/unit. Fully enclosed, kiosk-mode, zero-staff airport lounges.
+- **[[kit-pricing]]:** 4 tiers from Rally (~Rs.2.5L) to Motion (~Rs.11L+).
+- **[[techxhub]]:** brings Fanatec and Playseat into RaceSims portfolio.
+- **[[asetek]]:** reseller pricelist (Sep 2024), 3 product lines (Invicta/Forte/La Prima).
+- **[[customer-pipeline]]:** 5 confirmed customers, 5+ active prospects (Tikitar with 7+ revisions), B2B pipeline (Araya, Ajit Kumar, CSK, 10 IPL teams).
+- **[[can-bus-telemetry]]:** R&D bridging [[arka-motorsports]] real rally car CAN bus data to sim — the moat proof in technical form.
 
 ## 2026-04-12 (latest) — ARKA Motorsports website ingest via Browser MCP
 
@@ -62,37 +77,33 @@ Ingested [[thambu]]'s **March 26 voice brief** from Gmail (message `19d281ee3901
 - **New sources:** [[2026-03-26-thambu-voice-brief]]
 - **New meta:** [[meta/ingest-workflow]] — the canonical guide for how to dump files
 
-## Current state of the businesses (as of 2026-04-12)
+## Current state of the businesses (as of 2026-04-13)
 
-### Mindwise — final stretch before [[launch-plan-june-1-2026|June 1 launch]] (~50 days)
+### Mindwise — final stretch before [[launch-plan-june-1-2026|June 1 launch]] (~49 days)
 
-Brand identity LOCKED: [[your-unfair-advantage]], [[route-3-architecture-of-intelligence]], [[semi-transparent-bottle]], [[60-capsule-bottle-decision]], [[pricing-strategy|₹850–900 MRP]], [[patco-pharmaceuticals|Patco]] as customization vendor.
+Brand identity LOCKED: [[your-unfair-advantage]], [[route-3-architecture-of-intelligence]], [[semi-transparent-bottle]], [[60-capsule-bottle-decision]], [[pricing-strategy|Rs.850-900 MRP]], [[patco-pharmaceuticals|Patco]] as customization vendor.
 
-⏳ **April 2 Mumbai meeting travel is confirmed** but the meeting's actual outcomes still not ingested — probably lives in WhatsApp chats that haven't been exported. Highest-priority next ingestion.
+### RaceSims — operational picture now complete
 
-🆕 **Strategic ingredient unlock** (from voice brief): [[imcd]] + [[solusta-puducherry]] could enable [[beta-free-bacopa-extract|gummy + syrup]] product line extensions.
+With this ingest, the wiki now has near-complete coverage of RaceSims operations:
+- **Full supplier chain:** [[conspit]] (primary), [[vnm]] (motion+DD), [[simagic-distributor|Simagic]] (mid-tier, South India exclusive), [[asetek]] (premium), [[techxhub]] (Fanatec/Playseat), Sim-Lab, Two Seats
+- **[[import-operations]]:** HS 9023.00.90, ~31% duty, 25% distributor margin
+- **[[kit-pricing]]:** 4 tiers from Rs.2.5L to Rs.11L+
+- **[[customer-pipeline]]:** 5+ confirmed, 5+ prospects, B2B pipeline (Araya, IPL teams)
+- **[[racesims-company]]:** fully documented legal entity
+- **VRH power dynamic inverted:** VRH was RaceSims' supplier (Jan 2025), now VRH is a controlled reseller for [[conspit]] via RaceSims
 
-### RaceSims — year-end push + 90-day plan execution
+## Blind spots (next ingestion priorities)
 
-Three things compound this week:
-1. **[[startup-tax-exemption|Year-end tax exemption push]]** — close all sales before FY end (March 31)
-2. **[[90-day-execution-plan|90-day VRH plan]]** — ~2.5 weeks into week-by-week execution
-3. **4-city trip** (Chennai → Coimbatore → Bangalore → Mumbai) combining RaceSims installs, ARKA simulator setup, dealer visits, and the Mindwise Patco/IMCD meetings
-
-🆕 **The [[race-engineer-positioning|race engineer moat]] is now concrete**, not theoretical. Every content decision should reference [[arka-motorsports]].
-
-## Blind spots (the next ingestion priorities)
-
-1. **April 2 Mumbai meeting outcome** — still unclear. Likely in Sorted WhatsApp chat. Needs manual export → ingest via [[meta/ingest-workflow|Path 4]].
-2. **RaceSims 90-day plan execution status** — what actually got done in weeks 1-3?
-3. **Post-March 26 voice briefs** — Thambu may have sent more voice briefs since March 26. Worth checking Gmail for more recent ones.
-4. **ARKA Motorsports details** — racing series, drivers, public presence (would help content planning)
-5. **IMCD / Solusta meeting outcomes** — from the Mumbai trip, did they surface a viable bitter-free Bacopa path?
+1. **April 2 Mumbai meeting outcome** — still not in wiki
+2. **RaceSims 90-day plan execution status** — what actually got done?
+3. **Post-March 26 voice briefs** — check Gmail
+4. **IMCD / Solusta meeting outcomes** — bitter-free Bacopa path viable?
 
 ## Things to flag on next interaction
 
-- If the question touches Mindwise: mid-April brand book + packaging deliverables are DUE. Check progress.
-- If the question touches RaceSims content: always reference [[arka-motorsports|ARKA]] — it's the moat proof.
-- If the question touches CTD claims: Singh 2009 / Patel 2016 fertility contradiction exists ([[cdri-08-safety-profile]]).
-- If the question touches pricing: ₹850-900 is LOCKED. ₹1,200 is STALE.
-- If the user asks to "dump" / "add" / "ingest" anything, reference [[meta/ingest-workflow]].
+- Mindwise: mid-April brand book + packaging deliverables DUE
+- RaceSims content: always reference [[arka-motorsports|ARKA]] + [[can-bus-telemetry]]
+- CTD claims: Singh 2009 / Patel 2016 fertility contradiction ([[cdri-08-safety-profile]])
+- Mindwise pricing: Rs.850-900 LOCKED. Rs.1,200 is STALE.
+- Simagic contract expires May 2026 — renewal decision approaching

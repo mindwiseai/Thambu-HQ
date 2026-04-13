@@ -29,10 +29,24 @@ India's pro-grade sim-racing hardware company. Domain: racesims.in. Founder/owne
 - [[inracing]] — secondary competitor
 - [[simgrid]] — community racing platform (VRH has team page, we don't)
 
-## Brand partnerships
-- [[conspit]] — primary premium pedal brand
-- [[vnm]] — primary cockpit brand
+## Products & pricing
+- [[gt-pro-rig]] — flagship GT rig product, BOM from ARKA quote
+- [[kit-pricing]] — 4 tiers: Rally (~Rs.2.5L), Formula (~Rs.4-5L), Formula Cockpit (~Rs.5-6L), Motion (~Rs.11L+)
+
+## Brand partnerships & suppliers
+- [[conspit]] — primary supplier (7+ imports), premium pedals/wheelbases/wheels. VRH is controlled reseller.
+- [[vnm]] — primary supplier (Vietnam), motion/DD/cockpits/pedals. Active orders.
 - [[moza]] — entry-level wheelbase/wheel brand
+- [[simagic-distributor]] — **South India exclusive** distributor (contract May 2025 - May 2026)
+- [[asetek]] — premium reseller (Invicta/Forte/La Prima lines)
+- [[techxhub]] — retail partner for Fanatec + Playseat
+- Sim-Lab — parts supplier (Netherlands, wholesale quantities)
+- Two Seats — cockpit/seating supplier (2 imports)
+- Devraj Computers — Gigabyte dealer (TN)
+
+## B2B clients & prospects
+- [[araya-airport]] — airport lounge simulator project (Rs.6.86-6.96L/unit)
+- [[customer-pipeline]] — full pipeline: 5+ confirmed customers, 5+ active prospects, IPL outreach
 
 ## Content & SEO
 - [[blog-content-pipeline]] — 10 high-priority articles to write
@@ -42,14 +56,18 @@ India's pro-grade sim-racing hardware company. Domain: racesims.in. Founder/owne
 - [[instagram-growth-tactics]] — Reels, collabs, giveaways, ads
 - [[reddit-strategy]] — untapped goldmine
 
-## Operations
+## Operations & company
+- [[racesims-company]] — legal entity (Racesims Solutions Pvt Ltd, GSTIN, MSME, Startup India)
+- [[import-operations]] — HS code 9023.00.90, duty ~31%, supplier chain, landed costs
+- [[can-bus-telemetry]] — sim-to-real R&D bridging rally car CAN bus to sim
 - [[discord-server-setup-kit]] — already drafted, not yet deployed
 - [[racesims-bot]] — Discord bot in racesims/racesims-bot/
 
 ## People
-- [[thambu]] (cross) — owner / race engineer
+- [[thambu]] (cross) — owner / race engineer / active [[can-bus-telemetry]] R&D
 - [[shivendra-selvam]] — also works on RaceSims (see [[2026-03-24-meeting-manik-pricing-website]])
 
 ## Sources
+- [[2026-04-13-racesims-raw-dump]] — full operational dump (sales, finance, partners)
 - [[2026-03-25-vrh-battle-plan]]
 - [[2026-03-25-seo-geo-audit]]

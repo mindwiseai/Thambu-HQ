@@ -28,15 +28,28 @@ Thambu prefers:
 
 Thambu has been trying to set up a robust personal knowledge system for a long time before committing to Claude Code workflows. The wiki you are reading is the result of that effort.
 
+## Company details (2026-04-13 update)
+
+- **[[racesims-company|Racesims Solutions Pvt Ltd]]** — GSTIN 33AAOCR6378K1ZO, MSME UDYAM-TN-02-0393822, Startup India certified
+- Co-director: Aishwarya C
+- Registered address: Second Floor, Ashok Nagar, Chennai 600083 (shared with [[lumen-marketing-company]])
+- Banking: ICICI Bank, KK Nagar (A/C 007705022712)
+- PAN: ATRPT1767D
+- Personal address (trademark filing): No.43 Seetharam Nagar, Puddupalayam, Cuddalore
+- Trademark "RaceSims" filed in Class 9 (hardware) and Class 41 (education/training)
+
 ## Email
 - thambu@racesims.in
 
 ## Connections
 - Owns [[lumen-marketing-company]], [[domains/mindwise/_index|Mindwise]], [[domains/racesims/_index|RaceSims]]
+- [[racesims-company]] — legal entity details
 - Primary contact for [[sorted-agency|Sorted Agency]]
 - **Race engineer for [[arka-motorsports]]** (live, active relationship — the moat)
+- **[[can-bus-telemetry]]** — actively bridging real rally car telemetry to sim
 - **Long-term colleague of [[mr-leela-krishnan]]** (ARKA boss, design mentor for [[next-gen-racesims-rigs]])
 - **Employs [[abdul]]** (field technical installer, ex-ARKA / Red Rooster Performance)
 - Dealer network: [[raghav-coimbatore-dealer|Raghav (Coimbatore)]], [[sim-racing-hq|Sim Racing HQ / Trayas (Bangalore)]], [[racing-rigs|Racing Rigs / Lakshay (Bangalore)]]
 - Relationship with CDRI and [[dr-hemant-singh]] dates back to early 2000s — the original [[adam-ritson]] catalyst story
 - Using [[startup-tax-exemption|RaceSims startup income-tax exemption]] for FY2026
+- [[2026-04-13-racesims-raw-dump]] — source for company details

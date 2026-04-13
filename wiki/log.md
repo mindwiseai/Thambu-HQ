@@ -9,6 +9,29 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-04-13] ingest | RaceSims Raw File Dump — Sales, Marketing, Finance, Partners
+- Source: [[2026-04-13-racesims-raw-dump]]
+- Created: 11 new pages
+  - [[racesims-company]] — legal entity, GSTIN, MSME, banking, trademark
+  - [[import-operations]] — HS code, duty structure, supplier chain, landed costs
+  - [[gt-pro-rig]] — flagship product, BOM, variants
+  - [[kit-pricing]] — 4 kit tiers from Rs.2.5L to Rs.11L+
+  - [[simagic-distributor]] — South India distributor contract, 128 SKUs
+  - [[asetek]] — reseller relationship, 3 product lines, tiered pricing
+  - [[techxhub]] — Fanatec/Playseat retail partner, March 2026 pricing
+  - [[araya-airport]] — B2B airport simulator project, Rs.6.86-6.96L/unit
+  - [[can-bus-telemetry]] — sim-to-real R&D, CAN bus data bridge
+  - [[customer-pipeline]] — 5 confirmed customers, 5+ active prospects, B2B pipeline
+  - [[2026-04-13-racesims-raw-dump]] — source page
+- Updated: 5 existing pages
+  - [[conspit]] — full pricing, 7+ imports, VRH reseller control contract, compliance certs
+  - [[vnm]] — full product catalog with USD pricing, volume discounts, active order
+  - [[virtual-racing-hub]] — legal entity (U Tashtri OPC Pvt Ltd), Moza purchase, Conspit reseller contract
+  - [[race-engineer-positioning]] — CAN bus telemetry as concrete moat proof
+  - [[thambu]] — company registration details, co-director, banking, trademark
+- Domain: racesims
+- Scope: deepest operational ingest for RaceSims to date — covers full supplier chain, pricing architecture, import operations, customer pipeline, partner contracts, and company legal structure
+
 ## [2026-04-12] ingest | Arka Motorsports website (Browser MCP)
 - **Source:** https://www.arkamotorsports.com (via Browser MCP — WebFetch only got Wix scaffolding because the site is JavaScript-rendered)
 - **Major updates (no new pages, substantial rewrites):**

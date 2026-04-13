@@ -83,6 +83,10 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[instagram-growth-tactics]]
 - [[reddit-strategy]]
 
+### Products & pricing
+- [[gt-pro-rig]] — flagship GT rig product, BOM, variants
+- [[kit-pricing]] — 4 kit tiers (Rs.2.5L to Rs.11L+)
+
 ### Ops
 - [[discord-server-setup-kit]]
 - [[racesims-bot]]
@@ -91,6 +95,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[arka-motorsports]] ⭐ — Thambu's racing team (formerly Red Rooster Performance)
 - [[mr-leela-krishnan]] — ARKA boss, design mentor
 - [[next-gen-racesims-rigs]] — cast aluminum bracket design initiative
+- [[can-bus-telemetry]] — sim-to-real R&D via CAN bus data
 
 ### Product expansion (Mindwise)
 - [[beta-free-bacopa-extract]] — unlocks gummies and syrups
@@ -98,7 +103,10 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[solusta-puducherry]] — Puducherry gummy manufacturer
 
 ### Operations (RaceSims finance & logistics)
+- [[racesims-company]] — legal entity, GSTIN, MSME, trademark
+- [[import-operations]] — HS code, duty structure, supplier chain
 - [[startup-tax-exemption]] — FY2026 tax strategy, year-end rush driver
+- [[customer-pipeline]] — known customers and prospects
 
 ## Entities — Mindwise people & orgs
 
@@ -157,10 +165,16 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ### Influencers
 - [[jamie-shaw-racing]]
 
-### Brand partnerships
-- [[conspit]]
-- [[vnm]]
-- [[moza]]
+### Brand partnerships & suppliers
+- [[conspit]] — primary supplier (7+ imports), premium pedals/wheelbases/wheels
+- [[vnm]] — primary supplier, motion/DD/cockpits (Vietnam)
+- [[moza]] — entry-level
+- [[simagic-distributor]] — South India exclusive distributor contract
+- [[asetek]] — premium reseller (Invicta/Forte/La Prima)
+- [[techxhub]] — Fanatec/Playseat retail partner
+
+### B2B clients
+- [[araya-airport]] — airport lounge simulator project
 
 ### Press / platforms
 - [[yourstory]]
@@ -187,6 +201,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[2026-ctd-module-2.4-nonclinical-overview]]
 
 ### RaceSims
+- [[2026-04-13-racesims-raw-dump]] — full operational dump (sales, finance, partners, pricing)
 - [[2026-03-26-thambu-voice-brief]] — also covers RaceSims year-end + ARKA
 - [[2026-03-25-vrh-battle-plan]] — competitive intel
 - [[2026-03-25-seo-geo-audit]] — SEO + GEO state
@@ -207,13 +222,13 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[meta/lint-2026-04-12]] — first lint report
 - [[meta/lint-2026-04-12-cleanup-verification]] — cleanup verification
 
-## Stats (snapshot 2026-04-12, post voice brief ingest)
+## Stats (snapshot 2026-04-13, post RaceSims raw dump ingest)
 
-- **Total pages:** 121+
+- **Total pages:** 132+
 - **Domains:** mindwise, racesims, cross
-- **Sources ingested:** 17 (was 9 post-bootstrap, 16 post-cleanup)
-- **Entities:** 38 (was 22 post-bootstrap, 24 post-cleanup)
-- **Concepts:** 48 (was 35 post-bootstrap, 45 post-cleanup)
+- **Sources ingested:** 18
+- **Entities:** 44 (was 38)
+- **Concepts:** 53 (was 48)
 - **Questions:** 0
-- **Orphans:** 0
-- **Dead links:** 0 (target — verify via lint)
+- **Orphans:** TBD (lint recommended — 10+ ingests since last lint)
+- **Dead links:** TBD (verify via lint)
