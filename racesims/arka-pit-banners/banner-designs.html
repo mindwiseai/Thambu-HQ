@@ -53,7 +53,7 @@
 
   /* Shared top bar */
   .tb { display: flex; align-items: center; padding: 16px 28px; border-bottom: 2px solid var(--border); gap: 14px; }
-  .tb .logo { height: 40px; }
+  .tb .logo { height: 40px; padding: 4px 10px; background: rgba(200,215,240,0.12); border-radius: 5px; }
   .tb .vl { width: 3px; height: 32px; background: var(--accent); border-radius: 2px; }
   .tb .st { font-family: 'Oswald'; font-size: 16px; font-weight: 600; letter-spacing: 4px; color: var(--accent); text-transform: uppercase; }
   .tb .right-info { margin-left: auto; }
@@ -69,7 +69,7 @@
   .b1 .wm { position: absolute; top: 50%; left: 22%; transform: translate(-50%,-50%); font-family: 'Oswald'; font-size: 360px; font-weight: 700; color: rgba(37,48,92,0.07); pointer-events: none; }
 
   .b1 .left { flex: 0 0 42%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; border-right: 2px solid var(--border); position: relative; z-index: 1; }
-  .b1 .main-logo { max-width: 300px; height: auto; margin-bottom: 20px; }
+  .b1 .main-logo { max-width: 300px; height: auto; margin-bottom: 20px; padding: 10px 20px; background: rgba(200,215,240,0.12); border-radius: 8px; }
   .b1 .since { font-family: 'Barlow Condensed'; font-size: 16px; font-weight: 600; letter-spacing: 6px; color: var(--gray); }
 
   .b1 .right { flex: 0 0 58%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; position: relative; z-index: 1; }
@@ -138,15 +138,21 @@
   .b5 .tb { justify-content: space-between; }
   .b5 .tsub { font-family: 'Barlow Condensed'; font-size: 12px; font-weight: 600; letter-spacing: 3px; color: var(--gray); text-transform: uppercase; }
 
-  .b5 .cg { flex: 1; display: grid; grid-template-columns: repeat(3,1fr); gap: 7px; padding: 12px 20px; }
-  .b5 .cc { border: 1px solid var(--border); border-radius: 4px; background: var(--glow); padding: 10px 12px; display: flex; align-items: center; gap: 10px; }
-  .b5 .cc.top { border-color: var(--border-bright); background: var(--glow-bright); }
-  .b5 .cc .cnt { font-family: 'Oswald'; font-size: 30px; font-weight: 700; color: var(--accent); line-height: 1; min-width: 38px; text-align: center; }
-  .b5 .cc .cnt span { font-size: 12px; color: var(--gray); font-weight: 500; }
+  .b5 .hof { flex: 1; display: flex; padding: 12px 20px; gap: 16px; }
+
+  /* Drivers column */
+  .b5 .hof-col { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+  .b5 .hof-header { font-family: 'Oswald'; font-size: 13px; font-weight: 700; letter-spacing: 4px; color: var(--accent); text-transform: uppercase; text-align: center; padding: 8px; border-bottom: 2px solid var(--border-bright); margin-bottom: 4px; }
+  .b5 .hof-divider { width: 2px; background: var(--border-bright); margin: 0 4px; }
+
+  .b5 .cc { border: 1px solid var(--border); border-radius: 5px; background: var(--glow); padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+  .b5 .cc.top { border-color: var(--border-bright); background: var(--glow-bright); border-width: 2px; }
+  .b5 .cc .cnt { font-family: 'Oswald'; font-size: 36px; font-weight: 700; color: var(--accent); line-height: 1; min-width: 46px; text-align: center; }
+  .b5 .cc .cnt span { font-size: 14px; color: var(--gray); font-weight: 500; }
   .b5 .cc .ci { flex: 1; }
-  .b5 .cc .cn { font-family: 'Oswald'; font-size: 14px; font-weight: 700; color: #fff; letter-spacing: 1px; text-transform: uppercase; }
-  .b5 .cc .cd { font-family: 'Barlow'; font-size: 9px; font-weight: 600; color: var(--gray); letter-spacing: 1px; text-transform: uppercase; margin-top: 1px; }
-  .b5 .cc .ct2 { font-size: 20px; }
+  .b5 .cc .cn { font-family: 'Oswald'; font-size: 16px; font-weight: 700; color: #fff; letter-spacing: 1.5px; text-transform: uppercase; }
+  .b5 .cc .cd { font-family: 'Barlow'; font-size: 10px; font-weight: 600; color: var(--gray); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+  .b5 .cc .ct2 { font-size: 24px; }
 
   /* ============================================================
      BANNER 6 — SUPPLIER BRANDS
@@ -351,22 +357,27 @@
       </div>
       <div class="right-info"><div class="tsub">Celebrating Decades of Victories with Our Champions</div></div>
     </div>
-    <div class="cg">
-      <div class="cc top"><div class="cnt">8<span>x</span></div><div class="ci"><div class="cn">Musa Sherif</div><div class="cd">National Rally Champion (Co-Driver)</div></div><div class="ct2">&#127942;</div></div>
-      <div class="cc top"><div class="cnt">7<span>x</span></div><div class="ci"><div class="cn">N. Leelakrishnan</div><div class="cd">National Rally Champion</div></div><div class="ct2">&#127942;</div></div>
-      <div class="cc top"><div class="cnt">7<span>x</span></div><div class="ci"><div class="cn">V.R. Naren Kumar</div><div class="cd">National Rally Champion</div></div><div class="ct2">&#127942;</div></div>
-      <div class="cc top"><div class="cnt">7<span>x</span></div><div class="ci"><div class="cn">Gaurav Gill</div><div class="cd">National Rally Champion</div></div><div class="ct2">&#127942;</div></div>
-      <div class="cc"><div class="cnt">4<span>x</span></div><div class="ci"><div class="cn">Arjun Narendran</div><div class="cd">National Racing Champion</div></div></div>
-      <div class="cc"><div class="cnt">3<span>x</span></div><div class="ci"><div class="cn">Karna Kadur</div><div class="cd">National Rally Champion</div></div></div>
-      <div class="cc"><div class="cnt">3<span>x</span></div><div class="ci"><div class="cn">Farooq Ahmed</div><div class="cd">National Rally Champion</div></div></div>
-      <div class="cc"><div class="cnt">3<span>x</span></div><div class="ci"><div class="cn">Harjee Wadia</div><div class="cd">Rally Winner &amp; INRC 2 Champion</div></div></div>
-      <div class="cc"><div class="cnt">2<span>x</span></div><div class="ci"><div class="cn">Amittrajit Ghosh</div><div class="cd">National Rally Champion</div></div></div>
-      <div class="cc"><div class="cnt">2<span>x</span></div><div class="ci"><div class="cn">Vikram Mathias</div><div class="cd">National Rally Champion</div></div></div>
-      <div class="cc"><div class="cnt">2<span>x</span></div><div class="ci"><div class="cn">Ashwin Naik &amp; Nikhil Pai</div><div class="cd">National Rally Champion</div></div></div>
-      <div class="cc"><div class="cnt" style="font-size:20px;">&#127942;</div><div class="ci"><div class="cn" style="font-size:11px;">Arjun Rao &bull; Sathish R &bull; P.V.S. Murthy</div><div class="cd">National Rally Champions</div></div></div>
-      <div class="cc"><div class="cnt" style="font-size:20px;">&#127942;</div><div class="ci"><div class="cn">Philippos Matthai</div><div class="cd">National AutoX Champion</div></div></div>
-      <div class="cc"><div class="cnt" style="font-size:20px;">&#127942;</div><div class="ci"><div class="cn">Druva Chandrashekar</div><div class="cd">National AutoX Champion</div></div></div>
-      <div class="cc"><div class="cnt" style="font-size:20px;">&#127942;</div><div class="ci"><div class="cn">Jacob K.J</div><div class="cd">Overall Winner &amp; AutoX Champion</div></div></div>
+    <div class="hof">
+      <!-- DRIVERS -->
+      <div class="hof-col">
+        <div class="hof-header">&#127937; National Rally Champions — Drivers</div>
+        <div class="cc top"><div class="cnt">7<span>x</span></div><div class="ci"><div class="cn">N. Leelakrishnan</div><div class="cd">Indian National Rally Champion</div></div><div class="ct2">&#127942;</div></div>
+        <div class="cc top"><div class="cnt">7<span>x</span></div><div class="ci"><div class="cn">V.R. Naren Kumar</div><div class="cd">Indian National Rally Champion</div></div><div class="ct2">&#127942;</div></div>
+        <div class="cc top"><div class="cnt">7<span>x</span></div><div class="ci"><div class="cn">Gaurav Gill</div><div class="cd">Indian National Rally Champion</div></div><div class="ct2">&#127942;</div></div>
+        <div class="cc"><div class="cnt">4<span>x</span></div><div class="ci"><div class="cn">Arjun Narendran</div><div class="cd">Indian National Racing Champion</div></div></div>
+        <div class="cc"><div class="cnt">3<span>x</span></div><div class="ci"><div class="cn">Karna Kadur</div><div class="cd">Indian National Rally Champion</div></div></div>
+        <div class="cc"><div class="cnt">3<span>x</span></div><div class="ci"><div class="cn">Farooq Ahmed</div><div class="cd">Indian National Rally Champion</div></div></div>
+      </div>
+
+      <div class="hof-divider"></div>
+
+      <!-- CO-DRIVERS -->
+      <div class="hof-col">
+        <div class="hof-header">&#127937; National Rally Champions — Co-Drivers</div>
+        <div class="cc top"><div class="cnt">8<span>x</span></div><div class="ci"><div class="cn">Musa Sherif</div><div class="cd">Indian National Rally Champion</div></div><div class="ct2">&#127942;</div></div>
+        <div class="cc"><div class="cnt">2<span>x</span></div><div class="ci"><div class="cn">Amittrajit Ghosh</div><div class="cd">Indian National Rally Champion</div></div></div>
+        <div class="cc"><div class="cnt">2<span>x</span></div><div class="ci"><div class="cn">Vikram Mathias</div><div class="cd">Indian National Rally Champion</div></div></div>
+      </div>
     </div>
     <div class="bb"><span>Drivers &amp; Co-Drivers Associated with ARKA Motorsports</span></div>
   </div>
@@ -391,7 +402,7 @@
       <div class="bt"><img src="logos/motec.png" alt="MoTeC" class="blg"><div class="bc">ECU &amp; Data Logging</div></div>
       <div class="bt"><img src="logos/haltech.png" alt="Haltech" class="blg"><div class="bc">Engine Management</div></div>
       <div class="bt"><img src="logos/braid.png" alt="Braid" class="blg"><div class="bc">Racing Wheels</div></div>
-      <div class="bt"><img src="logos/gripper.png" alt="Gripper" class="blg"><div class="bc">Differentials</div></div>
+      <div class="bt"><img src="logos/quaife.png" alt="Quaife" class="blg"><div class="bc">Differentials</div></div>
       <div class="bt"><img src="logos/toorace.png" alt="Toorace" class="blg"><div class="bc">Racing Safety Gear</div></div>
       <div class="bt"><img src="logos/superpro.png" alt="SuperPro" class="blg"><div class="bc">Suspension Bushings</div></div>
       <div class="bt"><img src="logos/link-ecu.png" alt="Link ECU" class="blg"><div class="bc">Engine Management</div></div>
