@@ -65,6 +65,15 @@ Cognitive wellness supplement (CDRI-08 Bacopa monnieri extract) launching 2026-0
 - [[sorted-meeting-transcripts]] — catalog of all 11 meetings (10/11 have transcripts)
 - [[scientific-document-library]] — 93+ research papers, COAs, clinical trials
 - [[elicura-bottle-reference]] — frosted bottle reference brand (superseded by Patco)
+- [[brand-genesis-sorted]] — how Sorted got engaged (Dec 2, 2025 origin meeting)
+
+## Global landscape & partnerships
+- [[keenmind-agreement-expiry]] — SFI 10-year agreement expired Dec 2024
+- [[cdri-08-global-brands]] — KeenMind, MemoPlus Gold, Memory Perfect, Actif Mind
+- [[sfi-health]] — previous global CDRI-08 distributor
+- [[southeast-asia-exclusion]] — 7 countries NO GO for Bacopa
+- [[bacopa-combination-formulations]] — Bacopa + DHA/Chlorella/Curcumin (Indus)
+- [[indus-life-sciences]] — Bacopa formulation & international market partnership
 
 ## People
 - [[thambu]] (cross) — owner
@@ -74,9 +83,15 @@ Cognitive wellness supplement (CDRI-08 Bacopa monnieri extract) launching 2026-0
 - [[jaiman]] — original Sorted account manager (departed Jan 29)
 - [[shipra]] — co-presented content strategy (Feb 12)
 - [[dr-hemant-singh]], [[dr-dilip-ghosh]] — clinical/scientific advisors
+- [[andrea-zangara]] — Bacopa science advisor, monograph author
+- [[pier-campanini]] — KeenMind ownership / Ginsana contact
 - [[adam-ritson]] — origin story catalyst
+- [[sarathkumar-srinath]], [[manu-bennur]] — early positioning advisors (Dec 3, 2025)
+- [[himani]] — project manager / freelancer
+- [[praveen]] — content/awareness contact
 
 ## Sources (chronological, most recent first)
+- [[2025-11-to-2026-03-onenote-notebook]] — OneNote meetings & research (Nov 2025 – Mar 2026)
 - [[2026-04-13-mindwise-raw-dump]] — full raw dump ingest (WhatsApp + meetings + technical catalogs)
 - [[2026-04-13-whatsapp-full-export]] — full WhatsApp chat (Dec 19 – Mar 23)
 - [[2026-03-26-thambu-voice-brief]] — voice brief (ARKA + IMCD unlock)

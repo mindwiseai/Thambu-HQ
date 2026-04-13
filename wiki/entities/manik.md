@@ -51,6 +51,9 @@ Key deliverables and timelines per his "next steps" document:
 - Discounting only on bundles, never single-bottle MRP
 
 ## Meetings appeared in
+- **Dec 2, 2025** — first [[sorted-agency]] meeting with [[thambu]] (see [[brand-genesis-sorted]]). Attended with [[jaiman|Jaiman Khatri]]. Discussed conscious movement, brain health as longevity segment, [[wellbeing-nutrition]] as aspirational reference.
+- **Jan 6, 2026** — Document Brief Review with [[tanya-leeds|Tanya Varma]] and [[sagar-sali]]. Competitors: Neuro Gum, Alpha GPC, Sami Labs.
+- **Jan 30, 2026** — call with [[avantika|Avantika Bajoria]]. Brand Identity Brief. Drove the [[scary-drug-problem]] diagnosis: "Perception — Doctor prescribed? Generic/fear-inducing. Retail shelves — fear inducing." Competitive refs: Simply Nootropics, Tonic, Neuro, Onnit. Performance brands: Whoop, AG1, Heights. Visual direction: [[semi-transparent-bottle|semi-transparent bottle]], monochrome language, capsule color as hero.
 - [[2026-01-23-meeting-3-brand-strategy-workshop]]
 - [[2026-01-late-meeting-4-brand-identity]] (drove the visual identity workshop)
 - [[2026-02-12-meeting-5-content-strategy]]

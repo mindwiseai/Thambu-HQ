@@ -41,6 +41,17 @@ This is consistent with high-end performance brands (AG1, Heights, Whoop, Über)
 4. **Solves performance ad photography:** clean visuals shoot beautifully
 5. **Solves the [[your-unfair-advantage]] proof:** the bottle visibly *contains* something distinctive — the proof is the product itself
 
+## Jan 30 visual direction details (from OneNote)
+
+Per the Jan 30 meeting ([[2025-11-to-2026-03-onenote-notebook]]), [[manik]] and [[avantika|Avantika Bajoria]] also specified:
+- **Color of the capsule** — green capsules as a visual hero element
+- **Semi-transparent bottle** — confirmed direction
+- **Monochrome language** — "black grey with..." (matches [[monochrome-plus-green-pop]])
+- **Logos, packaging** — to be developed
+- **Hub campaigns** — smaller campaigns; **Hero** campaigns — example like Big Billion Day
+- Reference: **Two Brothers Organic Farm** — another Indian brand reference
+- Performance brands outside of supplement category: Whoop (data/health), AG1, Heights
+
 ## Manik's logic in Meeting 4
 
 > "Your green capsules are poppy/eye-catching. They should be visible/celebrated, not hidden. Semi-transparent bottle reveals the visual differentiator. Simple execution: transparent bottle + frosted sleeve + green showing through. Not complicated to produce. Creates natural intrigue: 'What is this brand?' curiosity."

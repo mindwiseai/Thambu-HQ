@@ -5,12 +5,13 @@ domain: mindwise
 tags: [person, sorted-agency, account-manager, departed]
 ---
 
-# Jaiman
+# Jaiman Khatri
 
-Original account manager at [[sorted-agency]] for the [[domains/mindwise/_index|Mindwise]] engagement. Created the "Sorted x Mindwise" WhatsApp group on **Dec 19, 2025** and handled scheduling, calendar blocking, and invoice coordination for the first ~5 weeks.
+Original account manager at [[sorted-agency]] for the [[domains/mindwise/_index|Mindwise]] engagement. **Full name: Jaiman Khatri** (from Dec 2, 2025 OneNote meeting notes). Created the "Sorted x Mindwise" WhatsApp group on **Dec 19, 2025** and handled scheduling, calendar blocking, and invoice coordination for the first ~5 weeks.
 
 ## Role on Mindwise
 
+- **Attended the very first [[sorted-agency]] meeting** on Dec 2, 2025 alongside [[manik|Manik Sajnani]] (see [[brand-genesis-sorted]])
 - Created the WhatsApp group and onboarded [[thambu]] and later [[shivendra-selvam]] (Dec 23)
 - Scheduled the first meeting ([[2026-01-06-meeting-1-brief-discussion|Meeting 1, Jan 6]])
 - Coordinated Sorted's holiday break (Dec 27 – Jan 5)
@@ -31,6 +32,7 @@ Original account manager at [[sorted-agency]] for the [[domains/mindwise/_index|
 ## Sources
 
 - [[2026-04-13-whatsapp-full-export]] — primary source (WhatsApp chat Dec 19 – Mar 23)
+- [[2025-11-to-2026-03-onenote-notebook]] — Dec 2 meeting, surname "Khatri" captured
 
 ## Connections
 

@@ -8,7 +8,11 @@ updated: 2026-04-13
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-04-13 (latest) — Mindwise Full Raw Dump (WhatsApp + Meetings + Technical Catalogs)
+## 2026-04-12 (latest) — OneNote Notebook Ingest (Nov 2025 – Mar 2026)
+
+Major backstory ingest from Thambu's OneNote. **15 new pages, 12 updated.** Key revelations: [[keenmind-agreement-expiry|SFI/KeenMind 10-year agreement expired Dec 2024]] — Mindwise is the replacement. [[cdri-08-global-brands|CDRI-08 sold globally]] under 5+ brand names. [[southeast-asia-exclusion|7 Southeast Asian countries NO GO]] for Bacopa (Indus partnership). [[andrea-zangara]] writing a 4-year Bacopa monograph. [[pier-campanini]] reports Ginsana factory sale, new KeenMind buyer possible. [[brand-genesis-sorted|Sorted engaged Dec 2, 2025]]. [[avantika]] has Adani/ITC background (surname contradiction: Bhandari vs Bajoria). [[jaiman]] surname is Khatri. [[sagar-sali]] attended Jan 6 meeting. Products: 30-cap + 60-cap versions confirmed. Kids Bacopa deferred. **Total pages: ~161.**
+
+## 2026-04-13 — Mindwise Full Raw Dump (WhatsApp + Meetings + Technical Catalogs)
 
 Largest Mindwise ingest to date. Three catalogs covering 400+ files (~8-9 GB). **14 new pages created, 17 existing pages updated.** Key revelations: [[jaiman]] was original Sorted account manager (departed Jan 29), [[shipra]] co-presented content strategy, [[marketing-budget-25l|₹25L annual marketing budget]] confirmed Feb 12, [[hero-hub-hygiene-framework]] adopted, [[product-range-expansion|kids Bacopa + Bacopa+ + syrup]] confirmed, [[brand-brief-jan-2026|Brand Brief]] is the foundational document, [[life-essence-history|Life Essence]] was the previous brand name, [[lumen-fssai-license|FSSAI license]] found. Avantika = Avantika Bhandari. Tanya Leeds = Tanya Varma. **Security:** Razorpay credentials exposed in repo. **Total pages: ~135+.**
 

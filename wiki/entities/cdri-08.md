@@ -76,5 +76,12 @@ See [[cdri-08-safety-profile]] for the regulatory-grade safety package. Headline
 - Origin story: [[adam-ritson]]
 - Scientific contact: [[dr-hemant-singh]]
 - Product: [[domains/mindwise/_index|Mindwise]]
-- Sister brands historically: KeenMind, MemoPlus Gold, Memory Perfect, Actif Mind
+- Sister brands historically: KeenMind, MemoPlus Gold, Memory Perfect, Actif Mind — see [[cdri-08-global-brands]] for full map
+- [[keenmind-agreement-expiry|SFI/KeenMind 10-year agreement expired Dec 2024]] — Mindwise is the successor
+- [[sfi-health]] — previous global distributor (Europe, Middle East, Australia)
+- [[andrea-zangara]] — Bacopa science advisor, writing Bacopa monograph; CDRI-08 is "the premier ingredient"
+- [[pier-campanini]] — KeenMind ownership change / Ginsana factory sale
+- [[indus-life-sciences]] — partnership for [[bacopa-combination-formulations|combination formulations]]
+- [[southeast-asia-exclusion]] — 7 Southeast Asian countries are NO GO for Bacopa
 - Source documents: [[2026-ctd-module-2.5-clinical-overview]], [[2026-ctd-module-2.4-nonclinical-overview]]
+- [[2025-11-to-2026-03-onenote-notebook]] — KeenMind research + global brand map

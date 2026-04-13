@@ -14,9 +14,10 @@ Mumbai-based strategic consulting and branding firm. Primary brand partner for [
 
 ## Background
 - ~2-year-old firm (as of early 2026) led by [[manik]] and [[aarti-samant]]
-- Both founders previously at Future Group handling FBB, Brand Factory, Big Bazaar, Central
+- Both founders previously at Future Group handling FBB, Brand Factory, Big Bazaar, Central. Also met at Blackstone.
 - [[manik]] has 11+ years marketing experience; previously worked with brain health brand "Define" (NLP-based, non-supplement) which grew from ₹3-4L → ₹50-60L/month in 1.5 years
 - Sorted's approach: close to Google/Meta ecosystem, vox-pop research, internal content production (Gen Z Pulse project)
+- **First engagement:** December 2, 2025 (see [[brand-genesis-sorted]]). Services: strategy & content; consulting had stopped. "Community of Marketers in India — budget-based execution, very frugal."
 
 ## Team
 - [[aarti-samant]] — strategy director / co-founder
@@ -26,7 +27,8 @@ Mumbai-based strategic consulting and branding firm. Primary brand partner for [
 - [[avantika]] — growth/scaling partner (joined late January)
 - [[ankita]] — supports Binita
 - [[shipra]] — strategy team, co-presented content strategy (Feb 12)
-- [[jaiman]] — original account manager (Dec 19 – Jan 29). Created the WhatsApp group, handled scheduling and invoices. Left [[sorted-agency]] on Jan 29; handed off to [[manik]] and [[avantika]].
+- [[jaiman|Jaiman Khatri]] — original account manager (Dec 19 – Jan 29). Created the WhatsApp group, handled scheduling and invoices. Left [[sorted-agency]] on Jan 29; handed off to [[manik]] and [[avantika]].
+- [[sagar-sali]] — attended Jan 6 brief review meeting
 - Unknown (+91 88263 36685) — added by [[manik]] on Feb 13, never identified
 
 ## Office address
@@ -53,3 +55,5 @@ Mumbai-based strategic consulting and branding firm. Primary brand partner for [
 - [[2026-04-13-whatsapp-full-export]] — full WhatsApp history Dec 19 – Mar 23
 - [[2026-04-13-mindwise-raw-dump]] — meetings catalog (all 11 meetings)
 - [[sorted-meeting-transcripts]] — full catalog of meeting transcripts and availability
+- [[2025-11-to-2026-03-onenote-notebook]] — OneNote capture of Dec 2, Jan 6, Jan 23, Jan 30 meetings
+- [[brand-genesis-sorted]] — origin story (Dec 2 meeting)

@@ -62,6 +62,13 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[sorted-meeting-transcripts]] — all 11 meetings cataloged
 - [[scientific-document-library]] — 93+ research papers
 - [[lumen-fssai-license]] — FSSAI license
+- [[brand-genesis-sorted]] — how Sorted Agency got engaged (Dec 2, 2025)
+
+### Global & competitive landscape
+- [[keenmind-agreement-expiry]] — SFI 10-year agreement expired Dec 2024
+- [[cdri-08-global-brands]] — KeenMind, MemoPlus Gold, Memory Perfect, Actif Mind global map
+- [[southeast-asia-exclusion]] — 7 countries NO GO for Bacopa (Indus partnership)
+- [[bacopa-combination-formulations]] — Bacopa + DHA/Chlorella/Curcumin exploration
 
 ### Clinical & regulatory
 - [[cdri-08]]
@@ -134,7 +141,8 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[binita]] — packaging lead, current primary contact
 - [[avantika]] — Avantika Bhandari, growth
 - [[ankita]] — Ankita Duseja, UK-based, content review lead
-- [[jaiman]] — original account manager (departed Jan 29)
+- [[jaiman|Jaiman Khatri]] — original account manager (departed Jan 29)
+- [[sagar-sali]] — attended Jan 6 meeting
 - [[shipra]] — strategy team, co-presented content strategy
 
 ### Packaging vendors & references
@@ -146,13 +154,26 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[dr-hemant-singh]]
 - [[dr-dilip-ghosh]]
 - [[adam-ritson]] — origin story
+- [[andrea-zangara]] — Bacopa science advisor, monograph author
+- [[pier-campanini]] — KeenMind ownership/Ginsana contact
 
 ### Vendors / Suppliers / Manufacturers
 - [[patco-pharmaceuticals]] — bottle customization (Mumbai)
 - [[imcd]] — ingredient supplier (Mumbai)
 - [[solusta-puducherry]] — gummy manufacturer (Puducherry)
+- [[indus-life-sciences]] — Bacopa formulation partnership (international markets)
+- [[sfi-health]] — previous global CDRI-08 distributor (KeenMind)
 - [[ctd-module-2]] — regulatory dossier entity
 - [[mindwise-packaging-brief-deck]] — live Google Slides artifact
+
+### External advisors & early meetings
+- [[sarathkumar-srinath]] — early positioning advisor (Dec 3, 2025)
+- [[manu-bennur]] — early positioning meeting participant
+- [[himani]] — project manager / freelancer
+- [[praveen]] — content/awareness contact
+
+### Competitors & reference brands
+- [[wellbeing-nutrition]] — aspirational brand reference
 
 ## Entities — RaceSims people, brands & competitors
 
@@ -199,6 +220,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ## Sources (chronological, most recent first)
 
 ### Mindwise
+- [[2025-11-to-2026-03-onenote-notebook]] — OneNote meetings & research (Nov 2025 – Mar 2026)
 - [[2026-04-13-mindwise-raw-dump]] — full raw dump ingest (WhatsApp + meetings + technical catalogs)
 - [[2026-04-13-whatsapp-full-export]] — full WhatsApp chat Dec 19 – Mar 23
 - [[2026-03-26-thambu-voice-brief]] — voice brief (year-end + travel + ARKA + IMCD unlock)
@@ -240,13 +262,13 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[meta/lint-2026-04-12]] — first lint report
 - [[meta/lint-2026-04-12-cleanup-verification]] — cleanup verification
 
-## Stats (snapshot 2026-04-13, post Mindwise + RaceSims raw dump ingests)
+## Stats (snapshot 2026-04-12, post OneNote notebook ingest)
 
-- **Total pages:** 146+
+- **Total pages:** 161+
 - **Domains:** mindwise, racesims, cross
-- **Sources ingested:** 20+
-- **Entities:** 46+
-- **Concepts:** 63+
+- **Sources ingested:** 21+
+- **Entities:** 56+
+- **Concepts:** 68+
 - **Questions:** 0
 - **Orphans:** TBD (lint recommended — 10+ ingests since last lint)
 - **Dead links:** TBD (verify via lint)

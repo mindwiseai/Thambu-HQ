@@ -36,8 +36,16 @@ This creates a **secondary Mindwise SKU path** that's entirely separate from the
 
 However, it does **not** compete with or replace the current launch — the Mindwise capsule launch ([[launch-plan-june-1-2026]]) stays on track for June 1. The gummy / syrup expansion is **additive**.
 
+## Connection to Indus (Dec 13, 2025)
+
+The [[indus-life-sciences|Indus]] meeting (Dec 13, 2025) references "Solista" — likely Solusta/Solista:
+- [[thambu]] to speak to Solista and connect with [[shivendra-selvam|Shivendra]]
+- 500g Bacopa, 500g BacoZest, 100g Chlorella to be purchased from Vikash (Indus) and **sent to Solista**
+- Bacopa-based syrup samples expected as a deliverable
+- This confirms Solusta's role as the downstream manufacturer receiving raw materials from [[indus-life-sciences|Indus]]
+
 ## Open
-- Solusta's full legal name
+- Solusta's full legal name (also appears as "Solista" in Dec 2025 notes)
 - Whether Solusta manufactures other products (or only gummies)
 - Existing Lumen relationship with Solusta or cold lead
 - The corporate client's identity (could be strategic co-launch partner)

@@ -27,6 +27,16 @@ The pivot started in **Meeting 01 (late 2025)** — the foundational discovery c
 
 This was reinforced in Meeting 06 (Jan 30) when [[sorted-agency]] internally distributed sample bottles of the existing Mindwise packaging, and the team's reaction was: *"Can I even have this? Should a doctor tell me?"* Current packaging feedback from Meeting 06: "looks too clinical/medicinal/government-body; fear-inducing for younger consumers." Over-information on the label made it feel **prescription-required**. See [[scary-drug-problem]] for the full diagnosis.
 
+**Collective feedback from Jan 30 call** (per [[2025-11-to-2026-03-onenote-notebook]]):
+- "Perception — Doctor prescribed? It is generic/fear-inducing"
+- "Retail shelves — fear inducing"
+- "CDRI, govt of India" (too much government authority signaling)
+- "Presentation — seems like a lot! Too much"
+- "The shift in lens. This is not magical — this is..."
+- "The promise of leverage"
+- "A brand for the next 10 years"
+- "Lacks aspiration"
+
 The clinical/scary positioning created two compounding problems:
 1. **Killed casual trial.** People felt they needed permission.
 2. **Killed cross-age appeal.** Young people thought it was for sick people; older people thought it was a drug.
@@ -56,3 +66,5 @@ The test: would a confident 35-year-old high performer voluntarily share this wi
 - [[semi-transparent-bottle]] — the visual unlock
 - [[age-paradox]] — the secondary problem this also solves
 - [[2026-01-23-meeting-3-brand-strategy-workshop]] — where this was locked
+- [[brand-genesis-sorted]] — the Dec 2 origin meeting that started the process
+- [[2025-11-to-2026-03-onenote-notebook]] — Jan 30 collective feedback quotes

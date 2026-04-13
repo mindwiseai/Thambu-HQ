@@ -23,6 +23,14 @@ Secondary lead working with [[thambu]] across both [[domains/mindwise/_index|Min
 - Proposed the separate-packaging-vs-blister-pack design options
 - Joined the March 17 quick call with [[binita]] (2 minutes late, per chat history)
 
+## Indus Life Sciences partnership
+
+[[shivendra-selvam|Shivendra]] manages the [[indus-life-sciences|LMC x Indus]] relationship (Dec 13, 2025 meeting with Vikash and Mani):
+- Establishing working relationship for all Bacopa formulation and variation work
+- Responsible for setting up follow-up meetings with Vikash
+- Introduced [[andrea-zangara]] to [[thambu]] (Feb 3, 2026)
+- Referenced as "Shivendra – Indus (Vikash)" in the OneNote notes, suggesting he is the primary liaison
+
 ## Notes
 - Works as Thambu's secondary on calls; Thambu remains primary decision-maker
 - Email / contact details unknown (need to capture on next ingest)

@@ -9,6 +9,40 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-04-12] ingest | OneNote Notebook — External Meetings & Research (Nov 2025 – Mar 2026)
+- Source: [[2025-11-to-2026-03-onenote-notebook]]
+- **Created: 15 new pages:**
+  - [[andrea-zangara]] — Bacopa science advisor, monograph author
+  - [[pier-campanini]] — KeenMind ownership/Ginsana factory contact
+  - [[indus-life-sciences]] — Bacopa formulation partnership (Vikash/Mani)
+  - [[manu-bennur]] — early positioning meeting participant
+  - [[sarathkumar-srinath]] — early positioning advisor
+  - [[himani]] — project manager/freelancer
+  - [[praveen]] — content/awareness contact
+  - [[sagar-sali]] — Sorted team member
+  - [[sfi-health]] — previous CDRI-08 global distributor
+  - [[wellbeing-nutrition]] — aspirational brand reference
+  - [[keenmind-agreement-expiry]] — 10-year SFI agreement expired Dec 2024
+  - [[cdri-08-global-brands]] — 5+ brand names across global markets
+  - [[southeast-asia-exclusion]] — 7 countries NO GO for Bacopa
+  - [[bacopa-combination-formulations]] — Bacopa + DHA/Chlorella/Curcumin
+  - [[brand-genesis-sorted]] — Dec 2 origin story of Sorted engagement
+- **Updated: 12 existing pages:**
+  - [[sorted-agency]] — added origin story, [[sagar-sali]], Blackstone background
+  - [[manik]] — added Dec 2, Jan 6, Jan 30 meeting details
+  - [[avantika]] — added Adani/ITC background, Bajoria surname contradiction
+  - [[jaiman]] — added surname Khatri, Dec 2 meeting attendance
+  - [[tanya-leeds]] — confirmed Strategy role from Jan 6 OneNote
+  - [[cdri-08]] — added global brands, SFI, Andrea, Pier, Indus connections
+  - [[positioning-shift]] — added Jan 30 collective feedback quotes
+  - [[scary-drug-problem]] — added Jan 30 detailed perception quotes
+  - [[semi-transparent-bottle]] — added Jan 30 visual direction details, Two Brothers reference
+  - [[product-range-expansion]] — added Indus Dec 13 meeting, Himani Mar 16 sizing
+  - [[shivendra-selvam]] — added Indus partnership management role
+  - [[solusta-puducherry]] — added Indus/Solista Dec 13 connection
+- Domain: mindwise
+- Covers 9 source sections from OneNote notebook (Nov 2025 – Mar 2026): Sorted meetings, KeenMind research, Indus partnership, Bacopa global map, Andrea Zangara, Pier Campanini, Sarathkumar positioning, Himani projects, Mindwise India ops
+
 ## [2026-04-13] ingest | Mindwise Full Raw Dump (WhatsApp + Meetings Catalog + Technical Catalog)
 - Source: [[2026-04-13-mindwise-raw-dump]] (umbrella), [[2026-04-13-whatsapp-full-export]] (WhatsApp)
 - **Created: 14 new pages:**

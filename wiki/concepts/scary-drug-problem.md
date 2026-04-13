@@ -17,6 +17,14 @@ Sorted's internal team, looking at the existing Mindwise bottle, asked:
 
 That single sentence crystallized the problem.
 
+**Detailed perception feedback from Jan 30 call** (per [[2025-11-to-2026-03-onenote-notebook]]):
+- "Perception — Doctor prescribed? It is generic/fear-inducing"
+- "Retail shelves — fear inducing"
+- "CDRI, govt of India" (authority overload)
+- "Presentation — seems like a lot! Too much"
+- "Lacks aspiration"
+- Competitive references that do it better: Simply Nootropics (simpler branding), Tonic, Neuro, Onnit
+
 ## What was causing it
 
 1. **Over-information on the label.** The existing label had CDRI mentions, "Make in India" certifications, clinical claims, regulatory marks — all factually true, all visually overwhelming.
@@ -60,3 +68,4 @@ The reverse test: hand someone a Mindwise bottle (or look at an Instagram post /
 - [[your-unfair-advantage]] — the language solution
 - [[age-paradox]] — the closely related problem
 - [[2026-01-23-meeting-3-brand-strategy-workshop]] — where this was diagnosed
+- [[2025-11-to-2026-03-onenote-notebook]] — Jan 30 detailed perception quotes
