@@ -45,16 +45,20 @@ Partial progress + new blocks:
 - **Both blister pack specs** locked (60-bottle + 120-bottle PDFs in the brief deck)
 - **Nutrition panel child/adult dosing confusion** being actively resolved by [[ankita|Ankita]]
 
-### 🔴 New blocks discovered
-- **Bottle cap height** still owed by [[patco-pharmaceuticals|Patco]] — [[shivendra-selvam|Shivendra]] has been chasing "since yesterday" (i.e., from April 10). Without the cap height, Sorted can't finalize the label layout because the bottle proportions are shorter than originally designed and everything must be re-laid-out.
-- **Outer cardboard box decision** — [[outer-cardboard-box-decision|Shivendra raised a NEW question]]: should Mindwise ship bottle-only vs. with outer box? Answer due week of April 13-17 based on cardboard vendor quote. If bottle-only, the label must absorb ALL regulatory info + nutrition + brand story — another full redesign.
-- **Label proportions redesign** — the new Patco bottle is shorter/wider than the original design. All current mockups need to be re-created from scratch on the new geometry.
+### 🟡 Blocks partially resolved (April 13 update)
+- **Bottle cap height — RESOLVED.** Patco confirmed dimensions: **50mm × 50mm base, 75mm height including cap, 100cc HDPE.** Mold costs: ₹30K bottle + ₹1L cap. Shivendra shared technical drawings with Binita on WhatsApp (April 13, 2:50 PM). Binita acknowledged and asked if Patco can proceed with costing in parallel while she resizes the label.
+- **Outer cardboard box** — Shivendra said "lets assume they are also these dimensions" for the outer box. Decision still pending but outer box dimensions now assumed = bottle dimensions.
+- **Label proportions redesign** — Binita confirmed she'll pick up label resizing after website mock-up work is done. Working in parallel with Patco costing.
+- **4-side bottle label layout LOCKED** (April 8 call) — content approved. See [[packaging-content-layout]].
 
-### ⚠️ Old risks still unresolved
-- **Mid-April brand book deliverables.** These were promised. Today is April 12. Confirmation needed THIS WEEK that the deliverables landed.
-- **April 2 in-person meeting.** Did it happen on schedule? Did the visual identity get presented? See [[april-2-mumbai-meeting]].
-- **Website decision.** Was a decision made on April 5 about Sorted ₹6L vs alternatives? See [[website-development]].
-- **Performance agency.** Was Manik's freelancer vetted and met on April 2?
+### 🟡 Partially resolved risks
+- **Performance agency — RESOLVED.** [[dibiz-solution|Dibiz Solution]] essentially hired at ~₹2.75-2.8L/month. Social media included. Website ~₹1.75L. Growth marketing starts May 2026.
+- **Website decision — RESOLVED.** Dibiz taking over website at ₹1.75L (vs Sorted's ₹6L). Starting mid-April.
+- **Sorted engagement ending** end of April → Dibiz takes over execution in May.
+
+### ⚠️ Remaining risks
+- **Mid-April brand book deliverables.** Confirmation still needed.
+- **Binita bandwidth** — she's doing website mock-up AND label resizing. Both are on the critical path.
 - **Pricing lock.** Was [[pricing-strategy|₹850-900]] formally signed off?
 
 ⚠️ This wiki was bootstrapped on 2026-04-11 — these answers are not yet captured. Next ingest priority: get a status update from the April 2 meeting outcomes.
