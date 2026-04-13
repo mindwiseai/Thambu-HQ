@@ -42,7 +42,7 @@ Mumbai-based growth marketing agency. Submitted a **Content Production + Organic
 
 ### Meeting 3 — April 13, 2026 (Negotiation & finalization)
 - **Agreed scope:** Growth marketing + social media management (basic hygiene posting) + website
-- **Pricing:** Rs.3L proposed → negotiated to **~Rs.2.75-2.8L/month** (social media included at no extra cost)
+- **Pricing:** Rs.3L proposed → negotiated to **₹2.5L/month** (social media included at no extra cost)
 - **Website:** ~Rs.1.75L, starting mid-April (technical setup first, brand aesthetic applied once Sorted delivers)
 - **Timeline:** Content strategy + campaigns start **May 2026**; first 15 days for strategy, shoots from day 15+
 - **Sorted handover:** Dibiz to join Sorted's remaining meetings in April for warm handoff

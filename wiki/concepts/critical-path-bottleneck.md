@@ -52,7 +52,7 @@ Partial progress + new blocks:
 - **4-side bottle label layout LOCKED** (April 8 call) — content approved. See [[packaging-content-layout]].
 
 ### 🟡 Partially resolved risks
-- **Performance agency — RESOLVED.** [[dibiz-solution|Dibiz Solution]] essentially hired at ~₹2.75-2.8L/month. Social media included. Website ~₹1.75L. Growth marketing starts May 2026.
+- **Performance agency — RESOLVED.** [[dibiz-solution|Dibiz Solution]] hired at **₹2.5L/month**. Social media included. Website ~₹1.75L. Growth marketing starts May 2026.
 - **Website decision — RESOLVED.** Dibiz taking over website at ₹1.75L (vs Sorted's ₹6L). Starting mid-April.
 - **Sorted engagement ending** end of April → Dibiz takes over execution in May.
 
