@@ -13,11 +13,13 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 
 - [[domains/mindwise/_index|🧠 Mindwise]] — cognitive supplement, June 1 2026 launch
 - [[domains/racesims/_index|🏎 RaceSims]] — sim-racing hardware company
+- [[domains/prenatal/_index|🤰 Prenatal]] — DTC prenatal supplement (Aishu's brand, pre-launch)
 
-## Cross-cutting (both domains)
+## Cross-cutting (all domains)
 
-- [[thambu]] — owner of both businesses
-- [[shivendra-selvam]] — secondary lead across both
+- [[thambu]] — owner of all three businesses
+- [[shivendra-selvam]] — secondary lead (Mindwise + RaceSims)
+- [[aishwarya-chandrasekhar]] — Aishu, founder of prenatal brand, Thambu's wife
 
 ## Top concepts (Mindwise)
 
@@ -257,6 +259,27 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[2026-03-26-thambu-voice-brief]] — also covers RaceSims year-end + ARKA
 - [[2026-03-25-vrh-battle-plan]] — competitive intel
 - [[2026-03-25-seo-geo-audit]] — SEO + GEO state
+
+## Top concepts (Prenatal)
+
+### Strategy & positioning
+- [[prenatal-dtc-lifestyle-strategy]] — lifestyle brand with clinical backing (LOCKED)
+- [[prenatal-gynecologist-cofounder]] — co-founder search (Step 0 blocker)
+- [[prenatal-launch-roadmap]] — 6-step launch plan
+
+### Regulatory
+- [[prenatal-fsdu-regulatory]] — FSSAI FSDU category, label requirements, claim rules
+
+### Operations
+- [[prenatal-contract-manufacturers]] — shortlisted manufacturers ([[brukem-life-care]] top pick)
+- [[prenatal-efficacy-phases]] — phased clinical proof strategy
+
+### Competitors & benchmarks
+- [[ritual-benchmark]] — US brand model ($250M+, DTC, transparency)
+- [[trimacare]] — main Indian competitor (pharma-coded, doctor-driven)
+
+### Sources
+- [[2026-04-13-prenatal-brand-strategy]] — comprehensive strategy document
 
 ## Filed questions
 

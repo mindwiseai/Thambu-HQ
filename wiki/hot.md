@@ -8,7 +8,16 @@ updated: 2026-04-13
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-04-12 (latest) — Raw Mindwise Unique Files Ingest
+## 2026-04-13 (latest) — Prenatal Brand Domain Created
+
+- **New domain: [[domains/prenatal/_index|Prenatal]]** — Aishu's ([[aishwarya-chandrasekhar]]) DTC prenatal supplement brand for India. Modeled on [[ritual-benchmark|Ritual]] (US, $250M+). Pre-launch research phase.
+- **13 new pages created:** domain index, 1 source, 4 entities ([[aishwarya-chandrasekhar]], [[ritual-benchmark]], [[trimacare]], [[brukem-life-care]]), 6 concepts ([[prenatal-fsdu-regulatory]], [[prenatal-gynecologist-cofounder]], [[prenatal-dtc-lifestyle-strategy]], [[prenatal-launch-roadmap]], [[prenatal-contract-manufacturers]], [[prenatal-efficacy-phases]])
+- **Key strategic decisions LOCKED:** lifestyle brand (not pharma), FSDU regulatory path, DTC subscription, gynecologist co-founder level
+- **#1 blocker:** gynecologist co-founder search not yet begun
+- **Top manufacturer pick:** [[brukem-life-care]] (Ahmedabad, USFDA, prenatal experience)
+- **Main competitor:** [[trimacare]] (pharma-coded, doctor-driven — opposite strategic lane)
+
+## 2026-04-12 — Raw Mindwise Unique Files Ingest
 
 - **[[fssai-label-regulatory-text]]** created: complete FSSAI label text for bottle. Manufacturer: Dr. Miltons Laboratories (Puducherry). 160mg CDRI Bacopa per capsule. Critical for [[outer-cardboard-box-decision]] — massive amount of regulatory text to fit if box is dropped.
 - **TWO CSIR-CDRI licenses confirmed** for [[lumen-marketing-company|LMC]]: (1) CDRI-08 Bacopa and (2) **Terminalia chebula extract for BPH** (licensed Feb 17, 2019). [[chemiloids-life-sciences]] (Vijayawada) NDA for processing. Second license was unknown until now.
@@ -31,25 +40,16 @@ Most recently touched context. Read this first for any query — it often answer
 
 - Avantika split confirmed. Solista name fix applied. SE Asia exclusion reframed.
 
-## 2026-04-12 — Multiple ingests (WhatsApp Apr 10-11, Voice brief, Gmail drafts, ARKA website)
-
-Key outcomes: Website content + UX APPROVED by [[ankita]]. Patco printing prototype in progress. [[outer-cardboard-box-decision]] live — may be dropped. [[arka-motorsports]] = Thambu's racing team. [[beta-free-bacopa-extract]] from [[imcd]] + [[solusta-puducherry|Solista]] unlocks gummy/syrup expansion.
-
 ## Current state of the businesses (as of 2026-04-13)
 
+### Prenatal Brand — pre-launch research phase (NEW)
+[[aishwarya-chandrasekhar|Aishu's]] DTC prenatal supplement. Strategy LOCKED: lifestyle brand, FSDU regulatory, DTC subscription, gynecologist co-founder. #1 blocker: co-founder search not begun. [[brukem-life-care]] top manufacturer pick.
+
 ### Mindwise — final stretch before [[launch-plan-june-1-2026|June 1 launch]] (~49 days)
+Brand identity LOCKED. Website content APPROVED by [[ankita]]. [[outer-cardboard-box-decision]] pending. [[dibiz-solution|Dibiz]] starts May.
 
-Brand identity LOCKED: [[your-unfair-advantage]], [[route-3-architecture-of-intelligence]], [[semi-transparent-bottle]], [[60-capsule-bottle-decision]], [[pricing-strategy|Rs.850-900 MRP]], [[patco-pharmaceuticals|Patco]] as customization vendor.
-
-### RaceSims — operational picture now complete
-
-With this ingest, the wiki now has near-complete coverage of RaceSims operations:
-- **Full supplier chain:** [[conspit]] (primary), [[vnm]] (motion+DD), [[simagic-distributor|Simagic]] (mid-tier, South India exclusive), [[asetek]] (premium), [[techxhub]] (Fanatec/Playseat), Sim-Lab, Two Seats
-- **[[import-operations]]:** HS 9023.00.90, ~31% duty, 25% distributor margin
-- **[[kit-pricing]]:** 4 tiers from Rs.2.5L to Rs.11L+
-- **[[customer-pipeline]]:** 5+ confirmed, 5+ prospects, B2B pipeline (Araya, IPL teams)
-- **[[racesims-company]]:** fully documented legal entity
-- **VRH power dynamic inverted:** VRH was RaceSims' supplier (Jan 2025), now VRH is a controlled reseller for [[conspit]] via RaceSims
+### RaceSims — operational picture complete
+Full supplier chain, pricing, legal entity, customer pipeline documented. Simagic contract expires May 2026.
 
 ## Blind spots (next ingestion priorities)
 

@@ -31,7 +31,7 @@ Thambu has been trying to set up a robust personal knowledge system for a long t
 ## Company details (2026-04-13 update)
 
 - **[[racesims-company|Racesims Solutions Pvt Ltd]]** — GSTIN 33AAOCR6378K1ZO, MSME UDYAM-TN-02-0393822, Startup India certified
-- Co-director: Aishwarya C
+- Co-director: [[aishwarya-chandrasekhar|Aishwarya C (Aishu)]]
 - Registered address: Second Floor, Ashok Nagar, Chennai 600083 (shared with [[lumen-marketing-company]])
 - Banking: ICICI Bank, KK Nagar (A/C 007705022712)
 - PAN: ATRPT1767D
@@ -43,6 +43,7 @@ Thambu has been trying to set up a robust personal knowledge system for a long t
 
 ## Connections
 - Owns [[lumen-marketing-company]], [[domains/mindwise/_index|Mindwise]], [[domains/racesims/_index|RaceSims]]
+- Co-founding [[domains/prenatal/_index|prenatal brand]] with wife [[aishwarya-chandrasekhar|Aishu]]
 - [[racesims-company]] — legal entity details
 - Primary contact for [[sorted-agency|Sorted Agency]]
 - **Race engineer for [[arka-motorsports]]** (live, active relationship — the moat)

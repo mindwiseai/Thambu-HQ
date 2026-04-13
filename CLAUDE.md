@@ -1,10 +1,11 @@
 # Thambu's HQ — Unified Project Hub
 
-Workspace for Thambu's two businesses, organized as a [Karpathy LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) on top of an existing project monorepo.
+Workspace for Thambu's three businesses, organized as a [Karpathy LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) on top of an existing project monorepo.
 
-## The two businesses
+## The three businesses
 - **RaceSims** — India's pro-grade sim racing hardware company. racesims.in. Public.
 - **Mindwise** — Cognitive wellness supplement (CDRI-08 Bacopa monnieri) by Lumen Marketing Company. Launching 2026-06-01.
+- **Prenatal Brand** — India's first transparency-led DTC prenatal supplement. Founded by Aishu (Aishwarya Chandrasekhar, Thambu's wife). Pre-launch research phase.
 
 ## Three-layer architecture
 
@@ -13,6 +14,7 @@ Thambu-HQ/
 ├── wiki/              ← LLM-OWNED knowledge layer. Humans read in Obsidian, never write.
 ├── racesims/          ← RAW source: sim racing kits, content, strategy, bot
 ├── mindwise/          ← RAW source: brand strategy, CTD regulatory, meeting notes, launch plan
+├── prenatal/          ← RAW source: prenatal brand strategy, regulatory, manufacturer research
 ├── voice-briefs/      ← RAW source: Discord-bot voice transcripts (drop here, then ingest)
 ├── command-center/    ← unified dashboard (operational, not part of the wiki)
 ├── .claude/rules/     ← schema layer (loads on demand via paths: scoping)
@@ -25,7 +27,7 @@ Read order — **always** in this sequence, stop as soon as you have what you ne
 
 1. `wiki/hot.md` — recent context cache (~500 words)
 2. `wiki/index.md` — master catalog
-3. `wiki/domains/<domain>/_index.md` — domain catalog (mindwise or racesims)
+3. `wiki/domains/<domain>/_index.md` — domain catalog (mindwise, racesims, or prenatal)
 4. 3–5 individual wiki pages
 
 If you find yourself reading 8+ pages, stop. Either narrow the question or update the wiki indexes.
@@ -50,6 +52,7 @@ If you find yourself reading 8+ pages, stop. Either narrow the question or updat
 Path-scoped rules in `.claude/rules/*.md` load automatically when you touch matching files:
 - `mindwise.md` — loads in `mindwise/**` and `wiki/domains/mindwise/**`
 - `racesims.md` — loads in `racesims/**` and `wiki/domains/racesims/**`
+- `prenatal.md` — loads in `prenatal/**` and `wiki/domains/prenatal/**`
 
 This keeps the root CLAUDE.md small and only loads domain context when needed.
 
@@ -57,4 +60,5 @@ This keeps the root CLAUDE.md small and only loads domain context when needed.
 - Owner: Thambu (thambu@racesims.in)
 - RaceSims website: racesims.in
 - Mindwise launch: June 1, 2026
+- Prenatal brand: pre-launch research phase (Aishu leading)
 - Voice updates come via Discord bot or email voice briefs → drop into `voice-briefs/` → run `/ingest`

@@ -9,6 +9,28 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-04-13] ingest | Prenatal Brand Strategy — New Domain Bootstrap
+- Source: [[2026-04-13-prenatal-brand-strategy]]
+- **Created: 13 new pages:**
+  - [[domains/prenatal/_index]] — new domain index (third business)
+  - [[aishwarya-chandrasekhar]] — Aishu, founder, Thambu's wife
+  - [[ritual-benchmark]] — US prenatal brand benchmark ($250M+)
+  - [[trimacare]] — main Indian competitor
+  - [[brukem-life-care]] — top-pick contract manufacturer
+  - [[prenatal-fsdu-regulatory]] — FSSAI FSDU regulatory framework
+  - [[prenatal-gynecologist-cofounder]] — co-founder search strategy
+  - [[prenatal-dtc-lifestyle-strategy]] — lifestyle vs pharma decision (LOCKED)
+  - [[prenatal-launch-roadmap]] — 6-step launch plan
+  - [[prenatal-contract-manufacturers]] — manufacturer shortlist
+  - [[prenatal-efficacy-phases]] — phased clinical proof
+  - [[2026-04-13-prenatal-brand-strategy]] — source page
+- **Updated: 3 existing pages:**
+  - [[thambu]] — added Aishu link, prenatal brand connection
+  - [[index]] — added prenatal domain + concepts section
+  - [[hot]] — added prenatal bootstrap entry
+- Domain: prenatal (NEW)
+- **First ingest for a new domain.** Aishu's prenatal brand now fully linked into the Obsidian brain.
+
 ## [2026-04-12] ingest | Raw Mindwise Unique Files (Packaging Regulatory, NDAs, Marketing, Technical)
 - Source: [[2026-raw-mindwise-unique-files]]
 - **Created: 4 new pages:**
