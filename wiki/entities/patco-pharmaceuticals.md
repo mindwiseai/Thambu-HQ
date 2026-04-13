@@ -43,14 +43,42 @@ The bottle vendor journey: [[elicura-bottle-reference|Elicura]] frosted bottle r
 | Color trial (black) | Rs.1,000 |
 | Mold + first sample timeline | 30-35 days mold → 10 days sample |
 
-## Confirmed bottle dimensions (from April 8 call)
-- **Base: 50mm x 50mm (rectangular)**
-- **Height: 75mm including cap**
-- **OFC volume: 100cc**
-- **Weight: 15g**
-- Cap height: still owed by Patco, but [[shivendra-selvam]] estimated 68-70mm without cap during April 8 call
-- **Cylindrical option** also being 3D printed — will be wider/shorter to maintain 100cc volume
-- Material: **HDPE medical grade** — all components
+## Confirmed bottle dimensions (engineering drawings shared April 13)
+
+### Option A — Square/Rectangular Bottle (PRIMARY)
+| Dimension | Value |
+|---|---|
+| Base | **50mm × 50mm** |
+| Body height | **60mm** |
+| Cap height | **14mm** (above bottle) |
+| **Total height** | **74mm** |
+| Internal height | 53.5mm |
+| Neck opening | 40mm |
+| Volume | **100ML** |
+| Overflow volume | 120ML (+/- 10ML) |
+| Bottle weight | 15g |
+
+### Option B — Cylinder Bottle
+| Dimension | Value |
+|---|---|
+| Body diameter | **50mm** |
+| Body height | **71.5mm** (50mm body + neck) |
+| Cap outer diameter | 49.9mm |
+| Cap height | **23mm** |
+| **Total height** | **~94.5mm** |
+| Internal height | 43.5mm |
+| Neck opening | 46mm |
+| Volume | **100ML** |
+| Overflow volume | 120ML (+/- 10ML) |
+| Bottle weight | 15g |
+
+### Caps
+| Part | Dimensions | Weight | Material |
+|---|---|---|---|
+| Round cap (cylinder) | 49.9mm dia × 23mm H | 5g | PP |
+| Square cap (rectangle) | 50×50mm × 15mm H | 7g | PP |
+
+- Material: **HDPE medical grade** for bottles, **PP** for caps
 
 ## Color trials agreed
 In the Patco-Sorted meeting, 4 color trials were agreed:
@@ -61,18 +89,21 @@ In the Patco-Sorted meeting, 4 color trials were agreed:
 
 Colors to be tested on existing round bottle shapes first (saves time vs waiting for mold). RGB codes to be provided by [[sorted-agency]]. Once color is confirmed, then proceed with mold for final shape.
 
-## Current status (updated 2026-04-11 from [[2026-04-10-to-11-sorted-whatsapp-packaging-push|April 10-11 WhatsApp capture]])
+## Current status (updated 2026-04-13)
 - ✅ Vendor selected
-- ✅ Final bottle dimensions received by Sorted (rectangular + cylinder both)
-- ✅ **Patco is currently printing a prototype** based on the final dimensions
-- ⏳ **Bottle cap height** still owed by Patco (Shivendra chasing since April 9-10)
-- ⏳ Packaging sleeve box dimensions still owed by Patco
-- ⚠️ **New bottle proportions are SHORTER than the original design assumption** — this forces the Sorted design team to recreate all label layouts (see [[semi-transparent-bottle]] update)
+- ✅ **Full engineering drawings shared with Sorted** (April 13, 2:50 PM WhatsApp)
+- ✅ **Cap height RESOLVED** — Square cap: 14-15mm, Round cap: 23mm
+- ✅ Prototype being printed
+- ✅ Mold costs quoted (₹30K bottle + ₹1L cap)
+- ⏳ [[binita]] resizing labels to new dimensions (after website mock-up)
+- ⏳ Shivendra talking to Patco about next steps for costing/sampling
+- ⏳ Outer box dimensions assumed = bottle dimensions
 
 ## Next steps
-- 🔴 Patco MUST deliver bottle cap height (blocking label layout work)
-- Patco to receive final updated label artwork once Sorted re-layouts on new proportions
-- Sample packaging with logo: target end of April 2026 (may slip depending on cap height delivery)
+- Binita to resize label artwork to new bottle geometry
+- Patco to receive final updated label artwork → sampling and costing
+- Color trials on existing round bottles first (4 trials agreed)
+- Sample packaging with logo: target end of April 2026
 - First production batch: target mid-May 2026
 
 ## Connections
