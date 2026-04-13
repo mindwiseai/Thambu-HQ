@@ -67,7 +67,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ### Global & competitive landscape
 - [[keenmind-agreement-expiry]] — SFI 10-year agreement expired Dec 2024
 - [[cdri-08-global-brands]] — KeenMind, MemoPlus Gold, Memory Perfect, Actif Mind global map
-- [[southeast-asia-exclusion]] — 7 countries NO GO for Bacopa (Indus partnership)
+- [[southeast-asia-exclusion]] — 7 SE Asian countries excluded for Indus (LMC territorial protection)
 - [[bacopa-combination-formulations]] — Bacopa + DHA/Chlorella/Curcumin exploration
 
 ### Clinical & regulatory
@@ -118,7 +118,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ### Product expansion (Mindwise)
 - [[beta-free-bacopa-extract]] — unlocks gummies and syrups
 - [[imcd]] — Mumbai ingredient supplier
-- [[solusta-puducherry]] — Puducherry gummy manufacturer
+- [[solusta-puducherry]] — Solista, Puducherry gummy manufacturer
 
 ### Operations (RaceSims finance & logistics)
 - [[racesims-company]] — legal entity, GSTIN, MSME, trademark
@@ -160,7 +160,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ### Vendors / Suppliers / Manufacturers
 - [[patco-pharmaceuticals]] — bottle customization (Mumbai)
 - [[imcd]] — ingredient supplier (Mumbai)
-- [[solusta-puducherry]] — gummy manufacturer (Puducherry)
+- [[solusta-puducherry]] — Solista, gummy manufacturer (Puducherry)
 - [[indus-life-sciences]] — Bacopa formulation partnership (international markets)
 - [[sfi-health]] — previous global CDRI-08 distributor (KeenMind)
 - [[ctd-module-2]] — regulatory dossier entity

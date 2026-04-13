@@ -12,7 +12,7 @@ Owner and founder of both [[lumen-marketing-company|Lumen Marketing Company]] (w
 ## Roles
 
 - **RaceSims:** founder, race engineer (championship-winning teams background — this is the [[race-engineer-positioning|moat]]), primary business driver. **Still actively tunes race cars for [[arka-motorsports|ARKA Motorsports]]** (Coimbatore racing team, formerly Red Rooster Performance) — this is a real, ongoing relationship, not a historical credential.
-- **Mindwise/Lumen:** founder/CEO, primary decision-maker on brand and strategic direction, owns the relationship with [[sorted-agency]]. Sourcing new ingredients via [[imcd]] and [[solusta-puducherry|Solusta]] to expand beyond capsules into [[beta-free-bacopa-extract|gummies and syrups]].
+- **Mindwise/Lumen:** founder/CEO, primary decision-maker on brand and strategic direction, owns the relationship with [[sorted-agency]]. Sourcing new ingredients via [[imcd]] and [[solusta-puducherry|Solista]] to expand beyond capsules into [[beta-free-bacopa-extract|gummies and syrups]].
 - **Working with [[shivendra-selvam|Shivendra]]:** shared resource across both businesses, handles secondary lead, vendor coordination, follow-up
 - **Email accounts in use:** thambu@racesims.in, thambulumen@gmail.com, and mindwise.ai1@gmail.com (the account connected to the Gmail MCP — also used for voice briefs and the Claude-assisted task-extraction pipeline)
 

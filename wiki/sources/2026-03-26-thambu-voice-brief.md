@@ -17,7 +17,7 @@ ingested: 2026-04-12
 
 ## Summary
 
-A comprehensive spoken brief from [[thambu]] laying out his year-end RaceSims push, his travel plan to Coimbatore → Bangalore → Mumbai, and new Mindwise supply-chain opportunities via [[imcd]] in Mumbai and [[solusta-puducherry|Solusta]] in Puducherry. This voice brief is **high-impact for the wiki** because it reveals:
+A comprehensive spoken brief from [[thambu]] laying out his year-end RaceSims push, his travel plan to Coimbatore → Bangalore → Mumbai, and new Mindwise supply-chain opportunities via [[imcd]] in Mumbai and [[solusta-puducherry|Solista]] in Puducherry. This voice brief is **high-impact for the wiki** because it reveals:
 
 1. **[[arka-motorsports|ARKA Motorsports]]** — the real-world racing team Thambu tunes race cars for. **This is the concrete proof of the [[race-engineer-positioning|race-engineer moat]]** — not a theoretical claim but an active relationship.
 2. **[[beta-free-bacopa-extract]]** — potentially unlocks **gummy and syrup formulations** for Mindwise, expanding the product roadmap beyond capsules.
@@ -63,11 +63,11 @@ A comprehensive spoken brief from [[thambu]] laying out his year-end RaceSims pu
 
 ## Mindwise ingredient & format strategic opportunity
 
-Via [[imcd]] (Mumbai supplier) + [[solusta-puducherry|Solusta]] (Puducherry manufacturer):
+Via [[imcd]] (Mumbai supplier) + [[solusta-puducherry|Solista]] (Puducherry manufacturer):
 
 - **Beta-free Bacopa extract** → enables gummy AND syrup forms (see [[beta-free-bacopa-extract]])
 - **Required** for the existing **Philippines market** ([[adam-ritson|the historic MemoPlus Gold market]])
-- **Unlocked opportunity:** Solusta has a corporate client interested in Bacopa gummies who requires bitter-free formulation
+- **Unlocked opportunity:** Solista has a corporate client interested in Bacopa gummies who requires bitter-free formulation
 - **Ripple effect:** this could add gummy + syrup SKUs to the Mindwise roadmap beyond the launch capsule
 
 ## Other context captured

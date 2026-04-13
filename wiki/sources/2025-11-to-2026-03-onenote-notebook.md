@@ -13,13 +13,13 @@ Thambu's OneNote notebook containing meeting notes and research pages spanning N
 
 ## Summary
 
-This notebook captures the pre-launch exploration phase of [[domains/mindwise/_index|Mindwise]] — from the first [[sorted-agency]] meeting (Dec 2, 2025) through partner meetings ([[indus-life-sciences|Indus]], [[andrea-zangara]], [[pier-campanini]]), distributor research ([[sfi-health]], [[keenmind-agreement-expiry|KeenMind agreement expiry]]), and operational planning ([[himani]], [[praveen]]). It reveals the full origin story of how [[sorted-agency]] was engaged, the global [[cdri-08-global-brands|CDRI-08 brand map]], the [[southeast-asia-exclusion|Southeast Asia exclusion]] for Bacopa, and the [[bacopa-combination-formulations|combination formulation]] work with [[indus-life-sciences|Indus]].
+This notebook captures the pre-launch exploration phase of [[domains/mindwise/_index|Mindwise]] — from the first [[sorted-agency]] meeting (Dec 2, 2025) through partner meetings ([[indus-life-sciences|Indus]], [[andrea-zangara]], [[pier-campanini]]), distributor research ([[sfi-health]], [[keenmind-agreement-expiry|KeenMind agreement expiry]]), and operational planning ([[himani]], [[praveen]]). It reveals the full origin story of how [[sorted-agency]] was engaged, the global [[cdri-08-global-brands|CDRI-08 brand map]], the [[southeast-asia-exclusion|Southeast Asia exclusion for Indus]], and the [[bacopa-combination-formulations|combination formulation]] work with [[indus-life-sciences|Indus]].
 
 ## Key facts
 
 - [[keenmind-agreement-expiry|10-year KeenMind/SFI agreement expired December 2024]] — Mindwise is the replacement product for India
 - [[cdri-08]] is commercially sold under 5+ brand names globally: KeenMind, MemoPlus Gold, Memory Perfect, MindWise, Actif Mind
-- [[southeast-asia-exclusion|Philippines, Malaysia, Thailand, Cambodia, Vietnam, Burma, Indonesia are NO GO]] for Bacopa (in partnership with [[indus-life-sciences|Indus]])
+- [[southeast-asia-exclusion|Philippines, Malaysia, Thailand, Cambodia, Vietnam, Burma, Indonesia excluded for Indus]] — LMC territorial protection (LMC already operates in these markets with MemoPlus Gold, Actif Mind)
 - [[andrea-zangara]] is a Bacopa science advisor writing a Bacopa monograph (4-year effort), will be at Vita Foods
 - [[pier-campanini]] reports a factory takeover at Ginsana, with a new buyer potentially acquiring KeenMind
 - [[sorted-agency]] was first engaged Dec 2, 2025 — [[manik|Manik Sajnani]] and [[jaiman|Jaiman Khatri]] attended
@@ -49,7 +49,7 @@ This notebook captures the pre-launch exploration phase of [[domains/mindwise/_i
 
 - LMC x Indus partnership: all Bacopa formulation/variation work to be delivered by LMC, Indus to take to markets
 - Philippines completely excluded from any Bacopa-related work
-- Southeast Asia broadly excluded (NO GO in red)
+- Southeast Asia excluded for Indus (LMC territorial protection — LMC already operates there)
 - Sorted engaged for strategy + content first, then branding
 - Products: 30-cap and 60-cap versions confirmed
 - Kids Bacopa deferred ("not now" per Mar 16 Himani meeting)

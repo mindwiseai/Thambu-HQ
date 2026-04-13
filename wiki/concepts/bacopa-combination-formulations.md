@@ -23,7 +23,7 @@ Explored in the December 13, 2025 meeting with [[indus-life-sciences|Indus (Vika
 - [[indus-life-sciences|Indus]] handles international market distribution
 - [[lumen-marketing-company|LMC]] delivers all Bacopa formulation and variation work
 - Raw materials: 500g Bacopa, 500g BacoZest, 100g Chlorella to be purchased from Vikash and sent to Solista
-- [[solusta-puducherry|Solista/Solusta]] expected to manufacture
+- [[solusta-puducherry|Solista]] expected to manufacture
 
 ## Relationship to existing expansion plans
 
@@ -41,7 +41,7 @@ Deliverables discussed on Bacopa-based syrup:
 
 ## Geographic constraints
 
-All combination formulation work is subject to the [[southeast-asia-exclusion]] — Philippines and 6 other Southeast Asian countries are NO GO for any Bacopa-related products.
+All combination formulation work with [[indus-life-sciences|Indus]] is subject to the [[southeast-asia-exclusion]] — Philippines and 6 other Southeast Asian countries are excluded for Indus because [[lumen-marketing-company|LMC]] already operates in those markets (MemoPlus Gold in Philippines, Actif Mind in Thailand).
 
 ## Sources
 

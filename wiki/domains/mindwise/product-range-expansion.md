@@ -49,8 +49,8 @@ Per the "Calculation of Bacosides in Gummies" documents:
 The earliest documented expansion discussion was the December 13, 2025 meeting with [[indus-life-sciences|Indus (Vikash and Mani)]]:
 - [[bacopa-combination-formulations|Combination formulations]]: Bacopa + Chlorella, Bacopa + DHA, Bacopa + Curcumin
 - Bacopa-based **syrup** deliverables discussed — samples expected
-- 500g Bacopa + 500g BacoZest + 100g Chlorella to be sent to [[solusta-puducherry|Solista/Solusta]]
-- Geographic constraint: [[southeast-asia-exclusion|7 Southeast Asian countries are NO GO]] for Bacopa products
+- 500g Bacopa + 500g BacoZest + 100g Chlorella to be sent to [[solusta-puducherry|Solista]]
+- Geographic constraint: [[southeast-asia-exclusion|7 SE Asian countries excluded for Indus]] — LMC already operates there (MemoPlus Gold, Actif Mind)
 
 ## Himani meeting (Mar 16, 2026)
 
@@ -61,7 +61,7 @@ Per [[himani]]'s Mar 16, 2026 meeting:
 ## Sources
 
 - [[2026-04-13-whatsapp-full-export]] — Mar 20 entry (Shivendra's confirmation)
-- [[2026-03-26-thambu-voice-brief]] — IMCD + Solusta gummy/syrup path
+- [[2026-03-26-thambu-voice-brief]] — IMCD + Solista gummy/syrup path
 - [[2025-11-to-2026-03-onenote-notebook]] — Dec 13 Indus meeting + Mar 16 Himani meeting
 - Technical Catalog — gummy formulation details, NDA partners
 

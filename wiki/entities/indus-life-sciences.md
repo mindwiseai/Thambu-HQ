@@ -16,7 +16,7 @@ Partnership entity led by **Vikash** and **Mani**, explored in a December 13, 20
 
 - [[lumen-marketing-company|LMC]] x Indus = all Bacopa formulation and variation work delivered by LMC
 - Indus takes products to international markets
-- **Philippines completely excluded** in any form related to Bacopa (see [[southeast-asia-exclusion]])
+- **Philippines completely excluded for Indus** — LMC already operates there with MemoPlus Gold (see [[southeast-asia-exclusion]])
 - LMC to provide all material and success stories of what made the product click in Philippines in return
 - [[shivendra-selvam|Shivendra]] (referred to as "Shivendra – Indus (Vikash)") to establish the working relationship
 
@@ -42,7 +42,7 @@ See [[bacopa-combination-formulations]] for detail.
 
 ## Geographic exclusions
 
-- Philippines, Malaysia, Thailand, Cambodia, Vietnam, Burma, Indonesia — **NO GO** for Bacopa
+- Philippines, Malaysia, Thailand, Cambodia, Vietnam, Burma, Indonesia — **excluded for Indus** (LMC already operates in these markets)
 - See [[southeast-asia-exclusion]] for the full context
 
 ## Open questions
@@ -51,7 +51,7 @@ See [[bacopa-combination-formulations]] for detail.
 - Status of the syrup samples
 - Status of Chlorella data/trials
 - Did the follow-up meeting with Vikash happen?
-- Relationship between Indus and [[solusta-puducherry|Solusta]] ("Solista" in notes — likely same entity)
+- Relationship between Indus and [[solusta-puducherry|Solista]]
 
 ## Sources
 
@@ -65,5 +65,5 @@ See [[bacopa-combination-formulations]] for detail.
 - [[bacopa-combination-formulations]]
 - [[southeast-asia-exclusion]]
 - [[product-range-expansion]]
-- [[solusta-puducherry]] (downstream manufacturer — "Solista" in notes)
+- [[solusta-puducherry]] (downstream manufacturer — Solista)
 - [[cdri-08]]

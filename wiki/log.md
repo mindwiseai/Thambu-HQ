@@ -24,7 +24,7 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
   - [[wellbeing-nutrition]] — aspirational brand reference
   - [[keenmind-agreement-expiry]] — 10-year SFI agreement expired Dec 2024
   - [[cdri-08-global-brands]] — 5+ brand names across global markets
-  - [[southeast-asia-exclusion]] — 7 countries NO GO for Bacopa
+  - [[southeast-asia-exclusion]] — 7 SE Asian countries excluded for Indus (LMC territorial protection)
   - [[bacopa-combination-formulations]] — Bacopa + DHA/Chlorella/Curcumin
   - [[brand-genesis-sorted]] — Dec 2 origin story of Sorted engagement
 - **Updated: 12 existing pages:**
@@ -39,7 +39,7 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
   - [[semi-transparent-bottle]] — added Jan 30 visual direction details, Two Brothers reference
   - [[product-range-expansion]] — added Indus Dec 13 meeting, Himani Mar 16 sizing
   - [[shivendra-selvam]] — added Indus partnership management role
-  - [[solusta-puducherry]] — added Indus/Solista Dec 13 connection
+  - [[solusta-puducherry]] — added Indus/Solista Dec 13 connection (note: correct name is Solista)
 - Domain: mindwise
 - Covers 9 source sections from OneNote notebook (Nov 2025 – Mar 2026): Sorted meetings, KeenMind research, Indus partnership, Bacopa global map, Andrea Zangara, Pier Campanini, Sarathkumar positioning, Himani projects, Mindwise India ops
 

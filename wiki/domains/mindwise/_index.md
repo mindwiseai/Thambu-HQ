@@ -71,7 +71,7 @@ Cognitive wellness supplement (CDRI-08 Bacopa monnieri extract) launching 2026-0
 - [[keenmind-agreement-expiry]] — SFI 10-year agreement expired Dec 2024
 - [[cdri-08-global-brands]] — KeenMind, MemoPlus Gold, Memory Perfect, Actif Mind
 - [[sfi-health]] — previous global CDRI-08 distributor
-- [[southeast-asia-exclusion]] — 7 countries NO GO for Bacopa
+- [[southeast-asia-exclusion]] — 7 SE Asian countries excluded for Indus (LMC territorial protection)
 - [[bacopa-combination-formulations]] — Bacopa + DHA/Chlorella/Curcumin (Indus)
 - [[indus-life-sciences]] — Bacopa formulation & international market partnership
 

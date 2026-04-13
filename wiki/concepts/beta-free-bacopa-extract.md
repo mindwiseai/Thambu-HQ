@@ -33,7 +33,7 @@ Per the voice brief:
 ```
 IMCD (Mumbai supplier) — has the bitter-free Bacopa
        ↓
-Solusta (Puducherry manufacturer) — can produce gummies
+Solista (Puducherry manufacturer) — can produce gummies
        ↓
 Corporate client (already interested, waiting for bitter-free)
 + Philippines market (existing MemoPlus Gold market, asking for gummies)
@@ -42,7 +42,7 @@ Lumen Marketing Company — potential new product line
 ```
 
 Two real demand signals:
-1. **Solusta already has a corporate client** interested in Bacopa gummies, blocked by bitterness
+1. **Solista already has a corporate client** interested in Bacopa gummies, blocked by bitterness
 2. **Philippines market** (the [[adam-ritson|historic MemoPlus Gold territory]]) is asking for the gummy format
 
 ## Relationship to the June 1 capsule launch
@@ -69,7 +69,7 @@ Thambu needs to confirm the supply-chain chemistry at the [[imcd|IMCD meeting]] 
 |---|---|---|---|
 | Mindwise capsule 60ct (D2C) | Capsule | In production | June 1, 2026 |
 | Mindwise blister 30ct (B2B) | Capsule | In production | June 1, 2026 |
-| Mindwise gummy | Gummy | Exploration — pending IMCD + Solusta | 2026-2027 |
+| Mindwise gummy | Gummy | Exploration — pending IMCD + Solista | 2026-2027 |
 | Mindwise syrup | Liquid | Exploration — pending bitter-free confirmation | 2026-2027 |
 
 ## Open

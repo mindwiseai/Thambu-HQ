@@ -8,9 +8,15 @@ updated: 2026-04-13
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-04-12 (latest) — OneNote Notebook Ingest (Nov 2025 – Mar 2026)
+## 2026-04-12 (latest) — Two wiki corrections
 
-Major backstory ingest from Thambu's OneNote. **15 new pages, 12 updated.** Key revelations: [[keenmind-agreement-expiry|SFI/KeenMind 10-year agreement expired Dec 2024]] — Mindwise is the replacement. [[cdri-08-global-brands|CDRI-08 sold globally]] under 5+ brand names. [[southeast-asia-exclusion|7 Southeast Asian countries NO GO]] for Bacopa (Indus partnership). [[andrea-zangara]] writing a 4-year Bacopa monograph. [[pier-campanini]] reports Ginsana factory sale, new KeenMind buyer possible. [[brand-genesis-sorted|Sorted engaged Dec 2, 2025]]. [[avantika]] has Adani/ITC background (surname contradiction: Bhandari vs Bajoria). [[jaiman]] surname is Khatri. [[sagar-sali]] attended Jan 6 meeting. Products: 30-cap + 60-cap versions confirmed. Kids Bacopa deferred. **Total pages: ~161.**
+1. **Solista name fix:** The Puducherry gummy manufacturer is **Solista**, not "Solusta". The incorrect spelling came from a voice-brief transcription artifact. Fixed across all wiki pages. Filename `solusta-puducherry.md` retained to avoid breaking backlinks.
+
+2. **Southeast Asia exclusion reframed:** The SE Asia exclusion applies to **Indus/Vikash specifically** — they cannot enter those 7 markets. The reason: [[lumen-marketing-company|LMC]] is already operating there with MemoPlus Gold (Philippines) and Actif Mind (Thailand). This is **territorial protection for LMC's existing CDRI-08 business**, not a blanket "NO GO" for Bacopa. LMC is strong in SE Asia — this is a moat.
+
+## 2026-04-12 — OneNote Notebook Ingest (Nov 2025 – Mar 2026)
+
+Major backstory ingest from Thambu's OneNote. **15 new pages, 12 updated.** Key revelations: [[keenmind-agreement-expiry|SFI/KeenMind 10-year agreement expired Dec 2024]] — Mindwise is the replacement. [[cdri-08-global-brands|CDRI-08 sold globally]] under 5+ brand names. [[southeast-asia-exclusion|7 SE Asian countries excluded for Indus]] (LMC territorial protection — LMC already operates there with MemoPlus Gold and Actif Mind). [[andrea-zangara]] writing a 4-year Bacopa monograph. [[pier-campanini]] reports Ginsana factory sale, new KeenMind buyer possible. [[brand-genesis-sorted|Sorted engaged Dec 2, 2025]]. [[avantika]] has Adani/ITC background (surname contradiction: Bhandari vs Bajoria). [[jaiman]] surname is Khatri. [[sagar-sali]] attended Jan 6 meeting. Products: 30-cap + 60-cap versions confirmed. Kids Bacopa deferred. **Total pages: ~161.**
 
 ## 2026-04-13 — Mindwise Full Raw Dump (WhatsApp + Meetings + Technical Catalogs)
 
@@ -63,7 +69,7 @@ With this ingest, the wiki now has near-complete coverage of RaceSims operations
 1. **April 2 Mumbai meeting outcome** — still not in wiki
 2. **RaceSims 90-day plan execution status** — what actually got done?
 3. **Post-March 26 voice briefs** — check Gmail
-4. **IMCD / Solusta meeting outcomes** — bitter-free Bacopa path viable?
+4. **IMCD / Solista meeting outcomes** — bitter-free Bacopa path viable?
 
 ## Things to flag on next interaction
 
