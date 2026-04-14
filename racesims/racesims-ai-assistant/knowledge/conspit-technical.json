@@ -1,0 +1,369 @@
+{
+  "brand": "Conspit",
+  "last_updated": "2026-04-14",
+  "source": "conspit.com, reviews, retailer sites",
+  "note": "Chinese sim racing manufacturer est. 2020. PC-only ecosystem. Partners with McLaren Customer Racing and ASUS ROG. RaceSims is authorized Indian distributor.",
+
+  "software": {
+    "conspit_link": {
+      "name": "Conspit Link 2.0",
+      "download_url": "https://conspit.com/download",
+      "features": [
+        "Device detection and management for all Conspit peripherals",
+        "Calibration tools (pedals, paddles, steering angle)",
+        "Button/encoder mapping and remapping",
+        "Encoder macro mode (simultaneous multi-function inputs)",
+        "Vibration/haptic assignment and control",
+        "Profile management with import/export",
+        "Firmware updates",
+        "Real-time temperature monitoring (Phase U/V/W, MOS temps)",
+        "Torque output display",
+        "UDP forwarding for telemetry apps",
+        "LED color and telemetry-linked behavior control"
+      ],
+      "modes": {
+        "basic": "Essential adjustments and calibration",
+        "advanced": "Comprehensive filtering, parameter customization, torque boost activation"
+      },
+      "sim_profiles": [
+        "Assetto Corsa", "Assetto Corsa Competizione", "iRacing", "Automobilista 2",
+        "Dirt Rally 2", "EA WRC", "F1 24", "Forza Horizon 5", "Raceroom", "rFactor 2",
+        "Rennsport", "Le Mans Ultimate", "Euro Truck Simulator 2"
+      ],
+      "pro_profiles": "Laurin Heinrich (pro driver) profiles for AC and iRacing",
+      "known_limitations": [
+        "Advanced wheelbase settings somewhat simplified compared to competitors",
+        "Pushes users toward presets rather than deep control",
+        "Paddle calibration may need recalibration after reboot",
+        "SimHub compatibility varies by wheel model"
+      ]
+    }
+  },
+
+  "simhub_compatibility": {
+    "MAX_01": "Full SimHub dashboard + LED support",
+    "310_APEX": "SimHub RGB LED control only, NOT custom dashboards",
+    "290GP": "Conspit proprietary dash only, NO SimHub",
+    "300GT": "Partial SimHub support",
+    "PW1": "No SimHub support",
+    "CSD_Dashboard": "Full SimHub integration with presets"
+  },
+
+  "led_status_indicators": {
+    "green_slow_flash": "Wheelbase axis has exceeded limit — recalibrate steering angle",
+    "blue_fast_flash": "Motor failure — contact support immediately",
+    "blue_slow_flash": "Motor error — check Conspit Link software for diagnostic info"
+  },
+
+  "troubleshooting": [
+    {
+      "issue": "Force feedback feels inconsistent or jerky",
+      "symptoms": ["FFB feels choppy", "Jerky steering feel", "Inconsistent resistance"],
+      "solutions": [
+        "Update to latest firmware via Conspit Link 2.0 — Conspit has significantly improved FFB through firmware updates",
+        "Try different pre-configured sim profiles in Conspit Link (game-specific presets available)",
+        "Switch to Advanced Mode and adjust filtering parameters",
+        "Reduce overall FFB strength to stay within the base's clean operating range",
+        "For Ares 12: activate 12Nm boost mode in Advanced settings if running at default 10Nm",
+        "Check if you're using the right sim profile — each game has different FFB characteristics"
+      ]
+    },
+    {
+      "issue": "Wheelbase not detected by PC",
+      "symptoms": ["Not showing in Conspit Link", "No USB detection", "Device missing in Windows"],
+      "solutions": [
+        "Connect USB-C directly to PC mainboard — avoid USB hubs",
+        "Try different USB ports (USB 3.0 recommended)",
+        "Check that the power supply is connected (48V for Ares 12/Platinum, 24V for Apex)",
+        "Reinstall Conspit Link 2.0 from conspit.com/download",
+        "Check Device Manager for unknown devices and update drivers",
+        "Try a different USB-C cable"
+      ],
+      "escalation": "If base is detected but shows motor errors (blue LED flash), contact RaceSims support"
+    },
+    {
+      "issue": "Quick release has play or wobble",
+      "symptoms": ["Steering wheel wobbles on base", "Play/slop in QR connection", "Wheel not sitting tight"],
+      "solutions": [
+        "For CDR: ensure pull ring is fully engaged until you hear/feel a click",
+        "For CDP: verify the engagement ring is fully locked",
+        "Some early CDP/CDR units had manufacturing variance in tolerance",
+        "Tighten the QR mounting screws (6x M6 on CDP)",
+        "If wobble persists after checking engagement, contact RaceSims — Conspit has been responsive to replacement requests"
+      ]
+    },
+    {
+      "issue": "Phantom brake input / brake always slightly engaged",
+      "symptoms": ["Car brakes slightly without pressing pedal", "Brake axis not at zero at rest", "Unwanted braking in-game"],
+      "solutions": [
+        "The hydraulic pressure sensor is extremely sensitive — this is normal behavior that needs calibration",
+        "Set a small dead zone in Conspit Link 2.0 after calibration (critical step)",
+        "Recalibrate the brake axis: press firmly for max, release completely for min",
+        "Don't rest your foot on the brake pedal — even very light pressure registers",
+        "Check in-game dead zone settings as well"
+      ]
+    },
+    {
+      "issue": "Brake feel changes over time or feels soft",
+      "symptoms": ["Brake feels softer than when new", "Less resistance in brake pedal", "Brake feel deteriorating"],
+      "solutions": [
+        "Increase preload using the adjustment knob and included tool — this is expected maintenance",
+        "The warning label on CPP EVO pedals instructs users to increase preload after use — this is normal",
+        "Do NOT increase hydraulic preload excessively — gradual adjustment only",
+        "For CPP EVO: use the 4-level pedal force adjustment to find your preferred setting",
+        "Check that all mounting bolts are tight — flex in the rig can affect brake feel"
+      ]
+    },
+    {
+      "issue": "Clutch feels rough or grainy (CPP EVO)",
+      "symptoms": ["Gritty feel in clutch pedal", "Clutch not smooth", "Rough clutch engagement"],
+      "solutions": [
+        "This is a known break-in issue — smoothness improves significantly with use",
+        "Material wearing from the sleeve is normal during the initial break-in period",
+        "Keep using the clutch normally — it will smooth out over 20-50 uses",
+        "If roughness persists after extended use, contact RaceSims support"
+      ]
+    },
+    {
+      "issue": "Pedals not recognized by PC",
+      "symptoms": ["Pedals not appearing in Conspit Link", "No input from pedals in-game"],
+      "solutions": [
+        "Pedals can connect via USB-C directly to PC OR via CAN port through Conspit wheelbase — try both methods",
+        "If using the vibration module (M-DVF), you MUST use direct PC USB connection",
+        "Try a different USB port — avoid USB hubs",
+        "Make sure USB-C and power cables are connected to the controller box BEFORE mounting to rig",
+        "Reinstall Conspit Link 2.0"
+      ]
+    },
+    {
+      "issue": "Paddle calibration resets after reboot",
+      "symptoms": ["Clutch paddles lose calibration", "Have to recalibrate paddles every restart"],
+      "solutions": [
+        "This is a known software issue in some firmware versions",
+        "After calibrating: click MIN when released, MAX when fully pressed",
+        "ALWAYS click 'Save to Flash' after calibration — this persists through reboots",
+        "Update to latest firmware via Conspit Link — this issue has been improved in recent updates",
+        "If it persists, save your profile and reload it after reboot as a workaround"
+      ]
+    },
+    {
+      "issue": "Display not showing custom SimHub dashboards",
+      "symptoms": ["Wheel screen shows default or no dashboard", "SimHub not connecting to display"],
+      "solutions": [
+        "Check SimHub compatibility for your specific wheel model:",
+        "  MAX 01 = Full SimHub dashboard support",
+        "  310 APEX = SimHub RGB LED control only, NOT custom dashboards",
+        "  290GP = Conspit proprietary dash only, NO SimHub at all",
+        "  CSD Dashboard = Full SimHub with presets",
+        "For MAX 01: install SimHub, select dashboard preset or create custom",
+        "Make sure SimHub is running and the correct device plugin is enabled"
+      ]
+    },
+    {
+      "issue": "Encoder remapping not working",
+      "symptoms": ["Rotary encoders not changing functions", "Can't remap wheel buttons"],
+      "solutions": [
+        "In Conspit Link: use rotary switch as modifier key first, then configure encoder functions",
+        "Save to flash after making any changes",
+        "Check if you're in Basic or Advanced mode — some remapping options only available in Advanced",
+        "Try closing and reopening Conspit Link after saving"
+      ]
+    },
+    {
+      "issue": "Brake pedal tray flex under heavy braking",
+      "symptoms": ["Pedal plate flexes when braking hard", "Soft feel from rig rather than pedal"],
+      "solutions": [
+        "More noticeable in firmer brake configurations on CPP EVO V2",
+        "Ensure pedal baseplate is rigidly mounted to rig with all bolts tightened",
+        "Use firmer rig mounting points — this is usually a rig issue, not a pedal issue",
+        "Consider adding reinforcement to the pedal deck area of your rig",
+        "The hydraulic system can generate significant force — budget rigs may flex"
+      ]
+    },
+    {
+      "issue": "Wheelbase overheating concerns",
+      "symptoms": ["Base feels warm", "Worried about thermal throttling"],
+      "solutions": [
+        "Conspit bases have no active cooling — they rely on passive cooling",
+        "No thermal throttling has been observed in independent testing",
+        "Monitor temperatures via Conspit Link 2.0 real-time readout (Phase U/V/W, MOS temps)",
+        "Normal operating temperatures vary by load — sustained high-torque use will generate more heat",
+        "Ensure adequate airflow around the base — don't box it in"
+      ]
+    }
+  ],
+
+  "product_details": {
+    "ares_20_platinum": {
+      "name": "ARES 20 Platinum",
+      "torque": "20Nm (18Nm sustained)",
+      "price_usd": 749,
+      "weight": "7.9 kg",
+      "encoder": "23-bit optical",
+      "processor": "Dual-core MCU (170MHz + 168MHz asymmetric)",
+      "power": "48V",
+      "motor": "Customized skew-pole direct-drive with anti-cogging (Dual Skewed Pole, Asymmetric Slot-to-Pole)",
+      "slip_ring": "20 million revolution military-grade",
+      "mounting": "Bottom mount (M6, 80mm, Fanatec-pattern compatible) + Side mount (M8)",
+      "connectivity": "USB-C to mainboard, 5x USB-C ecosystem ports, E-Stop port, 6-pin magnetic connector",
+      "qr_options": "CDP (7075 aluminum with pogo pins) or CDR"
+    },
+    "ares_12": {
+      "name": "ARES 12",
+      "torque": "12Nm (10Nm standard, 12Nm boost mode)",
+      "price_usd": 539,
+      "weight": "5.6 kg",
+      "encoder": "23-bit optical",
+      "processor": "Dual-core MCU (170MHz + 168MHz)",
+      "power": "48V 6A",
+      "note": "Same architecture as Ares 20 Platinum. Boost mode unlocks full 12Nm in Advanced settings."
+    },
+    "ares_apex": {
+      "name": "ARES APEX",
+      "torque": "8Nm",
+      "price_usd": 419,
+      "weight": "5.9 kg",
+      "encoder": "21-bit magnetic encoder (lower resolution than optical on higher models)",
+      "processor": "Dual-core MCU (170MHz + 168MHz)",
+      "power": "24V 6.25A",
+      "qr": "CDR system"
+    },
+    "cpp_evo_v2": {
+      "name": "CPP EVO V2",
+      "type": "Pedals (flagship)",
+      "price_usd_3pedal": 799,
+      "price_usd_2pedal": 699,
+      "brake": "Gen 2.0 Dual-Stage Hydraulic with 20 MPa pressure sensor",
+      "throttle_clutch": "Hall effect (non-contact)",
+      "haptics": "M-DVF vibration motors on each pedal (SimHub + iRacing compatible)",
+      "materials": "CNC-machined T6 aluminum alloy, sandblasted and anodized",
+      "adjustability": "4-level pedal force, independent preload for both brake stages, 4-level clutch bite point, angle and height adjustable",
+      "connection": "USB-C direct or CAN port via Conspit wheelbase"
+    },
+    "cpp_lite": {
+      "name": "CPP Lite",
+      "type": "Pedals (mid-range)",
+      "price_usd_3pedal": 640,
+      "price_usd_2pedal": 536,
+      "brake": "Hydraulic system (approx half braking force of EVO)",
+      "haptics": "3 integrated vibration motors",
+      "materials": "CNC-machined T6 aluminum alloy"
+    },
+    "cpp_apex": {
+      "name": "CPP APEX",
+      "type": "Pedals (entry)",
+      "price_usd_2pedal": 319,
+      "price_usd_3pedal": 369,
+      "brake": "Hydraulic system (entry-level)",
+      "materials": "Plastic and aluminum base plate",
+      "note": "Optional M-DVF Vibration Module available (requires direct PC connection)"
+    },
+    "max_01_wheel": {
+      "name": "MAX 01",
+      "diameter": "310mm",
+      "weight": "1.3 kg",
+      "price_usd": 804,
+      "display": "4.0\" IPS (800x480), full SimHub compatible",
+      "controls": "10 RGB buttons + 2 rear, 4 rotary encoders, 4 thumb encoders, 2 funky switches (7-way)",
+      "paddles": "2 magnetic Hall shift + 2 analog Hall clutch",
+      "leds": "15 RPM + 6 telemetry + 8 label + 10 button LEDs"
+    },
+    "290gp_wheel": {
+      "name": "290 GP",
+      "diameter": "290mm",
+      "weight": "1.4 kg",
+      "price_eur": 720,
+      "display": "4.3\" touchscreen (854x480, 500 nit)",
+      "controls": "12 RGB buttons, 4 rotary encoders, 3 rotary switches, 2 seven-way joysticks",
+      "paddles": "MagFlip rocker shifters + dual clutch",
+      "note": "Conspit proprietary dash only, no SimHub"
+    },
+    "300gt_wheel": {
+      "name": "300 GT",
+      "weight": "1.15 kg",
+      "price_eur": 450,
+      "display": "2.99\" (800x268)",
+      "materials": "T-300 carbon fiber prepreg front + aluminum unibody back",
+      "controls": "8 RGB buttons + 2 rear, 3 rotary switches, 4 thumb encoders, 2 seven-way joysticks"
+    },
+    "310_apex_wheel": {
+      "name": "310 APEX",
+      "diameter": "310mm",
+      "weight": "1.52 kg",
+      "price_eur": 360,
+      "display": "2.98\" LCD (800x268)",
+      "materials": "Full aluminum alloy + steel, microfiber rim",
+      "controls": "8 RGB buttons, 2 thumb encoders, 2 twelve-position rotary switches, 2 seven-way joysticks",
+      "paddles": "4 aluminum paddles (2 digital shift + 2 analog clutch, all Hall sensored)",
+      "compatibility": "CDR or CDP QR, compatible with MOZA, Simagic, PXN bases via CDR"
+    },
+    "h3_handbrake": {
+      "name": "H3 Handbrake",
+      "type": "Dual-mode hydraulic",
+      "price_usd": 309,
+      "weight": "2.0 kg",
+      "sensor": "5 MPa pressure sensor",
+      "features": "Adjustable preload, 4 force levels, switchable horizontal/vertical lever",
+      "materials": "CNC-machined aluminum, sealed bearing system, zero mechanical play"
+    },
+    "csd_dashboard": {
+      "name": "CSD Dashboard",
+      "price_eur": 310,
+      "display": "5\" IPS touchscreen (854x480, 350 lumens adjustable)",
+      "leds": "31 RGB alert LEDs (RPM, flags, alerts)",
+      "controls": "4 physical encoder knobs",
+      "software": "Full SimHub integration with ready-to-use presets"
+    }
+  },
+
+  "bundles": {
+    "apex_bundle": {
+      "name": "Apex Bundle",
+      "contents": "Ares Apex 8Nm + 310 Apex Wheel + CPP Apex Pedals",
+      "price_eur": 1030
+    },
+    "ares_12_bundle": {
+      "name": "Ares 12 + 290GP Bundle",
+      "contents": "Ares 12 + 290GP Wheel + QR",
+      "price_eur": 1392
+    }
+  },
+
+  "warranty": {
+    "duration": "Manufacturer warranty generally 2-3 years (varies by retailer)",
+    "covers": "Defects in materials and workmanship",
+    "process_racesims": "Contact RaceSims support first. We handle all Conspit warranty claims for Indian customers. Remote troubleshooting first, then replacement coordination with Conspit.",
+    "support_primary": "Conspit Discord server — manufacturer technicians actively respond"
+  },
+
+  "calibration_guide": {
+    "pedals": [
+      "Open Conspit Link 2.0, detect your pedals",
+      "Calibrate each axis: press firmly for max, release completely for min",
+      "Set a small dead zone for brake (CRITICAL — hydraulic sensor is extremely sensitive)",
+      "Configure haptic/vibration settings if using M-DVF motors",
+      "Adjust preload as needed (don't over-tighten)",
+      "Save to Flash to persist through reboots"
+    ],
+    "clutch_paddles": [
+      "In Conspit Link: click MIN when paddle is released",
+      "Click MAX when paddle is fully pressed",
+      "Select clutch mode: Dual Axis, Manual, or Set Bite Point",
+      "For bite point: drag purple slider to desired engagement point",
+      "Click Save to Flash",
+      "NOTE: May need recalibration after reboot on some firmware versions"
+    ],
+    "wheelbase": [
+      "Connect USB-C directly to PC mainboard",
+      "Connect appropriate power supply (48V for Ares 12/Platinum, 24V for Apex)",
+      "Open Conspit Link 2.0",
+      "Run firmware update if available",
+      "Calibrate steering angle — set maximum desired rotation",
+      "Select or customize a sim profile",
+      "Save config to flash"
+    ]
+  },
+
+  "user_manuals_url": "https://conspit.com/UserManual/",
+  "firmware_downloads_url": "https://conspit.com/download"
+}

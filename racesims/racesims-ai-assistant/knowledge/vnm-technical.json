@@ -1,0 +1,261 @@
+{
+  "brand": "VNM Simulation",
+  "last_updated": "2026-04-14",
+  "source": "vnmsimulation.com",
+  "note": "VNM Simulation JSC, Hanoi, Vietnam. RaceSims is an authorized distributor.",
+
+  "software": {
+    "vnm_ui": {
+      "name": "VNM User Interface (UI)",
+      "current_version": "6.1.3.3",
+      "download_url": "https://github.com/vnmsimulation/ui/releases/download/v6.1.3.3/v6.1.3.3.zip",
+      "notes": [
+        "Works with all VNM products",
+        "Delete the entire old UI folder before installing a new version",
+        "Press F1 after opening to access the built-in manual",
+        "For shifters version 1.2 or earlier, use UI version 1.x instead"
+      ]
+    },
+    "vnm_flash": {
+      "name": "VNM Flash (Firmware Flasher)",
+      "current_version": "3.3",
+      "download_url": "https://github.com/vnmsimulation/flasher/releases/download/FlasherV3.3/VNMFlash-Setup.3.3.zip",
+      "notes": [
+        "Used to update firmware for ALL VNM products",
+        "Installation manual available at GitHub"
+      ]
+    }
+  },
+
+  "supported_games": {
+    "native_support": [
+      "Assetto Corsa", "Assetto Corsa Competizione", "Assetto Corsa Evo",
+      "American Truck Simulator", "CarX Drift Racing", "City Car Driving",
+      "Eurotruck Simulator 2", "F1 2020", "F1 23", "F1 24", "F1 25",
+      "iRacing", "Live For Speed", "Le Mans Ultimate", "Project Motor Racing",
+      "RaceRoom", "WRC 10", "WRC Generation", "Wreckfest"
+    ],
+    "requires_configuration": {
+      "rFactor 2": "Config file available via VNM GitHub",
+      "Grid Legends / Rally 2.0 / Dirt 4": "Dedicated config docs from VNM",
+      "EA Sport WRC": "Game-specific setup guide available from VNM",
+      "AMS2 / Project Cars 2": "Joint configuration instructions from VNM",
+      "BeamNG": "Must enable FFB in game: Settings > Force Feedback > Enable FFB",
+      "Assetto Corsa Rally": "Requires configuration adjustments"
+    }
+  },
+
+  "troubleshooting": [
+    {
+      "issue": "PC doesn't recognize VNM device",
+      "symptoms": ["Device not showing in Windows", "No USB detection", "Device not appearing in VNM UI"],
+      "solutions": [
+        "Try a different USB port — avoid USB hubs, use a direct motherboard port",
+        "Check if the USB cable is fully seated on both ends",
+        "Open Device Manager and look for unknown devices — right-click and update driver",
+        "Download and install the latest VNM UI (v6.1.3.3) which includes drivers",
+        "Try a different USB cable — the included USB A-to-B (wheelbase) or USB A-to-C (wheel) cable",
+        "Restart the PC after connecting the device",
+        "On some motherboards, USB 2.0 ports work more reliably than USB 3.0 for game controllers"
+      ],
+      "escalation": "If none of these work, the controller board may need firmware reflash or replacement — contact RaceSims support"
+    },
+    {
+      "issue": "VNM device not recognized after PC startup",
+      "symptoms": ["Device works when first plugged in but disappears after reboot", "Have to unplug and replug after every boot"],
+      "solutions": [
+        "This is usually a Windows USB power management issue",
+        "Go to Device Manager > Universal Serial Bus controllers > right-click each USB Root Hub > Properties > Power Management > uncheck 'Allow the computer to turn off this device to save power'",
+        "Also check: Windows Settings > System > Power & Sleep > Additional power settings > Change plan settings > Change advanced power settings > USB settings > USB selective suspend = Disabled",
+        "Try plugging into a USB 2.0 port instead of USB 3.0",
+        "Update your motherboard's USB controller drivers from the manufacturer website",
+        "As a last resort, create a Windows Task Scheduler task that runs on login to reset the USB device"
+      ]
+    },
+    {
+      "issue": "DFU device not found (firmware update)",
+      "symptoms": ["VNM Flash can't find device in DFU mode", "Firmware update won't start"],
+      "solutions": [
+        "Make sure you've installed the DFU driver — follow VNM's installation manual",
+        "The device must be in DFU mode before VNM Flash can see it",
+        "Install WinUSB driver using Zadig if the DFU device shows up as an unknown device",
+        "Download the DFU driver config from: https://raw.githubusercontent.com/vnmsimulation/flasher/main/INSTALL%20VNM%20FLASH%20AND%20CONFIG%20DRIVER%20DFU.pdf",
+        "Try different USB ports — DFU mode can be picky about USB 3.0 vs 2.0"
+      ]
+    },
+    {
+      "issue": "Wheelbase force feedback feels weak or inconsistent",
+      "symptoms": ["FFB weaker than expected", "FFB cuts out during driving", "Inconsistent force feedback strength"],
+      "solutions": [
+        "Check power supply — the DD Xtreme 32Nm requires the included power adapter, not a generic one",
+        "In VNM UI, check the FFB strength settings — there are 11 game effects + 4 user effects, each adjustable",
+        "Adjust smoothness settings: overall, damper, inertia, and friction can all be tuned",
+        "Enable crash effect reduction if FFB spikes are the issue",
+        "Check in-game FFB settings — some games default to low FFB strength",
+        "For iRacing: use the auto-setup feature, then fine-tune from there",
+        "Make sure you're running the latest firmware via VNM Flash"
+      ]
+    },
+    {
+      "issue": "Pedal calibration problems",
+      "symptoms": ["Pedal travel not using full range", "Brake requires too much or too little force", "Dead zones at top or bottom of travel"],
+      "solutions": [
+        "Open VNM UI and go to the pedal calibration section",
+        "Use the smart calibration software to set deadzones and travel curves",
+        "For the brake (200kg load cell): you can adjust the force curve — most people don't need to press to full 200kg",
+        "For throttle/clutch (contactless angle sensors): recalibrate if the sensors seem off",
+        "Make sure all pedal mounting bolts are tight — loose pedals can cause sensor drift",
+        "Check that the controller box USB cable is secure"
+      ]
+    },
+    {
+      "issue": "Shifter gear not registering",
+      "symptoms": ["Shifts not detected in game", "Missed gears", "Wrong gear selected"],
+      "solutions": [
+        "Check VNM UI to verify the shifter is detected and showing input",
+        "For H-pattern: make sure the correct gear plate is installed (4-gear, 5-gear, 7-gear, or 8-gear)",
+        "For sequential: check shift force adjustment (adjustable 3.9kg to 5.0kg on SEQ V2)",
+        "Verify the shift is being registered in VNM UI before checking in-game settings",
+        "In-game: make sure shifter is mapped correctly in the game's controller settings",
+        "Non-contact sensors should not wear out — if issues persist, check firmware version"
+      ]
+    },
+    {
+      "issue": "Handbrake not working or poor feel",
+      "symptoms": ["Handbrake input not detected", "Too stiff or too loose", "Inconsistent response"],
+      "solutions": [
+        "Check VNM UI calibration for the handbrake",
+        "The V1.5 Rally version has adjustable handle length and angle (0/15/30/45/60/75/90 degrees) — experiment with angle",
+        "Customize stiffness using the included springs — swap to lighter/heavier springs as needed",
+        "200kg industrial-grade load cell with 16-bit ADC should be very responsive — if it's not, check USB connection",
+        "Make sure the handbrake is mapped in-game (some games require manual mapping)"
+      ]
+    },
+    {
+      "issue": "Steering wheel buttons/encoders not working",
+      "symptoms": ["Buttons not responding", "Rotary encoders not detected", "Funky switches not working"],
+      "solutions": [
+        "The GT Steering Wheel uses a GX12-4 to USB coiled cable — check both connections",
+        "Open VNM UI and check if button inputs register when pressed",
+        "If using with the DD Xtreme, check the USB A-to-C cable connection between base and wheel",
+        "Download the Quick Start Guide and User Manual PDFs from VNM website for button mapping",
+        "8 LED buttons are configurable with stickers — make sure you're pressing the right ones for your game mapping"
+      ]
+    }
+  ],
+
+  "product_details": {
+    "dd_xtreme": {
+      "name": "VNM Direct Drive Xtreme",
+      "torque": "32Nm",
+      "price_usd": 1330,
+      "weight": "16 kg",
+      "motor": "Customized smooth industrial servo, 130x130x231mm, 5 pole pairs",
+      "encoder": "Absolute encoder, 23-bit resolution (8,388,608 CPR)",
+      "controller": "Integrated single-core 480 MHz MCU",
+      "ffb_features": "11 game effects + 4 user effects, adjustable smoothness for overall/damper/inertia/friction, crash effect reduction, telemetry FFB (experimental)",
+      "connection": "USB A-to-B (base), USB A-to-C (wheel)",
+      "includes": "Wheelbase, USB cables, EMC Stop Button, Quick Release (base-side), power adapter",
+      "upgrade": "Industrial-grade slipring available for steering wheel",
+      "status": "Out of stock at VNM direct — available through RaceSims"
+    },
+    "pedals_v1_3set": {
+      "name": "VNM Pedals V1 (3-pedal)",
+      "price_usd": 550,
+      "weight": "5.1 kg",
+      "brake": "200kg load cell",
+      "throttle_clutch": "Contactless angle sensors",
+      "materials": "CNC machined aluminum, black anodized",
+      "bearings": "All moving parts use ball bearings",
+      "controller": "High-precision controller box with smart calibration software",
+      "adjustable": "Pedal angle and height adjustable",
+      "note": "Heel plate NOT included ($50 separate). Damper kit available ($150)."
+    },
+    "pedals_v1_2set": {
+      "name": "VNM Pedals V1 (2-pedal)",
+      "price_usd": 450,
+      "weight": "3.7 kg",
+      "note": "Same specs as 3-pedal minus clutch. Heel plate NOT included."
+    },
+    "lite_pedals_3set": {
+      "name": "VNM Lite Pedals Set 3",
+      "price_usd": 370,
+      "weight": "5.3 kg",
+      "materials": "Powder-coated steel + anodized aluminum (vs full aluminum on V1)",
+      "brake": "200kg load cell",
+      "throttle_clutch": "Contactless angle sensors",
+      "limitation": "CANNOT use damper kits (V1 can)",
+      "compatible_rigs": ["Trakracer TR120/TR8/Alpine TRX", "Sim-Motion", "ASR", "Simrigs", "Racekraft", "MRP"],
+      "note": "Heel plate NOT included. Budget option without sacrificing performance."
+    },
+    "shifter_v1": {
+      "name": "VNM Shifter V1 Basic Bundle",
+      "price_usd": 249,
+      "weight": "3.4 kg",
+      "modes": "Dual-mode: H-pattern manual OR sequential",
+      "includes": "Shifter base, QR Spherical Knob, QR Cylinder Knob, Sequential V2 plate, 7-gear H-pattern plate (6+R), hex wrench set, USB cable",
+      "plates_available": ["4-gear (3+R)", "5-gear (4+R)", "7-gear (6+R, included)", "8-gear (7+R)"],
+      "connection": "USB",
+      "note": "Mounting clamps and bolts sold separately"
+    },
+    "seq_shifter_v2": {
+      "name": "VNM SEQ Shifter V2",
+      "price_usd": 299,
+      "weight": "2.5 kg",
+      "gears": "Hardened SKD11 with chrome plating (wear/rust prevention)",
+      "shift_force": "Adjustable 3.9kg to 5.0kg",
+      "handle": "Extendable with 5cm extension included",
+      "sensors": "Non-contact",
+      "features": "RGB LEDs (can be disabled)",
+      "noise": "76-78 dB",
+      "connection": "USB Type-C",
+      "platform": "PC only",
+      "mounting": "Mounts directly on ALU profile without extra brackets"
+    },
+    "handbrake_v15": {
+      "name": "VNM Handbrake V1.5 Rally",
+      "price_usd": 239,
+      "weight": "2.8 kg",
+      "materials": "All-aluminum, black anodized",
+      "load_cell": "Industrial-grade 200kg",
+      "adc": "16-bit",
+      "handle": "Adjustable length, angle adjustable at 0/15/30/45/60/75/90 degrees",
+      "stiffness": "Customizable with included springs",
+      "designed_for": "Rally simulation"
+    },
+    "gt_steering_wheel": {
+      "name": "VNM GT Steering Wheel V1",
+      "price_usd": 450,
+      "diameter": "300mm",
+      "materials": "Full anodized CNC aluminum with silicone ergonomic grip",
+      "controls": "8 LED buttons, 4 rotary encoders with push, 2 thumb encoders, 2 five-way funky switches, 2 shift paddles, 2 analog paddles (dual clutch)",
+      "connection": "GX12-4 to USB coiled cable"
+    }
+  },
+
+  "warranty": {
+    "duration": "12 months from purchase OR 18 months from manufacture, whichever comes first",
+    "covers": "Defects in material or workmanship under normal use",
+    "not_covered": [
+      "Misuse or improper handling",
+      "Environmental factors (humidity, heat, overvoltage, dust)",
+      "Failure to follow safety/operating instructions",
+      "Physical force (impact, shock, fall)",
+      "Unauthorized repair attempts",
+      "Normal wear and tear",
+      "Any product altered after purchase (voids warranty entirely)"
+    ],
+    "process_racesims": "Contact RaceSims support first. We handle warranty claims for all VNM products sold through us. Remote troubleshooting first, then replacement parts if needed.",
+    "replacement_warranty": "Replacement parts assume remaining original warranty. If issue occurs in final 30 days, warranty extends 90 additional days."
+  },
+
+  "support_channels": {
+    "vnm_direct": {
+      "email": "sale@vnmsimulation.com",
+      "whatsapp": "+84 96 869 7078",
+      "phone": "+84 979 068 468",
+      "discord": "discord.gg/uG3dGp88yp"
+    },
+    "racesims_note": "For Indian customers: contact RaceSims first, we handle all support and warranty locally."
+  }
+}
