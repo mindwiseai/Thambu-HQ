@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RaceSims Discord Server — Complete Setup Kit</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: #1a1a2e; color: #e0e0e8; line-height: 1.6; padding: 40px 20px; }
+  .container { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 2em; font-weight: 700; color: #5865F2; margin-bottom: 8px; }
+  .subtitle { color: #888; margin-bottom: 40px; }
+  .section { background: #16213e; border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; margin-bottom: 20px; overflow: hidden; }
+  .section-header { padding: 20px 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+  .section-header:hover { background: rgba(255,255,255,0.02); }
+  .section-header h2 { font-size: 1.15em; font-weight: 700; }
+  .section-header .arrow { color: #666; transition: transform 0.2s; }
+  .section.open .arrow { transform: rotate(90deg); }
+  .section-body { padding: 0 24px 24px; display: none; }
+  .section.open .section-body { display: block; }
+  .copy-block { background: #0f3460; border: 1px solid rgba(88,101,242,0.2); border-radius: 8px; padding: 16px; margin: 12px 0; position: relative; font-size: 0.9em; white-space: pre-wrap; line-height: 1.7; }
+  .copy-btn { position: absolute; top: 8px; right: 8px; padding: 4px 12px; border-radius: 6px; border: 1px solid rgba(88,101,242,0.3); background: rgba(88,101,242,0.15); color: #5865F2; font-size: 0.78em; font-weight: 600; cursor: pointer; font-family: inherit; }
+  .copy-btn:hover { background: rgba(88,101,242,0.3); }
+  .channel-list { list-style: none; }
+  .channel-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; gap: 12px; align-items: flex-start; }
+  .channel-list li:last-child { border: none; }
+  .ch-name { font-weight: 600; color: #5865F2; min-width: 200px; font-family: 'JetBrains Mono', monospace; font-size: 0.9em; }
+  .ch-desc { color: #aaa; font-size: 0.88em; }
+  .step-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 8px; background: rgba(88,101,242,0.15); color: #5865F2; font-weight: 700; font-size: 0.85em; margin-right: 10px; flex-shrink: 0; }
+  .step { display: flex; align-items: flex-start; padding: 12px 0; }
+  .step p { color: #bbb; font-size: 0.9em; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; font-weight: 600; }
+  .tag-bot { background: rgba(88,101,242,0.15); color: #5865F2; }
+  .tag-free { background: rgba(52,211,153,0.12); color: #34d399; }
+  .note { background: rgba(251,191,36,0.08); border-left: 3px solid #fbbf24; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; font-size: 0.88em; color: #ccc; }
+  h3 { font-size: 1em; font-weight: 700; margin: 20px 0 10px; color: #ddd; }
+  p { color: #aaa; font-size: 0.92em; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>RaceSims Discord Server Setup Kit</h1>
+<p class="subtitle">Everything you need to launch your Discord community. Copy-paste ready.</p>
+
+<!-- STEP 1: CREATE SERVER -->
+<div class="section open">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Step 1: Create the Server</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <div class="step"><span class="step-num">1</span><p>Open Discord > Click "+" on the left sidebar > "Create My Own" > "For a club or community"</p></div>
+    <div class="step"><span class="step-num">2</span><p>Server name: <strong>RaceSims India</strong></p></div>
+    <div class="step"><span class="step-num">3</span><p>Upload your RaceSims logo as the server icon</p></div>
+    <div class="step"><span class="step-num">4</span><p>Enable "Community" in Server Settings > Enable Community (this unlocks welcome screen, rules, announcements)</p></div>
+  </div>
+</div>
+
+<!-- STEP 2: CHANNELS -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Step 2: Channel Structure</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <p>Create these categories and channels in order:</p>
+
+    <h3>WELCOME</h3>
+    <ul class="channel-list">
+      <li><span class="ch-name">#rules</span><span class="ch-desc">Server rules (read-only). Paste the rules below.</span></li>
+      <li><span class="ch-name">#introductions</span><span class="ch-desc">New members introduce themselves — what they race, what gear they use.</span></li>
+      <li><span class="ch-name">#announcements</span><span class="ch-desc">Official RaceSims announcements. New stock, events, giveaways. (Read-only)</span></li>
+    </ul>
+
+    <h3>COMMUNITY</h3>
+    <ul class="channel-list">
+      <li><span class="ch-name">#general-chat</span><span class="ch-desc">Main hangout. Sim racing talk, race weekends, F1 discussion.</span></li>
+      <li><span class="ch-name">#setup-help</span><span class="ch-desc">Ask questions about hardware, software setup, troubleshooting.</span></li>
+      <li><span class="ch-name">#show-your-rig</span><span class="ch-desc">Post photos/videos of your sim racing setup. Weekly feature picks.</span></li>
+      <li><span class="ch-name">#race-results</span><span class="ch-desc">Share your race results, lap times, personal bests.</span></li>
+    </ul>
+
+    <h3>RACE ENGINEER HUB (Your USP)</h3>
+    <ul class="channel-list">
+      <li><span class="ch-name">#race-engineer-tips</span><span class="ch-desc">YOUR exclusive channel. Weekly tips on driving technique, car setup, telemetry reading. This is what VRH can't replicate.</span></li>
+      <li><span class="ch-name">#telemetry-review</span><span class="ch-desc">Members post telemetry screenshots, you or the community give feedback.</span></li>
+      <li><span class="ch-name">#sim-to-real</span><span class="ch-desc">Discussion on how sim racing translates to real track performance.</span></li>
+    </ul>
+
+    <h3>EVENTS</h3>
+    <ul class="channel-list">
+      <li><span class="ch-name">#race-events</span><span class="ch-desc">Weekly community race announcements, sign-ups, and schedules.</span></li>
+      <li><span class="ch-name">#event-results</span><span class="ch-desc">Race results, standings, champion crowning.</span></li>
+    </ul>
+
+    <h3>MARKETPLACE</h3>
+    <ul class="channel-list">
+      <li><span class="ch-name">#deals-and-offers</span><span class="ch-desc">RaceSims exclusive Discord-only deals and discount codes. (Read-only)</span></li>
+      <li><span class="ch-name">#buy-sell-trade</span><span class="ch-desc">Members can buy/sell/trade used sim racing equipment.</span></li>
+    </ul>
+
+    <h3>VOICE</h3>
+    <ul class="channel-list">
+      <li><span class="ch-name">Race Lobby 1</span><span class="ch-desc">Voice channel for community races</span></li>
+      <li><span class="ch-name">Race Lobby 2</span><span class="ch-desc">Second voice lobby for larger events</span></li>
+      <li><span class="ch-name">Chill Zone</span><span class="ch-desc">Casual voice hangout</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- STEP 3: RULES -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Step 3: Server Rules (Copy-Paste)</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <p>Paste this into #rules:</p>
+    <div class="copy-block" id="rules-text">
+<button class="copy-btn" onclick="copyText('rules-text')">Copy</button>
+**Welcome to the RaceSims India Discord!**
+
+India's community for serious sim racers, run by a race engineer from championship-winning teams. Whether you're building your first rig or training for the track, you're in the right place.
+
+**Rules:**
+
+1. **Be respectful.** No hate speech, personal attacks, or toxic behavior. We're all here because we love racing.
+
+2. **Keep it relevant.** This is a sim racing community. Off-topic conversations belong in #general-chat.
+
+3. **No spam or self-promotion.** Don't post unsolicited links, referral codes, or promote other stores. Want to share something cool you made? Ask a mod first.
+
+4. **Help each other.** If someone asks a question you know the answer to, share your knowledge. That's what this community is for.
+
+5. **Buy/sell at your own risk.** We provide #buy-sell-trade as a convenience. RaceSims is not responsible for peer-to-peer transactions. Always use secure payment methods.
+
+6. **Race clean.** In community races, drive fair. Intentional wrecking or unsportsmanlike conduct gets you banned from events.
+
+7. **No piracy.** Don't share or request pirated content (games, mods, etc).
+
+**Roles:**
+- @Race Engineer — Thambu (founder, actual race engineer)
+- @Moderator — Community mods
+- @Racer — Verified community members
+- @New Driver — New members (auto-assigned)
+    </div>
+  </div>
+</div>
+
+<!-- STEP 4: WELCOME MESSAGE -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Step 4: Welcome Message (Copy-Paste)</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <p>Set this as the welcome screen message (Server Settings > Community > Welcome Screen):</p>
+    <div class="copy-block" id="welcome-text">
+<button class="copy-btn" onclick="copyText('welcome-text')">Copy</button>
+Welcome to **RaceSims India** — the sim racing community built by a race engineer.
+
+Here's how to get started:
+
+**Read the rules** in #rules
+**Introduce yourself** in #introductions — tell us what you race and what gear you use
+**Check out #race-engineer-tips** for weekly insights you won't find anywhere else
+**Join our weekly races** — check #race-events for the schedule
+**Browse #deals-and-offers** for Discord-exclusive discounts on RaceSims gear
+
+See you on track.
+    </div>
+
+    <h3>Auto-DM for New Members</h3>
+    <p>Set up a bot (MEE6 or Carl-bot, both free) to auto-DM new members:</p>
+    <div class="copy-block" id="dm-text">
+<button class="copy-btn" onclick="copyText('dm-text')">Copy</button>
+Hey! Welcome to RaceSims India.
+
+I'm Thambu — I've spent years as a race engineer for championship-winning racing teams, and I started RaceSims to bring professional-grade sim racing equipment to India.
+
+A few things to check out:
+- **#race-engineer-tips** — I post weekly setup and driving technique tips based on real racing experience
+- **#deals-and-offers** — Discord members get exclusive discounts
+- **#race-events** — We run community races every week
+
+Drop by #introductions and tell us about your setup. And if you ever need help choosing gear, just ask in #setup-help.
+
+See you on track!
+— Thambu, RaceSims
+    </div>
+  </div>
+</div>
+
+<!-- STEP 5: BOTS -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Step 5: Recommended Bots</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <ul class="channel-list">
+      <li>
+        <span class="ch-name">MEE6 <span class="tag tag-free">Free</span></span>
+        <span class="ch-desc">Welcome messages, auto-roles, moderation, leveling system. Set up auto-role assignment: new members get @New Driver. At level 5, they get @Racer.</span>
+      </li>
+      <li>
+        <span class="ch-name">Carl-bot <span class="tag tag-free">Free</span></span>
+        <span class="ch-desc">Reaction roles (let members pick their sim title: ACC, iRacing, F1, etc.), auto-moderation, logging.</span>
+      </li>
+      <li>
+        <span class="ch-name">Dyno <span class="tag tag-free">Free</span></span>
+        <span class="ch-desc">Moderation, auto-mod, custom commands. Create a !gear command that links to racesims.in.</span>
+      </li>
+    </ul>
+
+    <h3>Reaction Roles Setup (Carl-bot)</h3>
+    <p>Create a message in #rules or a #pick-your-role channel where members react to pick their game:</p>
+    <div class="copy-block" id="roles-text">
+<button class="copy-btn" onclick="copyText('roles-text')">Copy</button>
+**Pick your sim titles!** React to get the role:
+
+🏎️ — Assetto Corsa Competizione (ACC)
+🏁 — iRacing
+🎮 — F1 24 / F1 25
+🚗 — Assetto Corsa (+ mods)
+🌍 — rFactor 2
+🏔️ — Dirt Rally / WRC
+🎯 — Other
+
+**Pick your gear brand:**
+🔴 — Conspit
+🔵 — VNM
+🟢 — Moza
+🟡 — Other brand
+⚪ — Planning to buy
+    </div>
+  </div>
+</div>
+
+<!-- STEP 6: FIRST WEEK CONTENT -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Step 6: First Week Content Plan</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <p>Post this content across your first 7 days to make the server feel alive from day one:</p>
+
+    <h3>Day 1 — Launch Day</h3>
+    <div class="copy-block" id="day1-text">
+<button class="copy-btn" onclick="copyText('day1-text')">Copy</button>
+**#announcements:**
+The RaceSims India Discord is officially live!
+
+This is your space to connect with fellow Indian sim racers, get setup help, join community races, and get exclusive deals on sim racing gear.
+
+I'm Thambu — a race engineer who's worked with championship-winning teams. I'll be posting weekly tips on driving technique, car setup, and how sim racing translates to real performance.
+
+Invite your sim racing friends. Let's build the best sim racing community in India.
+
+🔗 Invite link: [your link]
+🛒 Exclusive Discord discount: Use code **DISCORD10** for 10% off your first order at racesims.in
+    </div>
+
+    <h3>Day 2 — First Race Engineer Tip</h3>
+    <div class="copy-block" id="day2-text">
+<button class="copy-btn" onclick="copyText('day2-text')">Copy</button>
+**#race-engineer-tips:**
+**Race Engineer Tip #1: Trail Braking — The Technique That Separates Fast Drivers**
+
+Most sim racers brake in a straight line and then turn. Fast drivers overlap braking and turning — this is called trail braking.
+
+Here's the concept: As you approach a corner, begin braking at your normal point. But instead of releasing the brake completely before turn-in, gradually ease off the brake AS you turn the steering wheel.
+
+Why it works:
+- Keeps weight on the front tires during turn-in = more front grip
+- Lets you brake later without going wide
+- Gives you more control over rotation
+
+The key word is "gradually." You're trading braking force for steering force smoothly.
+
+Try it in ACC at Monza T1. Brake at the 100m board, but keep 10-15% brake pressure as you turn in. You'll feel the car rotate more willingly.
+
+This is exactly what I teach real racing drivers. The sim is the perfect place to practice it.
+
+Any questions? Drop them below.
+    </div>
+
+    <h3>Day 3 — Setup of the Week</h3>
+    <div class="copy-block" id="day3-text">
+<button class="copy-btn" onclick="copyText('day3-text')">Copy</button>
+**#show-your-rig:**
+**Setup of the Week: My Personal Rig**
+
+[Post a photo of YOUR sim racing setup]
+
+Here's what I'm running:
+- Cockpit: [your cockpit]
+- Wheel base: [your wheelbase]
+- Pedals: [your pedals]
+- Shifter: [your shifter]
+- Monitor: [your monitor setup]
+
+I built this setup based on years of experience with real racing cars. Happy to answer any questions about why I chose each component.
+
+Drop your rig photos below — I'll pick one to feature next week!
+    </div>
+
+    <h3>Day 4 — Deals Channel</h3>
+    <div class="copy-block" id="day4-text">
+<button class="copy-btn" onclick="copyText('day4-text')">Copy</button>
+**#deals-and-offers:**
+**Discord-Only Deals**
+
+Welcome to the channel where being part of this community pays off. Here are your exclusive deals:
+
+**DISCORD10** — 10% off your first order at racesims.in
+**SIMFAM** — Free shipping on orders above ₹25,000
+
+These codes are only for Discord members. Don't share them publicly — keep them in the family.
+
+I'll post flash deals here too. Sometimes I get limited stock of popular items and this channel gets first dibs.
+    </div>
+
+    <h3>Day 5 — First Community Race Announcement</h3>
+    <div class="copy-block" id="day5-text">
+<button class="copy-btn" onclick="copyText('day5-text')">Copy</button>
+**#race-events:**
+**RaceSims Community Race #1**
+
+Let's go racing!
+
+**Game:** Assetto Corsa Competizione
+**Track:** Monza
+**Car:** GT3 (free choice)
+**Date:** This Sunday, 8 PM IST
+**Duration:** 30-minute race + 15-minute qualifying
+
+**How to join:**
+1. React with 🏎️ to this message to sign up
+2. Join "Race Lobby 1" voice channel on Sunday at 7:45 PM
+3. Server details will be posted 30 minutes before
+
+**Rules:** Race clean. No intentional contact. Blue flags respected. Have fun.
+
+All skill levels welcome. Whether you're a 1:48 Monza driver or a 2:05, everyone's invited.
+
+Let's see how many we can get for our first race!
+    </div>
+
+    <h3>Day 6-7 — Engagement</h3>
+    <div class="copy-block" id="day67-text">
+<button class="copy-btn" onclick="copyText('day67-text')">Copy</button>
+**#general-chat (Day 6):**
+Quick poll — what's your main sim title right now? Comment below:
+1. ACC
+2. iRacing
+3. F1 24/25
+4. Assetto Corsa (modded)
+5. Other (tell us which!)
+
+**#setup-help (Day 7):**
+Ask Me Anything week! I'm a race engineer who's worked with professional racing teams across India. This week, ask me anything about:
+- Choosing your first (or next) wheel/pedal setup
+- Direct drive vs belt drive
+- Cockpit choices for Indian apartments
+- How sim racing transfers to real driving
+
+No question is too basic. Drop them here.
+    </div>
+  </div>
+</div>
+
+<!-- STEP 7: GROWTH TACTICS -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Step 7: Growth Tactics (0 to 500 members)</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <h3>Immediate (Week 1)</h3>
+    <ul class="channel-list">
+      <li><span class="ch-name">Instagram Bio</span><span class="ch-desc">Add Discord invite link to your Instagram bio. Every post should mention "Join our Discord — link in bio."</span></li>
+      <li><span class="ch-name">Website Banner</span><span class="ch-desc">Add a banner/popup on racesims.in: "Join 100+ Indian sim racers on our Discord" with invite link.</span></li>
+      <li><span class="ch-name">Order Confirmation</span><span class="ch-desc">Add Discord invite link to Shopify order confirmation email. Buyers become community members.</span></li>
+      <li><span class="ch-name">Package Insert</span><span class="ch-desc">Print a small card with your Discord invite QR code. Include in every shipped order.</span></li>
+    </ul>
+
+    <h3>Ongoing (Weekly)</h3>
+    <ul class="channel-list">
+      <li><span class="ch-name">Cross-post tips</span><span class="ch-desc">Post #race-engineer-tips on Instagram with "Full discussion happening in our Discord — link in bio."</span></li>
+      <li><span class="ch-name">Weekly races</span><span class="ch-desc">Consistent weekly race events are the #1 retention driver for sim racing Discords.</span></li>
+      <li><span class="ch-name">Exclusive content</span><span class="ch-desc">Some content ONLY on Discord. New stock alerts, flash sales, behind-the-scenes. Give people a reason to stay.</span></li>
+      <li><span class="ch-name">Indian Racing Community</span><span class="ch-desc">Partner with IRC Discord (discord.gg/rDy7RsN). Don't compete — collaborate. Sponsor their events, cross-promote.</span></li>
+    </ul>
+
+    <div class="note">
+      <strong>Key insight:</strong> VRH's Discord has 537 members built around weekly community races. Your edge is the Race Engineer Hub — no other Indian sim racing Discord has a real race engineer giving weekly tips. Lead with that.
+    </div>
+  </div>
+</div>
+
+<!-- STEP 8: DISCORD INVITE LINK PLACEMENT -->
+<div class="section">
+  <div class="section-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Step 8: Where to Put Your Invite Link</h2>
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="section-body">
+    <ul class="channel-list">
+      <li><span class="ch-name">Instagram bio</span><span class="ch-desc">Replace current link or use Linktree with both store and Discord</span></li>
+      <li><span class="ch-name">racesims.in header</span><span class="ch-desc">Discord icon in the header next to social links</span></li>
+      <li><span class="ch-name">racesims.in footer</span><span class="ch-desc">Discord community link with member count</span></li>
+      <li><span class="ch-name">Product pages</span><span class="ch-desc">"Have questions? Ask our community on Discord" with link</span></li>
+      <li><span class="ch-name">Blog posts</span><span class="ch-desc">CTA at end of every article: "Discuss this in our Discord"</span></li>
+      <li><span class="ch-name">Order confirmation email</span><span class="ch-desc">Shopify notification template: "Join our community"</span></li>
+      <li><span class="ch-name">Shipping inserts</span><span class="ch-desc">QR code card in every package</span></li>
+      <li><span class="ch-name">Reddit posts/comments</span><span class="ch-desc">Mention casually when relevant (never spam)</span></li>
+      <li><span class="ch-name">YouTube (if you start)</span><span class="ch-desc">Video descriptions and pinned comments</span></li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<script>
+function copyText(id) {
+  const el = document.getElementById(id);
+  const text = el.innerText.replace('Copy\n', '').replace('Copy', '').trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = el.querySelector('.copy-btn');
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy', 2000);
+  });
+}
+</script>
+</body>
+</html>

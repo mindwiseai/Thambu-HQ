@@ -1,0 +1,211 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: packing.ai
+Color Mode: CMYK color
+Color Profile: U.S. Web Coated (SWOP) v2
+Ruler Units: centimeters
+Artboard Dimensions: 29.6525 cm x 42.9751 cm
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:
+MontserratRoman Regular* (not installed)
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Silvania (OTF)
+Montserrat Medium (TrueType)
+Montserrat Regular (TrueType)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+D:\WORKS\LIFE ESSENCE\DECEMBER\WhatsApp Image 2024-01-08 at 11.36.32 AM.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 2817K, 1153 by 834 pixels
+Dimensions: 48.377 by 66.88 points 
+Resolution: 1716.038 by 897.843 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\CDRI logo png gold.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 5695K, 1080 by 1350 pixels
+Dimensions: 41.509 by 51.887 points 
+Resolution: 1873.312 by 1873.312 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\Ellipse 1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1339K, 828 by 414 pixels
+Dimensions: 44.554 by 86.358 points 
+Resolution: 1338.049 by 345.168 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\CDRI logo.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1848K, 900 by 701 pixels
+Dimensions: 40.862 by 52.462 points 
+Resolution: 1585.833 by 962.074 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\bacopa plant.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 139.466 by 143.909 points 
+Resolution: 557.555 by 540.342 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\bacopa plant.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 139.466 by 143.909 points 
+Resolution: 557.554 by 540.342 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\bacopa plant.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 139.466 by 143.909 points 
+Resolution: 557.555 by 540.342 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\DECEMBER\WhatsApp Image 2024-01-08 at 11.36.32 AM.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 2817K, 1153 by 834 pixels
+Dimensions: 48.377 by 66.88 points 
+Resolution: 1716.038 by 897.843 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\CDRI logo png gold.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 5695K, 1080 by 1350 pixels
+Dimensions: 41.509 by 51.887 points 
+Resolution: 1873.312 by 1873.312 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\Ellipse 1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1339K, 828 by 414 pixels
+Dimensions: 44.554 by 86.358 points 
+Resolution: 1338.049 by 345.168 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\CDRI logo.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1848K, 900 by 701 pixels
+Dimensions: 40.862 by 52.462 points 
+Resolution: 1585.833 by 962.074 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\bacopa plant.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 139.466 by 143.909 points 
+Resolution: 557.555 by 540.342 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\CDRI logo.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1848K, 900 by 701 pixels
+Dimensions: 40.862 by 52.462 points 
+Resolution: 1585.833 by 962.074 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\bacopa plant.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 139.466 by 143.909 points 
+Resolution: 557.555 by 540.342 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\DECEMBER\WhatsApp Image 2024-01-08 at 11.36.32 AM.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 2817K, 1153 by 834 pixels
+Dimensions: 48.377 by 66.88 points 
+Resolution: 1716.038 by 897.843 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\CDRI logo png gold.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 5695K, 1080 by 1350 pixels
+Dimensions: 41.509 by 51.887 points 
+Resolution: 1873.312 by 1873.312 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\Ellipse 1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1339K, 828 by 414 pixels
+Dimensions: 44.554 by 86.358 points 
+Resolution: 1338.049 by 345.168 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\bacopa plant.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 139.466 by 143.909 points 
+Resolution: 557.555 by 540.342 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\november\print file\mindwise capsule packaging\Links\bacopa plant.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 139.466 by 143.909 points 
+Resolution: 557.555 by 540.342 pixels per inch

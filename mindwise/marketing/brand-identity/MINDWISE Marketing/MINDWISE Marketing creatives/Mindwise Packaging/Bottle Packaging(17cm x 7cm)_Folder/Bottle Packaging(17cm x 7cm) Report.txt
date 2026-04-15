@@ -1,0 +1,186 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: Bottle Packaging(17cm x 7cm).pdf
+Color Mode: CMYK color
+Color Profile: U.S. Web Coated (SWOP) v2
+Ruler Units: centimeters
+Artboard Dimensions: 21.7802 cm x 11.1413 cm
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Montserrat Regular (TrueType)
+Montserrat Bold (TrueType)
+Montserrat SemiBold (TrueType)
+Montserrat ExtraBold (TrueType)
+Montserrat Medium (TrueType)
+Lato Black (TrueType)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\cdri-logo-1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 885K, 580 by 391 pixels
+Dimensions: 43.719 by 29.474 points 
+Resolution: 955.186 by 955.152 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\WhatsApp Image 2024-01-08 at 11.36.32 AM.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 2817K, 1153 by 834 pixels
+Dimensions: 42.554 by 30.782 points 
+Resolution: 1950.817 by 1950.747 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 6.773 by 5.08 points 
+Resolution: 10204.802 by 10204.435 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 8.609 by 6.457 points 
+Resolution: 8029.11 by 8028.821 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\cdri-logo-1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 885K, 580 by 391 pixels
+Dimensions: 43.719 by 29.474 points 
+Resolution: 955.186 by 955.152 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\WhatsApp Image 2024-01-08 at 11.36.32 AM.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 2817K, 1153 by 834 pixels
+Dimensions: 42.554 by 30.782 points 
+Resolution: 1950.817 by 1950.747 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 6.773 by 5.08 points 
+Resolution: 10204.802 by 10204.435 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 8.609 by 6.457 points 
+Resolution: 8029.11 by 8028.821 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\cdri-logo-1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 885K, 580 by 391 pixels
+Dimensions: 43.719 by 29.474 points 
+Resolution: 955.186 by 955.152 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\WhatsApp Image 2024-01-08 at 11.36.32 AM.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 2817K, 1153 by 834 pixels
+Dimensions: 42.554 by 30.782 points 
+Resolution: 1950.817 by 1950.747 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 6.773 by 5.08 points 
+Resolution: 10204.802 by 10204.435 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 8.609 by 6.457 points 
+Resolution: 8029.11 by 8028.821 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\cdri-logo-1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 885K, 580 by 391 pixels
+Dimensions: 40.076 by 27.017 points 
+Resolution: 1042.031 by 1041.994 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\WhatsApp Image 2024-01-08 at 11.36.32 AM.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 2817K, 1153 by 834 pixels
+Dimensions: 39.008 by 28.217 points 
+Resolution: 2128.185 by 2128.108 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 6.209 by 4.657 points 
+Resolution: 11132.621 by 11132.22 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 7.891 by 5.919 points 
+Resolution: 8759.115 by 8758.8 pixels per inch

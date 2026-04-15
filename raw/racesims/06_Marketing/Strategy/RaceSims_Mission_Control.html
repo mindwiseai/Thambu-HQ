@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RaceSims — Mission Control</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+:root{
+  --bg:#07070b;--s1:#0e0e14;--s2:#151520;--s3:#1c1c2a;--s4:#232336;
+  --brd:rgba(255,255,255,.06);--brd2:rgba(255,255,255,.1);
+  --tx:#e2e2ec;--tx2:#9898b0;--tx3:#5e5e78;
+  --red:#e84545;--green:#34d399;--amber:#fbbf24;--blue:#60a5fa;--purple:#a78bfa;--cyan:#22d3ee;--pink:#f472b6;
+  --red-g:rgba(232,69,69,.12);--green-g:rgba(52,211,153,.1);--amber-g:rgba(251,191,36,.1);--blue-g:rgba(96,165,250,.1);--purple-g:rgba(167,139,250,.1);--cyan-g:rgba(34,211,238,.1);--pink-g:rgba(244,114,182,.1);
+  --font:'DM Sans',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);background:var(--bg);color:var(--tx);min-height:100vh;display:flex}
+button,input,select,textarea{font-family:var(--font);color:var(--tx)}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--s3);border-radius:3px}
+
+/* SIDEBAR */
+.sidebar{width:220px;min-height:100vh;background:var(--s1);border-right:1px solid var(--brd);display:flex;flex-direction:column;position:fixed;top:0;left:0;z-index:50}
+.sidebar-logo{padding:20px 18px;font-weight:800;font-size:1.05em;color:var(--red);border-bottom:1px solid var(--brd);display:flex;align-items:center;gap:8px}
+.sidebar-logo span{color:var(--tx3);font-weight:500;font-size:.82em}
+.sidebar-nav{flex:1;padding:12px 8px;display:flex;flex-direction:column;gap:2px}
+.nav-section{padding:16px 10px 6px;font-size:.68em;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--tx3)}
+.nav-item{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:.88em;font-weight:500;color:var(--tx2);cursor:pointer;border:none;background:none;width:100%;text-align:left;transition:all .12s}
+.nav-item:hover{background:var(--s2);color:var(--tx)}
+.nav-item.active{background:var(--s2);color:var(--tx);font-weight:600}
+.nav-item .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.nav-item .count{margin-left:auto;font-size:.75em;font-family:var(--mono);color:var(--tx3);background:var(--s3);padding:1px 7px;border-radius:8px}
+.sidebar-footer{padding:14px 18px;border-top:1px solid var(--brd);font-size:.75em;color:var(--tx3)}
+
+/* MAIN */
+.main-area{margin-left:220px;flex:1;min-height:100vh;display:flex;flex-direction:column}
+.topbar{height:52px;border-bottom:1px solid var(--brd);display:flex;align-items:center;padding:0 24px;gap:12px;background:rgba(7,7,11,.7);backdrop-filter:blur(12px);position:sticky;top:0;z-index:40}
+.topbar-title{font-weight:700;font-size:.95em;flex:1}
+.topbar-actions{display:flex;gap:8px}
+
+.content{padding:24px;flex:1;overflow-y:auto}
+.page{display:none}.page.active{display:block}
+
+/* METRICS */
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:24px}
+.m-card{background:var(--s1);border:1px solid var(--brd);border-radius:10px;padding:16px 18px;cursor:pointer;transition:border-color .12s}
+.m-card:hover{border-color:var(--brd2)}
+.m-label{font-size:.72em;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--tx3);margin-bottom:6px}
+.m-val{font-size:1.6em;font-weight:800;letter-spacing:-.02em}
+.m-sub{font-size:.76em;color:var(--tx3);margin-top:3px}
+.m-bar{height:3px;background:var(--s3);border-radius:2px;margin-top:8px;overflow:hidden}
+.m-bar-fill{height:100%;border-radius:2px;transition:width .3s}
+
+/* KANBAN */
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:1000px){.board{grid-template-columns:1fr}}
+.col{background:var(--s1);border:1px solid var(--brd);border-radius:10px;display:flex;flex-direction:column;min-height:180px}
+.col-head{padding:14px 16px;border-bottom:1px solid var(--brd);display:flex;align-items:center;justify-content:space-between}
+.col-title{font-size:.78em;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--tx2);display:flex;align-items:center;gap:8px}
+.col-cnt{font-family:var(--mono);font-size:.82em;background:var(--s3);padding:1px 7px;border-radius:8px;color:var(--tx3)}
+.col-body{padding:8px;flex:1;display:flex;flex-direction:column;gap:6px;overflow-y:auto;max-height:500px}
+
+.card{background:var(--s2);border:1px solid var(--brd);border-radius:8px;padding:12px;cursor:pointer;transition:all .12s;position:relative}
+.card:hover{border-color:var(--brd2);transform:translateY(-1px)}
+.card.done-card{opacity:.45}.card.done-card .card-title{text-decoration:line-through}
+.card-title{font-size:.88em;font-weight:600;margin-bottom:5px;padding-right:20px;line-height:1.4}
+.card-meta{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+.tag{font-size:.65em;padding:2px 7px;border-radius:4px;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.card-date{font-size:.68em;font-family:var(--mono);color:var(--tx3)}
+.card-pri{position:absolute;top:12px;right:12px;width:7px;height:7px;border-radius:50%}
+.pri-critical{background:var(--red);box-shadow:0 0 6px var(--red)}.pri-high{background:var(--amber);box-shadow:0 0 4px var(--amber)}.pri-medium{background:var(--blue)}.pri-low{background:var(--tx3)}
+
+.add-btn{width:100%;padding:8px;border-radius:6px;border:1px dashed var(--brd);background:none;color:var(--tx3);font-size:.82em;cursor:pointer;transition:all .12s}
+.add-btn:hover{border-color:var(--brd2);color:var(--tx2);background:rgba(255,255,255,.01)}
+
+/* FILTERS */
+.toolbar{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;align-items:center}
+.f-btn{padding:5px 12px;border-radius:6px;font-size:.78em;font-weight:500;border:1px solid var(--brd);background:none;color:var(--tx3);cursor:pointer;transition:all .12s}
+.f-btn:hover,.f-btn.active{background:var(--s2);color:var(--tx);border-color:var(--brd2)}
+.spacer{flex:1}
+
+/* PROJECTS */
+.proj-list{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.proj-card{background:var(--s1);border:1px solid var(--brd);border-radius:10px;overflow:hidden}
+.proj-head{padding:16px 20px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:background .12s}
+.proj-head:hover{background:var(--s2)}
+.proj-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.proj-name{font-weight:700;font-size:.95em;flex:1}
+.proj-status{font-size:.72em;font-weight:600;padding:3px 10px;border-radius:5px;text-transform:uppercase}
+.proj-progress{font-family:var(--mono);font-size:.8em;color:var(--tx3)}
+.proj-bar{height:3px;background:var(--s3)}.proj-bar-fill{height:100%;border-radius:2px;transition:width .3s}
+.proj-body{padding:0 20px 16px;display:none}
+.proj-card.open .proj-body{display:block}
+.milestone{padding:10px 0;border-bottom:1px solid var(--brd);display:flex;align-items:flex-start;gap:10px}
+.milestone:last-child{border:none}
+.ms-check{width:20px;height:20px;border-radius:6px;border:2px solid var(--brd);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:transparent;transition:all .12s;font-size:.7em}
+.ms-check:hover{border-color:var(--green)}.ms-check.done{background:var(--green);border-color:var(--green);color:#fff}
+.ms-text{font-size:.88em;flex:1}.ms-text.crossed{text-decoration:line-through;color:var(--tx3)}
+.ms-date{font-family:var(--mono);font-size:.72em;color:var(--tx3)}
+
+/* COURSES */
+.course-card{background:var(--s1);border:1px solid var(--brd);border-radius:10px;padding:20px;margin-bottom:12px}
+.course-card h4{font-size:1em;font-weight:700;margin-bottom:4px}
+.course-card .desc{font-size:.85em;color:var(--tx2);margin-bottom:12px}
+.module-list{list-style:none}
+.module-item{padding:8px 0;border-bottom:1px solid var(--brd);display:flex;align-items:center;gap:10px;font-size:.88em}
+.module-item:last-child{border:none}
+
+/* EVENTS */
+.event-card{background:var(--s1);border:1px solid var(--brd);border-radius:10px;padding:18px;margin-bottom:10px;display:flex;gap:16px;align-items:flex-start}
+.event-date-box{background:var(--s3);border-radius:8px;padding:10px 14px;text-align:center;min-width:56px}
+.event-date-box .day{font-size:1.4em;font-weight:800;line-height:1}
+.event-date-box .month{font-size:.7em;font-weight:600;color:var(--tx3);text-transform:uppercase}
+.event-info{flex:1}
+.event-info h4{font-size:.95em;font-weight:700;margin-bottom:4px}
+.event-info p{font-size:.85em;color:var(--tx2)}
+
+/* NOTES */
+.notes-box{background:var(--s1);border:1px solid var(--brd);border-radius:10px;padding:16px}
+.note-row{padding:10px 0;border-bottom:1px solid var(--brd);display:flex;gap:10px}
+.note-row:last-child{border:none}
+.note-dt{font-family:var(--mono);font-size:.72em;color:var(--tx3);min-width:80px;padding-top:2px}
+.note-tx{font-size:.88em;color:var(--tx2);line-height:1.5;flex:1}
+.note-input-row{display:flex;gap:8px;margin-top:10px}
+
+/* MODAL */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(3px);z-index:200;align-items:center;justify-content:center}
+.modal-bg.show{display:flex}
+.modal{background:var(--s1);border:1px solid var(--brd);border-radius:14px;width:500px;max-width:94vw;max-height:90vh;overflow-y:auto;padding:24px}
+.modal h3{font-size:1.05em;font-weight:700;margin-bottom:18px}
+.fg{margin-bottom:14px}
+.fl{font-size:.76em;font-weight:600;color:var(--tx2);margin-bottom:5px;display:block}
+.fi,.fs,.ft{width:100%;padding:9px 12px;border-radius:7px;border:1px solid var(--brd);background:var(--s2);color:var(--tx);font-size:.88em;transition:border-color .12s}
+.fi:focus,.fs:focus,.ft:focus{outline:none;border-color:var(--red)}
+.ft{resize:vertical;min-height:70px}
+.fs{cursor:pointer}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.form-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:20px}
+
+.btn{padding:8px 18px;border-radius:7px;font-size:.85em;font-weight:600;border:none;cursor:pointer;transition:all .12s}
+.btn-p{background:var(--red);color:#fff}.btn-p:hover{background:#d03535}
+.btn-s{background:var(--s3);color:var(--tx2)}.btn-s:hover{background:var(--s4);color:var(--tx)}
+.btn-d{background:var(--red-g);color:var(--red)}.btn-d:hover{background:rgba(232,69,69,.2)}
+.btn-g{background:var(--green-g);color:var(--green)}.btn-g:hover{background:rgba(52,211,153,.18)}
+.btn-sm{padding:6px 14px;font-size:.8em}
+
+/* CONTEXT MENU */
+.ctx{position:fixed;background:var(--s2);border:1px solid var(--brd);border-radius:8px;padding:4px;min-width:160px;box-shadow:0 8px 28px rgba(0,0,0,.4);z-index:300;display:none}
+.ctx-i{padding:7px 12px;border-radius:5px;font-size:.82em;cursor:pointer;color:var(--tx2);border:none;background:none;width:100%;text-align:left;font-family:var(--font);transition:all .1s}
+.ctx-i:hover{background:var(--s3);color:var(--tx)}
+.ctx-i.danger{color:var(--red)}.ctx-i.danger:hover{background:var(--red-g)}
+.ctx-d{height:1px;background:var(--brd);margin:3px 0}
+
+/* TAG COLORS */
+.tag-seo{background:var(--blue-g);color:var(--blue)}.tag-instagram{background:var(--red-g);color:var(--pink)}.tag-discord{background:var(--purple-g);color:var(--purple)}.tag-reddit{background:rgba(251,146,60,.12);color:#fb923c}.tag-content{background:var(--green-g);color:var(--green)}.tag-pr{background:var(--amber-g);color:var(--amber)}.tag-geo{background:rgba(168,85,247,.12);color:#a855f7}.tag-website{background:var(--cyan-g);color:var(--cyan)}.tag-events{background:var(--pink-g);color:var(--pink)}.tag-product{background:rgba(251,146,60,.12);color:#fb923c}.tag-training{background:var(--green-g);color:var(--green)}.tag-brand{background:var(--amber-g);color:var(--amber)}.tag-ops{background:var(--blue-g);color:var(--blue)}
+
+@media(max-width:800px){.sidebar{width:60px}.sidebar-logo span,.nav-section,.nav-item span:not(.dot),.nav-item .count,.sidebar-footer{display:none}.main-area{margin-left:60px}.nav-item{justify-content:center;padding:10px}}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="sidebar-logo">RS<span>Mission Control</span></div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Command</div>
+    <button class="nav-item active" data-page="dashboard"><span class="dot" style="background:var(--red)"></span><span>Dashboard</span></button>
+
+    <div class="nav-section">Departments</div>
+    <button class="nav-item" data-page="growth"><span class="dot" style="background:var(--green)"></span><span>Growth</span><span class="count" id="cnt-growth">0</span></button>
+    <button class="nav-item" data-page="product"><span class="dot" style="background:var(--amber)"></span><span>Product Dev</span><span class="count" id="cnt-product">0</span></button>
+    <button class="nav-item" data-page="services"><span class="dot" style="background:var(--purple)"></span><span>Services</span></button>
+    <button class="nav-item" data-page="events"><span class="dot" style="background:var(--pink)"></span><span>Events</span><span class="count" id="cnt-events">0</span></button>
+    <button class="nav-item" data-page="website"><span class="dot" style="background:var(--cyan)"></span><span>Website</span><span class="count" id="cnt-website">0</span></button>
+
+    <div class="nav-section">System</div>
+    <button class="nav-item" data-page="notes"><span class="dot" style="background:var(--tx3)"></span><span>Activity Log</span></button>
+    <button class="nav-item" data-page="settings"><span class="dot" style="background:var(--tx3)"></span><span>Settings</span></button>
+  </div>
+  <div class="sidebar-footer">RaceSims Pvt Ltd &bull; v1.0</div>
+</div>
+
+<!-- MAIN -->
+<div class="main-area">
+<div class="topbar">
+  <div class="topbar-title" id="page-title">Dashboard</div>
+  <div class="topbar-actions">
+    <button class="btn btn-p btn-sm" onclick="openQuickAdd()">+ New Task</button>
+  </div>
+</div>
+<div class="content">
+
+<!-- ===== DASHBOARD ===== -->
+<div class="page active" id="page-dashboard">
+  <div class="metrics-grid" id="dash-metrics"></div>
+  <div style="display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-bottom:24px" id="dash-grid">
+    <div>
+      <h3 style="font-size:.9em;font-weight:700;margin-bottom:12px;color:var(--tx2)">Priority Tasks</h3>
+      <div id="dash-priority"></div>
+    </div>
+    <div>
+      <h3 style="font-size:.9em;font-weight:700;margin-bottom:12px;color:var(--tx2)">Upcoming Events</h3>
+      <div id="dash-events"></div>
+      <h3 style="font-size:.9em;font-weight:700;margin:16px 0 12px;color:var(--tx2)">Active Projects</h3>
+      <div id="dash-projects"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== GROWTH ===== -->
+<div class="page" id="page-growth">
+  <div class="metrics-grid" id="growth-metrics"></div>
+  <div class="toolbar" id="growth-filters"></div>
+  <div class="board" id="growth-board"></div>
+</div>
+
+<!-- ===== PRODUCT DEV ===== -->
+<div class="page" id="page-product">
+  <div class="toolbar"><button class="btn btn-p btn-sm" onclick="openAddProject()">+ New Project</button></div>
+  <div class="proj-list" id="project-list"></div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<div class="page" id="page-services">
+  <div class="toolbar"><button class="btn btn-p btn-sm" onclick="openAddCourse()">+ New Course</button></div>
+  <div id="courses-list"></div>
+</div>
+
+<!-- ===== EVENTS ===== -->
+<div class="page" id="page-events">
+  <div class="toolbar"><button class="btn btn-p btn-sm" onclick="openAddEvent()">+ New Event</button></div>
+  <div id="events-list"></div>
+</div>
+
+<!-- ===== WEBSITE ===== -->
+<div class="page" id="page-website">
+  <div class="toolbar" id="web-filters"></div>
+  <div class="board" id="web-board"></div>
+</div>
+
+<!-- ===== NOTES ===== -->
+<div class="page" id="page-notes">
+  <div class="notes-box">
+    <div id="notes-list"></div>
+    <div class="note-input-row">
+      <input class="fi" id="note-input" placeholder="Log an activity or note..." onkeydown="if(event.key==='Enter')addNote()" style="flex:1">
+      <button class="btn btn-p btn-sm" onclick="addNote()">Add</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SETTINGS ===== -->
+<div class="page" id="page-settings">
+  <div style="max-width:600px">
+    <h3 style="font-size:1em;margin-bottom:16px">Dashboard Settings</h3>
+    <div class="course-card">
+      <h4>Data Management</h4>
+      <p class="desc">Export or reset your Mission Control data.</p>
+      <div style="display:flex;gap:8px;margin-top:12px">
+        <button class="btn btn-s btn-sm" onclick="exportData()">Export JSON</button>
+        <button class="btn btn-s btn-sm" onclick="document.getElementById('import-file').click()">Import JSON</button>
+        <input type="file" id="import-file" accept=".json" style="display:none" onchange="importData(event)">
+        <button class="btn btn-d btn-sm" onclick="if(confirm('Reset all data? This cannot be undone.')){localStorage.removeItem(SK);location.reload()}">Reset All</button>
+      </div>
+    </div>
+    <div class="course-card" style="margin-top:12px">
+      <h4>About</h4>
+      <p class="desc">RaceSims Mission Control v1.0. Built to make RaceSims the go-to destination for sim racers in India. Modular design — new departments and tools can be added as needed.</p>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<!-- MODALS -->
+<div class="modal-bg" id="m-task"><div class="modal">
+  <h3 id="mt-title">New Task</h3>
+  <div class="fg"><label class="fl">Title</label><input class="fi" id="mt-name" placeholder="What needs to be done?"></div>
+  <div class="fg"><label class="fl">Description</label><textarea class="ft" id="mt-desc" placeholder="Details..."></textarea></div>
+  <div class="form-row">
+    <div class="fg"><label class="fl">Department</label><select class="fs" id="mt-dept">
+      <option value="growth">Growth</option><option value="product">Product Dev</option><option value="services">Services</option><option value="events">Events</option><option value="website">Website</option><option value="ops">Operations</option>
+    </select></div>
+    <div class="fg"><label class="fl">Category</label><select class="fs" id="mt-cat">
+      <option value="seo">SEO</option><option value="instagram">Instagram</option><option value="discord">Discord</option><option value="reddit">Reddit</option><option value="content">Content</option><option value="pr">PR</option><option value="geo">GEO</option><option value="website">Website</option><option value="product">Product</option><option value="training">Training</option><option value="brand">Brand Partnerships</option><option value="events">Events</option><option value="ops">Operations</option>
+    </select></div>
+  </div>
+  <div class="form-row">
+    <div class="fg"><label class="fl">Priority</label><select class="fs" id="mt-pri"><option value="critical">Critical</option><option value="high">High</option><option value="medium" selected>Medium</option><option value="low">Low</option></select></div>
+    <div class="fg"><label class="fl">Due Date</label><input type="date" class="fi" id="mt-date"></div>
+  </div>
+  <div class="form-actions">
+    <button class="btn btn-s" onclick="closeM('m-task')">Cancel</button>
+    <button class="btn btn-d" id="mt-del" style="display:none" onclick="deleteTask()">Delete</button>
+    <button class="btn btn-p" id="mt-save" onclick="saveTask()">Add Task</button>
+  </div>
+</div></div>
+
+<div class="modal-bg" id="m-project"><div class="modal">
+  <h3 id="mp-title">New Project</h3>
+  <div class="fg"><label class="fl">Project Name</label><input class="fi" id="mp-name" placeholder="e.g. Rig V2 Development"></div>
+  <div class="fg"><label class="fl">Description</label><textarea class="ft" id="mp-desc" placeholder="Project goals and scope..."></textarea></div>
+  <div class="form-row">
+    <div class="fg"><label class="fl">Status</label><select class="fs" id="mp-status"><option value="planning">Planning</option><option value="active">Active</option><option value="on_hold">On Hold</option><option value="completed">Completed</option></select></div>
+    <div class="fg"><label class="fl">Color</label><select class="fs" id="mp-color"><option value="var(--red)">Red</option><option value="var(--amber)">Amber</option><option value="var(--green)">Green</option><option value="var(--blue)">Blue</option><option value="var(--purple)">Purple</option><option value="var(--cyan)">Cyan</option><option value="var(--pink)">Pink</option></select></div>
+  </div>
+  <div class="fg"><label class="fl">Milestones (one per line)</label><textarea class="ft" id="mp-ms" placeholder="Design complete&#10;Prototype built&#10;Testing done&#10;Launch"></textarea></div>
+  <div class="form-actions">
+    <button class="btn btn-s" onclick="closeM('m-project')">Cancel</button>
+    <button class="btn btn-d" id="mp-del" style="display:none" onclick="deleteProject()">Delete</button>
+    <button class="btn btn-p" id="mp-save" onclick="saveProject()">Save</button>
+  </div>
+</div></div>
+
+<div class="modal-bg" id="m-event"><div class="modal">
+  <h3 id="me-title">New Event</h3>
+  <div class="fg"><label class="fl">Event Name</label><input class="fi" id="me-name" placeholder="e.g. Community Race #1"></div>
+  <div class="fg"><label class="fl">Description</label><textarea class="ft" id="me-desc" placeholder="Details, location, format..."></textarea></div>
+  <div class="form-row">
+    <div class="fg"><label class="fl">Date</label><input type="date" class="fi" id="me-date"></div>
+    <div class="fg"><label class="fl">Type</label><select class="fs" id="me-type"><option value="community_race">Community Race</option><option value="workshop">Workshop</option><option value="launch">Product Launch</option><option value="meetup">Meetup</option><option value="other">Other</option></select></div>
+  </div>
+  <div class="form-actions">
+    <button class="btn btn-s" onclick="closeM('m-event')">Cancel</button>
+    <button class="btn btn-d" id="me-del" style="display:none" onclick="deleteEvent()">Delete</button>
+    <button class="btn btn-p" id="me-save" onclick="saveEvent()">Save</button>
+  </div>
+</div></div>
+
+<div class="modal-bg" id="m-course"><div class="modal">
+  <h3 id="mc-title">New Course</h3>
+  <div class="fg"><label class="fl">Course Name</label><input class="fi" id="mc-name" placeholder="e.g. Driver Training - Level 1"></div>
+  <div class="fg"><label class="fl">Description</label><textarea class="ft" id="mc-desc" placeholder="Course overview, target audience..."></textarea></div>
+  <div class="form-row">
+    <div class="fg"><label class="fl">Type</label><select class="fs" id="mc-type"><option value="driver_training">Driver Training</option><option value="tuner_training">Tuner Training</option><option value="other">Other</option></select></div>
+    <div class="fg"><label class="fl">Status</label><select class="fs" id="mc-status"><option value="planning">Planning</option><option value="developing">Developing Content</option><option value="packaging">Packaging</option><option value="ready">Ready to Sell</option><option value="live">Live</option></select></div>
+  </div>
+  <div class="fg"><label class="fl">Price (INR)</label><input class="fi" id="mc-price" type="number" placeholder="e.g. 15000"></div>
+  <div class="fg"><label class="fl">Modules (one per line)</label><textarea class="ft" id="mc-modules" placeholder="Module 1: Introduction&#10;Module 2: Basics of trail braking&#10;Module 3: Telemetry reading"></textarea></div>
+  <div class="form-actions">
+    <button class="btn btn-s" onclick="closeM('m-course')">Cancel</button>
+    <button class="btn btn-d" id="mc-del" style="display:none" onclick="deleteCourse()">Delete</button>
+    <button class="btn btn-p" id="mc-save" onclick="saveCourse()">Save</button>
+  </div>
+</div></div>
+
+<div class="modal-bg" id="m-metric"><div class="modal">
+  <h3>Update Metric</h3>
+  <div class="fg"><label class="fl" id="mm-label">Value</label><input class="fi" id="mm-val" type="number"></div>
+  <div class="form-actions"><button class="btn btn-s" onclick="closeM('m-metric')">Cancel</button><button class="btn btn-p" onclick="saveMetric()">Save</button></div>
+</div></div>
+
+<div class="ctx" id="ctx">
+  <button class="ctx-i" id="ctx-todo" onclick="ctxMove('todo')">Move to To Do</button>
+  <button class="ctx-i" id="ctx-prog" onclick="ctxMove('in_progress')">Move to In Progress</button>
+  <button class="ctx-i" id="ctx-done" onclick="ctxMove('done')">Move to Done</button>
+  <div class="ctx-d"></div>
+  <button class="ctx-i" onclick="ctxEdit()">Edit</button>
+  <button class="ctx-i danger" onclick="ctxDel()">Delete</button>
+</div>
+
+<script>
+const SK='racesims_mc_v3';
+function def(){return{
+  tasks:[
+    {id:1,title:'Post 3 Instagram Reels this week',desc:'Product showcases + race engineer tips',dept:'growth',cat:'instagram',pri:'critical',status:'todo',date:'2026-03-28',created:'2026-03-25'},
+    {id:2,title:'Create Discord server with full channel structure',desc:'Use the Discord Setup Kit for copy-paste content',dept:'growth',cat:'discord',pri:'critical',status:'todo',date:'2026-03-28',created:'2026-03-25'},
+    {id:3,title:'Bulk-add product image alt texts via Hextom app',desc:'Format: [Product Name] - [brief desc] | RaceSims',dept:'website',cat:'seo',pri:'high',status:'todo',date:'2026-03-27',created:'2026-03-25'},
+    {id:4,title:'Write blog: Best Sim Racing Setup in India 2026',desc:'Lead with Conspit + VNM. 8Nm minimum philosophy.',dept:'growth',cat:'content',pri:'critical',status:'todo',date:'2026-04-05',created:'2026-03-25'},
+    {id:5,title:'Create r/SimRacingIndia subreddit',desc:'Claim before VRH. Set up rules and sidebar.',dept:'growth',cat:'reddit',pri:'high',status:'todo',date:'2026-03-30',created:'2026-03-25'},
+    {id:6,title:'Add social links to racesims.in header/footer',desc:'Instagram, Discord, YouTube links prominently',dept:'website',cat:'website',pri:'high',status:'todo',date:'2026-03-27',created:'2026-03-25'},
+    {id:7,title:'Claim/optimize Google Business Profile',desc:'Photos, hours, categories, reviews',dept:'growth',cat:'seo',pri:'high',status:'todo',date:'2026-03-30',created:'2026-03-25'},
+    {id:8,title:'Pitch YourStory for founder feature',desc:'Angle: Race engineer builds sim racing brand',dept:'growth',cat:'pr',pri:'medium',status:'todo',date:'2026-04-10',created:'2026-03-25'},
+    {id:9,title:'Create FAQ page for AI search optimization',desc:'17 Q&As optimized for ChatGPT/Perplexity',dept:'website',cat:'geo',pri:'medium',status:'todo',date:'2026-04-10',created:'2026-03-25'},
+    {id:10,title:'Run first Instagram giveaway',desc:'Follow + tag 3 friends to win Conspit product',dept:'growth',cat:'instagram',pri:'high',status:'todo',date:'2026-04-08',created:'2026-03-25'},
+    {id:11,title:'Post Reddit AMA on r/simracing',desc:'Race engineer AMA. Genuine, not salesy.',dept:'growth',cat:'reddit',pri:'medium',status:'todo',date:'2026-04-15',created:'2026-03-25'},
+    {id:12,title:'Contact 5 Indian motorsport micro-influencers',desc:'1K-10K followers. Offer Conspit/VNM product for content.',dept:'growth',cat:'instagram',pri:'medium',status:'todo',date:'2026-04-15',created:'2026-03-25'},
+    {id:100,title:'Fix robots.txt for AI crawlers',desc:'Added Allow rules for GPTBot, ClaudeBot, etc.',dept:'website',cat:'seo',pri:'critical',status:'done',date:'2026-03-25',created:'2026-03-25'},
+    {id:101,title:'Fix duplicate H1 tags',desc:'Changed header logo H1 to div',dept:'website',cat:'seo',pri:'high',status:'done',date:'2026-03-25',created:'2026-03-25'},
+    {id:102,title:'Fix duplicate Organization schema',desc:'Removed simpler header schema',dept:'website',cat:'seo',pri:'high',status:'done',date:'2026-03-25',created:'2026-03-25'},
+    {id:103,title:'Add BreadcrumbList structured data',desc:'JSON-LD for product pages',dept:'website',cat:'seo',pri:'medium',status:'done',date:'2026-03-25',created:'2026-03-25'},
+    {id:104,title:'Shorten title tags',desc:'Hardcoded RaceSims suffix',dept:'website',cat:'seo',pri:'medium',status:'done',date:'2026-03-25',created:'2026-03-25'},
+    {id:105,title:'Create 404 redirects',desc:'3 URL redirects for broken pages',dept:'website',cat:'seo',pri:'high',status:'done',date:'2026-03-25',created:'2026-03-25'},
+  ],
+  projects:[
+    {id:1,name:'Rig Cladding Development',desc:'Design and manufacture cladding panels for the RaceSims cockpit',color:'var(--amber)',status:'planning',milestones:[{text:'Research materials and suppliers',done:false},{text:'Initial design concepts',done:false},{text:'Prototype build',done:false},{text:'Testing and iteration',done:false},{text:'Production tooling',done:false},{text:'Launch',done:false}]},
+    {id:2,name:'Rig V2 - Next Generation',desc:'Design the next version of the RaceSims cockpit with improved rigidity, adjustability, and aesthetics',color:'var(--red)',status:'planning',milestones:[{text:'Requirements gathering from customers',done:false},{text:'Engineering design',done:false},{text:'FEA simulation',done:false},{text:'Prototype fabrication',done:false},{text:'Driver testing and feedback',done:false},{text:'Manufacturing setup',done:false},{text:'Launch',done:false}]},
+    {id:3,name:'Brand Partnerships Expansion',desc:'Onboard new brands. Currently in talks with Fanatec.',color:'var(--blue)',status:'active',milestones:[{text:'Fanatec pricing received',done:false},{text:'Fanatec terms negotiated',done:false},{text:'Fanatec products listed',done:false},{text:'Identify next brand target',done:false}]},
+  ],
+  events:[
+    {id:1,name:'Community Race #1',desc:'ACC at Monza, GT3 free choice. 30min race + 15min quali. Discord voice channel.',date:'2026-04-06',type:'community_race'},
+    {id:2,name:'Community Race #2',desc:'ACC at Spa. Details TBD.',date:'2026-04-13',type:'community_race'},
+  ],
+  courses:[
+    {id:1,name:'Driver Training - Fundamentals',desc:'For aspiring racing drivers. Covers braking, racing line, racecraft, telemetry basics. Uses sim as primary tool.',type:'driver_training',status:'packaging',price:15000,modules:[{text:'Introduction to sim-based training',done:true},{text:'Trail braking technique',done:true},{text:'Racing line optimization',done:false},{text:'Racecraft and overtaking',done:false},{text:'Basic telemetry reading',done:false},{text:'Practice exercises and assessment',done:false}]},
+    {id:2,name:'Driver Training - Advanced',desc:'For drivers with track experience. Setup optimization, advanced telemetry, race strategy.',type:'driver_training',status:'planning',price:25000,modules:[{text:'Advanced car setup principles',done:false},{text:'Telemetry deep dive',done:false},{text:'Race strategy and tyre management',done:false},{text:'Wet weather technique',done:false},{text:'Mental performance',done:false}]},
+    {id:3,name:'Tuner Training - Sim Setup Specialist',desc:'Learn to set up and calibrate sim racing hardware professionally. For aspiring sim center operators.',type:'tuner_training',status:'planning',price:20000,modules:[{text:'Hardware overview (wheels, pedals, rigs)',done:false},{text:'Force feedback calibration',done:false},{text:'Pedal calibration and adjustment',done:false},{text:'Cockpit ergonomics',done:false},{text:'Software setup and optimization',done:false},{text:'Troubleshooting common issues',done:false}]},
+  ],
+  metrics:{ig:537,ig_target:3000,discord:0,discord_target:200,blog:0,blog_target:10,backlinks:0,bl_target:15,revenue:0,courses_sold:0},
+  competitor:{vrh_ig:8115,vrh_discord:537,vrh_blog:12},
+  notes:[
+    {id:1,date:'2026-03-25',text:'Completed full SEO/GEO audit: robots.txt, H1 tags, schema, title tags, 404 redirects.'},
+    {id:2,date:'2026-03-25',text:'Competitive analysis done. Main gaps: IG (537 vs 8115), no Discord, no blog content, no press.'},
+    {id:3,date:'2026-03-25',text:'Product strategy confirmed: Conspit + VNM primary. Moza entry-level only. Simagic for price comparison only. Min 8Nm philosophy.'},
+  ],
+}}
+let D;try{const s=localStorage.getItem(SK);D=s?JSON.parse(s):def()}catch(e){D=def()}
+function save(){try{localStorage.setItem(SK,JSON.stringify(D))}catch(e){}}
+
+// NAV
+const titles={dashboard:'Dashboard',growth:'Growth & Marketing',product:'Product Development',services:'Training & Services',events:'Events',website:'Website & SEO',notes:'Activity Log',settings:'Settings'};
+document.querySelectorAll('.nav-item').forEach(n=>{n.addEventListener('click',()=>{
+  document.querySelectorAll('.nav-item').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  n.classList.add('active');
+  const p=n.dataset.page;
+  document.getElementById('page-'+p).classList.add('active');
+  document.getElementById('page-title').textContent=titles[p]||p;
+})});
+
+// UTILS
+function closeM(id){document.getElementById(id).classList.remove('show')}
+document.querySelectorAll('.modal-bg').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('show')})});
+function fmtDate(d){if(!d)return'';const p=d.split('-');return p[2]+'/'+p[1]}
+
+// METRICS
+let editMK=null;
+function editM(k,l){editMK=k;document.getElementById('mm-label').textContent=l;document.getElementById('mm-val').value=D.metrics[k]||0;document.getElementById('m-metric').classList.add('show')}
+function saveMetric(){D.metrics[editMK]=parseInt(document.getElementById('mm-val').value)||0;save();renderAll();closeM('m-metric')}
+
+// TASKS
+let editTID=null,defStatus='todo',defDept='growth';
+function openQuickAdd(){editTID=null;document.getElementById('mt-title').textContent='New Task';['mt-name','mt-desc','mt-date'].forEach(x=>document.getElementById(x).value='');document.getElementById('mt-pri').value='medium';document.getElementById('mt-del').style.display='none';document.getElementById('mt-save').textContent='Add Task';document.getElementById('m-task').classList.add('show')}
+function openEditTask(id){const t=D.tasks.find(x=>x.id===id);if(!t)return;editTID=id;document.getElementById('mt-title').textContent='Edit Task';document.getElementById('mt-name').value=t.title;document.getElementById('mt-desc').value=t.desc||'';document.getElementById('mt-dept').value=t.dept||'growth';document.getElementById('mt-cat').value=t.cat||'seo';document.getElementById('mt-pri').value=t.pri;document.getElementById('mt-date').value=t.date||'';document.getElementById('mt-del').style.display='inline-block';document.getElementById('mt-save').textContent='Save';document.getElementById('m-task').classList.add('show')}
+function saveTask(){const n=document.getElementById('mt-name').value.trim();if(!n)return;if(editTID){const t=D.tasks.find(x=>x.id===editTID);Object.assign(t,{title:n,desc:document.getElementById('mt-desc').value.trim(),dept:document.getElementById('mt-dept').value,cat:document.getElementById('mt-cat').value,pri:document.getElementById('mt-pri').value,date:document.getElementById('mt-date').value})}else{D.tasks.push({id:Date.now(),title:n,desc:document.getElementById('mt-desc').value.trim(),dept:document.getElementById('mt-dept').value,cat:document.getElementById('mt-cat').value,pri:document.getElementById('mt-pri').value,status:defStatus,date:document.getElementById('mt-date').value,created:new Date().toISOString().slice(0,10)})}save();renderAll();closeM('m-task')}
+function deleteTask(){if(!editTID)return;D.tasks=D.tasks.filter(t=>t.id!==editTID);save();renderAll();closeM('m-task')}
+
+// CONTEXT MENU
+let ctxTID=null;
+function showCtx(e,id){e.preventDefault();e.stopPropagation();ctxTID=id;const m=document.getElementById('ctx');m.style.display='block';m.style.left=Math.min(e.clientX,innerWidth-180)+'px';m.style.top=Math.min(e.clientY,innerHeight-180)+'px'}
+document.addEventListener('click',()=>{document.getElementById('ctx').style.display='none'});
+function ctxMove(s){const t=D.tasks.find(x=>x.id===ctxTID);if(t){t.status=s;save();renderAll()}}
+function ctxEdit(){openEditTask(ctxTID)}
+function ctxDel(){D.tasks=D.tasks.filter(t=>t.id!==ctxTID);save();renderAll()}
+
+// RENDER BOARD
+const priOrd={critical:0,high:1,medium:2,low:3};
+function renderBoard(containerId,tasks,filterId){
+  const cols={todo:[],in_progress:[],done:[]};
+  tasks.forEach(t=>{if(cols[t.status])cols[t.status].push(t)});
+  Object.values(cols).forEach(a=>a.sort((a,b)=>priOrd[a.pri]-priOrd[b.pri]));
+  const cfg=[{k:'todo',l:'To Do',c:'var(--tx2)'},{k:'in_progress',l:'In Progress',c:'var(--amber)'},{k:'done',l:'Done',c:'var(--green)'}];
+  document.getElementById(containerId).innerHTML=cfg.map(c=>`<div class="col"><div class="col-head"><div class="col-title"><span style="color:${c.c}">${c.l}</span><span class="col-cnt">${cols[c.k].length}</span></div></div><div class="col-body">${cols[c.k].map(t=>`<div class="card ${t.status==='done'?'done-card':''}" onclick="openEditTask(${t.id})" oncontextmenu="showCtx(event,${t.id})"><div class="card-pri pri-${t.pri}"></div><div class="card-title">${t.title}</div><div class="card-meta"><span class="tag tag-${t.cat}">${t.cat}</span>${t.date?`<span class="card-date">${fmtDate(t.date)}</span>`:''}</div></div>`).join('')}${c.k!=='done'?`<button class="add-btn" onclick="defDept='${filterId||'growth'}';defStatus='${c.k}';openQuickAdd()">+ Add</button>`:''}</div></div>`).join('')}
+
+// RENDER FUNCTIONS
+function renderDashMetrics(){
+  const m=D.metrics,done=D.tasks.filter(t=>t.status==='done').length,total=D.tasks.length;
+  document.getElementById('dash-metrics').innerHTML=[
+    {l:'Instagram',v:m.ig,t:m.ig_target,c:'var(--pink)',sub:`Target: ${m.ig_target.toLocaleString()} | VRH: ${D.competitor.vrh_ig.toLocaleString()}`,k:'ig'},
+    {l:'Discord',v:m.discord,t:m.discord_target,c:'var(--purple)',sub:`Target: ${m.discord_target}`,k:'discord'},
+    {l:'Blog Articles',v:m.blog,t:m.blog_target,c:'var(--green)',sub:`${m.blog_target} planned`},
+    {l:'Tasks Done',v:done,t:total,c:'var(--amber)',sub:`${D.tasks.filter(t=>t.status==='in_progress').length} in progress`},
+    {l:'Courses Ready',v:D.courses.filter(c=>c.status==='ready'||c.status==='live').length,t:D.courses.length,c:'var(--purple)',sub:`${D.courses.length} total`},
+    {l:'Backlinks',v:m.backlinks,t:m.bl_target,c:'var(--blue)',sub:`Target: ${m.bl_target}`,k:'backlinks'},
+  ].map(x=>{const pct=x.t?Math.min(100,Math.round(x.v/x.t*100)):0;return`<div class="m-card" ${x.k?`onclick="editM('${x.k}','${x.l}')"`:''}>
+    <div class="m-label">${x.l}</div><div class="m-val" style="color:${x.c}">${typeof x.v==='number'?x.v.toLocaleString():x.v}</div><div class="m-sub">${x.sub}</div>
+    <div class="m-bar"><div class="m-bar-fill" style="width:${pct}%;background:${x.c}"></div></div></div>`}).join('')}
+
+function renderDashPriority(){
+  const urgent=D.tasks.filter(t=>t.status!=='done'&&(t.pri==='critical'||t.pri==='high')).sort((a,b)=>priOrd[a.pri]-priOrd[b.pri]).slice(0,8);
+  document.getElementById('dash-priority').innerHTML=urgent.length?urgent.map(t=>`<div class="card" style="margin-bottom:6px" onclick="openEditTask(${t.id})" oncontextmenu="showCtx(event,${t.id})"><div class="card-pri pri-${t.pri}"></div><div class="card-title">${t.title}</div><div class="card-meta"><span class="tag tag-${t.cat}">${t.cat}</span><span class="tag tag-${t.dept}">${t.dept}</span>${t.date?`<span class="card-date">${fmtDate(t.date)}</span>`:''}</div></div>`).join(''):'<p style="color:var(--tx3);font-size:.88em">No urgent tasks. Nice work!</p>'}
+
+function renderDashEvents(){
+  const upcoming=D.events.filter(e=>e.date>=new Date().toISOString().slice(0,10)).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,3);
+  document.getElementById('dash-events').innerHTML=upcoming.length?upcoming.map(e=>{const d=new Date(e.date+'T00:00:00');return`<div class="event-card" style="margin-bottom:8px;padding:12px"><div class="event-date-box" style="padding:6px 10px"><div class="day" style="font-size:1.1em">${d.getDate()}</div><div class="month">${d.toLocaleString('en',{month:'short'})}</div></div><div class="event-info"><h4 style="font-size:.88em">${e.name}</h4><p style="font-size:.78em">${e.type.replace(/_/g,' ')}</p></div></div>`}).join(''):'<p style="color:var(--tx3);font-size:.88em">No upcoming events</p>'}
+
+function renderDashProjects(){
+  document.getElementById('dash-projects').innerHTML=D.projects.filter(p=>p.status==='active'||p.status==='planning').slice(0,4).map(p=>{const done=p.milestones.filter(m=>m.done).length,total=p.milestones.length,pct=total?Math.round(done/total*100):0;return`<div style="background:var(--s1);border:1px solid var(--brd);border-radius:8px;padding:12px;margin-bottom:6px"><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><div style="width:8px;height:8px;border-radius:50%;background:${p.color}"></div><span style="font-size:.85em;font-weight:600">${p.name}</span><span style="margin-left:auto;font-family:var(--mono);font-size:.72em;color:var(--tx3)">${done}/${total}</span></div><div class="proj-bar"><div class="proj-bar-fill" style="width:${pct}%;background:${p.color}"></div></div></div>`}).join('')||'<p style="color:var(--tx3);font-size:.88em">No active projects</p>'}
+
+// GROWTH
+let growthFilter='all';
+function renderGrowth(){
+  const m=D.metrics;
+  document.getElementById('growth-metrics').innerHTML=[
+    {l:'Instagram',v:m.ig,t:m.ig_target,c:'var(--pink)',k:'ig'},{l:'Discord',v:m.discord,t:m.discord_target,c:'var(--purple)',k:'discord'},{l:'Blog',v:m.blog,t:m.blog_target,c:'var(--green)'},{l:'Backlinks',v:m.backlinks,t:m.bl_target,c:'var(--blue)',k:'backlinks'},
+  ].map(x=>{const pct=x.t?Math.min(100,Math.round(x.v/x.t*100)):0;return`<div class="m-card" ${x.k?`onclick="editM('${x.k}','${x.l}')"`:''} style="padding:14px"><div class="m-label">${x.l}</div><div class="m-val" style="color:${x.c};font-size:1.4em">${x.v.toLocaleString()} <span style="font-size:.45em;color:var(--tx3)">/ ${x.t.toLocaleString()}</span></div><div class="m-bar"><div class="m-bar-fill" style="width:${pct}%;background:${x.c}"></div></div></div>`}).join('');
+
+  const cats=['all','seo','instagram','discord','reddit','content','pr','geo'];
+  document.getElementById('growth-filters').innerHTML=cats.map(c=>`<button class="f-btn ${growthFilter===c?'active':''}" onclick="growthFilter='${c}';renderGrowth()">${c}</button>`).join('')+'<span class="spacer"></span><button class="btn btn-p btn-sm" onclick="defDept=\'growth\';openQuickAdd()">+ New Task</button>';
+
+  let tasks=D.tasks.filter(t=>t.dept==='growth');
+  if(growthFilter!=='all')tasks=tasks.filter(t=>t.cat===growthFilter);
+  renderBoard('growth-board',tasks,'growth');
+  document.getElementById('cnt-growth').textContent=D.tasks.filter(t=>t.dept==='growth'&&t.status!=='done').length;
+}
+
+// WEBSITE
+let webFilter='all';
+function renderWebsite(){
+  const cats=['all','seo','geo','website'];
+  document.getElementById('web-filters').innerHTML=cats.map(c=>`<button class="f-btn ${webFilter===c?'active':''}" onclick="webFilter='${c}';renderWebsite()">${c}</button>`).join('')+'<span class="spacer"></span><button class="btn btn-p btn-sm" onclick="defDept=\'website\';openQuickAdd()">+ New Task</button>';
+  let tasks=D.tasks.filter(t=>t.dept==='website');
+  if(webFilter!=='all')tasks=tasks.filter(t=>t.cat===webFilter);
+  renderBoard('web-board',tasks,'website');
+  document.getElementById('cnt-website').textContent=D.tasks.filter(t=>t.dept==='website'&&t.status!=='done').length;
+}
+
+// PROJECTS
+let editPID=null;
+function renderProjects(){
+  const list=document.getElementById('project-list');
+  list.innerHTML=D.projects.map(p=>{const done=p.milestones.filter(m=>m.done).length,total=p.milestones.length,pct=total?Math.round(done/total*100):0;
+    const statusColors={planning:'var(--blue-g)',active:'var(--green-g)',on_hold:'var(--amber-g)',completed:'var(--tx3)'};
+    const statusTextColors={planning:'var(--blue)',active:'var(--green)',on_hold:'var(--amber)',completed:'var(--tx3)'};
+    return`<div class="proj-card" data-id="${p.id}"><div class="proj-head" onclick="this.parentElement.classList.toggle('open')">
+      <div class="proj-dot" style="background:${p.color}"></div><div class="proj-name">${p.name}</div>
+      <div class="proj-status" style="background:${statusColors[p.status]};color:${statusTextColors[p.status]}">${p.status.replace('_',' ')}</div>
+      <div class="proj-progress">${done}/${total}</div></div>
+      <div class="proj-bar"><div class="proj-bar-fill" style="width:${pct}%;background:${p.color}"></div></div>
+      <div class="proj-body">${p.desc?`<p style="font-size:.85em;color:var(--tx2);margin-bottom:12px">${p.desc}</p>`:''}
+      ${p.milestones.map((m,i)=>`<div class="milestone"><button class="ms-check ${m.done?'done':''}" onclick="event.stopPropagation();toggleMS(${p.id},${i})">${m.done?'&#10003;':''}</button><span class="ms-text ${m.done?'crossed':''}">${m.text}</span></div>`).join('')}
+      <div style="margin-top:12px;display:flex;gap:6px"><button class="btn btn-s btn-sm" onclick="openEditProject(${p.id})">Edit Project</button><button class="btn btn-sm" style="background:var(--s3);color:var(--tx3)" onclick="addMilestone(${p.id})">+ Milestone</button></div>
+      </div></div>`}).join('')||'<p style="color:var(--tx3)">No projects yet.</p>';
+  document.getElementById('cnt-product').textContent=D.projects.filter(p=>p.status!=='completed').length;
+}
+function toggleMS(pid,mi){const p=D.projects.find(x=>x.id===pid);p.milestones[mi].done=!p.milestones[mi].done;save();renderAll()}
+function addMilestone(pid){const text=prompt('Milestone name:');if(!text)return;const p=D.projects.find(x=>x.id===pid);p.milestones.push({text,done:false});save();renderAll()}
+function openAddProject(){editPID=null;document.getElementById('mp-title').textContent='New Project';['mp-name','mp-desc','mp-ms'].forEach(x=>document.getElementById(x).value='');document.getElementById('mp-status').value='planning';document.getElementById('mp-color').value='var(--amber)';document.getElementById('mp-del').style.display='none';document.getElementById('m-project').classList.add('show')}
+function openEditProject(id){const p=D.projects.find(x=>x.id===id);if(!p)return;editPID=id;document.getElementById('mp-title').textContent='Edit Project';document.getElementById('mp-name').value=p.name;document.getElementById('mp-desc').value=p.desc||'';document.getElementById('mp-status').value=p.status;document.getElementById('mp-color').value=p.color;document.getElementById('mp-ms').value=p.milestones.map(m=>m.text).join('\n');document.getElementById('mp-del').style.display='inline-block';document.getElementById('m-project').classList.add('show')}
+function saveProject(){const n=document.getElementById('mp-name').value.trim();if(!n)return;const msText=document.getElementById('mp-ms').value.trim().split('\n').filter(Boolean);if(editPID){const p=D.projects.find(x=>x.id===editPID);p.name=n;p.desc=document.getElementById('mp-desc').value.trim();p.status=document.getElementById('mp-status').value;p.color=document.getElementById('mp-color').value;const existing=p.milestones.map(m=>m.text);msText.forEach(t=>{if(!existing.includes(t))p.milestones.push({text:t,done:false})});p.milestones=p.milestones.filter(m=>msText.includes(m.text))}else{D.projects.push({id:Date.now(),name:n,desc:document.getElementById('mp-desc').value.trim(),status:document.getElementById('mp-status').value,color:document.getElementById('mp-color').value,milestones:msText.map(t=>({text:t,done:false}))})}save();renderAll();closeM('m-project')}
+function deleteProject(){if(!editPID)return;D.projects=D.projects.filter(p=>p.id!==editPID);save();renderAll();closeM('m-project')}
+
+// COURSES
+let editCID=null;
+function renderCourses(){
+  document.getElementById('courses-list').innerHTML=D.courses.map(c=>{const done=c.modules.filter(m=>m.done).length,total=c.modules.length;
+    const statusLabels={planning:'Planning',developing:'Developing',packaging:'Packaging',ready:'Ready to Sell',live:'Live'};
+    const statusColors={planning:'var(--blue)',developing:'var(--amber)',packaging:'var(--purple)',ready:'var(--green)',live:'var(--green)'};
+    return`<div class="course-card"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px"><h4>${c.name}</h4><span class="tag" style="background:${statusColors[c.status]}22;color:${statusColors[c.status]}">${statusLabels[c.status]}</span></div>
+    <div class="desc">${c.desc}${c.price?` &bull; <strong>₹${c.price.toLocaleString()}</strong>`:''}</div>
+    <div style="font-size:.78em;color:var(--tx3);margin-bottom:8px">Modules: ${done}/${total} complete</div>
+    <div class="module-list">${c.modules.map((m,i)=>`<div class="module-item"><button class="ms-check ${m.done?'done':''}" onclick="toggleCM(${c.id},${i})">${m.done?'&#10003;':''}</button><span class="${m.done?'crossed':''}" style="color:${m.done?'var(--tx3)':'var(--tx2)'}">${m.text}</span></div>`).join('')}</div>
+    <div style="margin-top:10px"><button class="btn btn-s btn-sm" onclick="openEditCourse(${c.id})">Edit</button></div></div>`}).join('')||'<p style="color:var(--tx3)">No courses yet.</p>'}
+function toggleCM(cid,mi){const c=D.courses.find(x=>x.id===cid);c.modules[mi].done=!c.modules[mi].done;save();renderCourses()}
+function openAddCourse(){editCID=null;document.getElementById('mc-title').textContent='New Course';['mc-name','mc-desc','mc-modules','mc-price'].forEach(x=>document.getElementById(x).value='');document.getElementById('mc-type').value='driver_training';document.getElementById('mc-status').value='planning';document.getElementById('mc-del').style.display='none';document.getElementById('m-course').classList.add('show')}
+function openEditCourse(id){const c=D.courses.find(x=>x.id===id);if(!c)return;editCID=id;document.getElementById('mc-title').textContent='Edit Course';document.getElementById('mc-name').value=c.name;document.getElementById('mc-desc').value=c.desc||'';document.getElementById('mc-type').value=c.type;document.getElementById('mc-status').value=c.status;document.getElementById('mc-price').value=c.price||'';document.getElementById('mc-modules').value=c.modules.map(m=>m.text).join('\n');document.getElementById('mc-del').style.display='inline-block';document.getElementById('m-course').classList.add('show')}
+function saveCourse(){const n=document.getElementById('mc-name').value.trim();if(!n)return;const mods=document.getElementById('mc-modules').value.trim().split('\n').filter(Boolean);if(editCID){const c=D.courses.find(x=>x.id===editCID);c.name=n;c.desc=document.getElementById('mc-desc').value.trim();c.type=document.getElementById('mc-type').value;c.status=document.getElementById('mc-status').value;c.price=parseInt(document.getElementById('mc-price').value)||0;const existing=c.modules.map(m=>m.text);mods.forEach(t=>{if(!existing.includes(t))c.modules.push({text:t,done:false})});c.modules=c.modules.filter(m=>mods.includes(m.text))}else{D.courses.push({id:Date.now(),name:n,desc:document.getElementById('mc-desc').value.trim(),type:document.getElementById('mc-type').value,status:document.getElementById('mc-status').value,price:parseInt(document.getElementById('mc-price').value)||0,modules:mods.map(t=>({text:t,done:false}))})}save();renderAll();closeM('m-course')}
+function deleteCourse(){if(!editCID)return;D.courses=D.courses.filter(c=>c.id!==editCID);save();renderAll();closeM('m-course')}
+
+// EVENTS
+let editEID=null;
+function renderEvents(){
+  const sorted=[...D.events].sort((a,b)=>a.date.localeCompare(b.date));
+  document.getElementById('events-list').innerHTML=sorted.map(e=>{const d=new Date(e.date+'T00:00:00');return`<div class="event-card" onclick="openEditEvent(${e.id})" style="cursor:pointer"><div class="event-date-box"><div class="day">${d.getDate()}</div><div class="month">${d.toLocaleString('en',{month:'short'})}</div></div><div class="event-info"><h4>${e.name}</h4><p>${e.desc||''}</p><p style="margin-top:4px"><span class="tag tag-events">${e.type.replace(/_/g,' ')}</span></p></div></div>`}).join('')||'<p style="color:var(--tx3)">No events scheduled.</p>';
+  document.getElementById('cnt-events').textContent=D.events.filter(e=>e.date>=new Date().toISOString().slice(0,10)).length;
+}
+function openAddEvent(){editEID=null;document.getElementById('me-title').textContent='New Event';['me-name','me-desc','me-date'].forEach(x=>document.getElementById(x).value='');document.getElementById('me-type').value='community_race';document.getElementById('me-del').style.display='none';document.getElementById('m-event').classList.add('show')}
+function openEditEvent(id){const e=D.events.find(x=>x.id===id);if(!e)return;editEID=id;document.getElementById('me-title').textContent='Edit Event';document.getElementById('me-name').value=e.name;document.getElementById('me-desc').value=e.desc||'';document.getElementById('me-date').value=e.date;document.getElementById('me-type').value=e.type;document.getElementById('me-del').style.display='inline-block';document.getElementById('m-event').classList.add('show')}
+function saveEvent(){const n=document.getElementById('me-name').value.trim();if(!n)return;if(editEID){const e=D.events.find(x=>x.id===editEID);e.name=n;e.desc=document.getElementById('me-desc').value.trim();e.date=document.getElementById('me-date').value;e.type=document.getElementById('me-type').value}else{D.events.push({id:Date.now(),name:n,desc:document.getElementById('me-desc').value.trim(),date:document.getElementById('me-date').value,type:document.getElementById('me-type').value})}save();renderAll();closeM('m-event')}
+function deleteEvent(){if(!editEID)return;D.events=D.events.filter(e=>e.id!==editEID);save();renderAll();closeM('m-event')}
+
+// NOTES
+function renderNotes(){
+  const sorted=[...D.notes].sort((a,b)=>b.date.localeCompare(a.date));
+  document.getElementById('notes-list').innerHTML=sorted.map(n=>`<div class="note-row"><div class="note-dt">${n.date}</div><div class="note-tx">${n.text}</div></div>`).join('')||'<p style="color:var(--tx3);padding:10px">No notes yet.</p>'}
+function addNote(){const i=document.getElementById('note-input'),t=i.value.trim();if(!t)return;D.notes.push({id:Date.now(),date:new Date().toISOString().slice(0,10),text:t});i.value='';save();renderNotes()}
+
+// SETTINGS
+function exportData(){const blob=new Blob([JSON.stringify(D,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='racesims_mission_control_backup.json';a.click()}
+function importData(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{D=JSON.parse(ev.target.result);save();renderAll();alert('Data imported successfully!')}catch(err){alert('Invalid file')}};r.readAsText(f)}
+
+// RENDER ALL
+function renderAll(){renderDashMetrics();renderDashPriority();renderDashEvents();renderDashProjects();renderGrowth();renderWebsite();renderProjects();renderCourses();renderEvents();renderNotes()}
+renderAll();
+</script>
+</body>
+</html>

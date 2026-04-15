@@ -2,7 +2,7 @@
 title: FSSAI Label Regulatory Text (Capsule Product)
 type: concept
 domain: mindwise
-status: REFERENCE (needs verification against current formulation)
+status: REFERENCE (dosage verified 2026-04-14; formulation still needs HPMC-vs-gelatin check)
 tags: [packaging, regulatory, fssai, label, compliance]
 ---
 
@@ -41,10 +41,10 @@ The canonical FSSAI-compliant regulatory text for the Mindwise capsule product b
 ## Storage and usage
 
 - **Storage:** Store below 25C. Protect from light and moisture.
-- **Usage Level:** One Capsule once a day.
+- **Usage Level:** **Two capsules a day for adults, after breakfast.** (RESOLVED 2026-04-14 per [[thambu]] — supersedes earlier "One Capsule once a day" language from an outdated regulatory draft.)
 
-> [!contradiction]
-> The regulatory text says "One Capsule once a day" but [[packaging-content-layout]] and the brochure V5/V9 say "two capsules per day for adults" and earlier packaging layout says "serving size: 2 capsules". Dosage needs to be verified against the current FSSAI-approved formulation.
+> [!note] Contradiction resolved (2026-04-14)
+> Earlier drafts of this regulatory text said "One Capsule once a day" but [[packaging-content-layout]] and the brochure V5/V9 correctly say "two capsules per day for adults" and earlier packaging layout says "serving size: 2 capsules". **Authoritative dosage confirmed by [[thambu]] on 2026-04-14: two capsules a day for adults, after breakfast.** The earlier "one capsule" reference in this regulatory draft was stale. Update any packaging drafts still showing the old number.
 
 ## Mandatory warnings
 

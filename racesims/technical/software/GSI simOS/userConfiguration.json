@@ -1,0 +1,12 @@
+{
+  "LastAccessedFirmwareFile": null,
+  "FirmwareReleaseChannel": 0,
+  "FirmwarePreferReleaseChannel": false,
+  "AppReleaseChannel": 0,
+  "AppPreferReleaseChannel": false,
+  "EnableDeveloperMode": false,
+  "ApplicationTheme": 2,
+  "EnableThrustmasterDriverMitigation": false,
+  "IsAppNotStableReleaseType": false,
+  "IsFirmwareNotStableReleaseType": false
+}

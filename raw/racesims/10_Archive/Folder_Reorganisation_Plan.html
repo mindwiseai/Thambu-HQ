@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RaceSims Folder Reorganisation Plan</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; padding: 24px; line-height: 1.6; }
+  h1 { font-size: 1.8rem; color: #fff; margin-bottom: 8px; }
+  .subtitle { color: #888; font-size: 0.95rem; margin-bottom: 32px; }
+  .section { margin-bottom: 32px; }
+  .section-title { font-size: 1.2rem; color: #60a5fa; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #222; }
+  .issue-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-bottom: 24px; }
+  .issue-card { background: #1a1a2e; border: 1px solid #2a2a3e; border-radius: 8px; padding: 14px; }
+  .issue-card .tag { display: inline-block; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; margin-bottom: 8px; }
+  .tag-red { background: #991b1b; color: #fca5a5; }
+  .tag-yellow { background: #854d0e; color: #fde68a; }
+  .tag-blue { background: #1e3a5f; color: #93c5fd; }
+  .issue-card p { font-size: 0.85rem; color: #aaa; }
+  .tree { background: #111; border: 1px solid #222; border-radius: 10px; padding: 24px; font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; font-size: 0.82rem; overflow-x: auto; }
+  .tree .folder { color: #60a5fa; font-weight: 600; }
+  .tree .new { color: #34d399; }
+  .tree .moved { color: #fbbf24; }
+  .tree .comment { color: #666; font-style: italic; }
+  .tree .line { white-space: pre; display: block; line-height: 1.7; }
+  .mapping-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.82rem; }
+  .mapping-table th { background: #1a1a2e; color: #60a5fa; padding: 10px 14px; text-align: left; border-bottom: 2px solid #333; }
+  .mapping-table td { padding: 8px 14px; border-bottom: 1px solid #1a1a1a; vertical-align: top; }
+  .mapping-table tr:hover { background: #111; }
+  .from { color: #f87171; }
+  .to { color: #34d399; }
+  .note { background: #1a1a2e; border-left: 3px solid #60a5fa; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; font-size: 0.85rem; color: #93c5fd; }
+  .stats { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+  .stat-card { background: #1a1a2e; border: 1px solid #2a2a3e; border-radius: 8px; padding: 14px 20px; min-width: 120px; text-align: center; }
+  .stat-card .num { font-size: 1.8rem; font-weight: 700; color: #60a5fa; }
+  .stat-card .label { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 0.05em; }
+  .badge { display: inline-block; font-size: 0.7rem; padding: 2px 6px; border-radius: 3px; font-weight: 600; margin-left: 6px; }
+  .badge-merge { background: #4c1d95; color: #c4b5fd; }
+  .badge-rename { background: #065f46; color: #6ee7b7; }
+  .badge-new { background: #1e3a5f; color: #93c5fd; }
+  .badge-archive { background: #78350f; color: #fde68a; }
+</style>
+</head>
+<body>
+
+<h1>RaceSims Folder Reorganisation Plan</h1>
+<p class="subtitle">Proposed restructure of "Race sims" + "Racesims" into a single clean workspace. Review and approve before any files are moved.</p>
+
+<div class="stats">
+  <div class="stat-card"><div class="num">539</div><div class="label">Total Files</div></div>
+  <div class="stat-card"><div class="num">2</div><div class="label">Root Folders → 1</div></div>
+  <div class="stat-card"><div class="num">9</div><div class="label">Loose Root Files</div></div>
+  <div class="stat-card"><div class="num">3</div><div class="label">"untitled folder"s</div></div>
+  <div class="stat-card"><div class="num">10</div><div class="label">Main Categories</div></div>
+</div>
+
+<div class="section">
+  <h2 class="section-title">Current Problems</h2>
+  <div class="issue-grid">
+    <div class="issue-card">
+      <span class="tag tag-red">Structural</span>
+      <p><strong>Two root folders</strong> — "Race sims" (business files) and "Racesims" (generated marketing content) are separate with no connection.</p>
+    </div>
+    <div class="issue-card">
+      <span class="tag tag-red">Structural</span>
+      <p><strong>9 loose files at root</strong> — Contracts, CAD files, expense sheets, backup codes, .rar archives all sitting at the top level.</p>
+    </div>
+    <div class="issue-card">
+      <span class="tag tag-yellow">Naming</span>
+      <p><strong>"Companys" misspelled</strong> — Should be "Partners" or "Suppliers". Contains supplier/partner folders (Conspit, VNM, Simagic, etc.)</p>
+    </div>
+    <div class="issue-card">
+      <span class="tag tag-yellow">Naming</span>
+      <p><strong>3x "untitled folder"</strong> — At root, inside Racesims pricelist, and inside Purchase. Contains a mix of CAN bus data, DXF drawings, website files, and more.</p>
+    </div>
+    <div class="issue-card">
+      <span class="tag tag-blue">Organisation</span>
+      <p><strong>"Sim" folder is a catch-all</strong> — Mixes old screenshots (2022), product manuals, BOMs, aluminium catalogs, and racing data.</p>
+    </div>
+    <div class="issue-card">
+      <span class="tag tag-blue">Organisation</span>
+      <p><strong>"Others" is vague</strong> — Contains software configs (MoTeC, Simucube, SimHub, GSI) that should be in a Software folder.</p>
+    </div>
+    <div class="issue-card">
+      <span class="tag tag-blue">Organisation</span>
+      <p><strong>Marketing split across folders</strong> — Logos, images, Insta content in "Race sims/Marketing"; SEO, blog, FAQ, strategy in "Racesims".</p>
+    </div>
+    <div class="issue-card">
+      <span class="tag tag-yellow">Duplicates</span>
+      <p><strong>DARTHSNAPE CONTRACT</strong> exists at root AND inside Documents/Formats. SimHub folder exists at root AND inside Others.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 class="section-title">Proposed Structure</h2>
+  <div class="note">Everything merges into the <strong>"Race sims"</strong> folder with numbered top-level categories for sort order. The "Racesims" folder's content moves into the appropriate categories below.</div>
+  <div class="tree">
+    <span class="line"><span class="folder">Race sims/</span></span>
+    <span class="line">│</span>
+    <span class="line">├── <span class="folder">01_Company/</span> <span class="comment">— Registration, legal, bank, formats</span></span>
+    <span class="line">│   ├── <span class="folder">Registration/</span> <span class="comment">— PAN, GST, CIN, MOA, AOA, MSME, IE Code, Startup India cert</span></span>
+    <span class="line">│   ├── <span class="folder">Bank/</span> <span class="comment">— ICICI, SBI docs, cancelled cheques</span></span>
+    <span class="line">│   ├── <span class="folder">Legal/</span> <span class="comment">— Contracts, CA appointments, board resolutions</span></span>
+    <span class="line">│   ├── <span class="folder">Templates/</span> <span class="comment">— Letterhead, proposal format, courier format</span></span>
+    <span class="line">│   ├── <span class="folder">Warehouse/</span> <span class="comment">— Warehouse receipts, photos</span></span>
+    <span class="line">│   └── <span class="folder">Server & Domain/</span> <span class="comment">— OVHcloud, domain receipts, website registration</span></span>
+    <span class="line">│</span>
+    <span class="line">├── <span class="folder">02_Finance/</span> <span class="comment">— All money in and out</span></span>
+    <span class="line">│   ├── <span class="folder">Expense Sheets/</span> <span class="comment">— racesims expense sheet.numbers</span></span>
+    <span class="line">│   ├── <span class="folder">Purchases/</span> <span class="comment">— All vendor purchase folders (Adam Eng, Amazon, Fine Coaters...)</span></span>
+    <span class="line">│   └── <span class="folder">Import Documents/</span> <span class="comment">— VNM, Conspit, TWO SEATS, Qubic imports + Smart CRL</span></span>
+    <span class="line">│</span>
+    <span class="line">├── <span class="folder">03_Sales/</span> <span class="comment">— Everything customer-facing</span></span>
+    <span class="line">│   ├── <span class="folder">Invoices/</span> <span class="comment">— Sale invoices + regular invoices</span></span>
+    <span class="line">│   ├── <span class="folder">Quotes/</span></span>
+    <span class="line">│   ├── <span class="folder">Purchase Orders/</span></span>
+    <span class="line">│   └── <span class="folder">Pricelists/</span> <span class="comment">— Conspit, Moza, Racesims kits, dealer pricelists</span></span>
+    <span class="line">│</span>
+    <span class="line">├── <span class="folder">04_Products/</span> <span class="comment">— BOM, CAD, drawings, manuals</span></span>
+    <span class="line">│   ├── <span class="folder">BOM/</span> <span class="comment">— All Bill of Materials files</span></span>
+    <span class="line">│   ├── <span class="folder">CAD & Drawings/</span> <span class="comment">— SLDASM, DWG, DXF files + rig cut plans</span></span>
+    <span class="line">│   └── <span class="folder">Manuals & Reference/</span> <span class="comment">— Simforge manual, GT1-EVO, aluminium catalog, triple-stand schematic</span></span>
+    <span class="line">│</span>
+    <span class="line">├── <span class="folder">05_R&D/</span> <span class="comment">— Engineering development work</span></span>
+    <span class="line">│   ├── <span class="folder">Drawings/</span> <span class="comment">— Sorted + final drawings</span></span>
+    <span class="line">│   ├── <span class="folder">3D Models & Renders/</span> <span class="comment">— PDFs, MP4, ZIP 3D files</span></span>
+    <span class="line">│   └── <span class="folder">CAN Bus/</span> <span class="comment">— Suzuki dash configs, DBC files, ASC captures</span></span>
+    <span class="line">│</span>
+    <span class="line">├── <span class="folder">06_Marketing/</span> <span class="comment">— All marketing unified</span></span>
+    <span class="line">│   ├── <span class="folder">Brand Assets/</span> <span class="comment">— Logos (all variants), seal, round seal</span></span>
+    <span class="line">│   ├── <span class="folder">Product Images/</span> <span class="comment">— Product photos, Insta images (CCP EVO, 290GP)</span></span>
+    <span class="line">│   ├── <span class="folder">Website/</span> <span class="comment">— Homepage background video, website images</span></span>
+    <span class="line">│   ├── <span class="folder">Content/</span> <span class="comment">— Blog post, FAQ, Reddit AMA (from Racesims folder)</span></span>
+    <span class="line">│   ├── <span class="folder">Social Media/</span> <span class="comment">— Instagram Content Calendar (from Racesims folder)</span></span>
+    <span class="line">│   ├── <span class="folder">SEO/</span> <span class="comment">— SEO/GEO Audit Report (from Racesims folder)</span></span>
+    <span class="line">│   └── <span class="folder">Strategy/</span> <span class="comment">— Mission Control, Dashboard, Battle Plan, Discord Kit (from Racesims folder)</span></span>
+    <span class="line">│</span>
+    <span class="line">├── <span class="folder">07_Partners/</span> <span class="comment">— Renamed from "Companys"</span></span>
+    <span class="line">│   ├── <span class="folder">Conspit/</span></span>
+    <span class="line">│   ├── <span class="folder">VNM/</span></span>
+    <span class="line">│   ├── <span class="folder">Simagic/</span></span>
+    <span class="line">│   ├── <span class="folder">Asetek/</span></span>
+    <span class="line">│   ├── <span class="folder">Simlabs/</span></span>
+    <span class="line">│   ├── <span class="folder">Racesims/</span> <span class="comment">— Internal company docs within partner context</span></span>
+    <span class="line">│   ├── <span class="folder">VRH/</span></span>
+    <span class="line">│   └── <span class="comment">...other partner folders preserved as-is</span></span>
+    <span class="line">│</span>
+    <span class="line">├── <span class="folder">08_Software/</span> <span class="comment">— Sim software configs</span></span>
+    <span class="line">│   ├── <span class="folder">SimHub/</span> <span class="comment">— Merged from root SimHub + Others/SimHub</span></span>
+    <span class="line">│   ├── <span class="folder">MoTeC/</span></span>
+    <span class="line">│   ├── <span class="folder">Simucube 2/</span></span>
+    <span class="line">│   └── <span class="folder">GSI simOS/</span></span>
+    <span class="line">│</span>
+    <span class="line">├── <span class="folder">09_Courses/</span> <span class="comment">— Racesims training courses</span></span>
+    <span class="line">│</span>
+    <span class="line">└── <span class="folder">10_Archive/</span> <span class="comment">— Old/misc items, kept but out of the way</span></span>
+    <span class="line">    ├── <span class="comment">Old screenshots (2022)</span></span>
+    <span class="line">    ├── <span class="comment">test.tfp</span></span>
+    <span class="line">    ├── <span class="comment">racesim final.rar (if superseded by current CAD)</span></span>
+    <span class="line">    ├── <span class="comment">Abstracts.html, FlashTalk.html, launch.bat, Autorun.inf</span></span>
+    <span class="line">    └── <span class="comment">Old website template (index.html + assets/)</span></span>
+  </div>
+</div>
+
+<div class="section">
+  <h2 class="section-title">Detailed Move Mapping</h2>
+  <table class="mapping-table">
+    <thead>
+      <tr><th>Current Location</th><th>→ New Location</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="from">Race sims/ (root loose files)</span><br>DARTHSNAPE CONTRACT (2).pdf<br>Smart CRL for outward remittance.pdf<br>Thambu_OneAuth_BackupCodes*<br>racesims expense sheet.numbers</td>
+        <td><span class="to">01_Company/Legal/<br>02_Finance/Import Documents/<br>01_Company/Registration/<br>02_Finance/Expense Sheets/</span></td>
+        <td><span class="badge badge-merge">Move</span></td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/ (root loose files)</span><br>Race sims assembly.SLDASM<br>racisims file 2.dwg<br>racesim final.rar<br>test.tfp</td>
+        <td><span class="to">04_Products/CAD & Drawings/<br>04_Products/CAD & Drawings/<br>04_Products/CAD & Drawings/<br>10_Archive/</span></td>
+        <td><span class="badge badge-merge">Move</span></td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/Documents/</span><br>Company ID/ (all certs, PAN, GST...)<br>Racesims bank/ + bank documents/<br>Formats/ (letterhead, proposals...)<br>Letters racesims/<br>racesims wareware/<br>Server/ + Website domain docs/<br>transport/</td>
+        <td><span class="to">01_Company/Registration/<br>01_Company/Bank/<br>01_Company/Templates/<br>01_Company/Legal/<br>01_Company/Warehouse/<br>01_Company/Server & Domain/<br>03_Sales/ (courier tracking)</span></td>
+        <td><span class="badge badge-rename">Restructure</span></td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/Companys/</span></td>
+        <td><span class="to">07_Partners/</span></td>
+        <td><span class="badge badge-rename">Rename</span> All subfolders preserved</td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/Purchase/</span></td>
+        <td><span class="to">02_Finance/Purchases/</span></td>
+        <td><span class="badge badge-merge">Move</span> All subfolders preserved</td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/Import documents/</span></td>
+        <td><span class="to">02_Finance/Import Documents/</span></td>
+        <td><span class="badge badge-merge">Move</span> + Smart CRL added</td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/Sales/</span></td>
+        <td><span class="to">03_Sales/</span></td>
+        <td><span class="badge badge-merge">Move</span> Subfolders preserved</td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/Racesims pricelist/</span></td>
+        <td><span class="to">03_Sales/Pricelists/</span></td>
+        <td><span class="badge badge-merge">Move</span> Including dealer subfolder</td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/Racesims BOM/</span></td>
+        <td><span class="to">04_Products/BOM/</span></td>
+        <td><span class="badge badge-merge">Move</span></td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/Sim/</span></td>
+        <td><span class="to">04_Products/Manuals & Reference/ (manuals, catalogs)<br>04_Products/BOM/ (rig bom, sim sheets)<br>10_Archive/ (old 2022 screenshots)</span></td>
+        <td><span class="badge badge-rename">Split</span></td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/R&D/</span></td>
+        <td><span class="to">05_R&D/</span></td>
+        <td><span class="badge badge-merge">Move</span> Subfolders preserved</td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/untitled folder/</span><br>CAN bus data (ASC, DBC, Suzuki configs)<br>RACESIMS DXF drawings<br>Website template + assets<br>Other misc files</td>
+        <td><span class="to">05_R&D/CAN Bus/<br>04_Products/CAD & Drawings/<br>10_Archive/<br>10_Archive/</span></td>
+        <td><span class="badge badge-rename">Sort & Move</span></td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/Marketing/</span></td>
+        <td><span class="to">06_Marketing/Brand Assets/ (logos)<br>06_Marketing/Product Images/<br>06_Marketing/Website/</span></td>
+        <td><span class="badge badge-rename">Restructure</span></td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/Others/</span><br>MoTeC, Simucube 2, GSI simOS, SimHub</td>
+        <td><span class="to">08_Software/</span></td>
+        <td><span class="badge badge-rename">Rename + Move</span></td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/SimHub/ (root)</span></td>
+        <td><span class="to">08_Software/SimHub/</span></td>
+        <td><span class="badge badge-merge">Merge</span> with Others/SimHub</td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/Images/</span></td>
+        <td><span class="to">06_Marketing/Product Images/</span></td>
+        <td><span class="badge badge-merge">Merge</span></td>
+      </tr>
+      <tr>
+        <td><span class="from">Race sims/Racesims courses/</span></td>
+        <td><span class="to">09_Courses/</span></td>
+        <td><span class="badge badge-rename">Rename</span></td>
+      </tr>
+      <tr style="background: #0d1f0d;">
+        <td><span class="from">Racesims/ (generated content folder)</span><br>blog_best_sim_racing_setup_india_2026.html<br>FAQ_Page_Content.html<br>Reddit_AMA_Post.md<br>Instagram_Content_Calendar.html<br>SEO_GEO_Audit_Report_RaceSims.html<br>RaceSims_Mission_Control.html<br>RaceSims_Dashboard.html<br>RaceSims_vs_VRH_Battle_Plan.html<br>Discord_Server_Setup_Kit.html</td>
+        <td><span class="to">06_Marketing/Content/<br>06_Marketing/Content/<br>06_Marketing/Content/<br>06_Marketing/Social Media/<br>06_Marketing/SEO/<br>06_Marketing/Strategy/<br>06_Marketing/Strategy/<br>06_Marketing/Strategy/<br>06_Marketing/Strategy/</span></td>
+        <td><span class="badge badge-merge">Move into Race sims</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section">
+  <h2 class="section-title">Sensitive Items — Will NOT Move</h2>
+  <div class="note">
+    <strong>Backup codes & credentials</strong> — Thambu_OneAuth_BackupCodes and discord_backup_codes.txt contain sensitive auth data. I'll move them to 01_Company/Registration/ but flag them for your attention. No passwords or tokens will be exposed.
+  </div>
+  <div class="note">
+    <strong>ICICI PDFs in logo folder</strong> — There are 2 ICICI bank PDFs sitting inside Marketing/racesims logo/. These appear misplaced and will be moved to 01_Company/Bank/.
+  </div>
+</div>
+
+<div class="section">
+  <h2 class="section-title">After Reorganisation</h2>
+  <div class="issue-grid">
+    <div class="issue-card">
+      <span class="tag tag-blue">Result</span>
+      <p><strong>1 root folder</strong> instead of 2 — everything under "Race sims" with clear numbered categories</p>
+    </div>
+    <div class="issue-card">
+      <span class="tag tag-blue">Result</span>
+      <p><strong>0 loose root files</strong> — every file in a category folder</p>
+    </div>
+    <div class="issue-card">
+      <span class="tag tag-blue">Result</span>
+      <p><strong>0 "untitled folder"s</strong> — all contents sorted into proper locations</p>
+    </div>
+    <div class="issue-card">
+      <span class="tag tag-blue">Result</span>
+      <p><strong>10 clear categories</strong> — Company, Finance, Sales, Products, R&D, Marketing, Partners, Software, Courses, Archive</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

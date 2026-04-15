@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RaceSims AI Assistant — Dashboard</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0a0a;
+      --surface: #1a1a1a;
+      --surface2: #242424;
+      --border: #333;
+      --text: #e0e0e0;
+      --text-dim: #888;
+      --red: #cc0000;
+      --red-dim: #991a1a;
+      --green: #22c55e;
+      --yellow: #eab308;
+      --blue: #3b82f6;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      background: var(--surface);
+      border-bottom: 2px solid var(--red);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .header h1 span { color: var(--red); }
+
+    .status-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--green);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* Stats bar */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      padding: 16px 24px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat-card {
+      background: var(--surface2);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-align: center;
+    }
+
+    .stat-card .value {
+      font-size: 28px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .stat-card .label {
+      font-size: 11px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    .stat-card.hot .value { color: var(--red); }
+    .stat-card.warm .value { color: var(--yellow); }
+    .stat-card.escalation .value { color: #ff4444; }
+
+    /* Main layout */
+    .main {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      height: calc(100vh - 130px);
+    }
+
+    /* Conversation list */
+    .conv-list {
+      border-right: 1px solid var(--border);
+      overflow-y: auto;
+      background: var(--surface);
+    }
+
+    .conv-list-header {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .conv-item {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .conv-item:hover { background: var(--surface2); }
+    .conv-item.active { background: var(--surface2); border-left: 3px solid var(--red); }
+    .conv-item.escalated { border-left: 3px solid #ff4444; }
+
+    .conv-item .name {
+      font-weight: 600;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .conv-item .channel-badge {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 10px;
+      background: var(--surface);
+      color: var(--text-dim);
+    }
+
+    .conv-item .channel-badge.wa { background: #1a3a2a; color: #22c55e; }
+    .conv-item .channel-badge.ig { background: #3a1a3a; color: #e040fb; }
+
+    .conv-item .preview {
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-top: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .conv-item .meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 6px;
+      font-size: 11px;
+    }
+
+    .score-badge {
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 11px;
+    }
+
+    .score-hot { background: #3a1a1a; color: #ff4444; }
+    .score-warm { background: #3a3a1a; color: var(--yellow); }
+    .score-cold { background: var(--surface); color: var(--text-dim); }
+
+    .time-ago { color: var(--text-dim); }
+
+    /* Chat view */
+    .chat-view {
+      display: flex;
+      flex-direction: column;
+      background: var(--bg);
+    }
+
+    .chat-header {
+      padding: 12px 20px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chat-header .customer-info h3 {
+      font-size: 16px;
+    }
+
+    .chat-header .customer-info .details {
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+
+    .chat-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .btn:hover { background: var(--border); }
+    .btn.danger { border-color: var(--red); color: var(--red); }
+    .btn.danger:hover { background: var(--red); color: white; }
+    .btn.primary { border-color: var(--red); background: var(--red); color: white; }
+
+    /* Messages */
+    .messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .message {
+      max-width: 70%;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 14px;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+
+    .message.customer {
+      align-self: flex-start;
+      background: var(--surface2);
+      border-bottom-left-radius: 4px;
+    }
+
+    .message.assistant {
+      align-self: flex-end;
+      background: var(--red-dim);
+      border-bottom-right-radius: 4px;
+    }
+
+    .message .msg-time {
+      font-size: 10px;
+      color: var(--text-dim);
+      margin-top: 4px;
+    }
+
+    /* Empty state */
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: var(--text-dim);
+    }
+
+    .empty-state .icon { font-size: 48px; margin-bottom: 12px; }
+    .empty-state p { font-size: 14px; }
+
+    /* Escalation banner */
+    .escalation-banner {
+      background: #2a1a1a;
+      border: 1px solid #ff4444;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .escalation-banner .text {
+      font-size: 13px;
+      color: #ff4444;
+      font-weight: 600;
+    }
+
+    /* Notification toast */
+    .toast {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--red);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 4px 20px rgba(204, 0, 0, 0.4);
+      z-index: 1000;
+      transform: translateX(120%);
+      transition: transform 0.3s ease;
+    }
+
+    .toast.show { transform: translateX(0); }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🏎️ <span>RaceSims</span> AI Assistant</h1>
+    <div class="status-badge">
+      <div class="status-dot"></div>
+      <span id="status-text">Connected</span>
+    </div>
+  </div>
+
+  <div class="stats-bar" id="stats-bar">
+    <div class="stat-card">
+      <div class="value" id="stat-conversations">0</div>
+      <div class="label">Today's Chats</div>
+    </div>
+    <div class="stat-card hot">
+      <div class="value" id="stat-hot">0</div>
+      <div class="label">Hot Leads (8-10)</div>
+    </div>
+    <div class="stat-card warm">
+      <div class="value" id="stat-warm">0</div>
+      <div class="label">Warm Leads (5-7)</div>
+    </div>
+    <div class="stat-card">
+      <div class="value" id="stat-total">0</div>
+      <div class="label">Total Contacts</div>
+    </div>
+    <div class="stat-card escalation">
+      <div class="value" id="stat-escalations">0</div>
+      <div class="label">Pending Escalations</div>
+    </div>
+    <div class="stat-card">
+      <div class="value" id="stat-messages">0</div>
+      <div class="label">Messages Today</div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="conv-list">
+      <div class="conv-list-header">Active Conversations</div>
+      <div id="conv-list-items"></div>
+    </div>
+
+    <div class="chat-view" id="chat-view">
+      <div class="empty-state">
+        <div class="icon">🏁</div>
+        <p>Select a conversation to view</p>
+        <p style="margin-top: 8px; font-size: 12px;">Waiting for incoming messages on WhatsApp & Instagram...</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    let selectedContactId = null;
+    let ws = null;
+
+    // Audio notification using Web Audio API (no external files needed)
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    function playSound(type) {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      if (type === 'message') {
+        osc.frequency.value = 880;
+        gain.gain.value = 0.1;
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.1);
+      } else if (type === 'escalation') {
+        osc.frequency.value = 440;
+        gain.gain.value = 0.2;
+        osc.start();
+        setTimeout(() => { osc.frequency.value = 660; }, 200);
+        osc.stop(audioCtx.currentTime + 0.5);
+      }
+    }
+
+    // Browser notifications
+    if ('Notification' in window && Notification.permission === 'default') {
+      Notification.requestPermission();
+    }
+    function browserNotify(title, body) {
+      if ('Notification' in window && Notification.permission === 'granted') {
+        new Notification(title, { body, icon: '🏎️' });
+      }
+    }
+
+    // --- WebSocket ---
+    function connectWS() {
+      ws = new WebSocket(`ws://${window.location.host}`);
+
+      ws.onopen = () => {
+        document.getElementById('status-text').textContent = 'Connected';
+      };
+
+      ws.onmessage = (event) => {
+        const { event: evt, data } = JSON.parse(event.data);
+
+        if (evt === 'new_message') {
+          playSound('message');
+          refreshConversations();
+          refreshStats();
+          if (data.contactId === selectedContactId) {
+            loadConversation(selectedContactId);
+          }
+          if (data.role === 'customer') {
+            browserNotify('New message', data.content?.substring(0, 100) || 'New customer message');
+          }
+        }
+
+        if (evt === 'escalation' || evt === 'escalation_alert') {
+          playSound('escalation');
+          showToast('🔴 New Escalation! Check the dashboard.');
+          browserNotify('🔴 ESCALATION', data.message || 'Customer needs human attention!');
+          refreshConversations();
+          refreshStats();
+        }
+
+        if (evt === 'contact_paused' || evt === 'contact_resumed') {
+          refreshConversations();
+        }
+      };
+
+      ws.onclose = () => {
+        document.getElementById('status-text').textContent = 'Disconnected — retrying...';
+        setTimeout(connectWS, 3000);
+      };
+    }
+
+    // --- API calls ---
+    async function refreshStats() {
+      const stats = await fetch('/api/stats').then(r => r.json());
+      document.getElementById('stat-conversations').textContent = stats.todayConversations;
+      document.getElementById('stat-hot').textContent = stats.hotLeads;
+      document.getElementById('stat-warm').textContent = stats.warmLeads;
+      document.getElementById('stat-total').textContent = stats.totalContacts;
+      document.getElementById('stat-escalations').textContent = stats.pendingEscalations;
+      document.getElementById('stat-messages').textContent = stats.todayMessages;
+    }
+
+    async function refreshConversations() {
+      const convs = await fetch('/api/conversations').then(r => r.json());
+      const container = document.getElementById('conv-list-items');
+
+      container.innerHTML = convs.map(c => {
+        const scoreClass = c.lead_score >= 8 ? 'score-hot' : c.lead_score >= 5 ? 'score-warm' : 'score-cold';
+        const channelClass = c.channel === 'instagram' ? 'ig' : 'wa';
+        const channelLabel = c.channel === 'instagram' ? 'IG' : 'WA';
+        const isEscalated = c.pending_escalation > 0;
+        const isActive = c.id === selectedContactId;
+        const timeAgo = getTimeAgo(c.last_message_at);
+        const preview = c.last_message ? c.last_message.substring(0, 60) + '...' : 'No messages yet';
+        const paused = c.is_paused ? ' ⏸️' : '';
+
+        return `
+          <div class="conv-item ${isActive ? 'active' : ''} ${isEscalated ? 'escalated' : ''}"
+               onclick="loadConversation(${c.id})">
+            <div class="name">
+              ${c.name || c.phone || 'Unknown'}${paused}
+              <span class="channel-badge ${channelClass}">${channelLabel}</span>
+              ${isEscalated ? '<span style="color:#ff4444;font-size:11px;">⚠️ ESCALATED</span>' : ''}
+            </div>
+            <div class="preview">${c.last_message_role === 'assistant' ? '🤖 ' : '👤 '}${preview}</div>
+            <div class="meta">
+              <span class="score-badge ${scoreClass}">Score: ${c.lead_score}/10</span>
+              <span class="time-ago">${timeAgo}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    async function loadConversation(contactId) {
+      selectedContactId = contactId;
+      const data = await fetch(`/api/conversation/${contactId}`).then(r => r.json());
+      const { contact, messages } = data;
+
+      const chatView = document.getElementById('chat-view');
+      const isPaused = contact.is_paused;
+
+      let detailParts = [];
+      if (contact.phone) detailParts.push(contact.phone);
+      if (contact.budget_range) detailParts.push(`Budget: ${contact.budget_range}`);
+      if (contact.product_interest) detailParts.push(contact.product_interest);
+      if (contact.city) detailParts.push(contact.city);
+
+      chatView.innerHTML = `
+        <div class="chat-header">
+          <div class="customer-info">
+            <h3>${contact.name || contact.phone || 'Unknown'} ${isPaused ? '⏸️ Bot Paused' : '🤖 Bot Active'}</h3>
+            <div class="details">${detailParts.join(' • ') || 'No info yet'} • Score: ${contact.lead_score}/10</div>
+          </div>
+          <div class="chat-actions">
+            ${isPaused
+              ? `<button class="btn primary" onclick="resumeBot(${contactId})">▶️ Resume Bot</button>`
+              : `<button class="btn danger" onclick="pauseBot(${contactId})">⏸️ Take Over</button>`
+            }
+          </div>
+        </div>
+        ${contact.is_paused ? `
+          <div class="escalation-banner">
+            <span class="text">⏸️ Bot is paused — you're handling this conversation in WhatsApp/Instagram</span>
+          </div>
+        ` : ''}
+        <div class="messages" id="messages">
+          ${messages.map(m => `
+            <div class="message ${m.role}">
+              ${m.content}
+              <div class="msg-time">${new Date(m.created_at).toLocaleTimeString()}</div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+
+      // Scroll to bottom
+      const msgContainer = document.getElementById('messages');
+      if (msgContainer) msgContainer.scrollTop = msgContainer.scrollHeight;
+
+      // Refresh list to show active state
+      refreshConversations();
+    }
+
+    async function pauseBot(contactId) {
+      await fetch(`/api/pause/${contactId}`, { method: 'POST' });
+      loadConversation(contactId);
+      showToast('Bot paused — take over in WhatsApp/Instagram');
+    }
+
+    async function resumeBot(contactId) {
+      await fetch(`/api/resume/${contactId}`, { method: 'POST' });
+      loadConversation(contactId);
+      showToast('Bot resumed for this conversation');
+    }
+
+    // --- Helpers ---
+    function getTimeAgo(dateStr) {
+      if (!dateStr) return '';
+      const diff = Date.now() - new Date(dateStr).getTime();
+      const mins = Math.floor(diff / 60000);
+      if (mins < 1) return 'now';
+      if (mins < 60) return `${mins}m ago`;
+      const hrs = Math.floor(mins / 60);
+      if (hrs < 24) return `${hrs}h ago`;
+      return `${Math.floor(hrs / 24)}d ago`;
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 4000);
+    }
+
+    // --- Init ---
+    connectWS();
+    refreshStats();
+    refreshConversations();
+    setInterval(refreshStats, 30000);
+    setInterval(refreshConversations, 15000);
+  </script>
+</body>
+</html>

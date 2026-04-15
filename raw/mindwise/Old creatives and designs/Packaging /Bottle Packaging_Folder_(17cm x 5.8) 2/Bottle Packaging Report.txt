@@ -1,0 +1,204 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: Bottle Packaging.ai
+Color Mode: CMYK color
+Color Profile: U.S. Web Coated (SWOP) v2
+Ruler Units: centimeters
+Artboard Dimensions: 21.9995 cm x 10.9982 cm
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Montserrat Bold (TrueType)
+Montserrat SemiBold (TrueType)
+Montserrat ExtraBold (TrueType)
+Montserrat Medium (TrueType)
+Montserrat Regular (TrueType)
+Lato Black (TrueType)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+D:\WORKS\LIFE ESSENCE\2025\March\Main packaging_Folder (2)\Main packaging_Folder\Links\cdri-logo-1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 885K, 580 by 391 pixels
+Dimensions: 42.347 by 28.549 points 
+Resolution: 986.141 by 986.106 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Main packaging_Folder (2)\Main packaging_Folder\Links\CDRI logo png.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 24.403 by 24.404 points 
+Resolution: 3186.438 by 3186.323 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\Feb\Packaging\Package\Main packaging_Folder\Links\WhatsApp Image 2024-01-08 at 11.36.32 AM.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 2817K, 1153 by 834 pixels
+Dimensions: 34.89 by 25.238 points 
+Resolution: 2379.346 by 2379.261 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\Feb\Packaging\Package\Main packaging_Folder\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 5.56 by 4.17 points 
+Resolution: 12432.463 by 12432.016 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\Feb\Packaging\Package\Main packaging_Folder\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 6.66 by 4.995 points 
+Resolution: 10378.825 by 10378.451 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging{30Ns)\Links\bacopa plant.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 135.32 by 135.325 points 
+Resolution: 574.636 by 574.615 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Main packaging_Folder (2)\Main packaging_Folder\Links\cdri-logo-1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 885K, 580 by 391 pixels
+Dimensions: 42.347 by 28.549 points 
+Resolution: 986.141 by 986.106 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Main packaging_Folder (2)\Main packaging_Folder\Links\CDRI logo png.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 24.403 by 24.404 points 
+Resolution: 3186.438 by 3186.323 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\Feb\Packaging\Package\Main packaging_Folder\Links\WhatsApp Image 2024-01-08 at 11.36.32 AM.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 2817K, 1153 by 834 pixels
+Dimensions: 34.89 by 25.238 points 
+Resolution: 2379.346 by 2379.261 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\Feb\Packaging\Package\Main packaging_Folder\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 5.56 by 4.17 points 
+Resolution: 12432.463 by 12432.016 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\Feb\Packaging\Package\Main packaging_Folder\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 6.66 by 4.995 points 
+Resolution: 10378.825 by 10378.451 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging{30Ns)\Links\bacopa plant.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 135.32 by 135.325 points 
+Resolution: 574.636 by 574.615 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Main packaging_Folder (2)\Main packaging_Folder\Links\cdri-logo-1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 885K, 580 by 391 pixels
+Dimensions: 42.347 by 28.549 points 
+Resolution: 986.141 by 986.106 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Main packaging_Folder (2)\Main packaging_Folder\Links\CDRI logo png.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 24.403 by 24.404 points 
+Resolution: 3186.438 by 3186.323 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\Feb\Packaging\Package\Main packaging_Folder\Links\WhatsApp Image 2024-01-08 at 11.36.32 AM.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 2817K, 1153 by 834 pixels
+Dimensions: 34.89 by 25.238 points 
+Resolution: 2379.346 by 2379.261 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\Feb\Packaging\Package\Main packaging_Folder\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 5.56 by 4.17 points 
+Resolution: 12432.463 by 12432.016 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\Feb\Packaging\Package\Main packaging_Folder\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 6.66 by 4.995 points 
+Resolution: 10378.825 by 10378.451 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging{30Ns)\Links\bacopa plant.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 135.32 by 135.325 points 
+Resolution: 574.636 by 574.615 pixels per inch

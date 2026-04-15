@@ -1,4 +1,5 @@
-import 'dotenv/config';
+import dotenv from 'dotenv';
+dotenv.config({ override: true }); // override any inherited empty/stale env vars
 import express from 'express';
 import { WebSocketServer } from 'ws';
 import { createServer } from 'http';

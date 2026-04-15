@@ -12,7 +12,7 @@ Indian company owned by [[thambu]] that owns and operates [[domains/mindwise/_in
 ## What we know
 - **Legal structure:** Partnership firm incorporated under the Partnership Act 1932
 - **GST:** 33AABFL1450E1ZZ (from GS1 barcode registration, Dec 2023)
-- **Registered office (per NDAs, Apr 2023):** Second Floor, NEW NO.22 / OLD NO.2, First Cross Street, Second Avenue, Ashok Nagar, Chennai, Tamil Nadu 600083
+- **Registered office (AUTHORITATIVE, confirmed by Thambu 2026-04-14):** Second Floor, NEW NO.22 / OLD NO.2, First Cross Street, Second Avenue, Ashok Nagar, Chennai, Tamil Nadu **600083**. The 600085 postcode that appears in the Dec 2023 barcode subscription letter is a typo — do NOT use.
 - **Founder full name:** Thambusamy T D (from influencer email template)
 - **Contact:** thambu@lumenmarketingcompany.com / 044-42033176 / 97417 88226
 - **Website:** www.mindwisecdri.com, Instagram: @mindwise.cdri
@@ -49,6 +49,5 @@ Indian company owned by [[thambu]] that owns and operates [[domains/mindwise/_in
 
 ## Open
 - Is the Terminalia chebula / BPH product still active?
-- Which address is current — 600083 (NDAs) or 600085 (courier format)?
 - Is Dr. Miltons still the capsule manufacturer or has this changed?
 - "Life Essence" was mentioned as the parent brand in some contexts — see [[life-essence-history]]

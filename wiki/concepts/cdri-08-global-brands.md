@@ -14,10 +14,10 @@ tags: [cdri-08, global, brands, distribution]
 
 | Brand | Market(s) | Status |
 |-------|-----------|--------|
-| **KeenMind** | Australia, South Africa, parts of Middle East | [[keenmind-agreement-expiry\|SFI agreement expired Dec 2024]]; potential new buyer (see [[pier-campanini]]) |
+| **KeenMind** | Australia, South Africa, parts of Middle East | SFI agreement expired Dec 2024 ([[keenmind-agreement-expiry]]); potential new buyer (see [[pier-campanini]]) |
 | **MemoPlus Gold** | Philippines | Legacy — 20+ years, 15L+ capsules sold (per [[brand-brief-jan-2026]]) |
-| **Memory Perfect** | Europe | Distributed via [[sfi-health\|SFI Health]] network |
-| **MindWise** | India | Current — [[lumen-marketing-company\|Lumen Marketing Company]] |
+| **Memory Perfect** | Europe | Distributed via [[sfi-health]] network |
+| **MindWise** | India | Current — [[lumen-marketing-company]] |
 | **Actif Mind** | Thailand | Status unknown |
 
 Additionally:

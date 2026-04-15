@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RaceSims.in — SEO & GEO Audit Report</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+  /* Header */
+  .header { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155; border-radius: 16px; padding: 40px; margin-bottom: 30px; text-align: center; }
+  .header h1 { font-size: 2.2em; color: #f8fafc; margin-bottom: 8px; }
+  .header .subtitle { color: #94a3b8; font-size: 1.1em; }
+  .header .date { color: #64748b; font-size: 0.9em; margin-top: 12px; }
+
+  /* Score Cards */
+  .scores-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 30px; }
+  .score-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 24px; text-align: center; }
+  .score-card .score { font-size: 2.8em; font-weight: 700; }
+  .score-card .label { color: #94a3b8; font-size: 0.9em; margin-top: 4px; }
+  .score-green .score { color: #4ade80; }
+  .score-yellow .score { color: #fbbf24; }
+  .score-red .score { color: #f87171; }
+  .score-blue .score { color: #60a5fa; }
+
+  /* Sections */
+  .section { background: #1e293b; border: 1px solid #334155; border-radius: 16px; padding: 32px; margin-bottom: 24px; }
+  .section h2 { font-size: 1.5em; color: #f8fafc; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #334155; display: flex; align-items: center; gap: 10px; }
+  .section h3 { font-size: 1.15em; color: #cbd5e1; margin: 20px 0 10px; }
+
+  /* Issue tables */
+  .issue-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  .issue-table th { background: #0f172a; color: #94a3b8; text-align: left; padding: 12px 16px; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.5px; }
+  .issue-table td { padding: 12px 16px; border-top: 1px solid #334155; vertical-align: top; }
+  .issue-table tr:hover { background: #1a2640; }
+
+  /* Severity badges */
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 0.8em; font-weight: 600; }
+  .badge-critical { background: #450a0a; color: #fca5a5; border: 1px solid #7f1d1d; }
+  .badge-high { background: #431407; color: #fdba74; border: 1px solid #7c2d12; }
+  .badge-medium { background: #422006; color: #fcd34d; border: 1px solid #78350f; }
+  .badge-low { background: #052e16; color: #86efac; border: 1px solid #14532d; }
+  .badge-good { background: #022c22; color: #6ee7b7; border: 1px solid #064e3b; }
+  .badge-info { background: #0c1a3d; color: #93c5fd; border: 1px solid #1e3a5f; }
+
+  /* Status indicators */
+  .status-pass { color: #4ade80; }
+  .status-fail { color: #f87171; }
+  .status-warn { color: #fbbf24; }
+
+  /* Recommendation cards */
+  .rec-card { background: #0f172a; border: 1px solid #334155; border-radius: 10px; padding: 20px; margin: 12px 0; border-left: 4px solid #3b82f6; }
+  .rec-card.priority-high { border-left-color: #f87171; }
+  .rec-card.priority-medium { border-left-color: #fbbf24; }
+  .rec-card.priority-low { border-left-color: #4ade80; }
+  .rec-card h4 { color: #f8fafc; margin-bottom: 8px; }
+  .rec-card p { color: #94a3b8; font-size: 0.95em; }
+  .rec-card .impact { font-size: 0.85em; margin-top: 8px; color: #64748b; }
+  .rec-card code { background: #1e293b; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; color: #67e8f9; }
+
+  /* Summary box */
+  .summary-box { background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%); border: 1px solid #3b82f6; border-radius: 12px; padding: 24px; margin: 16px 0; }
+  .summary-box h3 { color: #93c5fd; margin-bottom: 10px; }
+  .summary-box p { color: #cbd5e1; }
+
+  /* Two column */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* Code block */
+  .code-block { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 16px; font-family: 'Consolas', 'Monaco', monospace; font-size: 0.85em; color: #67e8f9; overflow-x: auto; margin: 12px 0; white-space: pre-wrap; }
+
+  /* Checklist */
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding: 8px 0; border-bottom: 1px solid #1e293b; display: flex; align-items: flex-start; gap: 8px; }
+  .checklist li:last-child { border-bottom: none; }
+  .check-pass::before { content: "✅"; }
+  .check-fail::before { content: "❌"; }
+  .check-warn::before { content: "⚠️"; }
+  .check-new::before { content: "🆕"; }
+
+  .divider { border: none; border-top: 1px solid #334155; margin: 24px 0; }
+
+  /* Print styles */
+  @media print {
+    body { background: #fff; color: #1e293b; }
+    .section, .score-card, .header { background: #f8fafc; border-color: #e2e8f0; }
+    .score-card .score { color: #1e293b; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header">
+  <h1>RaceSims.in — SEO & GEO Audit Report</h1>
+  <div class="subtitle">Search Engine Optimization + Generative Engine Optimization (AI Search)</div>
+  <div class="date">Audit Date: March 25, 2026 &nbsp;|&nbsp; Site: racesims.in &nbsp;|&nbsp; Platform: Shopify</div>
+</div>
+
+<!-- Executive Summary Scores -->
+<div class="scores-grid">
+  <div class="score-card score-green">
+    <div class="score">86/86</div>
+    <div class="label">Core Web Vitals<br>(All URLs Good)</div>
+  </div>
+  <div class="score-card score-green">
+    <div class="score">127</div>
+    <div class="label">Indexed Pages<br>(in Google)</div>
+  </div>
+  <div class="score-card score-yellow">
+    <div class="score">282</div>
+    <div class="label">Not Indexed<br>(6 reasons)</div>
+  </div>
+  <div class="score-card score-red">
+    <div class="score">0%</div>
+    <div class="label">AI Crawler<br>Optimization</div>
+  </div>
+</div>
+
+<!-- Executive Summary -->
+<div class="section">
+  <h2>📋 Executive Summary</h2>
+  <div class="summary-box">
+    <h3>Overall Assessment</h3>
+    <p>RaceSims.in has a <strong>solid traditional SEO foundation</strong> — excellent Core Web Vitals, good product schema markup, rich product descriptions with FAQ sections, and a valid sitemap with 122 discovered pages. However, there are several <strong>on-page SEO issues</strong> (duplicate H1 tags, duplicate Organization schemas, inconsistent brand naming) and a <strong>critical gap in AI/Generative Engine Optimization (GEO)</strong> — the site currently has zero AI crawler rules, missing the rapidly growing AI-driven search traffic channel. AI-driven traffic to Shopify stores grew 8x year-over-year in 2025, and AI-driven orders grew 15x.</p>
+  </div>
+</div>
+
+<!-- PART 1: SEO AUDIT -->
+<div class="section">
+  <h2>🔍 PART 1: Traditional SEO Audit</h2>
+
+  <h3>1.1 Homepage SEO Analysis</h3>
+  <table class="issue-table">
+    <thead>
+      <tr><th>Element</th><th>Status</th><th>Details</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Title Tag</strong></td>
+        <td><span class="status-warn">⚠️ LONG</span></td>
+        <td>"Racing Simulators India | Sim racing Equipment | RaceSims – RaceSims solutions Pvt Ltd" — <strong>85 chars</strong> (recommended: 50-60). The brand suffix "RaceSims solutions Pvt Ltd" adds unnecessary length.</td>
+      </tr>
+      <tr>
+        <td><strong>Meta Description</strong></td>
+        <td><span class="status-pass">✅ GOOD</span></td>
+        <td>"Buy Premium sim racing setups, direct drive wheelbases, pedals & cockpits in India. Authorised Conspit & VNM Distributor..." — 186 chars, well-written with keywords and USP. Slightly long (ideal: 150-160).</td>
+      </tr>
+      <tr>
+        <td><strong>Canonical URL</strong></td>
+        <td><span class="status-pass">✅ GOOD</span></td>
+        <td>https://racesims.in/ — correctly set</td>
+      </tr>
+      <tr>
+        <td><strong>Robots Meta</strong></td>
+        <td><span class="status-warn">⚠️ NOT SET</span></td>
+        <td>No robots meta tag found. Not critical (defaults to index, follow) but explicitly setting it is best practice.</td>
+      </tr>
+      <tr>
+        <td><strong>H1 Tags</strong></td>
+        <td><span class="status-fail">❌ ISSUE</span></td>
+        <td><strong>3 H1 tags found</strong> — first is EMPTY (class="header__heading"), second is "HIGH END COMMERCIAL SIMULATOR SETUP", third is "Conspit Sim Racing Hardware in India". Should have exactly 1 descriptive H1.</td>
+      </tr>
+      <tr>
+        <td><strong>H2 Tags</strong></td>
+        <td><span class="status-warn">⚠️ HIGH</span></td>
+        <td>32 H2 tags — excessive, dilutes heading hierarchy</td>
+      </tr>
+      <tr>
+        <td><strong>H3 Tags</strong></td>
+        <td><span class="status-warn">⚠️ HIGH</span></td>
+        <td>112 H3 tags — very high count, mostly product names in grid</td>
+      </tr>
+      <tr>
+        <td><strong>Open Graph Tags</strong></td>
+        <td><span class="status-pass">✅ GOOD</span></td>
+        <td>9 OG tags present (site_name, url, title, type, description, image, image:secure_url, image:width, image:height)</td>
+      </tr>
+      <tr>
+        <td><strong>Images</strong></td>
+        <td><span class="status-warn">⚠️ MINOR</span></td>
+        <td>62 total images, <strong>4 missing alt text</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>1.2 Product Page SEO Analysis (Conspit 290GP & VNM Elite samples)</h3>
+  <table class="issue-table">
+    <thead>
+      <tr><th>Element</th><th>Status</th><th>Details</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Title Tags</strong></td>
+        <td><span class="status-pass">✅ GOOD</span></td>
+        <td>Well-structured with product name, type, and location. E.g., "Conspit 290 GP Formula Racing Wheel | Carbon Fiber Formula Wheel | Race Sims India – RaceSims solutions Pvt Ltd". Slightly long but keyword-rich.</td>
+      </tr>
+      <tr>
+        <td><strong>Meta Descriptions</strong></td>
+        <td><span class="status-pass">✅ GOOD</span></td>
+        <td>Descriptive, feature-rich, include "Available in India from Race Sims" — good for local SEO.</td>
+      </tr>
+      <tr>
+        <td><strong>H1 Tags</strong></td>
+        <td><span class="status-fail">❌ ISSUE</span></td>
+        <td><strong>2 H1 tags on every product page</strong> — Shopify theme outputs both a page-level H1 and a product title H1. Should be exactly 1.</td>
+      </tr>
+      <tr>
+        <td><strong>Product Descriptions</strong></td>
+        <td><span class="status-pass">✅ EXCELLENT</span></td>
+        <td>Very detailed: 290GP has 1,337 words, VNM Elite has 968 words. Well-structured with feature sections.</td>
+      </tr>
+      <tr>
+        <td><strong>FAQ Sections</strong></td>
+        <td><span class="status-pass">✅ EXCELLENT</span></td>
+        <td>Both products have FAQ sections with FAQPage schema markup — great for featured snippets and AI citation.</td>
+      </tr>
+      <tr>
+        <td><strong>Product Schema</strong></td>
+        <td><span class="status-pass">✅ GOOD</span></td>
+        <td>Product JSON-LD with name, price, brand. Only 1 Product schema per page (duplicates removed in prior session).</td>
+      </tr>
+      <tr>
+        <td><strong>Organization Schema</strong></td>
+        <td><span class="status-fail">❌ ISSUE</span></td>
+        <td><strong>Duplicate Organization schemas</strong> on every page — "Race Sims" and "RaceSims solutions Pvt Ltd" — inconsistent naming.</td>
+      </tr>
+      <tr>
+        <td><strong>Breadcrumbs</strong></td>
+        <td><span class="status-fail">❌ MISSING</span></td>
+        <td>No breadcrumb navigation or BreadcrumbList schema — hurts navigation UX and rich results.</td>
+      </tr>
+      <tr>
+        <td><strong>Images (VNM Elite)</strong></td>
+        <td><span class="status-warn">⚠️ MINOR</span></td>
+        <td>5 of 16 images missing alt text on VNM Elite page.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>1.3 Technical SEO</h3>
+  <table class="issue-table">
+    <thead>
+      <tr><th>Element</th><th>Status</th><th>Details</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Core Web Vitals</strong></td>
+        <td><span class="status-pass">✅ EXCELLENT</span></td>
+        <td><strong>86/86 good URLs</strong> on both mobile and desktop. 0 poor, 0 needs improvement. (Source: Chrome UX Report, last updated 3/23/26)</td>
+      </tr>
+      <tr>
+        <td><strong>Sitemap</strong></td>
+        <td><span class="status-pass">✅ GOOD</span></td>
+        <td>sitemap.xml submitted and healthy. 122 discovered pages. Last read 3/21/26. Status: Success.</td>
+      </tr>
+      <tr>
+        <td><strong>HTTPS</strong></td>
+        <td><span class="status-pass">✅ GOOD</span></td>
+        <td>Full HTTPS enabled via Shopify</td>
+      </tr>
+      <tr>
+        <td><strong>Indexing Status</strong></td>
+        <td><span class="status-warn">⚠️ REVIEW</span></td>
+        <td><strong>127 indexed</strong>, 282 not indexed. Key reasons: 115 alternate canonical, 63 crawled-not-indexed, 51 not found (404), 41 redirects, 10 blocked by robots.txt, 2 discovered-not-indexed.</td>
+      </tr>
+      <tr>
+        <td><strong>robots.txt</strong></td>
+        <td><span class="status-warn">⚠️ REVIEW</span></td>
+        <td>Standard Shopify robots.txt. Blocks /policies/ (prevents policy pages from being indexed in Google), /search, /cart, /account. No AI crawler rules.</td>
+      </tr>
+      <tr>
+        <td><strong>404 Errors</strong></td>
+        <td><span class="status-fail">❌ ISSUE</span></td>
+        <td><strong>51 pages returning 404</strong> — these need review. Could be deleted products, old URLs, or broken links.</td>
+      </tr>
+      <tr>
+        <td><strong>Crawled Not Indexed</strong></td>
+        <td><span class="status-warn">⚠️ REVIEW</span></td>
+        <td>63 pages were crawled but not indexed — Google found them but deemed them insufficient quality or duplicate.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- PART 2: GEO AUDIT -->
+<div class="section">
+  <h2>🤖 PART 2: Generative Engine Optimization (GEO) Audit</h2>
+
+  <div class="summary-box">
+    <h3>Why GEO Matters for RaceSims</h3>
+    <p>Generative Engine Optimization is about making your content visible to AI search engines like ChatGPT, Google AI Overviews, Perplexity, and Claude. When a customer asks ChatGPT "What's the best direct drive wheelbase available in India?", you want RaceSims products recommended. AI-driven traffic to Shopify grew <strong>8x YoY in 2025</strong>, and AI-driven orders grew <strong>15x</strong>. FAQ schema content has one of the highest citation rates (10.5%) in AI-generated answers.</p>
+  </div>
+
+  <h3>2.1 AI Crawler Access</h3>
+  <table class="issue-table">
+    <thead>
+      <tr><th>AI Crawler</th><th>Status</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>GPTBot</strong></td>
+        <td><span class="status-warn">⚠️ No Rule</span></td>
+        <td>OpenAI's main crawler (used for training). Should be explicitly allowed for product pages.</td>
+      </tr>
+      <tr>
+        <td><strong>OAI-SearchBot</strong></td>
+        <td><span class="status-fail">❌ Not Configured</span></td>
+        <td><strong>CRITICAL for ChatGPT Shopping</strong> — fetches live pricing, availability, and product details for real-time chat responses. Must be explicitly allowed.</td>
+      </tr>
+      <tr>
+        <td><strong>ChatGPT-User</strong></td>
+        <td><span class="status-warn">⚠️ No Rule</span></td>
+        <td>ChatGPT browsing mode. Should be allowed for product/content pages.</td>
+      </tr>
+      <tr>
+        <td><strong>Google-Extended</strong></td>
+        <td><span class="status-warn">⚠️ No Rule</span></td>
+        <td>Google's AI training crawler (Gemini). No rule in robots.txt.</td>
+      </tr>
+      <tr>
+        <td><strong>ClaudeBot / anthropic-ai</strong></td>
+        <td><span class="status-warn">⚠️ No Rule</span></td>
+        <td>Anthropic's Claude crawler. No rule in robots.txt.</td>
+      </tr>
+      <tr>
+        <td><strong>PerplexityBot</strong></td>
+        <td><span class="status-warn">⚠️ No Rule</span></td>
+        <td>Perplexity AI search. No rule in robots.txt.</td>
+      </tr>
+      <tr>
+        <td><strong>CCBot</strong></td>
+        <td><span class="status-warn">⚠️ No Rule</span></td>
+        <td>Common Crawl (used by many AI models for training data).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>2.2 GEO Content Readiness</h3>
+  <table class="issue-table">
+    <thead>
+      <tr><th>GEO Factor</th><th>Status</th><th>Assessment</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Structured Data (Product)</strong></td>
+        <td><span class="status-pass">✅ GOOD</span></td>
+        <td>Product JSON-LD with name, price, brand on all product pages. AI models can parse this reliably.</td>
+      </tr>
+      <tr>
+        <td><strong>FAQ Schema</strong></td>
+        <td><span class="status-pass">✅ EXCELLENT</span></td>
+        <td>FAQPage schema on product pages. FAQ content has one of the highest AI citation rates (10.5%). Major advantage.</td>
+      </tr>
+      <tr>
+        <td><strong>Product Description Depth</strong></td>
+        <td><span class="status-pass">✅ EXCELLENT</span></td>
+        <td>968-1,337 words per product with technical specs, features, use cases. Rich content for AI to cite.</td>
+      </tr>
+      <tr>
+        <td><strong>Entity Consistency</strong></td>
+        <td><span class="status-fail">❌ ISSUE</span></td>
+        <td>Brand name varies: "Race Sims", "RaceSims", "RaceSims solutions Pvt Ltd". AI models may not associate these as the same entity.</td>
+      </tr>
+      <tr>
+        <td><strong>BreadcrumbList Schema</strong></td>
+        <td><span class="status-fail">❌ MISSING</span></td>
+        <td>No breadcrumb schema. This helps AI models understand site hierarchy and product categorization.</td>
+      </tr>
+      <tr>
+        <td><strong>Review/Rating Schema</strong></td>
+        <td><span class="status-fail">❌ MISSING</span></td>
+        <td>No AggregateRating or Review schema on products. AI models heavily weight products with ratings when making recommendations.</td>
+      </tr>
+      <tr>
+        <td><strong>About/Authority Page</strong></td>
+        <td><span class="status-warn">⚠️ WEAK</span></td>
+        <td>Need a strong "About Us" page establishing expertise, certifications (authorised Conspit/VNM distributor), team credentials — builds E-E-A-T signals for AI.</td>
+      </tr>
+      <tr>
+        <td><strong>Comparison/Buying Guide Content</strong></td>
+        <td><span class="status-fail">❌ MISSING</span></td>
+        <td>No blog or buying guide content. AI models cite comparison articles and guides at very high rates. E.g., "Best Direct Drive Wheelbases in India 2026" would be highly citable.</td>
+      </tr>
+      <tr>
+        <td><strong>Local Business Schema</strong></td>
+        <td><span class="status-fail">❌ MISSING</span></td>
+        <td>No LocalBusiness schema. Important for "sim racing near me" or India-specific AI queries.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- PART 3: RECOMMENDATIONS -->
+<div class="section">
+  <h2>🎯 PART 3: Prioritized Recommendations</h2>
+
+  <h3>🔴 Critical Priority (Do First)</h3>
+
+  <div class="rec-card priority-high">
+    <h4>1. Add AI Crawler Rules to robots.txt</h4>
+    <p>Add explicit allow rules for AI search bots in your Shopify robots.txt. This is especially critical for <strong>OAI-SearchBot</strong> (ChatGPT Shopping) which fetches live product data for recommendations. In Shopify, go to <strong>Settings → Custom Data → robots.txt</strong> and add rules.</p>
+    <div class="code-block">User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /</div>
+    <div class="impact">📈 <strong>Impact:</strong> Enables AI-driven product discovery. ChatGPT Shopping alone could drive high-intent traffic. Effort: Low (15 min)</div>
+  </div>
+
+  <div class="rec-card priority-high">
+    <h4>2. Fix Duplicate H1 Tags (All Pages)</h4>
+    <p>Every page has 2-3 H1 tags due to Shopify theme. The theme's <code>header__heading</code> class outputs an empty H1, and product pages have both a page H1 and product title H1. Edit the theme to ensure exactly <strong>one H1 per page</strong>. Change the logo/header to a <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> and keep only the product name as H1.</p>
+    <div class="impact">📈 <strong>Impact:</strong> Improves heading hierarchy clarity for search engines and AI crawlers. Effort: Medium (theme edit)</div>
+  </div>
+
+  <div class="rec-card priority-high">
+    <h4>3. Fix Duplicate Organization Schemas & Brand Naming</h4>
+    <p>Every page has two Organization schemas with different names: "Race Sims" and "RaceSims solutions Pvt Ltd". Remove one and standardize to a single brand name across all schemas, title tags, and content. Suggested: <strong>"RaceSims"</strong> as the brand name, with "RaceSims Solutions Pvt Ltd" only as the legal entity name in the Organization schema.</p>
+    <div class="impact">📈 <strong>Impact:</strong> Establishes consistent brand entity for both Google Knowledge Graph and AI model recognition. Effort: Medium</div>
+  </div>
+
+  <div class="rec-card priority-high">
+    <h4>4. Fix 51 Pages Returning 404 Errors</h4>
+    <p>Review the 51 URLs returning 404 in Google Search Console. Set up proper 301 redirects for any that had traffic, or ensure they are removed from internal links and sitemap. Go to GSC → Indexing → Pages → "Not found (404)" to see the full list.</p>
+    <div class="impact">📈 <strong>Impact:</strong> Recovers lost link equity, improves crawl budget efficiency. Effort: Medium</div>
+  </div>
+
+  <h3>🟡 High Priority (Do Soon)</h3>
+
+  <div class="rec-card priority-medium">
+    <h4>5. Add BreadcrumbList Schema</h4>
+    <p>Add BreadcrumbList JSON-LD schema to all product and collection pages. This helps Google display breadcrumb rich results and helps AI models understand your site hierarchy (Home → Category → Product).</p>
+    <div class="code-block">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://racesims.in/"},
+    {"@type": "ListItem", "position": 2, "name": "Wheelbases", "item": "https://racesims.in/collections/wheelbases"},
+    {"@type": "ListItem", "position": 3, "name": "VNM Direct Drive Elite"}
+  ]
+}</div>
+    <div class="impact">📈 <strong>Impact:</strong> Enables breadcrumb rich results in Google + better AI content parsing. Effort: Medium</div>
+  </div>
+
+  <div class="rec-card priority-medium">
+    <h4>6. Add Product Review/Rating Schema</h4>
+    <p>Implement a product review system (e.g., Judge.me, Loox, or Shopify's native reviews) and add <code>AggregateRating</code> and <code>Review</code> schema to Product JSON-LD. AI models heavily favor products with visible social proof when making recommendations.</p>
+    <div class="impact">📈 <strong>Impact:</strong> Star ratings in search results + higher AI recommendation probability. Effort: Medium</div>
+  </div>
+
+  <div class="rec-card priority-medium">
+    <h4>7. Shorten and Optimize Title Tags</h4>
+    <p>Current titles are 80-95 chars (Google truncates at ~60). Remove " – RaceSims solutions Pvt Ltd" suffix and keep it concise. Example: "Conspit 290GP Formula Racing Wheel | Carbon Fiber | RaceSims India" (66 chars).</p>
+    <div class="impact">📈 <strong>Impact:</strong> Better click-through rates in search results. Effort: Low</div>
+  </div>
+
+  <div class="rec-card priority-medium">
+    <h4>8. Fix Missing Alt Text on Images</h4>
+    <p>Multiple product pages have images without alt text (4 on homepage, 5 on VNM Elite page). Add descriptive alt text that includes product name and feature. E.g., "VNM Direct Drive Elite wheelbase CNC aluminum housing side view".</p>
+    <div class="impact">📈 <strong>Impact:</strong> Improves image SEO, accessibility, and AI content understanding. Effort: Low</div>
+  </div>
+
+  <h3>🟢 Medium Priority (Plan for Next Month)</h3>
+
+  <div class="rec-card priority-low">
+    <h4>9. Create Buying Guide / Comparison Blog Content</h4>
+    <p>AI models cite comparison articles at very high rates. Create authoritative content like:</p>
+    <ul style="margin: 10px 0 0 20px; color: #94a3b8;">
+      <li>"Best Direct Drive Wheelbases in India 2026 — Complete Buying Guide"</li>
+      <li>"Conspit vs VNM: Which Sim Racing Ecosystem is Right for You?"</li>
+      <li>"How to Build a Complete Sim Racing Setup in India — Beginner to Pro"</li>
+      <li>"Formula Wheels vs GT Wheels: Which Should You Choose?"</li>
+    </ul>
+    <div class="impact">📈 <strong>Impact:</strong> Major GEO opportunity — AI models cite guides/comparisons 3-5x more than product pages. Effort: High (content creation)</div>
+  </div>
+
+  <div class="rec-card priority-low">
+    <h4>10. Add LocalBusiness Schema</h4>
+    <p>Add LocalBusiness or Store schema with your Chennai office address, phone, email, operating hours, and geo-coordinates. This helps with "sim racing near me" and India-specific AI queries.</p>
+    <div class="code-block">{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "RaceSims",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chennai",
+    "addressRegion": "Tamil Nadu",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91-XXXXXXXXXX",
+  "url": "https://racesims.in"
+}</div>
+    <div class="impact">📈 <strong>Impact:</strong> Local search and AI local recommendation visibility. Effort: Low</div>
+  </div>
+
+  <div class="rec-card priority-low">
+    <h4>11. Strengthen About Us / Authority Page</h4>
+    <p>Create or enhance an About page that emphasizes: authorized Conspit & VNM distributor status, authorized service partner credentials, years in business, team expertise, and customer base. This builds E-E-A-T signals that both Google and AI models use to assess authority.</p>
+    <div class="impact">📈 <strong>Impact:</strong> Builds brand entity authority for knowledge graphs and AI trust scoring. Effort: Medium</div>
+  </div>
+
+  <div class="rec-card priority-low">
+    <h4>12. Review "Crawled - Currently Not Indexed" Pages (63)</h4>
+    <p>63 pages were crawled by Google but not indexed — meaning Google found them but didn't deem them worth indexing. These could be thin content pages, filter/variant URLs, or low-value pages. Review and either improve content, consolidate, or noindex them.</p>
+    <div class="impact">📈 <strong>Impact:</strong> Improves overall site quality signals and crawl budget. Effort: Medium-High</div>
+  </div>
+</div>
+
+<!-- Summary Scorecard -->
+<div class="section">
+  <h2>📊 Summary Scorecard</h2>
+  <div class="two-col">
+    <div>
+      <h3 style="color: #4ade80;">✅ What's Working Well</h3>
+      <ul class="checklist">
+        <li class="check-pass">Core Web Vitals — all 86 URLs "Good" on mobile & desktop</li>
+        <li class="check-pass">Rich product descriptions (968-1,337 words per product)</li>
+        <li class="check-pass">FAQ sections with FAQPage schema on products</li>
+        <li class="check-pass">Product JSON-LD schema with price and brand</li>
+        <li class="check-pass">Good meta descriptions with keywords and USP</li>
+        <li class="check-pass">Open Graph tags properly configured</li>
+        <li class="check-pass">Sitemap healthy (122 pages, status: Success)</li>
+        <li class="check-pass">HTTPS enabled site-wide</li>
+        <li class="check-pass">Canonical URLs properly set</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color: #f87171;">❌ What Needs Fixing</h3>
+      <ul class="checklist">
+        <li class="check-fail">No AI crawler rules in robots.txt (critical for GEO)</li>
+        <li class="check-fail">Duplicate H1 tags on every page (2-3 per page)</li>
+        <li class="check-fail">Duplicate Organization schemas with inconsistent names</li>
+        <li class="check-fail">51 pages returning 404 errors</li>
+        <li class="check-fail">No BreadcrumbList schema</li>
+        <li class="check-fail">No product review/rating schema</li>
+        <li class="check-fail">No blog/buying guide content (major GEO gap)</li>
+        <li class="check-fail">No LocalBusiness schema</li>
+        <li class="check-warn">Title tags too long (80-95 chars)</li>
+        <li class="check-warn">Multiple images missing alt text</li>
+        <li class="check-warn">63 pages crawled but not indexed</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Action Timeline -->
+<div class="section">
+  <h2>📅 Recommended Action Timeline</h2>
+  <table class="issue-table">
+    <thead>
+      <tr><th>Timeframe</th><th>Actions</th><th>Expected Impact</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="badge badge-critical">This Week</span></td>
+        <td>Add AI crawler rules to robots.txt, fix duplicate Organization schema, start fixing 404 errors</td>
+        <td>Enable AI-driven product discovery, clean up brand entity</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-high">Next Week</span></td>
+        <td>Fix H1 tags (theme edit), shorten title tags, fix missing alt texts</td>
+        <td>Improved heading hierarchy, better CTR in search results</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-medium">Within 2 Weeks</span></td>
+        <td>Add BreadcrumbList schema, add LocalBusiness schema, set up product reviews</td>
+        <td>Rich results in Google, local visibility, social proof for AI recommendations</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-low">Within 1 Month</span></td>
+        <td>Create 2-3 buying guide blog posts, strengthen About page, review crawled-not-indexed pages</td>
+        <td>Major GEO content, brand authority, improved indexation quality</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div style="text-align: center; padding: 30px; color: #64748b; font-size: 0.85em;">
+  Report generated for RaceSims Solutions Pvt Ltd &nbsp;|&nbsp; March 25, 2026<br>
+  Data sources: Google Search Console, Chrome UX Report, on-page analysis, robots.txt review
+</div>
+
+</div>
+</body>
+</html>

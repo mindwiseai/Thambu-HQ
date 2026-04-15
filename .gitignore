@@ -14,3 +14,114 @@ generated_imgs/
 *.log
 .nano-banana-config.json
 .mcp.json
+
+# Sensitive files - do not commit
+raw/mindwise/Sales channels/Website/rzp-2.csv
+raw/racesims/01_Company/Security/
+raw/racesims/08_Software/
+**/2FA*
+**/backup_codes*
+**/*secret*
+**/*credentials*
+**/*api_key*
+*.csv
+# Large binary files
+*.mp4
+*.mov
+*.avi
+*.webm
+*.mp3
+*.wav
+*.m4a
+*.SLDPRT
+*.SLDASM
+*.STEP
+*.STP
+*.IGS
+*.IGES
+*.STL
+*.dxf
+*.dwg
+*.dng
+*.cr2
+*.nef
+*.arw
+*.ai
+*.psd
+*.sketch
+*.fig
+*.indd
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.tgz
+*.numbers
+*.pdf
+*.pptx
+*.ppt
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ttf
+*.otf
+*.woff
+*.woff2
+**/*.i2wkb
+**/*.c125v64
+*.asc
+*.blf
+*.dbc
+*.trc
+*.log.gz
+**/CAN Bus/
+**/ASC captures/
+*.iso
+*.dmg
+*.bin
+*.hex
+# Vendor / third-party distributions
+**/vendor/bootstrap/
+**/vendor/jquery/
+**/bootstrap-*.css
+**/bootstrap-*.js
+**/bootstrap.min.*
+# Unpacked DOCX/PPTX artifacts (intermediate)
+**/unpacked*/
+**/unpacked_*/
+# Full vendor folders (third-party, not our code)
+**/vendor/
+**/old_website_assets/
+**/old files/
+**/untitled folder/
+**/SimHub/
+*.tfp
+*.tfw
+**/Conspit/
+**/Conspit /
+# Allow specific PDFs we want tracked (none currently)
+# !path/to/important.pdf
+
+# Raw folder is for ingestion staging — exclude all binaries from git tracking
+raw/**/*.pdf
+raw/**/*.png
+raw/**/*.jpg
+raw/**/*.jpeg
+raw/**/*.gif
+raw/**/*.webp
+raw/**/*.svg
+raw/**/*.heic
+raw/**/Old creatives/
+raw/**/Files to convert/
+
+# Large nested binary archives in mindwise/racesims source dirs
+mindwise/**/*.pdf
+mindwise/**/*.png
+mindwise/**/*.jpg
+mindwise/**/*.jpeg
+mindwise/**/Old creatives/
+racesims/**/*.pdf
+racesims/**/*.png
+racesims/**/*.jpg
+racesims/**/*.jpeg

@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RaceSims — Growth Command Center</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #08080c;
+    --surface: #111116;
+    --surface2: #18181f;
+    --surface3: #1f1f28;
+    --border: rgba(255,255,255,0.06);
+    --border-hover: rgba(255,255,255,0.12);
+    --text: #e4e4eb;
+    --text-dim: #8888a0;
+    --text-muted: #55556a;
+    --accent: #e84545;
+    --accent-glow: rgba(232,69,69,0.15);
+    --green: #34d399;
+    --green-glow: rgba(52,211,153,0.12);
+    --amber: #fbbf24;
+    --amber-glow: rgba(251,191,36,0.12);
+    --blue: #60a5fa;
+    --blue-glow: rgba(96,165,250,0.12);
+    --purple: #a78bfa;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ---- NAV ---- */
+  .topbar {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 28px; height: 56px;
+    background: rgba(8,8,12,0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar-left { display: flex; align-items: center; gap: 16px; }
+  .logo { font-weight: 700; font-size: 1.05em; color: var(--accent); letter-spacing: -0.02em; }
+  .logo span { color: var(--text-dim); font-weight: 400; margin-left: 6px; font-size: 0.85em; }
+
+  .nav-tabs { display: flex; gap: 2px; }
+  .nav-tab {
+    padding: 8px 16px; border-radius: 8px;
+    font-size: 0.85em; font-weight: 500; color: var(--text-dim);
+    cursor: pointer; border: none; background: none;
+    transition: all 0.15s;
+  }
+  .nav-tab:hover { color: var(--text); background: var(--surface2); }
+  .nav-tab.active { color: var(--text); background: var(--surface2); }
+
+  /* ---- LAYOUT ---- */
+  .main { padding: 28px; max-width: 1320px; margin: 0 auto; }
+
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ---- METRICS ROW ---- */
+  .metrics-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .metric-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: border-color 0.15s;
+  }
+  .metric-card:hover { border-color: var(--border-hover); }
+  .metric-label { font-size: 0.78em; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+  .metric-value { font-size: 1.8em; font-weight: 700; letter-spacing: -0.03em; }
+  .metric-sub { font-size: 0.8em; color: var(--text-dim); margin-top: 4px; }
+  .metric-value.red { color: var(--accent); }
+  .metric-value.green { color: var(--green); }
+  .metric-value.amber { color: var(--amber); }
+  .metric-value.blue { color: var(--blue); }
+
+  /* ---- SECTION BLOCKS ---- */
+  .section-title {
+    font-size: 1.1em; font-weight: 700; margin-bottom: 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-title .badge {
+    font-size: 0.7em; padding: 3px 10px; border-radius: 6px;
+    font-weight: 600;
+  }
+
+  /* ---- KANBAN BOARD ---- */
+  .board-controls {
+    display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; align-items: center;
+  }
+  .filter-btn {
+    padding: 6px 14px; border-radius: 8px; font-size: 0.82em; font-weight: 500;
+    border: 1px solid var(--border); background: none; color: var(--text-dim);
+    cursor: pointer; transition: all 0.15s;
+  }
+  .filter-btn:hover, .filter-btn.active { background: var(--surface2); color: var(--text); border-color: var(--border-hover); }
+  .filter-btn.active-accent { background: var(--accent-glow); color: var(--accent); border-color: rgba(232,69,69,0.3); }
+
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  @media (max-width: 900px) { .board { grid-template-columns: 1fr; } }
+
+  .column {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  .column-header {
+    padding: 16px 18px 12px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+  }
+  .column-title {
+    font-size: 0.82em; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--text-dim);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .column-count {
+    background: var(--surface3); padding: 2px 8px; border-radius: 10px;
+    font-size: 0.85em; font-family: 'JetBrains Mono', monospace;
+  }
+  .column-body { padding: 12px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+
+  .task-card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    cursor: pointer;
+    transition: all 0.15s;
+    position: relative;
+  }
+  .task-card:hover { border-color: var(--border-hover); transform: translateY(-1px); }
+  .task-card.completed-card { opacity: 0.55; }
+  .task-card.completed-card .task-title { text-decoration: line-through; }
+  .task-title { font-size: 0.9em; font-weight: 600; margin-bottom: 6px; line-height: 1.4; }
+  .task-meta { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .task-tag {
+    font-size: 0.7em; padding: 2px 8px; border-radius: 5px;
+    font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .tag-seo { background: rgba(96,165,250,0.12); color: var(--blue); }
+  .tag-instagram { background: rgba(232,69,69,0.12); color: #e8456d; }
+  .tag-discord { background: rgba(167,139,250,0.12); color: var(--purple); }
+  .tag-reddit { background: rgba(251,146,60,0.12); color: #fb923c; }
+  .tag-content { background: rgba(52,211,153,0.12); color: var(--green); }
+  .tag-pr { background: rgba(251,191,36,0.12); color: var(--amber); }
+  .tag-geo { background: rgba(168,85,247,0.12); color: #a855f7; }
+
+  .task-priority {
+    position: absolute; top: 14px; right: 14px;
+    width: 8px; height: 8px; border-radius: 50%;
+  }
+  .priority-critical { background: var(--accent); box-shadow: 0 0 6px var(--accent); }
+  .priority-high { background: var(--amber); box-shadow: 0 0 6px var(--amber); }
+  .priority-medium { background: var(--blue); }
+  .priority-low { background: var(--text-muted); }
+
+  .task-date { font-size: 0.72em; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+
+  /* ---- ADD TASK ---- */
+  .add-task-btn {
+    width: 100%; padding: 10px; border-radius: 8px;
+    border: 1px dashed var(--border); background: none;
+    color: var(--text-muted); font-size: 0.85em; cursor: pointer;
+    transition: all 0.15s; font-family: inherit;
+  }
+  .add-task-btn:hover { border-color: var(--border-hover); color: var(--text-dim); background: rgba(255,255,255,0.02); }
+
+  /* ---- MODAL ---- */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+    z-index: 200; align-items: center; justify-content: center;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; width: 480px; max-width: 92vw;
+    max-height: 90vh; overflow-y: auto;
+    padding: 28px;
+  }
+  .modal h3 { font-size: 1.1em; font-weight: 700; margin-bottom: 20px; }
+
+  .form-group { margin-bottom: 16px; }
+  .form-label { font-size: 0.8em; font-weight: 600; color: var(--text-dim); margin-bottom: 6px; display: block; }
+  .form-input, .form-select, .form-textarea {
+    width: 100%; padding: 10px 14px; border-radius: 8px;
+    border: 1px solid var(--border); background: var(--surface2);
+    color: var(--text); font-family: inherit; font-size: 0.9em;
+    transition: border-color 0.15s;
+  }
+  .form-input:focus, .form-select:focus, .form-textarea:focus {
+    outline: none; border-color: var(--accent);
+  }
+  .form-textarea { resize: vertical; min-height: 80px; }
+  .form-select { cursor: pointer; }
+
+  .form-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 24px; }
+  .btn {
+    padding: 9px 20px; border-radius: 8px; font-size: 0.88em; font-weight: 600;
+    border: none; cursor: pointer; font-family: inherit; transition: all 0.15s;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: #d03535; }
+  .btn-secondary { background: var(--surface3); color: var(--text-dim); }
+  .btn-secondary:hover { background: var(--surface2); color: var(--text); }
+  .btn-danger { background: rgba(232,69,69,0.12); color: var(--accent); }
+  .btn-danger:hover { background: rgba(232,69,69,0.25); }
+  .btn-success { background: rgba(52,211,153,0.15); color: var(--green); }
+  .btn-success:hover { background: rgba(52,211,153,0.25); }
+
+  /* ---- TIMELINE ---- */
+  .timeline-container { margin-bottom: 28px; }
+  .phase-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .phase-header {
+    padding: 16px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .phase-header:hover { background: var(--surface2); }
+  .phase-name { font-weight: 700; font-size: 0.95em; display: flex; align-items: center; gap: 10px; }
+  .phase-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .phase-progress { font-size: 0.82em; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; }
+  .phase-bar { height: 3px; background: var(--surface3); }
+  .phase-bar-fill { height: 100%; transition: width 0.3s; border-radius: 2px; }
+  .phase-body { padding: 0 20px 16px; display: none; }
+  .phase-block.open .phase-body { display: block; }
+  .phase-task-item {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 12px;
+    font-size: 0.9em;
+  }
+  .phase-task-item:last-child { border-bottom: none; }
+  .phase-check {
+    width: 20px; height: 20px; border-radius: 6px;
+    border: 2px solid var(--border); background: none;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s; flex-shrink: 0; color: transparent;
+  }
+  .phase-check:hover { border-color: var(--green); }
+  .phase-check.checked { background: var(--green); border-color: var(--green); color: #fff; }
+
+  /* ---- COMPETITOR TRACKER ---- */
+  .competitor-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px;
+  }
+  @media (max-width: 700px) { .competitor-grid { grid-template-columns: 1fr; } }
+  .comp-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px;
+  }
+  .comp-card h4 { font-size: 1em; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .comp-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 8px 0; border-bottom: 1px solid var(--border);
+    font-size: 0.88em;
+  }
+  .comp-row:last-child { border: none; }
+  .comp-metric-name { color: var(--text-dim); }
+  .comp-metric-val { font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+  .comp-metric-val.ours { color: var(--accent); }
+  .comp-metric-val.theirs { color: var(--text-dim); }
+
+  /* ---- NOTES / LOG ---- */
+  .notes-area {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin-bottom: 28px;
+  }
+  .note-entry {
+    padding: 12px 0; border-bottom: 1px solid var(--border);
+    display: flex; gap: 12px;
+  }
+  .note-entry:last-child { border: none; }
+  .note-date { font-size: 0.75em; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; min-width: 80px; padding-top: 2px; }
+  .note-text { font-size: 0.9em; color: var(--text-dim); line-height: 1.5; }
+  .note-input-row { display: flex; gap: 10px; margin-top: 12px; }
+  .note-input-row .form-input { flex: 1; }
+
+  /* ---- CONTENT PIPELINE ---- */
+  .pipeline-table {
+    width: 100%; border-collapse: collapse;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden;
+  }
+  .pipeline-table th {
+    text-align: left; padding: 14px 18px; font-size: 0.75em;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em;
+    border-bottom: 1px solid var(--border); background: var(--surface2);
+  }
+  .pipeline-table td {
+    padding: 12px 18px; font-size: 0.88em; border-bottom: 1px solid var(--border);
+    color: var(--text-dim);
+  }
+  .pipeline-table tr:last-child td { border: none; }
+  .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; }
+  .status-draft { background: var(--text-muted); }
+  .status-writing { background: var(--amber); }
+  .status-published { background: var(--green); }
+  .status-idea { background: var(--blue); }
+
+  /* ---- EMPTY STATE ---- */
+  .empty-state {
+    text-align: center; padding: 40px 20px; color: var(--text-muted);
+  }
+  .empty-state p { font-size: 0.9em; margin-bottom: 12px; }
+
+  /* ---- CONTEXT MENU ---- */
+  .ctx-menu {
+    position: fixed; background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 6px; min-width: 180px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4); z-index: 300; display: none;
+  }
+  .ctx-item {
+    padding: 8px 14px; border-radius: 6px; font-size: 0.85em;
+    cursor: pointer; color: var(--text-dim); transition: all 0.1s;
+    display: block; width: 100%; text-align: left; border: none;
+    background: none; font-family: inherit;
+  }
+  .ctx-item:hover { background: var(--surface3); color: var(--text); }
+  .ctx-item.danger { color: var(--accent); }
+  .ctx-item.danger:hover { background: rgba(232,69,69,0.1); }
+  .ctx-divider { height: 1px; background: var(--border); margin: 4px 0; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="logo">RaceSims<span>Command Center</span></div>
+  </div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" data-page="overview">Overview</button>
+    <button class="nav-tab" data-page="tasks">Tasks</button>
+    <button class="nav-tab" data-page="content">Content</button>
+    <button class="nav-tab" data-page="competitor">Competitor</button>
+    <button class="nav-tab" data-page="notes">Notes</button>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- ====== OVERVIEW PAGE ====== -->
+  <div class="page active" id="page-overview">
+    <div class="metrics-row" id="overview-metrics"></div>
+
+    <div class="section-title">90-Day Timeline <span class="badge" style="background:var(--accent-glow);color:var(--accent);" id="timeline-overall"></span></div>
+    <div class="timeline-container" id="timeline"></div>
+
+    <div class="section-title" style="margin-top:28px;">Recent Activity</div>
+    <div id="recent-activity" class="notes-area"></div>
+  </div>
+
+  <!-- ====== TASKS PAGE ====== -->
+  <div class="page" id="page-tasks">
+    <div class="board-controls">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="seo">SEO</button>
+      <button class="filter-btn" data-filter="instagram">Instagram</button>
+      <button class="filter-btn" data-filter="discord">Discord</button>
+      <button class="filter-btn" data-filter="reddit">Reddit</button>
+      <button class="filter-btn" data-filter="content">Content</button>
+      <button class="filter-btn" data-filter="pr">PR</button>
+      <button class="filter-btn" data-filter="geo">GEO</button>
+      <span style="flex:1;"></span>
+      <button class="btn btn-primary" onclick="openAddTask()">+ New Task</button>
+    </div>
+    <div class="board" id="task-board"></div>
+  </div>
+
+  <!-- ====== CONTENT PAGE ====== -->
+  <div class="page" id="page-content">
+    <div class="section-title" style="margin-bottom:4px;">Blog Content Pipeline</div>
+    <p style="color:var(--text-muted);font-size:0.85em;margin-bottom:16px;">Track blog articles from idea to published. Click a row to edit status.</p>
+    <div style="margin-bottom:12px;"><button class="btn btn-primary" onclick="openAddArticle()">+ New Article</button></div>
+    <table class="pipeline-table" id="content-table">
+      <thead><tr><th>Title</th><th>Category</th><th>Status</th><th>Target Date</th></tr></thead>
+      <tbody id="content-tbody"></tbody>
+    </table>
+  </div>
+
+  <!-- ====== COMPETITOR PAGE ====== -->
+  <div class="page" id="page-competitor">
+    <p style="color:var(--text-dim);font-size:0.9em;margin-bottom:20px;">Track your numbers vs Virtual Racing Hub. Click any value to update it.</p>
+    <div class="competitor-grid" id="competitor-grid"></div>
+  </div>
+
+  <!-- ====== NOTES PAGE ====== -->
+  <div class="page" id="page-notes">
+    <div class="section-title">Activity Log &amp; Notes</div>
+    <p style="color:var(--text-muted);font-size:0.85em;margin-bottom:16px;">Keep a running log of actions taken, wins, and learnings.</p>
+    <div class="notes-area" id="notes-area">
+      <div id="notes-list"></div>
+      <div class="note-input-row">
+        <input type="text" class="form-input" id="note-input" placeholder="Add a note..." onkeydown="if(event.key==='Enter')addNote()">
+        <button class="btn btn-primary" onclick="addNote()">Add</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ====== MODALS ====== -->
+<div class="modal-overlay" id="modal-task">
+  <div class="modal">
+    <h3 id="modal-task-title">New Task</h3>
+    <div class="form-group">
+      <label class="form-label">Title</label>
+      <input class="form-input" id="task-form-title" placeholder="What needs to be done?">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Description (optional)</label>
+      <textarea class="form-textarea" id="task-form-desc" placeholder="Details, links, notes..."></textarea>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div class="form-group">
+        <label class="form-label">Category</label>
+        <select class="form-select" id="task-form-cat">
+          <option value="seo">SEO</option>
+          <option value="instagram">Instagram</option>
+          <option value="discord">Discord</option>
+          <option value="reddit">Reddit</option>
+          <option value="content">Content</option>
+          <option value="pr">PR / Press</option>
+          <option value="geo">GEO</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Priority</label>
+        <select class="form-select" id="task-form-priority">
+          <option value="critical">Critical</option>
+          <option value="high">High</option>
+          <option value="medium" selected>Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Due Date (optional)</label>
+      <input type="date" class="form-input" id="task-form-date">
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-secondary" onclick="closeModal('modal-task')">Cancel</button>
+      <button class="btn btn-danger" id="task-delete-btn" style="display:none;" onclick="deleteTask()">Delete</button>
+      <button class="btn btn-primary" id="task-save-btn" onclick="saveTask()">Add Task</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-article">
+  <div class="modal">
+    <h3 id="modal-article-title">New Article</h3>
+    <div class="form-group">
+      <label class="form-label">Title</label>
+      <input class="form-input" id="article-form-title" placeholder="Article title...">
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div class="form-group">
+        <label class="form-label">Category</label>
+        <select class="form-select" id="article-form-cat">
+          <option value="Buyer Guide">Buyer Guide</option>
+          <option value="Comparison">Comparison</option>
+          <option value="Review">Review</option>
+          <option value="Tutorial">Tutorial</option>
+          <option value="Industry">Industry</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Status</label>
+        <select class="form-select" id="article-form-status">
+          <option value="idea">Idea</option>
+          <option value="draft">Draft</option>
+          <option value="writing">Writing</option>
+          <option value="published">Published</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Target Date</label>
+      <input type="date" class="form-input" id="article-form-date">
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-secondary" onclick="closeModal('modal-article')">Cancel</button>
+      <button class="btn btn-danger" id="article-delete-btn" style="display:none;" onclick="deleteArticle()">Delete</button>
+      <button class="btn btn-primary" id="article-save-btn" onclick="saveArticle()">Add Article</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-metric-edit">
+  <div class="modal">
+    <h3>Update Metric</h3>
+    <div class="form-group">
+      <label class="form-label" id="metric-edit-label">Value</label>
+      <input class="form-input" id="metric-edit-value" type="number">
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-secondary" onclick="closeModal('modal-metric-edit')">Cancel</button>
+      <button class="btn btn-primary" onclick="saveMetricEdit()">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- Context menu -->
+<div class="ctx-menu" id="ctx-menu">
+  <button class="ctx-item" id="ctx-move-todo" onclick="ctxMoveTo('todo')">Move to To Do</button>
+  <button class="ctx-item" id="ctx-move-progress" onclick="ctxMoveTo('in_progress')">Move to In Progress</button>
+  <button class="ctx-item" id="ctx-move-done" onclick="ctxMoveTo('done')">Move to Done</button>
+  <div class="ctx-divider"></div>
+  <button class="ctx-item" onclick="ctxEdit()">Edit</button>
+  <button class="ctx-item danger" onclick="ctxDelete()">Delete</button>
+</div>
+
+<script>
+// ============================================================
+// DATA STORE — all state persisted to localStorage
+// ============================================================
+const STORAGE_KEY = 'racesims_dashboard_v2';
+
+function getDefaultData() {
+  return {
+    tasks: [
+      { id: 1, title: 'Post 3 Instagram Reels this week', desc: 'Product showcases + race engineer tips. Film yourself talking about products.', cat: 'instagram', priority: 'critical', status: 'todo', date: '2026-03-28', created: '2026-03-25' },
+      { id: 2, title: 'Create Discord server with full channel structure', desc: '#welcome, #general-chat, #setup-help, #race-engineer-tips, #deals, #customer-setups, #race-events, #buy-sell-trade', cat: 'discord', priority: 'critical', status: 'todo', date: '2026-03-28', created: '2026-03-25' },
+      { id: 3, title: 'Bulk-add product image alt texts via Hextom app', desc: 'Format: [Product Name] - [brief description] | RaceSims', cat: 'seo', priority: 'high', status: 'todo', date: '2026-03-27', created: '2026-03-25' },
+      { id: 4, title: 'Write blog: "Best Sim Racing Setup in India 2026"', desc: 'Target master keyword. Cover every price point from 30K to 5L+. Use race engineer authority.', cat: 'content', priority: 'critical', status: 'todo', date: '2026-04-05', created: '2026-03-25' },
+      { id: 5, title: 'Create r/SimRacingIndia subreddit', desc: 'Claim it before VRH does. Set up rules, welcome post, and sidebar links.', cat: 'reddit', priority: 'high', status: 'todo', date: '2026-03-30', created: '2026-03-25' },
+      { id: 6, title: 'Add Instagram + Discord links to racesims.in header/footer', desc: 'Update Shopify theme to include social links prominently.', cat: 'seo', priority: 'high', status: 'todo', date: '2026-03-27', created: '2026-03-25' },
+      { id: 7, title: 'Claim/optimize Google Business Profile', desc: 'Add photos, business hours, product categories, get reviews.', cat: 'seo', priority: 'high', status: 'todo', date: '2026-03-30', created: '2026-03-25' },
+      { id: 8, title: 'Pitch YourStory for founder feature', desc: 'Angle: Race engineer turns sim racing entrepreneur. Pitch to yourstory.com/contribute', cat: 'pr', priority: 'medium', status: 'todo', date: '2026-04-10', created: '2026-03-25' },
+      { id: 9, title: 'Create FAQ page for AI search optimization', desc: 'Questions: Where to buy sim racing equipment in India? Best setup under 1 lakh? Moza R5 price India?', cat: 'geo', priority: 'medium', status: 'todo', date: '2026-04-10', created: '2026-03-25' },
+      { id: 10, title: 'Run first Instagram giveaway', desc: 'Follow + tag 3 friends to win a product. Budget: cost of one mid-range item.', cat: 'instagram', priority: 'high', status: 'todo', date: '2026-04-08', created: '2026-03-25' },
+      { id: 11, title: 'Post Reddit AMA on r/simracing', desc: '"Race engineer running a sim racing store in India — AMA." Genuinely helpful, not salesy.', cat: 'reddit', priority: 'medium', status: 'todo', date: '2026-04-15', created: '2026-03-25' },
+      { id: 12, title: 'Contact 5 Indian motorsport micro-influencers', desc: 'Find people with 1K-10K followers who race or sim race. Offer product for content.', cat: 'instagram', priority: 'medium', status: 'todo', date: '2026-04-15', created: '2026-03-25' },
+      // Already done from SEO session
+      { id: 100, title: 'Fix robots.txt for AI crawlers', desc: 'Added Allow rules for GPTBot, ClaudeBot, PerplexityBot etc.', cat: 'seo', priority: 'critical', status: 'done', date: '2026-03-25', created: '2026-03-25' },
+      { id: 101, title: 'Fix duplicate H1 tags', desc: 'Changed header logo H1 to div.', cat: 'seo', priority: 'high', status: 'done', date: '2026-03-25', created: '2026-03-25' },
+      { id: 102, title: 'Fix duplicate Organization schema', desc: 'Removed simpler header schema, kept comprehensive one.', cat: 'seo', priority: 'high', status: 'done', date: '2026-03-25', created: '2026-03-25' },
+      { id: 103, title: 'Add BreadcrumbList structured data', desc: 'Added JSON-LD BreadcrumbList schema for product pages.', cat: 'seo', priority: 'medium', status: 'done', date: '2026-03-25', created: '2026-03-25' },
+      { id: 104, title: 'Shorten title tags', desc: 'Replaced shop.name with hardcoded "RaceSims" to save ~20 chars.', cat: 'seo', priority: 'medium', status: 'done', date: '2026-03-25', created: '2026-03-25' },
+      { id: 105, title: 'Create 404 redirects', desc: '3 URL redirects for broken product/blog pages.', cat: 'seo', priority: 'high', status: 'done', date: '2026-03-25', created: '2026-03-25' },
+    ],
+    articles: [
+      { id: 1, title: 'Best Sim Racing Setup in India 2026: Complete Buyer\'s Guide', cat: 'Buyer Guide', status: 'idea', date: '2026-04-05' },
+      { id: 2, title: 'Moza R5 vs R9 vs R12: Which to Buy in India?', cat: 'Comparison', status: 'idea', date: '2026-04-12' },
+      { id: 3, title: 'Simagic vs Moza vs Fanatec: India Price Comparison 2026', cat: 'Comparison', status: 'idea', date: '2026-04-19' },
+      { id: 4, title: 'Best Sim Racing Pedals India: Hydraulic vs Load Cell vs Potentiometer', cat: 'Buyer Guide', status: 'idea', date: '2026-04-26' },
+      { id: 5, title: 'How Sim Racing Helps Real Racing Drivers: A Race Engineer\'s Perspective', cat: 'Industry', status: 'idea', date: '2026-05-03' },
+      { id: 6, title: 'Complete Sim Racing Rig Setup Guide for Indian Homes', cat: 'Tutorial', status: 'idea', date: '2026-05-10' },
+      { id: 7, title: 'Conspit vs VNM Cockpits: In-Depth Review', cat: 'Review', status: 'idea', date: '2026-05-17' },
+      { id: 8, title: 'Sim Racing for Aspiring Indian Racing Drivers: Training Guide', cat: 'Tutorial', status: 'idea', date: '2026-05-24' },
+      { id: 9, title: 'Best Budget Sim Racing Setup Under 50,000 INR', cat: 'Buyer Guide', status: 'idea', date: '2026-05-31' },
+      { id: 10, title: 'Direct Drive Wheel Bases Explained', cat: 'Buyer Guide', status: 'idea', date: '2026-06-07' },
+    ],
+    metrics: {
+      ig_followers: 537,
+      ig_target: 3000,
+      discord_members: 0,
+      discord_target: 200,
+      blog_published: 0,
+      blog_target: 10,
+      backlinks: 0,
+      backlink_target: 15,
+    },
+    competitor: {
+      vrh_ig: 8115,
+      vrh_discord: 537,
+      vrh_blog: 12,
+      vrh_backlinks: 25,
+    },
+    notes: [
+      { id: 1, date: '2026-03-25', text: 'Completed full SEO audit and fixes: robots.txt, H1 tags, schema, title tags, 404 redirects. AI crawlers now allowed.' },
+      { id: 2, date: '2026-03-25', text: 'Competitive analysis complete. Main gaps: Instagram (537 vs 8,115), no Discord, no blog content, no press coverage.' },
+    ],
+    phases: [
+      { name: 'Foundation', color: '#e84545', weeks: 'Week 1-2', items: [
+        { text: 'Post first 10 Instagram Reels', done: false },
+        { text: 'Create Discord server with channels', done: false },
+        { text: 'Fix product image alt texts', done: false },
+        { text: 'Create r/SimRacingIndia subreddit', done: false },
+        { text: 'Write first blog article', done: false },
+        { text: 'Add social links to website', done: false },
+      ]},
+      { name: 'Content Machine', color: '#ff9933', weeks: 'Week 3-4', items: [
+        { text: 'Publish 3 more blog articles', done: false },
+        { text: 'Run first Instagram giveaway', done: false },
+        { text: 'Start weekly Discord community races', done: false },
+        { text: 'Pitch YourStory for feature', done: false },
+        { text: 'Post Reddit AMA', done: false },
+      ]},
+      { name: 'Growth Phase', color: '#60a5fa', weeks: 'Week 5-8', items: [
+        { text: 'Reach 1,500+ Instagram followers', done: false },
+        { text: 'Partner with Indian Racing Community', done: false },
+        { text: 'Publish comparison articles', done: false },
+        { text: 'Create FAQ page for AI search', done: false },
+        { text: 'Start Instagram ad campaign', done: false },
+        { text: 'Contact 5 micro-influencers', done: false },
+      ]},
+      { name: 'Overtake', color: '#34d399', weeks: 'Week 9-12', items: [
+        { text: 'Target 3,000+ Instagram followers', done: false },
+        { text: 'Target 200+ Discord members', done: false },
+        { text: '10 blog articles published', done: false },
+        { text: 'Press coverage live', done: false },
+        { text: 'Reddit presence established', done: false },
+      ]},
+    ],
+  };
+}
+
+let data;
+try {
+  const saved = localStorage.getItem(STORAGE_KEY);
+  data = saved ? JSON.parse(saved) : getDefaultData();
+} catch(e) {
+  data = getDefaultData();
+}
+function save() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch(e) {}
+}
+
+// ============================================================
+// NAV
+// ============================================================
+document.querySelectorAll('.nav-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('page-' + tab.dataset.page).classList.add('active');
+  });
+});
+
+// ============================================================
+// OVERVIEW — METRICS
+// ============================================================
+function renderOverviewMetrics() {
+  const m = data.metrics;
+  const tasks = data.tasks;
+  const doneTasks = tasks.filter(t => t.status === 'done').length;
+  const totalTasks = tasks.length;
+  const html = `
+    <div class="metric-card" onclick="editMetric('ig_followers','Instagram Followers')">
+      <div class="metric-label">Instagram Followers</div>
+      <div class="metric-value red">${m.ig_followers.toLocaleString()}</div>
+      <div class="metric-sub">Target: ${m.ig_target.toLocaleString()} &bull; VRH: ${data.competitor.vrh_ig.toLocaleString()}</div>
+    </div>
+    <div class="metric-card" onclick="editMetric('discord_members','Discord Members')">
+      <div class="metric-label">Discord Members</div>
+      <div class="metric-value blue">${m.discord_members}</div>
+      <div class="metric-sub">Target: ${m.discord_target} &bull; VRH: ${data.competitor.vrh_discord}</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Blog Articles</div>
+      <div class="metric-value green">${data.articles.filter(a=>a.status==='published').length} / ${m.blog_target}</div>
+      <div class="metric-sub">${data.articles.filter(a=>a.status==='writing').length} in progress</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Tasks Done</div>
+      <div class="metric-value amber">${doneTasks} / ${totalTasks}</div>
+      <div class="metric-sub">${tasks.filter(t=>t.status==='in_progress').length} in progress</div>
+    </div>
+    <div class="metric-card" onclick="editMetric('backlinks','Backlinks Earned')">
+      <div class="metric-label">Backlinks</div>
+      <div class="metric-value blue">${m.backlinks}</div>
+      <div class="metric-sub">Target: ${m.backlink_target}</div>
+    </div>
+  `;
+  document.getElementById('overview-metrics').innerHTML = html;
+}
+
+let editingMetricKey = null;
+function editMetric(key, label) {
+  editingMetricKey = key;
+  document.getElementById('metric-edit-label').textContent = label;
+  document.getElementById('metric-edit-value').value = data.metrics[key];
+  document.getElementById('modal-metric-edit').classList.add('show');
+}
+function saveMetricEdit() {
+  const val = parseInt(document.getElementById('metric-edit-value').value) || 0;
+  data.metrics[editingMetricKey] = val;
+  save(); renderAll();
+  closeModal('modal-metric-edit');
+}
+
+// ============================================================
+// OVERVIEW — TIMELINE
+// ============================================================
+function renderTimeline() {
+  const el = document.getElementById('timeline');
+  let totalDone = 0, totalItems = 0;
+  let html = '';
+  data.phases.forEach((phase, pi) => {
+    const done = phase.items.filter(i => i.done).length;
+    const total = phase.items.length;
+    totalDone += done; totalItems += total;
+    const pct = total ? Math.round(done/total*100) : 0;
+    html += `<div class="phase-block ${pi===0?'open':''}" data-phase="${pi}">
+      <div class="phase-header" onclick="this.parentElement.classList.toggle('open')">
+        <div class="phase-name"><div class="phase-dot" style="background:${phase.color}"></div>${phase.name} <span style="color:var(--text-muted);font-weight:400;font-size:0.85em;">${phase.weeks}</span></div>
+        <div class="phase-progress">${done}/${total}</div>
+      </div>
+      <div class="phase-bar"><div class="phase-bar-fill" style="width:${pct}%;background:${phase.color};"></div></div>
+      <div class="phase-body">${phase.items.map((item, ii) => `
+        <div class="phase-task-item">
+          <button class="phase-check ${item.done?'checked':''}" onclick="togglePhaseItem(${pi},${ii})">${item.done?'&#10003;':''}</button>
+          <span style="${item.done?'text-decoration:line-through;color:var(--text-muted);':''}">${item.text}</span>
+        </div>
+      `).join('')}</div>
+    </div>`;
+  });
+  el.innerHTML = html;
+  const overallPct = totalItems ? Math.round(totalDone/totalItems*100) : 0;
+  document.getElementById('timeline-overall').textContent = overallPct + '% complete';
+}
+
+function togglePhaseItem(pi, ii) {
+  data.phases[pi].items[ii].done = !data.phases[pi].items[ii].done;
+  save(); renderTimeline(); renderOverviewMetrics();
+}
+
+// ============================================================
+// OVERVIEW — RECENT ACTIVITY
+// ============================================================
+function renderRecentActivity() {
+  const recent = [...data.notes].sort((a,b) => b.date.localeCompare(a.date)).slice(0, 5);
+  if (!recent.length) {
+    document.getElementById('recent-activity').innerHTML = '<div class="empty-state"><p>No activity yet. Add notes from the Notes tab.</p></div>';
+    return;
+  }
+  document.getElementById('recent-activity').innerHTML = recent.map(n => `
+    <div class="note-entry"><div class="note-date">${n.date}</div><div class="note-text">${n.text}</div></div>
+  `).join('');
+}
+
+// ============================================================
+// TASKS — KANBAN
+// ============================================================
+let currentFilter = 'all';
+
+function renderTaskBoard() {
+  const cols = { todo: [], in_progress: [], done: [] };
+  let tasks = data.tasks;
+  if (currentFilter !== 'all') tasks = tasks.filter(t => t.cat === currentFilter);
+
+  tasks.forEach(t => { if (cols[t.status]) cols[t.status].push(t); });
+
+  // Sort: critical first, then by date
+  const priorityOrder = { critical: 0, high: 1, medium: 2, low: 3 };
+  Object.values(cols).forEach(arr => arr.sort((a,b) => priorityOrder[a.priority] - priorityOrder[b.priority]));
+
+  const colConfig = [
+    { key: 'todo', label: 'To Do', color: 'var(--text-dim)' },
+    { key: 'in_progress', label: 'In Progress', color: 'var(--amber)' },
+    { key: 'done', label: 'Done', color: 'var(--green)' },
+  ];
+
+  document.getElementById('task-board').innerHTML = colConfig.map(col => `
+    <div class="column">
+      <div class="column-header">
+        <div class="column-title"><span style="color:${col.color};">${col.label}</span> <span class="column-count">${cols[col.key].length}</span></div>
+      </div>
+      <div class="column-body">
+        ${cols[col.key].map(t => `
+          <div class="task-card ${t.status==='done'?'completed-card':''}" oncontextmenu="showCtx(event,${t.id})" onclick="openEditTask(${t.id})">
+            <div class="task-priority priority-${t.priority}"></div>
+            <div class="task-title">${t.title}</div>
+            <div class="task-meta">
+              <span class="task-tag tag-${t.cat}">${t.cat}</span>
+              ${t.date ? `<span class="task-date">${t.date}</span>` : ''}
+            </div>
+          </div>
+        `).join('')}
+        ${col.key !== 'done' ? `<button class="add-task-btn" onclick="openAddTask('${col.key}')">+ Add task</button>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    renderTaskBoard();
+  });
+});
+
+// Task modal
+let editingTaskId = null;
+let defaultStatus = 'todo';
+
+function openAddTask(status) {
+  editingTaskId = null;
+  defaultStatus = status || 'todo';
+  document.getElementById('modal-task-title').textContent = 'New Task';
+  document.getElementById('task-form-title').value = '';
+  document.getElementById('task-form-desc').value = '';
+  document.getElementById('task-form-cat').value = 'seo';
+  document.getElementById('task-form-priority').value = 'medium';
+  document.getElementById('task-form-date').value = '';
+  document.getElementById('task-delete-btn').style.display = 'none';
+  document.getElementById('task-save-btn').textContent = 'Add Task';
+  document.getElementById('modal-task').classList.add('show');
+}
+
+function openEditTask(id) {
+  const t = data.tasks.find(x => x.id === id);
+  if (!t) return;
+  editingTaskId = id;
+  document.getElementById('modal-task-title').textContent = 'Edit Task';
+  document.getElementById('task-form-title').value = t.title;
+  document.getElementById('task-form-desc').value = t.desc || '';
+  document.getElementById('task-form-cat').value = t.cat;
+  document.getElementById('task-form-priority').value = t.priority;
+  document.getElementById('task-form-date').value = t.date || '';
+  document.getElementById('task-delete-btn').style.display = 'inline-block';
+  document.getElementById('task-save-btn').textContent = 'Save';
+  document.getElementById('modal-task').classList.add('show');
+}
+
+function saveTask() {
+  const title = document.getElementById('task-form-title').value.trim();
+  if (!title) return;
+  if (editingTaskId) {
+    const t = data.tasks.find(x => x.id === editingTaskId);
+    t.title = title;
+    t.desc = document.getElementById('task-form-desc').value.trim();
+    t.cat = document.getElementById('task-form-cat').value;
+    t.priority = document.getElementById('task-form-priority').value;
+    t.date = document.getElementById('task-form-date').value;
+  } else {
+    data.tasks.push({
+      id: Date.now(),
+      title,
+      desc: document.getElementById('task-form-desc').value.trim(),
+      cat: document.getElementById('task-form-cat').value,
+      priority: document.getElementById('task-form-priority').value,
+      status: defaultStatus,
+      date: document.getElementById('task-form-date').value,
+      created: new Date().toISOString().slice(0,10),
+    });
+  }
+  save(); renderAll();
+  closeModal('modal-task');
+}
+
+function deleteTask() {
+  if (!editingTaskId) return;
+  data.tasks = data.tasks.filter(t => t.id !== editingTaskId);
+  save(); renderAll();
+  closeModal('modal-task');
+}
+
+// Context menu
+let ctxTaskId = null;
+function showCtx(e, id) {
+  e.preventDefault(); e.stopPropagation();
+  ctxTaskId = id;
+  const menu = document.getElementById('ctx-menu');
+  menu.style.display = 'block';
+  menu.style.left = Math.min(e.clientX, window.innerWidth - 200) + 'px';
+  menu.style.top = Math.min(e.clientY, window.innerHeight - 200) + 'px';
+}
+document.addEventListener('click', () => { document.getElementById('ctx-menu').style.display = 'none'; });
+
+function ctxMoveTo(status) {
+  const t = data.tasks.find(x => x.id === ctxTaskId);
+  if (t) { t.status = status; save(); renderAll(); }
+}
+function ctxEdit() { openEditTask(ctxTaskId); }
+function ctxDelete() {
+  data.tasks = data.tasks.filter(t => t.id !== ctxTaskId);
+  save(); renderAll();
+}
+
+// ============================================================
+// CONTENT PIPELINE
+// ============================================================
+let editingArticleId = null;
+
+function renderContentTable() {
+  const statusOrder = { writing: 0, draft: 1, idea: 2, published: 3 };
+  const sorted = [...data.articles].sort((a,b) => statusOrder[a.status] - statusOrder[b.status]);
+  document.getElementById('content-tbody').innerHTML = sorted.map(a => `
+    <tr onclick="openEditArticle(${a.id})" style="cursor:pointer;">
+      <td style="font-weight:600;color:var(--text);">${a.title}</td>
+      <td>${a.cat}</td>
+      <td><span class="status-dot status-${a.status}"></span>${a.status.charAt(0).toUpperCase()+a.status.slice(1)}</td>
+      <td style="font-family:'JetBrains Mono',monospace;font-size:0.85em;">${a.date||'—'}</td>
+    </tr>
+  `).join('');
+}
+
+function openAddArticle() {
+  editingArticleId = null;
+  document.getElementById('modal-article-title').textContent = 'New Article';
+  document.getElementById('article-form-title').value = '';
+  document.getElementById('article-form-cat').value = 'Buyer Guide';
+  document.getElementById('article-form-status').value = 'idea';
+  document.getElementById('article-form-date').value = '';
+  document.getElementById('article-delete-btn').style.display = 'none';
+  document.getElementById('article-save-btn').textContent = 'Add Article';
+  document.getElementById('modal-article').classList.add('show');
+}
+
+function openEditArticle(id) {
+  const a = data.articles.find(x => x.id === id);
+  if (!a) return;
+  editingArticleId = id;
+  document.getElementById('modal-article-title').textContent = 'Edit Article';
+  document.getElementById('article-form-title').value = a.title;
+  document.getElementById('article-form-cat').value = a.cat;
+  document.getElementById('article-form-status').value = a.status;
+  document.getElementById('article-form-date').value = a.date || '';
+  document.getElementById('article-delete-btn').style.display = 'inline-block';
+  document.getElementById('article-save-btn').textContent = 'Save';
+  document.getElementById('modal-article').classList.add('show');
+}
+
+function saveArticle() {
+  const title = document.getElementById('article-form-title').value.trim();
+  if (!title) return;
+  if (editingArticleId) {
+    const a = data.articles.find(x => x.id === editingArticleId);
+    a.title = title;
+    a.cat = document.getElementById('article-form-cat').value;
+    a.status = document.getElementById('article-form-status').value;
+    a.date = document.getElementById('article-form-date').value;
+  } else {
+    data.articles.push({
+      id: Date.now(), title,
+      cat: document.getElementById('article-form-cat').value,
+      status: document.getElementById('article-form-status').value,
+      date: document.getElementById('article-form-date').value,
+    });
+  }
+  save(); renderAll();
+  closeModal('modal-article');
+}
+
+function deleteArticle() {
+  if (!editingArticleId) return;
+  data.articles = data.articles.filter(a => a.id !== editingArticleId);
+  save(); renderAll();
+  closeModal('modal-article');
+}
+
+// ============================================================
+// COMPETITOR TRACKER
+// ============================================================
+function renderCompetitor() {
+  const m = data.metrics;
+  const c = data.competitor;
+  const rows = [
+    { label: 'Instagram Followers', ours: m.ig_followers, theirs: c.vrh_ig, oursKey: 'ig_followers', theirsKey: 'vrh_ig' },
+    { label: 'Discord Members', ours: m.discord_members, theirs: c.vrh_discord, oursKey: 'discord_members', theirsKey: 'vrh_discord' },
+    { label: 'Blog Articles', ours: data.articles.filter(a=>a.status==='published').length, theirs: c.vrh_blog, oursKey: null, theirsKey: 'vrh_blog' },
+    { label: 'Backlinks', ours: m.backlinks, theirs: c.vrh_backlinks, oursKey: 'backlinks', theirsKey: 'vrh_backlinks' },
+  ];
+
+  document.getElementById('competitor-grid').innerHTML = `
+    <div class="comp-card">
+      <h4><div style="width:10px;height:10px;border-radius:50%;background:var(--accent);"></div> RaceSims</h4>
+      ${rows.map(r => `
+        <div class="comp-row">
+          <span class="comp-metric-name">${r.label}</span>
+          <span class="comp-metric-val ours" ${r.oursKey ? `onclick="editMetric('${r.oursKey}','${r.label}')" style="cursor:pointer;"` : ''}>${typeof r.ours === 'number' ? r.ours.toLocaleString() : r.ours}</span>
+        </div>
+      `).join('')}
+    </div>
+    <div class="comp-card">
+      <h4><div style="width:10px;height:10px;border-radius:50%;background:var(--text-muted);"></div> Virtual Racing Hub</h4>
+      ${rows.map(r => `
+        <div class="comp-row">
+          <span class="comp-metric-name">${r.label}</span>
+          <span class="comp-metric-val theirs" onclick="editCompMetric('${r.theirsKey}','VRH ${r.label}')" style="cursor:pointer;">${typeof r.theirs === 'number' ? r.theirs.toLocaleString() : r.theirs}</span>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function editCompMetric(key, label) {
+  editingMetricKey = '_comp_' + key;
+  document.getElementById('metric-edit-label').textContent = label;
+  document.getElementById('metric-edit-value').value = data.competitor[key];
+  document.getElementById('modal-metric-edit').classList.add('show');
+}
+const origSaveMetric = window.saveMetricEdit;
+window.saveMetricEdit = function() {
+  const val = parseInt(document.getElementById('metric-edit-value').value) || 0;
+  if (editingMetricKey && editingMetricKey.startsWith('_comp_')) {
+    const key = editingMetricKey.replace('_comp_', '');
+    data.competitor[key] = val;
+  } else {
+    data.metrics[editingMetricKey] = val;
+  }
+  save(); renderAll();
+  closeModal('modal-metric-edit');
+};
+
+// ============================================================
+// NOTES
+// ============================================================
+function renderNotes() {
+  const sorted = [...data.notes].sort((a,b) => b.date.localeCompare(a.date));
+  document.getElementById('notes-list').innerHTML = sorted.length ? sorted.map(n => `
+    <div class="note-entry"><div class="note-date">${n.date}</div><div class="note-text">${n.text}</div></div>
+  `).join('') : '<div class="empty-state"><p>No notes yet.</p></div>';
+}
+
+function addNote() {
+  const input = document.getElementById('note-input');
+  const text = input.value.trim();
+  if (!text) return;
+  data.notes.push({ id: Date.now(), date: new Date().toISOString().slice(0,10), text });
+  input.value = '';
+  save(); renderNotes(); renderRecentActivity();
+}
+
+// ============================================================
+// MODAL HELPERS
+// ============================================================
+function closeModal(id) { document.getElementById(id).classList.remove('show'); }
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('show'); });
+});
+
+// ============================================================
+// RENDER ALL
+// ============================================================
+function renderAll() {
+  renderOverviewMetrics();
+  renderTimeline();
+  renderRecentActivity();
+  renderTaskBoard();
+  renderContentTable();
+  renderCompetitor();
+  renderNotes();
+}
+renderAll();
+</script>
+</body>
+</html>

@@ -25,7 +25,7 @@ Known customers and prospects for [[domains/racesims/_index|RaceSims]], compiled
 | Prospect | Stage | Notes |
 |----------|-------|-------|
 | [[arka-motorsports]] | Quoted (Rs.5,97,500) | Full rig + PC + monitors. Key reference client. |
-| Tikitar / Mr. Nirav | **7+ quote revisions** | Significant negotiation — high intent but price-sensitive |
+| [[tikitar]] / Mr. Nirav | **7+ quote revisions** | Significant negotiation — high intent but price-sensitive |
 | Alex | 4 revisions | Multiple rig configurations explored |
 | Arjun | 2 revisions | — |
 | Pragathi | 1 quote | — |
@@ -35,8 +35,8 @@ Known customers and prospects for [[domains/racesims/_index|RaceSims]], compiled
 | Client | Type | Status | Value |
 |--------|------|--------|-------|
 | [[araya-airport]] | Airport simulators | Proposal + quotes issued | Rs.6.86-6.96L per unit |
-| Ajit Kumar Racing | Pro driver training sim | Proposal stage | TBD (Asetek Invicta spec) |
-| [[chennai-super-kings\|CSK]] | Content partnership | [[csk-partnership-pitch\|Draft pitch unsent]] | Zero-cost (content deal) |
+| [[ajit-kumar-racing]] | Pro driver training sim | Proposal stage | TBD (Asetek Invicta spec) |
+| CSK ([[chennai-super-kings]]) | Content partnership | Draft pitch unsent ([[csk-partnership-pitch]]) | Zero-cost (content deal) |
 | IPL teams (10) | Sponsorship outreach | Contact list ready | Variable |
 
 ## Key B2B contacts (IPL outreach)

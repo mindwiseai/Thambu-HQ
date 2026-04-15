@@ -1,0 +1,148 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: packing.ai
+Color Mode: CMYK color
+Color Profile: U.S. Web Coated (SWOP) v2
+Ruler Units: centimeters
+Artboard Dimensions: 29.6525 cm x 42.9751 cm
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:
+MontserratRoman Regular* (not installed)
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Montserrat Regular (TrueType)
+Montserrat Medium (TrueType)
+Silvania (OTF)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+C:\Users\MANU JACOB\Downloads\649 Mindwise.png
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 5643K, 1764 by 1092 pixels
+Dimensions: 294.719 by 476.084 points 
+Resolution: 430.946 by 165.147 pixels per inch
+
+
+D:\works\LIFE ESSENCE\november\CDRI logo png gold.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 5695K, 1080 by 1350 pixels
+Dimensions: 35.77 by 44.712 points 
+Resolution: 2173.909 by 2173.909 pixels per inch
+
+
+D:\works\LIFE ESSENCE\Ellipse 1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1339K, 828 by 414 pixels
+Dimensions: 39.465 by 76.493 points 
+Resolution: 1510.618 by 389.685 pixels per inch
+
+
+D:\works\LIFE ESSENCE\november\CDRI logo.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1848K, 900 by 701 pixels
+Dimensions: 34.951 by 44.873 points 
+Resolution: 1854.022 by 1124.776 pixels per inch
+
+
+D:\works\LIFE ESSENCE\bacopa plant.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 139.466 by 143.909 points 
+Resolution: 557.554 by 540.342 pixels per inch
+
+
+D:\works\LIFE ESSENCE\bacopa plant.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 139.466 by 143.909 points 
+Resolution: 557.555 by 540.342 pixels per inch
+
+
+C:\Users\MANU JACOB\Downloads\649 Mindwise.png
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 5643K, 1764 by 1092 pixels
+Dimensions: 294.719 by 476.084 points 
+Resolution: 430.946 by 165.147 pixels per inch
+
+
+D:\works\LIFE ESSENCE\november\CDRI logo png gold.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 5695K, 1080 by 1350 pixels
+Dimensions: 35.77 by 44.712 points 
+Resolution: 2173.909 by 2173.909 pixels per inch
+
+
+D:\works\LIFE ESSENCE\Ellipse 1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 1339K, 828 by 414 pixels
+Dimensions: 39.465 by 76.493 points 
+Resolution: 1510.618 by 389.685 pixels per inch
+
+
+D:\works\LIFE ESSENCE\november\CDRI logo.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1848K, 900 by 701 pixels
+Dimensions: 34.951 by 44.873 points 
+Resolution: 1854.022 by 1124.776 pixels per inch
+
+
+D:\works\LIFE ESSENCE\bacopa plant.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 139.466 by 143.909 points 
+Resolution: 557.554 by 540.342 pixels per inch
+
+
+D:\works\LIFE ESSENCE\bacopa plant.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 4556K, 1080 by 1080 pixels
+Dimensions: 139.466 by 143.909 points 
+Resolution: 557.555 by 540.342 pixels per inch

@@ -5,16 +5,17 @@ type: meta
 
 # Thambu-HQ Wiki — Overview
 
-This wiki is the LLM-maintained knowledge layer for two businesses owned by Thambu, both operating out of the Thambu-HQ monorepo:
+This wiki is the LLM-maintained knowledge layer for three businesses operating out of the Thambu-HQ monorepo:
 
-- **[[domains/mindwise/_index|Mindwise]]** — cognitive wellness supplement (CDRI-08 / Bacopa monnieri), launching 2026-06-01 under Lumen Marketing Company. Currently in the final stretch before launch with [[sorted-agency]] driving brand and packaging.
-- **[[domains/racesims/_index|RaceSims]]** — India's pro-grade sim-racing hardware company (racesims.in). Currently executing a [[90-day-execution-plan]] to close the gap with main competitor [[virtual-racing-hub]].
+- **[[domains/mindwise/_index|Mindwise]]** — cognitive wellness supplement (CDRI-08 / Bacopa monnieri), launching 2026-06-01 under [[lumen-marketing-company|Lumen Marketing Company]]. Currently in the final stretch before launch with [[sorted-agency]] driving brand and packaging. Owned by [[thambu]].
+- **[[domains/racesims/_index|RaceSims]]** — India's pro-grade sim-racing hardware company (racesims.in). Currently executing a [[90-day-execution-plan]] to close the gap with main competitor [[virtual-racing-hub]]. Owned by [[thambu]].
+- **[[domains/prenatal/_index|Prenatal]]** — India's first transparency-led DTC prenatal & postnatal supplement brand, modeled on [[ritual-benchmark|Ritual]] (US). Pre-launch research phase. Founded by [[aishwarya-chandrasekhar|Aishu]] (Thambu's wife).
 
 ## Architecture
 
 This wiki follows the [Karpathy LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) pattern:
 
-- **Raw layer** — `racesims/`, `mindwise/`, `voice-briefs/` — immutable source material. Claude reads but never writes.
+- **Raw layer** — `racesims/`, `mindwise/`, `prenatal/`, `voice-briefs/` — immutable source material. Claude reads but never writes.
 - **Wiki layer** — `wiki/` (this folder) — LLM-owned markdown. Humans read in Obsidian, never write.
 - **Schema layer** — `CLAUDE.md` + `.claude/rules/*.md` — defines ingest, query, lint procedures.
 

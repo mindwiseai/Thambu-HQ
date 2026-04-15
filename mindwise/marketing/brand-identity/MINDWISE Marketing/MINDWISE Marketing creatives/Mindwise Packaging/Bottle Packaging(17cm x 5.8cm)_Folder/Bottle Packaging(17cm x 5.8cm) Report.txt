@@ -1,0 +1,168 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: Bottle Packaging(17cm x 5.8cm).pdf
+Color Mode: CMYK color
+Color Profile: U.S. Web Coated (SWOP) v2
+Ruler Units: centimeters
+Artboard Dimensions: 21.9995 cm x 10.9982 cm
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Montserrat Regular (TrueType)
+Montserrat Bold (TrueType)
+Montserrat SemiBold (TrueType)
+Montserrat ExtraBold (TrueType)
+Montserrat Medium (TrueType)
+Lato Black (TrueType)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\cdri-logo-1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 885K, 580 by 391 pixels
+Dimensions: 38.022 by 25.633 points 
+Resolution: 1098.31 by 1098.27 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\WhatsApp Image 2024-01-08 at 11.36.32 AM.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 2817K, 1153 by 834 pixels
+Dimensions: 35.612 by 25.76 points 
+Resolution: 2331.112 by 2331.027 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 5.715 by 4.286 points 
+Resolution: 12095.294 by 12094.857 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 7.263 by 5.448 points 
+Resolution: 9516.544 by 9516.201 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\cdri-logo-1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 885K, 580 by 391 pixels
+Dimensions: 38.022 by 25.633 points 
+Resolution: 1098.31 by 1098.27 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\WhatsApp Image 2024-01-08 at 11.36.32 AM.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 2817K, 1153 by 834 pixels
+Dimensions: 35.612 by 25.76 points 
+Resolution: 2331.112 by 2331.027 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 5.715 by 4.286 points 
+Resolution: 12095.294 by 12094.857 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 7.263 by 5.448 points 
+Resolution: 9516.544 by 9516.201 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\WhatsApp Image 2025-04-01 at 12.54.19_0302a590.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 4218K, 900 by 1600 pixels
+Dimensions: 394.435 by 701.217 points 
+Resolution: 164.286 by 164.286 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\WhatsApp Image 2025-03-29 at 11.31.55_cdd12c6b.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1272K, 834 by 521 pixels
+Dimensions: 625.5 by 390.75 points 
+Resolution: 96 by 96 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\cdri-logo-1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 885K, 580 by 391 pixels
+Dimensions: 38.022 by 25.633 points 
+Resolution: 1098.31 by 1098.27 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\WhatsApp Image 2024-01-08 at 11.36.32 AM.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 2817K, 1153 by 834 pixels
+Dimensions: 35.612 by 25.76 points 
+Resolution: 2331.112 by 2331.027 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 5.715 by 4.286 points 
+Resolution: 12095.294 by 12094.857 pixels per inch
+
+
+D:\WORKS\LIFE ESSENCE\2025\March\Bottle Packaging\New Size\Bottle Packaging_Folder_(17cm x 5.8)\Links\pngegg (1).png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2700K, 960 by 720 pixels
+Dimensions: 7.263 by 5.448 points 
+Resolution: 9516.544 by 9516.201 pixels per inch

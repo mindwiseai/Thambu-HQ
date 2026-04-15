@@ -40,13 +40,14 @@ Batch covers four categories: (1) FSSAI packaging regulatory content for the bot
 - **Oral strip format** was explored as early as April 2023 via [[aavishkar-oral-strips]] NDA.
 - **Dr. Miltons Laboratories** (Puducherry) is the contract manufacturer for the capsule product (distinct from [[solusta-puducherry|Solista]] for gummies).
 - **LMC GST:** 33AABFL1450E1ZZ (from barcode subscription letter, Dec 26, 2023).
-- **LMC registered office (barcode letter):** No.9, First Cross Street, Second Avenue, Ashok Nagar, Chennai 600085. But NDA says: Second Floor, NEW NO.22 / OLD NO.2, First Cross Street, Second Avenue, Ashok Nagar, Chennai, Tamil Nadu 600083.
+- **LMC registered office (authoritative, per Thambu 2026-04-14):** Second Floor, NEW NO.22 / OLD NO.2, First Cross Street, Second Avenue, Ashok Nagar, Chennai, Tamil Nadu **600083**.
 
-> [!contradiction]
-> Two different LMC addresses in the same documents:
-> - NDAs (Apr 2023): "Second Floor, NEW NO.22 / OLD NO.2, First Cross Street, Second Avenue, Ashok Nagar, Chennai 600083"
-> - Courier format: "No.9, First Cross Street, Second Avenue, Ashok Nagar, Chennai 600085"
-> Different postcodes (600083 vs 600085) and different building numbers. Could be old vs new address, or registered vs operational address.
+> [!note] Contradiction resolved (2026-04-14)
+> Earlier ingest flagged two different LMC addresses across source documents:
+> - NDAs (Apr 2023): "Second Floor, NEW NO.22 / OLD NO.2, First Cross Street, Second Avenue, Ashok Nagar, Chennai **600083**"
+> - Courier / barcode subscription letter (Dec 2023): "No.9, First Cross Street, Second Avenue, Ashok Nagar, Chennai **600085**"
+>
+> **Authoritative answer from [[thambu]] (2026-04-14):** the correct pin code is **600083**. The 600085 postcode in the barcode subscription letter is a typo or stale reference — do NOT use it on packaging, legal docs, or marketing. Any artwork currently showing 600085 needs to be corrected.
 
 ## Open questions
 
