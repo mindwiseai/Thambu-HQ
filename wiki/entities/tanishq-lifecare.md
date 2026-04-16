@@ -12,28 +12,45 @@ tags: [company, manufacturer, prenatal, ahmedabad, organic]
 
 ## Key certifications
 
-- **USDA Organic** ⭐ (the differentiator)
-- **EU Organic** ⭐ (the differentiator)
-- WHO-GMP
-- ISO 9001
-- Halal
+**Confirmed from tanishqlifecare.com (2026-04-14):**
+- WHO-GMP ✓
+- ISO 9001:2015 ✓
+- FSSAI ✓ (scope unknown — FSDU coverage NOT confirmed)
+- DCGI Approved ✓
+
+**Claimed but UNVERIFIED — must request certificates:**
+- USDA Organic — their FAQ says they "offer" this; unclear if facility-certified or compliance-service only
+- EU Organic — same ambiguity
+- Halal + Kosher — same ambiguity
+
+> [!contradiction]
+> Original strategy doc listed USDA Organic + EU Organic as Tanishq's facility certifications. Their public website only claims they "offer" these certifications as a service (ambiguous). Must obtain actual certificate copies with certificate numbers and expiry dates before relying on this for brand claims.
 
 ## Strategic fit
 
 The [[prenatal-dtc-lifestyle-strategy|lifestyle brand thesis]] is "clean, traceable, transparency-first." Tanishq's organic certifications let the brand claim "organically certified ingredients" — a wedge no Indian prenatal competitor (including [[trimacare]]) currently holds.
 
-## Why chosen over Brukem
+## Why initially chosen over Brukem
 
-- USDA + EU Organic + clean-label DNA aligns with brand positioning
-- **Prenatal experience confirmed** — Tanishq lists prenatals under their nutraceutical segment (international tab on their site). Not headline domestic offering, but the capability exists.
-- Brand positioning + organic certs + verified prenatal capability = strongest combined fit
+- USDA + EU Organic claims align with brand positioning (pending verification)
+- Prenatal capability claimed under nutraceutical/international segment (pending verification — not visible on public site as of 2026-04-14)
+- Brand positioning + organic certs (if real) = strongest combined fit
 - USFDA matters for US export (not Day 1 priority)
 
-## Critical questions to verify (BEFORE signing)
+## What I confirmed on their website (2026-04-14)
 
-1. **Does their FSSAI Central License cover FSDU category?** Generic license is not enough — see [[prenatal-fsdu-regulatory]]
-2. **USDA Organic + EU Organic scope** — which product lines, can they source organic for prenatal nutrients?
-3. **Prenatal track record details** — confirmed prenatals exist under international/nutraceutical segment. Need: SKU list, formulation examples, which export markets they ship to, references
+- International divisions: Pharmaceutical, Herbal, **Babyzac** (baby care), Nutraceuticals
+- Exports to 30+ countries (Asia, Africa, "and beyond")
+- Named nutraceutical SKUs visible: Vitamin C, Oxifit-B12
+- Women's health: only "hormonal balance formulas" mentioned generically
+- **No prenatal, pregnancy, maternal, or lactation SKUs visible publicly**
+- Contact: +91 98240 42701, info@tanishqlifecare.com, C-101 Signature-II Business Park, Sarkhej Ahmedabad 380055
+
+## Critical questions to verify (BEFORE signing) — revised priority 2026-04-14
+
+1. **FSSAI Central License scope** — does it explicitly cover FSDU? Get a copy with category endorsements
+2. **USDA Organic + EU Organic** — facility certs or compliance-service only? Get certificate numbers + expiry dates
+3. **Prenatal track record** — redacted SKU list, case studies, which export markets prenatals have shipped to
 4. **Branded traceable ingredients** — Quatrefolic (L-methylfolate), life'sDHA (algal DHA), Albion chelated minerals?
 5. **Facility-organic vs ingredient-organic** — need both for clean claim
 6. **MOQs for FSDU initial batch**
