@@ -8,7 +8,15 @@ updated: 2026-04-14
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-04-14 (latest) — Lint + cleanup pass
+## 2026-04-14 (latest) — Prenatal manufacturer pivot to Tanishq
+
+- **[[tanishq-lifecare|Tanishq Lifecare]] = TOP manufacturer pick** — replaces [[brukem-life-care|Brukem]] (now runner-up).
+- Why: USDA + EU Organic certs align with [[prenatal-dtc-lifestyle-strategy|transparency/clean-label brand positioning]].
+- **Prenatal capability confirmed:** Aishu verified Tanishq lists prenatals under nutraceutical segment (international tab). Not headline domestic, but real.
+- 8 verification questions still pending. Most critical: does Tanishq's FSSAI Central License cover [[prenatal-fsdu-regulatory|FSDU category]]?
+- Side discussion: bootstrap-vs-wait strategy → start time-gated cheap items NOW (gyno search, FSSAI groundwork, business entity, trademark), gate cash-intensive items on Mindwise revenue.
+
+## 2026-04-14 — Lint + cleanup pass
 
 - **Full lint report:** [[meta/lint-2026-04-14]] — 197 pages total, strong health
 - **Cleanup applied today:** empty 2026-04-13 stub deleted; [[overview]] updated to three businesses; 6 backslash-escape typos stripped across `chennai-super-kings`, `csk-partnership-pitch`, `keenmind-agreement-expiry`, `lumen-marketing-company`, `sfi-health`, `2026-01-late-meeting-4-brand-identity`; 7 missing entity stubs created ([[fanatec]], [[playseat]], [[tikitar]], [[guhan]], [[rohub]], [[qubic-systems]], [[ajit-kumar-racing]])

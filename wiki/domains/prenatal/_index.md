@@ -34,9 +34,9 @@ Indian women rely on imported supplements because local options feel untrustwort
 - [[ritual-benchmark]] — US brand model ($250M+, DTC, transparency-led)
 
 ### Contract manufacturers (shortlisted)
-- [[brukem-life-care]] — TOP PICK (Ahmedabad, USFDA, prenatal experience)
+- [[tanishq-lifecare]] — **TOP PICK** ⭐ (Ahmedabad, USDA + EU Organic — aligns with clean-label positioning)
+- [[brukem-life-care]] — runner-up (Ahmedabad, USFDA, prenatal experience)
 - Bionova Lifesciences (Bangalore) — custom formulation, 10+ years
-- Tanishq Lifecare (Ahmedabad) — organic/clean-label
 - beRef Pharmaceuticals (Madurai) — personal connection, pharma-grade
 - Lifecare Neuro (Baddi) — cost advantages (excise-free zone)
 

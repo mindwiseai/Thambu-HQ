@@ -31,6 +31,22 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 - Warnings: 7 missing entity pages (fanatec, playseat, tikitar, guhan, rohub, qubic-systems, ajit-kumar-racing); 6 backslash-escape typos in wiki links; hot.md grew to 729 words (target ~500)
 - Flagged for human: FSSAI dosage contradiction ("one capsule" vs "two capsules"), LMC Chennai address mismatch — both regulatory liabilities
 
+## [2026-04-14] update | Tanishq prenatal capability confirmed
+- **Updated:** [[tanishq-lifecare]] — Aishu confirmed Tanishq lists prenatals under their nutraceutical segment (international tab on website). This upgrades Tanishq significantly — they have actual prenatal capability, not just custom formulation.
+- **Updated:** [[prenatal-contract-manufacturers]] — shortlist table now reflects confirmed prenatal experience for Tanishq.
+- **Updated:** [[hot]] — pivot + confirmation logged.
+- Domain: prenatal
+
+## [2026-04-13] decision | Prenatal manufacturer pivot — Tanishq over Brukem
+- **Created:** [[tanishq-lifecare]] — new top-pick manufacturer entity page
+- **Updated:**
+  - [[brukem-life-care]] — moved from top pick to runner-up status
+  - [[prenatal-contract-manufacturers]] — shortlist reordered, decision rationale added
+  - [[domains/prenatal/_index]] — manufacturer list updated
+  - [[hot]] — pivot logged + bootstrap-vs-wait strategy discussion
+- Domain: prenatal
+- **Rationale:** Tanishq's USDA + EU Organic certifications align with the transparency-led lifestyle positioning. The brand story carries more weight than Brukem's prenatal track record + USFDA. 8 verification questions still pending before signing with Tanishq (most critical: FSSAI Central License must cover FSDU category).
+
 ## [2026-04-13] ingest | Prenatal Brand Strategy — New Domain Bootstrap
 - Source: [[2026-04-13-prenatal-brand-strategy]]
 - **Created: 13 new pages:**
