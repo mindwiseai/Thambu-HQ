@@ -10,6 +10,8 @@ India's first transparency-led, gynecologist-formulated, DTC prenatal and postna
 
 **Status:** Pre-launch, research & strategy phase (as of April 2026)
 
+**Working brand name:** [[prenatal-brand-name-the-edit|The Edit]] (pending trademark + domain verification)
+
 ## Core thesis
 
 Indian women rely on imported supplements because local options feel untrustworthy. No Indian brand does Ritual-style transparency + DTC + lifestyle branding for prenatal.

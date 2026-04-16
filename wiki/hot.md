@@ -8,7 +8,18 @@ updated: 2026-04-14
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-04-14 (latest) — Tanishq Boranutri verified + flagged
+## 2026-04-14 (latest) — Brand name: "The Edit" (candidate)
+
+- **Working brand name: [[prenatal-brand-name-the-edit|The Edit]]** — Aishu picked after naming exploration session. Positioning: *"Only what matters. No bullshit."* (essentialism, not "precision")
+- No existing "The Edit" prenatal supplement brand found in India/UK/US searches — space appears clean
+- Trademark + domain verification pending (IP India Class 5 + 30, domain availability)
+- Fallbacks if blocked: Saar, Only, Matter, Mool, Distill
+- **Rejected: "Precision"** — trademark gridlock with Precision Nutrition Inc., wrong emotional fit
+- **LMC umbrella decision confirmed** — skip entity registration, operate prenatal under [[lumen-marketing-company]]. Needs FSDU endorsement added to LMC's existing FSSAI license.
+- **Manufacturing location decided:** India domestic only (not Thailand/overseas) — reasons captured in analysis, to-be-wiki'd
+- Manufacturer discovery emails drafted at `prenatal/manufacturer-discovery-emails.md` — awaiting Aishu to send
+
+## 2026-04-14 — Tanishq Boranutri verified + flagged
 
 - **[[tanishq-lifecare|Tanishq]] Boranutri = real prenatal SKU** (https://tanishqlifecare.com/boranutri.php). 22-ingredient formula (folic acid, iron, B-complex, D3, magnesium, zinc, etc.) for pregnancy + lactation.
 - **2 critical flags raised:**

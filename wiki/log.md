@@ -31,6 +31,30 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 - Warnings: 7 missing entity pages (fanatec, playseat, tikitar, guhan, rohub, qubic-systems, ajit-kumar-racing); 6 backslash-escape typos in wiki links; hot.md grew to 729 words (target ~500)
 - Flagged for human: FSSAI dosage contradiction ("one capsule" vs "two capsules"), LMC Chennai address mismatch — both regulatory liabilities
 
+## [2026-04-14] decision | Brand name candidate: "The Edit"
+- **Created:** [[prenatal-brand-name-the-edit]] — new concept page for the candidate brand name
+- **Updated:**
+  - [[domains/prenatal/_index]] — working brand name noted
+  - [[hot]] — naming decision + LMC umbrella + India manufacturing + email drafts logged
+- **Positioning clarified:** "Only what matters. No bullshit." Essentialism, not precision. Same conceptual-minimalism lane as Ritual, The Ordinary, Everlane, Aesop.
+- **Rejected name: "Precision"** — means "exact measurement" not "nothing extra"; trademark gridlock with Precision Nutrition Inc.; cold/clinical vibe wrong for prenatal warmth
+- **No existing "The Edit" prenatal brand found** in India/UK/US searches
+- **Pending:** formal IP India trademark search (Class 5 + 30), domain availability check
+- Domain: prenatal
+
+## [2026-04-14] decision | Prenatal operates under Lumen Marketing Company umbrella
+- Aishu decided to skip separate entity registration — will operate the prenatal brand under [[lumen-marketing-company|LMC]] initially
+- **Tradeoffs acknowledged:** (1) LMC's FSSAI is for Health Supplements, not FSDU — will need category endorsement added; (2) liability mixing with Mindwise + CDRI-08 assets; (3) equity allocation for future gynecologist co-founder may need spin-out later
+- **Net effect:** compresses 4 weeks + Rs.30K from launch timeline
+- Updated: [[hot]]
+- Domain: prenatal
+
+## [2026-04-14] decision | Manufacture domestically in India (not overseas)
+- Aishu considered Thailand manufacturing; analysis concluded domestic India is clearly better for this brand
+- **Reasons:** brand thesis is "Indian women shouldn't have to import" — overseas manufacturing contradicts the founding story; 30%+ import duties + GST add 40-60% to landed cost; imported FSDU has slower regulatory pathway; MOQs higher overseas; longer lead times; QC + service friction
+- Revisit only if: exporting to ASEAN markets (Year 3-5), or if India regulatory becomes hostile
+- Domain: prenatal
+
 ## [2026-04-14] verification | Tanishq Boranutri prenatal SKU details + regulatory flags
 - Aishu shared specific URL: https://tanishqlifecare.com/boranutri.php
 - **Updated: [[tanishq-lifecare]]:**
