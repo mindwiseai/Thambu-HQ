@@ -31,6 +31,17 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 - Warnings: 7 missing entity pages (fanatec, playseat, tikitar, guhan, rohub, qubic-systems, ajit-kumar-racing); 6 backslash-escape typos in wiki links; hot.md grew to 729 words (target ~500)
 - Flagged for human: FSSAI dosage contradiction ("one capsule" vs "two capsules"), LMC Chennai address mismatch — both regulatory liabilities
 
+## [2026-04-14] verification | Tanishq Boranutri prenatal SKU details + regulatory flags
+- Aishu shared specific URL: https://tanishqlifecare.com/boranutri.php
+- **Updated: [[tanishq-lifecare]]:**
+  - Boranutri formulation extracted (22 ingredients, pregnancy + lactation positioning)
+  - Full 41-SKU nutraceutical portfolio listed
+  - **Flagged:** Boranutri's therapeutic claim ("reduces preterm birth + low birth weight") is FSSAI-prohibited → suggests DCGI drug license, not FSDU
+  - **Flagged:** No DHA in Boranutri formula — gap vs Ritual standard
+  - Verification questions expanded to 10, reprioritized
+- Updated: [[hot]] with verification flags
+- Domain: prenatal
+
 ## [2026-04-14] update | Tanishq prenatal capability confirmed
 - **Updated:** [[tanishq-lifecare]] — Aishu confirmed Tanishq lists prenatals under their nutraceutical segment (international tab on website). This upgrades Tanishq significantly — they have actual prenatal capability, not just custom formulation.
 - **Updated:** [[prenatal-contract-manufacturers]] — shortlist table now reflects confirmed prenatal experience for Tanishq.

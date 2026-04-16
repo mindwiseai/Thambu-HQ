@@ -8,13 +8,19 @@ updated: 2026-04-14
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-04-14 (latest) — Prenatal manufacturer pivot to Tanishq
+## 2026-04-14 (latest) — Tanishq Boranutri verified + flagged
 
-- **[[tanishq-lifecare|Tanishq Lifecare]] = TOP manufacturer pick** — replaces [[brukem-life-care|Brukem]] (now runner-up).
-- Why: USDA + EU Organic certs align with [[prenatal-dtc-lifestyle-strategy|transparency/clean-label brand positioning]].
-- **Prenatal capability confirmed:** Aishu verified Tanishq lists prenatals under nutraceutical segment (international tab). Not headline domestic, but real.
-- 8 verification questions still pending. Most critical: does Tanishq's FSSAI Central License cover [[prenatal-fsdu-regulatory|FSDU category]]?
-- Side discussion: bootstrap-vs-wait strategy → start time-gated cheap items NOW (gyno search, FSSAI groundwork, business entity, trademark), gate cash-intensive items on Mindwise revenue.
+- **[[tanishq-lifecare|Tanishq]] Boranutri = real prenatal SKU** (https://tanishqlifecare.com/boranutri.php). 22-ingredient formula (folic acid, iron, B-complex, D3, magnesium, zinc, etc.) for pregnancy + lactation.
+- **2 critical flags raised:**
+  1. Boranutri's "reduces preterm birth and low birth weight" claim is therapeutic — prohibited under [[prenatal-fsdu-regulatory|FSDU]]. Suggests Boranutri may be DCGI-licensed drug, not FSSAI FSDU. Must confirm regulatory pathway.
+  2. **No DHA in Boranutri formulation** — gap vs [[ritual-benchmark|Ritual]] standard. Verify Tanishq can formulate with algal DHA (life'sDHA).
+- USDA + EU Organic certs still UNVERIFIED — public site treats them as "compliance services" not facility certs.
+- 10 verification questions for Tanishq, ordered by priority.
+
+## 2026-04-14 — Prenatal manufacturer pivot to Tanishq
+
+- [[tanishq-lifecare|Tanishq]] selected over [[brukem-life-care|Brukem]] for [[prenatal-dtc-lifestyle-strategy|brand positioning fit]] (organic certs).
+- Bootstrap-vs-wait: start time-gated cheap items NOW (gyno search, FSSAI groundwork, entity, trademark), gate cash-intensive items on Mindwise revenue.
 
 ## 2026-04-14 — Lint + cleanup pass
 
