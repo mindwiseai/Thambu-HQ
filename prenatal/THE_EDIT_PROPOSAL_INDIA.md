@@ -1,5 +1,5 @@
 # THE EDIT
-## Saath se Shuruwat — Wellness for Families, from the Start
+## Together from the Start — A Wellness Brand for Indian Couples
 
 **Founder:** Aishwarya Chandrasekhar
 **Date:** April 2026
@@ -11,34 +11,34 @@
 
 **Making a baby is the first thing a family does together. The Edit is built for that.**
 
-In India, the family is where everything begins. Weddings happen together. Decisions happen together. Seven vows are taken together around a fire. Yet when couples decide to actually have a child, only one person is asked to prepare. She sees the doctor. She takes the supplements. She changes her diet. She monitors her cycle. He shows up at the end.
+In India, the family is where everything begins. Weddings happen together. Career decisions happen together. Financial choices happen together. Moves and homes and holidays — together. Yet when couples decide to actually have a child, only one person is asked to prepare. She sees the doctor. She takes the supplements. She changes her diet. She watches her body and her cycle. He shows up at the end.
 
-The Edit is a wellness brand for couples who believe starting a family is one of the most important things they'll ever do together — and that it deserves the same togetherness every other major moment in their lives has carried.
+The Edit is a wellness brand for couples who believe starting a family is one of the most important things they will ever do — and that it deserves the same togetherness every other major moment in their lives has carried.
 
-**Together from the start. Saath se shuruwat.**
+**The Edit. Together from the start.**
 
 ---
 
-## Why This Framing Wins in India
+## Why This Framing Wins
 
-We considered other ways to say this. Each had a problem:
+We considered several ways to say this. Each had a problem:
 
 | Framing | What it means | Why we didn't lead with it |
 |---|---|---|
-| "Fertility" | Medical, clinical, problem-focused | Stigmatizing — many Indian couples would not want to be seen as "fertility customers" |
-| "TTC / Trying to Conceive" | Insider Western lingo | Doesn't resonate in everyday Hindi/English; feels borrowed |
+| "Fertility" | Medical, clinical, problem-focused | Stigmatizing — many couples would not want to be seen as "fertility customers" |
+| "TTC / Trying to Conceive" | Insider Western lingo | Doesn't resonate in everyday Indian conversation |
 | "Couples Wellness" | Generic, gym-brand vibe | Says nothing specific about the moment or the product |
-| "Reproductive Partnership" | Progressive, precise, values-forward | Reads as academic / political in the Indian mass market |
-| **"Together from the Start / Saath se Shuruwat"** | Warm, inclusive, culturally rooted | **Captures the same truth through language that already lives in Indian homes** |
+| "Reproductive Partnership" | Progressive, precise, values-forward | Reads as academic in mass conversation; the truth, but not the way customers say it |
+| **"Together from the Start"** | Warm, inclusive, instantly understood | **Captures the same truth in language anyone can say** |
 
-**Saath** — it's the word in every Hindu wedding vow, every old Bollywood love song, every joint family conversation about the journey ahead. Using it for the brand isn't borrowed language — it's the most natural way to describe what we're actually saying: this is something you do *saath-saath* (together), from the start.
+"Together from the start" is a phrase customers already use about their own lives. It does not need to be explained. It does not borrow from another country's vocabulary. It tells the customer what the brand believes — and gives them words they can borrow back when they describe what they take, why they take it, and why they bought it for both of them.
 
 This framing works because it:
 
-1. **Respects the Indian emotional vocabulary.** Family in India is felt, not argued. "Saath" lands in the heart before the head.
-2. **Is inclusive without being political.** Everyone can buy into "let's prepare together." Not everyone will buy into "reproductive labor is lopsided." Both are true; only one sells at scale in India.
-3. **Is defensible long-term.** No competitor can credibly claim this positioning without contradicting their existing model. Trimacare sells to women. Imported brands skip the cultural register entirely. Ayurvedic brands are doctor-led. The Edit is for couples, for home, for the family journey — in a language the family already speaks.
-4. **Opens marketing territory.** Every piece of content — from male fertility education to couples-preparing-together stories to the Indian wedding-to-pregnancy pipeline — fits naturally under "saath."
+1. **Respects the Indian emotional vocabulary.** Family in India is felt, not argued. Togetherness is the language of every wedding, every household decision, every life milestone. The brand simply extends that language to one more milestone.
+2. **Is inclusive without being political.** Every couple can buy into "let us prepare together." Not every couple will buy into more loaded framings. Both perspectives are true; one sells at scale.
+3. **Is defensible long-term.** No competitor can credibly claim this positioning without contradicting their existing model. Trimacare sells to women alone. Imported brands miss the cultural register entirely. Ayurvedic brands are doctor-led. The Edit is for couples, for home, for the family journey.
+4. **Opens marketing territory.** Every piece of content — from male fertility education to couples-preparing-together stories to the wedding-to-pregnancy life pipeline — fits naturally under "together."
 
 ---
 
@@ -48,7 +48,7 @@ This framing works because it:
 
 - 27 million pregnancies per year
 - ~5–8 million couples actively planning to conceive at any given time
-- Indian health & wellness market: $164B (2025) → $258B (2034)
+- Indian health and wellness market: $164B (2025) → $258B (2034)
 - Asia-Pacific holds 38.58% of the global postpartum market
 
 The existing brands miss in specific ways:
@@ -58,7 +58,7 @@ The existing brands miss in specific ways:
 - **Ayurvedic brands** (Himalaya, Patanjali) — pharma-coded packaging, no traceability, no transparency
 - **Nobody at all** — speaks to the family as the unit, or to men as equal participants, or to couples preparing together
 
-**The white space:** a modern, transparent, gynecologist-co-formulated wellness brand built around the Indian family journey — where the moment of starting that family is treated with the same intention as the wedding that started the partnership.
+**The white space:** a modern, transparent, gynecologist-co-formulated wellness brand built around the Indian family's most important moment — where starting that family is treated with the same intention as the wedding that started the partnership.
 
 ---
 
@@ -68,7 +68,7 @@ The existing brands miss in specific ways:
 
 **Brand promise:** Only what matters. For both of you.
 
-**Aesthetic:** Modern, warm, premium DTC — gender-neutral palette, editorial photography, clean typography. Closer to Aesop or Good Earth than to a maternity brand. Packaging reads as intentional, not medical.
+**Aesthetic:** Modern, warm, premium DTC. Gender-neutral palette. Editorial photography. Clean typography. Closer to Aesop or Good Earth than to a maternity brand. Packaging reads as intentional, not medical.
 
 **Distribution:** Direct-to-consumer subscription. Urban metros first — Mumbai, Bangalore, Delhi, Hyderabad, Chennai. Tier-2 expansion by Year 3.
 
@@ -82,7 +82,7 @@ The existing brands miss in specific ways:
 
 ### Day 1 Launch — 3 SKUs
 
-**1. Edit Saath Bundle (the hero SKU)**
+**1. Edit For Two (the hero SKU)**
 Sold as one box containing two bottles. One product — for two people.
 
 - **For Her:** egg quality, fertility support, methylfolate, CoQ10, myo-inositol, DHA. FSDU regulatory pathway.
@@ -94,11 +94,11 @@ Comprehensive 18–25 ingredient prenatal supplement with branded traceable ingr
 ### Year 1 Expansion
 
 **3. Edit Postnatal (Month 9–12 post-launch)**
-Postpartum + lactation support, formulated for the mother's recovery and the breastfeeding period.
+Postpartum and lactation support, formulated for the mother's recovery and the breastfeeding period.
 
 ---
 
-## Why Launch the Saath Bundle + Prenatal at Day 1 (NOT All Three Together)
+## Why Launch Edit For Two + Prenatal at Day 1 (NOT All Three Together)
 
 Three options were considered:
 
@@ -108,30 +108,30 @@ Three options were considered:
 
 ### Option B — Launch Prenatal only
 
-**Rejected.** Misses the whole "saath" positioning. Pregnant women are already pregnant — they're past the moment of preparing together. Prenatal-only makes The Edit a maternity brand, not a family-journey brand.
+**Rejected.** Misses the whole "together" positioning. Pregnant women are already pregnant — they are past the moment of preparing as a couple. Prenatal-only makes The Edit a maternity brand, not a family-journey brand.
 
-### Option C — Launch Saath Bundle + Prenatal at Day 1, add Postnatal at Month 9–12
+### Option C — Launch Edit For Two + Prenatal at Day 1, add Postnatal at Month 9–12
 
 **Selected.** Four reasons:
 
-1. **The "saath" positioning is visible from Day 1.** Couples bundle is the hero. Prenatal is the natural progression. The brand's values are lived at launch, not deferred.
-2. **Full female customer journey captured.** A woman who buys the Saath Bundle while planning her pregnancy transitions naturally to Edit Prenatal when she conceives — same brand, same trust, same subscription.
+1. **The "together" positioning is visible from Day 1.** The couples bundle is the hero. Prenatal is the natural progression. The brand's values are lived at launch, not deferred.
+2. **Full female customer journey captured.** A woman who buys Edit For Two while planning her pregnancy transitions naturally to Edit Prenatal when she conceives — same brand, same trust, same subscription.
 3. **Postnatal launches at peak demand.** First Prenatal cohort gives birth at Month 9–12. Postnatal ships exactly when they need it.
-4. **Two PR moments instead of one.** Day 1 launch (Saath Bundle + Prenatal) is the brand's opening statement. Month 9–12 Postnatal launch is a second wave of media attention.
+4. **Two PR moments instead of one.** Day 1 launch (Edit For Two + Prenatal) is the brand's opening statement. Month 9–12 Postnatal launch is a second wave of media attention.
 
 ### The Math Comparison
 
-| | All 3 Day 1 | Saath Bundle + Prenatal Day 1 | Prenatal Only |
+| | All 3 Day 1 | Edit For Two + Prenatal Day 1 | Prenatal Only |
 |---|---|---|---|
 | Day 1 SKUs | 3 | 3 | 1 |
 | Capital required at launch | Rs.25–30L | Rs.20–25L | Rs.10–12L |
 | Build timeline | 18–24 months | 16–18 months | 12 months |
 | Postnatal capital efficiency | Bad | Good | N/A |
-| "Saath" positioning at launch? | Yes | **Yes** | No |
+| "Together" positioning at launch? | Yes | **Yes** | No |
 | Customer journey coverage | Full | Preconception → Pregnancy | Pregnancy only |
 | Execution risk for small team | Very high | Medium | Low |
 
-The Saath Bundle + Prenatal launch captures 100% of the brand vision with significantly less capital, lower execution risk, and better inventory economics than launching all three together.
+The Edit For Two + Prenatal launch captures 100% of the brand vision with significantly less capital, lower execution risk, and better inventory economics than launching all three together.
 
 ---
 
@@ -139,13 +139,13 @@ The Saath Bundle + Prenatal launch captures 100% of the brand vision with signif
 
 | Competitor | What they do | Why The Edit wins |
 |---|---|---|
-| **Trimacare** | Doctor-prescribed prenatal MMN, woman-only, pharma-coded | Cannot adopt a couples/family-journey positioning without contradicting their entire DNA |
-| **Ritual (US, imported)** | Premium prenatal, transparency-led, separate Him/Her products | Imported = expensive + slow; no India context; doesn't speak to Indian family cultural register |
+| **Trimacare** | Doctor-prescribed prenatal MMN, woman-only, pharma-coded | Cannot adopt a couples / family-journey positioning without contradicting their entire DNA |
+| **Ritual (US, imported)** | Premium prenatal, transparency-led, separate Him/Her products | Imported = expensive + slow; no India context; doesn't speak to the Indian family register |
 | **Garden of Life / Pink Stork** | Premium prenatal, lifestyle | Same issues as Ritual + no men's product |
-| **Himalaya / Patanjali** | Ayurvedic supplements, pharma-coded | No transparency, no traceability, no modern identity; can't be a couples brand |
+| **Himalaya / Patanjali** | Ayurvedic supplements, pharma-coded | No transparency, no traceability, no modern identity; cannot be a couples brand |
 | **Wellbeing Nutrition** | Modern DTC supplements, broad portfolio | No prenatal/preconception focus; no couples positioning |
 
-No existing Indian brand combines: couples-first positioning, premium DTC subscription, traceable branded ingredients, gynecologist co-formulation, made-in-India for both partners, modern wellness aesthetic, and cultural register that speaks to the Indian family. **This is the white space.**
+No existing Indian brand combines: couples-first positioning, premium DTC subscription, traceable branded ingredients, gynecologist co-formulation, made-in-India for both partners, modern wellness aesthetic, and a tone that resonates with the Indian family. **This is the white space.**
 
 ---
 
@@ -159,7 +159,7 @@ No existing Indian brand combines: couples-first positioning, premium DTC subscr
 
 Both endorsements added to LMC's existing FSSAI Central License.
 
-**Manufacturing:** India domestic only. Rejected Thailand/overseas — contradicts the "Made in India, for Indian families" foundation. Currently evaluating Tanishq Lifecare (Ahmedabad) and Brukem Life Care (Ahmedabad) as contract manufacturers.
+**Manufacturing:** India domestic only. Rejected Thailand/overseas — contradicts the "made in India, for Indian families" foundation. Currently evaluating Tanishq Lifecare (Ahmedabad) and Brukem Life Care (Ahmedabad) as contract manufacturers.
 
 **Formulation philosophy:** All nutrients within ICMR RDA. Branded traceable ingredients (Quatrefolic, life'sDHA, Albion, KSM-66). No fillers. Nothing without published evidence. Premium ingredients, essentialist formula.
 
@@ -185,8 +185,8 @@ Both endorsements added to LMC's existing FSSAI Central License.
 
 | Risk | Mitigation |
 |---|---|
-| Indian men don't proactively buy supplements | Saath bundle ensures the woman buys for both; packaging + copy make his daily ritual frictionless |
-| Cultural conservatism around TTC conversations | Target urban metro educated 28–38 demographic first; warm family-journey framing avoids activist framing |
+| Indian men don't proactively buy supplements | Couples bundle ensures the woman buys for both; packaging + copy make his daily ritual frictionless |
+| Cultural conservatism around openly discussing TTC | Target urban metro educated 28–38 demographic first; warm family-journey framing avoids confrontational positioning |
 | Trimacare patent on trimester-specific MMN | Single comprehensive prenatal (like Ritual) sidesteps the patent entirely |
 | Manufacturer FSDU license gap | Verification questions sent to Tanishq + Brukem; if neither qualifies, pivot to shortlist alternatives |
 | Liability mixing under LMC umbrella | Future spin-out into separate Pvt Ltd when investment or scale demands |
@@ -207,11 +207,11 @@ Both endorsements added to LMC's existing FSSAI Central License.
 
 ## The Vision
 
-The Edit is not a prenatal supplement company. It's a brand built around a simple, deeply Indian idea: **starting a family is something a family does together.** From the beginning. From the first decision. *Saath se shuruwat.*
+The Edit is not a prenatal supplement company. It's a brand built around a simple, deeply Indian idea: **starting a family is something a family does together.** From the beginning. From the first decision.
 
 Day 1 launches three SKUs. Year 1 covers the full preconception-to-postnatal journey. Year 3–5 expands into adjacent moments in the Indian family life — postpartum recovery, perimenopause, the menopausal transition, supplements for the next generation. The Edit becomes a brand that walks with Indian families through every major stage of their life together.
 
-This is a Rs.500 Cr+ brand trajectory, not a Rs.50 Cr niche. The category is large. The white space is real. The brand vision is rooted in how Indian families already feel about the journey ahead — we're just the first brand to make it easier, cleaner, and more intentional.
+This is a Rs.500 Cr+ brand trajectory, not a Rs.50 Cr niche. The category is large. The white space is real. The brand vision is rooted in how Indian families already feel about the journey ahead — we are simply the first brand to make it easier, cleaner, and more intentional.
 
 **That's the proposal.**
 
