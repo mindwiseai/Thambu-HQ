@@ -12,9 +12,11 @@ India's first transparency-led, gynecologist-formulated, DTC prenatal and postna
 
 **Working brand name:** [[prenatal-brand-name-the-edit|The Edit]] (pending trademark + domain verification)
 
-**Brand manifesto (LOCKED 2026-04-14):** [[prenatal-brand-manifesto-couples-equality|"TTC is a team job. Men need to be equally invested."]] — the brand is no longer just a prenatal supplement; it's India's first couples reproductive wellness brand.
+**Brand manifesto (LOCKED 2026-04-17):** [[prenatal-brand-manifesto|"The wellness brand India was missing."]] — The Edit exists to fill a specific gap: an Indian brand combining DTC + modern lifestyle branding + traceable branded ingredients + gynaecologist co-formulation + full family-building journey. No Indian brand combines all of this today.
 
 **Launch architecture (LOCKED 2026-04-14):** [[prenatal-launch-architecture-scenario-d|Scenario D]] — Couples Bundle (Him + Her preconception) + Prenatal at Day 1. Postnatal at Month 9-12.
+
+**Operating entity (REVERSED 2026-04-17):** The Edit will incorporate as its own independent **Pvt Ltd** (not under LMC umbrella). Protects LMC operations from cross-liability. Clean cap table for future equity allocation.
 
 ## Core thesis
 

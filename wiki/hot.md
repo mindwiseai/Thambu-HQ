@@ -8,7 +8,14 @@ updated: 2026-04-14
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-04-14 (latest) — MAJOR BRAND PIVOT: The Edit becomes a couples reproductive wellness brand
+## 2026-04-17 (latest) — Manifesto locked + Entity decision reversed
+
+- **Brand manifesto LOCKED:** [[prenatal-brand-manifesto|"The wellness brand India was missing."]] — full paragraph in wiki. Aishu picked the "missing brand" framing over the "TTC is a team job" manifesto (superseded) and over "Together from the Start" (rejected).
+- **Entity reversal:** The Edit will NOT use [[lumen-marketing-company|LMC]] umbrella. Will incorporate as its own Pvt Ltd to protect LMC from cross-liability.
+- **Cost + timeline:** Rs.25-30L launch capital, 18-20 month build (was Rs.20-25L + 16-18 mo).
+- **Proposal rebuilt:** [[THE_EDIT_PROPOSAL_INDIA]] PDF + DOCX now reflect new manifesto + new entity.
+
+## 2026-04-14 — MAJOR BRAND PIVOT: The Edit becomes a couples reproductive wellness brand
 
 - **Brand manifesto LOCKED:** [[prenatal-brand-manifesto-couples-equality|"TTC is a team job. Men need to be equally invested."]]
 - **The Edit is no longer a prenatal supplement brand** — it's India's first couples reproductive wellness brand

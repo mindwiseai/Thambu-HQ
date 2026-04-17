@@ -1,10 +1,15 @@
 ---
-title: The Edit Brand Manifesto — TTC Is a Team Job
+title: The Edit Brand Manifesto — TTC Is a Team Job (SUPERSEDED)
 type: concept
 domain: prenatal
-status: LOCKED
-tags: [brand, manifesto, positioning, couples, equality, prenatal]
+status: SUPERSEDED
+superseded_by: prenatal-brand-manifesto
+tags: [brand, manifesto, positioning, couples, equality, prenatal, historical]
 ---
+
+> [!note]
+> **This manifesto has been superseded by [[prenatal-brand-manifesto]]** (locked 2026-04-14).
+> The couples-equality idea remains a supporting brand value (drives the couples bundle SKU design), but the brand's central manifesto is now broader — it works across Prenatal and Postnatal too, not just preconception. Preserved here for reference.
 
 # The Edit Brand Manifesto — TTC Is a Team Job
 

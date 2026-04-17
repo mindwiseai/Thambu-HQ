@@ -31,6 +31,14 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 - Warnings: 7 missing entity pages (fanatec, playseat, tikitar, guhan, rohub, qubic-systems, ajit-kumar-racing); 6 backslash-escape typos in wiki links; hot.md grew to 729 words (target ~500)
 - Flagged for human: FSSAI dosage contradiction ("one capsule" vs "two capsules"), LMC Chennai address mismatch — both regulatory liabilities
 
+## [2026-04-17] decision | Brand manifesto locked + Entity reversal (LMC umbrella → own Pvt Ltd)
+- **Brand manifesto LOCKED:** [[prenatal-brand-manifesto]] — "The wellness brand India was missing." Aishu selected the "missing brand" framing (Version 12 reworked) with couples-inclusive, gender-neutral wording and Ayurveda reframed as "different tradition" (not legally risky).
+- Earlier "TTC is a team job" manifesto ([[prenatal-brand-manifesto-couples-equality]]) is marked SUPERSEDED — still true as a supporting value but too narrow as the brand's central idea.
+- **Entity decision REVERSED:** The Edit will NOT operate under [[lumen-marketing-company|LMC]] umbrella. Will incorporate as its own independent Pvt Ltd — "The Edit Pvt Ltd" (working name). Reason: Aishu wants to protect LMC's existing operations (Mindwise, CDRI-08 licenses, royalties) from any liability exposure that The Edit might carry. Clean-slate entity also makes future equity allocation (gynaecologist co-founder) cleaner.
+- **Cost + timeline implication:** Adds Rs.50K-1L + 2-4 months to launch prep. Build timeline now 18-20 months (was 16-18). Total launch capital now Rs.25-30L (was Rs.20-25L).
+- **Proposal rebuilt:** [[THE_EDIT_PROPOSAL_INDIA]] (.md, .pdf, .docx) all reflect new entity + new manifesto.
+- Domain: prenatal
+
 ## [2026-04-14] decision | MAJOR — The Edit becomes a couples reproductive wellness brand
 - **Created:** [[prenatal-brand-manifesto-couples-equality]] — the brand manifesto: "TTC is a team job. Men need to be equally invested."
 - **Created:** [[prenatal-launch-architecture-scenario-d]] — locked launch architecture (Couples Bundle + Prenatal at Day 1, Postnatal Month 9-12)
