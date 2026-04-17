@@ -8,7 +8,19 @@ updated: 2026-04-14
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-04-14 (latest) — Brand name: "The Edit" (candidate)
+## 2026-04-14 (latest) — MAJOR BRAND PIVOT: The Edit becomes a couples reproductive wellness brand
+
+- **Brand manifesto LOCKED:** [[prenatal-brand-manifesto-couples-equality|"TTC is a team job. Men need to be equally invested."]]
+- **The Edit is no longer a prenatal supplement brand** — it's India's first couples reproductive wellness brand
+- **Launch architecture LOCKED — [[prenatal-launch-architecture-scenario-d|Scenario D]]:**
+  - Day 1: Edit Couples Bundle (Him + Her preconception) + Edit Prenatal (3 SKUs)
+  - Month 9-12: Add Edit Postnatal
+- **Capital + timeline:** Rs.20-25L initial, 16-18 month build timeline
+- **TWO regulatory pathways:** FSDU (Prenatal + Preconception Her) + Health Supplement (Preconception Him)
+- **Aishu's strategic insight:** Indian reproductive labor is lopsided — TTC is positioned as the woman's job. The Edit creates a new category (couples reproductive wellness) where Trimacare can't compete on positioning even if they copy formulations.
+- Manufacturer emails being updated to reflect 3-SKU scope.
+
+## 2026-04-14 — Brand name: "The Edit" (candidate)
 
 - **Working brand name: [[prenatal-brand-name-the-edit|The Edit]]** — Aishu picked after naming exploration session. Positioning: *"Only what matters. No bullshit."* (essentialism, not "precision")
 - No existing "The Edit" prenatal supplement brand found in India/UK/US searches — space appears clean

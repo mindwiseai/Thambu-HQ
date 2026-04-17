@@ -31,6 +31,16 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 - Warnings: 7 missing entity pages (fanatec, playseat, tikitar, guhan, rohub, qubic-systems, ajit-kumar-racing); 6 backslash-escape typos in wiki links; hot.md grew to 729 words (target ~500)
 - Flagged for human: FSSAI dosage contradiction ("one capsule" vs "two capsules"), LMC Chennai address mismatch — both regulatory liabilities
 
+## [2026-04-14] decision | MAJOR — The Edit becomes a couples reproductive wellness brand
+- **Created:** [[prenatal-brand-manifesto-couples-equality]] — the brand manifesto: "TTC is a team job. Men need to be equally invested."
+- **Created:** [[prenatal-launch-architecture-scenario-d]] — locked launch architecture (Couples Bundle + Prenatal at Day 1, Postnatal Month 9-12)
+- **Updated:** [[domains/prenatal/_index]] — manifesto + launch architecture noted at top
+- **Updated:** [[hot]] — major pivot logged
+- **Strategic shift:** The Edit is no longer just a prenatal brand. It's India's first couples reproductive wellness brand. Aishu articulated the equality insight unprompted.
+- **Resource implications:** Rs.20-25L initial capital, 16-18 month build, TWO regulatory pathways (FSDU + Health Supplement)
+- **Manufacturer outreach:** Tanishq + Brukem Gmail drafts being updated to reflect 3-SKU scope (was 1 SKU)
+- Domain: prenatal
+
 ## [2026-04-14] decision | Brand name candidate: "The Edit"
 - **Created:** [[prenatal-brand-name-the-edit]] — new concept page for the candidate brand name
 - **Updated:**
