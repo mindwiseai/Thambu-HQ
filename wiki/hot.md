@@ -8,7 +8,20 @@ updated: 2026-04-14
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-04-17 (latest) — Manifesto locked + Entity decision reversed
+## 2026-04-17 (end of session) — Next topic: Fundraising
+
+- Aishu has reviewed the Rs.25–30L launch capital requirement and recognized it's significant for the team's current size.
+- **Next session:** fundraising strategy. Topics to cover:
+  - F&F vs angel vs seed VC (what's the right round structure at pre-launch stage)
+  - Valuation expectations for a pre-launch Indian wellness DTC brand
+  - Cap table structure with eventual gynaecologist co-founder
+  - Indian wellness-focused investor list (Fireside Ventures, Sauce VC, Mensa, Matrix, Titan Capital, RPSG Capital Ventures, consumer-focused angels)
+  - Pitch deck creation from [[THE_EDIT_PROPOSAL_INDIA|the locked proposal]]
+  - Timing: raise pre- or post-gynaecologist-co-founder?
+  - What investors want to see at this stage
+- **Status:** captured for tomorrow.
+
+## 2026-04-17 — Manifesto locked + Entity decision reversed
 
 - **Brand manifesto LOCKED:** [[prenatal-brand-manifesto|"The wellness brand India was missing."]] — full paragraph in wiki. Aishu picked the "missing brand" framing over the "TTC is a team job" manifesto (superseded) and over "Together from the Start" (rejected).
 - **Entity reversal:** The Edit will NOT use [[lumen-marketing-company|LMC]] umbrella. Will incorporate as its own Pvt Ltd to protect LMC from cross-liability.
