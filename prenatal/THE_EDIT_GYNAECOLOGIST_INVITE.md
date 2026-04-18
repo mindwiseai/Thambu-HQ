@@ -36,7 +36,7 @@ His brand Mindwise (cognitive wellness, launching June 2026) has taken him throu
 
 ## 03. What we're building
 
-The Edit is a modern wellness brand for Indian couples and parents-to-be — across every stage of the family-building journey.
+The Edit is the answer to a wellness market that hasn't kept up with how modern Indian couples actually live. A modern brand for Indian couples and parents-to-be — across every stage of the family-building journey.
 
 **Three principles:**
 

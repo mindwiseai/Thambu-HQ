@@ -51,11 +51,13 @@ The Indian DTC wellness consumer is real and growing — but no prenatal/preconc
 
 ## 04. The Solution
 
-**The Edit is built for her.**
+**The Edit is the answer.**
 
-A modern, transparent, gynaecologist-co-formulated brand for Indian couples and parents-to-be — across every stage of the family-building journey.
+A wellness brand that hasn't kept up with how modern Indian couples actually live — until now.
 
-> Every ingredient traceable to a named source. Every dose backed by published science. Every formula co-designed with practicing gynaecologists. Built in India. Made for the moments that matter most.
+> Transparent ingredients. Gynaecologist-approved formulations. Honest claims backed by published science. Designed for every stage of building a family together — from preconception, where both partners matter, through pregnancy and the months after.
+>
+> Built in India. Made for them. Made because nothing else was.
 
 **Brand promise:** Only what matters. For the stage you're in.
 

@@ -13,11 +13,13 @@ supersedes: [prenatal-brand-manifesto-couples-equality]
 
 ## The manifesto
 
-**Core idea:** *The wellness brand India was missing.*
+**Core idea:** *Made for them. Made because nothing else was.*
 
-**Full paragraph:**
+**Full paragraph (LOCKED 2026-04-18):**
 
-> The Edit exists because something specific has been missing for Indian couples and parents-to-be: a modern, transparent, gynaecologist-co-formulated brand with every ingredient traceable to a named source, every dose backed by published science, and every formula designed for a specific stage of the family-building journey. Not imported. Not pharma-coded. Not opaque. Built in India, across preconception, pregnancy, and the months after.
+> The Edit is the answer to a wellness market that hasn't kept up with how modern Indian couples actually live. Transparent ingredients. Gynaecologist-approved formulations. Honest claims backed by published science. Designed for every stage of building a family together — from preconception, where both partners matter, through pregnancy and the months after. Built in India. Made for them. Made because nothing else was.
+
+**What this paragraph deliberately does NOT lead with:** gynaecologist co-formulation as the headline. While The Edit will have a gynaecologist co-founder, that credential is positioned as a supporting trust signal ("gynaecologist-approved formulations") — not the brand's reason for existing. The market doesn't need another doctor-fronted supplement; it needs a brand built around how modern Indian couples actually live.
 
 ## The defensible positioning
 
