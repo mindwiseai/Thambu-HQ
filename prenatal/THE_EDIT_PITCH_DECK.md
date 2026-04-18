@@ -7,7 +7,21 @@
 
 ---
 
-## 01. The Problem
+## 01. The Problem — Part 1
+
+**The modern Indian woman can no longer rely on food alone for nutrition.**
+
+- **The nuclear-family shift.** Joint-family kitchens with multiple cooks have given way to dual-income nuclear households. Three home-cooked, nutritionally complete meals a day — once the default — has become aspirational.
+- **Food adulteration is real and widespread.** Indian fruits, vegetables, dairy, and grains face documented, ongoing concerns: pesticide residues, heavy metal contamination, mislabeling, inconsistent micronutrient density. What you eat is not necessarily what you think you're eating.
+- **The micronutrient gap is documented.** Urban Indian diets are increasingly carbohydrate-heavy, lower in iron-rich greens, low in B-complex vitamins, almost devoid of DHA. Even "well-fed" women enter pregnancy nutritionally deficient on key markers.
+
+**For an Indian woman planning a family, supplementation isn't optional. It's foundational.**
+
+Which makes the next question critical: *what do you supplement with?*
+
+---
+
+## 02. The Problem — Part 2
 
 **What does an Indian woman take when she's planning a family?**
 
@@ -17,11 +31,11 @@ Today, her three real choices are:
 - **Imported wellness brands** (Ritual, Garden of Life, Pink Stork) — premium, but expensive, hard to access, no India context
 - **Ayurvedic options** (Himalaya, Patanjali) — traditional framework, opaque sourcing, no transparency
 
-**None of these were built for the modern Indian woman.**
+**None of these were built for the modern Indian woman — the one who knows she needs to supplement, but can't find anything she can trust.**
 
 ---
 
-## 02. The Insight — Why Now
+## 03. The Insight — Why Now
 
 The modern Indian woman has changed faster than the supplement market that's supposed to serve her.
 
@@ -35,7 +49,7 @@ The Indian DTC wellness consumer is real and growing — but no prenatal/preconc
 
 ---
 
-## 03. The Solution
+## 04. The Solution
 
 **The Edit is built for her.**
 
@@ -47,7 +61,7 @@ A modern, transparent, gynaecologist-co-formulated brand for Indian couples and 
 
 ---
 
-## 04. The Product
+## 05. The Product
 
 Three SKUs covering the full family-building journey:
 
@@ -64,7 +78,7 @@ Postpartum recovery + lactation support.
 
 ---
 
-## 05. Why The Edit Wins — The Competitive Gap
+## 06. Why The Edit Wins — The Competitive Gap
 
 **No Indian brand combines all seven of these. The Edit will.**
 
@@ -82,7 +96,7 @@ Postpartum recovery + lactation support.
 
 ---
 
-## 06. The Market Opportunity
+## 07. The Market Opportunity
 
 **India is the largest reproductive health market in the world that nobody is building intentionally for.**
 
@@ -96,7 +110,7 @@ Postpartum recovery + lactation support.
 
 ---
 
-## 07. Business Model
+## 08. Business Model
 
 **Premium DTC subscription. Long customer lifecycle. Couples-driven AOV.**
 
@@ -109,7 +123,7 @@ Postpartum recovery + lactation support.
 
 ---
 
-## 08. Go-to-Market
+## 09. Go-to-Market
 
 **Multi-channel acquisition, content-led trust building.**
 
@@ -123,7 +137,7 @@ Postpartum recovery + lactation support.
 
 ---
 
-## 09. Early Validation
+## 10. Early Validation
 
 *Where we are today (April 2026):*
 
@@ -138,7 +152,7 @@ Postpartum recovery + lactation support.
 
 ---
 
-## 10. The Team
+## 11. The Team
 
 ### Aishwarya Chandrasekaran — Founder & CEO
 Founded The Edit after personally experiencing the trust gap during her own family-building journey. Background in [to be filled]. The brand's voice and product vision.
@@ -154,7 +168,7 @@ Industry advisors with DTC and consumer brand experience.
 
 ---
 
-## 11. The Ask — Pre-Seed Round
+## 12. The Ask — Pre-Seed Round
 
 **Raising Rs.75–90L (~$90K–110K) at a [valuation TBD] pre-money valuation.**
 
@@ -180,7 +194,7 @@ Industry advisors with DTC and consumer brand experience.
 
 ---
 
-## 12. The Vision
+## 13. The Vision
 
 **The Edit is a women's lifecycle wellness platform — not a prenatal company.**
 
@@ -197,7 +211,7 @@ Year 3–5 expansion into postpartum recovery, perimenopause, menopausal transit
 
 ---
 
-## 13. Why Now. Why This Team. Why The Edit.
+## 14. Why Now. Why This Team. Why The Edit.
 
 **Why now:** The modern Indian DTC consumer exists, the regulatory framework (FSSAI FSDU) is clear, supply chain partners are mature, and no premium brand owns this space.
 

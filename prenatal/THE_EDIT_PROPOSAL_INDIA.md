@@ -13,6 +13,22 @@ The Edit exists because something specific has been missing for Indian couples a
 
 ---
 
+## Why Supplementation Isn't Optional Anymore
+
+Before talking about the supplement gap, there's a deeper truth worth naming: the modern Indian woman can no longer rely on food alone for the nutrition her body needs to plan a family, carry a child, or recover from birth.
+
+Three forces have converged:
+
+- **The nuclear-family shift.** Joint-family kitchens with multiple cooks preparing elaborate meals daily have given way to dual-income nuclear households where both partners work. Three home-cooked, nutritionally complete meals a day — once the default in Indian families — has become genuinely aspirational.
+- **Food adulteration is widespread and well-documented.** Indian fruits, vegetables, dairy, and grains face ongoing concerns about pesticide residues, heavy metal contamination, mislabeling, and inconsistent micronutrient density. What an Indian woman puts on her plate is no longer reliably what she thinks she's eating.
+- **The micronutrient gap in modern Indian diets is real.** Urban diets have shifted to be carbohydrate-heavy, lower in iron-rich greens, low in B-complex vitamins, and almost devoid of DHA. Even women with healthy lifestyles enter pregnancy nutritionally deficient on the markers that matter most for fetal development.
+
+**Supplementation isn't optional for the modern Indian woman planning a family. It's foundational.**
+
+Which makes the next question critical: what does she supplement with?
+
+---
+
 ## The Gap in the Market
 
 Indian-made prenatal and family-planning supplements do exist today. What *doesn't* exist is an Indian brand that combines all of the following:
