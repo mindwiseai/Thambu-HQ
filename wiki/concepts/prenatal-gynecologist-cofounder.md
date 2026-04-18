@@ -37,7 +37,7 @@ Position as "science-led company with medical professionals" — NOT "Dr. So-and
 
 ## Connections
 
-- [[aishwarya-chandrasekhar]] — will lead the co-founder search
+- [[aishwarya-chandrasekaran]] — will lead the co-founder search
 - [[prenatal-launch-roadmap]] — Step 0
 - [[prenatal-dtc-lifestyle-strategy]] — gynecologist feeds into lifestyle brand credibility
 - [[2026-04-13-prenatal-brand-strategy]] — source

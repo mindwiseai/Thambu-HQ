@@ -10,7 +10,7 @@ ingested: 2026-04-13
 
 # Prenatal Brand India Strategy
 
-Comprehensive strategy document compiled from [[aishwarya-chandrasekhar|Aishu's]] conversations with Claude. Covers market research, competitive analysis, regulatory framework, manufacturer evaluation, and launch roadmap for India's first transparency-led DTC prenatal supplement brand.
+Comprehensive strategy document compiled from [[aishwarya-chandrasekaran|Aishu's]] conversations with Claude. Covers market research, competitive analysis, regulatory framework, manufacturer evaluation, and launch roadmap for India's first transparency-led DTC prenatal supplement brand.
 
 ## Summary
 
@@ -28,7 +28,7 @@ The document captures the full strategic foundation for a prenatal/postnatal sup
 
 ## People mentioned
 
-- [[aishwarya-chandrasekhar]] — founder, compiled this research
+- [[aishwarya-chandrasekaran]] — founder, compiled this research
 - [[thambu]] — co-founder, experienced the trust gap personally during pregnancy
 
 ## Decisions

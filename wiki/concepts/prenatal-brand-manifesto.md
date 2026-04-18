@@ -47,7 +47,7 @@ These flow from the manifesto but are not the manifesto itself:
 - **Essentialism** — nothing in the bottle that hasn't earned its place
 - **Couples-inclusive (at preconception stage)** — couples bundle for Him + Her preconception products
 - **Lifecycle brand** — walks with customers from preconception through postnatal
-- **Founder-led credibility** — [[aishwarya-chandrasekhar|Aishu]] as founder, gynaecologist as co-founder
+- **Founder-led credibility** — [[aishwarya-chandrasekaran|Aishu]] as founder, gynaecologist as co-founder
 
 ## Short-form derivatives
 
@@ -70,7 +70,7 @@ The locked manifesto (above) captures why the brand exists in one paragraph, wor
 
 ## Connections
 
-- [[aishwarya-chandrasekhar]] — articulated the locked manifesto
+- [[aishwarya-chandrasekaran]] — articulated the locked manifesto
 - [[prenatal-brand-name-the-edit]] — the brand name this manifesto governs
 - [[prenatal-launch-architecture-scenario-d]] — launch plan that executes this manifesto
 - [[prenatal-brand-manifesto-couples-equality]] — superseded earlier version, preserved for reference

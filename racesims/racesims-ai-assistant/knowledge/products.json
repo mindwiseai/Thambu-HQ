@@ -1,1191 +1,266 @@
 {
-  "last_updated": "2026-04-13",
+  "last_updated": "2026-04-15",
   "currency": "INR",
-  "tax_note": "All MRP prices include 18% GST unless noted. Prices marked 'est.' are estimated from USD supplier pricing.",
-
-  "kits": [
+  "prices_include_18pct_gst": true,
+  "source_of_truth": "Shopify (racesims.in). If Shopify and this KB disagree, Shopify wins.",
+  "brand_strategy": {
+    "push": ["Conspit", "VNM"],
+    "comparison_only": ["Simagic"],
+    "opportunistic_stock": ["Moza R3", "Moza R5"],
+    "coming_soon_do_not_quote": ["Fanatec", "Playseat"],
+    "not_carried": ["Asetek SimSports", "SimGrade", "Sim-Lab"],
+    "note_to_bot": "Only actively sell Conspit and VNM. Simagic is comparison reference. Moza only when Shopify shows live stock. Everything else either coming soon or not carried."
+  },
+  "featured_bundles": [
     {
-      "name": "Rally Setup",
-      "tier": "entry",
-      "price_inr": 246500,
-      "price_note": "Gear only, excludes PC and monitors",
-      "description": "Entry-level complete sim rig targeting casual-to-serious hobbyists. Single-screen setup with rally-focused peripherals including sequential shifter and handbrake. Ideal for rally sim racing with Assetto Corsa, WRC, Dirt Rally.",
-      "components": [
-        { "name": "Ares 12Nm Wheelbase", "brand": "Conspit", "specs": "12Nm direct drive" },
-        { "name": "QR with Round Rim", "brand": "Conspit", "specs": "Quick release + round steering wheel rim" },
-        { "name": "Lite 2-Pedal Set", "brand": "VNM", "specs": "Load cell 2-pedal set" },
-        { "name": "Sequential / H-Pattern Shifter", "brand": "VNM", "specs": "Dual-mode shifter" },
-        { "name": "Handbrake V1.5", "brand": "VNM", "specs": "Load cell handbrake" },
-        { "name": "GT Cockpit", "brand": "RaceSims", "specs": "40x80/40x40 aluminium extrusion rig" },
-        { "name": "Integrated Monitor Stand", "brand": "RaceSims", "specs": "Single monitor support" },
-        { "name": "Recliner Seat", "brand": "RaceSims", "specs": "Racing recliner seat" }
-      ],
-      "ideal_for": "Rally sim racers, hobbyists stepping up from Logitech/Thrustmaster, WRC/Dirt Rally players",
-      "space_required": "Approx. 1.5m x 1.0m floor space"
+      "name": "Conspit Apex Bundle",
+      "price_inr": 127500,
+      "focus": "Entry Conspit",
+      "includes": "8Nm Ares Apex wheelbase + CPP Apex 2-pedal + 310 Apex rim",
+      "gear_only": true,
+      "note": "Does not include rig, seat, PC, or monitor"
     },
     {
-      "name": "Entry Kit (with PC)",
-      "tier": "entry",
-      "price_inr": 424918,
-      "price_note": "Includes sim gear, rig, PC (RTX 5070), and single ultrawide monitor. Price incl. 18% GST.",
-      "description": "Complete turnkey setup including gaming PC and single ultrawide monitor. 10Nm direct drive wheelbase with carbon formula wheel and 200kg load cell pedals. Ready to race out of the box.",
-      "components": [
-        { "name": "10Nm Direct Drive Wheelbase", "brand": "Conspit", "specs": "10Nm torque, direct drive" },
-        { "name": "Carbon Formula Wheel", "brand": "Conspit", "specs": "Formula-style carbon steering wheel" },
-        { "name": "200kg Load Cell Pedals", "brand": "Conspit", "specs": "2-pedal load cell set" },
-        { "name": "Sequential Shifter", "brand": "VNM", "specs": "Sequential shift mechanism" },
-        { "name": "Load Cell Handbrake", "brand": "VNM", "specs": "Load cell handbrake" },
-        { "name": "GT Cockpit", "brand": "RaceSims", "specs": "40x80/40x40 aluminium extrusion rig" },
-        { "name": "Recliner Seat", "brand": "RaceSims", "specs": "Racing recliner seat" },
-        { "name": "Gaming PC", "brand": "Custom Build", "specs": "AMD 9600x, RTX 5070, 32GB DDR5, 1TB NVMe" },
-        { "name": "Single Ultrawide Monitor", "brand": "Various", "specs": "34\" or 49\" ultrawide" }
-      ],
-      "ideal_for": "Serious hobbyists wanting a complete turnkey setup, first-time direct drive buyers",
-      "space_required": "Approx. 1.5m x 1.2m floor space"
+      "name": "Rally Bundle",
+      "price_inr": 231000,
+      "focus": "Rally",
+      "includes": "12Nm Ares + QR + H.OA hub + round wheel + CPP Lite 2-pedal hydraulic + H3 hydraulic handbrake",
+      "gear_only": true
     },
     {
-      "name": "Mid Kit (with PC)",
-      "tier": "mid",
-      "price_inr": 451350,
-      "price_note": "Includes sim gear, rig, PC, and single ultrawide monitor. Price incl. 18% GST.",
-      "description": "Mid-range complete setup with 12Nm direct drive wheelbase, carbon round wheel, and upgraded load cell pedals. Single ultrawide display for immersive racing.",
-      "components": [
-        { "name": "12Nm Direct Drive Wheelbase", "brand": "Conspit", "specs": "12Nm torque, direct drive" },
-        { "name": "Carbon Round Wheel", "brand": "Conspit", "specs": "Round-rim carbon steering wheel" },
-        { "name": "Mid Load Cell Pedals", "brand": "Conspit", "specs": "Load cell pedal set" },
-        { "name": "Sequential Shifter", "brand": "VNM", "specs": "Sequential shift mechanism" },
-        { "name": "Load Cell Handbrake", "brand": "VNM", "specs": "Load cell handbrake" },
-        { "name": "GT Cockpit", "brand": "RaceSims", "specs": "40x80/40x40 aluminium extrusion rig" },
-        { "name": "Recliner Seat", "brand": "RaceSims", "specs": "Racing recliner seat" },
-        { "name": "Gaming PC", "brand": "Custom Build", "specs": "AMD 9600x/9700x, RTX 5070 Ti, 32GB DDR5, 1TB NVMe" },
-        { "name": "Single Ultrawide Monitor", "brand": "Various", "specs": "34\" or 49\" ultrawide" }
-      ],
-      "ideal_for": "Experienced sim racers wanting better force feedback and pedal feel, GT and formula racing",
-      "space_required": "Approx. 1.5m x 1.2m floor space"
+      "name": "Formula Bundle",
+      "price_inr": 220000,
+      "focus": "Formula",
+      "includes": "20Nm Ares Platinum + QR + 290GP formula wheel + CPP Lite pedals",
+      "gear_only": true
     },
     {
-      "name": "Pro Kit (with PC, Single Screen)",
-      "tier": "pro",
-      "price_inr": 550480,
-      "price_note": "Includes sim gear, rig, PC, and single ultrawide monitor. Price incl. 18% GST.",
-      "description": "Professional-grade setup with 18Nm direct drive wheelbase and premium peripherals. Single ultrawide display. Designed for competitive sim racers and professional driver training.",
-      "components": [
-        { "name": "Ares Platinum 18Nm Wheelbase", "brand": "Conspit", "specs": "18Nm direct drive, platinum series" },
-        { "name": "Carbon Round Wheel", "brand": "Conspit", "specs": "Premium round-rim carbon steering wheel" },
-        { "name": "Pro Load Cell Pedals", "brand": "Conspit", "specs": "CCP EVO series, hydraulic load cell" },
-        { "name": "Sequential Shifter", "brand": "VNM", "specs": "SEQ Shifter V2" },
-        { "name": "Load Cell Handbrake", "brand": "VNM", "specs": "Load cell handbrake" },
-        { "name": "GT Cockpit", "brand": "RaceSims", "specs": "40x80/40x40 aluminium extrusion rig" },
-        { "name": "Recliner Seat", "brand": "RaceSims", "specs": "Racing recliner seat" },
-        { "name": "Gaming PC", "brand": "Custom Build", "specs": "AMD 9700x, RTX 5070 Ti, 32GB DDR5, 1TB NVMe" },
-        { "name": "Single Ultrawide Monitor", "brand": "Various", "specs": "49\" ultrawide" }
-      ],
-      "ideal_for": "Competitive sim racers, aspiring professional drivers, driver training programs",
-      "space_required": "Approx. 1.5m x 1.2m floor space"
-    },
-    {
-      "name": "Pro Triple Screen Kit (with PC)",
-      "tier": "pro",
-      "price_inr": 630318,
-      "price_note": "Includes sim gear, rig, PC, and triple 32\" monitors. Price incl. 18% GST.",
-      "description": "Top-tier non-motion setup with Simagic Alpha wheelbase, SimGrade pedals, and triple 32\" 1440p monitors for maximum FOV immersion. The choice for serious competitive sim racers.",
-      "components": [
-        { "name": "Alpha Wheelbase", "brand": "Simagic", "specs": "15Nm+ direct drive" },
-        { "name": "Premium Steering Wheel", "brand": "Simagic", "specs": "Formula or GT wheel" },
-        { "name": "2-Pedal Set", "brand": "SimGrade", "specs": "Premium load cell pedals" },
-        { "name": "Sequential Shifter", "brand": "VNM", "specs": "SEQ Shifter V2" },
-        { "name": "Load Cell Handbrake", "brand": "VNM", "specs": "Load cell handbrake" },
-        { "name": "GT Cockpit", "brand": "RaceSims", "specs": "40x80/40x40 aluminium extrusion rig" },
-        { "name": "Triple Monitor Stand", "brand": "RaceSims", "specs": "40x80 profile, 3-arm design" },
-        { "name": "Racing Seat", "brand": "RaceSims", "specs": "Fixed back or recliner" },
-        { "name": "Gaming PC", "brand": "Custom Build", "specs": "AMD 9700x/9800X3D, RTX 5070 Ti/5080, 32GB DDR5" },
-        { "name": "Triple Monitors", "brand": "Gigabyte", "specs": "3x 32\" GS32QC 1440p 170Hz" }
-      ],
-      "ideal_for": "Competitive esports racers, professional driver training, premium home setup",
-      "space_required": "Approx. 2.0m x 1.5m floor space (wider for triple screens)"
-    },
-    {
-      "name": "Formula Cockpit with Motion",
-      "tier": "motion",
-      "price_inr": 1100000,
-      "price_note": "Starting from Rs.11L+. Final price depends on configuration. Gear + motion platform, PC separate.",
-      "description": "The ultimate sim racing experience. Full formula cockpit with 3DOF motion platform using 4x actuators. Designed for racing academies, professional driver training, and B2B entertainment venues. Provides real g-force simulation for braking, acceleration, and cornering.",
-      "components": [
-        { "name": "DD Xtreme 32Nm Wheelbase", "brand": "VNM", "specs": "32Nm direct drive, highest torque available" },
-        { "name": "GT Steering Wheel", "brand": "VNM", "specs": "Premium GT wheel" },
-        { "name": "3-Pedal Set", "brand": "VNM", "specs": "Full 3-pedal load cell set" },
-        { "name": "SEQ Shifter V2", "brand": "VNM", "specs": "Sequential shifter" },
-        { "name": "Handbrake V1.5", "brand": "VNM", "specs": "Load cell handbrake" },
-        { "name": "3DOF Motion Platform (4x Actuator 150)", "brand": "VNM", "specs": "4-driver 3DOF motion, 150mm stroke actuators" },
-        { "name": "Formula Cockpit", "brand": "RaceSims", "specs": "Full aluminium extrusion cockpit with formula seating" },
-        { "name": "Triple Monitor Stand", "brand": "RaceSims", "specs": "40x80 profile, 3-arm" }
-      ],
-      "ideal_for": "Racing academies, professional driver training, B2B entertainment venues (airports, malls), high-end home setups",
-      "space_required": "Approx. 2.5m x 2.0m floor space (motion platform requires extra clearance)"
-    },
-    {
-      "name": "Araya Airport Simulator (Config 1 - Ultrawide)",
-      "tier": "pro",
-      "price_inr": 696500,
-      "price_note": "B2B pricing per unit. Fully enclosed commercial simulator.",
-      "description": "Commercial-grade enclosed airport lounge simulator with 49\" ultrawide display. Modular cladding wrap-ready for branding, kiosk mode with auto-reset, remote management, zero staff intervention. Software: Assetto Corsa (commercial licence).",
-      "components": [
-        { "name": "Ares 12Nm Wheelbase", "brand": "Conspit", "specs": "12Nm direct drive" },
-        { "name": "300GT Steering Wheel", "brand": "Conspit", "specs": "GT-style steering wheel" },
-        { "name": "CCP Apex 2-Pedal", "brand": "Conspit", "specs": "Load cell 2-pedal set" },
-        { "name": "Pro Cockpit", "brand": "RaceSims", "specs": "Enclosed commercial cockpit with cladding" },
-        { "name": "Exterior Cladding", "brand": "RaceSims", "specs": "Modular wrap-ready branding panels" },
-        { "name": "Monitor Stand", "brand": "RaceSims", "specs": "Integrated monitor mount" },
-        { "name": "Racing Seat", "brand": "RaceSims", "specs": "Commercial-grade fixed back seat" },
-        { "name": "Gaming PC", "brand": "Custom Build", "specs": "High-spec commercial PC" },
-        { "name": "49\" Ultrawide Monitor", "brand": "Gigabyte", "specs": "49\" ultrawide display" }
-      ],
-      "ideal_for": "Airport lounges, shopping malls, entertainment venues, brand activation events",
-      "space_required": "Fully enclosed unit, approx. 2.0m x 1.5m x 2.0m"
-    },
-    {
-      "name": "Araya Airport Simulator (Config 2 - Triple Screen)",
-      "tier": "pro",
-      "price_inr": 686500,
-      "price_note": "B2B pricing per unit. Fully enclosed commercial simulator.",
-      "description": "Commercial-grade enclosed airport lounge simulator with triple 32\" displays and bezel-free kit. Same commercial features as Config 1 but with wider field of view.",
-      "components": [
-        { "name": "Ares 12Nm Wheelbase", "brand": "Conspit", "specs": "12Nm direct drive" },
-        { "name": "300GT Steering Wheel", "brand": "Conspit", "specs": "GT-style steering wheel" },
-        { "name": "CCP Apex 2-Pedal", "brand": "Conspit", "specs": "Load cell 2-pedal set" },
-        { "name": "Pro Cockpit", "brand": "RaceSims", "specs": "Enclosed commercial cockpit with cladding" },
-        { "name": "Exterior Cladding", "brand": "RaceSims", "specs": "Modular wrap-ready branding panels" },
-        { "name": "Monitor Stand", "brand": "RaceSims", "specs": "Triple monitor mount" },
-        { "name": "Racing Seat", "brand": "RaceSims", "specs": "Commercial-grade fixed back seat" },
-        { "name": "Gaming PC", "brand": "Custom Build", "specs": "High-spec commercial PC" },
-        { "name": "Triple 32\" Monitors + Bezel-Free Kit", "brand": "Various", "specs": "3x 32\" 1440p + bezel-free kit" }
-      ],
-      "ideal_for": "Airport lounges, shopping malls, entertainment venues, brand activation events",
-      "space_required": "Fully enclosed unit, approx. 2.0m x 1.5m x 2.0m"
+      "name": "GT Bundle",
+      "price_inr": 230000,
+      "focus": "GT",
+      "includes": "20Nm Ares Platinum + H.OA hub with 1 rim + CPP EVO pedals",
+      "gear_only": true
     }
   ],
-
-  "individual_components": [
-    {
-      "name": "Ares 10Nm Wheelbase",
-      "brand": "Conspit",
-      "category": "wheelbase",
-      "price_inr": 69950,
-      "specs": "10Nm direct drive wheelbase. Entry-level Conspit DD."
-    },
-    {
-      "name": "Ares 12Nm Wheelbase",
-      "brand": "Conspit",
-      "category": "wheelbase",
-      "price_inr": 65000,
-      "specs": "12Nm direct drive wheelbase. Used in Araya Airport builds and Rally kits."
-    },
-    {
-      "name": "Ares Platinum 18Nm Wheelbase",
-      "brand": "Conspit",
-      "category": "wheelbase",
-      "price_inr": 87950,
-      "specs": "18Nm direct drive wheelbase. Flagship Conspit DD. Used in ARKA quote and Pro kits."
-    },
-    {
-      "name": "Ares 20Nm Wheelbase",
-      "brand": "Conspit",
-      "category": "wheelbase",
-      "price_inr": 0,
-      "price_note": "price_on_request",
-      "specs": "20Nm direct drive wheelbase. Top-end Conspit model. Product images on website."
-    },
-    {
-      "name": "Ares Apex 8Nm Wheelbase",
-      "brand": "Conspit",
-      "category": "wheelbase",
-      "price_inr": 0,
-      "price_note": "price_on_request",
-      "specs": "8Nm direct drive. Compact entry-level with desk clamp option. Bundle available."
-    },
-    {
-      "name": "Round Rim Steering Wheel",
-      "brand": "Conspit",
-      "category": "wheel",
-      "price_inr": 7500,
-      "specs": "Round rim with button box. Works with Conspit wheelbases via QR."
-    },
-    {
-      "name": "300GT Steering Wheel",
-      "brand": "Conspit",
-      "category": "wheel",
-      "price_inr": 53950,
-      "specs": "GT-style steering wheel. Used in Araya Airport builds. Professional product shots available."
-    },
-    {
-      "name": "H.AO Hub with Rim",
-      "brand": "Conspit",
-      "category": "wheel",
-      "price_inr": 57950,
-      "specs": "Hub unit with display and steering rim. Multiple rim options. USB connectivity."
-    },
-    {
-      "name": "290GP Formula Wheel",
-      "brand": "Conspit",
-      "category": "wheel",
-      "price_inr": 79950,
-      "specs": "Formula-style racing wheel. 1,337-word product description on racesims.in. CE/FCC/ROHS certified."
-    },
-    {
-      "name": "MAX01 Steering Wheel",
-      "brand": "Conspit",
-      "category": "wheel",
-      "price_inr": 84950,
-      "specs": "Premium GT/formula wheel with advanced button layout and display."
-    },
-    {
-      "name": "PW1 Formula Wheel",
-      "brand": "Conspit",
-      "category": "wheel",
-      "price_inr": 210000,
-      "specs": "Flagship formula wheel. Top-tier Conspit steering product."
-    },
-    {
-      "name": "CDP Quick Release",
-      "brand": "Conspit",
-      "category": "accessory",
-      "price_inr": 7500,
-      "specs": "Quick release adapter for Conspit wheelbases. Required for wheel changes."
-    },
-    {
-      "name": "CCP Lite-2 Pedals",
-      "brand": "Conspit",
-      "category": "pedals",
-      "price_inr": 61500,
-      "specs": "2-pedal load cell set (brake + throttle). Entry Conspit pedal."
-    },
-    {
-      "name": "CCP Lite-3 Pedals",
-      "brand": "Conspit",
-      "category": "pedals",
-      "price_inr": 74550,
-      "specs": "3-pedal load cell set (brake + throttle + clutch). Entry Conspit pedal with clutch."
-    },
-    {
-      "name": "CCP EVO-2 Pedals",
-      "brand": "Conspit",
-      "category": "pedals",
-      "price_inr": 85500,
-      "specs": "2-pedal hydraulic load cell set. Premium Conspit pedal. CE/FCC/ROHS certified."
-    },
-    {
-      "name": "CCP EVO-3 Pedals",
-      "brand": "Conspit",
-      "category": "pedals",
-      "price_inr": 96500,
-      "specs": "3-pedal hydraulic load cell set. Used in ARKA quote (Rs.76,680 at 20% discount). CE/FCC/ROHS certified."
-    },
-    {
-      "name": "CCP Apex 2-Pedal",
-      "brand": "Conspit",
-      "category": "pedals",
-      "price_inr": 38000,
-      "specs": "2-pedal load cell set. Used in Araya Airport builds. Budget Conspit pedal option."
-    },
-    {
-      "name": "H3 Handbrake",
-      "brand": "Conspit",
-      "category": "accessory",
-      "price_inr": 35436,
-      "price_note": "Price from ARKA quote at 20% discount. MRP higher.",
-      "specs": "Load cell handbrake. CE/FCC/ROHS certified."
-    },
-    {
-      "name": "CSD Dashboard",
-      "brand": "Conspit",
-      "category": "display",
-      "price_inr": 0,
-      "price_note": "price_on_request",
-      "specs": "Sim racing dashboard display. CE/FCC/ROHS certified. Brochure on file."
-    },
-    {
-      "name": "FP Lite",
-      "brand": "Conspit",
-      "category": "pedals",
-      "price_inr": 0,
-      "price_note": "price_on_request",
-      "specs": "Lite pedal variant. Marketing brochure on file."
-    },
-    {
-      "name": "Formula Cockpit",
-      "brand": "Conspit",
-      "category": "cockpit",
-      "price_inr": 0,
-      "price_note": "price_on_request",
-      "specs": "Conspit-branded formula cockpit frame. Marketing brochure on file."
-    },
-    {
-      "name": "Halo 270",
-      "brand": "Conspit",
-      "category": "wheel",
-      "price_inr": 0,
-      "price_note": "price_on_request",
-      "specs": "Steering wheel variant. Marketing brochure on file."
-    },
-    {
-      "name": "GTB Kids Rig",
-      "brand": "Conspit",
-      "category": "cockpit",
-      "price_inr": 0,
-      "price_note": "price_on_request",
-      "specs": "Compact kids sim racing rig. Product images on website."
-    },
-    {
-      "name": "DD Xtreme 32Nm Wheelbase",
-      "brand": "VNM",
-      "category": "wheelbase",
-      "price_inr": 106000,
-      "price_note": "Estimated from USD $1,280 at ~83 INR/USD",
-      "specs": "32Nm direct drive. Highest torque wheelbase in lineup. Used in motion kits."
-    },
-    {
-      "name": "DD Supreme 25Nm Wheelbase",
-      "brand": "VNM",
-      "category": "wheelbase",
-      "price_inr": 83000,
-      "price_note": "Estimated from USD $1,000",
-      "specs": "25Nm direct drive wheelbase."
-    },
-    {
-      "name": "DD Elite 18Nm Wheelbase",
-      "brand": "VNM",
-      "category": "wheelbase",
-      "price_inr": 61000,
-      "price_note": "Estimated from USD $740",
-      "specs": "18Nm direct drive wheelbase."
-    },
-    {
-      "name": "DD Premier 13Nm Wheelbase",
-      "brand": "VNM",
-      "category": "wheelbase",
-      "price_inr": 48000,
-      "price_note": "Estimated from USD $580",
-      "specs": "13Nm direct drive wheelbase. Entry VNM DD."
-    },
-    {
-      "name": "GT Steering Wheel",
-      "brand": "VNM",
-      "category": "wheel",
-      "price_inr": 37350,
-      "price_note": "Estimated from USD $450",
-      "specs": "GT-style steering wheel for VNM wheelbases."
-    },
-    {
-      "name": "3-Pedal Set",
-      "brand": "VNM",
-      "category": "pedals",
-      "price_inr": 45650,
-      "price_note": "Estimated from USD $550",
-      "specs": "Full 3-pedal load cell set (brake, throttle, clutch)."
-    },
-    {
-      "name": "2-Pedal Set",
-      "brand": "VNM",
-      "category": "pedals",
-      "price_inr": 37350,
-      "price_note": "Estimated from USD $450",
-      "specs": "2-pedal load cell set (brake, throttle)."
-    },
-    {
-      "name": "Lite 3-Pedal Set",
-      "brand": "VNM",
-      "category": "pedals",
-      "price_inr": 30710,
-      "price_note": "Estimated from USD $370",
-      "specs": "Lite 3-pedal load cell set. Budget VNM pedal option."
-    },
-    {
-      "name": "Lite 2-Pedal Set",
-      "brand": "VNM",
-      "category": "pedals",
-      "price_inr": 24900,
-      "price_note": "Estimated from USD $300. Used in Rally Setup kit at Rs.45,000 (post-import pricing)",
-      "specs": "Lite 2-pedal load cell set. Budget VNM pedal option."
-    },
-    {
-      "name": "Shifter Basic Bundle",
-      "brand": "VNM",
-      "category": "accessory",
-      "price_inr": 20667,
-      "price_note": "Estimated from USD $249",
-      "specs": "H-pattern and sequential shifter bundle."
-    },
-    {
-      "name": "SEQ Shifter V2",
-      "brand": "VNM",
-      "category": "accessory",
-      "price_inr": 24817,
-      "price_note": "Estimated from USD $299",
-      "specs": "Sequential shifter V2. Upgraded mechanism."
-    },
-    {
-      "name": "Handbrake V1.5",
-      "brand": "VNM",
-      "category": "accessory",
-      "price_inr": 19837,
-      "price_note": "Estimated from USD $239. Rally kit prices at Rs.37,500 (post-import)",
-      "specs": "Load cell handbrake V1.5."
-    },
-    {
-      "name": "Button Box V1",
-      "brand": "VNM",
-      "category": "accessory",
-      "price_inr": 10790,
-      "price_note": "Estimated from USD $130",
-      "specs": "Button box with rotary encoders and toggle switches."
-    },
-    {
-      "name": "Damper Kit",
-      "brand": "VNM",
-      "category": "accessory",
-      "price_inr": 12450,
-      "price_note": "Estimated from USD $150",
-      "specs": "Pedal damper upgrade kit."
-    },
-    {
-      "name": "3DOF Motion Platform (4x Actuator 100)",
-      "brand": "VNM",
-      "category": "motion",
-      "price_inr": 236550,
-      "price_note": "Estimated from USD $2,850. 3-driver system.",
-      "specs": "3DOF motion with 4x 100mm stroke actuators. 3-driver configuration."
-    },
-    {
-      "name": "3DOF Motion Platform (4x Actuator 150)",
-      "brand": "VNM",
-      "category": "motion",
-      "price_inr": 307100,
-      "price_note": "Estimated from USD $3,700. 4-driver system.",
-      "specs": "3DOF motion with 4x 150mm stroke actuators. 4-driver configuration. Used in active order."
-    },
-    {
-      "name": "3DOF + Surge + Traction Loss (6-driver)",
-      "brand": "VNM",
-      "category": "motion",
-      "price_inr": 550000,
-      "price_note": "Estimated from USD $6,600-6,700. Full 6-driver system.",
-      "specs": "Full 6-driver motion: 3DOF + surge + traction loss simulation. Ultimate realism."
-    },
-    {
-      "name": "4080 Aluminium Frame",
-      "brand": "VNM",
-      "category": "cockpit",
-      "price_inr": 24485,
-      "price_note": "Estimated from USD $295",
-      "specs": "40x80 aluminium extrusion cockpit frame."
-    },
-    {
-      "name": "Single Monitor Stand",
-      "brand": "VNM",
-      "category": "cockpit",
-      "price_inr": 15604,
-      "price_note": "Estimated from USD $188",
-      "specs": "Single monitor mount stand for VNM rigs."
-    },
-    {
-      "name": "Triple Monitor Stand",
-      "brand": "VNM",
-      "category": "cockpit",
-      "price_inr": 23489,
-      "price_note": "Estimated from USD $283",
-      "specs": "Triple monitor mount stand for VNM rigs."
-    },
-    {
-      "name": "R3 Wheelbase (PC Only)",
-      "brand": "Moza",
-      "category": "wheelbase",
-      "price_inr": 0,
-      "price_note": "price_on_request",
-      "specs": "Entry-level Moza direct drive. PC only. Product images on website."
-    },
-    {
-      "name": "R5 Bundle",
-      "brand": "Moza",
-      "category": "wheelbase",
-      "price_inr": 0,
-      "price_note": "price_on_request",
-      "specs": "Moza R5 wheelbase bundle with SRP Lite pedals and steering wheel. Entry-level kit."
-    },
-    {
-      "name": "R9 V2 Wheelbase",
-      "brand": "Moza",
-      "category": "wheelbase",
-      "price_inr": 36229,
-      "price_note": "Landed cost from VRH purchase invoice. MRP likely higher.",
-      "specs": "Mid-range Moza direct drive wheelbase V2. Product images on website."
-    },
-    {
-      "name": "SRP Pedals with Clutch",
-      "brand": "Moza",
-      "category": "pedals",
-      "price_inr": 17712,
-      "price_note": "Landed cost from VRH purchase. MRP likely higher.",
-      "specs": "Moza SRP pedals with clutch pedal add-on."
-    },
-    {
-      "name": "CSV2 Steering Wheel",
-      "brand": "Moza",
-      "category": "wheel",
-      "price_inr": 26567,
-      "price_note": "Landed cost from VRH purchase. MRP likely higher.",
-      "specs": "Moza CSV2 steering wheel."
-    },
-    {
-      "name": "HBP Handbrake",
-      "brand": "Moza",
-      "category": "accessory",
-      "price_inr": 8855,
-      "price_note": "Landed cost from VRH purchase. MRP likely higher.",
-      "specs": "Moza handbrake. Product images on website."
-    },
-    {
-      "name": "HGP H-Pattern Shifter",
-      "brand": "Moza",
-      "category": "accessory",
-      "price_inr": 0,
-      "price_note": "price_on_request",
-      "specs": "Moza H-pattern gear shifter. Product images on website."
-    },
-    {
-      "name": "SGP Sequential Shifter",
-      "brand": "Moza",
-      "category": "accessory",
-      "price_inr": 12075,
-      "price_note": "Landed cost from VRH purchase. MRP likely higher.",
-      "specs": "Moza sequential gear shifter. Product images on website."
-    },
-    {
-      "name": "AlphaM-BW 10Nm Wheelbase",
-      "brand": "Simagic",
-      "category": "wheelbase",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $399, EXW USD $299.",
-      "specs": "10Nm direct drive. Entry Simagic. South India exclusive via RaceSims."
-    },
-    {
-      "name": "Alpha-BW 15Nm Wheelbase",
-      "brand": "Simagic",
-      "category": "wheelbase",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $649, EXW USD $369.",
-      "specs": "15Nm direct drive. Mid-range Simagic. Used in Pro Triple Screen kit."
-    },
-    {
-      "name": "AlphaU-BW 23Nm Wheelbase",
-      "brand": "Simagic",
-      "category": "wheelbase",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $899, EXW USD $519.",
-      "specs": "23Nm direct drive. Flagship Simagic wheelbase."
-    },
-    {
-      "name": "Alpha EVO Sport 9Nm",
-      "brand": "Simagic",
-      "category": "wheelbase",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $399, EXW USD $279.",
-      "specs": "9Nm direct drive. Entry Alpha EVO line."
-    },
-    {
-      "name": "Alpha EVO 12Nm",
-      "brand": "Simagic",
-      "category": "wheelbase",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $549, EXW USD $329.",
-      "specs": "12Nm direct drive. Mid Alpha EVO line."
-    },
-    {
-      "name": "Alpha EVO Pro 18Nm",
-      "brand": "Simagic",
-      "category": "wheelbase",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $699, EXW USD $439.",
-      "specs": "18Nm direct drive. Flagship Alpha EVO."
-    },
-    {
-      "name": "GT NEO Wheel",
-      "brand": "Simagic",
-      "category": "wheel",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $269, EXW USD $179.",
-      "specs": "GT-style steering wheel."
-    },
-    {
-      "name": "GTS Wheel (Leather/Suede)",
-      "brand": "Simagic",
-      "category": "wheel",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $289, EXW USD $189.",
-      "specs": "GTS leather or suede steering wheel."
-    },
-    {
-      "name": "FX Pro Wheel",
-      "brand": "Simagic",
-      "category": "wheel",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $549, EXW USD $299.",
-      "specs": "Formula-style premium wheel with display."
-    },
-    {
-      "name": "GT Pro Hub",
-      "brand": "Simagic",
-      "category": "wheel",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $339, EXW USD $209.",
-      "specs": "GT wheel hub for rim swapping."
-    },
-    {
-      "name": "P500 2-Pedal Set",
-      "brand": "Simagic",
-      "category": "pedals",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $149, EXW USD $89.",
-      "specs": "Entry-level 2-pedal set. Product images on file."
-    },
-    {
-      "name": "P1000 3-Pedal Set",
-      "brand": "Simagic",
-      "category": "pedals",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $469, EXW USD $299.",
-      "specs": "Load cell 3-pedal set."
-    },
-    {
-      "name": "P1000i Inverted Pedals",
-      "brand": "Simagic",
-      "category": "pedals",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $539, EXW USD $379.",
-      "specs": "Inverted mount 3-pedal load cell set."
-    },
-    {
-      "name": "P1000-RS Hydraulic Pedals",
-      "brand": "Simagic",
-      "category": "pedals",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $579, EXW USD $339.",
-      "specs": "Hydraulic 3-pedal set."
-    },
-    {
-      "name": "P2000-S200R Pedals",
-      "brand": "Simagic",
-      "category": "pedals",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $689, EXW USD $379.",
-      "specs": "Premium pedal set with S200R configuration."
-    },
-    {
-      "name": "Invicta Wheelbase",
-      "brand": "Asetek",
-      "category": "wheelbase",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $1,299.99. Tier 2 reseller: $943.54.",
-      "specs": "Flagship Asetek direct drive wheelbase. Recommended for professional driver training (Ajit Kumar Racing proposal)."
-    },
-    {
-      "name": "Forte Wheelbase",
-      "brand": "Asetek",
-      "category": "wheelbase",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $899.99. Tier 2 reseller: $702.85.",
-      "specs": "Mid-range Asetek direct drive wheelbase."
-    },
-    {
-      "name": "La Prima Wheelbase",
-      "brand": "Asetek",
-      "category": "wheelbase",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $679.99.",
-      "specs": "Entry Asetek direct drive wheelbase."
-    },
-    {
-      "name": "Invicta Pedals",
-      "brand": "Asetek",
-      "category": "pedals",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $759.99-799.99.",
-      "specs": "Flagship Asetek pedals. PS and S Series variants."
-    },
-    {
-      "name": "Forte Pedals",
-      "brand": "Asetek",
-      "category": "pedals",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $459.99-499.99.",
-      "specs": "Mid-range Asetek pedals. PS and S Series variants."
-    },
-    {
-      "name": "La Prima Pedals",
-      "brand": "Asetek",
-      "category": "pedals",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $334.99.",
-      "specs": "Entry Asetek pedals."
-    },
-    {
-      "name": "Forte Formula Wheel",
-      "brand": "Asetek",
-      "category": "wheel",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $544.99. Best margin at 39.1%.",
-      "specs": "Asetek Forte formula-style steering wheel."
-    },
-    {
-      "name": "La Prima Formula Wheel",
-      "brand": "Asetek",
-      "category": "wheel",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $334.99.",
-      "specs": "Entry Asetek formula-style steering wheel."
-    },
-    {
-      "name": "Invicta Formula Button Box",
-      "brand": "Asetek",
-      "category": "wheel",
-      "price_inr": 0,
-      "price_note": "price_on_request. MSRP USD $1,249.99. 30% margin at Tier 2.",
-      "specs": "Flagship Asetek formula wheel with full button box."
-    },
-    {
-      "name": "CSL DD 5Nm + QR2L",
-      "brand": "Fanatec",
-      "category": "wheelbase",
-      "price_inr": 72199,
-      "price_note": "MRP incl. GST. MAP: Rs.64,999. Via Techxhub.",
-      "specs": "5Nm direct drive with QR2 Lite. Entry Fanatec DD."
-    },
-    {
-      "name": "ClubSport DD+ 15Nm",
-      "brand": "Fanatec",
-      "category": "wheelbase",
-      "price_inr": 205999,
-      "price_note": "MRP incl. GST. MAP: Rs.1,84,999. Via Techxhub.",
-      "specs": "15Nm direct drive. Premium Fanatec DD."
-    },
-    {
-      "name": "GT DD Pro Bundle (5Nm + wheel + pedal)",
-      "brand": "Fanatec",
-      "category": "wheelbase",
-      "price_inr": 144499,
-      "price_note": "MRP incl. GST. MAP: Rs.1,29,999. Bundle. Via Techxhub.",
-      "specs": "Complete entry bundle: 5Nm DD + GT wheel + CSL pedals."
-    },
-    {
-      "name": "CSL Pedals",
-      "brand": "Fanatec",
-      "category": "pedals",
-      "price_inr": 20999,
-      "price_note": "MRP incl. GST. MAP: Rs.18,899. Via Techxhub.",
-      "specs": "Entry Fanatec pedals."
-    },
-    {
-      "name": "CSL Elite Pedals V2",
-      "brand": "Fanatec",
-      "category": "pedals",
-      "price_inr": 61199,
-      "price_note": "MRP incl. GST. MAP: Rs.54,999. Via Techxhub.",
-      "specs": "Mid-range Fanatec pedals with load cell brake."
-    },
-    {
-      "name": "ClubSport Pedals V3",
-      "brand": "Fanatec",
-      "category": "pedals",
-      "price_inr": 66699,
-      "price_note": "MRP incl. GST. MAP: Rs.59,999. Via Techxhub.",
-      "specs": "Premium Fanatec load cell 3-pedal set."
-    },
-    {
-      "name": "CSL Steering Wheel P1 V2",
-      "brand": "Fanatec",
-      "category": "wheel",
-      "price_inr": 27999,
-      "price_note": "MRP incl. GST. MAP: Rs.24,999. Via Techxhub.",
-      "specs": "Entry Fanatec steering wheel with button box."
-    },
-    {
-      "name": "ClubSport Cockpit",
-      "brand": "Fanatec",
-      "category": "cockpit",
-      "price_inr": 150000,
-      "price_note": "Approx. MRP incl. GST. MAP: ~Rs.1,35,000. Via Techxhub.",
-      "specs": "Aluminium cockpit frame. Black and white variants."
-    },
-    {
-      "name": "Playseat Challenge Black",
-      "brand": "Playseat",
-      "category": "cockpit",
-      "price_inr": 38999,
-      "price_note": "MRP incl. GST. MAP: Rs.34,999. Via Techxhub.",
-      "specs": "Foldable racing cockpit. Entry-level, space-efficient."
-    },
-    {
-      "name": "Playseat Evolution PRO",
-      "brand": "Playseat",
-      "category": "cockpit",
-      "price_inr": 60999,
-      "price_note": "MRP incl. GST. MAP: Rs.54,999. Via Techxhub.",
-      "specs": "Full racing cockpit with professional-grade frame."
-    },
-    {
-      "name": "Playseat Trophy",
-      "brand": "Playseat",
-      "category": "cockpit",
-      "price_inr": 99999,
-      "price_note": "MRP incl. GST. MAP: Rs.89,999. Via Techxhub.",
-      "specs": "Premium open-wheel cockpit."
-    },
-    {
-      "name": "Playseat Sensation PRO",
-      "brand": "Playseat",
-      "category": "cockpit",
-      "price_inr": 199999,
-      "price_note": "MRP incl. GST. MAP: Rs.1,79,999. Via Techxhub.",
-      "specs": "Ultra-premium enclosed cockpit."
-    },
-    {
-      "name": "Playseat Formula Intelligence",
-      "brand": "Playseat",
-      "category": "cockpit",
-      "price_inr": 388889,
-      "price_note": "MRP incl. GST. MAP: Rs.3,49,999. Via Techxhub.",
-      "specs": "Top-of-line Playseat formula cockpit with actuator integration."
-    },
-    {
-      "name": "VX PRO LIGHT Pedals",
-      "brand": "SimGrade",
-      "category": "pedals",
-      "price_inr": 0,
-      "price_note": "price_on_request",
-      "specs": "Premium load cell pedals. Product images on file. Used in Pro Triple Screen kit."
-    },
-    {
-      "name": "GT Pro Rig Frame",
-      "brand": "RaceSims",
-      "category": "cockpit",
-      "price_inr": 38566,
-      "price_note": "MRP incl. 18% GST. BOM cost Rs.14,620. Margin ~23.55%.",
-      "specs": "40x80/40x40 aluminium extrusion cockpit frame. Modular sub-assemblies: base, wheelbase tower, under-seat, pedal mount, seat mount. Packed in carton box."
-    },
-    {
-      "name": "GT Pro Rig Frame (New Rig Working variant)",
-      "brand": "RaceSims",
-      "category": "cockpit",
-      "price_inr": 44203,
-      "price_note": "MRP incl. GST. Uses higher-rate aluminium profiles.",
-      "specs": "Same design as GT Pro Rig but with premium aluminium profiles (Rs.2,000/m for 40x80 vs Rs.1,000/m). Upgraded wheel deck."
-    },
-    {
-      "name": "Single Monitor Stand",
-      "brand": "RaceSims",
-      "category": "cockpit",
-      "price_inr": 0,
-      "price_note": "price_on_request. Included in kit pricing.",
-      "specs": "40x80 profile construction. 2x 1200mm + 1x 850mm + 2x 580mm profiles. VESA mount. 8 corner brackets."
-    },
-    {
-      "name": "Triple Monitor Stand",
-      "brand": "RaceSims",
-      "category": "cockpit",
-      "price_inr": 30000,
-      "price_note": "Price from Araya Airport build BOM.",
-      "specs": "40x80 profile construction. 3x 1200mm + 4x 580mm profiles. 2 main beam mounts + 4 side arm mounts. Supports up to 3x 32\" monitors."
-    },
-    {
-      "name": "Shifter Mount",
-      "brand": "RaceSims",
-      "category": "accessory",
-      "price_inr": 0,
-      "price_note": "price_on_request. Sold as rig add-on.",
-      "specs": "Side-mounted shifter bracket. 40x80 + 40x40 profile. Fits VNM, Moza, Fanatec shifters."
-    },
-    {
-      "name": "Keyboard Tray",
-      "brand": "RaceSims",
-      "category": "accessory",
-      "price_inr": 0,
-      "price_note": "price_on_request. Sold as rig add-on.",
-      "specs": "Pivot-joint keyboard tray. 40x40 profile with M12-to-M8 reducer."
-    },
-    {
-      "name": "PC Tray + Cable Management",
-      "brand": "RaceSims",
-      "category": "accessory",
-      "price_inr": 0,
-      "price_note": "price_on_request. Sold as rig add-on.",
-      "specs": "PC mounting tray with cable management box. 2mm laser-cut steel."
-    },
-    {
-      "name": "Bass Shaker Mount",
-      "brand": "RaceSims",
-      "category": "accessory",
-      "price_inr": 0,
-      "price_note": "price_on_request. Sold as rig add-on.",
-      "specs": "2mm mount for tactile bass shaker transducers."
-    },
-    {
-      "name": "Fixed Back Racing Seat",
-      "brand": "RaceSims",
-      "category": "seat",
-      "price_inr": 0,
-      "price_note": "price_on_request. Regular and XL sizes available.",
-      "specs": "Fixed back bucket seat. Professional product images on website. Available in standard and XL sizes."
-    },
-    {
-      "name": "Recliner Racing Seat",
-      "brand": "RaceSims",
-      "category": "seat",
-      "price_inr": 12500,
-      "price_note": "Price from kit BOM. Standard and Sports variants.",
-      "specs": "Reclining racing seat. Standard and Sports variants available. Used in entry/mid/pro kits."
-    },
-    {
-      "name": "Commercial Racing Seat",
-      "brand": "RaceSims",
-      "category": "seat",
-      "price_inr": 45500,
-      "price_note": "Price from Araya Airport build BOM.",
-      "specs": "Commercial-grade racing seat for B2B builds. Higher durability for public use."
-    },
-    {
-      "name": "GS27F Monitor",
-      "brand": "Gigabyte",
-      "category": "display",
-      "price_inr": 0,
-      "price_note": "price_on_request. Available via Devraj Computers (TN dealer).",
-      "specs": "27\" 1080p gaming monitor."
-    },
-    {
-      "name": "GS32QC Monitor",
-      "brand": "Gigabyte",
-      "category": "display",
-      "price_inr": 21830,
-      "price_note": "Per unit. 3x used in ARKA quote at Rs.65,490 total.",
-      "specs": "32\" 1440p 170Hz curved gaming monitor. Used in triple-screen setups."
-    },
-    {
-      "name": "G34WQCA Monitor",
-      "brand": "Gigabyte",
-      "category": "display",
-      "price_inr": 0,
-      "price_note": "price_on_request. Available via Devraj Computers (TN dealer).",
-      "specs": "34\" ultrawide 2K curved gaming monitor."
-    },
-    {
-      "name": "CO49DQ Monitor",
-      "brand": "Gigabyte",
-      "category": "display",
-      "price_inr": 110000,
-      "price_note": "Approximate. From Araya Airport config 1 pricing.",
-      "specs": "49\" OLED ultrawide gaming monitor. Used in single-screen premium configs."
-    },
-    {
-      "name": "Logitech G29",
-      "brand": "Logitech",
-      "category": "wheelbase",
-      "price_inr": 0,
-      "price_note": "price_on_request. Entry-level reference product.",
-      "specs": "Belt-driven force feedback wheel + pedals. Entry-level sim racing set. Product images on website for upgrade comparison."
-    }
-  ],
-
-  "bundles": [
-    {
-      "name": "Ares 10Nm + H.AO Hub + QR + Wheelrim Bundle",
-      "brand": "Conspit",
-      "price_inr": 119950,
-      "components": ["Ares 10Nm Wheelbase", "H.AO Hub with Rim", "CDP Quick Release", "Round Rim"]
-    },
-    {
-      "name": "Ares 10Nm + QR + 300GT Bundle",
-      "brand": "Conspit",
-      "price_inr": 122500,
-      "components": ["Ares 10Nm Wheelbase", "CDP Quick Release", "300GT Steering Wheel"]
-    },
-    {
-      "name": "Ares 18Nm + QR + 290GP Bundle",
-      "brand": "Conspit",
-      "price_inr": 161500,
-      "components": ["Ares Platinum 18Nm Wheelbase", "CDP Quick Release", "290GP Formula Wheel"]
-    },
-    {
-      "name": "Ares 18Nm + QR + MAX01 Bundle",
-      "brand": "Conspit",
-      "price_inr": 165000,
-      "components": ["Ares Platinum 18Nm Wheelbase", "CDP Quick Release", "MAX01 Steering Wheel"]
-    },
-    {
-      "name": "Ares Apex 8Nm Bundle",
-      "brand": "Conspit",
-      "price_inr": 0,
-      "price_note": "price_on_request",
-      "components": ["Ares Apex 8Nm Wheelbase", "Steering Wheel", "Desk Clamp"]
-    }
-  ],
-
-  "pc_builds": [
-    {
-      "name": "RTX 5070 Build (Entry)",
-      "price_inr": 158127,
-      "price_note": "MRP with 5% margin + 18% GST. Dealer price Rs.1,28,300.",
-      "specs": {
-        "cpu": "AMD Ryzen 9600x",
-        "motherboard": "MSI B650M Gaming Plus WiFi",
-        "gpu": "NVIDIA RTX 5070",
-        "ram": "32GB DDR5 6000MHz",
-        "storage": "1TB M.2 NVMe SSD",
-        "psu": "750W",
-        "cooling": "240mm AIO",
-        "case": "NZXT H6 Flow"
-      }
-    },
-    {
-      "name": "RTX 5070 Ti Build (Mid)",
-      "price_inr": 181929,
-      "price_note": "MRP with margin + 18% GST. Dealer price Rs.1,47,800.",
-      "specs": {
-        "cpu": "AMD Ryzen 9600x",
-        "motherboard": "MSI B650M Gaming Plus WiFi",
-        "gpu": "NVIDIA RTX 5070 Ti",
-        "ram": "32GB DDR5 6000MHz",
-        "storage": "1TB M.2 NVMe SSD",
-        "psu": "850W",
-        "cooling": "240mm AIO",
-        "case": "NZXT H6 Flow"
-      }
-    },
-    {
-      "name": "RTX 5070 Ti + 9700x Build (High)",
-      "price_inr": 195558,
-      "price_note": "MRP with margin + 18% GST. Dealer price Rs.1,58,800.",
-      "specs": {
-        "cpu": "AMD Ryzen 9700x",
-        "motherboard": "MSI B650M Gaming Plus WiFi",
-        "gpu": "NVIDIA RTX 5070 Ti",
-        "ram": "32GB DDR5 6000MHz",
-        "storage": "1TB M.2 NVMe SSD",
-        "psu": "850W",
-        "cooling": "240mm AIO",
-        "case": "NZXT H6 Flow",
-        "extras": "Wireless keyboard included"
-      }
-    }
-  ],
-
-  "brand_partners": [
-    {
-      "name": "Conspit",
-      "role": "Primary supplier & brand partner",
-      "territory": "India (authorized distributor)",
-      "status": "Active (7+ imports May 2025 - Mar 2026)",
-      "product_categories": ["Wheelbases", "Steering Wheels", "Pedals", "Handbrakes", "Dashboards", "Quick Releases", "Cockpits"]
-    },
-    {
-      "name": "VNM",
-      "role": "Primary supplier & brand partner",
-      "territory": "India",
-      "status": "Active orders",
-      "product_categories": ["Wheelbases (13-32Nm)", "Pedals", "Shifters", "Handbrakes", "Motion Platforms", "Cockpit Frames", "Monitor Stands"]
-    },
-    {
-      "name": "Simagic",
-      "role": "South India exclusive distributor",
-      "territory": "South India",
-      "status": "Active contract (May 2025 - May 2026, auto-renewal)",
-      "product_categories": ["Wheelbases (9-23Nm)", "Steering Wheels", "Pedals", "Shifters", "Accessories"],
-      "note": "128 SKUs. MOQ 50,000 RMB per order, 250,000 RMB annual."
-    },
-    {
-      "name": "Moza",
-      "role": "Entry-level brand partner",
-      "territory": "India",
-      "status": "Active",
-      "product_categories": ["Wheelbases (R3, R5, R9)", "Pedals", "Steering Wheels", "Shifters", "Handbrakes"]
-    },
-    {
-      "name": "Asetek SimSports",
-      "role": "Premium reseller",
-      "territory": "India",
-      "status": "NDA signed, pricelist on file (Sep 2024). Scale unclear.",
-      "product_categories": ["Wheelbases (Invicta/Forte/La Prima)", "Pedals", "Steering Wheels", "Button Boxes"]
-    },
-    {
-      "name": "Fanatec (via Techxhub)",
-      "role": "Authorized retail partner",
-      "territory": "India",
-      "status": "Active (pricelist Mar 2026)",
-      "product_categories": ["Wheelbases", "Pedals", "Steering Wheels", "Cockpits"]
-    },
-    {
-      "name": "Playseat (via Techxhub)",
-      "role": "Authorized retail partner",
-      "territory": "India",
-      "status": "Active (pricelist Mar 2026)",
-      "product_categories": ["Cockpits", "Racing Chairs"]
-    },
-    {
-      "name": "SimGrade",
-      "role": "Premium pedal supplier",
-      "territory": "India",
-      "status": "Active (used in Pro configs)",
-      "product_categories": ["Pedals"]
-    },
-    {
-      "name": "Gigabyte (via Devraj Computers)",
-      "role": "Monitor & PC component supplier",
-      "territory": "Tamil Nadu",
-      "status": "Active (dealer pricing Apr 2025)",
-      "product_categories": ["Gaming Monitors", "Motherboards", "GPUs", "Cases", "PSUs"]
-    },
-    {
-      "name": "Sim-Lab",
-      "role": "Parts supplier (wholesale)",
-      "territory": "Netherlands",
-      "status": "Active orders",
-      "product_categories": ["Handbrakes", "Pedals", "Cockpit adapters", "Steering Wheels", "Shifters"]
-    }
-  ],
-
-  "services": [
-    "Custom PC builds optimized for sim racing",
-    "Complete turnkey sim rig installation",
-    "B2B commercial simulator solutions (airports, malls, racing academies)",
-    "Sim-to-real driver training consultation (race engineer expertise)",
-    "CAN bus telemetry integration (real car data to sim dashboard)",
-    "Custom rig configuration and component selection",
-    "Maintenance and support for installed setups",
-    "Enclosed simulator builds with branded cladding (Araya Airport model)",
-    "Motion platform integration and setup",
-    "MoTeC data analysis and telemetry coaching"
-  ],
-
-  "racesims_own_products": {
-    "description": "Products designed, manufactured, or assembled by RaceSims in-house",
-    "items": [
-      "GT Pro Rig (aluminium extrusion cockpit frame)",
-      "Single Monitor Stand",
-      "Triple Monitor Stand",
-      "Shifter Mount",
-      "Keyboard Tray",
-      "PC Tray + Cable Management",
-      "Bass Shaker Mount",
-      "Monitor Adjustment Mount Kit",
-      "Fixed Back Racing Seat (Standard + XL)",
-      "Recliner Racing Seat (Standard + Sports)",
-      "Exterior Cladding (commercial builds)",
-      "Custom PC Builds"
+  "conspit": {
+    "status": "push",
+    "warranty_years": 1,
+    "wheelbases": [
+      {"model": "Ares Apex 8Nm Direct Drive", "price_inr": 49999, "quick_release": "CDR (NRG style)"},
+      {"model": "Ares 12Nm Direct Drive", "price_inr": 59999, "quick_release": "CDR (NRG style)"},
+      {"model": "Ares Platinum 20Nm Direct Drive", "price_inr": 85000, "quick_release": "CDR (NRG style)"}
     ],
-    "manufacturing_details": {
-      "frame_material": "40x80mm and 40x40mm aluminium T-slot extrusion profiles",
-      "profile_supplier": "Wilson Aluminium (WA)",
-      "laser_cut_parts": "Mild steel, 1-10mm thickness (foot mount, pedal mount, wheelbase deck, seat brackets, monitor mounts, trays)",
-      "assembly": "Modular bolt-together with M8 T-nuts and corner brackets",
-      "production_batch_size": "5-10 rigs per production run",
-      "cad_files": "SolidWorks assembly + AutoCAD DXF laser cutting files on file"
+    "steering_wheels": [
+      {"model": "310 APEX Racing Wheel", "price_inr": 39999, "type": "round entry"},
+      {"model": "300GT", "price_inr": 49999, "type": "GT"},
+      {"model": "H.OA Hub (bare)", "price_inr": 59500, "type": "hub for swappable rim"},
+      {"model": "290GP", "price_inr": 69500, "type": "formula"},
+      {"model": "MAX-01", "price_inr": 76500, "type": "GT premium"},
+      {"model": "PW-1", "price_inr": 210000, "type": "flagship"}
+    ],
+    "quick_release": [
+      {"model": "CDR Quick Release", "price_inr": 6500}
+    ],
+    "pedals": [
+      {"model": "CPP Apex (2-pedal)", "price_inr": 33000, "tier": "entry"},
+      {"model": "CPP Lite (2-pedal, hydraulic)", "price_inr": 59999, "tier": "mid"},
+      {"model": "CPP EVO V2 (2-pedal)", "price_inr": 79999, "tier": "premium"}
+    ],
+    "handbrake": [
+      {"model": "H3 Hydraulic Handbrake", "price_inr": 35500}
+    ],
+    "cockpits": [
+      {"model": "FP-Lite Formula Style cockpit", "price_inr": 115000},
+      {"model": "FC Formula cockpit", "price_inr": 855000},
+      {"model": "FC PRO Formula cockpit", "price_inr": 1050000},
+      {"model": "FC PRO MOTION Formula cockpit", "price_inr": 2495000}
+    ],
+    "pre_built_combos": [
+      {"name": "Ares 12Nm + QR + 300GT rim", "price_inr": 115500},
+      {"name": "Ares 12Nm + QR + 290GP rim", "price_inr": 135000},
+      {"name": "Ares 12Nm + QR + MAX-01 rim", "price_inr": 142000},
+      {"name": "Ares 12Nm + QR + H.OA hub with round/D/open rim", "price_inr": 125000},
+      {"name": "Ares Platinum 20Nm + QR + 300GT rim", "price_inr": 140500},
+      {"name": "Ares Platinum 20Nm + QR + 290GP rim", "price_inr": 160000},
+      {"name": "Ares Platinum 20Nm + QR + MAX-01 rim", "price_inr": 167000},
+      {"name": "Ares Platinum 20Nm + QR + H.OA hub with round/D/open rim", "price_inr": 151000}
+    ]
+  },
+  "vnm": {
+    "status": "push",
+    "warranty_years": 2,
+    "wheelbases": [
+      {"model": "VNM Direct Drive Premier 13Nm", "price_inr": 75000},
+      {"model": "VNM Direct Drive Elite 18Nm", "price_inr": 95000},
+      {"model": "VNM Direct Drive Supreme 25Nm", "price_inr": 115000},
+      {"model": "VNM Direct Drive Xtream 32Nm", "price_inr": 140000}
+    ],
+    "steering_wheels": [
+      {"model": "VNM GT Steering Wheel V1", "price_inr": 59999}
+    ],
+    "pedals": [
+      {"model": "VNM Lite Pedal", "price_inr": 42000}
+    ],
+    "handbrake": [
+      {"model": "VNM 1.5 Rally Handbrake", "price_inr": 35000}
+    ],
+    "shifter": [
+      {"model": "VNM Sequential / H-Pattern Shifter (Dual Mode)", "price_inr": 35000}
+    ],
+    "motion": [
+      {"model": "VNM 3DOF motion kit with 4x 150mm linear actuators", "price_inr": 600000}
+    ]
+  },
+  "racesims_in_house": {
+    "cockpits_and_rigs": [
+      {"model": "RaceSims GT Sim Cockpit", "price_inr": 38500, "note": "Our standard rig. Pairs with any Conspit / VNM gear bundle."}
+    ],
+    "monitor_stands_and_mounts": [
+      {"model": "Integrated Single Screen Stand", "price_inr": 8000},
+      {"model": "Standalone Single Screen Stand", "price_inr": 12000},
+      {"model": "Standalone Triple Screen Stand", "price_inr": 20500},
+      {"model": "Standalone Triple Screen Stand with Precision Alignment Mount", "price_inr": 30500},
+      {"model": "Universal Wheelbase Mount", "price_inr": 6000},
+      {"model": "PRO Adjustable Wheelbase Mount", "price_inr": 6000},
+      {"model": "Pro Pedal Mount", "price_inr": 7500},
+      {"model": "Handbrake & Shifter Mount", "price_inr": 4000},
+      {"model": "Keyboard Tray", "price_inr": 7500},
+      {"model": "Mouse Tray (Universal Mount)", "price_inr": 500},
+      {"model": "Integrated PC Stand", "price_inr": 5000}
+    ],
+    "accessories": [
+      {"model": "HD Leveling Castor Wheels (set)", "price_inr": 5000}
+    ],
+    "seats": [
+      {"model": "RaceSims Pro Sim Racing Bucket Seat", "price_inr": 15000, "tier": "entry"},
+      {"model": "RaceSims Premium Recliner Seat", "price_inr": 29500, "tier": "recliner"},
+      {"model": "RaceSims Sport Recliner Seat", "price_inr": 36500, "tier": "recliner-premium"},
+      {"model": "RaceSims Pro Fixed-back Bucket Seat (motorsports grade)", "price_inr": 39500, "tier": "bucket-pro"},
+      {"model": "RaceSims Pro X-Large Fixed-back Bucket Seat (motorsports grade)", "price_inr": 45500, "tier": "bucket-xl"}
+    ]
+  },
+  "monitors_gigabyte": [
+    {"model": "GIGABYTE GS32QC (32\" 165Hz 1440p Curved)", "price_inr": 20500, "use_case": "single-screen budget"},
+    {"model": "GIGABYTE G34WQC (34\" widescreen 2K Curved)", "price_inr": 34500, "use_case": "ultrawide"},
+    {"model": "Triple 27\" GIGABYTE GS27F (27\" 165Hz 1080p flat) — per unit", "price_inr": 37500, "use_case": "triple"},
+    {"model": "Triple 32\" GIGABYTE GS32QC (32\" 165Hz 1440p Curved) — per unit", "price_inr": 61500, "use_case": "triple"},
+    {"model": "GIGABYTE CO49DQ (49\" ultrawide 144Hz OLED curved)", "price_inr": 134500, "use_case": "ultrawide premium"}
+  ],
+  "pc_builds": {
+    "note_to_bot": "NEVER QUOTE A PC PRICE from memory or this KB. Component costs change daily. Always say: 'PC is custom build-to-order — let me get you a live quote.' Then escalate.",
+    "shopify_reference_only": [
+      {"model": "RaceSims SPEC SIM PC", "shopify_listed_price_inr": 160000, "quote_rule": "DO NOT QUOTE"},
+      {"model": "RaceSims Pro-Grade High-Performance sim racing PC", "shopify_listed_price_inr": 215000, "quote_rule": "DO NOT QUOTE"},
+      {"model": "RaceSims PRO-SPEC SIM PC", "shopify_listed_price_inr": 312500, "quote_rule": "DO NOT QUOTE"}
+    ]
+  },
+  "simagic_comparison_only": {
+    "status": "comparison-only",
+    "note_to_bot": "Listed on Shopify ONLY so customers can compare specs and price. Do not actively sell. Redirect to Conspit equivalent (Ares Apex 8Nm / Ares 12Nm / Ares Platinum 20Nm).",
+    "items": [
+      {"model": "Simagic Alpha Mini (10Nm peak)", "price_inr": 64999, "redirect_to": "Conspit Ares Apex 8Nm"},
+      {"model": "Simagic Alpha (15Nm peak)", "price_inr": 80000, "redirect_to": "Conspit Ares 12Nm"},
+      {"model": "Simagic Alpha U (23Nm peak)", "price_inr": 99000, "redirect_to": "Conspit Ares Platinum 20Nm"},
+      {"model": "Simagic GT Neo", "price_inr": 40000, "redirect_to": "Conspit 300GT or 310 Apex"}
+    ]
+  },
+  "moza_opportunistic": {
+    "status": "opportunistic",
+    "note_to_bot": "Only quote if Shopify shows live stock. Never take preorders. Never commit a timeline. If out of stock, redirect to Conspit Apex Bundle.",
+    "items": [
+      {"model": "MOZA R3 PC-only Bundle", "price_inr": 31999, "was_inr": 39999},
+      {"model": "MOZA R5 Bundle", "price_inr": 49999}
+    ]
+  },
+  "coming_soon_do_not_quote": [
+    {"brand": "Fanatec", "action": "Say we're adding them and flag their interest. DO NOT quote prices or dates."},
+    {"brand": "Playseat", "action": "Say we're adding them and flag their interest. DO NOT quote prices or dates."}
+  ],
+  "not_carried": [
+    {"brand": "Asetek SimSports", "action": "If customer names it, say we don't carry Asetek currently; redirect to Conspit Platinum 20Nm or VNM Xtream 32Nm."},
+    {"brand": "SimGrade", "action": "If customer names it, redirect to Conspit or VNM equivalent."},
+    {"brand": "Sim-Lab", "action": "If customer names it, say we don't carry Sim-Lab; redirect to Conspit formula cockpits (FP-Lite / FC / FC PRO) or RaceSims GT Sim Cockpit."}
+  ],
+  "policies": {
+    "payment": {
+      "terms": "100% advance",
+      "methods": ["Razorpay (UPI)", "Razorpay (credit/debit card)", "Razorpay (netbanking)"],
+      "emi": "Available via Razorpay. No-cost EMI on select credit cards subject to bank offers.",
+      "note_to_bot": "Never ask for card details. Share Razorpay payment link only after Thambu confirms the quote."
+    },
+    "warranty": {
+      "conspit_years": 1,
+      "vnm_years": 2,
+      "racesims_in_house_years": 1,
+      "simagic_years": 1,
+      "moza_years": 1,
+      "coverage": "Manufacturing defects. Onsite if local to Chennai, else return-to-base. Shipping to RaceSims for RTB is customer's cost; return shipping is ours.",
+      "excludes": ["Physical damage", "Water ingress", "Mod / modification", "Consumables (pedal dampers, loadcell rubbers)"]
+    },
+    "installation": {
+      "charge_inr": 25000,
+      "travel_extra": true,
+      "travel_model": "Actuals — flight or train + stay for the engineer",
+      "coverage": "Anywhere in India",
+      "quote_line": "Installation anywhere in India, ₹25,000 plus actuals for travel.",
+      "note_to_bot": "NOT Chennai/Bangalore only. Send-install is pan-India."
+    },
+    "shipping": {
+      "courier": "Bluedart",
+      "coverage": "Pan-India",
+      "typical_transit_days": "3-7 depending on location",
+      "insurance": "Insured in transit",
+      "packaging": "Double-wall boxes, foam-cut for gear; pallet-wrap for rigs"
+    },
+    "turnaround": {
+      "in_stock_gear": "Ships within 24-48 hrs of payment clearing",
+      "custom_rig_or_pc": "10-14 working days",
+      "motion_kit_vnm": "3-4 weeks (built to order)"
+    },
+    "returns": {
+      "policy": "No returns on custom builds. Manufacturing defects handled under warranty. Unopened standard items: 7 day return window minus return shipping."
     }
+  },
+  "services": {
+    "motec_coaching": {
+      "price_inr_per_session": 10000,
+      "description": "Paid 1:1 MoTeC telemetry coaching session. Public-facing service. Driver sends laps, we analyze braking, throttle, steering traces, line choice, give written + voice feedback.",
+      "booking": "Escalate to Thambu"
+    },
+    "driver_development": {
+      "status": "On roadmap, not launched",
+      "note_to_bot": "Do not commit timelines. If asked, say 'we're building a structured driver development program — let me flag your interest.'"
+    },
+    "b2b_commercial_simulators": {
+      "description": "Enclosed commercial simulators for arcades, malls, corporate events, brand activations. Custom build.",
+      "quote_rule": "ESCALATE. Never quote B2B pricing.",
+      "ask_first": ["Venue type", "Footfall expected per day", "Branding requirement", "Timeline", "Budget range if known"]
+    }
+  },
+  "dealers": [
+    {"name": "SimRacing HQ", "contact": "Shreyas", "city": "Bangalore"},
+    {"name": "Racing Rigs", "contact": "Lakshay", "city": "Bangalore"},
+    {"name": "Racingpoint Esports", "contact": "Uday", "city": "Hyderabad"},
+    {"name": "Niyusuki", "contact": "Vishal", "city": "Kochi"},
+    {"name": "Lights Out Sim Racing", "contact": "Shashank", "city": "TBD"}
+  ],
+  "dealer_note_to_bot": "These are public. Share if customer is outside Chennai and asks for local options. Always add: 'We can also ship pan-India via Bluedart with install support if you'd prefer direct.'",
+  "founder_authority": {
+    "name": "Thambu",
+    "role": "Race engineer for Arka Motorsports",
+    "arka_credential": "India's most decorated motorsport team with 123+ championship titles since 1987",
+    "public_proof_points": [
+      "RaceSims-built sim installed at Arka's Coimbatore facility where actual championship drivers train",
+      "Race engineer is Thambu's day job, not a marketing line"
+    ],
+    "bot_use": "Lead with this when customer asks 'why RaceSims over others', 'is sim useful for real driving', or pushes on price."
+  },
+  "contact": {
+    "whatsapp_bot": "+91 7397 308 899",
+    "email": "thambu@racesims.in",
+    "website": "racesims.in",
+    "instagram": "@race.sims",
+    "chennai_address": "Visit by appointment — DM to schedule",
+    "founder_personal_line": "DO NOT SHARE WITH CUSTOMERS. Use escalation flow only."
   }
 }

@@ -1,445 +1,309 @@
 {
-  "last_updated": "2026-04-13",
-  "note": "FAQ knowledge base for RaceSims WhatsApp/Instagram AI assistant. Conversational race-engineer tone. Prices in INR, inclusive of 18% GST unless noted.",
-
+  "last_updated": "2026-04-15",
+  "note_to_bot": "These are CONTEXT for you to draw on, NOT scripts to paste verbatim. Pull ONE relevant point per reply and say it in your own words, shorter. WhatsApp chat style, not email.",
   "categories": [
     {
-      "name": "Getting Started",
-      "questions": [
+      "category": "About RaceSims",
+      "faqs": [
         {
-          "q": "What is sim racing?",
-          "a": "Sim racing is racing on a simulator that replicates the physics, forces, and feel of a real race car. We're not talking about a PlayStation with a controller — we mean a direct drive wheelbase that pushes back against your hands with real torque, load cell pedals that feel like an actual brake pedal, and a cockpit built from the same aluminium extrusion profiles used in motorsport. Professional racing teams (including ones we work with) use simulators to train drivers and develop setups before they ever hit the track.",
-          "keywords": ["sim racing", "what is", "explain", "simulator", "beginner"]
+          "q": "Who are you?",
+          "a": "RaceSims is India's pro-grade sim racing hardware company. Our founder Thambu is an active race engineer for Arka Motorsports — India's most decorated motorsport team with 123+ championship titles since 1987. Every kit is specced like a real race team, not a retail shop."
         },
         {
-          "q": "Who is RaceSims?",
-          "a": "RaceSims is India's pro-grade sim racing hardware company, based out of Chennai. Our founder Thambu is an active race engineer for Arka Motorsports — India's most decorated motorsport team with 123+ championship titles since 1987. That's not a marketing line, that's our day job. We build simulators with the same engineering discipline that's produced those championships. We're authorised distributors for Conspit, VNM, Simagic (South India exclusive), Moza, and Asetek SimSports.",
-          "keywords": ["RaceSims", "who", "about", "company", "founder", "Thambu"]
+          "q": "Where are you based?",
+          "a": "Chennai. We ship pan-India via Bluedart and have dealer partners in Bangalore, Hyderabad, and Kochi."
         },
         {
-          "q": "I'm a complete beginner. Where do I start?",
-          "a": "Start with what you want to race. Rally? Formula? GT? That shapes your gear. For most beginners stepping up from a Logitech or Thrustmaster, our Rally Setup at Rs.2.46L (gear only, no PC) is the sweet spot — 12Nm Conspit direct drive, load cell pedals, sequential shifter, handbrake, full aluminium rig, and a proper racing seat. If you want the whole package including a gaming PC and monitor, the Entry Kit at Rs.4.25L is turn-key — unbox and race. DM us your budget and what games you play, we'll spec the right build.",
-          "keywords": ["beginner", "start", "first", "new", "recommend", "suggestion"]
+          "q": "How long have you been operating?",
+          "a": "RaceSims has been building sim racing kits in India for years, with the race-engineer approach coming from our founder's motorsports background."
         },
         {
-          "q": "What games/sims can I play on your setups?",
-          "a": "Everything. Assetto Corsa, Assetto Corsa Competizione, iRacing, rFactor 2, Automobilista 2, WRC, Dirt Rally 2.0, F1 24, Gran Turismo (with PlayStation compatibility on some wheelbases). Our PCs are built specifically for sim racing — RTX 5070/5070 Ti GPUs, so you're running triple screens at 1440p without breaking a sweat. The force feedback and pedal feel work identically across all major sims.",
-          "keywords": ["games", "sim", "Assetto Corsa", "iRacing", "F1", "compatible", "software"]
+          "q": "Who's your founder?",
+          "a": "Thambu. Race engineer for Arka Motorsports. Built RaceSims because there was no Indian sim racing retailer with actual race-team engineering discipline."
         },
         {
-          "q": "Is sim racing actually useful for real driving?",
-          "a": "100%. As a race engineer, I can tell you that every top-tier racing series uses simulators for driver development. The physics engines in modern sims are incredibly accurate — brake pressure curves, tyre degradation models, and chassis dynamics all map to real-world behaviour. We're actually doing CAN bus telemetry R&D right now, pulling data from real rally cars and comparing it with sim telemetry. The overlap is remarkable. If you're an aspiring racer, sim training is the most cost-effective seat time you'll ever get.",
-          "keywords": ["real driving", "useful", "training", "improve", "learn", "benefit"]
-        },
-        {
-          "q": "Do I need to know about cars to enjoy sim racing?",
-          "a": "Not at all. Some of our customers are gamers who've never been on a track, and they have an absolute blast. The beauty of sim racing is that the hardware gives you intuitive feedback — when the tyres start to slide, you feel it through the wheel. You don't need to understand the engineering to enjoy the driving. But if you DO want to go deeper — telemetry analysis, setup tuning, racing lines — that's where having a race engineer on speed dial (us) really pays off.",
-          "keywords": ["know nothing", "no experience", "gamer", "casual", "non-racer"]
-        },
-        {
-          "q": "What's the difference between sim racing and arcade racing?",
-          "a": "Night and day. Arcade racing (like Need for Speed) simplifies everything — the physics are forgiving, the steering is assisted, and the goal is fun over realism. Sim racing models real physics: tyre temperatures affect grip, suspension geometry matters, and if you brake too late, you're in the gravel. Our hardware makes that difference tangible — a direct drive wheel pushes back with 10-32Nm of force, just like a real steering column. Load cell pedals measure pressure, not travel, exactly like a real brake. That's not something you experience on a keyboard or gamepad.",
-          "keywords": ["arcade", "difference", "vs", "real", "NFS", "Need for Speed"]
-        },
-        {
-          "q": "What age group is sim racing for?",
-          "a": "We've built rigs for kids as young as 8 (Conspit makes a GTB Kids Rig) and for adults well into their 50s. Professional karting kids use it for off-track training. Corporate teams use it for team building. And motorsport enthusiasts use it because it's the closest thing to driving a race car without the Rs.30L+ per season price tag. There's genuinely no age limit.",
-          "keywords": ["age", "kids", "children", "adults", "old", "young"]
+          "q": "What makes RaceSims different?",
+          "a": "Race-engineer specced components. Arka Motorsports has 123+ championship titles since 1987, and we've built a RaceSims sim at their Coimbatore facility where real championship drivers train. That's the level of engineering going into every kit."
         }
       ]
     },
     {
-      "name": "Products & Kits",
-      "questions": [
+      "category": "Products",
+      "faqs": [
         {
-          "q": "What kits do you offer?",
-          "a": "We have four main tiers:\n\n1. **Rally Setup** — Rs.2.46L (gear only). 12Nm Conspit DD, VNM load cell pedals, shifter, handbrake, full aluminium rig.\n2. **Entry Kit with PC** — Rs.4.25L. 10Nm DD + RTX 5070 PC + ultrawide monitor. Turn-key.\n3. **Mid Kit with PC** — Rs.4.51L. 12Nm DD + RTX 5070 Ti PC + ultrawide. Better force feedback and pedals.\n4. **Pro Kit with PC** — Rs.5.50L (single screen) or Rs.6.30L (triple screen). 18Nm Conspit Platinum DD or Simagic Alpha + premium everything.\n5. **Motion Kit** — Starting from Rs.11L+. Full formula cockpit with VNM 3DOF motion platform. 32Nm direct drive. This is what racing academies use.\n\nAll prices include 18% GST.",
-          "keywords": ["kits", "products", "offer", "tiers", "range", "options", "lineup"]
-        },
-        {
-          "q": "What's included in a complete kit?",
-          "a": "A complete kit from us includes: wheelbase (direct drive motor), steering wheel, pedals (load cell), shifter, handbrake, full aluminium extrusion cockpit frame (our own GT Pro Rig), racing seat, monitor stand, and — if you go with a 'with PC' kit — a custom-built gaming PC and monitor(s). Everything bolts together as a single unit. We also include a keyboard tray, cable management, and optional add-ons like bass shaker mounts. You literally plug in the power and start racing.",
-          "keywords": ["included", "what comes", "package", "contents", "complete"]
-        },
-        {
-          "q": "What's the difference between the Entry and Pro kits?",
-          "a": "Three big things change as you go up:\n\n1. **Force feedback torque**: Entry is 10Nm, Mid is 12Nm, Pro is 18Nm. More torque = more detailed road feel, especially at the limit.\n2. **Pedals**: Entry uses Conspit load cells, Pro uses CCP EVO hydraulic load cells — the brake pressure curve on the EVOs is almost identical to a real brake pedal.\n3. **Display**: Entry gets a single ultrawide, Pro Triple Screen gets 3x 32\" 1440p monitors for 180-degree FOV.\n\nThe jump from Entry to Mid is subtle. The jump from Mid to Pro is where you start feeling things a real driver feels — kerb strikes, tyre breakaway, weight transfer. That's the race-engineer-approved tier.",
-          "keywords": ["difference", "entry vs pro", "compare", "tiers", "which kit", "upgrade"]
+          "q": "What do you sell?",
+          "a": "Sim racing hardware — direct drive wheelbases, steering wheels, pedals, handbrakes, cockpits, seats, monitor stands, and custom PCs. Primary brands are Conspit and VNM. We also build our own rigs, stands, and seats."
         },
         {
           "q": "What brands do you carry?",
-          "a": "We're authorised distributors/partners for:\n\n- **Conspit** (China) — our primary brand. Wheelbases, wheels, pedals, handbrakes. Professional-grade, CE/FCC/ROHS certified. 7+ imports and counting.\n- **VNM** (Vietnam) — motion platforms, high-torque direct drives (up to 32Nm), pedals, shifters.\n- **Simagic** — we're the South India exclusive distributor. 128 SKUs, wheelbases from 9Nm to 23Nm.\n- **Moza** — entry-level direct drive. Great for budget builds.\n- **Asetek SimSports** — premium tier (Invicta, Forte, La Prima lines).\n- **Fanatec** and **Playseat** via our retail partner Techxhub.\n- **SimGrade** — premium pedals used in our Pro configs.",
-          "keywords": ["brands", "carry", "Conspit", "VNM", "Simagic", "Moza", "Fanatec", "Asetek"]
+          "a": "Conspit and VNM as our primary push — both authorised distribution. Simagic listed for comparison only. Moza R3 and R5 when in stock. Fanatec and Playseat coming soon. We don't carry Asetek, SimGrade, or Sim-Lab currently."
         },
         {
-          "q": "Can I buy individual components instead of a full kit?",
-          "a": "Absolutely. We sell everything individually — wheelbases from Rs.65K (Conspit Ares 12Nm) to Rs.1.06L (VNM DD Xtreme 32Nm), pedals from Rs.38K to Rs.96.5K, steering wheels from Rs.7.5K to Rs.2.1L, and our GT Pro Rig frame starting around Rs.38.5K. We also do bundles — for example, a Conspit Ares 18Nm + QR + 290GP Formula Wheel bundle is Rs.1.61L, which saves over buying separately. Tell us what you already have and what you want to upgrade, we'll put together the right spec.",
-          "keywords": ["individual", "parts", "components", "separate", "upgrade", "single"]
+          "q": "Do you carry Fanatec?",
+          "a": "Coming soon. We can't quote prices or dates yet. Happy to flag your interest and let you know when they go live."
         },
         {
-          "q": "What's the GT Pro Rig?",
-          "a": "That's our bread and butter — designed and manufactured by us in-house. It's a modular aluminium extrusion cockpit built from 40x80mm and 40x40mm T-slot profiles. Fully adjustable pedal position, wheel height, seat position, and monitor angle. The frame is built in sub-assemblies (base, wheelbase tower, pedal mount, seat mount) so it's completely modular — you can upgrade, reconfigure, or add components without replacing the whole thing. It accepts all major brand mounting patterns. Starting at Rs.38,566 incl. GST.",
-          "keywords": ["GT Pro Rig", "rig", "cockpit", "frame", "aluminium", "custom"]
+          "q": "Do you carry Playseat?",
+          "a": "Coming soon. We'll flag your interest and circle back when they're live."
         },
         {
-          "q": "Do you have anything with motion?",
-          "a": "Yes, and this is where it gets serious. Our Formula Cockpit with Motion starts at Rs.11L+ and includes a VNM 3DOF motion platform with 4x actuators (150mm stroke). You feel real g-forces — braking pushes you forward, acceleration pushes you back, corners tilt the whole cockpit. We also offer the full 6-driver system with surge and traction loss simulation for around Rs.5.5L just for the motion platform. Racing academies and B2B clients love this. It's the closest thing to a real cockpit without a real car.",
-          "keywords": ["motion", "platform", "movement", "actuator", "g-force", "DOF"]
+          "q": "Do you carry Asetek?",
+          "a": "Not currently. If you're looking at that tier, Conspit Ares Platinum 20Nm or VNM Xtream 32Nm are our direct alternatives."
         },
         {
-          "q": "What steering wheels do you have?",
-          "a": "Range is huge:\n\n- **Conspit Round Rim** — Rs.7,500. Simple, effective, great for rally.\n- **Conspit 300GT** — Rs.53,950. GT-style, used in our commercial builds.\n- **Conspit 290GP Formula** — Rs.79,950. Formula-style with full button layout. CE/FCC certified.\n- **Conspit MAX01** — Rs.84,950. Premium GT/formula hybrid.\n- **Conspit PW1** — Rs.2,10,000. Flagship. Top-tier in every way.\n- Plus Simagic (GT NEO, GTS, FX Pro), Moza (CSV2), Asetek (Forte, La Prima, Invicta), and Fanatec options.\n\nWhich one depends on what you race. GT racing? Round rim. Formula? 290GP or FX Pro. Rally? Round rim with a sequential shifter.",
-          "keywords": ["steering wheel", "wheel", "rim", "formula", "GT", "round"]
+          "q": "Do you carry Sim-Lab?",
+          "a": "Not currently. For cockpits we offer Conspit FP-Lite / FC / FC PRO or our own RaceSims GT Sim Cockpit."
         },
         {
-          "q": "Can I upgrade my kit later?",
-          "a": "That's the whole point of our modular design. The GT Pro Rig is built on T-slot aluminium — everything bolts on and off. Start with a single screen, add triples later. Start with entry pedals, upgrade to hydraulic load cells. Add a motion platform down the line. Even the wheelbase is swappable — go from 12Nm to 18Nm without touching the rest of the rig. We've designed the upgrade path so you never throw away what you've already bought.",
-          "keywords": ["upgrade", "later", "modular", "add", "expand", "future"]
-        },
-        {
-          "q": "Do you build custom PCs for sim racing?",
-          "a": "Yes, and they're specced specifically for sim racing — which is different from a general gaming PC. Sim racing hammers the CPU for physics calculations and the GPU for triple-screen rendering. Our builds use AMD Ryzen 9600x/9700x/9800X3D processors, RTX 5070 or 5070 Ti GPUs, 32GB DDR5 RAM, and NVMe storage. Entry PC build is around Rs.1.58L, mid-tier around Rs.1.82L, and high-tier around Rs.1.96L. All include 240mm AIO cooling and proper cable management. We source components via authorised dealers (Gigabyte via Devraj Computers for monitors and boards).",
-          "keywords": ["PC", "computer", "build", "custom", "gaming PC", "specs", "GPU", "RTX"]
+          "q": "What about SimGrade?",
+          "a": "Not carried. We can match the spec with Conspit or VNM — happy to suggest based on what you're after."
         }
       ]
     },
     {
-      "name": "Technical",
-      "questions": [
+      "category": "Kits and Bundles",
+      "faqs": [
         {
-          "q": "What is force feedback and why does it matter?",
-          "a": "Force feedback is the motor in your wheelbase pushing back against your hands to simulate what the steering wheel would feel like in a real car. Hit a kerb? You feel the vibration. Tyres losing grip? The wheel goes light. Braking into a corner? You feel the weight transfer through the steering. Without proper force feedback, you're driving blind — you can see the track but you can't feel the car. A 10Nm base gives you the basics; 18Nm gives you the detail a race engineer uses for setup work; 32Nm is what our motion rigs use and it's genuinely intense.",
-          "keywords": ["force feedback", "FFB", "feel", "torque", "feedback"]
+          "q": "What kit should I buy?",
+          "a": "Depends on discipline and budget. Quick guide: Entry Conspit → Apex Bundle ₹1,27,500. Rally → Rally Bundle ₹2,31,000. Formula → Formula Bundle ₹2,20,000. GT → GT Bundle ₹2,30,000. All gear-only. Tell me your focus and I'll narrow it."
         },
         {
-          "q": "What's the difference between direct drive and belt drive?",
-          "a": "Belt drive (like Logitech G29, Thrustmaster T300) uses a belt and gears between the motor and the wheel. That means backlash, lag, and a mushy feel. Direct drive bolts the wheel directly to the motor — zero backlash, instant response, and way more torque. Our entry-level direct drive (10Nm) already delivers more precise feedback than the best belt-drive system on the market. Once you drive direct drive, belt drive feels like steering through mud. Every serious sim racer and every real racing team uses direct drive.",
-          "keywords": ["direct drive", "belt drive", "DD", "difference", "Logitech", "Thrustmaster"]
+          "q": "What's in the Conspit Apex Bundle?",
+          "a": "₹1,27,500. 8Nm Ares Apex wheelbase, CPP Apex 2-pedal, 310 Apex rim. Entry-tier Conspit direct drive. Gear only — no rig or PC."
         },
         {
-          "q": "What are load cell pedals and why should I care?",
-          "a": "Regular pedals measure how far you push them (potentiometer). Load cell pedals measure how hard you push them (pressure). That's exactly how real brake pedals work — in a real car, you modulate braking by pressure, not travel. Load cell brakes make you a faster, more consistent driver overnight because your muscle memory works on pressure, which is way more repeatable than position. All our kits use load cell pedals, starting from Conspit CCP Apex (Rs.38K) up to CCP EVO hydraulic (Rs.85.5K-96.5K). The EVOs have a brake curve almost identical to a real hydraulic system.",
-          "keywords": ["load cell", "pedals", "brake", "pressure", "potentiometer"]
+          "q": "What's in the Rally Bundle?",
+          "a": "₹2,31,000. 12Nm Ares wheelbase, H.OA hub with round wheel, CPP Lite 2-pedal hydraulic pedals, H3 hydraulic handbrake. Rally-focused. Gear only."
         },
         {
-          "q": "Triple screens or single ultrawide — which is better?",
-          "a": "Both have merits. A single 49\" ultrawide (like the Gigabyte CO49DQ at ~Rs.1.1L) gives you a wide view with zero bezels and simpler setup. Triple 32\" screens (3x Gigabyte GS32QC at ~Rs.65K total) give you a wider field of view (~180 degrees) and better peripheral vision, which matters hugely in wheel-to-wheel racing. The trade-off: triples need a beefier GPU (RTX 5070 Ti minimum) and more desk space (~2m wide). If you're doing competitive online racing, triples. If space is tight or you want clean aesthetics, ultrawide. Our Pro kit comes in both configs.",
-          "keywords": ["triple screen", "ultrawide", "monitor", "display", "single vs triple", "FOV"]
+          "q": "What's in the Formula Bundle?",
+          "a": "₹2,20,000. 20Nm Ares Platinum wheelbase, 290GP formula wheel, CPP Lite pedals. Formula / open-wheel focused. Gear only."
         },
         {
-          "q": "What about VR for sim racing?",
-          "a": "VR is incredible for immersion — full 360-degree head tracking, depth perception, and the feeling of actually sitting in a cockpit. Most modern sims support VR (Assetto Corsa, ACC, iRacing, AMS2). The downsides: VR headsets can cause motion sickness in some people, they get warm during long sessions, and the resolution isn't quite triple-screen level yet. Our wheelbases and pedals work perfectly with VR — no changes needed. If you go VR, you skip the monitor entirely, which saves on cost. We can spec a rig without a monitor stand for VR-only use.",
-          "keywords": ["VR", "virtual reality", "headset", "Oculus", "Meta Quest", "immersion"]
+          "q": "What's in the GT Bundle?",
+          "a": "₹2,30,000. 20Nm Ares Platinum wheelbase, H.OA hub with one rim, CPP EVO pedals. GT focused. Gear only."
         },
         {
-          "q": "What's a motion platform and how does it work?",
-          "a": "A motion platform uses actuators (basically powerful linear motors) to physically tilt and move your entire cockpit based on what's happening in the sim. Our VNM 3DOF platform uses 4 actuators with 150mm stroke — it simulates pitch (braking/acceleration), roll (cornering), and heave (bumps/kerbs). The full 6-driver system adds surge (forward/back movement) and traction loss simulation. The physics data comes straight from the sim in real-time, so when you slam the brakes at 200 km/h, the cockpit pitches forward. It's the closest thing to actual g-forces without a centrifuge.",
-          "keywords": ["motion platform", "3DOF", "6DOF", "actuator", "movement", "tilt"]
+          "q": "What's a complete kit cost?",
+          "a": "Bundle + RaceSims GT Sim Cockpit (₹38,500) + seat + monitor(s) + PC. PC is custom build-to-order so I'd escalate for a live quote on the total."
         },
         {
-          "q": "How much torque do I actually need in a wheelbase?",
-          "a": "Here's the race engineer's take: 10Nm is enough to feel the car and have fun. 12-15Nm is where you start getting the detail — you can feel tyre slip angles, weight transfer, and road surface changes. 18Nm is what I'd recommend for anyone who wants to use the sim for actual driver development or serious competition. 25-32Nm is for motion rigs and professional training setups where you need the wheel to fight you like a real unpowered steering rack. More torque doesn't mean harder to turn — it means higher fidelity in the feedback. Think of it like audio: more watts doesn't mean louder, it means cleaner.",
-          "keywords": ["torque", "Nm", "how much", "10Nm", "18Nm", "32Nm", "wheelbase power"]
-        },
-        {
-          "q": "What's the deal with aluminium extrusion rigs vs tubular steel rigs?",
-          "a": "Aluminium extrusion (T-slot profile, what our GT Pro Rig uses) is the industry standard for pro-grade rigs. Why: infinitely adjustable (you can move any component to any position on the profile), rigid enough for 32Nm wheelbases, lightweight, corrosion-resistant, and modular. Tubular steel rigs are cheaper but fixed-position — once welded, you can't adjust. Our rigs use 40x80mm main rails and 40x40mm cross-members, same profile system used in industrial automation. The modularity means your rig grows with you.",
-          "keywords": ["aluminium", "extrusion", "T-slot", "steel", "frame", "rig type", "8020"]
-        },
-        {
-          "q": "What PC specs do I need for sim racing?",
-          "a": "Depends on your display. For a single ultrawide at 2K: RTX 5070, Ryzen 9600x, 32GB DDR5 will handle everything smoothly. For triple 32\" at 1440p: RTX 5070 Ti minimum, ideally a 5080. For VR: RTX 5070 Ti is comfortable. CPU matters more in sim racing than most games because physics calculations run on CPU cores. Our builds start at Rs.1.58L (RTX 5070) and go to Rs.1.96L (RTX 5070 Ti + Ryzen 9700x). We build these in-house and optimise BIOS settings for sim racing. Don't overspend on CPU — a 9600x and 5070 Ti is a better sim racing combo than a 9800X3D and 5070.",
-          "keywords": ["PC specs", "requirements", "GPU", "CPU", "RAM", "RTX", "minimum specs"]
+          "q": "Do I need a rig?",
+          "a": "Yes, unless you're mounting to a desk or existing aluminium profile. Our RaceSims GT Sim Cockpit at ₹38,500 is the standard rig most customers pair with these bundles."
         }
       ]
     },
     {
-      "name": "Pricing & Payment",
-      "questions": [
+      "category": "Pricing and PC",
+      "faqs": [
         {
-          "q": "What's your price range?",
-          "a": "Honest range:\n\n- **Gear only (no PC):** Rs.2.46L (Rally Setup) to Rs.11L+ (Motion)\n- **Complete kits with PC:** Rs.4.25L (Entry) to Rs.6.30L (Pro Triple Screen)\n- **Individual components:** Wheelbases from Rs.65K, pedals from Rs.38K, our GT Pro Rig frame from Rs.38.5K\n- **B2B commercial simulators:** Rs.6.86-6.96L per unit (fully enclosed, like our airport builds)\n\nAll prices include 18% GST. Custom configurations available — tell us your budget and we'll build the best possible spec around it.",
-          "keywords": ["price", "cost", "how much", "budget", "range", "expensive"]
+          "q": "How much is a PC?",
+          "a": "PC is custom build-to-order — component rates change daily. Let me get you a live quote. I'll flag our team."
         },
         {
-          "q": "Why are your prices higher than what I see online from individual brands?",
-          "a": "A few reasons. First, import duty: sim racing hardware coming into India attracts ~31% duty (HS code 9023.00.90 — teaching/training apparatus). Second, we're authorised distributors, not grey market — you get warranty, service, and proper GST invoices. Third, our kit prices include the rig, seat, monitor stand, cable management, and assembly — things you'd have to source and build separately if buying individual parts from overseas. Fourth, we actually stand behind what we sell. If a motor fails in 18 months, you're calling us in Chennai, not trying to email a factory in Shenzhen.",
-          "keywords": ["expensive", "why", "price high", "import", "duty", "grey market"]
+          "q": "What about a turnkey quote?",
+          "a": "Happy to get you a full kit + rig + seat + monitor + PC quote. PC is always live-priced, so let me escalate to our team."
         },
         {
-          "q": "Do you offer EMI or financing?",
-          "a": "We're working on formal EMI tie-ups. For now, we can work out payment plans on a case-by-case basis for orders above Rs.3L — typically 50% advance and the balance before delivery. For B2B orders, we offer milestone-based payment terms. DM us to discuss your specific situation. We're flexible for serious buyers.",
-          "keywords": ["EMI", "financing", "installment", "payment plan", "loan", "credit"]
+          "q": "Prices include GST?",
+          "a": "Yes, all prices are inclusive of 18% GST."
         },
         {
-          "q": "What affects the final price of my build?",
-          "a": "The big variables:\n\n1. **Wheelbase torque** — jumping from 10Nm to 18Nm adds ~Rs.18K-20K\n2. **Pedal tier** — load cell (Rs.38K) vs hydraulic load cell (Rs.85K+)\n3. **Display** — single ultrawide (~Rs.1.1L for 49\") vs triple 32\" (~Rs.65K total)\n4. **PC GPU** — RTX 5070 vs 5070 Ti is about Rs.24K difference in the build\n5. **Motion** — adding a 3DOF platform starts at Rs.2.36L (4x Actuator 100)\n6. **Steering wheel** — basic round rim (Rs.7.5K) vs formula with display (Rs.80K-2.1L)\n\nI always tell customers: spend the most on pedals and wheelbase. Those are what you touch, and they determine how fast you get faster.",
-          "keywords": ["price factors", "what costs", "expensive parts", "budget", "allocate"]
-        },
-        {
-          "q": "Can I get a custom quote?",
-          "a": "Absolutely. That's actually how most of our sales work — we spec a build to your exact needs. Tell us: (1) your budget range, (2) what you mainly race (rally, formula, GT, everything), (3) whether you need a PC and monitors, (4) your available space. We'll put together a detailed quote with component breakdown, images, and specs. Most quotes go out within 24-48 hours. DM us or email thambu@racesims.in.",
-          "keywords": ["custom", "quote", "configure", "build", "bespoke", "personalise"]
-        },
-        {
-          "q": "Is GST included in your prices?",
-          "a": "Yes, all MRP prices we quote include 18% GST. We issue proper GST invoices from Racesims Solutions Pvt Ltd (GSTIN on file). If you're a business buying for commercial use, input tax credit applies. B2B quotes are also GST-inclusive.",
-          "keywords": ["GST", "tax", "invoice", "inclusive", "exclusive"]
-        },
-        {
-          "q": "Are there any hidden costs?",
-          "a": "No hidden costs. The kit price includes the rig, all components, assembly hardware, and basic cable management. Shipping is additional and depends on your city (we'll quote it upfront). Installation is included for customers in Chennai and Bangalore. For other cities, we provide detailed assembly instructions and video call support — our rigs are designed for bolt-together assembly, no welding or special tools needed. PC peripherals like keyboard, mouse, and headset are not included unless specified.",
-          "keywords": ["hidden", "extra", "additional", "surprise", "total cost"]
+          "q": "Can I get a discount?",
+          "a": "Let me connect you with our team for that conversation."
         }
       ]
     },
     {
-      "name": "Space & Setup",
-      "questions": [
+      "category": "Payment",
+      "faqs": [
+        {
+          "q": "How do I pay?",
+          "a": "100% advance via Razorpay — UPI, credit/debit card, or netbanking. We'll share the payment link once the quote is confirmed."
+        },
+        {
+          "q": "Do you offer EMI?",
+          "a": "Yes, via Razorpay. No-cost EMI on select credit cards subject to bank offers at the time of payment."
+        },
+        {
+          "q": "Can I pay on delivery?",
+          "a": "No, we're 100% advance. Razorpay covers UPI / card / netbanking / EMI so most customers go through quickly."
+        },
+        {
+          "q": "Is there a partial payment option?",
+          "a": "We're 100% advance as standard. For larger custom builds we can discuss — let me flag our team."
+        }
+      ]
+    },
+    {
+      "category": "Shipping and Delivery",
+      "faqs": [
+        {
+          "q": "How do you ship?",
+          "a": "Bluedart pan-India. Insured in transit. Double-wall box packaging for gear, pallet-wrap for rigs."
+        },
+        {
+          "q": "How long for delivery?",
+          "a": "In-stock gear ships in 24-48 hrs of payment clearing. Bluedart transit is typically 3-7 days. Custom rigs / PC builds add 10-14 working days before shipping."
+        },
+        {
+          "q": "VNM motion kit timeline?",
+          "a": "VNM motion is built to order — 3-4 weeks before it ships."
+        },
+        {
+          "q": "Do you ship outside India?",
+          "a": "Currently pan-India via Bluedart. International isn't standard — let me flag our team if you're outside India."
+        }
+      ]
+    },
+    {
+      "category": "Installation",
+      "faqs": [
+        {
+          "q": "Do you install?",
+          "a": "Yes, anywhere in India. ₹25,000 flat for installation plus actual travel (flight or train + stay). Or you can self-install — we include instructions and WhatsApp support."
+        },
+        {
+          "q": "Can I install it myself?",
+          "a": "Absolutely. The RaceSims GT Sim Cockpit + bundles are designed for home assembly. We'll guide you over WhatsApp if you hit anything tricky."
+        },
+        {
+          "q": "Install only in Chennai and Bangalore?",
+          "a": "No — we send install support anywhere in India. ₹25,000 plus travel costs."
+        },
+        {
+          "q": "Do you set up the software too?",
+          "a": "Yes, if you opt for installation. We'll configure the wheelbase software, sim profiles (iRacing, Assetto Corsa, Le Mans Ultimate, etc.), and monitor setup."
+        }
+      ]
+    },
+    {
+      "category": "Warranty and Support",
+      "faqs": [
+        {
+          "q": "What's the warranty?",
+          "a": "Conspit and our in-house rigs / seats — 1 year. VNM — 2 years. Everything else — 1 year. Covers manufacturing defects. Onsite if you're in Chennai, else return-to-base."
+        },
+        {
+          "q": "What does warranty cover?",
+          "a": "Manufacturing defects. Physical damage, water ingress, or modifications aren't covered."
+        },
+        {
+          "q": "How do I claim warranty?",
+          "a": "WhatsApp us with order details and what's happening. We'll diagnose, get you an RMA if needed. Return shipping to us is your cost, we cover return shipping back."
+        },
+        {
+          "q": "Do you service / repair?",
+          "a": "Yes, we handle service in-house. Out-of-warranty repairs are quoted based on parts + labour."
+        }
+      ]
+    },
+    {
+      "category": "Services and Coaching",
+      "faqs": [
+        {
+          "q": "Do you do driver coaching?",
+          "a": "Yes, paid MoTeC telemetry coaching — ₹10,000 per session. You send laps, we analyze braking, throttle, steering traces and racecraft. Written + voice feedback."
+        },
+        {
+          "q": "Can I book a coaching session?",
+          "a": "Yes — ₹10,000 per MoTeC coaching session. Let me connect you with Thambu to schedule."
+        },
+        {
+          "q": "Do you offer a full driver development program?",
+          "a": "We're building one. Not launched yet, but happy to flag your interest so we ping you when it's live."
+        },
+        {
+          "q": "Do real race teams use your sims?",
+          "a": "Yes. We've built a RaceSims sim at Arka Motorsports' Coimbatore facility where their championship drivers train."
+        }
+      ]
+    },
+    {
+      "category": "B2B and Corporate",
+      "faqs": [
+        {
+          "q": "Can you build for corporate events?",
+          "a": "Yes, we build enclosed commercial simulators for malls, arcades, events, brand activations. Custom quote — let me connect you with our team."
+        },
+        {
+          "q": "Do you do bulk orders?",
+          "a": "Yes. For bulk / corporate, let me flag our team for a proper quote."
+        },
+        {
+          "q": "Can you brand the sim with our logo?",
+          "a": "Yes, for B2B we handle custom branding, wraps, enclosure finishes. Let's get on a call — I'll connect you with our team."
+        }
+      ]
+    },
+    {
+      "category": "Competitive and Positioning",
+      "faqs": [
+        {
+          "q": "Why RaceSims over other Indian sim racing retailers?",
+          "a": "Race-engineer founder. Thambu's day job is race engineer for Arka Motorsports — 123+ championship titles since 1987. Every component is specced like a real race team, not a retail shop. Real championship drivers train on RaceSims sims."
+        },
+        {
+          "q": "Is Logitech G29 enough?",
+          "a": "Solid starting point. But direct drive is a different universe — force feedback precision and instant response. Bit like comparing a bicycle to a motorcycle."
+        },
+        {
+          "q": "Is sim racing actually useful for real track driving?",
+          "a": "Huge. F1 teams spend millions on simulators. Muscle memory, braking points, throttle control, racecraft — all transfers. Our founder is a race engineer specifically because of the overlap."
+        },
+        {
+          "q": "Direct drive vs belt drive?",
+          "a": "Direct drive gives you 1:1 feedback — no belt flex, no lag, full force transmission. Once you try it, belt feels like it's wrapped in cotton."
+        },
+        {
+          "q": "Is 8Nm enough for me?",
+          "a": "For entry / casual racing, yes. If you're coming from a belt wheel, 8Nm feels huge already. If you're competitive or pushing formula / GT seriously, 12Nm or 20Nm gives you more detail at the limit."
+        },
+        {
+          "q": "Triple monitor vs ultrawide?",
+          "a": "Triple gives true peripheral vision and correct geometry — best for competitive. Ultrawide is cleaner and one monitor to power. The GIGABYTE CO49DQ 49\" ultrawide is a great single-screen option at ₹1,34,500."
+        },
+        {
+          "q": "Can I try before buying?",
+          "a": "Yes — we do Chennai demos by appointment. Our dealer partners in Bangalore, Hyderabad, Kochi can also demo locally."
+        }
+      ]
+    },
+    {
+      "category": "Dealers and Local Support",
+      "faqs": [
+        {
+          "q": "Do you have dealers outside Chennai?",
+          "a": "Yes. Bangalore — SimRacing HQ (Shreyas) and Racing Rigs (Lakshay). Hyderabad — Racingpoint Esports (Uday). Kochi — Niyusuki (Vishal). Plus Lights Out Sim Racing (Shashank). Or ship direct via Bluedart."
+        },
+        {
+          "q": "Who do I talk to in Bangalore?",
+          "a": "SimRacing HQ — Shreyas. Or Racing Rigs — Lakshay. Both carry our range."
+        },
+        {
+          "q": "Who do I talk to in Hyderabad?",
+          "a": "Racingpoint Esports — Uday."
+        },
+        {
+          "q": "Who do I talk to in Kochi?",
+          "a": "Niyusuki — Vishal."
+        }
+      ]
+    },
+    {
+      "category": "Space and Setup",
+      "faqs": [
         {
           "q": "How much space do I need?",
-          "a": "Minimum footprint by config:\n\n- **Single screen rig:** 1.5m x 1.2m (about the size of a single bed)\n- **Triple screen rig:** 2.0m x 1.5m (needs to be wider for the side monitors)\n- **Motion rig:** 2.5m x 2.0m (actuators need clearance on all sides)\n\nHeight: 1.5m for a standard rig, 2.0m+ for motion (the cockpit tilts). If you're tight on space, a single ultrawide setup is your friend. We've installed rigs in bedrooms, home offices, and dedicated sim rooms. Just make sure you can get through the door with the rig — our GT Pro Rig ships disassembled and assembles inside the room.",
-          "keywords": ["space", "room", "dimensions", "size", "fit", "area", "footprint"]
+          "a": "Single-screen rig fits in about 1.5m × 1.2m. Triple-screen needs ~2m wide. Happy to help you measure for your room."
         },
         {
-          "q": "How noisy is a sim racing setup?",
-          "a": "The direct drive wheelbase itself is nearly silent — that's one of the advantages of DD over belt/gear drive. The main noise source is you (screaming into Turn 1) and potentially the pedals if you're really stomping the brake. A motion platform adds servo motor hum. The PC fans are the most consistent noise source, and our builds use 240mm AIO coolers specifically to keep fan noise down. In terms of neighbour-friendliness: a standard rig is quieter than a treadmill. A motion rig is closer to a washing machine on spin cycle. Bass shakers can transmit through floors — consider a rubber mat for apartments.",
-          "keywords": ["noise", "loud", "quiet", "sound", "neighbours", "apartment"]
+          "q": "Can I fit it in a bedroom?",
+          "a": "Yes, most setups fit in a corner of a bedroom. Entry bundle + single screen + chair is maybe 1.5m × 1.2m footprint."
         },
         {
-          "q": "What power do I need?",
-          "a": "A full sim racing setup (rig + PC + monitors) draws about 600-900W at peak. That's a single 15A wall socket in India. The PC PSU is 750-850W but rarely draws full load. The wheelbase draws 100-200W. Monitors add 50-150W depending on size and count. No special electrical work needed — just a good quality UPS/surge protector. For B2B installations running multiple units, we do recommend a dedicated 15A circuit per simulator.",
-          "keywords": ["power", "electricity", "watts", "socket", "plug", "electrical"]
-        },
-        {
-          "q": "Do I need special flooring?",
-          "a": "For a standard rig on a hard floor (tile, marble, concrete): no special flooring needed. The GT Pro Rig has adjustable feet that level on any surface. On wooden flooring, we recommend a rubber mat underneath to prevent scratching and dampen any vibration. For motion platforms: a rubber anti-vibration mat is strongly recommended, especially in apartments. The actuators transmit force through the floor. Carpet works fine for standard rigs but can make a motion platform less stable — hard floor is ideal for motion.",
-          "keywords": ["floor", "flooring", "carpet", "tile", "mat", "vibration"]
-        },
-        {
-          "q": "Does it need ventilation or AC?",
-          "a": "A gaming PC puts out significant heat — about 500-700W of thermal energy at load. In a small closed room, that adds up fast. We recommend AC or at least good airflow for any room with a sim rig. The good news: you're sitting still, so the AC doesn't need to work as hard as if you were exercising. For B2B installations (enclosed commercial simulators like our Araya Airport units), we factor ventilation into the enclosure design.",
-          "keywords": ["ventilation", "AC", "heat", "cooling", "temperature", "hot"]
-        },
-        {
-          "q": "Can I set up in a bedroom or living room?",
-          "a": "Yes, and many of our customers do. A single-screen rig fits in a 1.5m x 1.2m footprint — that's one corner of a bedroom. The GT Pro Rig doesn't need to be bolted to the floor, so it's furniture-grade portable. Just consider: (1) you'll want the room dark for immersion, (2) the PC generates heat, and (3) force feedback can be felt through the floor in light construction buildings. If space sharing is the concern, our single monitor setup with a recliner seat doubles as a pretty comfortable regular chair when you're not racing.",
-          "keywords": ["bedroom", "living room", "apartment", "home", "indoor", "room"]
-        },
-        {
-          "q": "Can the rig be moved or disassembled?",
-          "a": "Yes. The GT Pro Rig is entirely bolt-together — M8 T-nuts and corner brackets. No welding, no permanent fasteners. A full disassembly takes about 45 minutes, reassembly about 90 minutes. Everything packs into the original carton box if you need to ship or store it. We've had customers move rigs between cities. The heaviest single component is the racing seat (~15kg). The whole rig weighs about 35-40kg without the seat and peripherals.",
-          "keywords": ["move", "disassemble", "portable", "relocate", "transport", "weight"]
-        }
-      ]
-    },
-    {
-      "name": "Shipping & Installation",
-      "questions": [
-        {
-          "q": "Where do you ship?",
-          "a": "All of India. We ship from Chennai. Most components come in sturdy packaging (aluminium profiles are nearly indestructible, electronics are factory-packed). For complete kits, we use professional logistics partners with insurance. We've delivered to Chennai, Bangalore, Mumbai, Delhi, Coimbatore, Hyderabad, and more. For international enquiries, reach out — we can work something out but import duties on the receiving end would apply.",
-          "keywords": ["ship", "deliver", "city", "location", "where", "India", "international"]
-        },
-        {
-          "q": "How long does delivery take?",
-          "a": "It depends on what's in stock vs what needs to be imported:\n\n- **In-stock components:** 3-7 days via courier\n- **Custom PC builds:** 7-10 days (component sourcing + assembly + testing)\n- **Full kits (in-stock):** 7-14 days including assembly and shipping\n- **Kits requiring import:** 4-8 weeks (international shipping + customs clearance + assembly)\n- **B2B/commercial builds:** 3 months from order confirmation (custom fabrication + import + installation)\n\nWe'll give you a specific timeline when you order. The bottleneck is usually customs clearance for imported components.",
-          "keywords": ["delivery", "time", "how long", "ship", "days", "weeks", "timeline"]
-        },
-        {
-          "q": "Is installation included?",
-          "a": "For customers in Chennai and Bangalore: yes, we include on-site installation and setup. Our technician (Abdul, who comes from an actual racing team background with Arka Motorsports) handles everything — rig assembly, component mounting, PC setup, software configuration, and force feedback calibration. For other cities: we provide detailed assembly instructions, video guides, and live video call support during your assembly. The GT Pro Rig is designed for DIY assembly — it's bolt-together, no special tools beyond standard Allen keys and spanners.",
-          "keywords": ["installation", "setup", "assemble", "build", "help", "technician"]
-        },
-        {
-          "q": "What cities do you cover for installation?",
-          "a": "Direct installation: Chennai (home base) and Bangalore (we have a field installer there). Coimbatore is covered through our relationship with Arka Motorsports and our dealer Raghav. For other cities, we ship the rig and support you through video call assembly. We're expanding our dealer network — we have partners in Bangalore (Sim Racing HQ / Trayas and Racing Rigs / Lakshay) who can help with local installations. If you're in Mumbai, Delhi, or Hyderabad and want on-site installation, reach out — we may be able to arrange it depending on order size.",
-          "keywords": ["cities", "Chennai", "Bangalore", "Mumbai", "Delhi", "Hyderabad", "Coimbatore", "coverage"]
-        },
-        {
-          "q": "What about warranty?",
-          "a": "Warranty varies by brand:\n\n- **Conspit products:** Manufacturer warranty (typically 1-2 years). We handle warranty claims in India as the authorised distributor.\n- **VNM products:** Manufacturer warranty. We coordinate with VNM Vietnam directly.\n- **Simagic:** Standard manufacturer warranty. We're the exclusive South India distributor, so claims go through us.\n- **RaceSims GT Pro Rig:** We stand behind our own products — structural issues are covered. The aluminium frame is built to industrial standards and we haven't had a frame failure yet.\n- **Custom PCs:** Individual component warranties (GPU, CPU, motherboard etc.) from respective manufacturers, typically 3-5 years.\n\nKeep your GST invoice — it's your warranty proof.",
-          "keywords": ["warranty", "guarantee", "covered", "claim", "defect", "years"]
-        },
-        {
-          "q": "Is shipping insured?",
-          "a": "Yes. All kits and high-value components ship with transit insurance. We've had zero damage incidents on kit shipments so far — aluminium extrusion profiles are incredibly robust, and electronics are double-boxed in factory packaging. If anything arrives damaged, we replace it. Simple as that. We use our own courier network and track every shipment.",
-          "keywords": ["insurance", "damage", "shipping", "courier", "broken", "transit"]
-        },
-        {
-          "q": "Can I pick up from your location?",
-          "a": "Yes, you're welcome to pick up from Chennai. Actually, we encourage it for full kit buyers — you get to see the rig assembled, do a test drive, and we walk you through everything in person. It also saves on shipping costs for large orders. Just coordinate pickup timing with us so we have everything ready.",
-          "keywords": ["pickup", "collect", "Chennai", "visit", "showroom"]
-        }
-      ]
-    },
-    {
-      "name": "B2B & Commercial",
-      "questions": [
-        {
-          "q": "Do you do commercial/B2B installations?",
-          "a": "Yes, and this is a major focus for us. We build fully enclosed, unmanned commercial simulators — the kind you'd see in an airport lounge or a mall entertainment zone. Our Araya Airport project is the reference: enclosed cockpit with branded cladding, kiosk-mode software with auto-reset between users, remote management (zero staff needed), and commercial-licensed Assetto Corsa. Per-unit pricing is Rs.6.86-6.96L depending on display config. We handle everything from design to installation to annual maintenance.",
-          "keywords": ["B2B", "commercial", "business", "corporate", "professional", "bulk"]
-        },
-        {
-          "q": "What kind of commercial venues are you targeting?",
-          "a": "Four main verticals:\n\n1. **Airport lounges** — our Araya Airport project is the template. Premium entertainment for passengers with time to kill.\n2. **Shopping malls** — entertainment zones, gaming arcades, brand activation areas.\n3. **Racing academies** — driver training with motion platforms. We work with real racing teams, so the credibility is built in.\n4. **Corporate events/team building** — branded simulators for product launches, corporate entertainment, exhibitions.\n\nWe also do hotel lobbies, sports bars, and esports venues. If people walk past it, they'll stop and want to drive it.",
-          "keywords": ["venue", "mall", "airport", "hotel", "corporate", "arcade", "entertainment"]
-        },
-        {
-          "q": "How does the pricing model work for commercial clients?",
-          "a": "Per-unit purchase, not rental. You buy the simulator, you own it. A fully enclosed unit with PC, display, sim gear, cockpit, and branding-ready cladding runs Rs.6.86-6.96L per unit. We offer annual maintenance contracts (AMC) that cover hardware servicing, software updates, and remote monitoring. The AMC is quoted separately. For multi-unit orders, we can discuss volume pricing. The revenue model for the venue is theirs to set — most charge per session (typically Rs.200-500 for 15-20 minutes).",
-          "keywords": ["pricing model", "rental", "buy", "own", "revenue", "AMC", "maintenance"]
-        },
-        {
-          "q": "Can you brand the simulators with our company logo?",
-          "a": "Absolutely. That's built into the design. Our commercial cockpits feature modular exterior cladding panels (Rs.90K per unit) that are wrap-ready — your branding, your colours, your logo. Think of it like a branded kiosk. We handle the structural design, you handle the graphic design (or we can connect you with our agency). The cladding is removable and replaceable, so seasonal campaigns or rebrand are easy.",
-          "keywords": ["brand", "logo", "custom", "cladding", "wrap", "design", "branding"]
-        },
-        {
-          "q": "What's the lead time for a commercial installation?",
-          "a": "3 months from order confirmation. That covers: component import and customs clearance (4-6 weeks), cockpit fabrication and cladding (2-3 weeks), PC build and software setup (1 week), on-site installation and testing (3-5 days). For multi-unit orders, the timeline may extend slightly for the first batch, but subsequent units are faster since tooling is already done. We provide a detailed project timeline at the quoting stage.",
-          "keywords": ["lead time", "how long", "delivery", "timeline", "commercial"]
-        },
-        {
-          "q": "Do you provide ongoing maintenance for commercial units?",
-          "a": "Yes, and this is critical for unmanned installations. We offer annual maintenance contracts (AMC) that include: regular hardware inspections, remote monitoring and diagnostics, software updates, component replacement for wear items (pedal springs, brake rubbers, seat bolsters), and priority support with defined response times. The simulators run Assetto Corsa in kiosk mode with auto-reset — they're designed to take abuse from the public all day. Parts that wear fastest: brake pedal rubber, steering wheel rim surface, and seat bolsters. All replaceable.",
-          "keywords": ["maintenance", "AMC", "service", "support", "ongoing", "repair"]
-        },
-        {
-          "q": "Can you set up simulators for a corporate event?",
-          "a": "Yes. We do corporate event installations — product launches, team building days, exhibitions, sports events. We can deploy 1-10 units depending on the event. These can be branded for the event sponsor. The setup typically includes our standard rigs (not enclosed) for portability, with quick setup/teardown. For IPL-level events, we've got a contact list across all 10 teams ready to go. Pricing depends on duration, number of units, and whether it's rental or purchase. DM us with event details and we'll put together a proposal.",
-          "keywords": ["event", "corporate", "team building", "exhibition", "activation", "rental"]
-        },
-        {
-          "q": "Do you work with racing academies?",
-          "a": "This is our sweet spot. Our founder is literally a race engineer for Arka Motorsports — we're installing a simulator at their facility in Coimbatore for driver development. We build training simulators with motion platforms that racing academies use to develop drivers' racecraft, practice track layouts, and analyse driving data through telemetry. The motion kit (Rs.11L+) with a 32Nm wheelbase is the academy spec. We can also provide telemetry coaching using the same MoTeC analysis tools used in real racing.",
-          "keywords": ["racing academy", "driver training", "karting", "professional", "coaching"]
-        }
-      ]
-    },
-    {
-      "name": "Sim-to-Real Training",
-      "questions": [
-        {
-          "q": "How does sim racing actually help real-world drivers?",
-          "a": "As a race engineer who works with real racing drivers, here's what transfers:\n\n1. **Track learning** — drivers learn brake points, racing lines, and corner entries for tracks they haven't visited. Way cheaper than track rentals.\n2. **Racecraft** — wheel-to-wheel racing, overtaking, defending, tyre management. The decision-making is identical.\n3. **Setup understanding** — drivers learn how anti-roll bars, spring rates, and dampers affect car balance.\n4. **Consistency** — the sim gives you unlimited laps. Consistency is built through repetition.\n5. **Data literacy** — learning to read telemetry (brake traces, throttle application, steering angle) is the same skill in sim and real.\n\nWhat doesn't transfer well: physical fitness and actual g-force tolerance. Everything else? Nearly identical.",
-          "keywords": ["sim to real", "real driving", "training", "transfer", "help"]
-        },
-        {
-          "q": "Which racing series actually use simulators?",
-          "a": "All of them, seriously. F1 teams spend millions on their simulators — every race weekend starts and ends in the sim. IndyCar, WEC, GT World Challenge, Formula E — all use sims for driver prep. In India, teams in the Indian National Rally Championship, the ITC series, and karting championships are starting to adopt sim training. Arka Motorsports (India's most decorated team, 123+ titles) is building a sim training setup with us right now. The trend is clear: teams that don't use sims are at a disadvantage.",
-          "keywords": ["F1", "racing series", "professional", "which teams", "championship"]
-        },
-        {
-          "q": "Can you compare sim telemetry with real-world data?",
-          "a": "Yes, and this is something genuinely unique to RaceSims. We're actively doing CAN bus telemetry R&D — pulling real data from rally cars (throttle position, brake pressure, steering angle, suspension travel) through the car's CAN bus and comparing it with the same parameters from the sim. The overlap on brake pressure curves and throttle application is remarkably close on well-configured sims. This is the bridge between simulator and reality that no other Indian sim racing company offers, because no one else has access to both the engineering tools and the real racing data.",
-          "keywords": ["telemetry", "data", "CAN bus", "comparison", "real vs sim", "analysis"]
-        },
-        {
-          "q": "Do you offer driver development programs?",
-          "a": "Not a formal program yet, but it's on the roadmap. Right now, we offer: (1) simulator setup and calibration optimised for specific tracks and cars, (2) telemetry analysis sessions using MoTeC (the same software used by F1 teams), and (3) access to our race engineer expertise for setup tuning. Once the ARKA simulator installation is complete, we'll be running structured driver development sessions through the Arka Motorsports network. If you're a karting driver or aspiring national-level racer, get in touch — we can put together a training plan.",
-          "keywords": ["driver development", "coaching", "program", "training plan", "karting"]
-        },
-        {
-          "q": "What's MoTeC and why does it matter?",
-          "a": "MoTeC is the gold standard data analysis software used across professional motorsport — F1, WEC, IndyCar, you name it. It lets you overlay laps, compare braking points, analyse throttle traces, and find time in places you didn't know you were losing it. We use MoTeC for sim telemetry analysis, which means the skills a driver builds on our simulator translate directly to real-world data analysis. If your engineer uses MoTeC at the track (and they probably do), your sim training with us speaks the same language.",
-          "keywords": ["MoTeC", "data analysis", "telemetry", "software", "lap analysis"]
-        },
-        {
-          "q": "Is sim racing good training for karting?",
-          "a": "Extremely. Karting is all about precision — the margins are tiny, and you need to be consistent lap after lap. Sim racing builds exactly those skills: hitting the same braking point every time, carrying the right speed through corners, managing tyre grip. Many karting academies worldwide now include sim training. The force feedback from our 12Nm+ wheelbases is enough to teach a young driver how a kart responds to inputs. We recommend the Rally Setup tier for karting training — it's the right balance of feedback quality and budget for developing drivers.",
-          "keywords": ["karting", "kart", "young driver", "junior", "training", "academy"]
-        },
-        {
-          "q": "How accurate are the physics in modern sims?",
-          "a": "From a race engineer's perspective: surprisingly accurate. Assetto Corsa and iRacing model tyre physics using complex mathematical models (Pacejka magic formula variants) that calculate grip based on temperature, pressure, slip angle, and load. The brake feel, weight transfer, and even tyre degradation patterns are close to what we see in real telemetry data. Are they perfect? No — aero effects, tyre construction differences, and suspension compliance are simplified. But for driver training purposes, the physics are accurate enough that improvements in the sim genuinely transfer to the real car. The limiting factor is usually the hardware, not the software — which is why good pedals and a strong wheelbase matter so much.",
-          "keywords": ["physics", "accuracy", "realistic", "simulation", "tyre model", "accurate"]
-        }
-      ]
-    },
-    {
-      "name": "Maintenance & Support",
-      "questions": [
-        {
-          "q": "What kind of warranty do you provide?",
-          "a": "Every product carries the manufacturer's warranty — Conspit (1-2 years), VNM, Simagic, Moza, Fanatec all have their own terms. As the authorised Indian distributor/partner, warranty claims go through us — you don't have to deal with overseas factories. Our own products (GT Pro Rig, monitor stands, mounts) are warranted for structural defects. Custom PC builds carry individual component warranties (GPUs 3-5 years, motherboards 3 years, PSU 5-10 years). Keep your invoice — that's your warranty document.",
-          "keywords": ["warranty", "guarantee", "how long", "covered", "terms"]
-        },
-        {
-          "q": "What typically breaks or wears out?",
-          "a": "In order of frequency:\n\n1. **Pedal rubbers/springs** — these are wear items by design. Replace every 6-12 months of heavy use. Cheap and easy swap.\n2. **Steering wheel rim grip** — suede/leather wears with use. Can be re-wrapped.\n3. **Seat bolsters** — if you move in and out a lot (commercial use), the side bolsters compress. Replacement seats available.\n4. **USB cables** — can get stressed from motion platforms. Strain relief and proper routing prevents this.\n5. **Wheelbases and motors** — these are built like industrial servos. We've had zero motor failures in our deployed units.\n\nThe aluminium rig frame doesn't wear out. Full stop. That's the beauty of extrusion profiles.",
-          "keywords": ["break", "wear", "fail", "common issue", "problem", "replace"]
-        },
-        {
-          "q": "Can I get spare parts easily?",
-          "a": "Yes. We keep common wear items (pedal rubbers, springs, QR adapters, cables, brackets) in stock in Chennai. For brand-specific components (Conspit motor, VNM actuator, Simagic PCB), we source from the manufacturer — delivery typically 2-4 weeks depending on the part. Our GT Pro Rig uses standard 40x80 and 40x40 T-slot profiles and M8 hardware — these are industrial standard parts available from any aluminium extrusion supplier in India if you need something immediately. We provide a parts list with every rig sale.",
-          "keywords": ["spare parts", "replacement", "order", "buy parts", "stock"]
-        },
-        {
-          "q": "How do I clean and maintain my rig?",
-          "a": "Simple routine:\n\n- **Aluminium frame:** Wipe with a damp cloth. These profiles are anodised — they don't corrode or stain.\n- **Pedals:** Blow out dust with compressed air monthly. Check pedal spring tension quarterly.\n- **Wheelbase:** Keep the fan intake clear of dust. Wipe the motor housing. No lubrication needed — these are brushless motors.\n- **Steering wheel:** If leather, use leather conditioner every 2-3 months. If suede, brush with a suede brush.\n- **PC:** Clean dust filters monthly. Re-paste the CPU/GPU every 2-3 years.\n- **Monitors:** Screen cleaner and microfibre cloth.\n\nThe most important maintenance is keeping dust out of electronics. If you're in a dusty environment, consider a rig cover when not in use.",
-          "keywords": ["clean", "maintain", "care", "dust", "upkeep", "routine"]
-        },
-        {
-          "q": "Do you provide software support?",
-          "a": "Yes. We help with:\n\n- **Initial setup:** Force feedback calibration for your specific wheelbase in each sim (the FFB settings that feel right are different in ACC vs iRacing vs F1).\n- **Driver/firmware updates:** We'll guide you through wheelbase and pedal firmware updates when manufacturers release them.\n- **Sim configuration:** Optimal graphics settings for your PC and display setup, FOV calculator setup for correct perspective.\n- **Kiosk mode (B2B):** For commercial installations, we configure auto-start, auto-reset, and remote monitoring.\n\nOngoing software support is via WhatsApp/phone. We don't leave you hanging after the sale.",
-          "keywords": ["software", "support", "setup", "configuration", "calibration", "FFB settings"]
-        },
-        {
-          "q": "What happens if something stops working?",
-          "a": "Step 1: Message us on WhatsApp with what's happening. Most issues (FFB not working, pedals not detected, monitor not displaying) are software/connection issues we can troubleshoot over a video call in 15 minutes. Step 2: If it's a hardware fault, we determine if it's under warranty. If yes, we handle the claim — replacement or repair at no cost. If it's out of warranty, we quote the replacement part and can either ship it to you or arrange a technician visit (Chennai/Bangalore). Average resolution time: 24-48 hours for software, 1-2 weeks for hardware replacement.",
-          "keywords": ["broken", "not working", "problem", "fix", "help", "issue", "troubleshoot"]
-        },
-        {
-          "q": "How often do firmware updates come out?",
-          "a": "Varies by brand. Conspit and Simagic release firmware updates every few months — usually improving FFB algorithms, adding compatibility with new sims, or fixing minor bugs. VNM updates their motion software periodically. Moza is quite active with updates. We'll notify you when a relevant update drops and whether it's worth installing (sometimes the latest firmware isn't the best — we test before recommending). Your wheelbase and pedals connect via USB, so updates are just a download and flash.",
-          "keywords": ["firmware", "update", "software update", "new version", "flash"]
-        }
-      ]
-    },
-    {
-      "name": "Comparisons",
-      "questions": [
-        {
-          "q": "Why should I buy from RaceSims instead of importing parts myself?",
-          "a": "Five reasons:\n\n1. **Import duty is ~31%.** You're paying it either way, but we have established supply chains and customs clearance processes. You'll spend weeks figuring out HS codes and customs brokers.\n2. **Warranty.** If a motor fails on a self-import, you're shipping it back to China at your cost. With us, warranty is handled in India.\n3. **Integration.** A wheelbase, pedals, rig, and PC from four different countries don't magically work together. We test and calibrate every build.\n4. **The rig itself.** Our GT Pro Rig is designed and manufactured in-house. You can't buy it overseas.\n5. **Race engineer support.** You're not getting setup advice, telemetry coaching, or FFB calibration from AliExpress.\n\nThe total cost of self-import + your time + risk is often higher than our kit price. And you don't get the engineering.",
-          "keywords": ["why RaceSims", "import myself", "self build", "DIY", "buy direct", "AliExpress"]
-        },
-        {
-          "q": "Why Conspit over Fanatec or Logitech?",
-          "a": "Different leagues entirely.\n\n**Logitech G29 (~Rs.25-30K):** Belt-driven, plastic construction, 2.2Nm of force. Fine for casual gaming. Not sim racing hardware — it's a gaming peripheral.\n\n**Fanatec CSL DD (Rs.72K for 5Nm):** Good entry to direct drive but limited torque and ecosystem lock-in. The ClubSport DD+ at 15Nm is Rs.2.06L — just the wheelbase.\n\n**Conspit Ares 12Nm (Rs.65K):** 12Nm direct drive, industrial build quality, CE/FCC/ROHS certified. More torque than the CSL DD at a lower price. The 18Nm Platinum at Rs.88K beats the ClubSport DD+ at half the price.\n\nConspit is a professional-grade brand that most Indian buyers haven't heard of because they don't spend on YouTube sponsorships. What they spend on is engineering. As someone who tests these on a daily basis alongside real car data, the Conspit feedback quality-per-rupee is unmatched.",
-          "keywords": ["Conspit", "vs", "Fanatec", "Logitech", "compare", "which is better", "brand"]
-        },
-        {
-          "q": "How does RaceSims compare to Virtual Racing Hub (VRH)?",
-          "a": "We respect VRH — they've built a solid community and retail presence. But the positioning is fundamentally different:\n\n- **VRH** is motorsport-enthusiast-led. Great for the enthusiast community, Reels, and retail experience.\n- **RaceSims** is race-engineer-led. Our founder works with India's most decorated racing team (123+ championship titles). We build for drivers, racing academies, and people who want their sim to teach them something.\n\nIf you want a cool gaming setup and a great unboxing experience, VRH does that well. If you want a simulator that a race engineer has specced, calibrated, and will support with telemetry coaching — that's us. Different products for different people.",
-          "keywords": ["VRH", "Virtual Racing Hub", "competitor", "compare", "vs", "difference"]
-        },
-        {
-          "q": "Why does 'professional grade' matter for a home setup?",
-          "a": "Because the hardware IS the experience. A professional-grade wheelbase doesn't just have more torque — it has higher resolution feedback. You feel details that a consumer-grade base smooths over: the exact moment a tyre starts to slip, the texture of a kerb, the weight shift under trail braking. Load cell pedals with a hydraulic feel give you muscle memory that transfers to a real car. An aluminium extrusion rig doesn't flex under hard braking, so every Newton of force from the wheelbase reaches your hands.\n\nA consumer-grade setup is fun. A professional-grade setup makes you faster. If you're spending Rs.3L+, the difference between consumer and pro is the difference between entertainment and training. Get the good stuff.",
-          "keywords": ["professional", "grade", "quality", "worth it", "premium", "consumer vs pro"]
-        },
-        {
-          "q": "Conspit vs VNM — which brand should I choose?",
-          "a": "They serve different niches in our lineup:\n\n**Conspit** is our primary brand for wheelbases (10-20Nm), pedals, and steering wheels. Excellent build quality, full CE/FCC/ROHS certification, and a wide product range. Best for: most home and pro setups.\n\n**VNM** is our go-to for high-torque applications (25-32Nm), motion platforms, and budget-conscious builds. Their DD Xtreme 32Nm (~Rs.1.06L) is the most powerful wheelbase we carry. Best for: motion rigs, racing academy builds, and anyone who wants maximum force feedback.\n\nFor a standard home setup, Conspit. For a motion rig or academy build, VNM. For the absolute dream build, Conspit wheelbase + VNM motion platform. They complement each other perfectly.",
-          "keywords": ["Conspit vs VNM", "compare brands", "which brand", "supplier"]
-        },
-        {
-          "q": "Is Simagic worth considering?",
-          "a": "Absolutely. Simagic is a strong mid-to-premium brand, and we're the South India exclusive distributor (128 SKUs). Their Alpha line runs from 9Nm to 23Nm, and the build quality is excellent. The FX Pro formula wheel with display is a standout product. Our Pro Triple Screen kit uses a Simagic Alpha wheelbase. The advantage of Simagic through us: local warranty, local stock (as we build inventory), and the backing of an authorised distributor. The Alpha EVO lineup is particularly good value — competitive with Fanatec but with better force feedback resolution in our testing.",
-          "keywords": ["Simagic", "Alpha", "worth it", "good", "recommend"]
-        },
-        {
-          "q": "Should I start cheap and upgrade, or buy the best from the start?",
-          "a": "Race engineer's honest answer: if your budget allows, buy the best pedals and wheelbase you can afford on day one, and economise on the display. Pedals are the single biggest performance differentiator — going from potentiometer to load cell will make you 1-2 seconds a lap faster overnight. A good wheelbase gives you information about the car that you literally cannot get any other way. But a single monitor vs triples? That's about immersion, not speed.\n\nOur practical recommendation: the Mid Kit (Rs.4.51L) is the sweet spot. 12Nm DD, good load cell pedals, competent PC. If you go Entry, you'll want to upgrade the pedals within 6 months. If you go Pro, you're getting the endgame — which is great if you can swing it.",
-          "keywords": ["start cheap", "upgrade path", "best value", "worth investment", "budget vs premium"]
-        },
-        {
-          "q": "Playseat vs aluminium extrusion rig — which should I get?",
-          "a": "Depends entirely on your wheelbase torque and future plans.\n\n**Playseat Challenge (Rs.39K):** Foldable, lightweight, space-efficient. Fine for 5Nm wheelbases. Will flex noticeably with anything above 8Nm. Good for casual use or when space is genuinely limited.\n\n**Our GT Pro Rig (Rs.38.5K):** Industrial aluminium extrusion. Zero flex up to 32Nm. Infinitely adjustable. Takes any wheelbase, pedals, or monitor setup you throw at it. Heavier and doesn't fold.\n\nThe Playseat costs the same as our GT Pro Rig but is designed for entry-level hardware. If you're buying a direct drive wheelbase (10Nm+), the Playseat will flex and rob you of the feedback you paid for. The rig IS the foundation — don't build a sports car on a bicycle frame.",
-          "keywords": ["Playseat", "vs", "extrusion", "rig", "frame", "cockpit", "which"]
+          "q": "Does it fold away?",
+          "a": "Our GT Sim Cockpit isn't a folding design — it's rigid aluminium for solid feel. We do offer leveling castor wheels (₹5,000) so you can roll it aside when not in use."
         }
       ]
     }

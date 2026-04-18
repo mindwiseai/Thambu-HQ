@@ -38,7 +38,7 @@ We're targeting a manufacturer decision within 30-45 days. Happy to schedule a c
 Looking forward to hearing from you.
 
 Warm regards,
-Aishwarya Chandrasekhar
+Aishwarya Chandrasekaran
 [your phone]
 [your email]
 
@@ -80,7 +80,7 @@ We're targeting a manufacturer decision within 30-45 days. Happy to schedule a c
 Looking forward to hearing from you.
 
 Warm regards,
-Aishwarya Chandrasekhar
+Aishwarya Chandrasekaran
 [your phone]
 [your email]
 

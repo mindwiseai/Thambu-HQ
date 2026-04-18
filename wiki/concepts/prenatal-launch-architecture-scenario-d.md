@@ -8,7 +8,7 @@ tags: [launch, roadmap, scenario-d, couples-bundle, prenatal]
 
 # The Edit Launch Architecture — Scenario D (LOCKED 2026-04-14)
 
-[[aishwarya-chandrasekhar|Aishu]] selected this launch architecture on 2026-04-14, driven by the [[prenatal-brand-manifesto-couples-equality|couples-equality manifesto]]. Replaces the earlier [[prenatal-launch-roadmap|simple prenatal-only roadmap]].
+[[aishwarya-chandrasekaran|Aishu]] selected this launch architecture on 2026-04-14, driven by the [[prenatal-brand-manifesto-couples-equality|couples-equality manifesto]]. Replaces the earlier [[prenatal-launch-roadmap|simple prenatal-only roadmap]].
 
 ## Day 1 launch SKUs
 
@@ -63,7 +63,7 @@ The 2026-04-14 manufacturer emails to [[tanishq-lifecare|Tanishq]] and [[brukem-
 
 - [[prenatal-brand-manifesto-couples-equality]] — the manifesto this architecture follows from
 - [[prenatal-brand-name-the-edit]] — the brand
-- [[aishwarya-chandrasekhar]] — selected this architecture
+- [[aishwarya-chandrasekaran]] — selected this architecture
 - [[prenatal-launch-roadmap]] — superseded by this page
 - [[tanishq-lifecare]] / [[brukem-life-care]] — manufacturers being evaluated against this expanded scope
 - [[prenatal-fsdu-regulatory]] — applies to Prenatal + Preconception Her

@@ -1,7 +1,7 @@
 # THE EDIT
 ## The wellness brand India was missing.
 
-**Founder:** Aishwarya Chandrasekhar
+**Founder:** Aishwarya Chandrasekaran
 **Date:** April 2026
 **Status:** Pre-launch strategy — locked
 
@@ -202,4 +202,4 @@ This is a Rs.500 Cr+ brand trajectory, not a Rs.50 Cr niche. The category is lar
 
 *Prepared for: gynaecologist co-founder candidates, founding advisors, capital partners, and the founder's own reference.*
 
-*Aishwarya Chandrasekhar — April 2026*
+*Aishwarya Chandrasekaran — April 2026*

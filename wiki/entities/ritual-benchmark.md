@@ -7,7 +7,7 @@ tags: [company, benchmark, prenatal, us-brand]
 
 # Ritual
 
-US-based prenatal supplement brand. The primary benchmark for [[aishwarya-chandrasekhar|Aishu's]] [[domains/prenatal/_index|prenatal brand]].
+US-based prenatal supplement brand. The primary benchmark for [[aishwarya-chandrasekaran|Aishu's]] [[domains/prenatal/_index|prenatal brand]].
 
 ## Key facts
 
@@ -35,6 +35,6 @@ US-based prenatal supplement brand. The primary benchmark for [[aishwarya-chandr
 
 ## Connections
 
-- [[aishwarya-chandrasekhar]] — studying Ritual as primary model
+- [[aishwarya-chandrasekaran]] — studying Ritual as primary model
 - [[trimacare]] — Indian competitor taking opposite (pharma-coded) approach
 - [[2026-04-13-prenatal-brand-strategy]] — detailed Ritual analysis

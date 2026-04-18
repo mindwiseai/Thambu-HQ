@@ -5,7 +5,7 @@ Workspace for Thambu's three businesses, organized as a [Karpathy LLM Wiki](http
 ## The three businesses
 - **RaceSims** — India's pro-grade sim racing hardware company. racesims.in. Public.
 - **Mindwise** — Cognitive wellness supplement (CDRI-08 Bacopa monnieri) by Lumen Marketing Company. Launching 2026-06-01.
-- **Prenatal Brand** — India's first transparency-led DTC prenatal supplement. Founded by Aishu (Aishwarya Chandrasekhar, Thambu's wife). Pre-launch research phase.
+- **Prenatal Brand** — India's first transparency-led DTC prenatal supplement. Founded by Aishu (Aishwarya Chandrasekaran, Thambu's wife). Pre-launch research phase.
 
 ## Three-layer architecture
 

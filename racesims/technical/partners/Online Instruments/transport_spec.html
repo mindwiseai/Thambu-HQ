@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RaceSims — Transport Spec Sheet</title>
+<style>
+  @page { size: A4; margin: 12mm 14mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 9.4pt;
+    line-height: 1.35;
+    color: #121212;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body { padding: 0; }
+
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid #c8102e;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+  .brand {
+    font-weight: 900;
+    font-size: 14pt;
+    letter-spacing: 1.5px;
+    color: #c8102e;
+  }
+  .brand .dot { color: #121212; }
+  .doc-meta {
+    text-align: right;
+    font-size: 8pt;
+    color: #666;
+    line-height: 1.5;
+  }
+  .doc-meta strong { color: #121212; font-weight: 600; }
+
+  /* Title block */
+  .title-block {
+    margin-bottom: 14px;
+  }
+  .title-block h1 {
+    font-size: 16pt;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    margin-bottom: 2px;
+  }
+  .title-block .subtitle {
+    font-size: 9pt;
+    color: #555;
+  }
+  .client-line {
+    margin-top: 8px;
+    padding: 6px 10px;
+    background: #f5f5f5;
+    border-left: 3px solid #c8102e;
+    font-size: 8.8pt;
+  }
+  .client-line strong { color: #121212; }
+
+  /* Section heading */
+  h2 {
+    font-size: 9.6pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #c8102e;
+    margin: 12px 0 6px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  h2 .num {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: #c8102e;
+    color: white;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 50%;
+    margin-right: 6px;
+    font-size: 8pt;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 4px;
+  }
+  table th, table td {
+    text-align: left;
+    padding: 4px 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 8.8pt;
+    vertical-align: top;
+  }
+  table th {
+    background: #f9f9f9;
+    font-weight: 600;
+    color: #444;
+    border-bottom: 1px solid #d0d0d0;
+  }
+  table td.spec { width: 55%; }
+  table td.val {
+    font-weight: 600;
+    color: #121212;
+    width: 45%;
+    text-align: right;
+  }
+  table td.val.highlight {
+    color: #c8102e;
+  }
+
+  /* Two-col layout */
+  .two-col {
+    display: flex;
+    gap: 14px;
+  }
+  .two-col > div { flex: 1; }
+
+  /* Callout */
+  .callout {
+    margin: 8px 0 0;
+    padding: 7px 10px;
+    background: #fff5f5;
+    border-left: 3px solid #c8102e;
+    font-size: 8.6pt;
+    color: #3d1414;
+  }
+
+  /* Footer */
+  .footer {
+    position: fixed;
+    bottom: 8mm;
+    left: 14mm;
+    right: 14mm;
+    padding-top: 6px;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7.8pt;
+    color: #888;
+  }
+  .footer strong { color: #444; }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="brand">RACE<span class="dot">·</span>SIMS</div>
+    <div class="doc-meta">
+      <strong>Transport Spec Sheet</strong><br>
+      Issued: April 15, 2026 &nbsp;·&nbsp; Confidential
+    </div>
+  </div>
+
+  <div class="title-block">
+    <h1>Immersive Driving Simulator — Site Readiness</h1>
+    <div class="subtitle">Dimensions of the delivered unit and minimum clearances required along the transport route.</div>
+    <div class="client-line">
+      <strong>Prepared for:</strong> Online Instruments India Pvt Ltd &nbsp;·&nbsp;
+      <strong>Unit:</strong> Mahindra Thar Roxx — front cabin, assembled on rolling base &nbsp;·&nbsp;
+      <strong>Delivery:</strong> Single piece, no on-site reassembly
+    </div>
+  </div>
+
+  <h2><span class="num">1</span>Unit as Delivered</h2>
+  <div class="two-col">
+    <div>
+      <table>
+        <tr><td class="spec">Base vehicle</td><td class="val">Thar Roxx front cabin</td></tr>
+        <tr><td class="spec">Length</td><td class="val highlight">2.9 m</td></tr>
+        <tr><td class="spec">Width <span style="font-weight:400;color:#888">(mirrors removed for transit)</span></td><td class="val highlight">1.9 m</td></tr>
+        <tr><td class="spec">Height <span style="font-weight:400;color:#888">(on caster base)</span></td><td class="val highlight">2.2 m</td></tr>
+      </table>
+    </div>
+    <div>
+      <table>
+        <tr><td class="spec">Gross weight</td><td class="val highlight">~ 1,200 kg</td></tr>
+        <tr><td class="spec">Mobility</td><td class="val">4 × heavy-duty casters<br><span style="font-weight:400;color:#888">2 locking, rolling base frame</span></td></tr>
+        <tr><td class="spec">Handling</td><td class="val">Tail-lift, loading dock,<br>or forklift required</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <h2><span class="num">2</span>Minimum Clearances — Full Transport Path</h2>
+  <table>
+    <tr><th style="width:55%;">Location</th><th style="width:45%; text-align:right;">Minimum Clear Opening / Space</th></tr>
+    <tr><td>Unloading access at site</td><td class="val">Tail-lift, dock, or forklift</td></tr>
+    <tr><td>Building entry threshold</td><td class="val">Step ≤ 50 mm, or ramp available</td></tr>
+    <tr><td>Main entrance doorway</td><td class="val highlight">1.95 m W × 2.25 m H</td></tr>
+    <tr><td>Every intermediate doorway on path</td><td class="val highlight">1.95 m W × 2.25 m H</td></tr>
+    <tr><td>Corridor width</td><td class="val highlight">2.2 m</td></tr>
+    <tr><td>Any 90° turn on corridor</td><td class="val highlight">3.0 m × 3.0 m clear turning area</td></tr>
+    <tr><td>Final simulator room doorway</td><td class="val highlight">1.95 m W × 2.25 m H</td></tr>
+  </table>
+
+  <h2><span class="num">3</span>Service / Freight Lift <span style="font-weight:400; font-size:8.2pt; color:#888; text-transform:none; letter-spacing:0.3px;">— mandatory if install is not on ground floor</span></h2>
+  <table>
+    <tr><td class="spec">Car interior floor <span style="font-weight:400; color:#888">(L × W)</span></td><td class="val highlight">3.0 m × 2.0 m</td></tr>
+    <tr><td class="spec">Car interior height</td><td class="val highlight">2.3 m</td></tr>
+    <tr><td class="spec">Door opening <span style="font-weight:400; color:#888">(W × H)</span></td><td class="val highlight">1.95 m × 2.25 m</td></tr>
+    <tr><td class="spec">Door type</td><td class="val">Full-opening only<br><span style="font-weight:400; color:#888">centre-opening or side-sliding</span></td></tr>
+    <tr><td class="spec">Weight capacity</td><td class="val highlight">1,500 kg minimum</td></tr>
+  </table>
+  <div class="callout">
+    <strong>Note:</strong> Passenger lifts will not accommodate this unit. A service / freight / goods lift is required. Passenger-style split doors do not provide the opening width needed.
+  </div>
+
+  <h2><span class="num">4</span>Final Install Room</h2>
+  <table>
+    <tr><td class="spec">Internal clear floor area</td><td class="val highlight">4.5 m × 3.5 m</td></tr>
+    <tr><td class="spec">Ceiling height</td><td class="val highlight">2.6 m</td></tr>
+    <tr><td class="spec">Floor load rating</td><td class="val highlight">300 kg/m² minimum</td></tr>
+    <tr><td class="spec">Power</td><td class="val">1 × 15 A socket within 3 m of install point</td></tr>
+    <tr><td class="spec">Ventilation / AC</td><td class="val">Recommended for 24/7 operation</td></tr>
+  </table>
+
+  <div class="footer">
+    <div><strong>RaceSims Solutions Pvt Ltd</strong> &nbsp;·&nbsp; Chennai, India</div>
+    <div>Thambu &nbsp;·&nbsp; +91 97417 88226 &nbsp;·&nbsp; thambu@racesims.in &nbsp;·&nbsp; www.racesims.in</div>
+  </div>
+
+</body>
+</html>

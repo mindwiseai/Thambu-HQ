@@ -104,7 +104,7 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 - Source: [[2026-04-13-prenatal-brand-strategy]]
 - **Created: 13 new pages:**
   - [[domains/prenatal/_index]] — new domain index (third business)
-  - [[aishwarya-chandrasekhar]] — Aishu, founder, Thambu's wife
+  - [[aishwarya-chandrasekaran]] — Aishu, founder, Thambu's wife
   - [[ritual-benchmark]] — US prenatal brand benchmark ($250M+)
   - [[trimacare]] — main Indian competitor
   - [[brukem-life-care]] — top-pick contract manufacturer

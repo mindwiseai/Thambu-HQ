@@ -74,7 +74,7 @@ Most recently touched context. Read this first for any query — it often answer
 
 ## 2026-04-13 — Prenatal Brand Domain Created
 
-- **New domain: [[domains/prenatal/_index|Prenatal]]** — Aishu's ([[aishwarya-chandrasekhar]]) DTC prenatal supplement brand for India. Modeled on [[ritual-benchmark|Ritual]] (US, $250M+). Pre-launch research phase.
+- **New domain: [[domains/prenatal/_index|Prenatal]]** — Aishu's ([[aishwarya-chandrasekaran]]) DTC prenatal supplement brand for India. Modeled on [[ritual-benchmark|Ritual]] (US, $250M+). Pre-launch research phase.
 - **Key strategic decisions LOCKED:** lifestyle brand (not pharma), FSDU regulatory, DTC subscription, gynecologist co-founder level
 - **#1 blocker:** gynecologist co-founder search not yet begun
 - **Top manufacturer pick:** [[brukem-life-care]] (Ahmedabad, USFDA, prenatal experience)

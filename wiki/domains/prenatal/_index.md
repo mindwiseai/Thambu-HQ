@@ -6,7 +6,7 @@ domain: prenatal
 
 # Prenatal & Postnatal Supplement Brand — India
 
-India's first transparency-led, gynecologist-formulated, DTC prenatal and postnatal supplement brand. Modeled on [[ritual-benchmark|Ritual]] (US, $250M+ revenue). Founded by [[aishwarya-chandrasekhar|Aishu]] (Thambu's wife) after personally experiencing India's supplement trust gap during pregnancy.
+India's first transparency-led, gynecologist-formulated, DTC prenatal and postnatal supplement brand. Modeled on [[ritual-benchmark|Ritual]] (US, $250M+ revenue). Founded by [[aishwarya-chandrasekaran|Aishu]] (Thambu's wife) after personally experiencing India's supplement trust gap during pregnancy.
 
 **Status:** Pre-launch, research & strategy phase (as of April 2026)
 
@@ -32,7 +32,7 @@ Indian women rely on imported supplements because local options feel untrustwort
 ## Entities
 
 ### People
-- [[aishwarya-chandrasekhar]] — founder
+- [[aishwarya-chandrasekaran]] — founder
 - [[thambu]] — co-founder (cross-domain)
 
 ### Competitors

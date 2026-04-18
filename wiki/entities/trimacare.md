@@ -7,7 +7,7 @@ tags: [company, competitor, prenatal]
 
 # Trimacare
 
-Main Indian prenatal supplement competitor to [[aishwarya-chandrasekhar|Aishu's]] [[domains/prenatal/_index|prenatal brand]]. Takes opposite strategic approach — pharma-coded, doctor-driven distribution.
+Main Indian prenatal supplement competitor to [[aishwarya-chandrasekaran|Aishu's]] [[domains/prenatal/_index|prenatal brand]]. Takes opposite strategic approach — pharma-coded, doctor-driven distribution.
 
 ## Key facts
 
@@ -28,6 +28,6 @@ Main Indian prenatal supplement competitor to [[aishwarya-chandrasekhar|Aishu's]
 
 ## Connections
 
-- [[aishwarya-chandrasekhar]] — researched as primary competitor
+- [[aishwarya-chandrasekaran]] — researched as primary competitor
 - [[ritual-benchmark]] — opposite approach (lifestyle vs pharma)
 - [[2026-04-13-prenatal-brand-strategy]] — detailed competitive analysis

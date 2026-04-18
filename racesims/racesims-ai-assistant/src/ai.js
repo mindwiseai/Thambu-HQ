@@ -50,128 +50,239 @@ export function initAI() {
     conspitTechKB = null;
   }
 
+  const bundleCount = productsKB.featured_bundles?.length || 0;
+  const conspitSkus = (productsKB.conspit?.wheelbases?.length || 0) +
+                      (productsKB.conspit?.steering_wheels?.length || 0) +
+                      (productsKB.conspit?.pedals?.length || 0) +
+                      (productsKB.conspit?.cockpits?.length || 0) +
+                      (productsKB.conspit?.pre_built_combos?.length || 0);
+  const vnmSkus = (productsKB.vnm?.wheelbases?.length || 0) +
+                  (productsKB.vnm?.steering_wheels?.length || 0) +
+                  (productsKB.vnm?.pedals?.length || 0) +
+                  (productsKB.vnm?.motion?.length || 0);
+  const faqCount = faqKB.categories?.reduce((sum, c) => sum + (c.faqs?.length || 0), 0) || 0;
+
   console.log('[AI] Claude engine initialized');
-  console.log(`[AI] Knowledge base: ${productsKB.kits?.length || 0} kits, ${productsKB.individual_components?.length || 0} components`);
-  console.log(`[AI] FAQ base: ${faqKB.categories?.length || 0} categories, ${faqKB.categories?.reduce((sum, c) => sum + (c.questions?.length || 0), 0) || 0} questions`);
+  console.log(`[AI] Knowledge base: ${bundleCount} featured bundles, ${conspitSkus} Conspit SKUs, ${vnmSkus} VNM SKUs`);
+  console.log(`[AI] FAQ base: ${faqKB.categories?.length || 0} categories, ${faqCount} questions`);
   console.log(`[AI] Tech KBs: VNM=${vnmTechKB ? 'loaded' : 'none'}, Conspit=${conspitTechKB ? 'loaded' : 'none'}`);
 }
 
+function fmt(n) {
+  return typeof n === 'number' ? n.toLocaleString('en-IN') : n;
+}
+
 function buildKnowledgeContext() {
-  let kb = '\n\n## PRODUCT KNOWLEDGE BASE\n\n';
+  const p = productsKB || {};
+  let kb = '\n\n=== PRODUCT KNOWLEDGE (plain text — do NOT mirror this formatting in customer replies) ===\n\n';
 
-  if (productsKB.kits?.length) {
-    kb += '### Simulator Kits\n';
-    for (const kit of productsKB.kits) {
-      kb += `\n**${kit.name}** (${kit.tier} tier) — ₹${kit.price_inr?.toLocaleString('en-IN') || 'Price on request'}\n`;
-      kb += `${kit.description || ''}\n`;
-      if (kit.components?.length) {
-        kb += 'Components:\n';
-        for (const comp of kit.components) {
-          kb += `  - ${comp.brand} ${comp.name}: ${comp.specs || ''}\n`;
-        }
-      }
-      if (kit.ideal_for) kb += `Ideal for: ${kit.ideal_for}\n`;
-      if (kit.space_required) kb += `Space needed: ${kit.space_required}\n`;
-    }
+  if (p.brand_strategy) {
+    const bs = p.brand_strategy;
+    kb += 'BRAND STRATEGY\n';
+    if (bs.push?.length) kb += `Push (actively sell): ${bs.push.join(', ')}\n`;
+    if (bs.comparison_only?.length) kb += `Comparison only (do NOT sell): ${bs.comparison_only.join(', ')}\n`;
+    if (bs.opportunistic_stock?.length) kb += `Opportunistic (only if Shopify shows stock): ${bs.opportunistic_stock.join(', ')}\n`;
+    if (bs.coming_soon_do_not_quote?.length) kb += `Coming soon — do not quote: ${bs.coming_soon_do_not_quote.join(', ')}\n`;
+    if (bs.not_carried?.length) kb += `Not carried — redirect: ${bs.not_carried.join(', ')}\n`;
+    if (bs.note_to_bot) kb += `Note: ${bs.note_to_bot}\n`;
+    kb += '\n';
   }
 
-  if (productsKB.individual_components?.length) {
-    kb += '\n### Individual Components\n';
-    for (const comp of productsKB.individual_components) {
-      kb += `- **${comp.brand} ${comp.name}** (${comp.category}) — ₹${comp.price_inr?.toLocaleString('en-IN') || 'Price on request'}: ${comp.specs || ''}\n`;
+  if (p.featured_bundles?.length) {
+    kb += 'FEATURED BUNDLES (gear only, no rig/PC)\n';
+    for (const b of p.featured_bundles) {
+      kb += `- ${b.name} — Rs ${fmt(b.price_inr)}. ${b.focus}. ${b.includes}.`;
+      if (b.note) kb += ` ${b.note}.`;
+      kb += '\n';
     }
+    kb += '\n';
   }
 
-  if (productsKB.services?.length) {
-    kb += '\n### Services\n';
-    for (const svc of productsKB.services) {
-      kb += `- ${typeof svc === 'string' ? svc : svc.name || JSON.stringify(svc)}\n`;
-    }
+  if (p.conspit) {
+    kb += `CONSPIT (push, warranty ${p.conspit.warranty_years}yr)\n`;
+    for (const x of (p.conspit.wheelbases || [])) kb += `- Wheelbase: ${x.model} — Rs ${fmt(x.price_inr)}\n`;
+    for (const x of (p.conspit.steering_wheels || [])) kb += `- Wheel: ${x.model} — Rs ${fmt(x.price_inr)} (${x.type || ''})\n`;
+    for (const x of (p.conspit.quick_release || [])) kb += `- QR: ${x.model} — Rs ${fmt(x.price_inr)}\n`;
+    for (const x of (p.conspit.pedals || [])) kb += `- Pedals: ${x.model} — Rs ${fmt(x.price_inr)} (${x.tier || ''})\n`;
+    for (const x of (p.conspit.handbrake || [])) kb += `- Handbrake: ${x.model} — Rs ${fmt(x.price_inr)}\n`;
+    for (const x of (p.conspit.cockpits || [])) kb += `- Cockpit: ${x.model} — Rs ${fmt(x.price_inr)}\n`;
+    for (const x of (p.conspit.pre_built_combos || [])) kb += `- Combo: ${x.name} — Rs ${fmt(x.price_inr)}\n`;
+    kb += '\n';
   }
 
-  // Add FAQ knowledge
+  if (p.vnm) {
+    kb += `VNM (push, warranty ${p.vnm.warranty_years}yr)\n`;
+    for (const x of (p.vnm.wheelbases || [])) kb += `- Wheelbase: ${x.model} — Rs ${fmt(x.price_inr)}\n`;
+    for (const x of (p.vnm.steering_wheels || [])) kb += `- Wheel: ${x.model} — Rs ${fmt(x.price_inr)}\n`;
+    for (const x of (p.vnm.pedals || [])) kb += `- Pedals: ${x.model} — Rs ${fmt(x.price_inr)}\n`;
+    for (const x of (p.vnm.shifter || [])) kb += `- Shifter: ${x.model} — Rs ${fmt(x.price_inr)}\n`;
+    for (const x of (p.vnm.handbrake || [])) kb += `- Handbrake: ${x.model} — Rs ${fmt(x.price_inr)}\n`;
+    for (const x of (p.vnm.motion || [])) kb += `- Motion: ${x.model} — Rs ${fmt(x.price_inr)}\n`;
+    kb += '\n';
+  }
+
+  if (p.racesims_in_house) {
+    kb += 'RACESIMS IN-HOUSE (warranty 1yr)\n';
+    for (const x of (p.racesims_in_house.cockpits_and_rigs || [])) kb += `- Rig: ${x.model} — Rs ${fmt(x.price_inr)}${x.note ? ` (${x.note})` : ''}\n`;
+    for (const x of (p.racesims_in_house.monitor_stands_and_mounts || [])) kb += `- Stand/Mount: ${x.model} — Rs ${fmt(x.price_inr)}\n`;
+    for (const x of (p.racesims_in_house.accessories || [])) kb += `- Accessory: ${x.model} — Rs ${fmt(x.price_inr)}\n`;
+    for (const x of (p.racesims_in_house.seats || [])) kb += `- Seat: ${x.model} — Rs ${fmt(x.price_inr)} (${x.tier || ''})\n`;
+    kb += '\n';
+  }
+
+  if (p.monitors_gigabyte?.length) {
+    kb += 'MONITORS (Gigabyte)\n';
+    for (const m of p.monitors_gigabyte) kb += `- ${m.model} — Rs ${fmt(m.price_inr)} (${m.use_case || ''})\n`;
+    kb += '\n';
+  }
+
+  if (p.pc_builds) {
+    kb += `PC BUILDS — ${p.pc_builds.note_to_bot}\n\n`;
+  }
+
+  if (p.simagic_comparison_only) {
+    kb += 'SIMAGIC (comparison reference only — do NOT actively sell)\n';
+    kb += `${p.simagic_comparison_only.note_to_bot || ''}\n`;
+    for (const x of (p.simagic_comparison_only.items || [])) {
+      kb += `- ${x.model} — Rs ${fmt(x.price_inr)} (redirect to: ${x.redirect_to})\n`;
+    }
+    kb += '\n';
+  }
+
+  if (p.moza_opportunistic) {
+    kb += 'MOZA (opportunistic stock only)\n';
+    kb += `${p.moza_opportunistic.note_to_bot || ''}\n`;
+    for (const x of (p.moza_opportunistic.items || [])) {
+      kb += `- ${x.model} — Rs ${fmt(x.price_inr)}${x.was_inr ? ` (was Rs ${fmt(x.was_inr)})` : ''}\n`;
+    }
+    kb += '\n';
+  }
+
+  if (p.coming_soon_do_not_quote?.length) {
+    kb += 'COMING SOON — DO NOT QUOTE PRICES OR DATES\n';
+    for (const b of p.coming_soon_do_not_quote) kb += `- ${b.brand}: ${b.action}\n`;
+    kb += '\n';
+  }
+
+  if (p.not_carried?.length) {
+    kb += 'NOT CARRIED — polite redirect if customer names these\n';
+    for (const b of p.not_carried) kb += `- ${b.brand}: ${b.action}\n`;
+    kb += '\n';
+  }
+
+  if (p.policies) {
+    const po = p.policies;
+    kb += 'POLICIES\n';
+    if (po.payment) {
+      kb += `Payment: ${po.payment.terms}. Methods: ${po.payment.methods?.join(', ')}. EMI: ${po.payment.emi}. ${po.payment.note_to_bot || ''}\n`;
+    }
+    if (po.warranty) {
+      kb += `Warranty: Conspit ${po.warranty.conspit_years}yr, VNM ${po.warranty.vnm_years}yr, RaceSims in-house ${po.warranty.racesims_in_house_years}yr, Simagic ${po.warranty.simagic_years}yr, Moza ${po.warranty.moza_years}yr. Coverage: ${po.warranty.coverage}. Excludes: ${po.warranty.excludes?.join(', ')}\n`;
+    }
+    if (po.installation) {
+      kb += `Installation: ${po.installation.quote_line} (${po.installation.coverage}). ${po.installation.note_to_bot || ''}\n`;
+    }
+    if (po.shipping) {
+      kb += `Shipping: ${po.shipping.courier}, ${po.shipping.coverage}, transit ${po.shipping.typical_transit_days} days. ${po.shipping.insurance}. Packaging: ${po.shipping.packaging}\n`;
+    }
+    if (po.turnaround) {
+      kb += `Turnaround: gear ${po.turnaround.in_stock_gear}; custom rig/PC ${po.turnaround.custom_rig_or_pc}; VNM motion ${po.turnaround.motion_kit_vnm}\n`;
+    }
+    if (po.returns) {
+      kb += `Returns: ${po.returns.policy}\n`;
+    }
+    kb += '\n';
+  }
+
+  if (p.services) {
+    kb += 'SERVICES\n';
+    if (p.services.motec_coaching) {
+      const m = p.services.motec_coaching;
+      kb += `- MoTeC coaching: Rs ${fmt(m.price_inr_per_session)}/session. ${m.description} Booking: ${m.booking}\n`;
+    }
+    if (p.services.driver_development) {
+      kb += `- Driver development: ${p.services.driver_development.status}. ${p.services.driver_development.note_to_bot}\n`;
+    }
+    if (p.services.b2b_commercial_simulators) {
+      const b = p.services.b2b_commercial_simulators;
+      kb += `- B2B simulators: ${b.description} Quote rule: ${b.quote_rule}. Ask first: ${b.ask_first?.join(', ')}\n`;
+    }
+    kb += '\n';
+  }
+
+  if (p.dealers?.length) {
+    kb += 'DEALERS (public, share if customer asks for local options)\n';
+    for (const d of p.dealers) kb += `- ${d.name} (${d.contact}) — ${d.city}\n`;
+    if (p.dealer_note_to_bot) kb += `Note: ${p.dealer_note_to_bot}\n`;
+    kb += '\n';
+  }
+
+  if (p.founder_authority) {
+    const f = p.founder_authority;
+    kb += 'FOUNDER AUTHORITY\n';
+    kb += `${f.name} — ${f.role}. ${f.arka_credential}\n`;
+    if (f.public_proof_points?.length) kb += `Proof points: ${f.public_proof_points.join(' | ')}\n`;
+    if (f.bot_use) kb += `When to lead with this: ${f.bot_use}\n`;
+    kb += '\n';
+  }
+
   if (faqKB?.categories?.length) {
-    kb += '\n\n## FREQUENTLY ASKED QUESTIONS\n';
-    kb += 'Use these pre-written answers when relevant. Adapt the tone to match the conversation.\n\n';
+    kb += '\n=== FAQ CONTEXT (extract ONE relevant point per reply, do NOT paste verbatim) ===\n\n';
+    if (faqKB.note_to_bot) kb += `${faqKB.note_to_bot}\n\n`;
     for (const cat of faqKB.categories) {
-      kb += `### ${cat.name}\n`;
-      for (const faq of (cat.questions || [])) {
-        kb += `**Q: ${faq.q}**\nA: ${faq.a}\n\n`;
+      kb += `-- ${cat.category} --\n`;
+      for (const f of (cat.faqs || [])) {
+        kb += `Q: ${f.q}\nA: ${f.a}\n\n`;
       }
     }
   }
 
-  // Add VNM technical troubleshooting knowledge
   if (vnmTechKB) {
-    kb += '\n\n## VNM TECHNICAL SUPPORT KNOWLEDGE\n';
-    kb += 'Use this for VNM product troubleshooting. RaceSims handles all VNM support for Indian customers.\n\n';
-
+    kb += '\n=== VNM TECHNICAL SUPPORT ===\n';
     if (vnmTechKB.troubleshooting?.length) {
-      kb += '### Common VNM Issues & Solutions\n';
+      kb += 'Common VNM Issues:\n';
       for (const issue of vnmTechKB.troubleshooting) {
-        kb += `\n**Issue: ${issue.issue}**\n`;
-        kb += `Symptoms: ${issue.symptoms?.join(', ')}\n`;
-        kb += 'Solutions:\n';
-        for (const sol of (issue.solutions || [])) {
-          kb += `  - ${sol}\n`;
-        }
-        if (issue.escalation) kb += `⚠️ Escalate: ${issue.escalation}\n`;
+        kb += `\nIssue: ${issue.issue}\nSymptoms: ${issue.symptoms?.join(', ')}\nSolutions:\n`;
+        for (const sol of (issue.solutions || [])) kb += `  - ${sol}\n`;
+        if (issue.escalation) kb += `Escalate: ${issue.escalation}\n`;
       }
     }
-
     if (vnmTechKB.software) {
-      kb += '\n### VNM Software\n';
+      kb += '\nVNM Software:\n';
       kb += `- VNM UI v${vnmTechKB.software.vnm_ui?.current_version}: ${vnmTechKB.software.vnm_ui?.download_url}\n`;
       kb += `- VNM Flash v${vnmTechKB.software.vnm_flash?.current_version}: ${vnmTechKB.software.vnm_flash?.download_url}\n`;
-      for (const note of (vnmTechKB.software.vnm_ui?.notes || [])) {
-        kb += `  - ${note}\n`;
-      }
+      for (const note of (vnmTechKB.software.vnm_ui?.notes || [])) kb += `  - ${note}\n`;
     }
-
     if (vnmTechKB.supported_games) {
-      kb += '\n### VNM Game Compatibility\n';
-      kb += `Native support: ${vnmTechKB.supported_games.native_support?.join(', ')}\n`;
-      kb += 'Require setup:\n';
+      kb += '\nVNM Game Compatibility:\n';
+      kb += `Native: ${vnmTechKB.supported_games.native_support?.join(', ')}\n`;
       for (const [game, note] of Object.entries(vnmTechKB.supported_games.requires_configuration || {})) {
         kb += `  - ${game}: ${note}\n`;
       }
     }
-
     if (vnmTechKB.warranty) {
-      kb += '\n### VNM Warranty (via RaceSims)\n';
-      kb += `Duration: ${vnmTechKB.warranty.duration}\n`;
-      kb += `Process: ${vnmTechKB.warranty.process_racesims}\n`;
+      kb += `\nVNM Warranty: ${vnmTechKB.warranty.duration}. Process: ${vnmTechKB.warranty.process_racesims}\n`;
     }
   }
 
-  // Add Conspit technical troubleshooting knowledge
   if (conspitTechKB) {
-    kb += '\n\n## CONSPIT TECHNICAL SUPPORT KNOWLEDGE\n';
-    kb += 'Use this for Conspit product troubleshooting. RaceSims handles all Conspit support for Indian customers.\n\n';
-
+    kb += '\n\n=== CONSPIT TECHNICAL SUPPORT ===\n';
     if (conspitTechKB.troubleshooting?.length) {
-      kb += '### Common Conspit Issues & Solutions\n';
+      kb += 'Common Conspit Issues:\n';
       for (const issue of conspitTechKB.troubleshooting) {
-        kb += `\n**Issue: ${issue.issue}**\n`;
-        kb += `Symptoms: ${issue.symptoms?.join(', ')}\n`;
-        kb += 'Solutions:\n';
-        for (const sol of (issue.solutions || [])) {
-          kb += `  - ${sol}\n`;
-        }
-        if (issue.escalation) kb += `⚠️ Escalate: ${issue.escalation}\n`;
+        kb += `\nIssue: ${issue.issue}\nSymptoms: ${issue.symptoms?.join(', ')}\nSolutions:\n`;
+        for (const sol of (issue.solutions || [])) kb += `  - ${sol}\n`;
+        if (issue.escalation) kb += `Escalate: ${issue.escalation}\n`;
       }
     }
-
     if (conspitTechKB.software) {
-      kb += '\n### Conspit Software\n';
+      kb += '\nConspit Software:\n';
       for (const [key, sw] of Object.entries(conspitTechKB.software)) {
-        kb += `- ${sw.name || key}: ${sw.download_url || 'check conspit.com'}\n`;
+        kb += `- ${sw.name || key}: ${sw.download_url || 'conspit.com'}\n`;
       }
     }
-
     if (conspitTechKB.warranty) {
-      kb += '\n### Conspit Warranty (via RaceSims)\n';
-      kb += `Duration: ${conspitTechKB.warranty?.duration || 'Contact RaceSims'}\n`;
+      kb += `\nConspit Warranty: ${conspitTechKB.warranty?.duration || '1 year via RaceSims'}\n`;
     }
   }
 

@@ -31,7 +31,7 @@ Everything gates on Step 0 — the gynecologist co-founder. Without them:
 
 ## Connections
 
-- [[aishwarya-chandrasekhar]] — executing this roadmap
+- [[aishwarya-chandrasekaran]] — executing this roadmap
 - [[prenatal-gynecologist-cofounder]] — Step 0 (the blocker)
 - [[prenatal-contract-manufacturers]] — Step 3
 - [[prenatal-fsdu-regulatory]] — Step 4

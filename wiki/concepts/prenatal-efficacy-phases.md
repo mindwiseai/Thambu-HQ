@@ -36,7 +36,7 @@ Head-to-head study: prenatal brand product vs standard Indian prenatal. Measure 
 
 ## Connections
 
-- [[aishwarya-chandrasekhar]] — designed this phased approach
+- [[aishwarya-chandrasekaran]] — designed this phased approach
 - [[ritual-benchmark]] — 24-week clinical study is the model
 - [[prenatal-fsdu-regulatory]] — Phase 1 suffices for FSSAI
 - [[prenatal-gynecologist-cofounder]] — drives Phase 2-3 partnerships

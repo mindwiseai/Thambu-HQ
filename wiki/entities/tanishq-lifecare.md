@@ -8,7 +8,7 @@ tags: [company, manufacturer, prenatal, ahmedabad, organic]
 
 # Tanishq Lifecare
 
-**Top-pick contract manufacturer** for [[aishwarya-chandrasekhar|Aishu's]] [[domains/prenatal/_index|prenatal brand]] (decision made 2026-04-13). Based in Ahmedabad, Gujarat. Chosen over [[brukem-life-care|Brukem]] because the **USDA Organic + EU Organic** certifications align with the brand's transparency-led, clean-label positioning — they ARE the brand story.
+**Top-pick contract manufacturer** for [[aishwarya-chandrasekaran|Aishu's]] [[domains/prenatal/_index|prenatal brand]] (decision made 2026-04-13). Based in Ahmedabad, Gujarat. Chosen over [[brukem-life-care|Brukem]] because the **USDA Organic + EU Organic** certifications align with the brand's transparency-led, clean-label positioning — they ARE the brand story.
 
 ## Key certifications
 
@@ -76,7 +76,7 @@ URL: https://tanishqlifecare.com/boranutri.php
 
 ## Connections
 
-- [[aishwarya-chandrasekhar]] — selected Tanishq
+- [[aishwarya-chandrasekaran]] — selected Tanishq
 - [[prenatal-contract-manufacturers]] — full shortlist
 - [[brukem-life-care]] — runner-up alternative
 - [[prenatal-dtc-lifestyle-strategy]] — why organic certs align with brand

@@ -34,7 +34,7 @@ The brand positioning is the primary lens. Aishu's brand thesis is transparency 
 
 ## Connections
 
-- [[aishwarya-chandrasekhar]] — evaluating manufacturers
+- [[aishwarya-chandrasekaran]] — evaluating manufacturers
 - [[prenatal-launch-roadmap]] — Step 3
 - [[prenatal-dtc-lifestyle-strategy]] — transparency requires manufacturer cooperation
 - [[2026-04-13-prenatal-brand-strategy]] — source with full details

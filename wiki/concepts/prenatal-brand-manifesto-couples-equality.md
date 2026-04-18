@@ -51,7 +51,7 @@ In India, when couples decide to have a baby, only one person is asked to prepar
 
 2. **Cultural sensitivity is real.** Some segments will love the feminist framing. Others (more traditional families) may bristle. Target: urban metro educated 28-38 demographic. Don't try to appeal to everyone.
 
-3. **PR and founder story matter.** This is now a values-driven brand. [[aishwarya-chandrasekhar|Aishu]] + the gynecologist co-founder become the faces. Why they started this matters for credibility.
+3. **PR and founder story matter.** This is now a values-driven brand. [[aishwarya-chandrasekaran|Aishu]] + the gynecologist co-founder become the faces. Why they started this matters for credibility.
 
 ## Brand language shifts (from the conversation)
 
@@ -69,7 +69,7 @@ In India, when couples decide to have a baby, only one person is asked to prepar
 
 ## Connections
 
-- [[aishwarya-chandrasekhar]] — articulated the manifesto
+- [[aishwarya-chandrasekaran]] — articulated the manifesto
 - [[prenatal-brand-name-the-edit]] — the brand this manifesto governs
 - [[prenatal-launch-roadmap]] — Scenario D launch architecture follows from this manifesto
 - [[prenatal-dtc-lifestyle-strategy]] — couples-equality reinforces lifestyle (vs pharma) positioning

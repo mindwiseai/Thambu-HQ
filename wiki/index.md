@@ -19,7 +19,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 
 - [[thambu]] — owner of all three businesses
 - [[shivendra-selvam]] — secondary lead (Mindwise + RaceSims)
-- [[aishwarya-chandrasekhar]] — Aishu, founder of prenatal brand, Thambu's wife
+- [[aishwarya-chandrasekaran]] — Aishu, founder of prenatal brand, Thambu's wife
 
 ## Top concepts (Mindwise)
 

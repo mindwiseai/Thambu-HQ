@@ -1,11 +1,11 @@
 ---
-title: Aishwarya Chandrasekhar (Aishu)
+title: Aishwarya Chandrasekaran (Aishu)
 type: entity
 domain: prenatal
 tags: [person, founder, prenatal]
 ---
 
-# Aishwarya Chandrasekhar (Aishu)
+# Aishwarya Chandrasekaran (Aishu)
 
 Founder of the [[domains/prenatal/_index|prenatal & postnatal supplement brand]]. [[thambu|Thambu's]] wife. Personally experienced the trust gap in Indian prenatal supplements — relied on imported brands during pregnancy because local options felt untrustworthy. This experience became the founding insight.
 

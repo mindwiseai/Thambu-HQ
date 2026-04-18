@@ -8,7 +8,7 @@ globs:
 # Prenatal Brand Domain Rules
 
 ## Context
-This is Aishu's (Aishwarya Chandrasekhar) prenatal & postnatal supplement brand for India. Modeled on Ritual (US). Pre-launch, research phase.
+This is Aishu's (Aishwarya Chandrasekaran) prenatal & postnatal supplement brand for India. Modeled on Ritual (US). Pre-launch, research phase.
 
 ## Key constraints
 - Product must register as FSSAI FSDU (Food for Special Dietary Use) — NOT Health Supplement

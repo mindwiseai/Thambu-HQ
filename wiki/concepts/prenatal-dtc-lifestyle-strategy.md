@@ -41,5 +41,5 @@ tags: [strategy, dtc, lifestyle, prenatal]
 - [[trimacare]] — the competitor taking the opposite approach
 - [[prenatal-gynecologist-cofounder]] — credibility layer for lifestyle approach
 - [[prenatal-efficacy-phases]] — how science backing gets built
-- [[aishwarya-chandrasekhar]] — driving this strategy
+- [[aishwarya-chandrasekaran]] — driving this strategy
 - [[2026-04-13-prenatal-brand-strategy]] — source

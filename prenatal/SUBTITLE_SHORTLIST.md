@@ -1,7 +1,7 @@
 # THE EDIT
 ## Subtitle Shortlist
 
-**Aishwarya Chandrasekhar**
+**Aishwarya Chandrasekaran**
 **April 2026**
 
 ---

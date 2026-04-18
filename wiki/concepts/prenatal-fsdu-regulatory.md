@@ -52,7 +52,7 @@ All labels must include:
 
 ## Connections
 
-- [[aishwarya-chandrasekhar]] — researched this framework
+- [[aishwarya-chandrasekaran]] — researched this framework
 - [[prenatal-efficacy-phases]] — how to build clinical evidence
 - [[2026-04-13-prenatal-brand-strategy]] — source document
 - [[lumen-fssai-license]] — Thambu's existing FSSAI experience with [[domains/mindwise/_index|Mindwise]]

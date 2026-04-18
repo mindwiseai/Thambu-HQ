@@ -8,7 +8,7 @@ tags: [company, manufacturer, prenatal, ahmedabad]
 
 # Brukem Life Care
 
-**Runner-up contract manufacturer.** Originally top pick, but [[aishwarya-chandrasekhar|Aishu]] selected [[tanishq-lifecare|Tanishq Lifecare]] on 2026-04-13 because Tanishq's USDA Organic + EU Organic certifications align better with the brand's [[prenatal-dtc-lifestyle-strategy|transparency-led lifestyle positioning]]. Brukem remains a strong alternative if Tanishq fails verification on [[prenatal-fsdu-regulatory|FSDU licensing]] or organic ingredient sourcing.
+**Runner-up contract manufacturer.** Originally top pick, but [[aishwarya-chandrasekaran|Aishu]] selected [[tanishq-lifecare|Tanishq Lifecare]] on 2026-04-13 because Tanishq's USDA Organic + EU Organic certifications align better with the brand's [[prenatal-dtc-lifestyle-strategy|transparency-led lifestyle positioning]]. Brukem remains a strong alternative if Tanishq fails verification on [[prenatal-fsdu-regulatory|FSDU licensing]] or organic ingredient sourcing.
 
 Based in Ahmedabad, Gujarat.
 
@@ -47,7 +47,7 @@ Yes — prenatal, PCOS, fertility supplements. This is the differentiator vs oth
 
 ## Connections
 
-- [[aishwarya-chandrasekhar]] — originally evaluating, now runner-up
+- [[aishwarya-chandrasekaran]] — originally evaluating, now runner-up
 - [[tanishq-lifecare]] — selected as top pick instead
 - [[prenatal-contract-manufacturers]] — full shortlist comparison
 - [[prenatal-dtc-lifestyle-strategy]] — the positioning that drove the decision

@@ -9,7 +9,7 @@ This wiki is the LLM-maintained knowledge layer for three businesses operating o
 
 - **[[domains/mindwise/_index|Mindwise]]** — cognitive wellness supplement (CDRI-08 / Bacopa monnieri), launching 2026-06-01 under [[lumen-marketing-company|Lumen Marketing Company]]. Currently in the final stretch before launch with [[sorted-agency]] driving brand and packaging. Owned by [[thambu]].
 - **[[domains/racesims/_index|RaceSims]]** — India's pro-grade sim-racing hardware company (racesims.in). Currently executing a [[90-day-execution-plan]] to close the gap with main competitor [[virtual-racing-hub]]. Owned by [[thambu]].
-- **[[domains/prenatal/_index|Prenatal]]** — India's first transparency-led DTC prenatal & postnatal supplement brand, modeled on [[ritual-benchmark|Ritual]] (US). Pre-launch research phase. Founded by [[aishwarya-chandrasekhar|Aishu]] (Thambu's wife).
+- **[[domains/prenatal/_index|Prenatal]]** — India's first transparency-led DTC prenatal & postnatal supplement brand, modeled on [[ritual-benchmark|Ritual]] (US). Pre-launch research phase. Founded by [[aishwarya-chandrasekaran|Aishu]] (Thambu's wife).
 
 ## Architecture
 

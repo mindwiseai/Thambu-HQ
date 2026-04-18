@@ -10,7 +10,7 @@ tags: [brand-name, naming, trademark, prenatal]
 
 **Status: candidate, pending trademark + domain verification** (2026-04-14)
 
-[[aishwarya-chandrasekhar|Aishu's]] [[domains/prenatal/_index|prenatal brand]] is tentatively called **The Edit** — or possibly just **Edit**. Selected on 2026-04-14 after a naming exploration session that clarified the brand's true positioning.
+[[aishwarya-chandrasekaran|Aishu's]] [[domains/prenatal/_index|prenatal brand]] is tentatively called **The Edit** — or possibly just **Edit**. Selected on 2026-04-14 after a naming exploration session that clarified the brand's true positioning.
 
 ## The positioning insight that led to this name
 
@@ -69,7 +69,7 @@ From the 2026-04-14 naming session, ordered by fit for the essentialism position
 
 ## Connections
 
-- [[aishwarya-chandrasekhar]] — selected the name
+- [[aishwarya-chandrasekaran]] — selected the name
 - [[prenatal-dtc-lifestyle-strategy]] — essentialism ties to transparency-led lifestyle positioning
 - [[trimacare]] — the kitchen-sink competitor this name differentiates against
 - [[ritual-benchmark]] — same conceptual-minimalism brand lane

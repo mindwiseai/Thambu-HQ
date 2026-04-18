@@ -2,7 +2,7 @@
 ## The wellness brand India was missing.
 
 **Series Seed Deck**
-**Aishwarya Chandrasekhar, Founder**
+**Aishwarya Chandrasekaran, Founder**
 **April 2026**
 
 ---
@@ -140,7 +140,7 @@ Postpartum recovery + lactation support.
 
 ## 10. The Team
 
-### Aishwarya Chandrasekhar — Founder & CEO
+### Aishwarya Chandrasekaran — Founder & CEO
 Founded The Edit after personally experiencing the trust gap during her own family-building journey. Background in [to be filled]. The brand's voice and product vision.
 
 ### Thambusamy T D (Thambu) — Co-Founder & Strategic Advisor
@@ -209,7 +209,7 @@ Year 3–5 expansion into postpartum recovery, perimenopause, menopausal transit
 
 ## Contact
 
-**Aishwarya Chandrasekhar**
+**Aishwarya Chandrasekaran**
 Founder, The Edit Pvt Ltd (incorporation in progress)
 
 📧 [contact email]
