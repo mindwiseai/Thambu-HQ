@@ -9,13 +9,13 @@
 
 ## 01. The Problem — Part 1
 
-**The modern Indian woman can no longer rely on food alone for nutrition.**
+**Modern Indian families can no longer rely on food alone for nutrition.**
 
 - **The nuclear-family shift.** Joint-family kitchens with multiple cooks have given way to dual-income nuclear households. Three home-cooked, nutritionally complete meals a day — once the default — has become aspirational.
 - **Food adulteration is real and widespread.** Indian fruits, vegetables, dairy, and grains face documented, ongoing concerns: pesticide residues, heavy metal contamination, mislabeling, inconsistent micronutrient density. What you eat is not necessarily what you think you're eating.
-- **The micronutrient gap is documented.** Urban Indian diets are increasingly carbohydrate-heavy, lower in iron-rich greens, low in B-complex vitamins, almost devoid of DHA. Even "well-fed" women enter pregnancy nutritionally deficient on key markers.
+- **The micronutrient gap is documented.** Urban Indian diets are increasingly carbohydrate-heavy, lower in iron-rich greens, low in B-complex vitamins, almost devoid of DHA. Even in well-fed families, key nutritional markers are often deficient by the time a pregnancy begins.
 
-**For an Indian woman planning a family, supplementation isn't optional. It's foundational.**
+**For Indian couples planning a family, supplementation isn't optional. It's foundational.**
 
 Which makes the next question critical: *what do you supplement with?*
 
@@ -23,29 +23,29 @@ Which makes the next question critical: *what do you supplement with?*
 
 ## 02. The Problem — Part 2
 
-**What does an Indian woman take when she's planning a family?**
+**What do Indian couples take when they're planning a family?**
 
-Today, her three real choices are:
+Today, the three real choices on the market are:
 
 - **Pharma-coded prescriptions** (Trimacare, Inatal, Pregomega) — feel like medicine, distributed by doctors, no brand connection
 - **Imported wellness brands** (Ritual, Garden of Life, Pink Stork) — premium, but expensive, hard to access, no India context
 - **Ayurvedic options** (Himalaya, Patanjali) — traditional framework, opaque sourcing, no transparency
 
-**None of these were built for the modern Indian woman — the one who knows she needs to supplement, but can't find anything she can trust.**
+**None of these were built for the modern Indian couple — those who know they need to supplement, but can't find anything they trust.**
 
 ---
 
 ## 03. The Insight — Why Now
 
-The modern Indian woman has changed faster than the supplement market that's supposed to serve her.
+Modern Indian couples have changed faster than the supplement market that's supposed to serve them.
 
-- She **researches** before she buys — reads ingredient lists, looks up published studies
-- She **expects transparency** — wants to know where ingredients come from, who formulated them
-- She **expects modern branding** — wants packaging that belongs in her bathroom, not her first-aid kit
-- She **wants control over her health journey** — preferring DTC subscription over pharmacy or doctor mediation
-- She **buys on Instagram, expects 2-day delivery, reviews everything**
+- They **research** before they buy — read ingredient lists, look up published studies
+- They **expect transparency** — want to know where ingredients come from, who formulated them
+- They **expect modern branding** — want packaging that belongs in the bathroom, not the first-aid kit
+- They **want control over their health journey** — preferring DTC subscription over pharmacy or doctor mediation
+- They **buy on Instagram, expect 2-day delivery, review everything**
 
-The Indian DTC wellness consumer is real and growing — but no prenatal/preconception/postnatal brand is built for her.
+The Indian DTC wellness consumer is real and growing — but no prenatal / preconception / postnatal brand is built for them.
 
 ---
 
@@ -105,7 +105,7 @@ Postpartum recovery + lactation support.
 | | |
 |---|---|
 | **TAM** — Indian health & wellness market | $164B (2025) → $258B (2034), 5.14% CAGR |
-| **SAM** — Indian prenatal + women's wellness supplements | Rs.5,000 Cr+, growing 12% CAGR |
+| **SAM** — Indian prenatal + family-building wellness supplements | Rs.5,000 Cr+, growing 12% CAGR |
 | **SOM** — Premium DTC capture (3 years) | Rs.50–100 Cr annual revenue |
 | **Customer base** | 27M pregnancies/year + 5–8M couples actively TTC |
 | **Asia-Pacific share of global postpartum market** | 38.58% (largest regional share) |
@@ -133,7 +133,7 @@ Postpartum recovery + lactation support.
 - **Influencer collaborations** — mom-creators, wellness creators, practicing gynaecologists with social presence
 - **Gynaecologist network** — leveraging the co-founder's clinical credibility for medical referrals
 - **PR + content marketing** — owning the "transparency" + "couples" narrative
-- **Editorial partnerships** — wellness publications, Femina, Cosmo, women's media
+- **Editorial partnerships** — wellness publications, lifestyle media (Femina, Cosmo, modern parenting outlets)
 
 **Distribution:** Direct from theedit.in (Shopify). Subscription-first, with one-time purchase option.
 
@@ -157,7 +157,7 @@ Postpartum recovery + lactation support.
 ## 11. The Team
 
 ### Aishwarya Chandrasekaran — Founder & CEO
-Founded The Edit after personally experiencing the trust gap during her own family-building journey. Background in [to be filled]. The brand's voice and product vision.
+Founded The Edit after personally experiencing the trust gap when planning a family. Background in [to be filled]. The brand's voice and product vision.
 
 ### Thambusamy T D (Thambu) — Co-Founder & Strategic Advisor
 Founder of Lumen Marketing Company (CDRI-08 cognitive supplement, June 2026 launch) and RaceSims Solutions Pvt Ltd (India's pro-grade sim racing hardware). Two-decade track record across consumer + premium hardware brands. Brings deep supplements industry knowledge and operational scaling expertise.
@@ -199,7 +199,7 @@ Industry advisors with DTC and consumer brand experience.
 
 ## 13. The Vision
 
-**The Edit is a women's lifecycle wellness platform — not a prenatal company.**
+**The Edit is a family-building lifecycle wellness platform — not a prenatal company.**
 
 The brand walks with Indian families through every major stage of life:
 
@@ -210,7 +210,7 @@ Preconception ─► Pregnancy ─► Postpartum ─► Perimenopause ─► Men
 
 Year 3–5 expansion into postpartum recovery, perimenopause, menopausal transition, and supplements for the next generation.
 
-**This is a Rs.500 Cr+ brand trajectory** — built on the most defensible, most underserved demographic in Indian wellness: the modern Indian woman, across every stage of her family-building life.
+**This is a Rs.500 Cr+ brand trajectory** — built on the most defensible, most underserved customer in Indian wellness: the modern Indian couple, across every stage of their family-building life.
 
 ---
 
