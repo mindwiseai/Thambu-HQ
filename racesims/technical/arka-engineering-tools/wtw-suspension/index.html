@@ -80,6 +80,7 @@ th{background:#0d131c;color:var(--muted);text-transform:uppercase;font-size:10px
 
 <nav class="tabs">
   <button data-tab="calc" class="active">WTW calculator</button>
+  <button data-tab="camber">Camber kinematics</button>
   <button data-tab="setup">Session setup</button>
   <button data-tab="profiles">Car profiles</button>
 </nav>
@@ -118,6 +119,31 @@ const SEED = [{
     arb_motion_f: 0.5, arb_motion_r: 1.0,
     spring_rate_f: 168, spring_rate_r: 139,  // lb/in (will convert)
     spring_motion_f: 0.98, spring_motion_r: 1.10
+  },
+  // Suspension kinematics — front (Polo OEM is McPherson) + rear (twist beam, very low camber gain)
+  // Coordinate system: looking from rear of car. X = lateral from wheel centerline (positive = outboard).
+  // Z = vertical above ground (positive = up). All distances in mm.
+  camber: {
+    front: {
+      type: 'mcpherson',
+      lca: { inner_x: -270, inner_z: 150, outer_x: 70, outer_z: 140 },
+      uca: { inner_x: -200, inner_z: 480, outer_x: 60, outer_z: 540 },
+      strut_top: { x: -250, z: 720 },
+      static_camber_deg: -2.5,
+      travel_bump_mm: 60,
+      travel_droop_mm: 60,
+      step_mm: 5
+    },
+    rear: {
+      type: 'wishbone',
+      lca: { inner_x: -260, inner_z: 140, outer_x: 60, outer_z: 130 },
+      uca: { inner_x: -180, inner_z: 400, outer_x: 55, outer_z: 460 },
+      strut_top: { x: -220, z: 700 },
+      static_camber_deg: -1.5,
+      travel_bump_mm: 50,
+      travel_droop_mm: 50,
+      step_mm: 5
+    }
   },
   setups: []
 }];
@@ -243,10 +269,272 @@ function render(){
   document.getElementById('unitSys').value = unitSys;
   const v = document.getElementById('view');
   if (tab==='calc') v.innerHTML = renderCalc();
+  else if (tab==='camber') { v.innerHTML = renderCamber(); requestAnimationFrame(drawCamberCharts); }
   else if (tab==='setup') v.innerHTML = renderSetup();
   else v.innerHTML = renderProfiles();
   bindInputs();
 }
+
+// ─── Camber kinematics ───────────────────────────────────────────────────────
+// 2D kinematic solver. Looking from the rear of the car.
+//   X = lateral, positive outboard (away from car centreline).
+//   Z = vertical, positive up.
+// "Wheel travel" = vertical motion of LCA outer pivot in chassis frame.
+//   Positive travel = bump (wheel moves UP relative to chassis = chassis sinks).
+//
+// McPherson: knuckle is integral to strut; camber = strut angle from vertical.
+// Double wishbone: knuckle joins LCA outer to UCA outer; camber = knuckle line angle from vertical.
+//
+// Returns array of {travel_mm, camber_deg, change_deg, change_per_mm}.
+function solveCamber(geom){
+  const out = [];
+  const lca_len = Math.hypot(geom.lca.outer_x - geom.lca.inner_x, geom.lca.outer_z - geom.lca.inner_z);
+  let knuckle_len = 0;
+  let staticAngle;  // radians, from vertical, positive = top tilts outboard
+
+  if (geom.type === 'wishbone') {
+    knuckle_len = Math.hypot(geom.uca.outer_x - geom.lca.outer_x, geom.uca.outer_z - geom.lca.outer_z);
+    staticAngle = Math.atan2(geom.uca.outer_x - geom.lca.outer_x, geom.uca.outer_z - geom.lca.outer_z);
+  } else {
+    staticAngle = Math.atan2(geom.strut_top.x - geom.lca.outer_x, geom.strut_top.z - geom.lca.outer_z);
+  }
+
+  const dx_static = geom.lca.outer_x - geom.lca.inner_x;
+  const dx_sign = dx_static >= 0 ? 1 : -1;
+
+  let prevCamber = null;
+  for (let dz = -geom.travel_droop_mm; dz <= geom.travel_bump_mm + 0.001; dz += geom.step_mm) {
+    const target_z = geom.lca.outer_z + dz;
+    const dz_arm = target_z - geom.lca.inner_z;
+    if (Math.abs(dz_arm) > lca_len) {
+      out.push({travel_mm: dz, camber_deg: NaN, change_deg: NaN, change_per_mm: NaN});
+      prevCamber = null; continue;
+    }
+    const new_dx = dx_sign * Math.sqrt(lca_len*lca_len - dz_arm*dz_arm);
+    const lca_out = { x: geom.lca.inner_x + new_dx, z: target_z };
+
+    let newAngle;
+    if (geom.type === 'wishbone') {
+      const uca_len = Math.hypot(geom.uca.outer_x - geom.uca.inner_x, geom.uca.outer_z - geom.uca.inner_z);
+      const A_x = geom.uca.inner_x, A_z = geom.uca.inner_z;
+      const B_x = lca_out.x, B_z = lca_out.z;
+      const d = Math.hypot(B_x - A_x, B_z - A_z);
+      if (d > uca_len + knuckle_len || d < Math.abs(uca_len - knuckle_len)) {
+        out.push({travel_mm: dz, camber_deg: NaN, change_deg: NaN, change_per_mm: NaN});
+        prevCamber = null; continue;
+      }
+      // Standard 2-circle intersection. Pick the solution closest to the static UCA outer.
+      const a = (uca_len*uca_len - knuckle_len*knuckle_len + d*d) / (2*d);
+      const h = Math.sqrt(Math.max(0, uca_len*uca_len - a*a));
+      const Px = A_x + a * (B_x - A_x) / d;
+      const Pz = A_z + a * (B_z - A_z) / d;
+      const sol1 = { x: Px + h * (B_z - A_z) / d, z: Pz - h * (B_x - A_x) / d };
+      const sol2 = { x: Px - h * (B_z - A_z) / d, z: Pz + h * (B_x - A_x) / d };
+      const d1 = Math.hypot(sol1.x - geom.uca.outer_x, sol1.z - geom.uca.outer_z);
+      const d2 = Math.hypot(sol2.x - geom.uca.outer_x, sol2.z - geom.uca.outer_z);
+      const uca_out = d1 < d2 ? sol1 : sol2;
+      newAngle = Math.atan2(uca_out.x - lca_out.x, uca_out.z - lca_out.z);
+    } else {
+      newAngle = Math.atan2(geom.strut_top.x - lca_out.x, geom.strut_top.z - lca_out.z);
+    }
+
+    const change_deg = (newAngle - staticAngle) * 180 / Math.PI;
+    const camber_deg = geom.static_camber_deg + change_deg;
+    const change_per_mm = prevCamber == null ? 0 : (camber_deg - prevCamber) / geom.step_mm;
+    out.push({travel_mm: dz, camber_deg, change_deg, change_per_mm});
+    prevCamber = camber_deg;
+  }
+  return out;
+}
+
+// Look up camber at a specific wheel travel (linear interp).
+function camberAt(curve, travel_mm){
+  if (!curve.length) return NaN;
+  for (let i = 0; i < curve.length - 1; i++) {
+    if (travel_mm >= curve[i].travel_mm && travel_mm <= curve[i+1].travel_mm) {
+      const t = (travel_mm - curve[i].travel_mm) / (curve[i+1].travel_mm - curve[i].travel_mm);
+      return curve[i].camber_deg + t * (curve[i+1].camber_deg - curve[i].camber_deg);
+    }
+  }
+  return travel_mm < curve[0].travel_mm ? curve[0].camber_deg : curve[curve.length-1].camber_deg;
+}
+
+function renderCamber(){
+  const p = getCurrent(); if (!p) return '<div class="section muted">No car.</div>';
+  if (!p.camber) p.camber = JSON.parse(JSON.stringify(SEED[0].camber));
+  const wtw = calc(p);
+  const fG = p.camber.front;
+  const rG = p.camber.rear;
+  const fCurve = solveCamber(fG);
+  const rCurve = solveCamber(rG);
+
+  // Dynamic camber under 1g roll: outside wheel is compressed by roll_angle * track/2 (bump),
+  // inside wheel is extended by the same (droop). Rough first-cut model.
+  const rollRad = wtw.rollAngleDeg * Math.PI / 180;
+  const bumpFront = (rollRad * (p.inputs.track_f/2));
+  const bumpRear = (rollRad * (p.inputs.track_r/2));
+  const fOutside = camberAt(fCurve, bumpFront);
+  const fInside = camberAt(fCurve, -bumpFront);
+  const rOutside = camberAt(rCurve, bumpRear);
+  const rInside = camberAt(rCurve, -bumpRear);
+
+  function geomBlock(label, g){
+    const isWb = g.type === 'wishbone';
+    return `<div class="card">
+      <h3>${label} suspension</h3>
+      <div class="row"><label>Type</label>
+        <select data-cg="${label.toLowerCase()}" data-cf="type">
+          <option value="mcpherson" ${g.type==='mcpherson'?'selected':''}>McPherson strut</option>
+          <option value="wishbone" ${g.type==='wishbone'?'selected':''}>Double wishbone</option>
+        </select>
+      </div>
+      <h4 style="margin:12px 0 4px;font-size:11px;color:var(--accent2);text-transform:uppercase;letter-spacing:0.6px">Lower control arm</h4>
+      <div class="row"><label>Inner pivot X (mm)</label><input type="number" data-cg="${label.toLowerCase()}" data-cs="lca" data-cf="inner_x" value="${g.lca.inner_x}" /></div>
+      <div class="row"><label>Inner pivot Z (mm)</label><input type="number" data-cg="${label.toLowerCase()}" data-cs="lca" data-cf="inner_z" value="${g.lca.inner_z}" /></div>
+      <div class="row"><label>Outer (ball joint) X</label><input type="number" data-cg="${label.toLowerCase()}" data-cs="lca" data-cf="outer_x" value="${g.lca.outer_x}" /></div>
+      <div class="row"><label>Outer (ball joint) Z</label><input type="number" data-cg="${label.toLowerCase()}" data-cs="lca" data-cf="outer_z" value="${g.lca.outer_z}" /></div>
+      ${isWb ? `
+      <h4 style="margin:12px 0 4px;font-size:11px;color:var(--accent2);text-transform:uppercase;letter-spacing:0.6px">Upper control arm</h4>
+      <div class="row"><label>Inner pivot X (mm)</label><input type="number" data-cg="${label.toLowerCase()}" data-cs="uca" data-cf="inner_x" value="${g.uca.inner_x}" /></div>
+      <div class="row"><label>Inner pivot Z (mm)</label><input type="number" data-cg="${label.toLowerCase()}" data-cs="uca" data-cf="inner_z" value="${g.uca.inner_z}" /></div>
+      <div class="row"><label>Outer (ball joint) X</label><input type="number" data-cg="${label.toLowerCase()}" data-cs="uca" data-cf="outer_x" value="${g.uca.outer_x}" /></div>
+      <div class="row"><label>Outer (ball joint) Z</label><input type="number" data-cg="${label.toLowerCase()}" data-cs="uca" data-cf="outer_z" value="${g.uca.outer_z}" /></div>
+      ` : `
+      <h4 style="margin:12px 0 4px;font-size:11px;color:var(--accent2);text-transform:uppercase;letter-spacing:0.6px">Strut top mount</h4>
+      <div class="row"><label>Top mount X (mm)</label><input type="number" data-cg="${label.toLowerCase()}" data-cs="strut_top" data-cf="x" value="${g.strut_top.x}" /></div>
+      <div class="row"><label>Top mount Z (mm)</label><input type="number" data-cg="${label.toLowerCase()}" data-cs="strut_top" data-cf="z" value="${g.strut_top.z}" /></div>
+      `}
+      <h4 style="margin:12px 0 4px;font-size:11px;color:var(--accent2);text-transform:uppercase;letter-spacing:0.6px">Setup + range</h4>
+      <div class="row"><label>Static camber (°, − for neg)</label><input type="number" step="0.1" data-cg="${label.toLowerCase()}" data-cf="static_camber_deg" value="${g.static_camber_deg}" /></div>
+      <div class="row"><label>Bump travel (mm)</label><input type="number" data-cg="${label.toLowerCase()}" data-cf="travel_bump_mm" value="${g.travel_bump_mm}" /></div>
+      <div class="row"><label>Droop travel (mm)</label><input type="number" data-cg="${label.toLowerCase()}" data-cf="travel_droop_mm" value="${g.travel_droop_mm}" /></div>
+      <div class="row"><label>Step (mm)</label><input type="number" data-cg="${label.toLowerCase()}" data-cf="step_mm" value="${g.step_mm}" /></div>
+    </div>`;
+  }
+
+  function statsFor(curve, g){
+    const valid = curve.filter(c => !isNaN(c.camber_deg));
+    if (!valid.length) return null;
+    const atZero = curve.find(c => Math.abs(c.travel_mm) < 0.5);
+    const max = valid.reduce((a,b) => a.camber_deg > b.camber_deg ? a : b);
+    const min = valid.reduce((a,b) => a.camber_deg < b.camber_deg ? a : b);
+    const bump = curve.find(c => Math.abs(c.travel_mm - g.travel_bump_mm) < 0.5) || valid[valid.length-1];
+    const droop = curve.find(c => Math.abs(c.travel_mm + g.travel_droop_mm) < 0.5) || valid[0];
+    // Gain rate at static = (camber at +1mm − camber at −1mm) / 2
+    const above = camberAt(curve, 1);
+    const below = camberAt(curve, -1);
+    const rate = (above - below) / 2;
+    return { atZero, max, min, bump, droop, rate, swing: max.camber_deg - min.camber_deg };
+  }
+  const fS = statsFor(fCurve, fG);
+  const rS = statsFor(rCurve, rG);
+
+  return `<div class="section">
+    <div class="grid-2">
+      ${geomBlock('Front', fG)}
+      ${geomBlock('Rear', rG)}
+    </div>
+
+    <h3 style="margin-top:22px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.6px">Front camber curve</h3>
+    <div class="grid-4" style="margin-top:8px">
+      <div class="kpi"><div class="lbl">Static camber</div><div class="val">${fG.static_camber_deg.toFixed(2)}°</div></div>
+      <div class="kpi"><div class="lbl">Gain rate at static</div><div class="val">${fS ? fS.rate.toFixed(4) : '—'}°/mm</div><div class="sub">${fS ? (fS.rate*25.4).toFixed(3)+'°/in' : ''}</div></div>
+      <div class="kpi"><div class="lbl">Camber @ full bump (+${fG.travel_bump_mm}mm)</div><div class="val">${fS && fS.bump ? fS.bump.camber_deg.toFixed(2) : '—'}°</div><div class="sub">${fS && fS.bump ? (fS.bump.camber_deg - fG.static_camber_deg >= 0 ? '+' : '') + (fS.bump.camber_deg - fG.static_camber_deg).toFixed(2) + '° change' : ''}</div></div>
+      <div class="kpi"><div class="lbl">Camber @ full droop (−${fG.travel_droop_mm}mm)</div><div class="val">${fS && fS.droop ? fS.droop.camber_deg.toFixed(2) : '—'}°</div><div class="sub">${fS && fS.droop ? (fS.droop.camber_deg - fG.static_camber_deg >= 0 ? '+' : '') + (fS.droop.camber_deg - fG.static_camber_deg).toFixed(2) + '° change' : ''}</div></div>
+      <div class="kpi"><div class="lbl">Total swing</div><div class="val">${fS ? fS.swing.toFixed(2) : '—'}°</div></div>
+      <div class="kpi"><div class="lbl">Outside wheel @ 1g roll</div><div class="val">${fOutside.toFixed(2)}°</div><div class="sub">roll angle ${wtw.rollAngleDeg.toFixed(2)}° × half-track</div></div>
+      <div class="kpi"><div class="lbl">Inside wheel @ 1g roll</div><div class="val">${fInside.toFixed(2)}°</div><div class="sub">unloaded</div></div>
+    </div>
+    <div class="card" style="margin-top:10px;padding:10px">
+      <canvas id="camberFrontChart" style="width:100%;height:240px;display:block"></canvas>
+    </div>
+
+    <h3 style="margin-top:22px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.6px">Rear camber curve</h3>
+    <div class="grid-4" style="margin-top:8px">
+      <div class="kpi"><div class="lbl">Static camber</div><div class="val">${rG.static_camber_deg.toFixed(2)}°</div></div>
+      <div class="kpi"><div class="lbl">Gain rate at static</div><div class="val">${rS ? rS.rate.toFixed(4) : '—'}°/mm</div><div class="sub">${rS ? (rS.rate*25.4).toFixed(3)+'°/in' : ''}</div></div>
+      <div class="kpi"><div class="lbl">Camber @ full bump (+${rG.travel_bump_mm}mm)</div><div class="val">${rS && rS.bump ? rS.bump.camber_deg.toFixed(2) : '—'}°</div></div>
+      <div class="kpi"><div class="lbl">Camber @ full droop (−${rG.travel_droop_mm}mm)</div><div class="val">${rS && rS.droop ? rS.droop.camber_deg.toFixed(2) : '—'}°</div></div>
+      <div class="kpi"><div class="lbl">Total swing</div><div class="val">${rS ? rS.swing.toFixed(2) : '—'}°</div></div>
+      <div class="kpi"><div class="lbl">Outside wheel @ 1g roll</div><div class="val">${rOutside.toFixed(2)}°</div></div>
+      <div class="kpi"><div class="lbl">Inside wheel @ 1g roll</div><div class="val">${rInside.toFixed(2)}°</div></div>
+    </div>
+    <div class="card" style="margin-top:10px;padding:10px">
+      <canvas id="camberRearChart" style="width:100%;height:240px;display:block"></canvas>
+    </div>
+
+    <div class="card" style="margin-top:14px;padding:14px;line-height:1.6;color:var(--muted);font-size:12px">
+      <b>How it works:</b> 2D kinematic solver, looking from the rear. X is lateral (positive outboard), Z is vertical (positive up).
+      "Wheel travel" = vertical motion of LCA outer pivot in the chassis frame. Positive = bump.
+      McPherson camber = strut-line angle from vertical. Wishbone camber = knuckle-line angle (LCA outer → UCA outer) from vertical.
+      <br><br>
+      <b>Dynamic camber under 1g roll</b> uses the WTW tab's roll angle. Outside wheel is compressed by <span class="kbd">roll × half-track</span>; inside wheel is extended by the same.
+      First-cut model — assumes wheel stays on the ground, ignores chassis pitch and tyre deflection.
+    </div>
+  </div>`;
+}
+
+function drawCamberCharts(){
+  const p = getCurrent(); if (!p || !p.camber) return;
+  drawCamberChart('camberFrontChart', solveCamber(p.camber.front), p.camber.front, '#22d3ee');
+  drawCamberChart('camberRearChart', solveCamber(p.camber.rear), p.camber.rear, '#f43f5e');
+}
+
+function drawCamberChart(id, curve, geom, colour){
+  const cv = document.getElementById(id); if (!cv) return;
+  const dpr = window.devicePixelRatio || 1;
+  cv.width = cv.clientWidth * dpr; cv.height = cv.clientHeight * dpr;
+  const ctx = cv.getContext('2d'); ctx.scale(dpr, dpr);
+  const w = cv.clientWidth, h = cv.clientHeight;
+  ctx.clearRect(0,0,w,h); ctx.fillStyle = '#0d131c'; ctx.fillRect(0,0,w,h);
+  const valid = curve.filter(c => !isNaN(c.camber_deg)); if (!valid.length) return;
+  const xMin = -geom.travel_droop_mm, xMax = geom.travel_bump_mm;
+  const camMin = Math.min(...valid.map(c=>c.camber_deg));
+  const camMax = Math.max(...valid.map(c=>c.camber_deg));
+  const yPad = (camMax - camMin) * 0.15 || 0.1;
+  const yMin = camMin - yPad, yMax = camMax + yPad;
+  const PAD_L = 50, PAD_R = 14, PAD_T = 12, PAD_B = 32;
+  const W = w - PAD_L - PAD_R, H = h - PAD_T - PAD_B;
+  const x = v => PAD_L + ((v - xMin) / (xMax - xMin)) * W;
+  const y = v => PAD_T + H - ((v - yMin) / (yMax - yMin)) * H;
+  ctx.strokeStyle = '#1a2332'; ctx.fillStyle='#6b7280'; ctx.font='10px -apple-system,system-ui';
+  // x grid (wheel travel)
+  const xStep = niceStep((xMax-xMin)/8);
+  for (let v = Math.ceil(xMin/xStep)*xStep; v <= xMax; v += xStep) {
+    const px = x(v);
+    ctx.beginPath(); ctx.moveTo(px, PAD_T); ctx.lineTo(px, PAD_T+H); ctx.stroke();
+    ctx.fillText(v.toFixed(0), px-8, PAD_T+H+13);
+  }
+  ctx.fillText('wheel travel (mm) — bump →', PAD_L+W/2-70, PAD_T+H+27);
+  // y grid (camber)
+  const yStep = niceStep((yMax-yMin)/6);
+  for (let v = Math.ceil(yMin/yStep)*yStep; v <= yMax; v += yStep) {
+    const py = y(v);
+    ctx.beginPath(); ctx.moveTo(PAD_L, py); ctx.lineTo(PAD_L+W, py); ctx.stroke();
+    ctx.fillText(v.toFixed(2), 4, py+3);
+  }
+  ctx.save(); ctx.translate(12, PAD_T+H/2+30); ctx.rotate(-Math.PI/2); ctx.fillText('camber (°)', 0, 0); ctx.restore();
+  // zero-travel marker
+  if (xMin <= 0 && xMax >= 0) {
+    ctx.strokeStyle = '#374151'; ctx.setLineDash([3,3]);
+    ctx.beginPath(); ctx.moveTo(x(0), PAD_T); ctx.lineTo(x(0), PAD_T+H); ctx.stroke();
+    ctx.setLineDash([]);
+  }
+  // curve
+  ctx.strokeStyle = colour; ctx.lineWidth = 2; ctx.beginPath();
+  let started = false;
+  curve.forEach(c => {
+    if (isNaN(c.camber_deg)) { started = false; return; }
+    const px = x(c.travel_mm), py = y(c.camber_deg);
+    if (!started) { ctx.moveTo(px, py); started = true; } else ctx.lineTo(px, py);
+  });
+  ctx.stroke();
+  // static camber dot
+  const zero = curve.find(c => Math.abs(c.travel_mm) < geom.step_mm/2 + 0.001);
+  if (zero) { ctx.fillStyle = colour; ctx.beginPath(); ctx.arc(x(0), y(zero.camber_deg), 4, 0, Math.PI*2); ctx.fill(); }
+}
+
+function niceStep(v){ const p10 = Math.pow(10, Math.floor(Math.log10(Math.abs(v))||0)); const n = v/p10; if (n<2) return p10; if (n<5) return 2*p10; return 5*p10; }
 
 function renderCalc(){
   const p = getCurrent(); if (!p) return '<div class="section muted">No car selected. Add one in Profiles.</div>';
@@ -439,6 +727,22 @@ function bindInputs(){
       const el = document.getElementById(f);
       if (!el) return;
       el.oninput = () => { getCurrent().inputs[f] = +el.value; save(); render(); };
+    });
+  }
+  if (tab === 'camber') {
+    document.querySelectorAll('[data-cg]').forEach(el => {
+      const handler = () => {
+        const p = getCurrent(); if (!p) return;
+        if (!p.camber) p.camber = JSON.parse(JSON.stringify(SEED[0].camber));
+        const axle = el.dataset.cg;     // 'front' | 'rear'
+        const sub  = el.dataset.cs;      // 'lca' | 'uca' | 'strut_top' | undefined
+        const field = el.dataset.cf;
+        const target = sub ? p.camber[axle][sub] : p.camber[axle];
+        const v = el.value;
+        target[field] = (el.tagName === 'SELECT') ? v : (v === '' ? 0 : +v);
+        save(); render();
+      };
+      el.oninput = handler; el.onchange = handler;
     });
   }
   if (tab === 'profiles') {
