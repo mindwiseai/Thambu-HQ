@@ -8,6 +8,18 @@ updated: 2026-04-14
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
+## 2026-04-19 (latest) — Realistic launch budget locked: Rs.70-90L (Tier 2)
+
+- Aishu pushed back on under-budgeted proposal — specifically marketing costs.
+- **Proposal Capital + Timeline section rebuilt** with realistic Tier 2 budget:
+  - Build + setup: Rs.25-38L
+  - Marketing (12 months): Rs.25-40L  ← **the line that was missing**
+  - Founder/team runway: Rs.13-20L
+  - Total: **Rs.70-90L**
+- Math Comparison table also bumped to reflect realistic capital across all options.
+- Now consistent with [[THE_EDIT_PITCH_DECK|pitch deck]] which already had Tier 2 figure for the ask.
+- Proposal PDF + DOCX regenerated.
+
 ## 2026-04-17 (end of session) — Next topic: Fundraising
 
 - Aishu has reviewed the Rs.25–30L launch capital requirement and recognized it's significant for the team's current size.
