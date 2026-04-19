@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gear Ratio Calculator · ARKA</title>
+<style>
+:root{--bg:#0b0f14;--panel:#121821;--ink:#e6edf3;--muted:#8b95a3;--accent:#f43f5e;--accent2:#22d3ee;--accent3:#a855f7;--good:#22c55e;--warn:#f59e0b;--bad:#ef4444;--border:#1f2937}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,Inter,system-ui,sans-serif;font-size:13px}
+header{padding:16px 22px;border-bottom:1px solid var(--border)}
+.title{font-size:16px;font-weight:600}
+.crumb{color:var(--muted);font-size:12px;margin-top:2px}
+.crumb a{color:var(--muted);text-decoration:none;border-bottom:1px dashed #374151}
+main{display:grid;grid-template-columns:340px 1fr;min-height:calc(100vh - 60px)}
+@media (max-width:900px){main{grid-template-columns:1fr}}
+aside{background:var(--panel);border-right:1px solid var(--border);padding:16px;overflow-y:auto}
+.panel{padding:18px 22px}
+button.btn,select.btn,input.btn{background:#1a2332;border:1px solid #2a3447;color:var(--ink);padding:6px 11px;border-radius:6px;font-size:12px;font-family:inherit;cursor:pointer}
+button.btn:hover{background:#212c3f}
+button.btn.primary{background:var(--accent);border-color:var(--accent)}
+.row{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.row label{flex:1;color:var(--muted);font-size:12px}
+.row input,.row select{width:90px;background:#0d131c;border:1px solid #1f2937;color:var(--ink);padding:5px 7px;border-radius:5px;font:inherit;text-align:right}
+.row input.wide{width:100%;text-align:left}
+.section-h{font-size:11px;text-transform:uppercase;letter-spacing:0.7px;color:var(--muted);margin:14px 0 6px;font-weight:600}
+.gear-grid{display:grid;grid-template-columns:auto 1fr 1fr;gap:6px;align-items:center;margin-bottom:6px}
+.gear-grid input{background:#0d131c;border:1px solid #1f2937;color:var(--ink);padding:4px 6px;border-radius:4px;font:inherit;text-align:right;width:100%}
+.profile-list{margin-top:8px;max-height:220px;overflow-y:auto;border:1px solid #1a2332;border-radius:6px}
+.profile-item{padding:7px 10px;border-bottom:1px solid #1a2332;cursor:pointer;font-size:12px;display:flex;justify-content:space-between;align-items:center}
+.profile-item:last-child{border-bottom:0}
+.profile-item:hover{background:#161e2a}
+.profile-item.active{background:#1a2332;color:var(--accent2)}
+.profile-item .meta{color:var(--muted);font-size:10px}
+.btn-row{display:flex;gap:6px;margin-top:8px}
+.btn-row button{flex:1;font-size:11px}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+th,td{padding:6px 8px;border-bottom:1px solid #1a2332;text-align:right}
+th:first-child,td:first-child{text-align:left}
+th{background:#0d131c;color:var(--muted);text-transform:uppercase;font-size:10px;letter-spacing:0.5px}
+.kbd{font-family:"SF Mono",Menlo,monospace;font-size:11px;background:#0d131c;border:1px solid #1f2937;padding:1px 5px;border-radius:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:14px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:12px}
+.card .lbl{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:0.5px}
+.card .val{font-size:18px;font-weight:600;margin-top:3px}
+.chart-wrap{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:14px;margin-top:14px}
+canvas{width:100%;height:300px;display:block}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;margin-bottom:8px}
+.legend .swatch{display:inline-block;width:14px;height:3px;margin-right:5px;vertical-align:middle;border-radius:2px}
+.muted{color:var(--muted)}
+.compare-mode{margin-top:14px;padding:12px;background:#0d131c;border:1px dashed #2a3447;border-radius:8px}
+@media print {
+  aside,nav,.no-print{display:none !important}
+  main{grid-template-columns:1fr}
+  body{background:#fff;color:#000}
+  .card,.chart-wrap{border-color:#bbb;background:#fff;color:#000}
+  th{background:#eee !important;color:#000 !important}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="title">Gear Ratio Calculator</div>
+  <div class="crumb"><a href="../index.html">← All tools</a> · PPG-style program · 25 imported profiles</div>
+</header>
+
+<main>
+  <aside>
+    <div class="section-h">Profile</div>
+    <input class="row wide" type="text" id="profileName" placeholder="Profile name" style="width:100%;padding:6px 8px;background:#0d131c;border:1px solid #1f2937;color:var(--ink);border-radius:5px" />
+
+    <div class="section-h">Engine RPM band</div>
+    <div class="row"><label>Max RPM</label><input type="number" id="maxRpm" /></div>
+    <div class="row"><label>Min RPM</label><input type="number" id="minRpm" /></div>
+
+    <div class="section-h">Wheel & units</div>
+    <div class="row"><label>Wheel dia (mm)</label><input type="number" id="wheelDia" /></div>
+    <div class="row"><label>Display unit</label><select id="unit"><option>KPH</option><option>MPH</option></select></div>
+
+    <div class="section-h">Transfer / Diff</div>
+    <div class="gear-grid">
+      <div class="muted">Trans.</div>
+      <input type="number" id="transferIn" placeholder="in" />
+      <input type="number" id="transferOut" placeholder="out" />
+      <div class="muted">Diff</div>
+      <input type="number" id="diffIn" placeholder="in" />
+      <input type="number" id="diffOut" placeholder="out" />
+    </div>
+
+    <div class="section-h">Gears (input / output teeth)</div>
+    <div id="gearsList"></div>
+    <div class="btn-row"><button class="btn" onclick="addGear()">+ Gear</button><button class="btn" onclick="removeGear()">− Gear</button></div>
+
+    <div class="section-h">Saved profiles</div>
+    <div class="profile-list" id="profileList"></div>
+    <div class="btn-row">
+      <button class="btn primary" onclick="saveProfile()">Save</button>
+      <button class="btn" onclick="dupProfile()">Duplicate</button>
+      <button class="btn" onclick="deleteProfile()">Delete</button>
+    </div>
+
+    <div class="section-h">Compare</div>
+    <div class="row"><label>Overlay with</label>
+      <select id="compareSel" style="width:160px;text-align:left"><option value="">— none —</option></select>
+    </div>
+
+    <div class="section-h">Data</div>
+    <div class="btn-row">
+      <button class="btn" onclick="exportProfiles()">Export</button>
+      <label class="btn" style="cursor:pointer;text-align:center">Import<input type="file" id="importFile" accept=".json" style="display:none" /></label>
+    </div>
+    <div class="btn-row">
+      <button class="btn" onclick="window.print()">Print</button>
+      <button class="btn" onclick="resetSeed()">Reset seed</button>
+    </div>
+  </aside>
+
+  <section class="panel">
+    <div class="cards">
+      <div class="card"><div class="lbl">Final drive</div><div class="val" id="kFinal">—</div></div>
+      <div class="card"><div class="lbl">Top speed @ max RPM</div><div class="val" id="kTopSpeed">—</div></div>
+      <div class="card"><div class="lbl">1st gear @ max RPM</div><div class="val" id="kFirstMax">—</div></div>
+      <div class="card"><div class="lbl">Avg shift drop</div><div class="val" id="kAvgDrop">—</div></div>
+    </div>
+
+    <table id="gearTable">
+      <thead><tr><th>Gear</th><th>Teeth (in/out)</th><th>Ratio</th><th>Final</th><th>Min speed</th><th>Max speed</th><th>RPM @ shift</th><th>Drop next</th></tr></thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="chart-wrap">
+      <div class="legend" id="chartLegend"></div>
+      <canvas id="chart"></canvas>
+    </div>
+  </section>
+</main>
+
+<script src="seed-profiles.js"></script>
+<script>
+const STORE = 'arka-gear-v1';
+let profiles = load();
+let currentId = profiles[0]?.id || null;
+let compareId = '';
+
+function load(){
+  try { const r = localStorage.getItem(STORE); if (r) return JSON.parse(r); } catch(e){}
+  return JSON.parse(JSON.stringify(window.SEED_PROFILES || []));
+}
+function save(){ localStorage.setItem(STORE, JSON.stringify(profiles)); }
+
+function getCurrent(){ return profiles.find(p => p.id === currentId); }
+function getCompare(){ return profiles.find(p => p.id === compareId); }
+
+// ─── Math ────────────────────────────────────────────────────────────────────
+function calc(p){
+  if (!p) return null;
+  const transfer = (p.transfer.output_teeth/p.transfer.input_teeth);
+  const diff = (p.diff.output_teeth/p.diff.input_teeth);
+  const wheelCircM = (Math.PI * p.wheel_dia_mm) / 1000; // metres per wheel rev
+  const factor = p.unit === 'MPH' ? 0.0223694 : 0.06; // (m/min → MPH or KPH); MPH = m/min * 0.0223694; KPH = m/min * 0.06
+  const rows = p.gears.map((g,i) => {
+    const ratio = g.output_teeth / g.input_teeth;
+    const final = ratio * transfer * diff;
+    // wheel rpm = engine rpm / final
+    const minSpeed = (p.min_rpm / final) * wheelCircM * factor;
+    const maxSpeed = (p.max_rpm / final) * wheelCircM * factor;
+    return {gear:g.gear, in:g.input_teeth, out:g.output_teeth, ratio, final, minSpeed, maxSpeed};
+  });
+  // RPM at upshift — engine RPM in next gear at this gear's max speed
+  rows.forEach((r, i) => {
+    if (i < rows.length - 1) {
+      const next = rows[i+1];
+      const speedAtShift = r.maxSpeed; // shift at max RPM
+      const wheelRpmAtShift = (speedAtShift / factor) / wheelCircM;
+      r.shiftToRpm = wheelRpmAtShift * next.final;
+      r.dropToNext = p.max_rpm - r.shiftToRpm;
+    }
+  });
+  return {rows, finalDrive: transfer*diff};
+}
+
+// ─── Render ──────────────────────────────────────────────────────────────────
+function render(){
+  const p = getCurrent();
+  // populate inputs
+  if (!p) return;
+  document.getElementById('profileName').value = p.name;
+  document.getElementById('maxRpm').value = p.max_rpm;
+  document.getElementById('minRpm').value = p.min_rpm;
+  document.getElementById('wheelDia').value = p.wheel_dia_mm;
+  document.getElementById('unit').value = p.unit;
+  document.getElementById('transferIn').value = p.transfer.input_teeth;
+  document.getElementById('transferOut').value = p.transfer.output_teeth;
+  document.getElementById('diffIn').value = p.diff.input_teeth;
+  document.getElementById('diffOut').value = p.diff.output_teeth;
+  // gears
+  const gl = document.getElementById('gearsList');
+  gl.innerHTML = '';
+  p.gears.forEach((g, i) => {
+    const div = document.createElement('div');
+    div.className = 'gear-grid';
+    div.innerHTML = `<div class="muted">${i+1}</div>
+      <input type="number" data-g="${i}" data-k="input_teeth" value="${g.input_teeth}" />
+      <input type="number" data-g="${i}" data-k="output_teeth" value="${g.output_teeth}" />`;
+    gl.appendChild(div);
+  });
+  // profile list
+  const pl = document.getElementById('profileList');
+  pl.innerHTML = '';
+  profiles.forEach(pr => {
+    const d = document.createElement('div');
+    d.className = 'profile-item' + (pr.id === currentId ? ' active' : '');
+    d.innerHTML = `<div>${escapeHtml(pr.name)}</div><div class="meta">${pr.gears.length}sp · ${pr.diff.input_teeth}/${pr.diff.output_teeth}</div>`;
+    d.onclick = () => { currentId = pr.id; render(); };
+    pl.appendChild(d);
+  });
+  // compare select
+  const cs = document.getElementById('compareSel');
+  cs.innerHTML = '<option value="">— none —</option>' + profiles.filter(pr=>pr.id!==currentId).map(pr=>`<option value="${pr.id}" ${pr.id===compareId?'selected':''}>${escapeHtml(pr.name)}</option>`).join('');
+
+  // calc + table
+  const r = calc(p);
+  const tbody = document.querySelector('#gearTable tbody');
+  tbody.innerHTML = '';
+  r.rows.forEach(g => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${g.gear}</td>
+      <td>${g.in}/${g.out}</td>
+      <td>${g.ratio.toFixed(3)}</td>
+      <td>${g.final.toFixed(3)}</td>
+      <td>${g.minSpeed.toFixed(1)}</td>
+      <td>${g.maxSpeed.toFixed(1)}</td>
+      <td>${g.shiftToRpm? g.shiftToRpm.toFixed(0):'—'}</td>
+      <td>${g.dropToNext? '−'+g.dropToNext.toFixed(0):'—'}</td>`;
+    tbody.appendChild(tr);
+  });
+  // KPI cards
+  document.getElementById('kFinal').textContent = r.finalDrive.toFixed(3);
+  document.getElementById('kTopSpeed').textContent = r.rows.length ? r.rows[r.rows.length-1].maxSpeed.toFixed(1) + ' ' + p.unit : '—';
+  document.getElementById('kFirstMax').textContent = r.rows[0] ? r.rows[0].maxSpeed.toFixed(1) + ' ' + p.unit : '—';
+  const drops = r.rows.filter(g=>g.dropToNext).map(g=>g.dropToNext);
+  document.getElementById('kAvgDrop').textContent = drops.length ? '−' + Math.round(drops.reduce((a,b)=>a+b,0)/drops.length) + ' rpm' : '—';
+  drawChart();
+}
+
+// ─── Chart (vanilla canvas, speed-vs-RPM per gear) ───────────────────────────
+function drawChart(){
+  const cv = document.getElementById('chart');
+  const dpr = window.devicePixelRatio || 1;
+  cv.width = cv.clientWidth * dpr; cv.height = cv.clientHeight * dpr;
+  const ctx = cv.getContext('2d'); ctx.scale(dpr, dpr);
+  const w = cv.clientWidth, h = cv.clientHeight;
+  ctx.clearRect(0,0,w,h);
+  ctx.fillStyle = '#0b0f14'; ctx.fillRect(0,0,w,h);
+
+  const p = getCurrent(); if (!p) return;
+  const cmp = getCompare();
+  const r1 = calc(p);
+  const r2 = cmp ? calc(cmp) : null;
+
+  // bounds
+  const allRows = [...r1.rows, ...(r2?r2.rows:[])];
+  const maxSpeed = Math.max(...allRows.map(g => g.maxSpeed)) * 1.05;
+  const minRpm = Math.min(p.min_rpm, cmp?cmp.min_rpm:p.min_rpm) * 0.9;
+  const maxRpm = Math.max(p.max_rpm, cmp?cmp.max_rpm:p.max_rpm) * 1.05;
+
+  const PAD_L = 50, PAD_R = 18, PAD_T = 14, PAD_B = 36;
+  const W = w - PAD_L - PAD_R, H = h - PAD_T - PAD_B;
+  const x = sp => PAD_L + (sp / maxSpeed) * W;
+  const y = rpm => PAD_T + H - ((rpm - minRpm) / (maxRpm - minRpm)) * H;
+
+  // grid
+  ctx.strokeStyle = '#1a2332'; ctx.fillStyle='#6b7280'; ctx.font='10px -apple-system,system-ui';
+  // x ticks (speed)
+  const xStep = niceStep(maxSpeed/8);
+  for (let s=0; s<=maxSpeed; s+=xStep) {
+    const px = x(s);
+    ctx.beginPath(); ctx.moveTo(px, PAD_T); ctx.lineTo(px, PAD_T+H); ctx.stroke();
+    ctx.fillText(s.toFixed(0), px-8, PAD_T+H+14);
+  }
+  ctx.fillText(p.unit, PAD_L+W/2-8, PAD_T+H+30);
+  // y ticks (rpm)
+  const yStep = niceStep((maxRpm-minRpm)/6);
+  for (let r=Math.ceil(minRpm/yStep)*yStep; r<=maxRpm; r+=yStep) {
+    const py = y(r);
+    ctx.beginPath(); ctx.moveTo(PAD_L, py); ctx.lineTo(PAD_L+W, py); ctx.stroke();
+    ctx.fillText(r.toFixed(0), 6, py+3);
+  }
+  ctx.save(); ctx.translate(12, PAD_T+H/2+10); ctx.rotate(-Math.PI/2); ctx.fillText('Engine RPM', 0, 0); ctx.restore();
+
+  // bands for min/max RPM
+  ctx.fillStyle = 'rgba(34,197,94,0.05)';
+  ctx.fillRect(PAD_L, y(p.max_rpm), W, y(p.min_rpm)-y(p.max_rpm));
+
+  function drawProfile(r, p, color, dashed=false){
+    ctx.strokeStyle = color; ctx.lineWidth = 2; ctx.setLineDash(dashed?[4,4]:[]);
+    r.rows.forEach((g,i) => {
+      ctx.beginPath();
+      ctx.moveTo(x(g.minSpeed), y(p.min_rpm));
+      ctx.lineTo(x(g.maxSpeed), y(p.max_rpm));
+      ctx.stroke();
+      // gear label at midpoint
+      ctx.fillStyle = color; ctx.font='bold 11px -apple-system,system-ui';
+      ctx.fillText(''+g.gear, x((g.minSpeed+g.maxSpeed)/2)-3, y((p.min_rpm+p.max_rpm)/2)-4);
+    });
+    ctx.setLineDash([]);
+  }
+  drawProfile(r1, p, '#22d3ee');
+  if (r2) drawProfile(r2, cmp, '#a855f7', true);
+
+  // legend
+  const lg = document.getElementById('chartLegend');
+  lg.innerHTML = `<div><span class="swatch" style="background:#22d3ee"></span>${escapeHtml(p.name)}</div>` +
+    (cmp?`<div><span class="swatch" style="background:#a855f7;height:3px;background:repeating-linear-gradient(90deg,#a855f7 0 4px,transparent 4px 8px)"></span>${escapeHtml(cmp.name)}</div>`:'');
+}
+function niceStep(v){ const p10 = Math.pow(10, Math.floor(Math.log10(v))); const n = v/p10; if (n<2) return p10; if (n<5) return 2*p10; return 5*p10; }
+
+// ─── Wiring up ───────────────────────────────────────────────────────────────
+function bindInputs(){
+  const map = ['profileName','maxRpm','minRpm','wheelDia','unit','transferIn','transferOut','diffIn','diffOut'];
+  map.forEach(id => {
+    document.getElementById(id).addEventListener('input', () => {
+      const p = getCurrent(); if (!p) return;
+      const v = document.getElementById(id).value;
+      if (id==='profileName') p.name = v;
+      else if (id==='maxRpm') p.max_rpm = +v;
+      else if (id==='minRpm') p.min_rpm = +v;
+      else if (id==='wheelDia') p.wheel_dia_mm = +v;
+      else if (id==='unit') p.unit = v;
+      else if (id==='transferIn') p.transfer.input_teeth = +v;
+      else if (id==='transferOut') p.transfer.output_teeth = +v;
+      else if (id==='diffIn') p.diff.input_teeth = +v;
+      else if (id==='diffOut') p.diff.output_teeth = +v;
+      save(); render();
+    });
+  });
+  // gear inputs delegated
+  document.getElementById('gearsList').addEventListener('input', e => {
+    const t = e.target;
+    if (t.dataset.g === undefined) return;
+    const p = getCurrent();
+    p.gears[+t.dataset.g][t.dataset.k] = +t.value;
+    save(); render();
+  });
+  document.getElementById('compareSel').addEventListener('change', e => { compareId = e.target.value; render(); });
+  document.getElementById('importFile').addEventListener('change', importFile);
+}
+function addGear(){
+  const p = getCurrent(); if (!p) return;
+  const last = p.gears[p.gears.length-1];
+  p.gears.push({gear: p.gears.length+1, input_teeth: last?last.input_teeth+2:20, output_teeth: last?Math.max(last.output_teeth-2, 18):24});
+  save(); render();
+}
+function removeGear(){
+  const p = getCurrent(); if (!p || p.gears.length<=1) return;
+  p.gears.pop();
+  save(); render();
+}
+function saveProfile(){
+  // already auto-saving — this is just feedback
+  save(); render();
+}
+function dupProfile(){
+  const p = getCurrent(); if (!p) return;
+  const copy = JSON.parse(JSON.stringify(p));
+  copy.id = 'p_'+Date.now();
+  copy.name = p.name + ' (copy)';
+  profiles.unshift(copy);
+  currentId = copy.id;
+  save(); render();
+}
+function deleteProfile(){
+  if (!confirm('Delete this profile?')) return;
+  const i = profiles.findIndex(p => p.id === currentId);
+  if (i < 0) return;
+  profiles.splice(i, 1);
+  currentId = profiles[0]?.id;
+  save(); render();
+}
+function exportProfiles(){
+  const blob = new Blob([JSON.stringify({profiles}, null, 2)], {type:'application/json'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'gear-ratio-profiles.json'; a.click();
+}
+function importFile(e){
+  const f = e.target.files[0]; if (!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try {
+      const j = JSON.parse(r.result);
+      profiles = j.profiles || j;
+      currentId = profiles[0]?.id;
+      save(); render();
+      alert('Imported '+profiles.length+' profiles.');
+    } catch(err){ alert('Import failed: '+err.message); }
+  };
+  r.readAsText(f);
+  e.target.value = '';
+}
+function resetSeed(){
+  if (!confirm('Reset to original 25 seeded profiles? Your saved profiles will be lost.')) return;
+  profiles = JSON.parse(JSON.stringify(window.SEED_PROFILES || []));
+  currentId = profiles[0]?.id;
+  save(); render();
+}
+function escapeHtml(s){ return (s==null?'':(''+s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))); }
+
+bindInputs();
+window.addEventListener('resize', drawChart);
+render();
+</script>
+
+</body>
+</html>

@@ -39,7 +39,7 @@ Three SKUs total at Day 1. Couples bundle is the **hero**.
 ## Resource implications
 
 - **Build timeline:** 16-18 months from start to launch
-- **Initial capital:** ~Rs.20-25L (3 SKUs × MOQs + regulatory + brand build)
+- **Initial capital (Tier 2 realistic launch, 12-month runway):** Rs.70-90L. Breakdown: build + setup Rs.25-38L (entity, FSSAI, inventory, brand identity, packaging, photography, tech stack, logistics, insurance, legal) + marketing Rs.25-40L (performance ads, influencer collaborations, PR, content) + founder/team runway Rs.13-20L. Earlier estimates of Rs.20-25L were under-budgeted (missed realistic marketing costs and full team runway). Updated 2026-04-19.
 - **Regulatory pathways:** TWO — FSDU (Prenatal + Preconception Her) + Health Supplement (Preconception Him)
 - **Manufacturer:** must handle both FSDU + Health Supplement categories. Adds dimension to [[tanishq-lifecare]] vs [[brukem-life-care]] evaluation.
 

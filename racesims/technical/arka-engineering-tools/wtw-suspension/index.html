@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Weight Transfer + Setup · ARKA</title>
+<style>
+:root{--bg:#0b0f14;--panel:#121821;--ink:#e6edf3;--muted:#8b95a3;--accent:#f43f5e;--accent2:#22d3ee;--good:#22c55e;--warn:#f59e0b;--bad:#ef4444;--border:#1f2937}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,Inter,system-ui,sans-serif;font-size:13px}
+header{padding:16px 22px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.title{font-size:16px;font-weight:600}
+.crumb{color:var(--muted);font-size:12px;margin-top:2px}
+.crumb a{color:var(--muted);text-decoration:none;border-bottom:1px dashed #374151}
+nav.tabs{display:flex;gap:4px;padding:0 22px;border-bottom:1px solid var(--border);background:#0f141c;position:sticky;top:0;z-index:10}
+nav.tabs button{background:transparent;border:0;color:var(--muted);padding:10px 14px;cursor:pointer;border-bottom:2px solid transparent;font:inherit;font-size:13px}
+nav.tabs button.active{color:var(--ink);border-bottom-color:var(--accent2)}
+.toolbar{padding:10px 22px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--border)}
+button.btn,select.btn,input.btn{background:#1a2332;border:1px solid #2a3447;color:var(--ink);padding:6px 11px;border-radius:6px;font-size:12px;font-family:inherit;cursor:pointer}
+button.btn:hover{background:#212c3f}
+.section{padding:18px 22px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+@media(max-width:760px){.grid-2,.grid-3{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px}
+.card h3{margin:0 0 10px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.6px;font-weight:600}
+.row{display:flex;gap:8px;align-items:center;margin-bottom:6px}
+.row label{flex:1;color:var(--muted);font-size:12px}
+.row input,.row select{width:90px;background:#0d131c;border:1px solid #1f2937;color:var(--ink);padding:5px 7px;border-radius:5px;font:inherit;text-align:right}
+.row input.wide{width:100%;text-align:left}
+.kpi{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:12px}
+.kpi .lbl{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:0.5px}
+.kpi .val{font-size:18px;font-weight:600;margin-top:3px}
+.kpi .sub{font-size:11px;color:var(--muted);margin-top:2px}
+.bar-track{background:#1a2332;border-radius:99px;height:14px;overflow:hidden;display:flex}
+.bar-front{background:var(--accent2);height:100%}
+.bar-rear{background:var(--accent);height:100%}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:6px}
+th,td{padding:5px 7px;border-bottom:1px solid #1a2332;text-align:right}
+th:first-child,td:first-child{text-align:left;color:var(--muted)}
+th{background:#0d131c;color:var(--muted);text-transform:uppercase;font-size:10px;letter-spacing:0.5px}
+.muted{color:var(--muted)}
+.pill{display:inline-block;padding:2px 7px;border-radius:99px;font-size:10px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase}
+.pill.good{background:rgba(34,197,94,.16);color:#86efac}
+.pill.warn{background:rgba(245,158,11,.16);color:#fbbf24}
+.pill.bad{background:rgba(239,68,68,.18);color:#fca5a5}
+.profile-list{margin-top:8px;max-height:180px;overflow-y:auto;border:1px solid #1a2332;border-radius:6px}
+.profile-item{padding:7px 10px;border-bottom:1px solid #1a2332;cursor:pointer;font-size:12px}
+.profile-item:hover{background:#161e2a}
+.profile-item.active{background:#1a2332;color:var(--accent2)}
+.session-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.session-block{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px}
+.session-block h4{margin:0 0 8px;font-size:12px;color:var(--accent2);text-transform:uppercase;letter-spacing:0.6px}
+.lr-grid{display:grid;grid-template-columns:auto 1fr 1fr;gap:5px;align-items:center;margin-bottom:6px}
+.lr-grid .lbl{color:var(--muted);font-size:11px}
+.lr-grid input{background:#0d131c;border:1px solid #1f2937;color:var(--ink);padding:4px 6px;border-radius:4px;font:inherit;text-align:right;width:100%}
+@media print {
+  nav,.toolbar,.no-print{display:none !important}
+  body{background:#fff;color:#000}
+  .card,.kpi,.session-block{border-color:#bbb;background:#fff;color:#000}
+  th{background:#eee !important;color:#000 !important}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="title">Weight Transfer + Setup</div>
+    <div class="crumb"><a href="../index.html">← All tools</a> · Smithees-style WTW · unified with session setup sheet</div>
+  </div>
+  <div>
+    <select class="btn" id="unitSys">
+      <option value="metric">Metric (kg, mm)</option>
+      <option value="imperial">Imperial (lb, in)</option>
+    </select>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button data-tab="calc" class="active">WTW calculator</button>
+  <button data-tab="setup">Session setup</button>
+  <button data-tab="profiles">Car profiles</button>
+</nav>
+
+<div class="toolbar no-print">
+  <button class="btn" onclick="newProfile()">+ New car</button>
+  <button class="btn" onclick="dupProfile()">Duplicate</button>
+  <button class="btn" onclick="deleteProfile()">Delete</button>
+  <button class="btn" onclick="exportData()">Export JSON</button>
+  <label class="btn" style="cursor:pointer">Import<input type="file" id="importFile" accept=".json" style="display:none" /></label>
+  <button class="btn" onclick="window.print()">Print</button>
+  <button class="btn" onclick="reset()">Reset seed</button>
+  <span class="muted" style="margin-left:auto" id="autoSaveLbl">auto-saved</span>
+</div>
+
+<div id="view"></div>
+
+<script>
+// ─── Defaults seeded from the ARKA Polo rally car WTW workbook ───────────────
+const SEED = [{
+  id: 'polo-rally',
+  name: 'VW Polo rally car (ARKA)',
+  units: 'metric',
+  inputs: {
+    weight_f: 803.6, weight_r: 552.3,        // kg
+    unsprung_f: 80.5, unsprung_r: 65.9,
+    track_f: 1549, track_r: 1549,            // mm
+    rc_f: 280, rc_r: 305,                    // mm
+    cog_unsprung_f: 318, cog_unsprung_r: 318,
+    cog_sprung: 686,
+    spring_freq_f: 84, spring_freq_r: 118,   // CPM
+    arb_od_f: 20, arb_id_f: 0,
+    arb_od_r: 18, arb_id_r: 0,
+    arb_len_f: 808, arb_len_r: 965,
+    arb_arm_f: 285, arb_arm_r: 292,
+    arb_motion_f: 0.5, arb_motion_r: 1.0,
+    spring_rate_f: 168, spring_rate_r: 139,  // lb/in (will convert)
+    spring_motion_f: 0.98, spring_motion_r: 1.10
+  },
+  setups: []
+}];
+
+const STORE = 'arka-wtw-v1';
+let cars = load();
+let currentId = cars[0]?.id;
+let unitSys = 'metric';
+let tab = 'calc';
+
+function load(){
+  try { const r = localStorage.getItem(STORE); if (r) return JSON.parse(r); } catch(e){}
+  return JSON.parse(JSON.stringify(SEED));
+}
+function save(){ localStorage.setItem(STORE, JSON.stringify(cars)); document.getElementById('autoSaveLbl').textContent = 'saved · '+new Date().toLocaleTimeString(); }
+function getCurrent(){ return cars.find(c => c.id === currentId); }
+
+// ─── Math (Smithees-style WTW) ──────────────────────────────────────────────
+// Inputs in metric (kg, mm). Convert internally to imperial-ish for the Smithees formulas
+// because the formulas were built around lb/in. We use SI form internally for clarity.
+//
+// Notation:
+//   wF, wR = total axle weight (kg)
+//   uF, uR = unsprung axle weight (kg)
+//   sF, sR = wF-uF, wR-uR (sprung axle weight)
+//   trF, trR = track (m)
+//   rcF, rcR = roll centre height (m) above ground
+//   cogU = unsprung COG height (m)
+//   cogS = sprung-mass COG height (m)
+//   For 1g lateral:
+//     unsprung WT per axle  = (u * cogU) / track
+//     RC WT per axle        = (sprung * rc) / track
+//     sprung WT (chassis)   = (sprung_total * (cogS - mean_rc)) / mean_track
+//     -> distributed front/rear by roll-resistance ratio
+function calc(p){
+  if (!p) return null;
+  const i = p.inputs;
+  const wF = i.weight_f, wR = i.weight_r;
+  const uF = i.unsprung_f, uR = i.unsprung_r;
+  const sF = wF - uF, sR = wR - uR;
+  const sprung = sF + sR;
+  const total = wF + wR;
+
+  const trF = i.track_f / 1000, trR = i.track_r / 1000;
+  const rcF = i.rc_f / 1000, rcR = i.rc_r / 1000;
+  const cogUF = i.cog_unsprung_f / 1000, cogUR = i.cog_unsprung_r / 1000;
+  const cogS = i.cog_sprung / 1000;
+
+  // 1g lateral
+  const uWT_F = (uF * cogUF) / trF;
+  const uWT_R = (uR * cogUR) / trR;
+  const rcWT_F = (sF * rcF) / trF;
+  const rcWT_R = (sR * rcR) / trR;
+
+  const cogSplit = sR / sprung; // % weight on rear
+  const meanTrack = trF + (trR - trF) * cogSplit;
+  const meanRC = rcF + (rcR - rcF) * cogSplit;
+  const sprungWT = (sprung * (cogS - meanRC)) / meanTrack;
+
+  // Wheel rate from spring frequency (ride frequency).
+  //   f_Hz = (1/2π) · √(K/M)   →   K = (2π·f)² · M
+  // M is the per-wheel sprung mass (kg); K comes out in N/m natively.
+  const fF = i.spring_freq_f / 60, fR = i.spring_freq_r / 60;  // CPM → Hz
+  const kF_wheel_Nm = Math.pow(2*Math.PI*fF, 2) * (sF/2);  // N/m per wheel
+  const kR_wheel_Nm = Math.pow(2*Math.PI*fR, 2) * (sR/2);
+
+  // ARB roll stiffness contribution at the wheel.
+  // Torsion bar stiffness:  K_torsion = π · G · (OD⁴ − ID⁴) / (32 · L)   [N·mm/rad]
+  // Wheel rate from a paired ARB:  k_wheel ≈ K_torsion / arm²            [N/mm]
+  // Then × motion_ratio² for the rocker geometry.
+  const arbRateNm = (od, id, arm, length) => {
+    if (!od || !arm || !length) return 0;
+    const G_steel_MPa = 79000; // N/mm² (≈79 GPa)
+    const K_torsion = (Math.PI * G_steel_MPa * (Math.pow(od,4) - Math.pow(id,4))) / (32 * length); // N·mm/rad
+    return (K_torsion / (arm * arm)) * 1000; // N/mm → N/m at wheel
+  };
+  const kF_arb_Nm = arbRateNm(i.arb_od_f, i.arb_id_f, i.arb_arm_f, i.arb_len_f) * Math.pow(i.arb_motion_f||1, 2);
+  const kR_arb_Nm = arbRateNm(i.arb_od_r, i.arb_id_r, i.arb_arm_r, i.arb_len_r) * Math.pow(i.arb_motion_r||1, 2);
+
+  // Roll resistance per axle:  M_roll = K · t² / 2   [N·m/rad]   (paired wheels, K in N/m, t in m)
+  const rollResF = (kF_wheel_Nm + kF_arb_Nm) * trF * trF / 2;
+  const rollResR = (kR_wheel_Nm + kR_arb_Nm) * trR * trR / 2;
+  const rollResTotal = rollResF + rollResR;
+  const rollDistF = rollResTotal ? rollResF / rollResTotal : 0.5;
+
+  const sprungWT_F = sprungWT * rollDistF;
+  const sprungWT_R = sprungWT * (1 - rollDistF);
+
+  const totalWT_F = uWT_F + rcWT_F + sprungWT_F;
+  const totalWT_R = uWT_R + rcWT_R + sprungWT_R;
+  const totalWT = totalWT_F + totalWT_R;
+
+  // Roll angle at 1g lateral:
+  //   M_overturning = sprung · g · (cogS − meanRC)    [N·m]
+  //   φ = M / K_roll_total                            [rad]
+  const overturning = sprung * 9.81 * (cogS - meanRC);  // N·m at 1g
+  const rollAngleRad = rollResTotal > 0 ? overturning / rollResTotal : 0;
+  const rollAngleDeg = rollAngleRad * (180/Math.PI);
+
+  // Convert wheel rates back to N/mm for display (more workshop-friendly)
+  const kF_wheel = kF_wheel_Nm / 1000;
+  const kR_wheel = kR_wheel_Nm / 1000;
+  const kF_arb = kF_arb_Nm / 1000;
+  const kR_arb = kR_arb_Nm / 1000;
+
+  return {
+    wF, wR, total,
+    sF, sR, sprung,
+    weightSplitF: total ? wF/total : 0,
+    weightSplitR: total ? wR/total : 0,
+    uWT_F, uWT_R, rcWT_F, rcWT_R, sprungWT_F, sprungWT_R,
+    totalWT_F, totalWT_R, totalWT,
+    kF_wheel, kR_wheel, kF_arb, kR_arb,
+    rollResF, rollResR, rollDistF,
+    arbShareF: rollResF ? kF_arb / (kF_wheel + kF_arb) : 0,
+    arbShareR: rollResR ? kR_arb / (kR_wheel + kR_arb) : 0,
+    rollAngleDeg
+  };
+}
+
+// ─── Render ──────────────────────────────────────────────────────────────────
+function render(){
+  document.getElementById('unitSys').value = unitSys;
+  const v = document.getElementById('view');
+  if (tab==='calc') v.innerHTML = renderCalc();
+  else if (tab==='setup') v.innerHTML = renderSetup();
+  else v.innerHTML = renderProfiles();
+  bindInputs();
+}
+
+function renderCalc(){
+  const p = getCurrent(); if (!p) return '<div class="section muted">No car selected. Add one in Profiles.</div>';
+  const r = calc(p);
+  const i = p.inputs;
+  const u = unitSys === 'imperial';
+  // helpers
+  const wL = u?'lb':'kg', dL = u?'in':'mm';
+  const wConv = v => u ? (v*2.20462).toFixed(1) : v.toFixed(1);
+  const dConv = v => u ? (v/25.4).toFixed(2) : v.toFixed(0);
+
+  return `<div class="section">
+  <div class="grid-2">
+    <div class="card">
+      <h3>Inputs · weights (kg, axle totals incl. driver)</h3>
+      <div class="row"><label>Weight Front</label><input type="number" id="weight_f" value="${i.weight_f}" /></div>
+      <div class="row"><label>Weight Rear</label><input type="number" id="weight_r" value="${i.weight_r}" /></div>
+      <div class="row"><label>Unsprung Front</label><input type="number" id="unsprung_f" value="${i.unsprung_f}" /></div>
+      <div class="row"><label>Unsprung Rear</label><input type="number" id="unsprung_r" value="${i.unsprung_r}" /></div>
+      <h3 style="margin-top:14px">Inputs · dimensions (mm)</h3>
+      <div class="row"><label>Track Front</label><input type="number" id="track_f" value="${i.track_f}" /></div>
+      <div class="row"><label>Track Rear</label><input type="number" id="track_r" value="${i.track_r}" /></div>
+      <div class="row"><label>Roll centre Front</label><input type="number" id="rc_f" value="${i.rc_f}" /></div>
+      <div class="row"><label>Roll centre Rear</label><input type="number" id="rc_r" value="${i.rc_r}" /></div>
+      <div class="row"><label>Unsprung COG F</label><input type="number" id="cog_unsprung_f" value="${i.cog_unsprung_f}" /></div>
+      <div class="row"><label>Unsprung COG R</label><input type="number" id="cog_unsprung_r" value="${i.cog_unsprung_r}" /></div>
+      <div class="row"><label>Sprung COG (overall)</label><input type="number" id="cog_sprung" value="${i.cog_sprung}" /></div>
+    </div>
+
+    <div class="card">
+      <h3>Inputs · springs & ARB</h3>
+      <div class="row"><label>Spring freq Front (CPM)</label><input type="number" id="spring_freq_f" value="${i.spring_freq_f}" /></div>
+      <div class="row"><label>Spring freq Rear (CPM)</label><input type="number" id="spring_freq_r" value="${i.spring_freq_r}" /></div>
+      <div class="row"><label>ARB OD Front (mm)</label><input type="number" id="arb_od_f" value="${i.arb_od_f}" /></div>
+      <div class="row"><label>ARB ID Front (mm)</label><input type="number" id="arb_id_f" value="${i.arb_id_f}" /></div>
+      <div class="row"><label>ARB OD Rear (mm)</label><input type="number" id="arb_od_r" value="${i.arb_od_r}" /></div>
+      <div class="row"><label>ARB ID Rear (mm)</label><input type="number" id="arb_id_r" value="${i.arb_id_r}" /></div>
+      <div class="row"><label>ARB length F (mm)</label><input type="number" id="arb_len_f" value="${i.arb_len_f}" /></div>
+      <div class="row"><label>ARB length R (mm)</label><input type="number" id="arb_len_r" value="${i.arb_len_r}" /></div>
+      <div class="row"><label>ARB arm F (mm)</label><input type="number" id="arb_arm_f" value="${i.arb_arm_f}" /></div>
+      <div class="row"><label>ARB arm R (mm)</label><input type="number" id="arb_arm_r" value="${i.arb_arm_r}" /></div>
+      <div class="row"><label>ARB motion ratio F</label><input type="number" step="0.05" id="arb_motion_f" value="${i.arb_motion_f}" /></div>
+      <div class="row"><label>ARB motion ratio R</label><input type="number" step="0.05" id="arb_motion_r" value="${i.arb_motion_r}" /></div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:22px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.6px">Outputs · 1g lateral</h3>
+
+  <div class="grid-4" style="margin-top:8px">
+    <div class="kpi"><div class="lbl">Total weight</div><div class="val">${wConv(r.total)} ${wL}</div><div class="sub">F ${(r.weightSplitF*100).toFixed(1)}% / R ${(r.weightSplitR*100).toFixed(1)}%</div></div>
+    <div class="kpi"><div class="lbl">Total weight transfer</div><div class="val">${wConv(r.totalWT)} ${wL}</div><div class="sub">at 1g lateral</div></div>
+    <div class="kpi"><div class="lbl">Roll resistance distribution</div><div class="val">F ${(r.rollDistF*100).toFixed(1)}% / R ${((1-r.rollDistF)*100).toFixed(1)}%</div><div class="sub"><div class="bar-track" style="margin-top:4px"><div class="bar-front" style="width:${r.rollDistF*100}%"></div><div class="bar-rear" style="width:${(1-r.rollDistF)*100}%"></div></div></div></div>
+    <div class="kpi"><div class="lbl">Roll angle (1g)</div><div class="val">${r.rollAngleDeg.toFixed(2)}°</div><div class="sub">approximate</div></div>
+    <div class="kpi"><div class="lbl">ARB share Front</div><div class="val">${(r.arbShareF*100).toFixed(0)}%</div><div class="sub">of front roll resistance</div></div>
+    <div class="kpi"><div class="lbl">ARB share Rear</div><div class="val">${(r.arbShareR*100).toFixed(0)}%</div><div class="sub">of rear roll resistance</div></div>
+    <div class="kpi"><div class="lbl">Wheel rate F</div><div class="val">${r.kF_wheel.toFixed(1)} N/mm</div><div class="sub">from spring frequency</div></div>
+    <div class="kpi"><div class="lbl">Wheel rate R</div><div class="val">${r.kR_wheel.toFixed(1)} N/mm</div><div class="sub">from spring frequency</div></div>
+  </div>
+
+  <h3 style="margin-top:22px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.6px">Weight transfer breakdown</h3>
+  <table>
+    <thead><tr><th>Component</th><th>Front (${wL})</th><th>Rear (${wL})</th><th>Total</th></tr></thead>
+    <tbody>
+      <tr><td>Unsprung WT</td><td>${wConv(r.uWT_F)}</td><td>${wConv(r.uWT_R)}</td><td>${wConv(r.uWT_F+r.uWT_R)}</td></tr>
+      <tr><td>Via Roll Centres</td><td>${wConv(r.rcWT_F)}</td><td>${wConv(r.rcWT_R)}</td><td>${wConv(r.rcWT_F+r.rcWT_R)}</td></tr>
+      <tr><td>Sprung mass (chassis)</td><td>${wConv(r.sprungWT_F)}</td><td>${wConv(r.sprungWT_R)}</td><td>${wConv(r.sprungWT_F+r.sprungWT_R)}</td></tr>
+      <tr style="font-weight:600"><td>Total at axle</td><td>${wConv(r.totalWT_F)}</td><td>${wConv(r.totalWT_R)}</td><td>${wConv(r.totalWT)}</td></tr>
+    </tbody>
+  </table>
+  </div>`;
+}
+
+function renderSetup(){
+  const p = getCurrent(); if (!p) return '<div class="section muted">No car.</div>';
+  let html = `<div class="section">
+    <div class="card" style="margin-bottom:14px">
+      <h3>New session entry — feeds the WTW calculator</h3>
+      <div class="grid-3">
+        <div><div class="muted" style="font-size:11px">Date</div><input class="row" type="date" id="s_date" /></div>
+        <div><div class="muted" style="font-size:11px">Driver</div><input class="row" id="s_driver" /></div>
+        <div><div class="muted" style="font-size:11px">Venue</div><input class="row" id="s_venue" /></div>
+        <div><div class="muted" style="font-size:11px">Surface</div><input class="row" id="s_surface" placeholder="tarmac / gravel" /></div>
+        <div><div class="muted" style="font-size:11px">Race / Rally</div><input class="row" id="s_event" /></div>
+        <div><div class="muted" style="font-size:11px">Best lap</div><input class="row" id="s_lap" /></div>
+      </div>
+
+      <div class="session-grid" style="margin-top:14px">
+        <div class="session-block">
+          <h4>Front</h4>
+          <div class="lr-grid">
+            <div class="lbl">Springs</div><input id="s_f_springs" /><div></div>
+            <div class="lbl">Damper valve</div><input id="s_f_damper" /><div></div>
+            <div class="lbl">ARB hole</div><input id="s_f_arb" /><div></div>
+            <div class="lbl">Camber (°)</div><input id="s_f_camber_l" placeholder="L" /><input id="s_f_camber_r" placeholder="R" />
+            <div class="lbl">Caster (°)</div><input id="s_f_caster_l" placeholder="L" /><input id="s_f_caster_r" placeholder="R" />
+            <div class="lbl">Toe (mm)</div><input id="s_f_toe" placeholder="total" /><div></div>
+            <div class="lbl">Ride height</div><input id="s_f_rh_l" placeholder="L" /><input id="s_f_rh_r" placeholder="R" />
+            <div class="lbl">Droop</div><input id="s_f_droop" /><div></div>
+          </div>
+        </div>
+        <div class="session-block">
+          <h4>Rear</h4>
+          <div class="lr-grid">
+            <div class="lbl">Springs</div><input id="s_r_springs" /><div></div>
+            <div class="lbl">Damper valve</div><input id="s_r_damper" /><div></div>
+            <div class="lbl">ARB hole</div><input id="s_r_arb" /><div></div>
+            <div class="lbl">Camber (°)</div><input id="s_r_camber_l" placeholder="L" /><input id="s_r_camber_r" placeholder="R" />
+            <div class="lbl">Toe (mm)</div><input id="s_r_toe" placeholder="total" /><div></div>
+            <div class="lbl">Ride height</div><input id="s_r_rh_l" placeholder="L" /><input id="s_r_rh_r" placeholder="R" />
+            <div class="lbl">Droop</div><input id="s_r_droop" /><div></div>
+          </div>
+        </div>
+        <div class="session-block">
+          <h4>Corner weights (kg)</h4>
+          <div class="lr-grid">
+            <div class="lbl">Front L</div><input id="s_cw_fl" /><div></div>
+            <div class="lbl">Front R</div><input id="s_cw_fr" /><div></div>
+            <div class="lbl">Rear L</div><input id="s_cw_rl" /><div></div>
+            <div class="lbl">Rear R</div><input id="s_cw_rr" /><div></div>
+          </div>
+          <div class="muted" style="font-size:11px;margin-top:8px">Saving will push axle totals into WTW inputs (Weight F/R, sum of L+R per axle).</div>
+        </div>
+      </div>
+      <div style="margin-top:14px;display:flex;gap:8px">
+        <button class="btn" style="background:var(--accent);border-color:var(--accent)" onclick="saveSession()">Save session + push to WTW</button>
+        <button class="btn" onclick="document.querySelectorAll('.session-block input, .grid-3 input').forEach(i=>i.value='')">Clear form</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Sessions logged for ${escapeHtml(p.name)}</h3>
+      ${p.setups.length ? renderSessionTable(p.setups) : '<div class="muted">No sessions yet — fill the form above and save.</div>'}
+    </div>
+  </div>`;
+  return html;
+}
+
+function renderSessionTable(setups){
+  let html = `<table><thead><tr><th>Date</th><th>Venue</th><th>Driver</th><th>F springs</th><th>R springs</th><th>F ARB</th><th>R ARB</th><th>F camber L/R</th><th>R camber L/R</th><th>Best lap</th><th></th></tr></thead><tbody>`;
+  setups.slice().reverse().forEach((s,idx) => {
+    const i = setups.length - 1 - idx;
+    html += `<tr>
+      <td>${escapeHtml(s.date||'')}</td>
+      <td style="text-align:left">${escapeHtml(s.venue||'')}</td>
+      <td style="text-align:left">${escapeHtml(s.driver||'')}</td>
+      <td>${escapeHtml(s.f.springs||'')}</td>
+      <td>${escapeHtml(s.r.springs||'')}</td>
+      <td>${escapeHtml(s.f.arb||'')}</td>
+      <td>${escapeHtml(s.r.arb||'')}</td>
+      <td>${escapeHtml(s.f.camber_l||'')}/${escapeHtml(s.f.camber_r||'')}</td>
+      <td>${escapeHtml(s.r.camber_l||'')}/${escapeHtml(s.r.camber_r||'')}</td>
+      <td>${escapeHtml(s.lap||'')}</td>
+      <td><button class="btn" onclick="deleteSession(${i})">×</button></td></tr>`;
+  });
+  html += `</tbody></table>`;
+  return html;
+}
+
+function renderProfiles(){
+  let html = `<div class="section"><div class="card">
+    <h3>Cars on this machine</h3>
+    <div class="profile-list">`;
+  cars.forEach(c => {
+    html += `<div class="profile-item ${c.id===currentId?'active':''}" onclick="selectCar('${c.id}')">${escapeHtml(c.name)} <span class="muted" style="float:right">${c.setups.length} session${c.setups.length===1?'':'s'}</span></div>`;
+  });
+  html += `</div>
+    <div style="margin-top:14px"><label style="font-size:11px;color:var(--muted)">Rename current</label>
+      <input class="row" id="renameInput" value="${escapeHtml(getCurrent()?.name||'')}" style="width:100%;text-align:left" /></div>
+  </div></div>`;
+  return html;
+}
+
+window.selectCar = id => { currentId = id; render(); };
+window.deleteSession = i => { const p=getCurrent(); p.setups.splice(i,1); save(); render(); };
+
+function bindInputs(){
+  // unit toggle
+  document.getElementById('unitSys').onchange = e => { unitSys = e.target.value; render(); };
+  // tabs
+  document.querySelectorAll('nav.tabs button').forEach(b => b.onclick = () => {
+    document.querySelectorAll('nav.tabs button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    tab = b.dataset.tab;
+    render();
+  });
+  // calc inputs
+  if (tab === 'calc') {
+    const fields = ['weight_f','weight_r','unsprung_f','unsprung_r','track_f','track_r','rc_f','rc_r','cog_unsprung_f','cog_unsprung_r','cog_sprung','spring_freq_f','spring_freq_r','arb_od_f','arb_id_f','arb_od_r','arb_id_r','arb_len_f','arb_len_r','arb_arm_f','arb_arm_r','arb_motion_f','arb_motion_r'];
+    fields.forEach(f => {
+      const el = document.getElementById(f);
+      if (!el) return;
+      el.oninput = () => { getCurrent().inputs[f] = +el.value; save(); render(); };
+    });
+  }
+  if (tab === 'profiles') {
+    const r = document.getElementById('renameInput');
+    if (r) r.oninput = () => { getCurrent().name = r.value; save(); };
+  }
+  document.getElementById('importFile').onchange = importFile;
+}
+
+function saveSession(){
+  const p = getCurrent(); if (!p) return;
+  const g = id => document.getElementById(id)?.value || '';
+  const session = {
+    date: g('s_date'), driver: g('s_driver'), venue: g('s_venue'),
+    surface: g('s_surface'), event: g('s_event'), lap: g('s_lap'),
+    f: { springs:g('s_f_springs'), damper:g('s_f_damper'), arb:g('s_f_arb'),
+         camber_l:g('s_f_camber_l'), camber_r:g('s_f_camber_r'),
+         caster_l:g('s_f_caster_l'), caster_r:g('s_f_caster_r'),
+         toe:g('s_f_toe'), rh_l:g('s_f_rh_l'), rh_r:g('s_f_rh_r'), droop:g('s_f_droop') },
+    r: { springs:g('s_r_springs'), damper:g('s_r_damper'), arb:g('s_r_arb'),
+         camber_l:g('s_r_camber_l'), camber_r:g('s_r_camber_r'),
+         toe:g('s_r_toe'), rh_l:g('s_r_rh_l'), rh_r:g('s_r_rh_r'), droop:g('s_r_droop') },
+    cw: { fl:+g('s_cw_fl'), fr:+g('s_cw_fr'), rl:+g('s_cw_rl'), rr:+g('s_cw_rr') }
+  };
+  // push axle totals into WTW inputs
+  const fSum = (session.cw.fl||0) + (session.cw.fr||0);
+  const rSum = (session.cw.rl||0) + (session.cw.rr||0);
+  if (fSum > 0) p.inputs.weight_f = fSum;
+  if (rSum > 0) p.inputs.weight_r = rSum;
+  p.setups.push(session);
+  save(); render();
+  alert('Session saved' + (fSum||rSum?' — axle totals pushed into WTW inputs':''));
+}
+
+function newProfile(){
+  const name = prompt('Car name'); if (!name) return;
+  const seed = JSON.parse(JSON.stringify(SEED[0]));
+  seed.id = 'c_'+Date.now(); seed.name = name; seed.setups = [];
+  cars.push(seed); currentId = seed.id; save(); render();
+}
+function dupProfile(){
+  const p = getCurrent(); if (!p) return;
+  const c = JSON.parse(JSON.stringify(p)); c.id = 'c_'+Date.now(); c.name = p.name+' (copy)'; c.setups = [];
+  cars.push(c); currentId = c.id; save(); render();
+}
+function deleteProfile(){
+  if (cars.length<=1) return alert('Need at least one car.');
+  if (!confirm('Delete '+getCurrent().name+'?')) return;
+  cars = cars.filter(c => c.id !== currentId); currentId = cars[0]?.id; save(); render();
+}
+function exportData(){
+  const blob = new Blob([JSON.stringify({cars}, null, 2)], {type:'application/json'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'wtw-cars.json'; a.click();
+}
+function importFile(e){
+  const f = e.target.files[0]; if (!f) return;
+  const r = new FileReader();
+  r.onload = () => { try { const j = JSON.parse(r.result); cars = j.cars || j; currentId = cars[0]?.id; save(); render(); alert('Imported '+cars.length+' car(s).'); } catch(err){ alert('Import failed: '+err.message); } };
+  r.readAsText(f); e.target.value='';
+}
+function reset(){
+  if (!confirm('Reset to seed (Polo rally)?')) return;
+  cars = JSON.parse(JSON.stringify(SEED)); currentId = cars[0].id; save(); render();
+}
+function escapeHtml(s){ return (s==null?'':(''+s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))); }
+
+render();
+</script>
+
+</body>
+</html>

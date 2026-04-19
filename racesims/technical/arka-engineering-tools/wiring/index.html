@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ECU Wiring Manager · ARKA</title>
+<style>
+:root{--bg:#0b0f14;--panel:#121821;--panel2:#0f141c;--ink:#e6edf3;--muted:#8b95a3;--accent:#f43f5e;--accent2:#22d3ee;--good:#22c55e;--warn:#f59e0b;--bad:#ef4444;--border:#1f2937;--row:#0d131c;--rowAlt:#101822}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,Inter,system-ui,sans-serif;font-size:13px}
+header{padding:16px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:18px;flex-wrap:wrap;background:linear-gradient(180deg,#0e141d 0%,#0b0f14 100%)}
+.title{font-size:16px;font-weight:600}
+.crumb{color:var(--muted);font-size:12px}
+.crumb a{color:var(--muted);text-decoration:none;border-bottom:1px dashed #374151}
+nav.tabs{display:flex;gap:4px;padding:0 22px;border-bottom:1px solid var(--border);background:var(--panel2);position:sticky;top:0;z-index:10;flex-wrap:wrap}
+nav.tabs button{background:transparent;border:0;color:var(--muted);padding:10px 14px;cursor:pointer;border-bottom:2px solid transparent;font-size:13px;font-family:inherit}
+nav.tabs button.active{color:var(--ink);border-bottom-color:var(--accent2)}
+nav.tabs button:hover{color:var(--ink)}
+.toolbar{padding:12px 22px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--border)}
+button.btn,select.btn,input.btn{background:#1a2332;border:1px solid #2a3447;color:var(--ink);padding:7px 12px;border-radius:6px;font-size:12px;font-family:inherit;cursor:pointer}
+button.btn:hover{background:#212c3f}
+button.btn.primary{background:var(--accent);border-color:var(--accent)}
+button.btn.primary:hover{background:#e11d48}
+button.btn.ghost{background:transparent}
+input.search{flex:1;min-width:200px;background:#0d131c;border:1px solid #1f2937;color:var(--ink);padding:7px 10px;border-radius:6px;font-size:12px}
+.section{padding:18px 22px}
+.muted{color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{padding:6px 8px;border-bottom:1px solid #1a2332;text-align:left;vertical-align:top}
+th{background:#0d131c;font-weight:600;color:var(--muted);text-transform:uppercase;font-size:10px;letter-spacing:0.6px;position:sticky;top:0}
+tbody tr:nth-child(even) td{background:var(--rowAlt)}
+tbody tr:hover td{background:#16202d}
+td.ed{cursor:text}
+td.ed:hover{outline:1px solid #2a3447}
+.pill{display:inline-block;padding:2px 7px;border-radius:99px;font-size:10px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase}
+.pill.good{background:rgba(34,197,94,.16);color:#86efac}
+.pill.warn{background:rgba(245,158,11,.16);color:#fbbf24}
+.pill.bad{background:rgba(239,68,68,.18);color:#fca5a5}
+.pill.info{background:rgba(34,211,238,.14);color:#67e8f9}
+.pill.muted{background:#1a2332;color:var(--muted)}
+.connector-J1{background:rgba(244,63,94,.12);color:#fda4af}
+.connector-J2{background:rgba(34,211,238,.12);color:#67e8f9}
+.connector-J3{background:rgba(34,197,94,.12);color:#86efac}
+.block-card{background:var(--panel);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;overflow:hidden}
+.block-head{padding:10px 14px;background:#0d131c;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;font-weight:600;font-size:13px}
+.kbd{font-family:"SF Mono",Menlo,monospace;font-size:11px;background:#0d131c;border:1px solid #1f2937;padding:1px 5px;border-radius:4px}
+.color-swatch{display:inline-block;width:10px;height:10px;border-radius:2px;border:1px solid #2a3447;margin-right:5px;vertical-align:middle}
+.validator-row{padding:10px 14px;border-bottom:1px solid var(--border);display:flex;gap:10px;align-items:flex-start}
+.validator-row:last-child{border-bottom:0}
+.checkbox{display:inline-block;width:12px;height:12px;border:1px solid #6b7280;border-radius:3px;margin-right:8px;vertical-align:middle}
+.checkbox.done{background:#22c55e;border-color:#22c55e}
+@media print{
+  body{background:#fff;color:#000;font-size:10px}
+  header,nav.tabs,.toolbar,.no-print{display:none !important}
+  .section{padding:8px}
+  table{font-size:9px}
+  th,td{border-color:#bbb;padding:3px 5px}
+  .block-card{border-color:#bbb;break-inside:avoid;margin-bottom:8px}
+  .block-head{background:#eee;color:#000}
+  th{background:#eee !important;color:#000 !important}
+  tbody tr:nth-child(even) td{background:#f8f8f8 !important}
+  .pill{border:1px solid #999;background:none !important;color:#000 !important}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="title">ECU Wiring Manager</div>
+    <div class="crumb"><a href="../index.html">← All tools</a> · <span id="carLabel">VW Polo 1.0 TSI · MoTeC M142</span></div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button data-tab="db" class="active">Wiring DB</button>
+  <button data-tab="byEcu">By ECU connector</button>
+  <button data-tab="byOem">By OEM connector</button>
+  <button data-tab="loom">Loom build sheet</button>
+  <button data-tab="checklist">Bench test checklist</button>
+  <button data-tab="validator">Validator</button>
+  <button data-tab="reference">M142 reference</button>
+  <button data-tab="cars">Cars / data</button>
+</nav>
+
+<div class="toolbar no-print">
+  <input class="search" id="search" placeholder="Search block, channel, function, colour, pin…" />
+  <select class="btn" id="filterConn">
+    <option value="">All connectors</option>
+    <option value="J1">J1</option>
+    <option value="J2">J2</option>
+    <option value="J3">J3</option>
+  </select>
+  <button class="btn" id="addRow">+ Add wire</button>
+  <button class="btn" id="addBlock">+ Add block</button>
+  <button class="btn" id="exportJson">Export JSON</button>
+  <button class="btn" id="exportCsv">Export CSV</button>
+  <label class="btn" style="cursor:pointer">Import<input type="file" id="importFile" accept=".json,.csv" style="display:none" /></label>
+  <button class="btn ghost" id="printBtn">Print</button>
+  <button class="btn ghost" id="resetSeed">Reset to Polo seed</button>
+</div>
+
+<div id="view" class="section"></div>
+
+<script>
+// ─── M142 / M1-family channel reference ──────────────────────────────────────
+const M1_CHANNELS = {
+  // Analog Voltage Inputs (0-5V)
+  AVI: { count: 14, type: 'analog-in', max_v: 5.0, use: 'sensors with 0–5V output (TPS, MAP, pedal, fuel/oil pressure)' },
+  // Analog Temperature Inputs (NTC pull-up internal)
+  ATI: { count: 6, type: 'temp-in', max_v: 5.0, use: 'NTC temperature sensors (coolant, IAT, oil temp)' },
+  // Universal Digital Inputs (Hall, VR, switches)
+  UDIG: { count: 8, type: 'digital-in', max_v: 16.0, use: 'crank, cam, wheel speeds, gear position switch' },
+  // Half-bridge outputs (drive solenoids, DBW motor)
+  HBO: { count: 8, type: 'output-hb', max_a: 8.5, use: 'DBW throttle motor, solenoids; pairs go H+ / H–' },
+  // Voltage references for sensors
+  VREF: { count: 5, type: 'ref-out', voltage: 5.0, max_a: 0.30, use: '5V supply for sensors; current shared per VREF' },
+  // Lambda controller channels
+  LA: { count: 2, type: 'lambda', use: 'Bosch LSU 4.9 / NTK lambda controllers' },
+  // Direct injection peak/hold pairs
+  DI: { count: 6, type: 'inj-di', use: 'GDI injectors; each pair (A+, A–) drives one injector' },
+  // Low-side ignition outputs
+  IGN: { count: 8, type: 'ign-low-side', use: 'IGBT-driven coil triggers (5V signal logic)' },
+  // Knock inputs
+  KNOCK: { count: 4, type: 'knock-in', use: 'piezo knock sensors (paired with KNOCK GND)' },
+  // Generic outputs (low-side)
+  OUT: { count: 8, type: 'output-ls', max_a: 4.0, use: 'general low-side outputs (relays, solenoids)' },
+  // Power ground / analog ground / digital ground (multiple pins)
+  GND: { count: 8, type: 'ground', use: 'A GND (analog) / DIG GND (digital) / POWER GROUND (high-current)' },
+};
+const M1_CONNECTORS = ['J1','J2','J3']; // M142 has 3 main connectors
+
+// ─── Seed data (parsed from Polo OBR wiring.xlsx) ────────────────────────────
+const SEED = {
+  car: 'VW Polo 1.0 TSI',
+  ecu: 'MoTeC M142',
+  harness_builder: 'OBR Control Systems / Harjee',
+  title: 'Polo 1liter tsi OE BODY LOOM WITH RELAYS',
+  ecu_connectors: ['J1','J2','J3'],
+  wires: window.SEED_WIRES || []
+};
+
+// ─── State ───────────────────────────────────────────────────────────────────
+const STORE_KEY = 'arka-wiring-v1';
+let state = load();
+
+function load(){
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch(e){}
+  return JSON.parse(JSON.stringify(SEED));
+}
+function save(){ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
+
+// ─── Tabs ────────────────────────────────────────────────────────────────────
+let currentTab = 'db';
+let searchTerm = '';
+let connFilter = '';
+
+document.querySelectorAll('nav.tabs button').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('nav.tabs button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    currentTab = b.dataset.tab;
+    render();
+  });
+});
+document.getElementById('search').addEventListener('input', e => { searchTerm = e.target.value.toLowerCase(); render(); });
+document.getElementById('filterConn').addEventListener('change', e => { connFilter = e.target.value; render(); });
+document.getElementById('addRow').addEventListener('click', addWire);
+document.getElementById('addBlock').addEventListener('click', addBlock);
+document.getElementById('exportJson').addEventListener('click', exportJson);
+document.getElementById('exportCsv').addEventListener('click', exportCsv);
+document.getElementById('importFile').addEventListener('change', importFile);
+document.getElementById('printBtn').addEventListener('click', () => window.print());
+document.getElementById('resetSeed').addEventListener('click', () => {
+  if (confirm('Reset to the original Polo 1.0 TSI seed? Your edits will be lost.')) {
+    state = JSON.parse(JSON.stringify(SEED));
+    save(); render();
+  }
+});
+
+function filtered(){
+  const t = searchTerm;
+  return state.wires.filter(w => {
+    if (connFilter && w.ecu_connector !== connFilter) return false;
+    if (!t) return true;
+    return JSON.stringify(w).toLowerCase().includes(t);
+  });
+}
+
+// ─── Render dispatch ─────────────────────────────────────────────────────────
+function render(){
+  const v = document.getElementById('view');
+  document.getElementById('carLabel').textContent = `${state.car} · ${state.ecu}`;
+  if (currentTab === 'db') v.innerHTML = renderDb();
+  else if (currentTab === 'byEcu') v.innerHTML = renderByEcu();
+  else if (currentTab === 'byOem') v.innerHTML = renderByOem();
+  else if (currentTab === 'loom') v.innerHTML = renderLoom();
+  else if (currentTab === 'checklist') v.innerHTML = renderChecklist();
+  else if (currentTab === 'validator') v.innerHTML = renderValidator();
+  else if (currentTab === 'reference') v.innerHTML = renderReference();
+  else if (currentTab === 'cars') v.innerHTML = renderCars();
+  bindEdit();
+  bindChecklist();
+}
+
+// ─── DB tab ──────────────────────────────────────────────────────────────────
+function renderDb(){
+  const ws = filtered();
+  const blocks = groupBy(ws, 'block');
+  let html = `<div class="muted" style="margin-bottom:10px">${ws.length} wire${ws.length===1?'':'s'} shown · ${state.wires.length} total · click any cell to edit</div>`;
+  for (const [block, items] of blocks) {
+    html += `<div class="block-card">
+      <div class="block-head">
+        <div>${escapeHtml(block || '(unblocked)')}</div>
+        <div class="muted" style="font-size:11px;font-weight:400">${items.length} pin${items.length===1?'':'s'}</div>
+      </div>
+      <table>
+        <thead><tr>
+          <th style="width:3em">Pin</th>
+          <th style="width:9em">Pin label</th>
+          <th style="width:8em">ECU channel</th>
+          <th style="width:6em">OEM pin</th>
+          <th style="width:11em">Colour</th>
+          <th style="width:5em">ECU pin</th>
+          <th style="width:5em">Conn.</th>
+          <th style="width:4em">AWG</th>
+          <th style="width:9em">Function</th>
+          <th>Notes</th>
+          <th style="width:2em" class="no-print"></th>
+        </tr></thead>
+        <tbody>`;
+    items.forEach(w => {
+      const idx = state.wires.indexOf(w);
+      const conn = w.ecu_connector ? `<span class="pill connector-${w.ecu_connector}">${w.ecu_connector}</span>` : '';
+      html += `<tr data-i="${idx}">
+        <td class="ed" data-k="sensor_pin">${w.sensor_pin ?? ''}</td>
+        <td class="ed" data-k="sensor_pin_label">${escapeHtml(w.sensor_pin_label||'')}</td>
+        <td class="ed" data-k="ecu_channel"><span class="kbd">${escapeHtml(w.ecu_channel||'')}</span></td>
+        <td class="ed" data-k="oe_pin">${w.oe_pin ?? ''}</td>
+        <td class="ed" data-k="colour">${colourCell(w.colour)}</td>
+        <td class="ed" data-k="ecu_pin">${escapeHtml(w.ecu_pin||'')}</td>
+        <td class="ed" data-k="ecu_connector">${conn || ''}</td>
+        <td class="ed" data-k="wire_gauge_awg">${w.wire_gauge_awg ?? ''}</td>
+        <td class="ed" data-k="function_label">${escapeHtml(w.function_label||'')}</td>
+        <td class="ed" data-k="notes">${escapeHtml(w.notes||'')}</td>
+        <td class="no-print"><button class="btn ghost" onclick="deleteWire(${idx})">×</button></td>
+      </tr>`;
+    });
+    html += `</tbody></table></div>`;
+  }
+  return html;
+}
+
+window.deleteWire = function(i){
+  if (confirm('Delete this wire?')) { state.wires.splice(i,1); save(); render(); }
+};
+
+function bindEdit(){
+  document.querySelectorAll('td.ed').forEach(td => {
+    td.addEventListener('click', () => {
+      if (td.classList.contains('editing')) return;
+      td.classList.add('editing');
+      const i = parseInt(td.parentElement.dataset.i);
+      const k = td.dataset.k;
+      const w = state.wires[i];
+      if (!w) return;
+      const orig = w[k] ?? '';
+      td.innerHTML = `<input style="width:100%;background:#0d131c;border:1px solid #2a3447;color:var(--ink);padding:3px 5px;font:inherit;border-radius:3px" value="${escapeAttr(orig)}" />`;
+      const inp = td.querySelector('input');
+      inp.focus(); inp.select();
+      const commit = () => {
+        let v = inp.value.trim();
+        if (k==='sensor_pin' || k==='oe_pin' || k==='wire_gauge_awg') v = v === '' ? null : (isNaN(+v) ? v : +v);
+        if (v === '') v = null;
+        w[k] = v;
+        td.classList.remove('editing');
+        save(); render();
+      };
+      inp.addEventListener('blur', commit);
+      inp.addEventListener('keydown', e => {
+        if (e.key === 'Enter') { e.preventDefault(); commit(); }
+        if (e.key === 'Escape') { td.classList.remove('editing'); render(); }
+      });
+    });
+  });
+}
+
+// ─── By ECU connector ────────────────────────────────────────────────────────
+function renderByEcu(){
+  const ws = filtered();
+  const grouped = {};
+  for (const w of ws) {
+    const k = w.ecu_connector || '(no connector)';
+    if (!grouped[k]) grouped[k] = [];
+    grouped[k].push(w);
+  }
+  let html = `<div class="muted" style="margin-bottom:10px">Wires grouped by ECU connector. Use this view when building each connector head.</div>`;
+  for (const k of Object.keys(grouped).sort()) {
+    const items = grouped[k];
+    items.sort((a,b)=> (a.ecu_pin||'').localeCompare(b.ecu_pin||''));
+    html += `<div class="block-card">
+      <div class="block-head"><div>Connector <span class="pill connector-${k}">${k}</span></div>
+        <div class="muted" style="font-weight:400">${items.length} pin${items.length===1?'':'s'}</div></div>
+      <table><thead><tr>
+        <th style="width:6em">ECU pin</th>
+        <th style="width:8em">Channel</th>
+        <th style="width:9em">Function</th>
+        <th>Goes to</th>
+        <th style="width:11em">Colour</th>
+        <th style="width:4em">AWG</th>
+      </tr></thead><tbody>`;
+    items.forEach(w => {
+      html += `<tr><td><span class="kbd">${escapeHtml(w.ecu_pin||'?')}</span></td>
+        <td><span class="kbd">${escapeHtml(w.ecu_channel||'')}</span></td>
+        <td>${escapeHtml(w.function_label||'')}</td>
+        <td>${escapeHtml(w.block||'')} pin ${w.sensor_pin||'?'} (${escapeHtml(w.sensor_pin_label||'')})</td>
+        <td>${colourCell(w.colour)}</td>
+        <td>${w.wire_gauge_awg ?? ''}</td></tr>`;
+    });
+    html += `</tbody></table></div>`;
+  }
+  return html;
+}
+
+// ─── By OEM connector ────────────────────────────────────────────────────────
+function renderByOem(){
+  const ws = filtered().filter(w => w.oe_pin != null && w.oe_pin !== '');
+  let html = `<div class="muted" style="margin-bottom:10px">Wires that touch the OEM body loom (have an OE pin number). Use this view when re-pinning into the OEM connectors.</div>`;
+  if (!ws.length) return html + '<div class="muted">No OE-pin wires in current filter.</div>';
+  ws.sort((a,b)=> ((''+a.oe_pin).localeCompare(''+b.oe_pin, undefined, {numeric:true})));
+  html += `<table><thead><tr>
+    <th style="width:6em">OE pin</th>
+    <th>Block</th>
+    <th>Pin label</th>
+    <th style="width:11em">Colour</th>
+    <th style="width:8em">ECU pin</th>
+    <th style="width:5em">AWG</th>
+    <th>Notes</th>
+  </tr></thead><tbody>`;
+  ws.forEach(w => {
+    html += `<tr><td><span class="kbd">${escapeHtml(''+w.oe_pin)}</span></td>
+      <td>${escapeHtml(w.block||'')}</td>
+      <td>${escapeHtml(w.sensor_pin_label||'')} (${w.sensor_pin||'?'})</td>
+      <td>${colourCell(w.colour)}</td>
+      <td><span class="kbd">${escapeHtml(w.ecu_pin||'')}</span> ${w.ecu_connector?`<span class="pill connector-${w.ecu_connector}">${w.ecu_connector}</span>`:''}</td>
+      <td>${w.wire_gauge_awg ?? ''}</td>
+      <td class="muted">${escapeHtml(w.notes||'')}</td></tr>`;
+  });
+  return html + `</tbody></table>`;
+}
+
+// ─── Loom build sheet (cut list, grouped by connector) ───────────────────────
+function renderLoom(){
+  const ws = state.wires.filter(w => w.ecu_pin && w.ecu_connector);
+  const grouped = {};
+  for (const w of ws) {
+    const k = w.ecu_connector;
+    if (!grouped[k]) grouped[k] = [];
+    grouped[k].push(w);
+  }
+  let html = `<div class="muted" style="margin-bottom:10px">Print this and hand it to the loom builder. One row per wire, grouped by ECU connector.</div>`;
+  for (const k of Object.keys(grouped).sort()) {
+    const items = grouped[k];
+    items.sort((a,b)=> (a.ecu_pin||'').localeCompare(b.ecu_pin||''));
+    html += `<div class="block-card">
+      <div class="block-head">${state.car} · ${state.ecu} · Connector ${k} · ${items.length} wire${items.length===1?'':'s'}</div>
+      <table><thead><tr>
+        <th style="width:3em">#</th>
+        <th style="width:5em">ECU pin</th>
+        <th style="width:7em">Channel</th>
+        <th style="width:11em">Wire (colour, AWG)</th>
+        <th style="width:9em">To</th>
+        <th>Function / notes</th>
+        <th style="width:5em">✓</th>
+      </tr></thead><tbody>`;
+    items.forEach((w,i) => {
+      html += `<tr>
+        <td>${i+1}</td>
+        <td><span class="kbd">${escapeHtml(w.ecu_pin)}</span></td>
+        <td><span class="kbd">${escapeHtml(w.ecu_channel||'')}</span></td>
+        <td>${colourCell(w.colour)} ${w.wire_gauge_awg?'· '+w.wire_gauge_awg+' AWG':''}</td>
+        <td>${escapeHtml(w.block||'')} P${w.sensor_pin||'?'}</td>
+        <td>${escapeHtml(w.function_label||'')} ${w.notes?'· '+escapeHtml(w.notes):''}</td>
+        <td>☐</td></tr>`;
+    });
+    html += `</tbody></table></div>`;
+  }
+  return html;
+}
+
+// ─── Bench test checklist ────────────────────────────────────────────────────
+function renderChecklist(){
+  const ws = state.wires;
+  // Group: power, grounds, 5V refs, signal inputs, outputs, comms
+  const cat = {
+    'Power & Ground (continuity to battery / chassis)': [],
+    'VREF (5V) lines (measure 5.00V ±0.05 with key on)': [],
+    'Sensor signals (key on, expected idle voltage)': [],
+    'Outputs (DBW / solenoids / coils — actuator end disconnected before first crank)': [],
+    'Injectors (resistance check + driver pair polarity)': [],
+    'CAN bus (continuity + 60Ω termination check)': [],
+  };
+  for (const w of ws) {
+    const ch = (w.ecu_channel||'').toUpperCase();
+    const lbl = (w.function_label||'').toUpperCase();
+    if (lbl.includes('GND') || lbl.includes('GROUND') || lbl.includes('BATERY') || lbl.includes('BATTERY')) cat['Power & Ground (continuity to battery / chassis)'].push(w);
+    else if (lbl.includes('VREF') || lbl.includes('VERF')) cat['VREF (5V) lines (measure 5.00V ±0.05 with key on)'].push(w);
+    else if (ch.startsWith('AVI') || ch.startsWith('ATI') || ch.startsWith('UDIG') || ch.startsWith('KNOCK')) cat['Sensor signals (key on, expected idle voltage)'].push(w);
+    else if (ch.startsWith('HBO') || ch.startsWith('OUT') || ch.startsWith('IGN')) cat['Outputs (DBW / solenoids / coils — actuator end disconnected before first crank)'].push(w);
+    else if (ch.startsWith('DI ')) cat['Injectors (resistance check + driver pair polarity)'].push(w);
+    else if (lbl.includes('CAN')) cat['CAN bus (continuity + 60Ω termination check)'].push(w);
+  }
+  let html = `<div class="muted" style="margin-bottom:10px">Walk this list before keying the car on. Tick boxes save in your browser. Print to take into the workshop.</div>`;
+  for (const [name, items] of Object.entries(cat)) {
+    if (!items.length) continue;
+    html += `<div class="block-card"><div class="block-head">${name}</div><div>`;
+    items.forEach((w, i) => {
+      const id = `chk-${state.wires.indexOf(w)}`;
+      const checked = (state._checks||{})[id] ? 'done' : '';
+      html += `<div class="validator-row">
+        <span class="checkbox ${checked}" data-id="${id}"></span>
+        <div style="flex:1">
+          <div><b>${escapeHtml(w.block||'')}</b> · ${escapeHtml(w.function_label||w.sensor_pin_label||'')} ${w.ecu_channel?'<span class="kbd">'+escapeHtml(w.ecu_channel)+'</span>':''} ${w.ecu_pin?' @ '+w.ecu_pin+' ('+w.ecu_connector+')':''}</div>
+          <div class="muted" style="font-size:11px;margin-top:2px">${colourCell(w.colour)} ${w.wire_gauge_awg?'· '+w.wire_gauge_awg+' AWG':''}</div>
+        </div></div>`;
+    });
+    html += `</div></div>`;
+  }
+  return html;
+}
+function bindChecklist(){
+  document.querySelectorAll('.checkbox[data-id]').forEach(c => {
+    c.addEventListener('click', () => {
+      state._checks = state._checks || {};
+      state._checks[c.dataset.id] = !state._checks[c.dataset.id];
+      c.classList.toggle('done');
+      save();
+    });
+  });
+}
+
+// ─── Validator ───────────────────────────────────────────────────────────────
+function renderValidator(){
+  const issues = validate(state.wires);
+  let html = `<div class="muted" style="margin-bottom:10px">Pre-flight sanity checks. Run before fabrication and again after each edit.</div>`;
+  if (!issues.length) {
+    html += `<div class="block-card"><div class="block-head"><span class="pill good">OK</span> No issues found.</div></div>`;
+    return html;
+  }
+  const grouped = {};
+  for (const i of issues) { grouped[i.severity] = grouped[i.severity] || []; grouped[i.severity].push(i); }
+  for (const sev of ['error','warn','info']) {
+    const list = grouped[sev]; if (!list) continue;
+    const cls = sev==='error'?'bad':(sev==='warn'?'warn':'info');
+    html += `<div class="block-card"><div class="block-head">
+      <span class="pill ${cls}">${sev.toUpperCase()}</span>
+      <span class="muted" style="font-weight:400">${list.length} item${list.length===1?'':'s'}</span></div>`;
+    list.forEach(i => {
+      html += `<div class="validator-row">
+        <div style="flex:1">
+          <div><b>${escapeHtml(i.title)}</b></div>
+          <div class="muted" style="margin-top:3px">${escapeHtml(i.detail)}</div>
+        </div></div>`;
+    });
+    html += `</div>`;
+  }
+  return html;
+}
+
+function validate(wires){
+  const issues = [];
+  // 1. Typos: VERF vs VREF
+  wires.forEach(w => {
+    const lbl = w.function_label || '';
+    if (/VERF/i.test(lbl)) issues.push({severity:'error', title:'Typo: VERF → VREF', detail:`${w.block||''} pin ${w.sensor_pin||'?'} (${w.colour||'?'} → ECU ${w.ecu_pin||'?'}/${w.ecu_connector||'?'}) has function "${lbl}". Fix to VREF.`});
+  });
+  // 2. ECU channel + ECU pin used by more than one wire
+  const byChannel = {}, byEcuPin = {};
+  wires.forEach(w => {
+    if (w.ecu_channel) {
+      // ignore generic refs like A, B, C (those are sensor-side)
+      if (/^[A-Z]$/.test(w.ecu_channel)) return;
+      const k = w.ecu_channel.toUpperCase().replace(/\s+/g,' ');
+      (byChannel[k]=byChannel[k]||[]).push(w);
+    }
+    if (w.ecu_pin && w.ecu_connector) {
+      const k = w.ecu_connector + '·' + w.ecu_pin;
+      (byEcuPin[k]=byEcuPin[k]||[]).push(w);
+    }
+  });
+  for (const [ch, list] of Object.entries(byChannel)) {
+    if (list.length > 1) {
+      issues.push({severity:'error', title:`Channel ${ch} used by ${list.length} wires`,
+        detail: list.map(w=>`${w.block} pin ${w.sensor_pin} (${w.function_label||'?'})`).join('  ·  ')});
+    }
+  }
+  for (const [pin, list] of Object.entries(byEcuPin)) {
+    if (list.length > 1) {
+      issues.push({severity:'error', title:`ECU pin ${pin} used by ${list.length} wires`,
+        detail: list.map(w=>`${w.block} pin ${w.sensor_pin} (${w.function_label||'?'} / ${w.ecu_channel||'?'})`).join('  ·  ')});
+    }
+  }
+  // 3. Missing essentials per block (sensor signal but no GND in same block)
+  const byBlock = {};
+  wires.forEach(w => { if (w.block) (byBlock[w.block]=byBlock[w.block]||[]).push(w); });
+  for (const [block, list] of Object.entries(byBlock)) {
+    const labels = list.map(w => (w.function_label||'').toUpperCase()).join('|');
+    const hasSignal = list.some(w => /AVI|ATI|UDIG|KNOCK/i.test(w.ecu_channel||''));
+    const hasGnd = /GND|GROUND/.test(labels);
+    if (hasSignal && !hasGnd) issues.push({severity:'warn', title:`${block}: signal present but no GND in block`, detail:'Sensor signal channel detected with no analog/digital ground in the same block. Confirm GND is shared elsewhere or add it.'});
+    const has5V = /VREF|VERF/.test(labels);
+    if (hasSignal && !has5V && !/KNOCK|UDIG/.test(list.map(w=>(w.ecu_channel||'').toUpperCase()).join('|'))) {
+      // analog sensors usually need 5V — knock and digital usually don't
+      const needs5V = list.some(w=>/AVI|ATI/i.test(w.ecu_channel||''));
+      if (needs5V) issues.push({severity:'info', title:`${block}: analog sensor without VREF in block`, detail:'AVI/ATI sensors usually need a 5V VREF — confirm one is provided (could be shared from another block).'});
+    }
+  }
+  // 4. AWG guidance
+  wires.forEach(w => {
+    const ch = (w.ecu_channel||'').toUpperCase();
+    const awg = +w.wire_gauge_awg;
+    if (!awg) return;
+    if (ch.startsWith('HBO') && awg > 18) issues.push({severity:'warn', title:`HBO output on ${awg} AWG — likely too thin`, detail:`${w.block} (${w.function_label||'?'}). HBO outputs (DBW, solenoids) typically want ≤18 AWG.`});
+    if (ch.startsWith('DI ') && awg > 18) issues.push({severity:'warn', title:`Direct injector on ${awg} AWG — likely too thin`, detail:`${w.block} (${w.function_label||'?'}). DI peak/hold outputs see 12+ A peaks; ≤18 AWG recommended.`});
+    if (ch.startsWith('IGN') && awg > 22) issues.push({severity:'info', title:`IGN trigger on ${awg} AWG`, detail:`${w.block}. IGN outputs are 5V logic to IGBT — 22 AWG is fine; flagging only if heavier wire was assumed for current.`});
+  });
+  // 5. Empty essential cells
+  wires.forEach(w => {
+    if (!w.colour) issues.push({severity:'info', title:`${w.block||'?'} pin ${w.sensor_pin||'?'}: missing colour`, detail:'Add wire colour so the loom builder can identify it.'});
+    if (w.ecu_channel && !w.ecu_pin) issues.push({severity:'info', title:`${w.block||'?'} (${w.ecu_channel}): missing ECU pin`, detail:'Channel set but no physical ECU pin — fill before cutting wire.'});
+  });
+  return issues;
+}
+
+// ─── M142 reference ──────────────────────────────────────────────────────────
+function renderReference(){
+  let html = `<div class="muted" style="margin-bottom:10px">MoTeC M1 family channel reference (M142 is one of the M1xx variants — channel naming is shared). Use this when assigning a sensor to a channel.</div>`;
+  html += `<table><thead><tr><th>Channel</th><th>Type</th><th>Count</th><th>Limits</th><th>Typical use</th></tr></thead><tbody>`;
+  for (const [ch, info] of Object.entries(M1_CHANNELS)) {
+    const limits = [];
+    if (info.max_v) limits.push(`max ${info.max_v}V`);
+    if (info.max_a) limits.push(`max ${info.max_a}A`);
+    if (info.voltage) limits.push(`${info.voltage}V out`);
+    html += `<tr><td><span class="kbd">${ch}</span></td><td>${info.type}</td><td>${info.count}</td><td class="muted">${limits.join(' · ') || '—'}</td><td>${info.use}</td></tr>`;
+  }
+  html += `</tbody></table>`;
+  html += `<div class="block-card" style="margin-top:18px"><div class="block-head">Connectors</div><div style="padding:14px">${M1_CONNECTORS.map(c=>`<span class="pill connector-${c}" style="margin-right:6px">${c}</span>`).join('')} <span class="muted" style="margin-left:10px">M142 has 3 main connectors. Pin grids are A1–M5 per connector.</span></div></div>`;
+  html += `<div class="block-card"><div class="block-head">Notes for ARKA Polo build</div><div style="padding:14px;line-height:1.6;color:var(--muted)">
+    <div>· "OBR" in the workshop refers to the harness builder, not the ECU. The ECU is MoTeC M142.</div>
+    <div>· Existing wiring sheet had two consistent typos: <span class="kbd">VERF 2</span> and <span class="kbd">VERF 3</span> — should be <span class="kbd">VREF</span>. Validator catches these.</div>
+    <div>· Boost pressure block has no ECU pin assignments yet (only OE wire colours) — fill these before fabrication.</div>
+    <div>· Ignition coils 1–3 share <span class="kbd">B9</span> (ground) and <span class="kbd">B5</span> (12V relay) on the OEM side — confirm before splicing.</div>
+  </div></div>`;
+  return html;
+}
+
+// ─── Cars / data ─────────────────────────────────────────────────────────────
+function renderCars(){
+  const counts = {
+    blocks: new Set(state.wires.map(w=>w.block).filter(Boolean)).size,
+    j1: state.wires.filter(w=>w.ecu_connector==='J1').length,
+    j2: state.wires.filter(w=>w.ecu_connector==='J2').length,
+    j3: state.wires.filter(w=>w.ecu_connector==='J3').length,
+  };
+  return `<div class="block-card"><div class="block-head">${state.car}</div>
+    <div style="padding:14px;line-height:1.7">
+      <div><b>ECU:</b> ${state.ecu}</div>
+      <div><b>Harness:</b> ${state.harness_builder||'—'}</div>
+      <div><b>Title:</b> ${state.title||'—'}</div>
+      <div><b>Wires:</b> ${state.wires.length} across ${counts.blocks} blocks</div>
+      <div><b>By connector:</b> J1=${counts.j1} · J2=${counts.j2} · J3=${counts.j3}</div>
+    </div></div>
+    <div class="block-card"><div class="block-head">Add another car</div>
+    <div style="padding:14px;color:var(--muted);line-height:1.6">
+      <div>Multi-car support coming next iteration. For now: build out one car, Export JSON, save the file under <span class="kbd">data/&lt;car-slug&gt;-wiring.json</span>, and Import to switch.</div>
+    </div></div>`;
+}
+
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+function groupBy(arr, key) {
+  const m = new Map();
+  for (const x of arr) {
+    const k = x[key] ?? '(unblocked)';
+    if (!m.has(k)) m.set(k, []);
+    m.get(k).push(x);
+  }
+  return m;
+}
+function escapeHtml(s){ return (s==null?'':(''+s).replace(/[&<>"]/g, c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c]))); }
+function escapeAttr(s){ return escapeHtml(s).replace(/'/g,'&#39;'); }
+function colourCell(c){
+  if (!c) return '<span class="muted">—</span>';
+  // try to extract a primary colour for the swatch
+  const map = {
+    'red':'#dc2626','blue':'#2563eb','yellow':'#facc15','green':'#16a34a','black':'#111827','white':'#f3f4f6','brown':'#92400e','orange':'#f97316','grey':'#6b7280','gray':'#6b7280','violet':'#7c3aed','pink':'#ec4899'
+  };
+  const lower = c.toLowerCase();
+  let primary = '#94a3b8';
+  for (const k of Object.keys(map)) if (lower.includes(k)) { primary = map[k]; break; }
+  return `<span class="color-swatch" style="background:${primary}"></span>${escapeHtml(c)}`;
+}
+
+function addWire(){
+  state.wires.push({block:'New block', sensor_pin:1, sensor_pin_label:'', ecu_channel:'', oe_pin:null, colour:'', ecu_pin:'', ecu_connector:'J1', wire_gauge_awg:22, function_label:'', notes:''});
+  save(); render();
+}
+function addBlock(){
+  const name = prompt('Block name (e.g. "Oil temp sensor")');
+  if (!name) return;
+  state.wires.push({block:name, sensor_pin:1, sensor_pin_label:'Signal', ecu_channel:'', oe_pin:null, colour:'', ecu_pin:'', ecu_connector:'J1', wire_gauge_awg:22, function_label:'', notes:''});
+  save(); render();
+}
+
+function exportJson(){
+  const blob = new Blob([JSON.stringify(state, null, 2)], {type:'application/json'});
+  download(blob, slug(state.car)+'-wiring.json');
+}
+function exportCsv(){
+  const cols = ['block','sensor_pin','sensor_pin_label','ecu_channel','oe_pin','colour','ecu_pin','ecu_connector','wire_gauge_awg','function_label','notes'];
+  const csv = [cols.join(',')].concat(state.wires.map(w => cols.map(c => csvEscape(w[c])).join(','))).join('\n');
+  download(new Blob([csv], {type:'text/csv'}), slug(state.car)+'-wiring.csv');
+}
+function csvEscape(v){ if (v==null) return ''; const s = ''+v; return /[",\n]/.test(s) ? '"'+s.replace(/"/g,'""')+'"' : s; }
+function download(blob, name){
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = name; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
+}
+function slug(s){ return (s||'car').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+
+function importFile(e){
+  const f = e.target.files[0]; if (!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try {
+      let parsed;
+      if (f.name.endsWith('.json')) parsed = JSON.parse(r.result);
+      else parsed = parseCsv(r.result);
+      if (parsed.wires) state = parsed;
+      else state = {...state, wires: parsed};
+      save(); render();
+      alert('Imported '+(state.wires.length)+' wires.');
+    } catch(err){ alert('Import failed: '+err.message); }
+  };
+  r.readAsText(f);
+  e.target.value = '';
+}
+function parseCsv(s){
+  const lines = s.split(/\r?\n/).filter(Boolean);
+  const head = parseCsvLine(lines.shift());
+  const wires = lines.map(l => {
+    const c = parseCsvLine(l); const o = {};
+    head.forEach((h,i)=> {
+      let v = c[i]; if (v==='') v = null;
+      if (h==='sensor_pin'||h==='oe_pin'||h==='wire_gauge_awg') v = v==null ? null : (isNaN(+v)?v:+v);
+      o[h] = v;
+    });
+    return o;
+  });
+  return wires;
+}
+function parseCsvLine(l){
+  const out = []; let cur=''; let q=false;
+  for (let i=0;i<l.length;i++){
+    const c = l[i];
+    if (q) { if (c==='"' && l[i+1]==='"') {cur+='"';i++;} else if (c==='"') {q=false;} else cur+=c; }
+    else { if (c===',') {out.push(cur);cur='';} else if (c==='"') {q=true;} else cur+=c; }
+  }
+  out.push(cur); return out;
+}
+</script>
+
+<!-- seed wires injected here -->
+<script src="seed-polo.js"></script>
+<script>
+// re-init after seed loads (SEED.wires was empty when first read)
+SEED.wires = window.SEED_WIRES || [];
+if (!localStorage.getItem(STORE_KEY) || (state.wires||[]).length === 0) {
+  state = JSON.parse(JSON.stringify(SEED));
+  save();
+}
+render();
+</script>
+</body>
+</html>

@@ -172,18 +172,19 @@ Industry advisors with DTC and consumer brand experience.
 
 ## 12. The Ask — Pre-Seed Round
 
-**Raising Rs.75–90L (~$90K–110K) at a [valuation TBD] pre-money valuation.**
+**Raising Rs.70–90L (~$85K–110K) at a [valuation TBD] pre-money valuation.**
 
 ### Use of funds (12-month runway)
 
 | Category | Allocation |
 |---|---|
 | Day 1 inventory (3 SKUs × MOQs) | Rs.12–15L |
-| Marketing (performance + influencer + PR) | Rs.30–40L |
-| Brand identity, packaging, content production | Rs.4–6L |
-| FSSAI consultant + regulatory filings | Rs.3–4L |
-| Tech + operations + working capital | Rs.5–8L |
-| Founder/team runway (12 months) | Rs.10–15L |
+| FSSAI consultant + lab testing + entity incorporation | Rs.4–7L |
+| Brand identity, packaging, photography, website | Rs.6–10L |
+| Tech stack + logistics + insurance + legal | Rs.3–7L |
+| **Marketing — 12 months runway (perf + influencer + PR + content)** | **Rs.25–40L** |
+| Founder + team runway (12 months) + working capital | Rs.13–20L |
+| **Total** | **Rs.70–90L** |
 
 ### 12-month milestones
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ARKA Engineering Tools</title>
+<style>
+  :root { --bg:#0b0f14; --panel:#121821; --ink:#e6edf3; --muted:#8b95a3; --accent:#f43f5e; --accent2:#22d3ee; --good:#22c55e; --warn:#f59e0b; --bad:#ef4444; --border:#1f2937; }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;}
+  header{padding:32px 28px 16px;border-bottom:1px solid var(--border);}
+  h1{margin:0 0 4px;font-size:22px;letter-spacing:0.2px}
+  .sub{color:var(--muted);font-size:13px}
+  main{max-width:1100px;margin:0 auto;padding:32px 28px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+  a.card{display:block;padding:22px 22px 18px;background:var(--panel);border:1px solid var(--border);border-radius:14px;color:var(--ink);text-decoration:none;transition:transform .12s ease,border-color .12s ease,background .12s ease}
+  a.card:hover{transform:translateY(-2px);border-color:#374151;background:#161e2a}
+  .ico{font-size:22px;margin-bottom:10px;color:var(--accent2)}
+  .name{font-size:16px;font-weight:600;margin-bottom:6px}
+  .desc{color:var(--muted);font-size:13px;line-height:1.5}
+  .footer{margin-top:32px;color:var(--muted);font-size:12px}
+  .meta{margin-top:6px;font-size:11px;color:#6b7280;letter-spacing:0.4px;text-transform:uppercase}
+</style>
+</head>
+<body>
+<header>
+  <h1>ARKA Engineering Tools</h1>
+  <div class="sub">Browser-only. Offline-friendly. No login. Data stays on your machine.</div>
+</header>
+<main>
+  <div class="grid">
+    <a class="card" href="wiring/index.html">
+      <div class="ico">⚡</div>
+      <div class="name">ECU Wiring Manager</div>
+      <div class="desc">Single source of truth for car wiring. M142 channel reference built in. Auto-generates loom build sheets, OEM mapping, pinout, bench test checklist. Validates before you cut a wire.</div>
+      <div class="meta">v0.1 · MoTeC M1 family</div>
+    </a>
+    <a class="card" href="gear-ratio/index.html">
+      <div class="ico">⚙️</div>
+      <div class="name">Gear Ratio Calculator</div>
+      <div class="desc">PPG-style gear ratio program. 31 imported profiles (VW/Honda/Sadev/3MO/XUV). Live speed-vs-RPM chart. Compare two configs side-by-side. KPH and MPH.</div>
+      <div class="meta">v0.1 · 31 profiles</div>
+    </a>
+    <a class="card" href="wtw-suspension/index.html">
+      <div class="ico">🏁</div>
+      <div class="name">Weight Transfer + Setup</div>
+      <div class="desc">Smithees-style WTW calculator unified with the session setup sheet. Imperial or metric. Per-car presets. Setup data feeds the calc — no double entry.</div>
+      <div class="meta">v0.1 · Unified WTW + setup</div>
+    </a>
+  </div>
+  <div class="footer">Drop new data into the workshop's machine, double-click the HTML, you're working. To share data across machines, use the Export → Import flow inside each tool.</div>
+</main>
+</body>
+</html>
