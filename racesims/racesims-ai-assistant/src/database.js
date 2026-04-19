@@ -210,6 +210,8 @@ export function getDashboardStats() {
     SELECT COUNT(*) as count FROM conversations WHERE date(created_at) = date('now')
   `).get().count;
 
+  const pausedBots = db.prepare('SELECT COUNT(*) as count FROM contacts WHERE is_paused = 1').get().count;
+
   return {
     totalContacts,
     hotLeads,
@@ -217,7 +219,8 @@ export function getDashboardStats() {
     coldLeads,
     pendingEscalations,
     todayConversations,
-    todayMessages
+    todayMessages,
+    pausedBots
   };
 }
 

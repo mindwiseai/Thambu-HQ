@@ -101,6 +101,28 @@
     .stat-card.hot .value { color: var(--red); }
     .stat-card.warm .value { color: var(--yellow); }
     .stat-card.escalation .value { color: #ff4444; }
+    .stat-card.paused .value { color: var(--yellow); }
+    .stat-card.paused { cursor: pointer; }
+    .stat-card.paused.active { border: 1px solid var(--yellow); }
+
+    /* Inline resume button on paused list items */
+    .conv-item .resume-inline {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--green);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .conv-item .resume-inline:hover { filter: brightness(1.2); }
+    .conv-item.paused {
+      border-left: 3px solid var(--yellow);
+      background: rgba(234, 179, 8, 0.05);
+    }
 
     /* Main layout */
     .main {
@@ -351,6 +373,10 @@
       <div class="value" id="stat-escalations">0</div>
       <div class="label">Pending Escalations</div>
     </div>
+    <div class="stat-card paused" id="stat-card-paused" onclick="togglePausedFilter()" title="Click to filter paused conversations">
+      <div class="value" id="stat-paused">0</div>
+      <div class="label">Paused Bots</div>
+    </div>
     <div class="stat-card">
       <div class="value" id="stat-messages">0</div>
       <div class="label">Messages Today</div>
@@ -443,6 +469,7 @@
 
         if (evt === 'contact_paused' || evt === 'contact_resumed') {
           refreshConversations();
+          refreshStats();
         }
       };
 
@@ -461,13 +488,28 @@
       document.getElementById('stat-total').textContent = stats.totalContacts;
       document.getElementById('stat-escalations').textContent = stats.pendingEscalations;
       document.getElementById('stat-messages').textContent = stats.todayMessages;
+      document.getElementById('stat-paused').textContent = stats.pausedBots || 0;
+    }
+
+    let pausedFilter = false;
+    function togglePausedFilter() {
+      pausedFilter = !pausedFilter;
+      document.getElementById('stat-card-paused').classList.toggle('active', pausedFilter);
+      refreshConversations();
     }
 
     async function refreshConversations() {
       const convs = await fetch('/api/conversations').then(r => r.json());
       const container = document.getElementById('conv-list-items');
 
-      container.innerHTML = convs.map(c => {
+      const filtered = pausedFilter ? convs.filter(c => c.is_paused) : convs;
+
+      if (pausedFilter && filtered.length === 0) {
+        container.innerHTML = '<div style="padding:24px;text-align:center;color:var(--text-dim);font-size:13px;">No paused conversations. ✓</div>';
+        return;
+      }
+
+      container.innerHTML = filtered.map(c => {
         const scoreClass = c.lead_score >= 8 ? 'score-hot' : c.lead_score >= 5 ? 'score-warm' : 'score-cold';
         const channelClass = c.channel === 'instagram' ? 'ig' : 'wa';
         const channelLabel = c.channel === 'instagram' ? 'IG' : 'WA';
@@ -475,15 +517,19 @@
         const isActive = c.id === selectedContactId;
         const timeAgo = getTimeAgo(c.last_message_at);
         const preview = c.last_message ? c.last_message.substring(0, 60) + '...' : 'No messages yet';
-        const paused = c.is_paused ? ' ⏸️' : '';
+        const pausedIcon = c.is_paused ? ' ⏸️' : '';
+        const resumeBtn = c.is_paused
+          ? `<button class="resume-inline" onclick="event.stopPropagation(); resumeBotFromList(${c.id});">▶ Resume</button>`
+          : '';
 
         return `
-          <div class="conv-item ${isActive ? 'active' : ''} ${isEscalated ? 'escalated' : ''}"
+          <div class="conv-item ${isActive ? 'active' : ''} ${isEscalated ? 'escalated' : ''} ${c.is_paused ? 'paused' : ''}"
                onclick="loadConversation(${c.id})">
             <div class="name">
-              ${c.name || c.phone || 'Unknown'}${paused}
+              ${c.name || c.phone || 'Unknown'}${pausedIcon}
               <span class="channel-badge ${channelClass}">${channelLabel}</span>
               ${isEscalated ? '<span style="color:#ff4444;font-size:11px;">⚠️ ESCALATED</span>' : ''}
+              ${resumeBtn}
             </div>
             <div class="preview">${c.last_message_role === 'assistant' ? '🤖 ' : '👤 '}${preview}</div>
             <div class="meta">
@@ -493,6 +539,14 @@
           </div>
         `;
       }).join('');
+    }
+
+    async function resumeBotFromList(contactId) {
+      await fetch(`/api/resume/${contactId}`, { method: 'POST' });
+      showToast('Bot resumed');
+      refreshConversations();
+      refreshStats();
+      if (selectedContactId === contactId) loadConversation(contactId);
     }
 
     async function loadConversation(contactId) {

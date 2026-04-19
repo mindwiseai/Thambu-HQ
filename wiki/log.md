@@ -31,6 +31,20 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 - Warnings: 7 missing entity pages (fanatec, playseat, tikitar, guhan, rohub, qubic-systems, ajit-kumar-racing); 6 backslash-escape typos in wiki links; hot.md grew to 729 words (target ~500)
 - Flagged for human: FSSAI dosage contradiction ("one capsule" vs "two capsules"), LMC Chennai address mismatch — both regulatory liabilities
 
+## [2026-04-19] update | Realistic launch budget — Rs.70-90L (Tier 2)
+- Aishu pushed back on the original under-budgeted proposal, specifically on marketing costs being unrealistically low.
+- **Updated proposal Capital + Timeline section** with the realistic Tier 2 budget (Rs.70-90L) breakdown across:
+  - Build + setup: Rs.25-38L (entity, FSSAI, inventory, brand identity, packaging, photography, tech stack, logistics, insurance, legal)
+  - Marketing 12-month runway: Rs.25-40L (performance ads, influencer, PR, content)
+  - Founder/team runway: Rs.13-20L (lean team of 2-3 + working capital)
+- **Updated Math Comparison table** to reflect realistic capital across all 3 launch options:
+  - All 3 Day 1: Rs.95-115L
+  - Edit For Two + Prenatal Day 1 (recommended): Rs.70-90L
+  - Prenatal Only: Rs.40-50L
+- **Pitch deck already aligned** at Rs.75-90L (Tier 2 ask). Now proposal matches.
+- Regenerated [[THE_EDIT_PROPOSAL_INDIA]] PDF + DOCX.
+- Domain: prenatal
+
 ## [2026-04-17] decision | Brand manifesto locked + Entity reversal (LMC umbrella → own Pvt Ltd)
 - **Brand manifesto LOCKED:** [[prenatal-brand-manifesto]] — "The wellness brand India was missing." Aishu selected the "missing brand" framing (Version 12 reworked) with couples-inclusive, gender-neutral wording and Ayurveda reframed as "different tradition" (not legally risky).
 - Earlier "TTC is a team job" manifesto ([[prenatal-brand-manifesto-couples-equality]]) is marked SUPERSEDED — still true as a supporting value but too narrow as the brand's central idea.

@@ -120,7 +120,7 @@ Three options were considered:
 | | All 3 Day 1 | Edit For Two + Prenatal Day 1 | Prenatal Only |
 |---|---|---|---|
 | Day 1 SKUs | 3 | 3 | 1 |
-| Capital required at launch | Rs.25–30L | Rs.20–25L | Rs.10–12L |
+| Capital required at launch (12-month runway) | Rs.95–115L | **Rs.70–90L** | Rs.40–50L |
 | Build timeline | 20–26 months | 18–20 months | 14 months |
 | Postnatal capital efficiency | Bad | Good | N/A |
 | Full-journey positioning at launch? | Yes | **Yes** | No |
@@ -164,15 +164,49 @@ No Indian brand combines all of: couples-inclusive positioning + premium DTC sub
 
 ## Capital + Timeline
 
+This budget assumes a serious DTC launch with 12 months of marketing runway — the time it realistically takes to find product-market fit in the Indian DTC wellness category. A leaner alternative (Rs.40–50L) is possible but trades launch quality and growth velocity for capital efficiency.
+
+### Build + setup
+
 | Item | Estimate |
 |---|---|
 | Entity incorporation (Pvt Ltd + CA + compliance setup) | Rs.0.5–1L |
+| FSSAI consultant + regulatory filings (FSDU + Health Supplement) | Rs.3–4L |
+| Stability studies + per-batch lab testing (heavy metals, microbiological) | Rs.1–2L |
 | Day 1 inventory (3 SKUs × MOQs) | Rs.12–15L |
-| FSSAI consultant + regulatory filings (new license) | Rs.3–4L |
-| Brand identity, packaging design, website | Rs.4–6L |
-| Initial marketing (3 months runway) | Rs.3–5L |
-| Working capital + buffer | Rs.2–3L |
-| **Total launch capital** | **Rs.25–30L** |
+| Brand identity, packaging design, website (Shopify) | Rs.4–6L |
+| Brand photography + content production (lifestyle shoot, video) | Rs.2–4L |
+| Tech stack setup (Shopify + Klaviyo + Recharge + analytics + payment) | Rs.1–2L |
+| Logistics setup (3PL warehouse, shipping aggregator, packaging materials) | Rs.0.5–2L |
+| Insurance (product liability + business cover) | Rs.0.5–1L |
+| Legal beyond regulatory (trademark filing, contracts, ToS, privacy policy) | Rs.0.5–1.5L |
+| **Build + setup subtotal** | **Rs.25–38L** |
+
+### Marketing — 12 months runway (the realistic ask)
+
+DTC supplement launches in India require sustained marketing investment to find product-market fit. Underspending here is the most common reason DTC brands fail to scale.
+
+| Marketing channel | 12-month estimate |
+|---|---|
+| Performance marketing (Meta + Google ads) | Rs.15–20L |
+| Influencer collaborations (mom-creators, wellness influencers, gynaecologists with social presence) | Rs.5–10L |
+| PR + launch event + media relations | Rs.2–5L |
+| Content + creative production (ad creative, social, monthly campaigns) | Rs.3–5L |
+| **Marketing subtotal (12 months)** | **Rs.25–40L** |
+
+### Founder + team runway
+
+| Item | Estimate |
+|---|---|
+| Founder + initial team runway (12 months, lean team of 2–3) | Rs.10–15L |
+| Working capital + contingency buffer | Rs.3–5L |
+| **People + buffer subtotal** | **Rs.13–20L** |
+
+### Total
+
+| | Total |
+|---|---|
+| **Total launch capital (12-month runway, Day 1 → first scaling milestone)** | **Rs.70–90L** |
 
 **Build timeline:** 18–20 months from project start to Day 1 launch.
 **Year 1 post-launch:** add Edit Postnatal at Month 9–12. Add fertility add-ons at Month 12–18 if the brand is ready.
