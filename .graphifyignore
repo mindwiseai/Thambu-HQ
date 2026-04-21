@@ -1,0 +1,49 @@
+# Binary/large files (already in .gitignore but belt-and-suspenders)
+*.pdf
+*.pptx
+*.docx
+*.xlsx
+*.mp4
+*.mov
+*.zip
+*.rar
+*.ai
+*.psd
+*.SLDPRT
+*.dxf
+*.dwg
+*.asc
+*.dng
+*.heic
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.ttf
+*.otf
+*.woff
+*.woff2
+
+# Heavy folders
+node_modules/
+.git/
+.obsidian/
+.claude/
+vendor/
+Conspit/
+Conspit /
+CAN Bus/
+ASC captures/
+old_website_assets/
+unpacked*/
+Old creatives/
+SimHub/
+generated_imgs/
+
+# Raw staging (already cataloged into wiki)
+raw/
+
+# Build artifacts
+graphify-out/
