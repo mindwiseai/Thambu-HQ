@@ -9,6 +9,16 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-04-23] ingest | 3D-printing capex decision + accessories catalogue brief + Online Instruments pivot
+- Source: [[2026-04-23-3d-printing-capex-decision]]
+- Raw file: `racesims/technical/3d-printing/accessories-catalogue-brief.md`
+- Created: 4 pages — [[2026-04-23-3d-printing-capex-decision]] (source), [[online-instruments]] (entity), [[in-house-3d-printing]] (concept), [[racesims-accessory-catalogue]] (concept)
+- Updated: [[domains/racesims/_index]], [[hot]], this log
+- Capex recommendation: Bambu Lab X1 Carbon Combo + accessories, **~₹1,55,000**. Payback ~3 mo steady / ~6 mo with ramp, Year 1 ROI ~320%.
+- 10-SKU catalogue plan across 3 two-week sprints — phone holder, cup holder, profile caps, logo badge, LED channel, Hue holder, [[conspit]] 310 Apex branded side plates, bass-shaker enclosure, wind-sim fan housing, custom shift knob.
+- Also logged the [[online-instruments]] pivot: client dropped the custom-enclosure design, wants a Mahindra Thar Roxx cut in half as the simulator shell. Transport spec PDF shipped to client (`racesims/technical/partners/Online Instruments/Online_Instruments_Transport_Spec.pdf`).
+- Domain: racesims
+
 ## [2026-04-14] cleanup | Lint follow-through (all issues from 2026-04-14 lint report addressed)
 - Triggered by: [[meta/lint-2026-04-14]]
 - **Critical fixes (both complete):**
