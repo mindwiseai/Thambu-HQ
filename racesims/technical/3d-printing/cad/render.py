@@ -27,6 +27,8 @@ VIEWS = {
     "front": (20, 90),   # camera at +Y, tilted down 20° so the pocket/ring cavity is readable
     "side":  (5, 0),     # camera at +X, looking toward -X (side profile)
     "iso":   (25, 55),   # 3/4 isometric from the +X / +Y / +Z octant
+    "logo":  (5, 15),    # camera near +X, slight offset — reveals the +X face where
+                         # curved branding / side details tend to sit
 }
 
 
