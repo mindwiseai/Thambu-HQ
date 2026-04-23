@@ -125,3 +125,10 @@ racesims/**/*.pdf
 racesims/**/*.png
 racesims/**/*.jpg
 racesims/**/*.jpeg
+
+# Track the 3D-printing CAD outputs (authored here, small enough to version):
+# STEP/STL/GLB for printable parts + render PNGs for review.
+!racesims/technical/3d-printing/cad/**/*.step
+!racesims/technical/3d-printing/cad/**/*.stl
+!racesims/technical/3d-printing/cad/**/*.glb
+!racesims/technical/3d-printing/cad/**/*.png
