@@ -132,3 +132,8 @@ racesims/**/*.jpeg
 !racesims/technical/3d-printing/cad/**/*.stl
 !racesims/technical/3d-printing/cad/**/*.glb
 !racesims/technical/3d-printing/cad/**/*.png
+
+# Graphify intermediate/cache files (only graph.html, graph.json, GRAPH_REPORT.md, manifest.json tracked)
+graphify-out/.graphify_*
+graphify-out/cache/
+graphify-out/obsidian-vault/
