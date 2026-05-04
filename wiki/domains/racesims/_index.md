@@ -30,6 +30,7 @@ India's pro-grade sim-racing hardware company. Domain: racesims.in. Founder/owne
 - [[simgrid]] — community racing platform (VRH has team page, we don't)
 
 ## Products & pricing
+- [[racesims-catalogue]] — **the catalogue.** All RaceSims products in race-engineer build-flow order + 4 preconfigured bundle tiers. Read this first for any sales conversation.
 - [[gt-pro-rig]] — flagship GT rig product, BOM from ARKA quote
 - [[kit-pricing]] — 4 tiers: Rally (~Rs.2.5L), Formula (~Rs.4-5L), Formula Cockpit (~Rs.5-6L), Motion (~Rs.11L+)
 - [[racesims-accessory-catalogue]] — 13-SKU 3D-printed branded accessories, launching across 4 two-week sprints

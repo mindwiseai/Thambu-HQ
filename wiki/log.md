@@ -9,6 +9,18 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-04] catalogue | Full RaceSims catalogue created with preconfigured bundles
+- Source: [[racesims-catalogue]]
+- Created: 1 page — [[racesims-catalogue]] (concept, full product line + 4 preconfigured kit bundles)
+- Updated: [[domains/racesims/_index]], [[hot]], this log
+- **Coverage:** all RaceSims products organised in race-engineer build-flow order — controls → cockpit & seat → display & compute → audio + haptics → 3D-printed accessories → preconfigured bundles
+- **Bundles:** Tier 1 Rally (~₹2.5L), Tier 2 Formula (~₹4-5L), Tier 3 Formula Cockpit (~₹5-6L), Tier 4 Formula Cockpit with Motion (~₹11L+) — each with full BOM + target customer profile
+- **Add-ons section:** audio upgrades, haptics upgrades, wind sim, Hue lighting, branded accessories — works with any tier
+- **Sample customer journeys:** four illustrative profiles showing how the catalogue applies to typical customer types (newcomer, regional racer, F1-shifter, esports/commercial)
+- Pricing discipline: every price marked `[verify]` where not directly verified against pricelist
+- Cross-links: [[kit-pricing]], [[gt-pro-rig]], [[racesims-audio-tiers]], [[racesims-accessory-catalogue]], [[arka-motorsports]], [[online-instruments]], [[araya-airport]]
+- Domain: racesims
+
 ## [2026-05-04] decision | Audio tiers locked (mid + high-end + haptics) — full sales-spec reference
 - Source: [[racesims-audio-tiers]]
 - Created: 1 page — [[racesims-audio-tiers]] (concept, full sales reference for both audio tiers)

@@ -8,7 +8,17 @@ updated: 2026-05-04
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-04 (latest) — RaceSims audio tiers locked (sales reference)
+## 2026-05-04 (latest) — RaceSims full catalogue created with preconfigured bundles
+
+- **Full catalogue page**: [[racesims-catalogue]] — covers every RaceSims product in race-engineer build-flow order
+- **Structure:** controls → cockpit & seat → display & compute → audio + haptics → 3D-printed accessories → preconfigured bundles
+- **4 preconfigured tiers:** Rally (~₹2.5L) → Formula (~₹4-5L) → Formula Cockpit (~₹5-6L) → Formula Cockpit Motion (~₹11L+)
+- **Add-ons section** works across all tiers (audio upgrades, haptics upgrades, wind sim, Hue lighting, branded accessories)
+- **Sample customer journeys** (newcomer, regional racer, F1-shifter, esports) illustrate how catalogue applies in practice
+- All prices marked `[verify]` where not directly verified against pricelist — every quote requires fresh verification
+- Pulls from [[kit-pricing]] (source spreadsheet) + [[gt-pro-rig]] (BOM detail) + [[racesims-audio-tiers]] + [[racesims-accessory-catalogue]]
+
+## 2026-05-04 — RaceSims audio tiers locked (sales reference)
 
 - **Full sales-spec reference page**: [[racesims-audio-tiers]] — covers mid + high-end + haptics
 - **Mid tier**: Logitech Z906 5.1 + Creative AE-5+ + Razer Black Shark V2 Hyperspeed Wireless = ~₹70-80k speakers/HP/sound-card. Audited on clean-slate PC; AE-5+ retained because (a) many AM5 motherboards lack optical out, (b) SBX Pro Studio adds sim-racing surround value
