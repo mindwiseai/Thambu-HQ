@@ -69,6 +69,21 @@ Organized into three two-week sprints. Sprint 1 proves the workflow with simple 
 | 9 | **Wind simulator fan housing + duct adapter** (mounts 140mm PC fan + aims airflow at driver face/chest; optional dual-fan) | Advanced sim builders | 18 | PETG + ABS for motor zone | 8 hr | ₹400 | ₹1,499 (single) / ₹2,499 (dual) | ₹1,099 / ₹2,099 |
 | 10 | **Custom shift knob** (3 shapes × 3 colours × TPU grip option) | Formula/GT enthusiasts | 14 + 4/variant | ASA + TPU grip | 2 hr | ₹350 | ₹2,499 | ₹2,149 |
 
+### Sprint 4 — Audio tier mounts (weeks 7–8)
+
+**Goal:** purpose-designed mounts for the locked audio system specs (mid tier Z906 stays on customer's existing Amazon brackets; high-end tier Sonos system + standard-tier Dayton BTS-1 haptics get RaceSims-designed mounts). These ship as part of the audio tier installation when customers order through RaceSims, and are sold standalone for retrofit. Ties directly into the [audio tier reference](../../wiki/concepts/racesims-audio-tiers.md) sales spec.
+
+| # | Product | Buyer | CAD hrs | Material | Print time | Unit COGS | Sell | Margin |
+|---|---|---|---|---|---|---|---|---|
+| 11 | **Dayton BTS-1 mount kit** (2 brackets: 1 under-seat + 1 under-pedal-tray; bolts to rig profile or seat slider rail) — bundles with locked haptics tier | Mid + high-end customers ordering haptics | 12 | PA-CF for load + structural; or PETG for cost variant | 6 hr / pair | ₹350 (PETG) / ₹650 (PA-CF) | ₹999 (PETG) / ₹1,499 (PA-CF) | ₹649 / ₹849 |
+| 12 | **Sonos Era 100 rig mount** (1/4"-20 thread interface to Era 100 base + 4040 T-slot adapter + ±30° swivel for angle to driver; sold per mount, customer buys 2 for stereo rears) | High-end speaker tier customers | 14 | PA-CF (load-bearing — Era 100 is 4.4 kg) | 3 hr | ₹450 | ₹1,499 | ₹1,049 |
+| 13 | **Universal soundbar shelf** (L-bracket hanging under monitor; cradle inserts swap for Sonos Beam Gen 2 / Sonos Arc Ultra / Samsung HW-Q990F; supports up to 8 kg) | High-end speaker tier customers | 16 | PA-CF + ASA cradle inserts | 8 hr | ₹650 | ₹2,499 | ₹1,849 |
+
+**Sprint 4 strategic value:**
+- Each high-end audio tier sale (~₹2L sound + ~₹17k haptics = ~₹2.17L customer spend) **also** generates ₹4-6k in mount-SKU revenue when the customer adds the matching mounts (most will).
+- Locked spec ([[racesims-audio-tiers]]) drives consistent mount SKU demand — every high-end customer needs SKUs 11+12+13.
+- Mid-tier customers using existing Z906 + their own Amazon mounts don't buy 12/13 but do buy 11 (BTS-1 haptics).
+
 ## Design principles (the race-engineer voice in hardware)
 
 Every product listing on racesims.in should answer: *"Why would a race engineer bother making this?"* If the answer is weak, either the product is wrong or the copy is wrong.

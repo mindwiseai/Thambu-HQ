@@ -2,14 +2,14 @@
 title: RaceSims Accessory Catalogue (3D-Printed)
 type: concept
 domain: racesims
-updated: 2026-04-23
+updated: 2026-05-04
 ---
 
 # RaceSims Accessory Catalogue (3D-Printed)
 
-10-SKU product line sold via racesims.in, produced in-house on the [[in-house-3d-printing|Bambu Lab X1 Carbon]] at Chennai. Positions RaceSims as the only Indian sim-racing brand with a race-engineer-voice hardware catalogue (not just reseller merchandise). Source: [[2026-04-23-3d-printing-capex-decision]].
+13-SKU product line sold via racesims.in, produced in-house on the [[in-house-3d-printing|Bambu Lab X1 Carbon]] at Chennai. Positions RaceSims as the only Indian sim-racing brand with a race-engineer-voice hardware catalogue (not just reseller merchandise). Source: [[2026-04-23-3d-printing-capex-decision]] + [[racesims-audio-tiers]] (May 2026 audio mounts addition).
 
-## The 10 SKUs (sprint-ordered)
+## The 13 SKUs (sprint-ordered)
 
 ### Sprint 1 — Catalogue basics (weeks 1–2)
 | # | SKU | Material | Sell (₹) | Margin (₹) |
@@ -33,6 +33,16 @@ updated: 2026-04-23
 | 9 | Wind-simulator fan housing + duct adapter (single/dual) | PETG + ABS | 1,499 / 2,499 | 1,099 / 2,099 |
 | 10 | Custom shift knob (3 shapes × 3 colours × TPU grip option) | ASA + TPU | 2,499 | 2,149 |
 
+### Sprint 4 — Audio tier mounts (weeks 7–8) — *added 2026-05-04*
+
+Tied directly to the [[racesims-audio-tiers]] locked spec. Every high-end audio tier customer adds 1× SKU 13 (soundbar shelf) + 2× SKU 12 (Era 100 mounts). Mid + high-end customers ordering haptics add SKU 11 (BTS-1 mount kit).
+
+| # | SKU | Material | Sell (₹) | Margin (₹) |
+|---|---|---|---|---|
+| 11 | Dayton BTS-1 mount kit (under-seat + under-pedal-tray brackets) | PETG (₹999) or PA-CF (₹1,499) | 999 / 1,499 | 649 / 849 |
+| 12 | Sonos Era 100 rig mount (per mount; sold in pairs to high-end customers) | PA-CF — load-bearing for 4.4 kg Era 100 | 1,499 | 1,049 |
+| 13 | Universal soundbar shelf (cradle inserts for Sonos Beam, Arc Ultra, Samsung HW-Q990F) | PA-CF + ASA inserts | 2,499 | 1,849 |
+
 ## Positioning
 
 Each product listing on racesims.in answers: *"Why would a race engineer bother making this?"* — per [[race-engineer-positioning]]. Separates RaceSims from generic Thingiverse-STL resellers.
@@ -50,7 +60,8 @@ Each product listing on racesims.in answers: *"Why would a race engineer bother 
 | 1–2 | Sprint 1 CAD + workflow shakedown. Beta-ship to 5 existing customers free. |
 | 3–4 | Sprint 2 CAD + Sprint 1 live on racesims.in. First paid orders. |
 | 5–6 | Sprint 3 CAD + Sprint 2 live. Begin B2B custom pipeline ([[online-instruments]] pilot). |
-| 7–8 | Full catalogue live. Start Phase-2 catalogue (wheel adapters, pedal extenders, cross-brand service parts). |
+| 7–8 | Sprint 4 CAD (audio mounts) + Sprint 3 live. Sprint 4 ships alongside the [[racesims-audio-tiers|audio tier]] spec for new high-end customers. |
+| 9–10 | Full 13-SKU catalogue live. Start Phase-2 catalogue (wheel adapters, pedal extenders, cross-brand service parts). |
 
 ## Content plan per SKU
 

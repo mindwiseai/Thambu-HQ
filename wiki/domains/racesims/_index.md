@@ -32,8 +32,9 @@ India's pro-grade sim-racing hardware company. Domain: racesims.in. Founder/owne
 ## Products & pricing
 - [[gt-pro-rig]] — flagship GT rig product, BOM from ARKA quote
 - [[kit-pricing]] — 4 tiers: Rally (~Rs.2.5L), Formula (~Rs.4-5L), Formula Cockpit (~Rs.5-6L), Motion (~Rs.11L+)
-- [[racesims-accessory-catalogue]] — 10-SKU 3D-printed branded accessories, launching across 3 two-week sprints
+- [[racesims-accessory-catalogue]] — 13-SKU 3D-printed branded accessories, launching across 4 two-week sprints
 - [[in-house-3d-printing]] — Bambu Lab X1 Carbon capability (Chennai), materials + quality protocol + economics
+- [[racesims-audio-tiers]] — locked sales-spec reference for mid + high-end audio tiers + standard haptics
 
 ## Brand partnerships & suppliers
 - [[conspit]] — primary supplier (7+ imports), premium pedals/wheelbases/wheels. VRH is controlled reseller.

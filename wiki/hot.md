@@ -1,14 +1,24 @@
 ---
 title: Hot Cache
 type: meta
-updated: 2026-04-23
+updated: 2026-05-04
 ---
 
 # Hot Cache
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-04-23 (latest) — RaceSims: 3D-printing capex decision + Online Instruments pivot
+## 2026-05-04 (latest) — RaceSims audio tiers locked (sales reference)
+
+- **Full sales-spec reference page**: [[racesims-audio-tiers]] — covers mid + high-end + haptics
+- **Mid tier**: Logitech Z906 5.1 + Creative AE-5+ + Razer Black Shark V2 Hyperspeed Wireless = ~₹70-80k speakers/HP/sound-card. Audited on clean-slate PC; AE-5+ retained because (a) many AM5 motherboards lack optical out, (b) SBX Pro Studio adds sim-racing surround value
+- **High-end tier**: Sonos Beam Gen 2 + Sub Mini + 2× Era 100 (default ~₹1,45k) OR Samsung HW-Q990F (alternative ~₹1,40-1,70k) + Audeze Maxwell (~₹40k) + **no sound card** (motherboard audio handles edge cases) + 5-port gigabit switch (₹2k for shared Ethernet to PC + Sonos). Arc Ultra + Sub Gen 3 path +₹60k for multi-purpose rooms
+- **Haptics tier (standard, applies to both)**: 2× Dayton BTS-1 + Nobsound 2-ch USB DAC + custom mounts = ~₹17k. Independent USB signal chain — SimHub Shake-It targets it directly, no conflict with sound tier
+- **Custom mount SKUs added to [[racesims-accessory-catalogue]]** (Sprint 4): SKU 11 (BTS-1 mount kit ₹999/₹1,499), SKU 12 (Sonos Era 100 rig mount ₹1,499), SKU 13 (universal soundbar shelf ₹2,499). Each high-end sale → ~₹5,500 in mount-SKU revenue
+- **PC build verified compatible**: Gigabyte B850 Gaming X / MSI Pro X870-P + 9800X3D or 9700X (both have RDNA 2 iGPU) + RTX 5070 Ti (3× DP + 1× HDMI 2.1 with eARC for Atmos to Sonos). 4-monitor case handled by motherboard HDMI from iGPU
+- **Decision history captured** in [[racesims-audio-tiers]] iteration trail for future reference
+
+## 2026-04-23 — RaceSims: 3D-printing capex decision + Online Instruments pivot
 
 - **Capex recommendation locked:** Bambu Lab X1 Carbon Combo + ancillaries, **~₹1,55,000**. Enclosed chamber + CoreXY + AMS. Rationale + ROI in [[2026-04-23-3d-printing-capex-decision]].
 - **Payback:** ~3 mo steady state, ~6 mo with realistic ramp. Year 1 ROI ~320% on 70 units/mo mixed portfolio.
@@ -17,11 +27,9 @@ Most recently touched context. Read this first for any query — it often answer
 - **[[online-instruments]] pivot:** client rejected the custom-enclosure design in [[2026-04-23-3d-printing-capex-decision|the original deck]]. Wants a Mahindra Thar Roxx cut in half as the simulator shell, delivered assembled, no on-site reassembly. [[thambu]] raised building-access concern.
 - **Transport spec PDF shipped:** `racesims/technical/partners/Online Instruments/Online_Instruments_Transport_Spec.pdf` — unit dims (2.9 × 1.9 × 2.2 m, ~1,200 kg), full clearances, mandatory service lift spec, install room requirements. Client to confirm their building measurements before dispatch.
 
-## 2026-04-19 — Prenatal: realistic launch budget locked at Rs.70-90L (Tier 2)
+## 2026-04-19 — Prenatal: launch budget locked at Rs.70-90L (Tier 2)
 
-- Aishu pushed back on the under-budgeted proposal. Rebuilt Capital + Timeline with Tier 2 figures: Build Rs.25-38L + Marketing Rs.25-40L + Runway Rs.13-20L = **Rs.70-90L total**.
-- Math Comparison table updated across all launch options (All-3 Rs.95-115L / Edit For Two + Prenatal Rs.70-90L recommended / Prenatal Only Rs.40-50L).
-- Proposal PDF + DOCX regenerated; now aligned with pitch deck.
+- Build Rs.25-38L + Marketing Rs.25-40L + Runway Rs.13-20L = **Rs.70-90L**. Math Comparison table updated. Proposal aligned with pitch deck.
 
 ## 2026-04-17 — Prenatal: manifesto lock + entity reversal + fundraising next
 
@@ -30,13 +38,11 @@ Most recently touched context. Read this first for any query — it often answer
 - **Cost + timeline:** Rs.25-30L launch capital, 18-20 month build.
 - **Next topic:** fundraising strategy (F&F vs angel vs seed, valuation, cap table with eventual gyno co-founder, Indian wellness investor list, timing). Captured for next session.
 
-## 2026-04-14 — Major prenatal pivot: The Edit = couples reproductive wellness brand
+## 2026-04-14 — Major prenatal pivot + lint pass
 
-- **Brand manifesto LOCKED** (see [[prenatal-brand-manifesto]] for latest lock): Edit is India's first couples reproductive wellness brand — not a prenatal-only brand.
-- **Launch architecture LOCKED** — [[prenatal-launch-architecture-scenario-d|Scenario D]]: Day 1 = Edit Couples Bundle + Edit Prenatal (3 SKUs); Month 9–12 = Edit Postnatal added.
-- **Manufacturer pivot:** [[tanishq-lifecare|Tanishq]] selected over [[brukem-life-care|Brukem]] for organic-cert positioning fit. Two regulatory flags: therapeutic claim on Boranutri, and no DHA in current formulation.
-- **LMC umbrella reversal** (2026-04-17): Edit will incorporate as its own Pvt Ltd to protect [[lumen-marketing-company|LMC]] from cross-liability.
-- **Lint pass completed** (2026-04-14): 197 pages, strong health, all issues fixed. FSSAI dosage resolved to "two capsules a day, after breakfast"; LMC pincode 600083 (600085 is typo).
+- Edit is India's first couples reproductive wellness brand (not prenatal-only). [[prenatal-launch-architecture-scenario-d|Scenario D]] launch: Couples Bundle + Prenatal Day 1, Postnatal Month 9–12.
+- Manufacturer: [[tanishq-lifecare|Tanishq]] over [[brukem-life-care|Brukem]] (organic-cert fit). Flags: therapeutic claim on Boranutri, no DHA in current formulation.
+- Lint pass: 197 pages, strong health. FSSAI dosage = "two capsules a day, after breakfast"; LMC pincode 600083.
 
 ## Current state of the businesses
 

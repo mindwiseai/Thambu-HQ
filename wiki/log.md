@@ -9,6 +9,17 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-04] decision | Audio tiers locked (mid + high-end + haptics) — full sales-spec reference
+- Source: [[racesims-audio-tiers]]
+- Created: 1 page — [[racesims-audio-tiers]] (concept, full sales reference for both audio tiers)
+- Updated: [[racesims-accessory-catalogue]] (added Sprint 4 with SKUs 11 + 12 + 13 = audio tier mount brackets); `racesims/technical/3d-printing/accessories-catalogue-brief.md` (corresponding canonical doc update); [[hot]]; [[domains/racesims/_index]]; this log
+- **Mid tier locked:** Logitech Z906 + Creative AE-5+ + Razer Black Shark V2 Hyperspeed Wireless = ~₹70-80k. AE-5+ rationale shifted from "previous mobo had no optical" to "current AM5 boards often lack optical + SBX adds sim-racing value"
+- **High-end tier locked:** Sonos Beam Gen 2 + Sub Mini + 2× Era 100 (default) OR Samsung HW-Q990F (alternative) + Audeze Maxwell + motherboard audio (no sound card) + 5-port gigabit switch = ~₹1,90k. Arc Ultra + Sub Gen 3 +₹60k for multi-purpose rooms.
+- **Haptics tier locked (standard, applies to both):** 2× Dayton BTS-1 + Nobsound 2-ch USB DAC + custom mounts = ~₹17k
+- **Custom mount SKUs added to 3D-printing catalogue** (Sprint 4): BTS-1 mount kit, Sonos Era 100 rig mount, universal soundbar shelf — each high-end audio tier sale generates ₹4-6k in mount-SKU revenue
+- **PC build context verified:** 9700X / 9800X3D both have RDNA 2 iGPU (verified from AMD product spec); RTX 5070 Ti has HDMI 2.1 + eARC for Atmos to Sonos; 4-monitor case handled by motherboard HDMI from CPU iGPU
+- Domain: racesims
+
 ## [2026-04-23] ingest | 3D-printing capex decision + accessories catalogue brief + Online Instruments pivot
 - Source: [[2026-04-23-3d-printing-capex-decision]]
 - Raw file: `racesims/technical/3d-printing/accessories-catalogue-brief.md`
