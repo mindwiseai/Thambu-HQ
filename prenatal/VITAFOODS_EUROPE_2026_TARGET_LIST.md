@@ -44,6 +44,19 @@ These companies make the *exact* ingredients The Edit's formulation depends on. 
 | 13 | **Glanbia Nutritionals** | (verify) | Ireland | Protein ingredients (often used in prenatal protein blends) + bioactives | Protein for postnatal lactation support formulation? |
 | 14 | **BENEO** | (verify) | Germany | Functional carbohydrates, prebiotics (chicory inulin) — gut health for prenatal | Prebiotic options for prenatal? Iron-bisglycinate alternatives? |
 | 15 | **Capsugel / Lonza** | (verify) | (DE/CH) | Capsule technology + Vcaps Plus (vegetarian) | Pull-through tier pricing for your launch volume |
+| 16 | **Lallemand Health Solutions** ⭐ | (verify) | Canada/France | **Prenatis™** — clinically studied probiotic for maternal health + infant microbiome through breastfeeding. **Direct prenatal/postnatal application** | Prenatis™ ingredient supply? India distribution? Evidence base + clinical study data? Hero ingredient potential for Edit Postnatal SKU |
+| 17 | **Jinkang Pharma** | (verify) | China | **Magnafolate® L-methylfolate** — pregnancy + infant-grade purity. Alternative to Quatrefolic | Pricing comparison vs Quatrefolic? India distribution? Pregnancy/infant-grade certs? MOQ? |
+
+### India Pavilion — must-walk Indian booths (Day 1 afternoon)
+
+| # | Company | Booth | Country | Why critical | What to ask |
+|---|---|---|---|---|---|
+| 18 | **Arjuna Natural** | India Pavilion | India | Kerala-based — turmeric extracts, BCM-95 curcumin, ashwagandha. Perennial Vitafoods exhibitor | India-to-India supply chain? Women's health botanicals? KSM-66 alternatives? |
+| 19 | **Akay (Synthite Industries)** | India Pavilion | India | Major Indian extract manufacturer — botanical extracts, oleoresins | Premium ingredient capability? Prenatal-grade specifications? |
+| 20 | **Vidya Herbs** | India Pavilion | India | Bangalore-based herbal extracts | Women's health portfolio? Ashwagandha + shatavari sourcing? |
+| 21 | **Natural Remedies** | India Pavilion | India | Bangalore-based Ayurvedic/herbal extracts | Women's health botanicals? Ayurvedic ingredients with modern clinical backing? |
+| 22 | **Nutra Specialities** | India Pavilion | India | Hyderabad-based botanical actives | Premium ingredient offerings for prenatal? India supply chain? |
+| 23 | **Olive Lifesciences** | India Pavilion | India | Bangalore-based natural ingredients | Women's health portfolio? Quality certifications? |
 
 ---
 
