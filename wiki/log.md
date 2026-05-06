@@ -9,6 +9,26 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-04] update | RaceSims catalogue refreshed with verified racesims.in pricing — Moza removed, VNM pedals/shifter/handbrake added, Simagic added
+- Source: live racesims.in store via WebFetch (homepage + collections/cockpits + collections/racing-simulator-display + collections/all)
+- Updated: [[racesims-catalogue]], [[kit-pricing]], [[domains/racesims/_index]]
+- **Removed:** all Moza products (per Thambu — RaceSims is not carrying Moza for now). Moza R9 V2 wheelbase removed from lineup; Moza references removed from supplier list, brand list, and connections.
+- **Added (verified from racesims.in):**
+  - Wheelbases: [[simagic-distributor|Simagic]] Alpha Mini (₹64,999), Alpha (₹80,000), Alpha U (₹99,000); [[vnm]] Direct Drive Supreme 25Nm (₹1,15,000)
+  - Wheels: [[simagic-distributor|Simagic]] GT NEO (₹40,000), [[vnm]] GT Steering Wheel V1 (₹59,999), [[conspit]] 310 APEX (₹39,999)
+  - Pedals: [[vnm]] Lite Pedal (from ₹42,000) — per Thambu's request
+  - Shifters/handbrakes: [[vnm]] Sequential/H-Pattern Shifter (₹35,000), [[vnm]] 1.5 Rally Handbrake (₹35,000) — per Thambu's request
+  - Cockpits: [[conspit]] FP-Lite Formula Style (₹1,15,000), FC Formula (₹8,55,000), FC PRO (₹10,50,000), **FC PRO MOTION (₹24,95,000 — flagship)**
+  - Monitor stands: 4 RaceSims-built variants (₹8k–30,500)
+  - Seats: 4 RaceSims-built (Premium Recliner ₹29,500, Sport Recliner ₹36,500, Pro Fixed Back ₹39,500, Pro X-Large ₹45,500)
+  - Monitors: full Gigabyte lineup (GS32QC, G34WQC, GS27F, CO49DQ ₹1,34,500 OLED)
+  - Motion: VNM 3DOF Motion Kit (₹6,00,000)
+  - Accessories: Mouse Tray, PC Stand, HD Castors, Handbrake/Shifter Mount, Keyboard Tray (₹500–7,500)
+  - Conspit pre-priced bundles: Apex Bundle ₹1,27,500 + 8 wheelbase+QR+wheel combos
+- **Updated pricing on existing items:** Conspit Ares Apex 8Nm (was wiki ₹69,950 → racesims.in ₹49,999), 290GP (was ₹79,950 → ₹69,500), MAX-01 (was ₹84,950 → ₹76,500), CDR QR (was ₹7,500 → ₹6,500), 300GT (was ₹53,950 → ₹49,999), CCP Lite/EVO V2 grouped under "from" pricing
+- **New Tier 4b** added: Conspit FC PRO MOTION turnkey path (~₹35L+) alongside the existing VNM Motion on RaceSims cockpit path (~₹14-15L)
+- Domain: racesims
+
 ## [2026-05-04] catalogue | Full RaceSims catalogue created with preconfigured bundles
 - Source: [[racesims-catalogue]]
 - Created: 1 page — [[racesims-catalogue]] (concept, full product line + 4 preconfigured kit bundles)

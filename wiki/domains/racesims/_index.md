@@ -38,10 +38,9 @@ India's pro-grade sim-racing hardware company. Domain: racesims.in. Founder/owne
 - [[racesims-audio-tiers]] — locked sales-spec reference for mid + high-end audio tiers + standard haptics
 
 ## Brand partnerships & suppliers
-- [[conspit]] — primary supplier (7+ imports), premium pedals/wheelbases/wheels. VRH is controlled reseller.
-- [[vnm]] — primary supplier (Vietnam), motion/DD/cockpits/pedals. Active orders.
-- [[moza]] — entry-level wheelbase/wheel brand
-- [[simagic-distributor]] — **South India exclusive** distributor (contract May 2025 - May 2026)
+- [[conspit]] — primary supplier (7+ imports), premium pedals/wheelbases/wheels/cockpits. VRH is controlled reseller.
+- [[vnm]] — primary supplier (Vietnam), motion/DD/pedals/shifter/handbrake. Active orders.
+- [[simagic-distributor]] — **South India exclusive** distributor (contract May 2025 - May 2026). Wheelbases (Alpha Mini / Alpha / Alpha U) + GT Neo wheel.
 - [[asetek]] — premium reseller (Invicta/Forte/La Prima lines)
 - [[techxhub]] — retail partner for Fanatec + Playseat
 - Sim-Lab — parts supplier (Netherlands, wholesale quantities)

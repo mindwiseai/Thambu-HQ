@@ -8,7 +8,22 @@ updated: 2026-05-04
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-04 (latest) — RaceSims full catalogue created with preconfigured bundles
+## 2026-05-04 (latest) — Catalogue refreshed with verified racesims.in pricing — Moza out, Simagic + VNM expanded
+
+- **Pulled live data from [racesims.in](https://www.racesims.in) homepage + cockpits + monitors + all-products collections** to verify and refresh [[racesims-catalogue]] + [[kit-pricing]]
+- **Removed all Moza products** (per Thambu — RaceSims not carrying Moza for now). Removed from wheelbase lineup, supplier list, brand list, connections
+- **Added VNM pedals, shifter, handbrake** (per Thambu): VNM Lite Pedal (₹42,000+), VNM Sequential/H-Pattern Shifter (₹35,000), VNM 1.5 Rally Handbrake (₹35,000)
+- **Added Simagic ecosystem** (was missing): Alpha Mini ₹64,999, Alpha ₹80,000, Alpha U ₹99,000 wheelbases + Simagic GT NEO ₹40,000 wheel
+- **Added VNM Direct Drive Supreme 25Nm** (₹1,15,000) — was missing from the lineup
+- **Added full Conspit cockpit lineup**: FP-Lite Formula Style ₹1,15,000, FC Formula ₹8,55,000, FC PRO ₹10,50,000, **FC PRO MOTION ₹24,95,000** (flagship)
+- **Added monitor stands lineup** (4 RaceSims-built variants) and **seats lineup** (4 RaceSims-built variants) with verified prices
+- **Added Gigabyte monitor lineup** with verified prices (GS32QC, G34WQC, GS27F, CO49DQ OLED)
+- **Added Conspit pre-priced bundles** — Apex Bundle ₹1,27,500 + 8 wheelbase+QR+wheel combos
+- **Added VNM 3DOF Motion Kit** explicit pricing (₹6,00,000)
+- **Updated existing prices** to match racesims.in (Ares Apex 8Nm now ₹49,999, 290GP ₹69,500, MAX-01 ₹76,500, etc.)
+- **New Tier 4b** added — Conspit FC PRO MOTION turnkey path at ~₹35L+ alongside existing VNM Motion path at ~₹14-15L
+
+## 2026-05-04 — RaceSims full catalogue created with preconfigured bundles
 
 - **Full catalogue page**: [[racesims-catalogue]] — covers every RaceSims product in race-engineer build-flow order
 - **Structure:** controls → cockpit & seat → display & compute → audio + haptics → 3D-printed accessories → preconfigured bundles

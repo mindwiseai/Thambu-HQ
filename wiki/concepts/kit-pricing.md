@@ -24,43 +24,111 @@ Full cockpit enclosure with formula seating position, triple screens, premium [[
 ### Tier 4: Formula Cockpit with Motion (~Rs.11L+)
 Top-tier: adds [[vnm]] 3DOF motion platform (4x actuators) to the Formula Cockpit. Targets professional drivers, racing academies, and B2B clients like [[araya-airport]].
 
-## Component pricing (MRP in INR, from pricelists)
+## Component pricing (MRP in INR — verified from [racesims.in](https://www.racesims.in) live store, May 2026)
 
 ### Wheelbases
 | Product | MRP |
 |---------|-----|
-| [[conspit]] Ares 10Nm | ~69,950 |
-| [[conspit]] Ares Platinum 18Nm | ~87,950 |
-| [[vnm]] DD Premier 13Nm | ~48,000 (est.) |
-| [[vnm]] DD Elite 18Nm | ~61,000 (est.) |
-| [[vnm]] DD Xtreme 32Nm | ~1,06,000 (est.) |
-| [[moza]] R9 V2 | ~36,229 (landed) |
+| [[conspit]] Ares Apex 8Nm CDR QR | 49,999 |
+| [[conspit]] Ares 12Nm CDR QR | 59,999 |
+| [[simagic-distributor|Simagic]] Alpha Mini (10Nm) | 64,999 |
+| [[vnm]] Direct Drive Premier 13Nm | 75,000 |
+| [[simagic-distributor|Simagic]] Alpha (15Nm) | 80,000 |
+| [[conspit]] Ares Platinum 20Nm CDR QR | 85,000 |
+| [[vnm]] Direct Drive Elite 18Nm | 95,000 |
+| [[simagic-distributor|Simagic]] Alpha U (23Nm) | 99,000 |
+| [[vnm]] Direct Drive Supreme 25Nm | 1,15,000 |
+| [[vnm]] Direct Drive Xtreme 32Nm | 1,40,000 |
+
+> *Moza wheelbases removed from the lineup as of May 2026 — RaceSims is not carrying Moza for now. Note: previous versions of this page listed Moza R9 V2 ~₹36,229 landed cost; this is no longer offered.*
 
 ### Steering wheels
 | Product | MRP |
 |---------|-----|
-| [[conspit]] Round rim | ~7,500 |
-| [[conspit]] 300GT | ~53,950 |
-| [[conspit]] H.AO Hub w/ rim | ~57,950 |
-| [[conspit]] 290GP | ~79,950 |
-| [[conspit]] MAX01 | ~84,950 |
-| [[conspit]] PW1 Formula | ~2,10,000 |
+| [[conspit]] CDR Quick Release | 6,500 |
+| [[conspit]] 310 APEX | 39,999 |
+| [[simagic-distributor|Simagic]] GT NEO | 40,000 |
+| [[conspit]] 300GT | 49,999 |
+| [[conspit]] H.O.A Hub | 59,500 |
+| [[vnm]] GT Steering Wheel V1 | 59,999 |
+| [[conspit]] 290GP | 69,500 |
+| [[conspit]] MAX-01 | 76,500 |
+| [[conspit]] PW-1 | 2,10,000 |
 
 ### Pedals
+| Product | MRP (from) |
+|---------|-----|
+| [[conspit]] CPP Apex | 33,000 |
+| [[vnm]] Lite Pedal | 42,000 |
+| [[conspit]] CPP Lite | 59,999 |
+| [[conspit]] CPP EVO V2 | 79,999 |
+
+### Shifters & handbrakes
 | Product | MRP |
 |---------|-----|
-| [[conspit]] CCP Lite-2 | ~61,500 |
-| [[conspit]] CCP Lite-3 | ~74,550 |
-| [[conspit]] CCP EVO-2 | ~85,500 |
-| [[conspit]] CCP EVO-3 | ~96,500 |
+| [[vnm]] Sequential / H-Pattern Shifter | 35,000 |
+| [[vnm]] 1.5 Rally Handbrake | 35,000 |
+| [[conspit]] H3 Hydraulic Handbrake | 35,500 |
 
-### Bundles (Conspit)
+### Cockpits
+| Product | MRP |
+|---------|-----|
+| RaceSims GT Sim Cockpit | 38,500 |
+| [[conspit]] FP-Lite Formula Style | 1,15,000 |
+| [[conspit]] FC Formula | 8,55,000 |
+| [[conspit]] FC PRO Formula | 10,50,000 |
+| [[conspit]] FC PRO MOTION Formula | 24,95,000 |
+
+### Monitor stands (RaceSims-built)
+| Product | MRP |
+|---------|-----|
+| Integrated single screen stand | 8,000 |
+| Standalone single screen stand | 12,000 |
+| Standalone triple screen stand | 20,500 |
+| Standalone triple screen stand with precision alignment mount | 30,500 |
+
+### Seats (RaceSims-built)
+| Product | MRP |
+|---------|-----|
+| RaceSims Premium Recliner | 29,500 |
+| RaceSims Sport Recliner | 36,500 |
+| RaceSims Pro Fixed Back Bucket | 39,500 |
+| RaceSims Pro X-Large Fixed Back | 45,500 |
+
+### Monitors
+| Product | MRP |
+|---------|-----|
+| Gigabyte GS32QC 32" 165Hz 1440p Curved | 20,500 single / 61,500 triple |
+| Gigabyte G34WQC 34" Widescreen 2K Curved | 34,500 |
+| Gigabyte GS27F 27" 165Hz 1080p Flat | 37,500 (triple) |
+| Gigabyte CO49DQ 49" Ultra Widescreen 144Hz OLED Curved | 1,34,500 |
+
+### Motion
+| Product | MRP |
+|---------|-----|
+| [[vnm]] 3DOF Motion Kit (4 linear actuators) | 6,00,000 |
+
+### Other RaceSims-built accessories
+| Product | MRP |
+|---------|-----|
+| Mouse Tray | 500 |
+| Integrated PC Stand | 5,000 |
+| HD Castor Wheels | 5,000 |
+| Handbrake / Shifter Mount | 4,000 |
+| Keyboard Tray | 7,500 |
+
+### Conspit pre-priced bundles (controls)
 | Bundle | MRP |
 |--------|-----|
-| Ares 10Nm + H.AO Hub + QR + rim | ~1,19,950 |
-| Ares 10Nm + QR + 300GT | ~1,22,500 |
-| Ares 18Nm + QR + 290GP | ~1,61,500 |
-| Ares 18Nm + QR + MAX01 | ~1,65,000 |
+| Conspit Apex Bundle (Ares Apex 8Nm + CPP Apex 2-pedal + 310 wheelrim) | 1,27,500 |
+| Ares 12Nm + QR + 300GT | 1,15,500 |
+| Ares 12Nm + QR + 290GP | 1,35,000 |
+| Ares 12Nm + QR + MAX-01 | 1,42,000 |
+| Ares 12Nm + QR + H.O.A Hub | 1,25,000 |
+| Ares Platinum 20Nm + QR + 300GT | 1,40,500 |
+| Ares Platinum 20Nm + QR + 290GP | 1,60,000 |
+| Ares Platinum 20Nm + QR + MAX-01 | 1,67,000 |
+| Ares Platinum 20Nm + QR + H.O.A Hub | 1,51,000 |
 
 ## Margin structure
 
@@ -71,11 +139,13 @@ See [[import-operations]] for the full landed-cost-to-MRP chain. Summary:
 
 ## Connections
 
+- [[racesims-catalogue]] — full catalogue with race-engineer build flow + 4 preconfigured tiers
 - [[gt-pro-rig]] — the rig at the center of each kit
 - [[conspit]] — primary peripherals
-- [[vnm]] — motion and direct-drive options
-- [[moza]] — entry-level option
+- [[vnm]] — motion and direct-drive + entry pedals + shifter + handbrake
+- [[simagic-distributor]] — Simagic Alpha Mini / Alpha / Alpha U + GT Neo wheel (South India exclusive)
 - [[import-operations]] — cost structure
 - [[araya-airport]] — B2B pricing variant
 - [[customer-pipeline]] — who's been quoted at each tier
-- [[2026-04-13-racesims-raw-dump]] — source
+- [[2026-04-13-racesims-raw-dump]] — source spreadsheet
+- [racesims.in](https://www.racesims.in) — live store / pricing source (verified May 2026)
