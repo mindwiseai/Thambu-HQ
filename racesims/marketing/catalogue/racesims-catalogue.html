@@ -620,6 +620,133 @@
       content: counter(page);
     }
   }
+
+  /* ===== Photo + image utilities ===== */
+  img {
+    image-orientation: from-image;
+    -webkit-user-drag: none;
+  }
+
+  /* Cover hero image overlay */
+  .cover-hero-img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.35;
+    filter: grayscale(15%) contrast(1.1);
+    pointer-events: none;
+  }
+  .cover-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(180deg,
+      rgba(15,15,16,0.95) 0%,
+      rgba(15,15,16,0.65) 35%,
+      rgba(15,15,16,0.4) 60%,
+      rgba(42,15,18,0.9) 100%);
+    pointer-events: none;
+  }
+  .cover-logo {
+    height: 14mm;
+    width: auto;
+    margin-bottom: 4mm;
+    display: block;
+  }
+
+  /* Component thumbnails in tables */
+  .thumb {
+    width: 16mm;
+    height: 16mm;
+    object-fit: contain;
+    background: #f8f8f8;
+    border: 1px solid var(--rule);
+    border-radius: 1mm;
+    display: block;
+    flex-shrink: 0;
+  }
+  td.thumb-cell {
+    width: 18mm;
+    padding: 1.5mm;
+    vertical-align: middle;
+  }
+
+  /* Preset card hero image */
+  .preset-card .preset-img {
+    width: 100%;
+    height: 32mm;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 4mm;
+    border-radius: 1mm;
+    background: #fafafa;
+    display: block;
+  }
+  .preset-card.is-default .preset-img {
+    height: 36mm;
+  }
+
+  /* Section banner image */
+  .section-banner {
+    width: 100%;
+    height: 50mm;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 0 8mm;
+    border-radius: 1mm;
+    display: block;
+  }
+
+  /* Inline product image (figure-style) */
+  .product-figure {
+    text-align: center;
+    margin: 6mm 0;
+    page-break-inside: avoid;
+  }
+  .product-figure img {
+    max-width: 100%;
+    max-height: 80mm;
+    margin: 0 auto;
+    display: block;
+    background: #f8f8f8;
+  }
+  .product-figure .caption {
+    font-size: 8.5pt;
+    color: var(--text-muted);
+    margin-top: 2mm;
+    font-style: italic;
+  }
+
+  /* Two-column product showcase */
+  .showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5mm;
+    margin: 4mm 0 5mm;
+    align-items: center;
+    page-break-inside: avoid;
+  }
+  .showcase img {
+    width: 100%;
+    height: 60mm;
+    object-fit: cover;
+    background: #f8f8f8;
+  }
+  .showcase-text h3 { margin-top: 0; }
+  .showcase-text p { font-size: 9.5pt; }
+
+  /* Back cover logo */
+  .back-cover-logo {
+    height: 18mm;
+    width: auto;
+    margin: 0 auto 6mm;
+    display: block;
+    filter: brightness(0) invert(1);
+  }
 </style>
 </head>
 <body>
@@ -628,12 +755,15 @@
      COVER
      =========================================================== -->
 <section class="cover">
-  <div>
-    <div class="cover-brand">RACE<span class="red">·</span>SIMS</div>
+  <img class="cover-hero-img" src="optimized-images/cover-hero.jpg" alt="">
+  <div class="cover-overlay"></div>
+
+  <div style="position: relative; z-index: 1;">
+    <img class="cover-logo" src="optimized-images/logo.png" alt="RaceSims" style="filter: brightness(0) invert(1);">
     <div class="cover-meta">India · Pro-grade sim racing hardware</div>
   </div>
 
-  <div class="cover-title-block">
+  <div class="cover-title-block" style="position: relative; z-index: 1;">
     <h1>
       Catalogue
       <span class="accent">2026</span>
@@ -649,7 +779,7 @@
     </p>
   </div>
 
-  <div class="cover-footer">
+  <div class="cover-footer" style="position: relative; z-index: 1;">
     <span>racesims.in</span>
     <span>Issued · May 2026</span>
   </div>
@@ -714,6 +844,7 @@
   <div class="preset-grid">
     <!-- STARTER -->
     <div class="preset-card">
+      <img class="preset-img" src="optimized-images/ares-apex-bundle.jpg" alt="Conspit Apex Bundle">
       <div class="title">Starter</div>
       <div class="price">₹5,65,498</div>
       <div class="profile">New to sim racing. Single screen. Learning the inputs. Real hardware, not a Logitech G29.</div>
@@ -732,6 +863,7 @@
 
     <!-- SIM (default) -->
     <div class="preset-card is-default">
+      <img class="preset-img" src="optimized-images/IMG_8007.jpg" alt="RaceSims GT Sim Cockpit">
       <div class="title">Sim</div>
       <div class="price">₹6,50,998</div>
       <div class="profile">Serious league racer. Triple screen. The volume customer &mdash; what most people get.</div>
@@ -750,6 +882,7 @@
 
     <!-- PRO -->
     <div class="preset-card">
+      <img class="preset-img" src="optimized-images/max01-hero.jpg" alt="Conspit MAX-01">
       <div class="title">Pro</div>
       <div class="price">₹17,03,999</div>
       <div class="profile">Pro / academy / commercial. Motion-equipped. Premium components. The flagship.</div>
@@ -779,21 +912,23 @@
 <section class="section-break">
   <h2><span class="num">01</span>Controls</h2>
 
+  <img class="section-banner" src="optimized-images/ares-apex-bundle.jpg" alt="Conspit Apex bundle — wheelbase, wheel, pedals">
+
   <h3>Direct-drive wheelbases</h3>
   <p>The wheelbase generates force feedback. RaceSims stocks two brand families: <strong>Conspit</strong> (primary distributor &mdash; entry through premium) and <strong>VNM</strong> (mid through pro, plus the motion ecosystem).</p>
 
   <table>
     <thead>
-      <tr><th>Wheelbase</th><th>Torque</th><th class="price">MRP (INR)</th></tr>
+      <tr><th></th><th>Wheelbase</th><th>Torque</th><th class="price">MRP (INR)</th></tr>
     </thead>
     <tbody>
-      <tr><td><strong>Conspit Ares Apex 8Nm CDR QR</strong></td><td>8 Nm</td><td class="price">49,999</td></tr>
-      <tr class="row-highlight"><td><strong>Conspit Ares 12Nm CDR QR</strong> &nbsp;<span class="label">Sim default</span></td><td>12 Nm</td><td class="price">59,999</td></tr>
-      <tr><td>VNM Direct Drive Premier 13Nm</td><td>13 Nm</td><td class="price">75,000</td></tr>
-      <tr><td>Conspit Ares Platinum 20Nm CDR QR</td><td>20 Nm</td><td class="price">85,000</td></tr>
-      <tr><td>VNM Direct Drive Elite 18Nm</td><td>18 Nm</td><td class="price">95,000</td></tr>
-      <tr class="row-highlight"><td><strong>VNM Direct Drive Supreme 25Nm</strong> &nbsp;<span class="label">Pro default</span></td><td>25 Nm</td><td class="price">1,15,000</td></tr>
-      <tr><td>VNM Direct Drive Xtreme 32Nm</td><td>32 Nm</td><td class="price">1,40,000</td></tr>
+      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/wb-apex8.jpg" alt=""></td><td><strong>Conspit Ares Apex 8Nm CDR QR</strong></td><td>8 Nm</td><td class="price">49,999</td></tr>
+      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/wb-12nm.jpg" alt=""></td><td><strong>Conspit Ares 12Nm CDR QR</strong> &nbsp;<span class="label">Sim default</span></td><td>12 Nm</td><td class="price">59,999</td></tr>
+      <tr><td class="thumb-cell"></td><td>VNM Direct Drive Premier 13Nm</td><td>13 Nm</td><td class="price">75,000</td></tr>
+      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/wb-platinum.jpg" alt=""></td><td>Conspit Ares Platinum 20Nm CDR QR</td><td>20 Nm</td><td class="price">85,000</td></tr>
+      <tr><td class="thumb-cell"></td><td>VNM Direct Drive Elite 18Nm</td><td>18 Nm</td><td class="price">95,000</td></tr>
+      <tr class="row-highlight"><td class="thumb-cell"></td><td><strong>VNM Direct Drive Supreme 25Nm</strong> &nbsp;<span class="label">Pro default</span></td><td>25 Nm</td><td class="price">1,15,000</td></tr>
+      <tr><td class="thumb-cell"></td><td>VNM Direct Drive Xtreme 32Nm</td><td>32 Nm</td><td class="price">1,40,000</td></tr>
     </tbody>
   </table>
 
@@ -801,17 +936,17 @@
 
   <table>
     <thead>
-      <tr><th>Wheel</th><th>Style</th><th class="price">MRP (INR)</th></tr>
+      <tr><th></th><th>Wheel</th><th>Style</th><th class="price">MRP (INR)</th></tr>
     </thead>
     <tbody>
-      <tr><td>Conspit 310 APEX</td><td>Round rim, beginner-friendly</td><td class="price">39,999</td></tr>
-      <tr class="row-highlight"><td><strong>Conspit 300GT</strong> &nbsp;<span class="label">Sim default</span></td><td>GT / touring</td><td class="price">49,999</td></tr>
-      <tr><td>VNM GT Steering Wheel V1</td><td>GT / touring</td><td class="price">59,999</td></tr>
-      <tr><td>Conspit 290GP</td><td>Formula-influenced GT</td><td class="price">69,500</td></tr>
-      <tr><td>Conspit MAX-01</td><td>Premium GT</td><td class="price">76,500</td></tr>
-      <tr class="row-highlight"><td><strong>Conspit PW-1</strong> &nbsp;<span class="label">Pro default</span></td><td>Pro F1</td><td class="price">2,10,000</td></tr>
-      <tr><td>Conspit H.O.A Hub</td><td>Hub for swappable rims</td><td class="price">59,500</td></tr>
-      <tr><td>Conspit CDR Quick Release</td><td>Tool-free wheel changes</td><td class="price">6,500</td></tr>
+      <tr><td class="thumb-cell"></td><td>Conspit 310 APEX</td><td>Round rim, beginner-friendly</td><td class="price">39,999</td></tr>
+      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/wh-300gt.jpg" alt=""></td><td><strong>Conspit 300GT</strong> &nbsp;<span class="label">Sim default</span></td><td>GT / touring</td><td class="price">49,999</td></tr>
+      <tr><td class="thumb-cell"></td><td>VNM GT Steering Wheel V1</td><td>GT / touring</td><td class="price">59,999</td></tr>
+      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/wh-290gp.jpg" alt=""></td><td>Conspit 290GP</td><td>Formula-influenced GT</td><td class="price">69,500</td></tr>
+      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/wh-max01.jpg" alt=""></td><td>Conspit MAX-01</td><td>Premium GT</td><td class="price">76,500</td></tr>
+      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/wh-pw1.jpg" alt=""></td><td><strong>Conspit PW-1</strong> &nbsp;<span class="label">Pro default</span></td><td>Pro F1</td><td class="price">2,10,000</td></tr>
+      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/wh-hub.jpg" alt=""></td><td>Conspit H.O.A Hub</td><td>Hub for swappable rims</td><td class="price">59,500</td></tr>
+      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/wh-cdr.jpg" alt=""></td><td>Conspit CDR Quick Release</td><td>Tool-free wheel changes</td><td class="price">6,500</td></tr>
     </tbody>
   </table>
 
@@ -820,13 +955,13 @@
 
   <table>
     <thead>
-      <tr><th>Pedal Set</th><th>Channels</th><th class="price">MRP (from)</th></tr>
+      <tr><th></th><th>Pedal Set</th><th>Channels</th><th class="price">MRP (from)</th></tr>
     </thead>
     <tbody>
-      <tr><td>Conspit CPP Apex</td><td>2-pedal</td><td class="price">33,000</td></tr>
-      <tr class="row-highlight"><td><strong>VNM Lite Pedal</strong> &nbsp;<span class="label">Sim default</span></td><td>2-pedal</td><td class="price">42,000</td></tr>
-      <tr><td>Conspit CPP Lite</td><td>2-pedal / 3-pedal upgrade</td><td class="price">59,999</td></tr>
-      <tr class="row-highlight"><td><strong>Conspit CPP EVO V2</strong> &nbsp;<span class="label">Pro default (3-pedal)</span></td><td>2-pedal / 3-pedal +clutch</td><td class="price">79,999</td></tr>
+      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/pd-apex.jpg" alt=""></td><td>Conspit CPP Apex</td><td>2-pedal</td><td class="price">33,000</td></tr>
+      <tr class="row-highlight"><td class="thumb-cell"></td><td><strong>VNM Lite Pedal</strong> &nbsp;<span class="label">Sim default</span></td><td>2-pedal</td><td class="price">42,000</td></tr>
+      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/pd-lite.jpg" alt=""></td><td>Conspit CPP Lite</td><td>2-pedal / 3-pedal upgrade</td><td class="price">59,999</td></tr>
+      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/pd-evo.jpg" alt=""></td><td><strong>Conspit CPP EVO V2</strong> &nbsp;<span class="label">Pro default (3-pedal)</span></td><td>2-pedal / 3-pedal +clutch</td><td class="price">79,999</td></tr>
     </tbody>
   </table>
 
@@ -835,12 +970,12 @@
 
   <table>
     <thead>
-      <tr><th>Component</th><th>Purpose</th><th class="price">MRP (INR)</th></tr>
+      <tr><th></th><th>Component</th><th>Purpose</th><th class="price">MRP (INR)</th></tr>
     </thead>
     <tbody>
-      <tr><td>VNM Sequential / H-Pattern Shifter</td><td>Dual-mode (sequential + H-pattern)</td><td class="price">35,000</td></tr>
-      <tr><td>VNM 1.5 Rally Handbrake</td><td>Mechanical-feel rally handbrake</td><td class="price">35,000</td></tr>
-      <tr><td>Conspit H3 Hydraulic Handbrake</td><td>Hydraulic-feel premium handbrake</td><td class="price">35,500</td></tr>
+      <tr><td class="thumb-cell"></td><td>VNM Sequential / H-Pattern Shifter</td><td>Dual-mode (sequential + H-pattern)</td><td class="price">35,000</td></tr>
+      <tr><td class="thumb-cell"></td><td>VNM 1.5 Rally Handbrake</td><td>Mechanical-feel rally handbrake</td><td class="price">35,000</td></tr>
+      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/hb-h3.jpg" alt=""></td><td>Conspit H3 Hydraulic Handbrake</td><td>Hydraulic-feel premium handbrake</td><td class="price">35,500</td></tr>
     </tbody>
   </table>
 </section>
@@ -851,6 +986,8 @@
      =========================================================== -->
 <section class="section-break">
   <h2><span class="num">02</span>Cockpit & Seating</h2>
+
+  <img class="section-banner" src="optimized-images/IMG_8007.jpg" alt="RaceSims GT Sim Cockpit frame, manufactured in Chennai">
 
   <h3>Cockpit frames</h3>
   <p>RaceSims manufactures the GT Sim Cockpit in Chennai. Aluminium-profile (40&times;40 / 40&times;80 mm extrusion) construction. <strong>Local manufacturing</strong> means quick service, replacements, and customisation no imported rig provides.</p>
@@ -870,13 +1007,13 @@
   <h3>Seats</h3>
   <table>
     <thead>
-      <tr><th>Seat</th><th>Fit / use case</th><th class="price">MRP (INR)</th></tr>
+      <tr><th></th><th>Seat</th><th>Fit / use case</th><th class="price">MRP (INR)</th></tr>
     </thead>
     <tbody>
-      <tr><td>RaceSims Premium Recliner &nbsp;<span class="label muted">Starter default</span></td><td>Standard recliner. Comfortable for long sessions.</td><td class="price">29,500</td></tr>
-      <tr class="row-highlight"><td><strong>RaceSims Sport Recliner</strong> &nbsp;<span class="label">Sim default</span></td><td>Sport-styled recliner with stiffer support.</td><td class="price">36,500</td></tr>
-      <tr><td>RaceSims Pro Fixed Back Bucket</td><td>Stiff, narrow, no recline. Proper GT seat.</td><td class="price">39,500</td></tr>
-      <tr class="row-highlight"><td><strong>RaceSims Pro X-Large Fixed Back</strong> &nbsp;<span class="label">Pro default</span></td><td>Wider profile, fits up to 110+ kg.</td><td class="price">45,500</td></tr>
+      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/st-recliner.jpg" alt=""></td><td>RaceSims Premium Recliner &nbsp;<span class="label muted">Starter default</span></td><td>Standard recliner. Comfortable for long sessions.</td><td class="price">29,500</td></tr>
+      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/st-sport.jpg" alt=""></td><td><strong>RaceSims Sport Recliner</strong> &nbsp;<span class="label">Sim default</span></td><td>Sport-styled recliner with stiffer support.</td><td class="price">36,500</td></tr>
+      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/st-fixed.jpg" alt=""></td><td>RaceSims Pro Fixed Back Bucket</td><td>Stiff, narrow, no recline. Proper GT seat.</td><td class="price">39,500</td></tr>
+      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/st-xl.jpg" alt=""></td><td><strong>RaceSims Pro X-Large Fixed Back</strong> &nbsp;<span class="label">Pro default</span></td><td>Wider profile, fits up to 110+ kg.</td><td class="price">45,500</td></tr>
     </tbody>
   </table>
 
@@ -930,13 +1067,13 @@
 
   <table>
     <thead>
-      <tr><th>Display Config</th><th>Monitor</th><th class="price">MRP (INR)</th></tr>
+      <tr><th></th><th>Display Config</th><th>Monitor</th><th class="price">MRP (INR)</th></tr>
     </thead>
     <tbody>
-      <tr class="row-highlight"><td><strong>Triple 32" 1440p</strong> &nbsp;<span class="label">Sim + Pro default</span></td><td>3 × Gigabyte GS32QC 32" 165 Hz Curved</td><td class="price">61,500 (triple) / 20,500 (single)</td></tr>
-      <tr><td>Triple 27" 1080p (entry triple)</td><td>3 × Gigabyte GS27F 27" 165 Hz Flat</td><td class="price">37,500 (triple)</td></tr>
-      <tr class="row-highlight"><td><strong>Single 34" Ultrawide</strong> &nbsp;<span class="label muted">Starter default</span></td><td>Gigabyte G34WQC 34" 2K Curved</td><td class="price">34,500</td></tr>
-      <tr><td>Single 49" Ultrawide OLED</td><td>Gigabyte CO49DQ 49" 144 Hz OLED Curved</td><td class="price">1,34,500</td></tr>
+      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/mon-gs32qc.jpg" alt=""></td><td><strong>Triple 32" 1440p</strong> &nbsp;<span class="label">Sim + Pro default</span></td><td>3 × Gigabyte GS32QC 32" 165 Hz Curved</td><td class="price">61,500 (triple) / 20,500 (single)</td></tr>
+      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/mon-gs27f.jpg" alt=""></td><td>Triple 27" 1080p (entry triple)</td><td>3 × Gigabyte GS27F 27" 165 Hz Flat</td><td class="price">37,500 (triple)</td></tr>
+      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/mon-g34wqc.jpg" alt=""></td><td><strong>Single 34" Ultrawide</strong> &nbsp;<span class="label muted">Starter default</span></td><td>Gigabyte G34WQC 34" 2K Curved</td><td class="price">34,500</td></tr>
+      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/mon-co49dq.jpg" alt=""></td><td>Single 49" Ultrawide OLED</td><td>Gigabyte CO49DQ 49" 144 Hz OLED Curved</td><td class="price">1,34,500</td></tr>
     </tbody>
   </table>
 
@@ -1348,6 +1485,7 @@
      BACK COVER
      =========================================================== -->
 <section class="back-cover">
+  <img class="back-cover-logo" src="optimized-images/logo.png" alt="RaceSims">
   <h2>Build your sim<br><span class="red">with us.</span></h2>
   <div class="tag">India's pro-grade sim racing hardware company.<br>Race-engineer founder. Championship-winning teams background.</div>
   <div class="contact">
