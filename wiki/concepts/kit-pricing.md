@@ -31,29 +31,27 @@ Top-tier: adds [[vnm]] 3DOF motion platform (4x actuators) to the Formula Cockpi
 |---------|-----|
 | [[conspit]] Ares Apex 8Nm CDR QR | 49,999 |
 | [[conspit]] Ares 12Nm CDR QR | 59,999 |
-| [[simagic-distributor|Simagic]] Alpha Mini (10Nm) | 64,999 |
 | [[vnm]] Direct Drive Premier 13Nm | 75,000 |
-| [[simagic-distributor|Simagic]] Alpha (15Nm) | 80,000 |
 | [[conspit]] Ares Platinum 20Nm CDR QR | 85,000 |
 | [[vnm]] Direct Drive Elite 18Nm | 95,000 |
-| [[simagic-distributor|Simagic]] Alpha U (23Nm) | 99,000 |
 | [[vnm]] Direct Drive Supreme 25Nm | 1,15,000 |
 | [[vnm]] Direct Drive Xtreme 32Nm | 1,40,000 |
 
-> *Moza wheelbases removed from the lineup as of May 2026 — RaceSims is not carrying Moza for now. Note: previous versions of this page listed Moza R9 V2 ~₹36,229 landed cost; this is no longer offered.*
+> *Moza wheelbases removed from the lineup as of May 2026 — RaceSims is not carrying Moza for now (previous versions listed Moza R9 V2 ~₹36,229 landed cost; no longer offered). Simagic wheelbases removed from active recommendation as of May 2026 — though [[simagic-distributor|RaceSims retains the South India exclusive distributor agreement]], we are not actively pushing Simagic in customer quotes (Simagic Alpha Mini ₹64,999 / Alpha ₹80,000 / Alpha U ₹99,000 still available on customer-specific request).*
 
 ### Steering wheels
 | Product | MRP |
 |---------|-----|
 | [[conspit]] CDR Quick Release | 6,500 |
 | [[conspit]] 310 APEX | 39,999 |
-| [[simagic-distributor|Simagic]] GT NEO | 40,000 |
 | [[conspit]] 300GT | 49,999 |
 | [[conspit]] H.O.A Hub | 59,500 |
 | [[vnm]] GT Steering Wheel V1 | 59,999 |
 | [[conspit]] 290GP | 69,500 |
 | [[conspit]] MAX-01 | 76,500 |
 | [[conspit]] PW-1 | 2,10,000 |
+
+> *Simagic GT Neo ₹40,000 also available on customer-specific request — not in active default quote.*
 
 ### Pedals
 | Product | MRP (from) |
@@ -143,7 +141,7 @@ See [[import-operations]] for the full landed-cost-to-MRP chain. Summary:
 - [[gt-pro-rig]] — the rig at the center of each kit
 - [[conspit]] — primary peripherals
 - [[vnm]] — motion and direct-drive + entry pedals + shifter + handbrake
-- [[simagic-distributor]] — Simagic Alpha Mini / Alpha / Alpha U + GT Neo wheel (South India exclusive)
+- [[simagic-distributor]] — Simagic Alpha Mini / Alpha / Alpha U + GT Neo wheel (South India exclusive distributor — retained contractually but **not in active default quotes** as of May 2026)
 - [[import-operations]] — cost structure
 - [[araya-airport]] — B2B pricing variant
 - [[customer-pipeline]] — who's been quoted at each tier

@@ -8,7 +8,21 @@ updated: 2026-05-04
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-04 (latest) — Catalogue refreshed with verified racesims.in pricing — Moza out, Simagic + VNM expanded
+## 2026-05-04 (latest) — Catalogue: Simagic removed from active quotes + bundles fully restructured
+
+- **Simagic removed from active default quotes** (per Thambu, same as Moza). Contractual relationship with Simagic-distributor RETAINED — products available on customer-specific request, but not in active quote line-items
+- **Bundles fully restructured for consistency:**
+  - Each tier now has **ONE default per component** (no "or" choices in locked BOM)
+  - Tier prices are **single numbers**: Tier 1 ₹5,65,498 / Tier 2 ₹6,68,997 / Tier 3 ₹9,43,999 / Tier 4 ₹17,03,999 / Tier 4b ₹35,57,999
+  - At-a-glance comparison table across tiers — clean ladder showing wheelbase/wheel/pedal/seat/cockpit/audio progression
+  - **Cross-tier upgrades** (audio, haptics, wheels, pedals, wheelbase, monitors, cockpits) separated from tier definitions
+  - **Cross-tier add-on packs**: Rally Pack ₹39k, Shifter Pack ₹39k, Premium Handbrake +₹500, Cabin Comfort ₹6k, Office Integration ₹12.5k, Branding Pack ₹4k, Immersion Pack ₹8k
+  - **Tier 1 renamed** from "RALLY SETUP" to "STARTER" — rally is now a cross-tier pack (rally customer needs handbrake which Tier 1 didn't include)
+  - **Tier 4 wheelbase locked** to VNM Supreme 25Nm for VNM-stack ecosystem consistency with the 3DOF motion kit
+- 7 sample customer journeys rebuilt with verified math against new tier + upgrade structure
+- Math verified: every tier total, every cross-tier upgrade delta, every journey total double-checked with Python before commit
+
+## 2026-05-04 — Catalogue refreshed with verified racesims.in pricing — Moza out, Simagic + VNM expanded
 
 - **Pulled live data from [racesims.in](https://www.racesims.in) homepage + cockpits + monitors + all-products collections** to verify and refresh [[racesims-catalogue]] + [[kit-pricing]]
 - **Removed all Moza products** (per Thambu — RaceSims not carrying Moza for now). Removed from wheelbase lineup, supplier list, brand list, connections

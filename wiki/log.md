@@ -9,6 +9,20 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-04] update | Catalogue: Simagic removed from active quotes + bundles restructured for consistency
+- Updated: [[racesims-catalogue]], [[kit-pricing]], [[domains/racesims/_index]], [[hot]]
+- **Simagic removed from active default quotes** (per Thambu — same treatment as Moza). Note: [[simagic-distributor|South India exclusive distributor agreement is RETAINED contractually]], products available on customer-specific request only. Simagic Alpha Mini, Alpha, Alpha U wheelbases + GT NEO wheel pulled from default lineup.
+- **Bundles restructured for consistency** — addressed the inconsistencies the prior bundle structure had:
+  - Every tier now has **ONE default per component** (no more "X or Y" choices in the locked BOM)
+  - Tier price is a **single number** quotable as-is (Tier 1 ₹5,65,498 / Tier 2 ₹6,68,997 / Tier 3 ₹9,43,999 / Tier 4 ₹17,03,999 / Tier 4b ₹35,57,999)
+  - At-a-glance comparison table across all 4 tiers — sales conversation has clear answer to "what's the next tier up?"
+  - Added Cross-tier upgrade matrix (audio, haptics, wheels, pedals, wheelbases, monitors, cockpits) — modifications happen here, not in tier definition
+  - Added Cross-tier add-on packs (Rally Pack ₹39k, Shifter Pack ₹39k, Premium Handbrake +₹500, Cabin Comfort ₹6k, Office Integration ₹12.5k, Branding Pack ₹4k, Immersion Pack ₹8k)
+  - Tier 1 renamed from "RALLY SETUP" to "STARTER" — rally is now a cross-tier pack, not a tier name (rally needs handbrake which Tier 1 didn't include)
+  - Tier 4 wheelbase locked to VNM Supreme 25Nm (was "Conspit Platinum or VNM Xtreme") for VNM-stack consistency with the motion kit
+  - All sample customer journeys rebuilt against new tier + upgrade structure with verified math
+- Domain: racesims
+
 ## [2026-05-04] update | RaceSims catalogue refreshed with verified racesims.in pricing — Moza removed, VNM pedals/shifter/handbrake added, Simagic added
 - Source: live racesims.in store via WebFetch (homepage + collections/cockpits + collections/racing-simulator-display + collections/all)
 - Updated: [[racesims-catalogue]], [[kit-pricing]], [[domains/racesims/_index]]

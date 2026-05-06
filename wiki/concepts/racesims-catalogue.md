@@ -40,7 +40,7 @@ The race-engineer voice in this catalogue: every product entry answers "**why a 
 
 ### Direct-drive wheelbases
 
-The wheelbase generates force feedback. **Direct drive** (motor directly attached to the shaft) is what every serious sim racer eventually buys; gear-driven and belt-driven systems are an outdated path. RaceSims stocks three brand families: **Conspit** (primary distributor), **Simagic** (South India exclusive), **VNM** (motion + DD).
+The wheelbase generates force feedback. **Direct drive** (motor directly attached to the shaft) is what every serious sim racer eventually buys; gear-driven and belt-driven systems are an outdated path. RaceSims stocks two brand families: **Conspit** (primary distributor — entry through premium) and **VNM** (mid through pro, plus the motion ecosystem).
 
 > *Pricing verified against [racesims.in](https://www.racesims.in) — May 2026. Most items showed "Sold out" status at time of capture; treat MRP as current list price, lead time variable.*
 
@@ -48,32 +48,23 @@ The wheelbase generates force feedback. **Direct drive** (motor directly attache
 |---|---|---|---|
 | [[conspit]] Ares Apex 8Nm CDR QR | 8 Nm | **49,999** | Entry into [[conspit]] ecosystem — bundled with CDR Quick Release. 8 Nm is enough FFB headroom for a serious customer learning real inputs without overwhelming a budget rig. **Best entry-tier wheelbase in the lineup.** |
 | [[conspit]] Ares 12Nm CDR QR | 12 Nm | **59,999** | The default mid-tier wheelbase. 12 Nm is the sweet spot for GT-style content — enough torque for proper kerb feel, low enough that a Tier 1 rig doesn't shake apart. Bundled CDR QR. |
-| [[simagic-distributor|Simagic]] Alpha Mini | 10 Nm | **64,999** | Compact form factor. Pick when rig space is constrained or customer is migrating from a wheel-mounted-to-desk setup to a proper rig. RaceSims is **South India exclusive distributor** for Simagic. |
 | [[vnm]] Direct Drive Premier 13Nm | 13 Nm | **75,000** | Step up into the VNM ecosystem — relevant if customer plans to add a [[vnm]] motion platform later (the wheelbase, motion controller, and actuators play together). |
-| [[simagic-distributor|Simagic]] Alpha | 15 Nm | **80,000** | Upper-mid Simagic — meaningful step above the Mini. 15 Nm covers GT and rally with comfortable headroom. |
 | [[conspit]] Ares Platinum 20Nm CDR QR | 20 Nm | **85,000** | Conspit's flagship for the standard product line. Aerospace alloy body, 24/7 commercial-rated. Specced in the [[gt-pro-rig|GT Pro Rig]] and the [[araya-airport|Araya Airport]] commercial build. Bundled CDR QR. |
 | [[vnm]] Direct Drive Elite 18Nm | 18 Nm | **95,000** | VNM's 18 Nm — covers all current sim content (rally + GT + formula). Pick over Ares Platinum 20Nm if customer is going VNM motion path. |
-| [[simagic-distributor|Simagic]] Alpha U | 23 Nm | **99,000** | Upper Simagic. 23 Nm gets into pro-driver torque territory — most customers under-utilise this. |
-| [[vnm]] Direct Drive Supreme 25Nm | 25 Nm | **1,15,000** | Pro-tier VNM. The torque/build/price intersection that suits a serious league racer or coach. |
+| [[vnm]] Direct Drive Supreme 25Nm | 25 Nm | **1,15,000** | Pro-tier VNM. The torque/build/price intersection that suits a serious league racer or coach. **The default wheelbase for the Tier 4 Motion bundle** — VNM-stack consistency with the motion kit. |
 | [[vnm]] Direct Drive Xtreme 32Nm | 32 Nm | **1,40,000** | Flagship pro tier. 32 Nm matches real-car telemetry at extreme cornering loads. Only specced for pro drivers and full-motion rigs — most casual users won't drive a 32 Nm wheel hard enough to justify it. |
 
-*(Moza wheelbases removed from the lineup as of May 2026 — RaceSims is not carrying Moza for now.)*
+*(Moza wheelbases removed from the lineup as of May 2026. Simagic wheelbases removed from active recommendation as of May 2026 — though [[simagic-distributor|RaceSims retains the South India exclusive distributor agreement]], we are not actively pushing Simagic in customer quotes.)*
 
 ### Steering wheels
 
-The wheel is the customer's most-touched component. RaceSims stocks Conspit (the depth of the lineup), Simagic (one entry-tier option), and VNM (one GT option for the VNM ecosystem customer).
+The wheel is the customer's most-touched component. RaceSims stocks Conspit (the depth of the lineup) and VNM (one GT option for the VNM ecosystem customer).
 
-#### Entry GT wheels
+#### Entry & mid-tier wheels
 
 | Wheel | MRP (INR) | Style | Why we stock it |
 |---|---|---|---|
 | [[conspit]] 310 APEX | **39,999** | Round rim, beginner-friendly | Entry wheel for the Ares Apex 8Nm and Ares 12Nm. Real wheel feel, real materials. The right starting point for any serious customer. |
-| [[simagic-distributor|Simagic]] GT Neo | **40,000** | GT/touring | Simagic's entry GT wheel — the natural pairing for the Alpha Mini wheelbase. |
-
-#### Mid-tier GT wheels
-
-| Wheel | MRP (INR) | Style | Why we stock it |
-|---|---|---|---|
 | [[conspit]] 300GT | **49,999** | GT/touring | The default GT wheel. Carbon-fibre construction, integrated digital display, premium tactile buttons. Hits the spot for any IRL touring/GT3 driver. |
 | [[vnm]] GT Steering Wheel V1 | **59,999** | GT/touring | VNM's GT wheel — pick when customer is on the VNM wheelbase ecosystem and wants brand-matched paddles + buttons. |
 | [[conspit]] 290GP | **69,500** | Formula-influenced GT | Mid-tier formula-style wheel. F1/F2-style flat-front grip, paddle shifters, button cluster. Bridges the gap between GT and formula content. |
@@ -83,7 +74,7 @@ The wheel is the customer's most-touched component. RaceSims stocks Conspit (the
 | Wheel | MRP (INR) | Style | Why we stock it |
 |---|---|---|---|
 | [[conspit]] MAX-01 | **76,500** | Premium GT | Flagship GT wheel. Dual rotary encoders, 12 buttons, OLED telemetry display. Picked by customers who already know their inputs and want the right tool. |
-| [[conspit]] PW-1 | **2,10,000** | Pro F1 | The pro F1 driver's wheel. Magnetic paddles, full button cluster, OLED screen, motorsport-grade switches. Specced for the Formula Cockpit Motion bundle. |
+| [[conspit]] PW-1 | **2,10,000** | Pro F1 | The pro F1 driver's wheel. Magnetic paddles, full button cluster, OLED screen, motorsport-grade switches. Specced for the Tier 4 Motion bundle. |
 
 #### Hubs & quick releases
 
@@ -92,7 +83,7 @@ The wheel is the customer's most-touched component. RaceSims stocks Conspit (the
 | [[conspit]] H.O.A Hub | **59,500** | Hub for swapping wheel rims. Use when customer wants to mount their own / aftermarket rim. |
 | [[conspit]] CDR Quick Release | **6,500** | Tool-free wheel changes. Bundled with most Conspit wheelbase + wheel combos; standard for any build with multiple wheels (GT + formula). |
 
-*(Moza wheels removed from the lineup as of May 2026.)*
+*(Moza wheels removed from the lineup as of May 2026. Simagic wheels removed from active recommendation as of May 2026.)*
 
 ### Pedals
 
@@ -292,177 +283,304 @@ For the customer who already has a rig, seat, and PC and just needs the controls
 
 ### Complete Kit Tiers
 
-Each is a complete sim — controls, cockpit, monitors, PC. Audio + haptics added as customer's choice.
+Four tiers, **each with one default per component** — no "or" choices in the locked BOM. Each tier price is a single number quotable as-is. Customer modifications happen via the [Cross-tier upgrades](#cross-tier-upgrades) and [Cross-tier add-on packs](#cross-tier-add-on-packs) sections after the tier is picked.
 
-### Tier 1 — RALLY SETUP (~₹2.5 L)
+#### At-a-glance comparison
 
-The starter kit. **For customers new to sim racing who want a complete, functional rig that scales.**
+| | **Tier 1 — Starter** | **Tier 2 — GT** | **Tier 3 — Formula** | **Tier 4 — Motion** |
+|---|---|---|---|---|
+| **Customer profile** | New to sim racing, single screen, learning | Serious league GT/circuit racer, triple screen | F1-focused, formula seating angle, premium audio | Pro driver / academy / commercial install |
+| **Wheelbase** | Conspit Ares Apex 8Nm | Conspit Ares 12Nm | Conspit Ares Platinum 20Nm | VNM DD Supreme 25Nm |
+| **Wheel** | Conspit 310 APEX | Conspit 300GT | Conspit 290GP | Conspit PW-1 Formula |
+| **Pedals** | Conspit CPP Apex (2-pedal) | Conspit CPP Lite (2-pedal) | Conspit CPP EVO V2 (3-pedal) | Conspit CPP EVO V2 (3-pedal) |
+| **Cockpit** | RaceSims GT Sim Cockpit | RaceSims GT Sim Cockpit | Conspit FP-Lite Formula | RaceSims GT Sim Cockpit + VNM 3DOF Motion Kit |
+| **Seat** | Premium Recliner | Sport Recliner | Pro Fixed Back Bucket | Pro X-Large Fixed Back |
+| **Monitors** | Gigabyte G34WQC 34" ultrawide | 3× Gigabyte GS32QC | 3× Gigabyte GS32QC | 3× Gigabyte GS32QC |
+| **PC** | Standard build | Standard build | Standard build | Standard build |
+| **Audio** | Mid tier (Z906 + AE-5+ + Razer) | Mid tier (Z906 + AE-5+ + Razer) | High-end Sonos (Beam path) | High-end Sonos (Arc Ultra path) |
+| **Haptics** | Standard tier (Dayton BTS-1) | Standard tier (Dayton BTS-1) | Standard tier (Dayton BTS-1) | Standard tier (Dayton BTS-1) |
+| **Locked total** | **~₹5,65,000** | **~₹6,69,000** | **~₹9,44,000** | **~₹17,04,000** |
+
+Each progression is **deliberate**: the tier above the current tier upgrades the wheelbase one step, the wheel one step, the pedals one step, the seat one step, and (where applicable) the cockpit and audio one step. The customer sees a clear ladder; the salesperson has a clear answer to "what's the next tier up?".
+
+---
+
+### Tier 1 — STARTER (~₹5.65 L locked)
+
+**Customer profile:** new to sim racing, single screen, learning the inputs. Customer wants real hardware, not a Logitech G29, but doesn't need triple-screen yet.
 
 | Component | Pick | MRP (INR) |
 |---|---|---|
 | Wheelbase | Conspit Ares Apex 8Nm CDR QR | 49,999 |
-| Wheel | Conspit 310 Apex | 39,999 |
-| Pedals | Conspit CPP Apex (2-pedal) | from 33,000 |
+| Wheel | Conspit 310 APEX | 39,999 |
+| Pedals | Conspit CPP Apex (2-pedal) | 33,000 |
 | Cockpit | RaceSims GT Sim Cockpit | 38,500 |
-| Single screen stand | Integrated single screen stand | 8,000 |
+| Stand | Integrated Single Screen Stand | 8,000 |
 | Seat | RaceSims Premium Recliner | 29,500 |
-| Monitor | Gigabyte G34WQC 34" ultrawide *or* GS32QC single 32" | 20,500 / 34,500 |
+| Monitor | Gigabyte G34WQC 34" Ultrawide 2K Curved | 34,500 |
 | PC | Standard build (RTX 5070 Ti, 9700X) | ~2,40,000 [verify current build pricing] |
-| Audio | Mid tier (Z906 + AE-5+ + Razer) — see [[racesims-audio-tiers]] | ~75,000 |
+| Audio | Mid tier (see [[racesims-audio-tiers]]) | ~75,000 |
 | Haptics | Standard tier (Dayton BTS-1) | ~17,000 |
-| Accessories | Profile caps + logo badge (bundled free) | bundled |
-| **TOTAL** | | **~₹5,50,000–5,80,000** complete |
+| Accessories | Profile end caps + RaceSims logo badge (bundled free) | 0 |
+| **LOCKED TOTAL** | | **~₹5,65,498** |
 
-**Or as the "Conspit Apex Bundle" + RaceSims rig + PC** = single line-item makes it easier to quote: Conspit Apex Bundle (₹1,27,500) + GT Sim Cockpit (₹38,500) + Single screen stand (₹8,000) + Premium Recliner (₹29,500) + 34" G34WQC (₹34,500) + Standard PC (~₹2,40,000) + Audio mid + Haptics = **~₹5,55,000 complete.**
+**Three-year hardware horizon:** the Conspit Ares Apex 8Nm + CPP Apex carry forward into Tier 2 if customer upgrades the rig later. They don't have to throw away their controls when they upgrade.
 
-**Target customer:** newcomer who's just discovered iRacing or [[ea-wrc|EA WRC]] and wants real hardware, not a Logitech G29. **Three-year hardware horizon** — the controls (Conspit Ares Apex 8Nm + CPP Apex) carry forward into Tier 2 if customer upgrades the rig later.
+---
 
-> *Note: the historical "Tier 1 ~₹2.5L" price referred to controls + cockpit + entry monitor + entry PC, not the full bundle with audio + haptics. With current pricing, a complete Tier 1 build with audio + haptics is closer to ₹5.5L.*
+### Tier 2 — GT (~₹6.69 L locked)
 
-### Tier 2 — FORMULA SETUP (~₹6-7 L)
-
-Triple-screen GT/formula rig. **The default RaceSims build — most customers land here.**
+**Customer profile:** serious sim racer running iRacing / ACC / Le Mans Ultimate on triple screen, likely competing in regional leagues. **The default RaceSims build — most customers land here.**
 
 | Component | Pick | MRP (INR) |
 |---|---|---|
-| Wheelbase | Conspit Ares 12Nm CDR QR *or* Conspit Ares Platinum 20Nm CDR QR (+₹25k) | 59,999 / 85,000 |
-| Wheel | Conspit 300GT *(default)* or 290GP (formula-style, +₹19,501) | 49,999 |
-| Pedals | Conspit CPP Lite *(default)* or CPP EVO V2 (+₹20k) | from 59,999 |
+| Wheelbase | Conspit Ares 12Nm CDR QR | 59,999 |
+| Wheel | Conspit 300GT | 49,999 |
+| Pedals | Conspit CPP Lite (2-pedal) | 59,999 |
 | Cockpit | RaceSims GT Sim Cockpit | 38,500 |
-| Triple screen stand | Standalone Triple Screen Stand with Precision Alignment Mount | 30,500 |
-| Seat | RaceSims Sport Recliner *(default)* or Pro Fixed Back Bucket (+₹3k) | 36,500 |
-| Monitors | 3× Gigabyte GS32QC (triple set) | 61,500 |
+| Stand | Standalone Triple Screen Stand with Precision Alignment Mount | 30,500 |
+| Seat | RaceSims Sport Recliner | 36,500 |
+| Monitors | 3× Gigabyte GS32QC | 61,500 |
 | PC | Standard build (RTX 5070 Ti, 9800X3D) | ~2,40,000 [verify] |
-| Audio | Mid tier (default) *or* high-end Sonos upgrade (+₹1,15,000) | ~75,000 |
-| Haptics | Standard tier (Dayton BTS-1) | ~17,000 |
-| Accessories | Profile caps + logo badge bundled; phone holder + cup holder recommended | bundled + ~₹1,800 |
-| **TOTAL — mid audio variant** | | **~₹6,70,000** complete |
-| **TOTAL — high-end audio variant** | | **~₹7,85,000** complete |
+| Audio | Mid tier | ~75,000 |
+| Haptics | Standard tier | ~17,000 |
+| Accessories | Profile end caps + RaceSims logo badge (bundled free) | 0 |
+| **LOCKED TOTAL** | | **~₹6,68,997** |
 
-**Or as a Conspit pre-bundle + RaceSims build:** Conspit Ares 12Nm + 290GP (₹1,35,000) + CPP Lite (₹59,999) + GT Sim Cockpit + Triple precision stand (₹30,500) + Sport Recliner (₹36,500) + Triple GS32QC (₹61,500) + Standard PC (₹2,40,000) + Audio mid (₹75,000) + Haptics (₹17,000) = **~₹6,93,500.**
+---
 
-**Target customer:** serious sim racer; iRacing / ACC / Le Mans Ultimate customer with a 3-screen setup. **Likely competing in regional leagues.**
+### Tier 3 — FORMULA (~₹9.44 L locked)
 
-### Tier 3 — FORMULA COCKPIT (~₹8-10 L)
-
-Conspit-branded formula cockpit with open-wheel seating angle. **For the customer who only wants formula content — F1, F2, F3, Indy — and wants the seating position to match.**
+**Customer profile:** F1 / F2 / F3 / Indy customer who wants the open-wheel formula seating position to match the real car. Often pursuing real karting or formula-junior racing in parallel.
 
 | Component | Pick | MRP (INR) |
 |---|---|---|
 | Wheelbase | Conspit Ares Platinum 20Nm CDR QR | 85,000 |
-| Wheel | Conspit 290GP *(default)* or PW-1 Formula (+₹1,40,500 for upgrade) | 69,500 |
-| Pedals | Conspit CPP EVO V2 (3-pedal — clutch needed for formula content) | from 95,000 [verify 3-pedal MRP] |
+| Wheel | Conspit 290GP (formula-style) | 69,500 |
+| Pedals | Conspit CPP EVO V2 (3-pedal) | ~95,999 [verify 3-pedal MRP] |
 | Cockpit | **Conspit FP-Lite Formula Style cockpit** | 1,15,000 |
-| Seat | RaceSims Pro X-Large Fixed Back *or* Conspit-supplied seat *(verify if cockpit includes seat)* | 45,500 |
-| Monitors | Triple Gigabyte GS32QC *or* single Gigabyte CO49DQ 49" OLED (+₹73,000) | 61,500 / 1,34,500 |
-| PC | Standard build (9800X3D + RTX 5070 Ti) | ~2,40,000 [verify] |
-| Audio | **High-end Sonos system** strongly recommended | ~1,90,000 |
-| Haptics | Standard tier (Dayton BTS-1) | ~17,000 |
-| Accessories | Full pack — phone, cup, LED, Hue, branded Conspit plates | ~₹4,000 |
-| **TOTAL** | | **~₹9,20,000** complete (with triple GS32QC + high-end audio) |
+| Stand | Standalone Triple Screen Stand with Precision Alignment Mount | 30,500 |
+| Seat | RaceSims Pro Fixed Back Bucket | 39,500 |
+| Monitors | 3× Gigabyte GS32QC | 61,500 |
+| PC | Standard build | ~2,40,000 [verify] |
+| Audio | **High-end Sonos system (Beam path default)** | ~1,90,000 |
+| Haptics | Standard tier | ~17,000 |
+| Accessories | Profile end caps + logo badge bundled | 0 |
+| **LOCKED TOTAL** | | **~₹9,43,999** |
 
-**Target customer:** F1-focused sim racer. Often pursuing real karting or formula-junior racing in parallel — wants the seating position to match the real car.
+**Why this tier defaults to high-end audio:** the customer has paid for formula seating angle, premium pedals, premium wheelbase. Mid-tier audio in this stack would feel like a step backward. High-end Sonos is part of the Tier 3 promise.
 
-### Tier 4 — MOTION COCKPIT (~₹14-30 L+)
+---
 
-The flagship. **For pro drivers, racing academies, and high-end commercial installs.** Two architecturally distinct paths.
+### Tier 4 — MOTION (~₹17.04 L locked)
 
-#### Tier 4a — VNM Motion on RaceSims-built cockpit (~₹14-15 L)
+**Customer profile:** pro driver in real motorsport; racing academy ([[arka-motorsports|ARKA]]-style); commercial install ([[online-instruments|Online Instruments]], [[araya-airport|Araya Airport]]). The flagship standard tier — VNM-stack ecosystem (matched wheelbase + motion).
 
 | Component | Pick | MRP (INR) |
 |---|---|---|
-| Wheelbase | Conspit Ares Platinum 20Nm *or* VNM DD Xtreme 32Nm | 85,000 / 1,40,000 |
+| Wheelbase | VNM Direct Drive Supreme 25Nm | 1,15,000 |
 | Wheel | Conspit PW-1 Formula | 2,10,000 |
-| Pedals | Conspit CPP EVO V2 (3-pedal) | ~95,000 |
+| Pedals | Conspit CPP EVO V2 (3-pedal) | ~95,999 [verify] |
 | Cockpit | RaceSims GT Sim Cockpit (motion-rated mounts) | 38,500 |
 | Motion | **VNM 3DOF Motion Kit (4 actuators)** | **6,00,000** |
-| Triple stand | Precision alignment triple stand | 30,500 |
+| Stand | Standalone Triple Screen Stand with Precision Alignment Mount | 30,500 |
 | Seat | RaceSims Pro X-Large Fixed Back | 45,500 |
-| Monitors | 3× Gigabyte GS32QC *or* Gigabyte CO49DQ 49" OLED | 61,500 / 1,34,500 |
-| PC | Higher-spec build | ~3,00,000 [verify Tier 4 PC variant] |
-| Audio | High-end Sonos (Arc Ultra path recommended) | ~2,50,000 |
-| Haptics | Standard tier (Dayton BTS-1) — or premium Buttkicker (+₹1L) | ~17,000 |
-| Accessories | Full pack | ~₹5,000 |
-| **TOTAL** | | **~₹14,40,000–15,40,000** complete |
+| Monitors | 3× Gigabyte GS32QC | 61,500 |
+| PC | Standard build | ~2,40,000 [verify; can upgrade to higher-spec for +₹60k–80k] |
+| Audio | **High-end Sonos (Arc Ultra path)** — Sub Gen 3 + 2× Era 100 | ~2,50,000 |
+| Haptics | Standard tier (Dayton BTS-1) | ~17,000 |
+| Accessories | Full pack (profile caps, logo badge, phone, cup, LED, Hue) | ~₹4,000 |
+| **LOCKED TOTAL** | | **~₹17,03,999** |
 
-#### Tier 4b — Conspit FC PRO MOTION turnkey (~₹30 L+)
+**Why VNM at Tier 4:** the wheelbase, motion controller, and 3DOF actuators are designed to play together as one VNM system. Cross-brand combinations (e.g., Conspit wheelbase + VNM motion) work but introduce calibration friction. VNM-stack at Tier 4 is the cohesive default.
 
-For customers who want a Conspit-branded turnkey premium formula cockpit with integrated motion (the genuine flagship).
+---
+
+### Tier 4b — Conspit FC PRO MOTION turnkey (~₹35.6 L)
+
+For customers who want Conspit-branded turnkey premium formula motion cockpit (the genuine flagship — single-vendor end-to-end). Quoted on demand, not standardised like Tier 1–4.
 
 | Component | Pick | MRP (INR) |
 |---|---|---|
 | Wheelbase | Conspit Ares Platinum 20Nm CDR QR | 85,000 |
 | Wheel | Conspit PW-1 Formula | 2,10,000 |
-| Pedals | Conspit CPP EVO V2 (3-pedal) | ~95,000 |
-| Cockpit + motion | **Conspit FC PRO MOTION Formula cockpit** (motion built in) | **24,95,000** |
-| Triple stand | Included or separate (verify with Conspit cockpit spec) | included or 30,500 |
-| Monitors | 3× Gigabyte GS32QC *or* premium triple | 61,500 + |
+| Pedals | Conspit CPP EVO V2 (3-pedal) | ~95,999 |
+| **Cockpit + motion** | **Conspit FC PRO MOTION Formula cockpit (motion integrated)** | **24,95,000** |
+| Stand / monitors | Negotiated based on FC PRO MOTION spec — verify what's included | varies |
 | PC | Higher-spec build | ~3,00,000 [verify] |
-| Audio | High-end Sonos (Arc Ultra path recommended) | ~2,50,000 |
-| Haptics | Premium Buttkicker LFE Kit (+₹1L over standard) | ~1,17,000 |
+| Audio | High-end Sonos (Arc Ultra path) | ~2,50,000 |
+| Haptics | Premium Buttkicker LFE Kit | ~1,17,000 |
 | Accessories | Full pack | ~₹5,000 |
-| **TOTAL** | | **~₹35,00,000+** complete |
+| **TOTAL (estimate)** | | **~₹35,57,998** |
 
-**Target customer:** pro driver in real motorsport; racing academy ([[arka-motorsports|ARKA]]-style); commercial install ([[online-instruments|Online Instruments]], [[araya-airport|Araya Airport]]); customer for whom price isn't the variable.
+Replaces both the GT Sim Cockpit (₹38,500) and the VNM 3DOF Motion Kit (₹6,00,000) of Tier 4 with a single integrated Conspit cockpit at ₹24,95,000 — net upgrade vs Tier 4 default is **+₹18,56,500**.
 
-#### Conspit FC and FC PRO non-motion variants
+**Target customer:** customer for whom price isn't the variable; commercial install where brand consistency matters; pro driver/team where the Conspit name is part of the deal.
 
-For the Tier 3+ customer who wants the premium Conspit cockpit feel without the motion premium:
+---
 
-| Cockpit | MRP (INR) | Use case |
+### Cross-tier upgrades
+
+These swap a single component within the locked tier BOM. Apply to any tier where the upgrade makes sense.
+
+#### Audio upgrades
+
+| Upgrade | Applicable tiers | Delta (INR) |
 |---|---|---|
-| Conspit FC Formula | 8,55,000 | Mid-premium formula cockpit. Substantially more rigid than the FP-Lite. |
-| Conspit FC PRO Formula | 10,50,000 | Top-tier non-motion Conspit formula. The Tier 3.5 / Tier 4 alternative when motion isn't on the customer's wishlist. |
+| Mid → High-end Sonos (Beam path) | Tier 1, 2 | +1,15,000 |
+| Mid → High-end Sonos (Arc Ultra multi-purpose path) | Tier 1, 2 | +1,75,000 |
+| High-end Beam → Arc Ultra path | Tier 3 | +60,000 |
+| Any tier → Audiophile (RME ADI-2 + HD 800 S + Neumann KH 120 II) | Tier 3, 4 | +3,60,000 over high-end |
 
-Use these as drop-in cockpit upgrades inside Tier 3 or as standalone premium quotes.
+#### Haptics upgrade
 
-### Add-ons available with any bundle
-
-These don't change the bundle tier but enhance any:
-
-| Add-on | Price (INR) | Recommended for |
+| Upgrade | Applicable tiers | Delta (INR) |
 |---|---|---|
-| High-end audio upgrade (from mid → Sonos default) | +₹1,15,000 | Tier 2 customer who wants premium audio |
-| Multi-purpose audio (Arc Ultra + Sub Gen 3) | +₹60,000 over Sonos default | Customer using rig room for movies/music |
-| Premium haptics (Buttkicker LFE Kit + amp) | +₹1,00,000 over standard | Tier 3 / 4 customer who wants concert-grade body-felt feedback |
-| Wind simulator (single) | +₹3,500 (RaceSims SKU 9 ₹1,499 + 140 mm fan ~₹2k) | Adds airflow that scales with throttle |
-| Wind simulator (dual) | +₹4,500 | Stronger effect — recommended for Tier 3 + 4 |
-| Hue bias lighting | +₹3,500 (Hue bar + RaceSims SKU 6 holder ₹899) | Reduces eye fatigue on long sessions |
-| Conspit 310 Apex branded side plates | +₹1,499 (RaceSims SKU 7) | For customers running the 310 Apex |
-| Custom shift knob | +₹2,499 (RaceSims SKU 10) | Replaces stock knob; 3 shapes × 3 colours × optional TPU grip |
-| VNM Sequential / H-Pattern Shifter | +₹35,000 | Rally + classic GT customers |
-| VNM 1.5 Rally Handbrake | +₹35,000 | Rally customers ([[ea-wrc|EA WRC]], Dirt Rally, RBR) |
-| Conspit H3 Hydraulic Handbrake | +₹35,500 | Premium hydraulic handbrake feel |
-| Handbrake/Shifter Mount (RaceSims) | +₹4,000 | Required mount for handbrake or shifter onto rig profile |
-| HD Castor Wheels under cockpit | +₹5,000 | Wheel rig away when room is needed for non-sim use |
-| Mouse Tray | +₹500 | Between-session mouse storage |
-| Keyboard Tray | +₹7,500 | Between-session keyboard storage |
-| Integrated PC Stand | +₹5,000 | Mounts PC neatly under/beside cockpit |
+| Standard (Dayton BTS-1) → Premium (Buttkicker LFE Kit + amp) | All tiers | +1,00,000 |
+
+#### Wheel upgrades (within tier)
+
+| Upgrade | Applicable tier | Delta (INR) |
+|---|---|---|
+| Tier 2: 300GT → 290GP | Tier 2 | +19,501 |
+| Tier 2: 300GT → MAX-01 | Tier 2 | +26,501 |
+| Tier 3: 290GP → MAX-01 | Tier 3 | +7,000 |
+| Tier 3: 290GP → PW-1 Formula | Tier 3 | +1,40,500 |
+
+#### Pedal upgrade
+
+| Upgrade | Applicable tier | Delta (INR) |
+|---|---|---|
+| Tier 2: CPP Lite (2-pedal) → CPP EVO V2 (3-pedal) | Tier 2 | +35,001 |
+| Tier 3, 4: CPP EVO V2 (2-pedal) → (3-pedal) | Tier 3, 4 | +16,000 [verify exact upcharge] |
+
+#### Wheelbase upgrades (within tier)
+
+| Upgrade | Applicable tier | Delta (INR) |
+|---|---|---|
+| Tier 2: Ares 12Nm → Ares Platinum 20Nm | Tier 2 | +25,001 |
+| Tier 4: VNM Supreme 25Nm → VNM Xtreme 32Nm | Tier 4 | +25,000 |
+
+#### Monitor upgrades
+
+| Upgrade | Applicable tier | Delta (INR) |
+|---|---|---|
+| Tier 1: G34WQC 34" → Triple GS32QC 32" (with Triple Precision Stand) | Tier 1 | +49,500 (–34,500 mon –8,000 stand +61,500 mon +30,500 stand) |
+| Tier 2/3: Triple GS32QC → Single CO49DQ 49" OLED | Tier 2, 3 | +73,000 (–61,500 +1,34,500) |
+| Tier 4: Triple GS32QC → Triple OLED (custom quote) | Tier 4 | TBD |
+
+#### Cockpit upgrades (Tier 3 path)
+
+For Tier 3 customer who wants more rigid premium Conspit cockpit:
+
+| Upgrade | Applicable tier | Delta (INR) |
+|---|---|---|
+| FP-Lite Formula → Conspit FC Formula | Tier 3 | +7,40,000 |
+| FP-Lite Formula → Conspit FC PRO Formula | Tier 3 | +9,35,000 |
+| Tier 4 → Tier 4b (Conspit FC PRO MOTION turnkey) | Tier 4 | +18,56,500 |
+
+---
+
+### Cross-tier add-on packs
+
+These add additional capability or content. Apply to any tier.
+
+#### Rally Pack (+₹39,000)
+For rally content ([[ea-wrc|EA WRC]], Dirt Rally, RBR). Not in any tier by default — rally customers add this on top.
+- VNM 1.5 Rally Handbrake (₹35,000)
+- RaceSims Handbrake/Shifter Mount (₹4,000)
+
+#### Shifter Pack (+₹39,000, or +₹35,000 if Rally Pack also bought — mount shared)
+For classic GT and rally content with H-pattern or sequential shifting.
+- VNM Sequential / H-Pattern Shifter (₹35,000)
+- RaceSims Handbrake/Shifter Mount (₹4,000) — shared with Rally Pack if both bought
+
+#### Premium Handbrake Upgrade (+₹500)
+Swap VNM 1.5 Rally Handbrake for Conspit H3 Hydraulic (most realistic feel; price difference negligible).
+
+#### Cabin Comfort Pack (+₹6,000)
+For long-session customers.
+- HD Castor Wheels (₹5,000)
+- Mouse Tray (₹500)
+- Cup holder (3D-printed SKU 2, ₹799) — minor rounding to ₹6,000
+
+#### Office Integration Pack (+₹12,500)
+For customers using the rig room for non-sim work (WFH).
+- Keyboard Tray (₹7,500)
+- Integrated PC Stand (₹5,000)
+
+#### Branding Pack (+₹4,000)
+Race-engineer voice in physical hardware — RaceSims-printed accessories.
+- Phone holder (RaceSims 3D SKU 1, ₹999)
+- Cup holder (RaceSims 3D SKU 2, ₹799)
+- Conspit 310 Apex branded side plates (RaceSims 3D SKU 7, ₹1,499) — only for customers running 310 APEX wheel
+- Custom shift knob (RaceSims 3D SKU 10, ₹2,499) — only if customer runs Conspit wheel with replaceable knob
+- Pricing assumes Tier 1–2 customer (310 APEX is default Tier 1 wheel only)
+
+#### Immersion Pack (+₹8,000)
+Visual + atmospheric immersion add-ons.
+- LED strip channel + diffuser (RaceSims 3D SKU 5, ₹599)
+- Hue Play holder + Philips Hue Play bar (RaceSims 3D SKU 6 ₹899 + Hue ~₹2,500) ≈ ₹3,500
+- Wind simulator dual (RaceSims 3D SKU 9 ₹1,499 × 2 + 2× 140mm fans ~₹2,000) ≈ ₹4,500
 
 ---
 
 ## Sample customer journeys
 
-These show how the catalogue applies to typical customer profiles.
+These show how the catalogue applies to typical customer profiles. **Each one starts at a tier total and adds documented cross-tier upgrades / packs** — no off-catalogue bespoke pricing. The salesperson can quote directly from this template.
 
-### Journey 1 — "I want to start sim racing seriously"
-Tier 1 Rally Setup. Mid-tier audio (Z906). Standard haptics. Add phone + cup holder. **Total ~₹3,40,000.** 3-year hardware horizon — controls upgrade-friendly.
+### Journey 1 — "I want to start sim racing seriously, single screen is fine for now"
+**Tier 1 — Starter as locked.** No upgrades.
+- Tier 1 locked total = **₹5,65,498**
 
-### Journey 2 — "I race iRacing 4 nights a week and am finishing top-10 in regional"
-Tier 2 Formula Setup with Conspit Ares Platinum 18 Nm + CCP EVO-3. High-end audio (Sonos + Maxwell). Standard haptics. Wind sim dual. Hue bias lighting. **Total ~₹6,40,000.**
+3-year hardware horizon — controls (Ares Apex 8Nm + CPP Apex + 310 APEX) carry forward into Tier 2 if customer upgrades the rig later.
 
-### Journey 3 — "I'm shifting from real karting to F1 sim and want pro F1 sim setup"
-Tier 3 Formula Cockpit with Conspit PW1 Formula wheel. High-end audio (Sonos Arc Ultra + Sub Gen 3 multi-purpose). Standard haptics. Full accessory pack. **Total ~₹8,50,000.**
+### Journey 2 — "I race iRacing GT3 in regional leagues, want triple screen + premium audio"
+**Tier 2 — GT** + High-end Sonos audio upgrade + Branding Pack.
+- Tier 2 locked total = ₹6,68,997
+- High-end Sonos (Beam path) upgrade: +₹1,15,000
+- Branding Pack (phone holder + cup holder + 310 APEX plates *— wait, Tier 2 wheel is 300GT, plates not applicable; sub Custom shift knob*): +₹4,800
+- **Total ≈ ₹7,88,797**
 
-### Journey 4 — "I run an esports team / I'm building a content studio"
-Tier 4 Formula Cockpit with Motion. Premium audio. Premium haptics. Custom branded plates. **Total ~₹14,00,000+.** Custom quote — commercial pricing differs from standard MRP.
+### Journey 3 — "I race rally on weekends + circuit weekdays" — Tier 2 + Rally Pack
+**Tier 2 — GT** + Rally Pack + Shifter Pack (mount shared).
+- Tier 2 locked total = ₹6,68,997
+- Rally Pack: +₹39,000
+- Shifter Pack (mount shared): +₹35,000
+- **Total ≈ ₹7,42,997**
+
+### Journey 4 — "Shifting from real karting to F1 sim, want pro formula seating"
+**Tier 3 — Formula as locked** + Custom Shift Knob from Branding Pack.
+- Tier 3 locked total = ₹9,43,999
+- Custom shift knob: +₹2,499
+- **Total ≈ ₹9,46,498**
+
+### Journey 5 — "I want premium without going to motion — Tier 3 with the proper Conspit cockpit"
+**Tier 3 — Formula** + Conspit FC Formula cockpit upgrade.
+- Tier 3 locked total = ₹9,43,999
+- Cockpit upgrade FP-Lite → FC Formula: +₹7,40,000
+- **Total ≈ ₹16,83,999**
+
+### Journey 6 — "I run a racing academy and want the full motion experience"
+**Tier 4 — Motion as locked** + Premium haptics upgrade.
+- Tier 4 locked total = ₹17,03,999
+- Premium haptics (Buttkicker LFE Kit): +₹1,00,000
+- **Total ≈ ₹18,03,999**
+
+### Journey 7 — "Commercial install, brand-conscious, money no object"
+**Tier 4b — Conspit FC PRO MOTION turnkey** + premium haptics + Audiophile audio upgrade.
+- Tier 4b estimate = ~₹35,57,998
+- Audiophile audio upgrade (RME ADI-2 + HD 800 S + Neumann KH 120 II): +₹3,60,000 (over high-end Arc)
+- **Total ≈ ₹39,17,998**
+
+This is also the [[online-instruments|Online Instruments]] / [[araya-airport|Araya Airport]] tier — commercial pricing varies from MRP. Custom quote required.
 
 ---
 
 ## Hard rules / catalogue maintenance
 
 - Every price marked `[verify]` must be confirmed against the live pricelist or supplier quote before customer quote. **Never quote MRPs from this document directly without verification.**
-- Brand names are non-negotiable: **RaceSims** (one word), **Conspit**, **VNM**, **Simagic**, **Sonos**, **Audeze Maxwell**, **Dayton BTS-1**.
+- Brand names are non-negotiable: **RaceSims** (one word), **Conspit**, **VNM**, **Sonos**, **Audeze Maxwell**, **Dayton BTS-1**.
 - Per [[race-engineer-positioning]]: don't produce listing copy that could be written by a generic sim-racing reseller. Every product entry must answer "why a race engineer specs this."
 - This catalogue lives in the wiki as the canonical reference. Customer-facing PDF / web versions are produced from this source — when this changes, downstream collateral changes too.
 - [[customer-pipeline]] tracks who's been quoted at each tier — log every active conversation against a tier so we know what mix is actually selling.
@@ -476,7 +594,7 @@ Tier 4 Formula Cockpit with Motion. Premium audio. Premium haptics. Custom brand
 - [[in-house-3d-printing]] — production capability behind the accessories
 - [[conspit]] — primary peripherals supplier (wheelbases, wheels, pedals, premium cockpits, handbrake)
 - [[vnm]] — primary motion + DD supplier (wheelbases, motion kit, GT wheel, pedals, shifter, handbrake)
-- [[simagic-distributor]] — South India exclusive (wheelbases + GT Neo wheel)
+- [[simagic-distributor]] — South India exclusive distributor (contractual — not in active default quotes as of May 2026, products available on customer-specific request)
 - [[asetek]] — premium reseller line (Invicta, Forte, La Prima — not in default bundles, available on custom quote)
 - [[arka-motorsports]] — partner relationship; ARKA quote QT-000001 is the BOM source for Tier 3
 - [[customer-pipeline]] — who's been quoted at each tier
