@@ -8,7 +8,16 @@ updated: 2026-05-04
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-04 (latest) — Catalogue: Simagic removed from active quotes + bundles fully restructured
+## 2026-05-07 (latest) — Catalogue: Tesla model + VNM Lite default + Conspit cockpits OOP + Commercial section
+
+- **Catalogue model changed from 4-tier to Tesla-style** after Thambu's Apple-vs-Tesla brainstorm. Single default Sim + Quick Start presets (Starter / Sim / Pro) + per-component configurator + cross-tier add-on packs. Default anchors at the middle, downgrades and upgrades visible inline with explicit price deltas.
+- **New Sim default**: ₹6,50,998 (was ₹6,68,997). Pedal default swapped from Conspit CPP Lite to **VNM Lite Pedal** per Thambu — saves customer ₹17,999, makes default more accessible. Configurator shows pedal alternatives inline (+/− deltas to each Conspit option).
+- **Conspit formula cockpits OUT OF PRODUCTION** — Conspit not producing currently. FP-Lite, FC, FC PRO, FC PRO MOTION removed from active catalogue. Pricing retained in [[kit-pricing]] with OOP marker for return. Tier 4b path (FC PRO MOTION turnkey) removed.
+- **Pro preset (~₹17L) now uses VNM 3DOF Motion + GT Sim Cockpit only** as the motion path.
+- **NEW: Commercial / B2B section** added to [[racesims-catalogue]]. Documents existing customers ([[online-instruments]] Thar, [[araya-airport]] airport lounge) + the **enclosed rig in R&D** for commercial environments. ~₹35-50L+ reference order of magnitude. Engagement flow: email Thambu → discovery call → site survey → custom proposal → build/install (4-6 weeks discovery, 8-12 weeks build).
+- 7 sample customer journeys rewritten + math-verified against new Tesla model
+
+## 2026-05-04 — Catalogue: Simagic removed from active quotes + bundles fully restructured
 
 - **Simagic removed from active default quotes** (per Thambu, same as Moza). Contractual relationship with Simagic-distributor RETAINED — products available on customer-specific request, but not in active quote line-items
 - **Bundles fully restructured for consistency:**

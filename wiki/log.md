@@ -9,6 +9,17 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-07] update | Catalogue: Tesla model + VNM Lite default + Conspit cockpits out of production + Commercial section added
+- Updated: [[racesims-catalogue]], [[kit-pricing]]
+- **Catalogue model changed from 4-tier to Tesla-style.** After psychology brainstorm with Thambu (Apple vs Tesla product strategies), landed on Tesla model: ONE default Sim + Quick Start presets (Starter / Sim / Pro) + per-component configurator with explicit price deltas + cross-tier add-on packs.
+- **New Sim default total: ₹6,50,998** (was ₹6,68,997). Pedal default switched from Conspit CPP Lite to **VNM Lite Pedal (₹42,000)** per Thambu — saves customer ₹17,999 + makes default more accessible. Customer can swap up to CPP Lite (+₹17,999), CPP EVO V2 2-pedal (+₹37,999), or CPP EVO V2 3-pedal (+₹53,999) inline in the configurator.
+- **Conspit formula cockpits OUT OF PRODUCTION** (per Thambu — Conspit not producing currently). FP-Lite Formula, FC Formula, FC PRO, FC PRO MOTION removed from active catalogue but **pricing retained in [[kit-pricing]] with OUT OF PRODUCTION marker** — will return when Conspit resumes. Tier 4b path (FC PRO MOTION turnkey) removed from preconfigured bundles.
+- **Pro preset (Tier 4 equivalent) now uses VNM 3DOF Motion + GT Sim Cockpit only** as the motion path. Total still ₹17,03,999.
+- **NEW: Commercial / B2B section** added. Covers existing customers ([[online-instruments]] Thar variant, [[araya-airport]] airport lounge) + the **enclosed rig in R&D** — RaceSims-developed purpose-designed enclosed simulator cabin for commercial environments (corporate showrooms, hospitality, retail experience zones). Status: R&D, available for early-customer development partnerships, ~₹35-50L+ reference order of magnitude. Adjacent path: Mahindra Thar half-cut variant (already shipping per Online Instruments).
+- **Sample customer journeys (7) rewritten** with verified math against new Tesla model. All journey totals double-checked with Python before commit.
+- **Configurator structure documented** per component: each component shows the picked default with inline alternatives + explicit price deltas (upgrades and downgrades visible together), so newcomers see "−₹10,000" entry options without hunting through a separate "budget" section.
+- Domain: racesims
+
 ## [2026-05-04] update | Catalogue: Simagic removed from active quotes + bundles restructured for consistency
 - Updated: [[racesims-catalogue]], [[kit-pricing]], [[domains/racesims/_index]], [[hot]]
 - **Simagic removed from active default quotes** (per Thambu — same treatment as Moza). Note: [[simagic-distributor|South India exclusive distributor agreement is RETAINED contractually]], products available on customer-specific request only. Simagic Alpha Mini, Alpha, Alpha U wheelbases + GT NEO wheel pulled from default lineup.

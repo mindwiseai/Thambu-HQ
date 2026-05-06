@@ -69,13 +69,15 @@ Top-tier: adds [[vnm]] 3DOF motion platform (4x actuators) to the Formula Cockpi
 | [[conspit]] H3 Hydraulic Handbrake | 35,500 |
 
 ### Cockpits
-| Product | MRP |
-|---------|-----|
-| RaceSims GT Sim Cockpit | 38,500 |
-| [[conspit]] FP-Lite Formula Style | 1,15,000 |
-| [[conspit]] FC Formula | 8,55,000 |
-| [[conspit]] FC PRO Formula | 10,50,000 |
-| [[conspit]] FC PRO MOTION Formula | 24,95,000 |
+| Product | MRP | Status |
+|---------|-----|--------|
+| RaceSims GT Sim Cockpit | 38,500 | **Active default** |
+| [[conspit]] FP-Lite Formula Style | 1,15,000 | **OUT OF PRODUCTION (May 2026)** — pricing retained for reference; will resume when Conspit resumes production |
+| [[conspit]] FC Formula | 8,55,000 | **OUT OF PRODUCTION (May 2026)** |
+| [[conspit]] FC PRO Formula | 10,50,000 | **OUT OF PRODUCTION (May 2026)** |
+| [[conspit]] FC PRO MOTION Formula | 24,95,000 | **OUT OF PRODUCTION (May 2026)** |
+
+> *Customers wanting an enclosed-cabin / commercial-grade rig: see [[racesims-catalogue]] Commercial / B2B section — RaceSims is developing an enclosed rig (R&D phase as of May 2026) for commercial customers.*
 
 ### Monitor stands (RaceSims-built)
 | Product | MRP |
