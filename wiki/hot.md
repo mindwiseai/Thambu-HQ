@@ -8,7 +8,14 @@ updated: 2026-05-04
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-07 (latest) — Catalogue: Tesla model + VNM Lite default + Conspit cockpits OOP + Commercial section
+## 2026-05-07 (latest) — RaceSims SEO + GMC final-appeal plan locked + rejection history surfaced
+
+- **GMC rejection history pulled** from `info@racesims.in` forwarded emails. Two prior policy enforcements on account `5496001964`: **Misrepresentation** (ticket `1-4103000038542`, 6 Apr 2025) and **Counterfeit Product** (7 Apr 2025, cleared 7 May 2025). Both now define the defence surface for the upcoming third / final appeal. See [[2026-05-07-gmc-rejection-history]].
+- **Plan written** at `~/.claude/plans/hi-dapper-journal.md` and approved. Three-phase execution: Phase 1 GMC hardening (entity/brand/CIN/sub-plugin/auth claims/contact+privacy) → Phase 2 technical SEO (H1/titles/schema/alt/404) → 7-day soak → submit appeal → Phase 3 content moat (FAQ + comparison blog articles in race-engineer voice).
+- **Track B confirmed:** user has Conspit IG post acknowledging RaceSims as service partner + official reseller, and is securing formal letters from Conspit + VNM in parallel. Authorization claims for those two retained on /pages/authorizations once letters arrive; Simagic + Moza language softened.
+- Phase 0 complete: rejection history filed, wiki source page created. Phase 1A (theme/schema edits) gated on user input on theme-edit execution mode + Conspit IG URL.
+
+## 2026-05-07 — Catalogue: Tesla model + VNM Lite default + Conspit cockpits OOP + Commercial section
 
 - **Catalogue model changed from 4-tier to Tesla-style** after Thambu's Apple-vs-Tesla brainstorm. Single default Sim + Quick Start presets (Starter / Sim / Pro) + per-component configurator + cross-tier add-on packs. Default anchors at the middle, downgrades and upgrades visible inline with explicit price deltas.
 - **New Sim default**: ₹6,50,998 (was ₹6,68,997). Pedal default swapped from Conspit CPP Lite to **VNM Lite Pedal** per Thambu — saves customer ₹17,999, makes default more accessible. Configurator shows pedal alternatives inline (+/− deltas to each Conspit option).

@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-07] ingest | GMC rejection history surfaced — counterfeit + misrepresentation
+- Source: [[2026-05-07-gmc-rejection-history]]
+- Created: 1 new page ([[2026-05-07-gmc-rejection-history]])
+- Updated: [[seo-technical-fixes]] (cross-link), [[hot]]
+- Pulled forwarded GMC emails from `info@racesims.in`. Two prior policy enforcements on account `5496001964`: Misrepresentation (ticket `1-4103000038542`, 6 Apr 2025) and Counterfeit Product (7 Apr 2025, cleared 7 May 2025). Both now define the defence surface for the upcoming third / final appeal.
+- Domain: racesims
+
 ## [2026-05-07] update | Catalogue: Tesla model + VNM Lite default + Conspit cockpits out of production + Commercial section added
 - Updated: [[racesims-catalogue]], [[kit-pricing]]
 - **Catalogue model changed from 4-tier to Tesla-style.** After psychology brainstorm with Thambu (Apple vs Tesla product strategies), landed on Tesla model: ONE default Sim + Quick Start presets (Starter / Sim / Pro) + per-component configurator with explicit price deltas + cross-tier add-on packs.

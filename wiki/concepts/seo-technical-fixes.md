@@ -79,6 +79,7 @@ Build E-E-A-T signals: authorized [[conspit]] / [[vnm]] distributor status, serv
 
 ## Connections
 - [[2026-03-25-seo-geo-audit]] — source
+- [[2026-05-07-gmc-rejection-history]] — both prior GMC rejections (Misrepresentation + Counterfeit) define the defence surface for the upcoming final appeal; Phase 1A + 1D in `~/.claude/plans/hi-dapper-journal.md` directly target these.
 - [[brand-name-consistency-issue]]
 - [[geo-first-mover-advantage]]
 - [[geo-content-readiness]]
