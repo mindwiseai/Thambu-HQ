@@ -1,14 +1,21 @@
 ---
 title: Hot Cache
 type: meta
-updated: 2026-05-04
+updated: 2026-05-11
 ---
 
 # Hot Cache
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-07 (latest) — Catalogue: Tesla model + VNM Lite default + Conspit cockpits OOP + Commercial section
+## 2026-05-11 (latest) — Ingest: RaceSims catalogs + ARKA media + Simagic contract EXPIRED
+
+- **⚠️ SIMAGIC CONTRACT EXPIRED MAY 9, 2026** — contract (10 May 2025 – 9 May 2026) has lapsed. Auto-renewal required 60-day notice (deadline was Mar 10, 2026). **Thambu must contact Simagic immediately** to clarify renewal status. South India exclusivity may be at risk. See [[simagic-distributor]].
+- **ARKA Motorsports / FIA APRC media** — 5 photos from South India Rally (April 21) moved to `racesims/marketing/partnerships/arka/`: podium, team photo, VW Polo action shot, ARKA logo, MRF logo. RaceSims wordmark moved to `racesims/marketing/brand/`.
+- **Wiki updates:** [[gt-pro-rig]] BOM costing added (Entry Rs.32,683 / Pro Rs.37,460), [[can-bus-telemetry]] Suzuki Baleno/Jason + AiM C125 R&D specifics, [[virtual-racing-hub]] distribution contract July 22 2025 (24-month non-circumvention), [[ipl-team-pipeline]] created (34 contacts, 10 teams, RCB priority), [[araya-airport]] Config A/B pricing, [[techxhub]] Fanatec/Playseat March 2026 pricing, Mindwise CTD status updated, security flags documented.
+- **Razorpay credentials** in `raw/mindwise/Sales channels/Website/rzp-2.csv` — already in .gitignore but **rotate credentials in Razorpay dashboard** to be safe.
+
+## 2026-05-07 — Catalogue: Tesla model + VNM Lite default + Conspit cockpits OOP + Commercial section
 
 - **Catalogue model changed from 4-tier to Tesla-style** after Thambu's Apple-vs-Tesla brainstorm. Single default Sim + Quick Start presets (Starter / Sim / Pro) + per-component configurator + cross-tier add-on packs. Default anchors at the middle, downgrades and upgrades visible inline with explicit price deltas.
 - **New Sim default**: ₹6,50,998 (was ₹6,68,997). Pedal default swapped from Conspit CPP Lite to **VNM Lite Pedal** per Thambu — saves customer ₹17,999, makes default more accessible. Configurator shows pedal alternatives inline (+/− deltas to each Conspit option).
