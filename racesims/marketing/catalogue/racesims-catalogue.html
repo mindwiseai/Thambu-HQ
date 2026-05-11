@@ -3,805 +3,1018 @@
 <head>
 <meta charset="UTF-8">
 <title>RaceSims Catalogue 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  /* ============================================================
-     RaceSims Catalogue 2026 — print + screen stylesheet
-     ============================================================ */
-  @page {
-    size: A4;
-    margin: 16mm 14mm 18mm 14mm;
-  }
-  @page :first {
-    margin: 0;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body {
-    font-family: -apple-system, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
-    font-size: 10.5pt;
-    line-height: 1.45;
-    color: #1a1a1a;
-    background: #ffffff;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-    font-feature-settings: "tnum" 1, "kern" 1;
-  }
+/* ============================================================
+   RaceSims Catalogue 2026 — Claude editorial theme
+   ============================================================ */
 
-  /* Screen view container */
-  body { max-width: 210mm; margin: 0 auto; }
-  @media screen {
-    body { padding: 16mm 14mm 18mm 14mm; }
-    .cover { margin: -16mm -14mm 18mm -14mm; }
-  }
+@page {
+  size: A4;
+  margin: 18mm 15mm 20mm 15mm;
+}
+@page :first {
+  margin: 0;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-  /* ===== Brand variables ===== */
-  :root {
-    --rs-red: #c8102e;
-    --rs-red-dark: #8f0a20;
-    --rs-black: #0f0f10;
-    --text-primary: #1a1a1a;
-    --text-secondary: #555;
-    --text-muted: #888;
-    --rule: #e3e3e3;
-    --rule-strong: #c0c0c0;
-    --table-stripe: #fafafa;
-    --highlight-bg: #fff5f6;
-  }
+/* ===== Design tokens ===== */
+:root {
+  --cream:      #FAF9F5;
+  --cream-dark: #F3EFEA;
+  --cream-mid:  #EDE8E2;
+  --rs-red:     #C8102E;
+  --rs-red-dim: rgba(200,16,46,0.12);
+  --rs-black:   #0F0F10;
+  --ink:        #1F1B18;
+  --ink-mid:    #4A4440;
+  --ink-muted:  #7A7470;
+  --rule:       #DDD8D2;
+  --rule-mid:   #C8C0B8;
+  --serif:      'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sans:       'Inter', -apple-system, 'Helvetica Neue', sans-serif;
+  --mono:       'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
+}
 
-  /* ===== Cover page ===== */
-  .cover {
-    height: 297mm;
-    padding: 24mm 22mm;
-    background: linear-gradient(170deg, #0f0f10 0%, #1a1a1a 60%, #2a0f12 100%);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    page-break-after: always;
-    position: relative;
-    overflow: hidden;
-  }
-  .cover::before {
-    content: "";
-    position: absolute;
-    top: -10%;
-    right: -5%;
-    width: 70%;
-    height: 65%;
-    background: radial-gradient(ellipse at center, rgba(200, 16, 46, 0.18) 0%, rgba(200, 16, 46, 0) 70%);
-    pointer-events: none;
-  }
-  .cover::after {
-    content: "";
-    position: absolute;
-    left: 0; right: 0; bottom: 0;
-    height: 6mm;
-    background: var(--rs-red);
-  }
-  .cover-brand {
-    font-size: 12pt;
-    letter-spacing: 5px;
-    color: white;
-    font-weight: 800;
-    z-index: 1;
-  }
-  .cover-brand .red { color: var(--rs-red); }
-  .cover-meta {
-    font-size: 8.5pt;
-    letter-spacing: 2px;
-    color: rgba(255,255,255,0.55);
-    text-transform: uppercase;
-    margin-top: 2mm;
-    z-index: 1;
-  }
-  .cover-title-block { z-index: 1; }
-  .cover-title-block h1 {
-    font-size: 64pt;
-    font-weight: 900;
-    line-height: 1;
-    letter-spacing: -2px;
-    margin: 0 0 8mm;
-  }
-  .cover-title-block h1 .accent {
-    color: var(--rs-red);
-    display: block;
-    font-size: 30pt;
-    letter-spacing: -0.5px;
-    margin-top: 4mm;
-    font-weight: 600;
-  }
-  .cover-tagline {
-    font-size: 14pt;
-    line-height: 1.4;
-    color: rgba(255,255,255,0.85);
-    max-width: 130mm;
-    font-weight: 300;
-    margin-bottom: 4mm;
-  }
-  .cover-tagline strong { color: white; font-weight: 600; }
-  .cover-divider {
-    width: 30mm;
-    height: 2px;
-    background: var(--rs-red);
-    margin: 4mm 0;
-  }
-  .cover-quote {
-    font-size: 9pt;
-    color: rgba(255,255,255,0.6);
-    line-height: 1.6;
-    max-width: 110mm;
-    font-style: italic;
-  }
-  .cover-footer {
-    display: flex;
-    justify-content: space-between;
-    font-size: 8.5pt;
-    color: rgba(255,255,255,0.45);
-    z-index: 1;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
+html, body {
+  font-family: var(--sans);
+  font-size: 10pt;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
 
-  /* ===== Page-level typography ===== */
-  h1, h2, h3, h4, h5 { color: var(--text-primary); }
+body { max-width: 210mm; margin: 0 auto; }
 
-  h1 {
-    font-size: 26pt;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    line-height: 1.1;
-    margin: 0 0 6mm;
-    page-break-after: avoid;
-  }
-  h2 {
-    font-size: 18pt;
-    font-weight: 800;
-    color: var(--text-primary);
-    margin: 14mm 0 5mm;
-    padding-bottom: 3mm;
-    border-bottom: 2px solid var(--rs-red);
-    letter-spacing: -0.2px;
-    page-break-after: avoid;
-  }
-  h2 .num {
-    color: var(--rs-red);
-    font-weight: 800;
-    margin-right: 4mm;
-  }
-  h3 {
-    font-size: 13pt;
-    font-weight: 700;
-    margin: 8mm 0 3mm;
-    color: var(--text-primary);
-    page-break-after: avoid;
-  }
-  h4 {
-    font-size: 11pt;
-    font-weight: 700;
-    margin: 6mm 0 2mm;
-    color: var(--text-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    page-break-after: avoid;
-  }
-  p { margin: 0 0 3mm; }
-  p.lede {
-    font-size: 12pt;
-    color: var(--text-secondary);
-    line-height: 1.55;
-    margin-bottom: 6mm;
-  }
-  strong { font-weight: 700; color: var(--text-primary); }
-  em { color: var(--text-secondary); font-style: italic; }
+@media screen {
+  body { padding: 18mm 15mm 20mm 15mm; }
+  .cover { margin: -18mm -15mm 20mm -15mm; }
+  .back-cover { margin: 0 -15mm -20mm -15mm; }
+}
 
-  ul, ol { margin: 0 0 4mm 5mm; padding-left: 4mm; }
-  li { margin-bottom: 1.5mm; }
+/* ============================================================
+   COVER
+   ============================================================ */
+.cover {
+  height: 297mm;
+  background: var(--rs-black);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  page-break-after: always;
+  position: relative;
+  overflow: hidden;
+}
 
-  /* ===== Section dividers ===== */
-  .section-break {
-    page-break-before: always;
-  }
+.cover-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.28;
+  filter: grayscale(20%) contrast(1.05);
+  z-index: 0;
+}
 
-  /* ===== Tables (default) ===== */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 3mm 0 5mm;
-    font-size: 9.5pt;
-    page-break-inside: auto;
-  }
-  thead { display: table-header-group; }
-  tr { page-break-inside: avoid; page-break-after: auto; }
-  th, td {
-    text-align: left;
-    padding: 2mm 3mm;
-    border-bottom: 1px solid var(--rule);
-    vertical-align: top;
-  }
-  th {
-    font-weight: 700;
-    color: var(--text-primary);
-    background: #f5f5f5;
-    border-bottom: 2px solid var(--rule-strong);
-    text-transform: uppercase;
-    font-size: 8.5pt;
-    letter-spacing: 0.5px;
-  }
-  td.price {
-    font-weight: 700;
-    text-align: right;
-    color: var(--text-primary);
-    white-space: nowrap;
-    font-feature-settings: "tnum" 1;
-  }
-  td.delta-pos { color: var(--rs-red); font-weight: 700; }
-  td.delta-neg { color: #1a8a4a; font-weight: 700; }
-  tr.row-highlight { background: var(--highlight-bg); }
-  tbody tr:nth-child(even) td { background: var(--table-stripe); }
-  tbody tr.row-highlight:nth-child(even) td { background: var(--highlight-bg); }
+/* Warm gradient overlay — cream tones bleed in from bottom */
+.cover-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg,
+      rgba(15,15,16,0.92) 0%,
+      rgba(15,15,16,0.55) 45%,
+      rgba(15,15,16,0.72) 75%,
+      rgba(15,15,16,0.97) 100%);
+}
 
-  /* ===== Component cards ===== */
-  .preset-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.05fr 1fr;
-    gap: 4mm;
-    margin: 6mm 0 4mm;
-  }
-  .preset-card {
-    border: 1px solid var(--rule);
-    padding: 5mm 5mm 6mm;
-    background: white;
-    page-break-inside: avoid;
-    position: relative;
-  }
-  .preset-card.is-default {
-    border-color: var(--rs-red);
-    border-width: 2px;
-    background: linear-gradient(180deg, #ffffff 0%, #fffafb 100%);
-    box-shadow: 0 1px 0 rgba(200,16,46,0.06);
-  }
-  .preset-card.is-default::before {
-    content: "Recommended";
-    position: absolute;
-    top: -3mm;
-    left: 5mm;
-    background: var(--rs-red);
-    color: white;
-    font-size: 7.5pt;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 0.5mm 2.5mm;
-  }
-  .preset-card .title {
-    font-size: 14pt;
-    font-weight: 800;
-    color: var(--text-primary);
-    margin-bottom: 1mm;
-  }
-  .preset-card .price {
-    font-size: 18pt;
-    font-weight: 800;
-    color: var(--rs-red);
-    margin-bottom: 4mm;
-    letter-spacing: -0.5px;
-  }
-  .preset-card .profile {
-    font-size: 9pt;
-    color: var(--text-secondary);
-    margin-bottom: 4mm;
-    min-height: 14mm;
-    line-height: 1.45;
-  }
-  .preset-card ul.specs {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 8.5pt;
-  }
-  .preset-card ul.specs li {
-    padding: 1.5mm 0;
-    border-top: 1px solid var(--rule);
-    line-height: 1.4;
-  }
-  .preset-card ul.specs li .label {
-    color: var(--text-muted);
-    font-size: 7.5pt;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    display: block;
-    margin-bottom: 0.5mm;
-  }
-  .preset-card ul.specs li .value {
-    font-weight: 600;
-    color: var(--text-primary);
-  }
+/* Red accent bar — left edge, editorial stripe */
+.cover::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 5mm;
+  background: var(--rs-red);
+  z-index: 2;
+}
 
-  /* ===== Pull quote / highlight box ===== */
-  .pull-quote {
-    margin: 6mm 0;
-    padding: 5mm 6mm;
-    border-left: 3px solid var(--rs-red);
-    background: var(--highlight-bg);
-    font-size: 10.5pt;
-    line-height: 1.5;
-    color: var(--text-primary);
-  }
-  .pull-quote p:last-child { margin-bottom: 0; }
-  .pull-quote .quote-mark {
-    color: var(--rs-red);
-    font-weight: 800;
-    font-size: 14pt;
-    line-height: 1;
-    margin-right: 2mm;
-  }
+.cover-top {
+  position: relative;
+  z-index: 3;
+  padding: 22mm 22mm 0 28mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
-  /* ===== Configurator-style component blocks ===== */
-  .config-block {
-    margin: 4mm 0 5mm;
-    page-break-inside: avoid;
-  }
-  .config-block .config-title {
-    font-size: 10pt;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    color: var(--text-primary);
-    border-bottom: 1px solid var(--rule);
-    padding-bottom: 1.5mm;
-    margin-bottom: 2.5mm;
-  }
-  .config-options {
-    font-size: 9.5pt;
-  }
-  .config-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5mm 0;
-    border-bottom: 1px dotted var(--rule);
-  }
-  .config-row:last-child { border-bottom: none; }
-  .config-row.is-default {
-    background: var(--highlight-bg);
-    padding: 2mm 3mm;
-    border-bottom: 1px solid var(--rs-red);
-    margin: 0 -1mm;
-  }
-  .config-row .name { color: var(--text-primary); }
-  .config-row.is-default .name { font-weight: 700; }
-  .config-row .name .marker {
-    display: inline-block;
-    width: 3mm; height: 3mm;
-    border-radius: 50%;
-    background: white;
-    border: 1.5px solid var(--rule-strong);
-    margin-right: 2.5mm;
-    vertical-align: middle;
-  }
-  .config-row.is-default .name .marker {
-    background: var(--rs-red);
-    border-color: var(--rs-red);
-  }
-  .config-row .name .recommended {
-    color: var(--rs-red);
-    font-size: 7.5pt;
-    font-weight: 800;
-    margin-left: 2mm;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-  }
-  .config-row .price {
-    font-weight: 700;
-    white-space: nowrap;
-    font-feature-settings: "tnum" 1;
-  }
-  .config-row .price.up { color: var(--rs-red); }
-  .config-row .price.down { color: #1a8a4a; }
-  .config-row .price.zero { color: var(--text-primary); }
+.cover-logo {
+  height: 11mm;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
 
-  /* ===== Add-on pack tiles ===== */
-  .pack-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3.5mm;
-    margin: 4mm 0 6mm;
-  }
-  .pack {
-    border: 1px solid var(--rule);
-    padding: 4mm 5mm;
-    page-break-inside: avoid;
-    background: white;
-  }
-  .pack-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 2mm;
-  }
-  .pack-name {
-    font-size: 10.5pt;
-    font-weight: 800;
-    color: var(--text-primary);
-  }
-  .pack-price {
-    font-size: 10.5pt;
-    font-weight: 800;
-    color: var(--rs-red);
-    white-space: nowrap;
-  }
-  .pack-desc {
-    font-size: 8.5pt;
-    color: var(--text-secondary);
-    line-height: 1.4;
-    margin-bottom: 2mm;
-  }
-  .pack-list {
-    font-size: 8pt;
-    color: var(--text-muted);
-    margin: 0;
-    padding-left: 4mm;
-  }
-  .pack-list li { margin-bottom: 0.8mm; }
+.cover-year {
+  font-family: var(--serif);
+  font-size: 11pt;
+  color: rgba(255,255,255,0.4);
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
 
-  /* ===== Journey blocks ===== */
-  .journey {
-    border-left: 3px solid var(--rs-red);
-    padding: 3mm 5mm 3mm 6mm;
-    margin-bottom: 4mm;
-    background: #fafafa;
-    page-break-inside: avoid;
-  }
-  .journey-header {
-    font-size: 10.5pt;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 1.5mm;
-  }
-  .journey-line {
-    font-size: 9pt;
-    color: var(--text-secondary);
-    margin-bottom: 0.8mm;
-    padding-left: 3mm;
-    position: relative;
-  }
-  .journey-line::before {
-    content: "+";
-    color: var(--rs-red);
-    font-weight: 700;
-    position: absolute;
-    left: 0;
-  }
-  .journey-line.start::before { content: "→"; }
-  .journey-total {
-    font-size: 11pt;
-    font-weight: 800;
-    color: var(--rs-red);
-    margin-top: 2mm;
-    padding-top: 2mm;
-    border-top: 1px solid var(--rule);
-  }
+.cover-mid {
+  position: relative;
+  z-index: 3;
+  padding: 0 22mm 0 28mm;
+}
 
-  /* ===== Commercial/B2B section ===== */
-  .commercial-banner {
-    background: linear-gradient(135deg, var(--rs-black) 0%, #1f0a0d 100%);
-    color: white;
-    padding: 8mm 8mm;
-    margin: 6mm 0 8mm;
-    page-break-inside: avoid;
-  }
-  .commercial-banner h3 {
-    color: white;
-    font-size: 14pt;
-    margin: 0 0 2mm;
-  }
-  .commercial-banner p {
-    color: rgba(255,255,255,0.8);
-    font-size: 10pt;
-    margin: 0;
-    line-height: 1.5;
-  }
-  .commercial-banner .accent {
-    color: var(--rs-red);
-    font-weight: 700;
-  }
+/* Giant editorial headline */
+.cover-mid h1 {
+  font-family: var(--serif);
+  font-size: 82pt;
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -3px;
+  color: white;
+  margin: 0 0 7mm;
+}
 
-  /* ===== Footer / back ===== */
-  .back-cover {
-    page-break-before: always;
-    height: 270mm;
-    padding: 20mm 18mm;
-    background: linear-gradient(170deg, var(--rs-black) 0%, #1a1a1a 60%, #2a0f12 100%);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  .back-cover h2 {
-    color: white;
-    border: none;
-    font-size: 36pt;
-    margin: 0 0 6mm;
-    letter-spacing: -1px;
-    line-height: 1.1;
-  }
-  .back-cover .red { color: var(--rs-red); }
-  .back-cover .tag {
-    font-size: 14pt;
-    color: rgba(255,255,255,0.7);
-    margin-bottom: 14mm;
-    line-height: 1.4;
-    font-weight: 300;
-  }
-  .back-cover .contact {
-    font-size: 10pt;
-    color: rgba(255,255,255,0.85);
-    line-height: 1.8;
-    letter-spacing: 0.5px;
-  }
-  .back-cover .contact a {
-    color: var(--rs-red);
-    text-decoration: none;
-    font-weight: 600;
-  }
-  .back-cover .footer-meta {
-    margin-top: 14mm;
-    font-size: 7.5pt;
-    color: rgba(255,255,255,0.4);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
+.cover-mid h1 .cat-word {
+  display: block;
+  color: white;
+}
 
-  /* ===== Misc ===== */
-  .label {
-    display: inline-block;
-    background: var(--rs-red);
-    color: white;
-    font-size: 7.5pt;
-    font-weight: 700;
-    padding: 0.5mm 2mm;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    margin-left: 2mm;
-    vertical-align: middle;
-  }
-  .label.muted { background: var(--text-muted); }
-  .label.green { background: #1a8a4a; }
+.cover-mid h1 .cat-year {
+  display: block;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 54pt;
+  color: var(--rs-red);
+  letter-spacing: -1px;
+  margin-top: 2mm;
+}
 
-  .toc {
-    background: #fafafa;
-    padding: 8mm 10mm;
-    margin: 6mm 0 8mm;
-    border-left: 3px solid var(--rs-red);
-  }
-  .toc h3 {
-    font-size: 11pt;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0 0 3mm;
-    color: var(--text-primary);
-  }
-  .toc ol {
-    list-style: decimal;
-    margin: 0 0 0 5mm;
-    padding: 0;
-    columns: 2;
-    column-gap: 8mm;
-  }
-  .toc ol li {
-    font-size: 9.5pt;
-    margin-bottom: 1.5mm;
-    color: var(--text-primary);
-    padding-left: 1mm;
-    break-inside: avoid;
-  }
+.cover-rule {
+  width: 28mm;
+  height: 1.5px;
+  background: var(--rs-red);
+  margin: 0 0 6mm;
+}
 
-  hr.section-rule {
-    border: none;
-    border-top: 1px solid var(--rule-strong);
-    margin: 8mm 0;
-  }
+.cover-tagline {
+  font-size: 11.5pt;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.78);
+  font-weight: 300;
+  max-width: 120mm;
+  letter-spacing: 0.1px;
+}
 
-  .small {
-    font-size: 8.5pt;
-    color: var(--text-muted);
-    margin-top: 1mm;
-  }
-  .footnote {
-    font-size: 8pt;
-    color: var(--text-muted);
-    font-style: italic;
-    margin-top: 2mm;
-    line-height: 1.4;
-  }
+.cover-tagline strong { color: white; font-weight: 600; }
 
-  /* ===== Print page numbers ===== */
-  @media print {
-    .page-number-anchor::after {
-      content: counter(page);
-    }
-  }
+.cover-pull {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 9.5pt;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.65;
+  max-width: 110mm;
+  margin-top: 5mm;
+}
 
-  /* ===== Photo + image utilities ===== */
-  img {
-    image-orientation: from-image;
-    -webkit-user-drag: none;
-  }
+.cover-bottom {
+  position: relative;
+  z-index: 3;
+  padding: 0 22mm 16mm 28mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
-  /* Cover hero image overlay */
-  .cover-hero-img {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    opacity: 0.35;
-    filter: grayscale(15%) contrast(1.1);
-    pointer-events: none;
-  }
-  .cover-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background: linear-gradient(180deg,
-      rgba(15,15,16,0.95) 0%,
-      rgba(15,15,16,0.65) 35%,
-      rgba(15,15,16,0.4) 60%,
-      rgba(42,15,18,0.9) 100%);
-    pointer-events: none;
-  }
-  .cover-logo {
-    height: 14mm;
-    width: auto;
-    margin-bottom: 4mm;
-    display: block;
-  }
+.cover-meta {
+  font-size: 8pt;
+  color: rgba(255,255,255,0.38);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
 
-  /* Component thumbnails in tables */
-  .thumb {
-    width: 16mm;
-    height: 16mm;
-    object-fit: contain;
-    background: #f8f8f8;
-    border: 1px solid var(--rule);
-    border-radius: 1mm;
-    display: block;
-    flex-shrink: 0;
-  }
-  td.thumb-cell {
-    width: 18mm;
-    padding: 1.5mm;
-    vertical-align: middle;
-  }
+/* ============================================================
+   PAGE TYPOGRAPHY
+   ============================================================ */
 
-  /* Preset card hero image */
-  .preset-card .preset-img {
-    width: 100%;
-    height: 32mm;
-    object-fit: cover;
-    object-position: center;
-    margin-bottom: 4mm;
-    border-radius: 1mm;
-    background: #fafafa;
-    display: block;
-  }
-  .preset-card.is-default .preset-img {
-    height: 36mm;
-  }
+h1 {
+  font-family: var(--serif);
+  font-size: 28pt;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ink);
+  margin: 0 0 6mm;
+  letter-spacing: -0.5px;
+  page-break-after: avoid;
+}
 
-  /* Section banner image */
-  .section-banner {
-    width: 100%;
-    height: 50mm;
-    object-fit: cover;
-    object-position: center;
-    margin: 0 0 8mm;
-    border-radius: 1mm;
-    display: block;
-  }
+h2 {
+  font-family: var(--serif);
+  font-size: 9pt;
+  font-weight: 600;
+  color: var(--rs-red);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 14mm 0 4mm;
+  page-break-after: avoid;
+  border: none;
+}
 
-  /* Inline product image (figure-style) */
-  .product-figure {
-    text-align: center;
-    margin: 6mm 0;
-    page-break-inside: avoid;
-  }
-  .product-figure img {
-    max-width: 100%;
-    max-height: 80mm;
-    margin: 0 auto;
-    display: block;
-    background: #f8f8f8;
-  }
-  .product-figure .caption {
-    font-size: 8.5pt;
-    color: var(--text-muted);
-    margin-top: 2mm;
-    font-style: italic;
-  }
+/* Large editorial section number preceding h2 */
+.section-eyebrow {
+  display: flex;
+  align-items: baseline;
+  gap: 4mm;
+  margin: 16mm 0 0;
+  page-break-after: avoid;
+}
 
-  /* Two-column product showcase */
-  .showcase {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5mm;
-    margin: 4mm 0 5mm;
-    align-items: center;
-    page-break-inside: avoid;
-  }
-  .showcase img {
-    width: 100%;
-    height: 60mm;
-    object-fit: cover;
-    background: #f8f8f8;
-  }
-  .showcase-text h3 { margin-top: 0; }
-  .showcase-text p { font-size: 9.5pt; }
+.section-num {
+  font-family: var(--serif);
+  font-size: 72pt;
+  font-weight: 900;
+  line-height: 0.85;
+  color: var(--rs-red);
+  opacity: 0.15;
+  letter-spacing: -3px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
 
-  /* Back cover logo */
-  .back-cover-logo {
-    height: 18mm;
-    width: auto;
-    margin: 0 auto 6mm;
-    display: block;
-    filter: brightness(0) invert(1);
-  }
+.section-title-block {
+  flex: 1;
+  padding-bottom: 3mm;
+  border-bottom: 1px solid var(--rule-mid);
+}
+
+.section-label {
+  font-family: var(--sans);
+  font-size: 8pt;
+  font-weight: 600;
+  color: var(--rs-red);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 1.5mm;
+}
+
+.section-heading {
+  font-family: var(--serif);
+  font-size: 22pt;
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--ink);
+  letter-spacing: -0.3px;
+}
+
+h3 {
+  font-family: var(--serif);
+  font-size: 13.5pt;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 8mm 0 3mm;
+  letter-spacing: -0.1px;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-family: var(--sans);
+  font-size: 8.5pt;
+  font-weight: 700;
+  color: var(--ink-mid);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 5mm 0 2mm;
+  page-break-after: avoid;
+}
+
+p {
+  margin: 0 0 3.5mm;
+  color: var(--ink-mid);
+  line-height: 1.55;
+}
+
+p.lede {
+  font-size: 11.5pt;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink-mid);
+  line-height: 1.6;
+  margin-bottom: 7mm;
+}
+
+strong { font-weight: 600; color: var(--ink); }
+em { font-style: italic; }
+
+ul, ol { margin: 0 0 4mm 5mm; padding-left: 3mm; }
+li { margin-bottom: 1.5mm; color: var(--ink-mid); }
+
+.section-break { page-break-before: always; }
+
+/* ============================================================
+   TABLES — editorial style
+   ============================================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 3mm 0 6mm;
+  font-size: 9.5pt;
+  page-break-inside: auto;
+}
+thead { display: table-header-group; }
+tr { page-break-inside: avoid; page-break-after: auto; }
+
+th {
+  font-family: var(--sans);
+  font-size: 7.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--ink-muted);
+  text-align: left;
+  padding: 2.5mm 3mm 2mm;
+  border-top: 1.5px solid var(--ink);
+  border-bottom: 1px solid var(--rule-mid);
+  background: transparent;
+}
+
+td {
+  text-align: left;
+  padding: 2.5mm 3mm;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: middle;
+  color: var(--ink-mid);
+}
+
+td.price {
+  font-family: var(--mono);
+  font-size: 9pt;
+  font-weight: 600;
+  text-align: right;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+td.delta-pos { font-family: var(--mono); font-weight: 600; color: var(--rs-red); text-align: right; }
+td.delta-neg { font-family: var(--mono); font-weight: 600; color: #1E6B3A; text-align: right; }
+
+tr.row-highlight td { background: var(--rs-red-dim); }
+tr.row-highlight td.price { color: var(--rs-red); }
+
+.thumb-cell {
+  width: 16mm;
+  padding: 1.5mm 2mm;
+  vertical-align: middle;
+}
+
+.thumb {
+  width: 14mm;
+  height: 14mm;
+  object-fit: contain;
+  background: var(--cream-dark);
+  border: 1px solid var(--rule);
+  border-radius: 1.5mm;
+  display: block;
+}
+
+/* ============================================================
+   TOC
+   ============================================================ */
+.toc {
+  background: var(--cream-dark);
+  padding: 8mm 10mm;
+  margin: 6mm 0 8mm;
+  border-left: 3px solid var(--rs-red);
+}
+
+.toc h3 {
+  font-family: var(--sans);
+  font-size: 8pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--ink-muted);
+  margin: 0 0 4mm;
+}
+
+.toc ol {
+  list-style: decimal;
+  margin: 0 0 0 5mm;
+  padding: 0;
+  columns: 2;
+  column-gap: 8mm;
+}
+
+.toc ol li {
+  font-size: 9.5pt;
+  margin-bottom: 2mm;
+  color: var(--ink);
+  break-inside: avoid;
+}
+
+/* ============================================================
+   QUICK START PRESET CARDS — magazine editorial layout
+   ============================================================ */
+.preset-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.08fr 1fr;
+  gap: 4mm;
+  margin: 6mm 0 4mm;
+}
+
+.preset-card {
+  background: white;
+  border: 1px solid var(--rule);
+  border-radius: 2mm;
+  overflow: hidden;
+  page-break-inside: avoid;
+  position: relative;
+}
+
+.preset-card.is-default {
+  border-color: var(--rs-red);
+  border-width: 1.5px;
+  background: linear-gradient(180deg, #fff 0%, #FFFAFB 100%);
+}
+
+/* "Recommended" ribbon */
+.preset-card.is-default::before {
+  content: "Recommended";
+  position: absolute;
+  top: 3mm;
+  right: 0;
+  background: var(--rs-red);
+  color: white;
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1mm 3mm 1mm 2.5mm;
+  z-index: 2;
+}
+
+.preset-img {
+  width: 100%;
+  height: 30mm;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  background: var(--cream-dark);
+}
+
+.preset-card.is-default .preset-img { height: 34mm; }
+
+.preset-body {
+  padding: 5mm;
+}
+
+.preset-tier {
+  font-family: var(--sans);
+  font-size: 7pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--rs-red);
+  margin-bottom: 1mm;
+}
+
+.preset-name {
+  font-family: var(--serif);
+  font-size: 16pt;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 1mm;
+}
+
+.preset-price {
+  font-family: var(--mono);
+  font-size: 16pt;
+  font-weight: 600;
+  color: var(--rs-red);
+  margin-bottom: 3mm;
+  letter-spacing: -0.5px;
+}
+
+.preset-profile {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 8.5pt;
+  color: var(--ink-mid);
+  margin-bottom: 4mm;
+  line-height: 1.5;
+  min-height: 12mm;
+}
+
+.preset-card hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0 0 3mm;
+}
+
+.preset-specs {
+  list-style: none;
+  margin: 0; padding: 0;
+  font-size: 8pt;
+}
+
+.preset-specs li {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5mm 0;
+  border-bottom: 1px dotted var(--rule);
+  line-height: 1.3;
+  gap: 2mm;
+}
+
+.preset-specs li:last-child { border-bottom: none; }
+
+.spec-key {
+  font-weight: 700;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 7pt;
+  flex-shrink: 0;
+  width: 22mm;
+}
+
+.spec-val {
+  color: var(--ink);
+  font-weight: 500;
+  text-align: right;
+  font-size: 7.5pt;
+}
+
+/* ============================================================
+   SECTION BANNER IMAGES
+   ============================================================ */
+.section-banner {
+  width: 100%;
+  height: 48mm;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 5mm 0 7mm;
+  border-radius: 1.5mm;
+  background: var(--cream-dark);
+}
+
+/* ============================================================
+   CONFIGURATOR ROWS
+   ============================================================ */
+.config-section { margin: 5mm 0; }
+
+.config-label {
+  font-family: var(--sans);
+  font-size: 8pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--ink-muted);
+  padding: 2mm 0 2mm;
+  border-bottom: 1px solid var(--rule-mid);
+  margin-bottom: 0;
+}
+
+.config-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2mm 3mm;
+  border-bottom: 1px solid var(--rule);
+  gap: 3mm;
+}
+
+.config-row.is-default {
+  background: var(--rs-red-dim);
+  border-bottom: 1px solid rgba(200,16,46,0.25);
+  padding: 2.5mm 3mm;
+}
+
+.config-dot {
+  width: 4mm; height: 4mm;
+  border-radius: 50%;
+  border: 1.5px solid var(--rule-mid);
+  display: inline-block;
+  margin-right: 2.5mm;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.config-row.is-default .config-dot {
+  background: var(--rs-red);
+  border-color: var(--rs-red);
+}
+
+.config-name {
+  font-size: 9.5pt;
+  color: var(--ink-mid);
+  flex: 1;
+}
+
+.config-row.is-default .config-name {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.config-badge {
+  font-size: 6.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--rs-red);
+  margin-left: 2mm;
+}
+
+.config-price {
+  font-family: var(--mono);
+  font-size: 9pt;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--ink);
+}
+
+.config-price.up { color: var(--rs-red); }
+.config-price.down { color: #1E6B3A; }
+
+/* ============================================================
+   ADD-ON PACKS
+   ============================================================ */
+.pack-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5mm;
+  margin: 4mm 0 6mm;
+}
+
+.pack {
+  background: white;
+  border: 1px solid var(--rule);
+  border-radius: 2mm;
+  padding: 5mm;
+  page-break-inside: avoid;
+}
+
+.pack-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2mm;
+  gap: 2mm;
+}
+
+.pack-name {
+  font-family: var(--serif);
+  font-size: 11pt;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.pack-price {
+  font-family: var(--mono);
+  font-size: 10pt;
+  font-weight: 600;
+  color: var(--rs-red);
+  white-space: nowrap;
+}
+
+.pack-desc {
+  font-size: 8.5pt;
+  color: var(--ink-muted);
+  line-height: 1.45;
+  margin-bottom: 2mm;
+}
+
+.pack-list {
+  list-style: none;
+  margin: 0; padding: 0;
+  font-size: 8pt;
+  color: var(--ink-muted);
+}
+
+.pack-list li {
+  padding: 0.5mm 0 0.5mm 3mm;
+  position: relative;
+}
+
+.pack-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--rs-red);
+  font-size: 7pt;
+}
+
+/* ============================================================
+   JOURNEY BLOCKS — editorial callout
+   ============================================================ */
+.journey {
+  border-left: 2px solid var(--rs-red);
+  padding: 4mm 5mm 4mm 6mm;
+  margin-bottom: 4mm;
+  background: var(--cream-dark);
+  border-radius: 0 2mm 2mm 0;
+  page-break-inside: avoid;
+}
+
+.journey-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 10.5pt;
+  color: var(--ink);
+  margin-bottom: 2mm;
+  line-height: 1.4;
+}
+
+.journey-line {
+  font-size: 9pt;
+  color: var(--ink-mid);
+  margin-bottom: 1mm;
+  padding-left: 4mm;
+  position: relative;
+}
+
+.journey-line::before {
+  content: "+";
+  color: var(--rs-red);
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+.journey-line.start::before { content: "→"; }
+
+.journey-total {
+  font-family: var(--mono);
+  font-size: 11pt;
+  font-weight: 600;
+  color: var(--rs-red);
+  margin-top: 2.5mm;
+  padding-top: 2.5mm;
+  border-top: 1px solid var(--rule-mid);
+}
+
+/* ============================================================
+   PULL QUOTE / EDITORIAL CALLOUT
+   ============================================================ */
+.pull-quote {
+  margin: 6mm 0;
+  padding: 5mm 6mm;
+  background: var(--cream-dark);
+  border-left: 3px solid var(--rs-red);
+}
+
+.pull-quote p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 10.5pt;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* ============================================================
+   LABELS / BADGES
+   ============================================================ */
+.badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.8mm 2mm;
+  border-radius: 0.8mm;
+  vertical-align: middle;
+  margin-left: 1.5mm;
+}
+
+.badge-red { background: var(--rs-red); color: white; }
+.badge-gray { background: var(--ink-muted); color: white; }
+.badge-green { background: #1E6B3A; color: white; }
+
+/* ============================================================
+   COMMERCIAL BANNER
+   ============================================================ */
+.commercial-banner {
+  background: linear-gradient(135deg, var(--rs-black) 0%, #1A0A0D 100%);
+  color: white;
+  padding: 8mm 9mm;
+  margin: 6mm 0 8mm;
+  border-radius: 2mm;
+  page-break-inside: avoid;
+  border-left: 5px solid var(--rs-red);
+}
+
+.commercial-banner h3 {
+  font-family: var(--serif);
+  color: white;
+  font-size: 14pt;
+  margin: 0 0 2mm;
+}
+
+.commercial-banner p {
+  color: rgba(255,255,255,0.75);
+  font-size: 9.5pt;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.commercial-banner .accent { color: var(--rs-red); font-weight: 600; }
+
+/* ============================================================
+   BACK COVER
+   ============================================================ */
+.back-cover {
+  page-break-before: always;
+  min-height: 260mm;
+  padding: 22mm 22mm 18mm 22mm;
+  background: var(--rs-black);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle red glow */
+.back-cover::before {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  right: -5%;
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(ellipse, rgba(200,16,46,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.back-cover::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 5mm;
+  background: var(--rs-red);
+}
+
+.back-cover-logo {
+  height: 12mm;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  margin-bottom: 10mm;
+  position: relative;
+}
+
+.back-cover h2 {
+  font-family: var(--serif);
+  font-size: 44pt;
+  font-weight: 700;
+  line-height: 1.1;
+  color: white;
+  border: none;
+  margin: 0 0 5mm;
+  letter-spacing: -1px;
+  position: relative;
+}
+
+.back-cover h2 .red { color: var(--rs-red); }
+
+.back-cover .tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 12pt;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+  margin-bottom: 14mm;
+  max-width: 120mm;
+  font-weight: 300;
+  position: relative;
+}
+
+.back-cover .contact-block {
+  position: relative;
+  font-size: 10pt;
+  color: rgba(255,255,255,0.8);
+  line-height: 2;
+}
+
+.back-cover .contact-block a {
+  color: var(--rs-red);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-cover .contact-block strong { color: white; }
+
+.back-footer {
+  position: absolute;
+  bottom: 10mm;
+  right: 14mm;
+  font-family: var(--sans);
+  font-size: 7pt;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   SMALL / FOOTNOTE STYLES
+   ============================================================ */
+.small {
+  font-size: 8.5pt;
+  color: var(--ink-muted);
+}
+
+.footnote {
+  font-size: 8pt;
+  color: var(--ink-muted);
+  font-style: italic;
+  margin-top: 2mm;
+  line-height: 1.45;
+}
+
+hr.rule {
+  border: none;
+  border-top: 1px solid var(--rule-mid);
+  margin: 7mm 0;
+}
+
+/* Print page-break helpers */
+@media print {
+  .no-break { page-break-inside: avoid; }
+}
+
 </style>
 </head>
 <body>
 
-<!-- ===========================================================
+<!-- ============================================================
      COVER
-     =========================================================== -->
+     ============================================================ -->
 <section class="cover">
   <img class="cover-hero-img" src="optimized-images/cover-hero.jpg" alt="">
   <div class="cover-overlay"></div>
 
-  <div style="position: relative; z-index: 1;">
-    <img class="cover-logo" src="optimized-images/logo.png" alt="RaceSims" style="filter: brightness(0) invert(1);">
-    <div class="cover-meta">India · Pro-grade sim racing hardware</div>
+  <div class="cover-top">
+    <img class="cover-logo" src="optimized-images/logo.png" alt="RaceSims">
+    <div class="cover-year">India · Pro-grade sim racing</div>
   </div>
 
-  <div class="cover-title-block" style="position: relative; z-index: 1;">
+  <div class="cover-mid">
     <h1>
-      Catalogue
-      <span class="accent">2026</span>
+      <span class="cat-word">Catalogue</span>
+      <span class="cat-year">2026</span>
     </h1>
-    <div class="cover-divider"></div>
+    <div class="cover-rule"></div>
     <p class="cover-tagline">
       The complete <strong>RaceSims</strong> simulator lineup.<br>
       One default sim. Two preset variants. Build your version.
     </p>
-    <p class="cover-quote">
-      "Race-engineer credibility, championship-winning teams background.<br>
+    <p class="cover-pull">
+      "Race-engineer credibility. Championship-winning teams background.<br>
       We don't sell components — we sell systems."
     </p>
   </div>
 
-  <div class="cover-footer" style="position: relative; z-index: 1;">
-    <span>racesims.in</span>
-    <span>Issued · May 2026</span>
+  <div class="cover-bottom">
+    <div class="cover-meta">racesims.in</div>
+    <div class="cover-meta">Issued · May 2026</div>
   </div>
 </section>
 
 
-<!-- ===========================================================
-     INTRO + TABLE OF CONTENTS
-     =========================================================== -->
+<!-- ============================================================
+     INTRO + TOC
+     ============================================================ -->
 <section>
   <h1>About this catalogue</h1>
   <p class="lede">
     The complete RaceSims product line, organised the way a race engineer thinks about a build:
     controls first, cockpit second, displays third, audio + haptics fourth, accessories last.
-    Pre-configured presets and a configurator walk customers from "I want a sim" to a quotable price in three decisions.
   </p>
 
   <div class="pull-quote">
-    <p><span class="quote-mark">"</span>Most sim-racing retailers sell components. RaceSims sells <strong>systems</strong>. Every kit is built around the principle that the driver's connection to the car is in the controls and the seat — and everything else exists to support that connection.<span class="quote-mark">"</span></p>
+    <p>"Most sim-racing retailers sell components. RaceSims sells <strong>systems</strong>. Every kit is built around the principle that the driver's connection to the car is in the controls and the seat — and everything else exists to support that connection."</p>
   </div>
 
-  <h3>Three principles that show up everywhere in this catalogue</h3>
+  <h3>Three principles that show up everywhere</h3>
   <ol>
     <li><strong>The wheelbase is the spine of the build.</strong> Pick this first; everything else slots in to match its capability.</li>
     <li><strong>The pedals are where most lap time lives.</strong> Cheap pedals undercut expensive wheelbases. We don't sell mismatched stacks.</li>
@@ -811,124 +1024,181 @@
   <div class="toc">
     <h3>Contents</h3>
     <ol>
-      <li>The RaceSims Sim &mdash; one default, configurable</li>
+      <li>The RaceSims Sim — one default, configurable</li>
       <li>Quick Start presets (Starter / Sim / Pro)</li>
-      <li>Section 1 &mdash; Controls (wheelbases, wheels, pedals, shifters, handbrakes)</li>
-      <li>Section 2 &mdash; Cockpit & Seating</li>
-      <li>Section 3 &mdash; Display & Compute</li>
-      <li>Section 4 &mdash; Audio & Haptics</li>
-      <li>Section 5 &mdash; 3D-printed Accessories</li>
-      <li>The Configurator &mdash; per-component options</li>
+      <li>Section 01 — Controls</li>
+      <li>Section 02 — Cockpit &amp; Seating</li>
+      <li>Section 03 — Display &amp; Compute</li>
+      <li>Section 04 — Audio &amp; Haptics</li>
+      <li>Section 05 — 3D-printed Accessories</li>
+      <li>The Configurator — per-component options</li>
       <li>Cross-tier Add-on Packs</li>
       <li>Sample Customer Journeys</li>
       <li>Commercial / B2B</li>
     </ol>
   </div>
 
-  <p class="footnote">
-    Pricing in INR, current as of May 2026. Items marked <em>verify</em> should be confirmed against the live pricelist before customer quote — landed costs and supplier MRPs shift quarterly.
-  </p>
+  <p class="footnote">Pricing in INR, current as of May 2026. Items marked <em>verify</em> should be confirmed against the live pricelist before customer quote — landed costs and supplier MRPs shift quarterly.</p>
 </section>
 
 
-<!-- ===========================================================
+<!-- ============================================================
      QUICK START PRESETS
-     =========================================================== -->
+     ============================================================ -->
 <section class="section-break">
-  <h1>The RaceSims Sim &mdash; one default, configurable</h1>
+  <h1>The RaceSims Sim<br><em style="font-weight:400; font-size:22pt;">one default, configurable</em></h1>
   <p class="lede">
-    The customer flow is built around <strong>one default sim</strong> &mdash; the recommended config.
-    Pick a Quick Start preset, then customize per component if you want.
+    Pick a Quick Start preset — then customise any component via the Configurator. Every preset shares the same RaceSims-built cockpit, standard PC build, and haptics tier.
   </p>
 
   <div class="preset-grid">
+
     <!-- STARTER -->
     <div class="preset-card">
       <img class="preset-img" src="optimized-images/ares-apex-bundle.jpg" alt="Conspit Apex Bundle">
-      <div class="title">Starter</div>
-      <div class="price">₹5,65,498</div>
-      <div class="profile">New to sim racing. Single screen. Learning the inputs. Real hardware, not a Logitech G29.</div>
-      <ul class="specs">
-        <li><span class="label">Wheelbase</span><span class="value">Conspit Ares Apex 8Nm</span></li>
-        <li><span class="label">Wheel</span><span class="value">Conspit 310 APEX</span></li>
-        <li><span class="label">Pedals</span><span class="value">Conspit CPP Apex (2-pedal)</span></li>
-        <li><span class="label">Cockpit</span><span class="value">RaceSims GT Sim Cockpit</span></li>
-        <li><span class="label">Seat</span><span class="value">Premium Recliner</span></li>
-        <li><span class="label">Display</span><span class="value">Gigabyte G34WQC 34" UW</span></li>
-        <li><span class="label">PC</span><span class="value">Standard build</span></li>
-        <li><span class="label">Audio</span><span class="value">Mid tier</span></li>
-        <li><span class="label">Haptics</span><span class="value">Standard (Dayton BTS-1)</span></li>
-      </ul>
+      <div class="preset-body">
+        <div class="preset-tier">Quick Start</div>
+        <div class="preset-name">Starter</div>
+        <div class="preset-price">₹5,65,498</div>
+        <div class="preset-profile">New to sim racing. Single screen. Learning the inputs. Real hardware, not a Logitech G29.</div>
+        <hr>
+        <ul class="preset-specs">
+          <li><span class="spec-key">Wheelbase</span><span class="spec-val">Conspit Ares Apex 8Nm</span></li>
+          <li><span class="spec-key">Wheel</span><span class="spec-val">Conspit 310 APEX</span></li>
+          <li><span class="spec-key">Pedals</span><span class="spec-val">Conspit CPP Apex (2-pedal)</span></li>
+          <li><span class="spec-key">Cockpit</span><span class="spec-val">RaceSims GT Sim</span></li>
+          <li><span class="spec-key">Seat</span><span class="spec-val">Premium Recliner</span></li>
+          <li><span class="spec-key">Display</span><span class="spec-val">Gigabyte G34WQC 34" UW</span></li>
+          <li><span class="spec-key">PC</span><span class="spec-val">Standard build</span></li>
+          <li><span class="spec-key">Audio</span><span class="spec-val">Mid tier</span></li>
+          <li><span class="spec-key">Haptics</span><span class="spec-val">Dayton BTS-1 standard</span></li>
+        </ul>
+      </div>
     </div>
 
     <!-- SIM (default) -->
     <div class="preset-card is-default">
       <img class="preset-img" src="optimized-images/IMG_8007.jpg" alt="RaceSims GT Sim Cockpit">
-      <div class="title">Sim</div>
-      <div class="price">₹6,50,998</div>
-      <div class="profile">Serious league racer. Triple screen. The volume customer &mdash; what most people get.</div>
-      <ul class="specs">
-        <li><span class="label">Wheelbase</span><span class="value">Conspit Ares 12Nm</span></li>
-        <li><span class="label">Wheel</span><span class="value">Conspit 300GT</span></li>
-        <li><span class="label">Pedals</span><span class="value">VNM Lite Pedal</span></li>
-        <li><span class="label">Cockpit</span><span class="value">RaceSims GT Sim Cockpit</span></li>
-        <li><span class="label">Seat</span><span class="value">Sport Recliner</span></li>
-        <li><span class="label">Display</span><span class="value">3 × Gigabyte GS32QC</span></li>
-        <li><span class="label">PC</span><span class="value">Standard build</span></li>
-        <li><span class="label">Audio</span><span class="value">Mid tier</span></li>
-        <li><span class="label">Haptics</span><span class="value">Standard (Dayton BTS-1)</span></li>
-      </ul>
+      <div class="preset-body">
+        <div class="preset-tier">Default</div>
+        <div class="preset-name">Sim</div>
+        <div class="preset-price">₹6,50,998</div>
+        <div class="preset-profile">Serious league racer. Triple screen. The volume customer — what most people get.</div>
+        <hr>
+        <ul class="preset-specs">
+          <li><span class="spec-key">Wheelbase</span><span class="spec-val">Conspit Ares 12Nm CDR QR</span></li>
+          <li><span class="spec-key">Wheel</span><span class="spec-val">Conspit 300GT</span></li>
+          <li><span class="spec-key">Pedals</span><span class="spec-val">VNM Lite Pedal</span></li>
+          <li><span class="spec-key">Cockpit</span><span class="spec-val">RaceSims GT Sim</span></li>
+          <li><span class="spec-key">Seat</span><span class="spec-val">Sport Recliner</span></li>
+          <li><span class="spec-key">Display</span><span class="spec-val">3 × Gigabyte GS32QC 32"</span></li>
+          <li><span class="spec-key">PC</span><span class="spec-val">Standard build</span></li>
+          <li><span class="spec-key">Audio</span><span class="spec-val">Mid tier</span></li>
+          <li><span class="spec-key">Haptics</span><span class="spec-val">Dayton BTS-1 standard</span></li>
+        </ul>
+      </div>
     </div>
 
     <!-- PRO -->
     <div class="preset-card">
       <img class="preset-img" src="optimized-images/max01-hero.jpg" alt="Conspit MAX-01">
-      <div class="title">Pro</div>
-      <div class="price">₹17,03,999</div>
-      <div class="profile">Pro / academy / commercial. Motion-equipped. Premium components. The flagship.</div>
-      <ul class="specs">
-        <li><span class="label">Wheelbase</span><span class="value">VNM DD Supreme 25Nm</span></li>
-        <li><span class="label">Wheel</span><span class="value">Conspit PW-1 Formula</span></li>
-        <li><span class="label">Pedals</span><span class="value">Conspit CPP EVO V2 (3-pedal)</span></li>
-        <li><span class="label">Cockpit</span><span class="value">GT Sim Cockpit + VNM 3DOF Motion</span></li>
-        <li><span class="label">Seat</span><span class="value">Pro X-Large Fixed Back</span></li>
-        <li><span class="label">Display</span><span class="value">3 × Gigabyte GS32QC</span></li>
-        <li><span class="label">PC</span><span class="value">Standard build</span></li>
-        <li><span class="label">Audio</span><span class="value">High-end Sonos Arc Ultra</span></li>
-        <li><span class="label">Haptics</span><span class="value">Standard (Dayton BTS-1)</span></li>
-      </ul>
+      <div class="preset-body">
+        <div class="preset-tier">Quick Start</div>
+        <div class="preset-name">Pro</div>
+        <div class="preset-price">₹17,03,999</div>
+        <div class="preset-profile">Pro / academy / commercial. Motion-equipped. Premium components. The flagship.</div>
+        <hr>
+        <ul class="preset-specs">
+          <li><span class="spec-key">Wheelbase</span><span class="spec-val">VNM DD Supreme 25Nm</span></li>
+          <li><span class="spec-key">Wheel</span><span class="spec-val">Conspit PW-1 Formula</span></li>
+          <li><span class="spec-key">Pedals</span><span class="spec-val">Conspit CPP EVO V2 (3-pedal)</span></li>
+          <li><span class="spec-key">Cockpit</span><span class="spec-val">GT Sim + VNM 3DOF Motion</span></li>
+          <li><span class="spec-key">Seat</span><span class="spec-val">Pro X-Large Fixed Back</span></li>
+          <li><span class="spec-key">Display</span><span class="spec-val">3 × Gigabyte GS32QC 32"</span></li>
+          <li><span class="spec-key">PC</span><span class="spec-val">Standard build</span></li>
+          <li><span class="spec-key">Audio</span><span class="spec-val">High-end Sonos Arc Ultra</span></li>
+          <li><span class="spec-key">Haptics</span><span class="spec-val">Dayton BTS-1 standard</span></li>
+        </ul>
+      </div>
     </div>
+
   </div>
 
-  <p class="footnote">
-    All three presets share the same RaceSims-built cockpit, standard PC build, and standard haptics tier &mdash; the tiers differ in wheelbase, wheel, pedals, seat, display, and audio. Customer can pick a preset and then customize any component via the Configurator.
-  </p>
+  <p class="footnote">All three presets share the same RaceSims-built cockpit, standard PC build, and standard haptics tier. Customer can pick a preset and customise any component via the Configurator.</p>
 </section>
 
 
-<!-- ===========================================================
-     SECTION 1 — CONTROLS
-     =========================================================== -->
+<!-- ============================================================
+     SECTION 01 — CONTROLS
+     ============================================================ -->
 <section class="section-break">
-  <h2><span class="num">01</span>Controls</h2>
+
+  <div class="section-eyebrow">
+    <div class="section-num">01</div>
+    <div class="section-title-block">
+      <div class="section-label">Section One</div>
+      <div class="section-heading">Controls</div>
+    </div>
+  </div>
 
   <img class="section-banner" src="optimized-images/ares-apex-bundle.jpg" alt="Conspit Apex bundle — wheelbase, wheel, pedals">
 
+  <p>The wheelbase generates force feedback. RaceSims stocks two brand families: <strong>Conspit</strong> (primary distributor — entry through premium) and <strong>VNM</strong> (mid through pro, plus the motion ecosystem).</p>
+
   <h3>Direct-drive wheelbases</h3>
-  <p>The wheelbase generates force feedback. RaceSims stocks two brand families: <strong>Conspit</strong> (primary distributor &mdash; entry through premium) and <strong>VNM</strong> (mid through pro, plus the motion ecosystem).</p>
 
   <table>
     <thead>
-      <tr><th></th><th>Wheelbase</th><th>Torque</th><th class="price">MRP (INR)</th></tr>
+      <tr>
+        <th></th>
+        <th>Wheelbase</th>
+        <th>Torque</th>
+        <th class="price">MRP (INR)</th>
+      </tr>
     </thead>
     <tbody>
-      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/wb-apex8.jpg" alt=""></td><td><strong>Conspit Ares Apex 8Nm CDR QR</strong></td><td>8 Nm</td><td class="price">49,999</td></tr>
-      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/wb-12nm.jpg" alt=""></td><td><strong>Conspit Ares 12Nm CDR QR</strong> &nbsp;<span class="label">Sim default</span></td><td>12 Nm</td><td class="price">59,999</td></tr>
-      <tr><td class="thumb-cell"></td><td>VNM Direct Drive Premier 13Nm</td><td>13 Nm</td><td class="price">75,000</td></tr>
-      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/wb-platinum.jpg" alt=""></td><td>Conspit Ares Platinum 20Nm CDR QR</td><td>20 Nm</td><td class="price">85,000</td></tr>
-      <tr><td class="thumb-cell"></td><td>VNM Direct Drive Elite 18Nm</td><td>18 Nm</td><td class="price">95,000</td></tr>
-      <tr class="row-highlight"><td class="thumb-cell"></td><td><strong>VNM Direct Drive Supreme 25Nm</strong> &nbsp;<span class="label">Pro default</span></td><td>25 Nm</td><td class="price">1,15,000</td></tr>
-      <tr><td class="thumb-cell"></td><td>VNM Direct Drive Xtreme 32Nm</td><td>32 Nm</td><td class="price">1,40,000</td></tr>
+      <tr>
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/wb-apex8.jpg" alt=""></td>
+        <td><strong>Conspit Ares Apex 8Nm CDR QR</strong></td>
+        <td>8 Nm</td>
+        <td class="price">49,999</td>
+      </tr>
+      <tr class="row-highlight">
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/wb-12nm.jpg" alt=""></td>
+        <td><strong>Conspit Ares 12Nm CDR QR</strong> <span class="badge badge-red">Sim default</span></td>
+        <td>12 Nm</td>
+        <td class="price">59,999</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"></td>
+        <td>VNM Direct Drive Premier 13Nm</td>
+        <td>13 Nm</td>
+        <td class="price">75,000</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/wb-platinum.jpg" alt=""></td>
+        <td>Conspit Ares Platinum 20Nm CDR QR</td>
+        <td>20 Nm</td>
+        <td class="price">85,000</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"></td>
+        <td>VNM Direct Drive Elite 18Nm</td>
+        <td>18 Nm</td>
+        <td class="price">95,000</td>
+      </tr>
+      <tr class="row-highlight">
+        <td class="thumb-cell"></td>
+        <td><strong>VNM Direct Drive Supreme 25Nm</strong> <span class="badge badge-red">Pro default</span></td>
+        <td>25 Nm</td>
+        <td class="price">1,15,000</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"></td>
+        <td>VNM Direct Drive Xtreme 32Nm</td>
+        <td>32 Nm</td>
+        <td class="price">1,40,000</td>
+      </tr>
     </tbody>
   </table>
 
@@ -939,14 +1209,54 @@
       <tr><th></th><th>Wheel</th><th>Style</th><th class="price">MRP (INR)</th></tr>
     </thead>
     <tbody>
-      <tr><td class="thumb-cell"></td><td>Conspit 310 APEX</td><td>Round rim, beginner-friendly</td><td class="price">39,999</td></tr>
-      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/wh-300gt.jpg" alt=""></td><td><strong>Conspit 300GT</strong> &nbsp;<span class="label">Sim default</span></td><td>GT / touring</td><td class="price">49,999</td></tr>
-      <tr><td class="thumb-cell"></td><td>VNM GT Steering Wheel V1</td><td>GT / touring</td><td class="price">59,999</td></tr>
-      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/wh-290gp.jpg" alt=""></td><td>Conspit 290GP</td><td>Formula-influenced GT</td><td class="price">69,500</td></tr>
-      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/wh-max01.jpg" alt=""></td><td>Conspit MAX-01</td><td>Premium GT</td><td class="price">76,500</td></tr>
-      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/wh-pw1.jpg" alt=""></td><td><strong>Conspit PW-1</strong> &nbsp;<span class="label">Pro default</span></td><td>Pro F1</td><td class="price">2,10,000</td></tr>
-      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/wh-hub.jpg" alt=""></td><td>Conspit H.O.A Hub</td><td>Hub for swappable rims</td><td class="price">59,500</td></tr>
-      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/wh-cdr.jpg" alt=""></td><td>Conspit CDR Quick Release</td><td>Tool-free wheel changes</td><td class="price">6,500</td></tr>
+      <tr>
+        <td class="thumb-cell"></td>
+        <td>Conspit 310 APEX</td>
+        <td>Round rim, beginner-friendly</td>
+        <td class="price">39,999</td>
+      </tr>
+      <tr class="row-highlight">
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/wh-300gt.jpg" alt=""></td>
+        <td><strong>Conspit 300GT</strong> <span class="badge badge-red">Sim default</span></td>
+        <td>GT / touring</td>
+        <td class="price">49,999</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"></td>
+        <td>VNM GT Steering Wheel V1</td>
+        <td>GT / touring</td>
+        <td class="price">59,999</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/wh-290gp.jpg" alt=""></td>
+        <td>Conspit 290GP</td>
+        <td>Formula-influenced GT</td>
+        <td class="price">69,500</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/wh-max01.jpg" alt=""></td>
+        <td>Conspit MAX-01</td>
+        <td>Premium GT</td>
+        <td class="price">76,500</td>
+      </tr>
+      <tr class="row-highlight">
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/wh-pw1.jpg" alt=""></td>
+        <td><strong>Conspit PW-1</strong> <span class="badge badge-red">Pro default</span></td>
+        <td>Pro F1</td>
+        <td class="price">2,10,000</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/wh-hub.jpg" alt=""></td>
+        <td>Conspit H.O.A Hub</td>
+        <td>Hub for swappable rims</td>
+        <td class="price">59,500</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/wh-cdr.jpg" alt=""></td>
+        <td>Conspit CDR Quick Release</td>
+        <td>Tool-free wheel changes</td>
+        <td class="price">6,500</td>
+      </tr>
     </tbody>
   </table>
 
@@ -958,51 +1268,99 @@
       <tr><th></th><th>Pedal Set</th><th>Channels</th><th class="price">MRP (from)</th></tr>
     </thead>
     <tbody>
-      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/pd-apex.jpg" alt=""></td><td>Conspit CPP Apex</td><td>2-pedal</td><td class="price">33,000</td></tr>
-      <tr class="row-highlight"><td class="thumb-cell"></td><td><strong>VNM Lite Pedal</strong> &nbsp;<span class="label">Sim default</span></td><td>2-pedal</td><td class="price">42,000</td></tr>
-      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/pd-lite.jpg" alt=""></td><td>Conspit CPP Lite</td><td>2-pedal / 3-pedal upgrade</td><td class="price">59,999</td></tr>
-      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/pd-evo.jpg" alt=""></td><td><strong>Conspit CPP EVO V2</strong> &nbsp;<span class="label">Pro default (3-pedal)</span></td><td>2-pedal / 3-pedal +clutch</td><td class="price">79,999</td></tr>
+      <tr>
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/pd-apex.jpg" alt=""></td>
+        <td>Conspit CPP Apex</td>
+        <td>2-pedal</td>
+        <td class="price">33,000</td>
+      </tr>
+      <tr class="row-highlight">
+        <td class="thumb-cell"></td>
+        <td><strong>VNM Lite Pedal</strong> <span class="badge badge-red">Sim default</span></td>
+        <td>2-pedal</td>
+        <td class="price">42,000</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/pd-lite.jpg" alt=""></td>
+        <td>Conspit CPP Lite</td>
+        <td>2-pedal / 3-pedal upgrade</td>
+        <td class="price">59,999</td>
+      </tr>
+      <tr class="row-highlight">
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/pd-evo.jpg" alt=""></td>
+        <td><strong>Conspit CPP EVO V2</strong> <span class="badge badge-red">Pro default (3-pedal)</span></td>
+        <td>2-pedal / 3-pedal +clutch</td>
+        <td class="price">79,999</td>
+      </tr>
     </tbody>
   </table>
 
-  <h3>Shifters & handbrakes</h3>
-  <p>Both shifter and handbrake are <strong>optional</strong> &mdash; not in any default preset. Most circuit racers don't use either; rally and classic GT customers need both.</p>
+  <h3>Shifters &amp; handbrakes</h3>
+  <p>Optional — not in any default preset. Rally and classic GT customers need both; circuit racers typically don't use either.</p>
 
   <table>
     <thead>
       <tr><th></th><th>Component</th><th>Purpose</th><th class="price">MRP (INR)</th></tr>
     </thead>
     <tbody>
-      <tr><td class="thumb-cell"></td><td>VNM Sequential / H-Pattern Shifter</td><td>Dual-mode (sequential + H-pattern)</td><td class="price">35,000</td></tr>
-      <tr><td class="thumb-cell"></td><td>VNM 1.5 Rally Handbrake</td><td>Mechanical-feel rally handbrake</td><td class="price">35,000</td></tr>
-      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/hb-h3.jpg" alt=""></td><td>Conspit H3 Hydraulic Handbrake</td><td>Hydraulic-feel premium handbrake</td><td class="price">35,500</td></tr>
+      <tr>
+        <td class="thumb-cell"></td>
+        <td>VNM Sequential / H-Pattern Shifter</td>
+        <td>Dual-mode (sequential + H-pattern)</td>
+        <td class="price">35,000</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"></td>
+        <td>VNM 1.5 Rally Handbrake</td>
+        <td>Mechanical-feel rally handbrake</td>
+        <td class="price">35,000</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/hb-h3.jpg" alt=""></td>
+        <td>Conspit H3 Hydraulic Handbrake</td>
+        <td>Hydraulic-feel premium handbrake</td>
+        <td class="price">35,500</td>
+      </tr>
     </tbody>
   </table>
+
 </section>
 
 
-<!-- ===========================================================
-     SECTION 2 — COCKPIT & SEATING
-     =========================================================== -->
+<!-- ============================================================
+     SECTION 02 — COCKPIT & SEATING
+     ============================================================ -->
 <section class="section-break">
-  <h2><span class="num">02</span>Cockpit & Seating</h2>
 
-  <img class="section-banner" src="optimized-images/IMG_8007.jpg" alt="RaceSims GT Sim Cockpit frame, manufactured in Chennai">
+  <div class="section-eyebrow">
+    <div class="section-num">02</div>
+    <div class="section-title-block">
+      <div class="section-label">Section Two</div>
+      <div class="section-heading">Cockpit &amp; Seating</div>
+    </div>
+  </div>
+
+  <img class="section-banner" src="optimized-images/IMG_8007.jpg" alt="RaceSims GT Sim Cockpit, manufactured in Chennai">
 
   <h3>Cockpit frames</h3>
-  <p>RaceSims manufactures the GT Sim Cockpit in Chennai. Aluminium-profile (40&times;40 / 40&times;80 mm extrusion) construction. <strong>Local manufacturing</strong> means quick service, replacements, and customisation no imported rig provides.</p>
+  <p>RaceSims manufactures the GT Sim Cockpit in Chennai. Aluminium-profile (40×40 / 40×80 mm extrusion) construction. <strong>Local manufacturing</strong> means quick service, replacements, and customisation no imported rig provides.</p>
 
   <table>
     <thead>
       <tr><th>Frame</th><th class="price">MRP (INR)</th></tr>
     </thead>
     <tbody>
-      <tr class="row-highlight"><td><strong>RaceSims GT Sim Cockpit</strong> &nbsp;<span class="label">Default for all presets</span><br><span class="small">Handles GT, Formula (with appropriate wheel + 3-pedal), Rally (with handbrake add-on)</span></td><td class="price">38,500</td></tr>
+      <tr class="row-highlight">
+        <td>
+          <strong>RaceSims GT Sim Cockpit</strong> <span class="badge badge-red">Default for all presets</span><br>
+          <span class="small">Handles GT, Formula (with appropriate wheel + 3-pedal), Rally (with handbrake add-on)</span>
+        </td>
+        <td class="price">38,500</td>
+      </tr>
     </tbody>
   </table>
-  <p class="footnote">
-    Conspit formula cockpits (FP-Lite, FC, FC PRO, FC PRO MOTION) are currently <strong>out of production</strong>, removed from active catalogue as of May 2026. Will return when Conspit resumes production. For commercial customers wanting an enclosed cabin experience, see Commercial / B2B section.
-  </p>
+
+  <p class="footnote">Conspit formula cockpits (FP-Lite, FC, FC PRO, FC PRO MOTION) are currently <strong>out of production</strong>, removed from active catalogue as of May 2026. Will return when Conspit resumes production. For commercial customers wanting an enclosed cabin, see Commercial / B2B section.</p>
 
   <h3>Seats</h3>
   <table>
@@ -1010,10 +1368,30 @@
       <tr><th></th><th>Seat</th><th>Fit / use case</th><th class="price">MRP (INR)</th></tr>
     </thead>
     <tbody>
-      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/st-recliner.jpg" alt=""></td><td>RaceSims Premium Recliner &nbsp;<span class="label muted">Starter default</span></td><td>Standard recliner. Comfortable for long sessions.</td><td class="price">29,500</td></tr>
-      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/st-sport.jpg" alt=""></td><td><strong>RaceSims Sport Recliner</strong> &nbsp;<span class="label">Sim default</span></td><td>Sport-styled recliner with stiffer support.</td><td class="price">36,500</td></tr>
-      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/st-fixed.jpg" alt=""></td><td>RaceSims Pro Fixed Back Bucket</td><td>Stiff, narrow, no recline. Proper GT seat.</td><td class="price">39,500</td></tr>
-      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/st-xl.jpg" alt=""></td><td><strong>RaceSims Pro X-Large Fixed Back</strong> &nbsp;<span class="label">Pro default</span></td><td>Wider profile, fits up to 110+ kg.</td><td class="price">45,500</td></tr>
+      <tr>
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/st-recliner.jpg" alt=""></td>
+        <td>RaceSims Premium Recliner <span class="badge badge-gray">Starter default</span></td>
+        <td>Standard recliner. Comfortable for long sessions.</td>
+        <td class="price">29,500</td>
+      </tr>
+      <tr class="row-highlight">
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/st-sport.jpg" alt=""></td>
+        <td><strong>RaceSims Sport Recliner</strong> <span class="badge badge-red">Sim default</span></td>
+        <td>Sport-styled recliner with stiffer support.</td>
+        <td class="price">36,500</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/st-fixed.jpg" alt=""></td>
+        <td>RaceSims Pro Fixed Back Bucket</td>
+        <td>Stiff, narrow, no recline. Proper GT seat.</td>
+        <td class="price">39,500</td>
+      </tr>
+      <tr class="row-highlight">
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/st-xl.jpg" alt=""></td>
+        <td><strong>RaceSims Pro X-Large Fixed Back</strong> <span class="badge badge-red">Pro default</span></td>
+        <td>Wider profile, fits up to 110+ kg.</td>
+        <td class="price">45,500</td>
+      </tr>
     </tbody>
   </table>
 
@@ -1023,10 +1401,10 @@
       <tr><th>Stand</th><th>When to use</th><th class="price">MRP (INR)</th></tr>
     </thead>
     <tbody>
-      <tr><td>Integrated Single Screen Stand</td><td>Bolts onto cockpit; Tier 1 single-screen builds</td><td class="price">8,000</td></tr>
-      <tr><td>Standalone Single Screen Stand</td><td>Free-standing single &mdash; monitor independent of cockpit</td><td class="price">12,000</td></tr>
+      <tr><td>Integrated Single Screen Stand</td><td>Bolts onto cockpit; single-screen builds</td><td class="price">8,000</td></tr>
+      <tr><td>Standalone Single Screen Stand</td><td>Free-standing single — monitor independent of cockpit</td><td class="price">12,000</td></tr>
       <tr><td>Standalone Triple Screen Stand</td><td>Free-standing triple, fixed angles</td><td class="price">20,500</td></tr>
-      <tr class="row-highlight"><td><strong>Standalone Triple w/ Precision Alignment</strong> &nbsp;<span class="label">Sim + Pro default</span></td><td>Triple stand with adjustable per-monitor angle/position</td><td class="price">30,500</td></tr>
+      <tr class="row-highlight"><td><strong>Standalone Triple w/ Precision Alignment</strong> <span class="badge badge-red">Sim + Pro default</span></td><td>Triple stand with adjustable per-monitor angle/position</td><td class="price">30,500</td></tr>
     </tbody>
   </table>
 
@@ -1038,7 +1416,7 @@
     <tbody>
       <tr><td>Mouse Tray</td><td>Slides under cockpit for between-session mouse use</td><td class="price">500</td></tr>
       <tr><td>Integrated PC Stand</td><td>Mounts the sim PC under/beside the cockpit</td><td class="price">5,000</td></tr>
-      <tr><td>HD Castor Wheels</td><td>Wheel the rig away when room is needed for non-sim use</td><td class="price">5,000</td></tr>
+      <tr><td>HD Castor Wheels</td><td>Wheel the rig away when room is needed</td><td class="price">5,000</td></tr>
       <tr><td>Handbrake / Shifter Mount</td><td>Side mount for handbrake or shifter onto rig profile</td><td class="price">4,000</td></tr>
       <tr><td>Keyboard Tray</td><td>Slides out under the cockpit for keyboard work</td><td class="price">7,500</td></tr>
     </tbody>
@@ -1050,35 +1428,68 @@
       <tr><th>System</th><th>Configuration</th><th class="price">MRP (INR)</th></tr>
     </thead>
     <tbody>
-      <tr class="row-highlight"><td><strong>VNM 3DOF Motion Kit</strong> &nbsp;<span class="label">Pro preset includes</span></td><td>4 × linear actuators + control unit. Pitch / roll / heave.</td><td class="price">6,00,000</td></tr>
+      <tr class="row-highlight">
+        <td><strong>VNM 3DOF Motion Kit</strong> <span class="badge badge-red">Pro preset includes</span></td>
+        <td>4 × linear actuators + control unit. Pitch / roll / heave.</td>
+        <td class="price">6,00,000</td>
+      </tr>
     </tbody>
   </table>
+
 </section>
 
 
-<!-- ===========================================================
-     SECTION 3 — DISPLAY & COMPUTE
-     =========================================================== -->
+<!-- ============================================================
+     SECTION 03 — DISPLAY & COMPUTE
+     ============================================================ -->
 <section class="section-break">
-  <h2><span class="num">03</span>Display & Compute</h2>
+
+  <div class="section-eyebrow">
+    <div class="section-num">03</div>
+    <div class="section-title-block">
+      <div class="section-label">Section Three</div>
+      <div class="section-heading">Display &amp; Compute</div>
+    </div>
+  </div>
 
   <h3>Monitors</h3>
-  <p>RaceSims stocks the Gigabyte lineup as the standard offering &mdash; distributed via Devraj Computers (TN).</p>
+  <p>RaceSims stocks the Gigabyte lineup as the standard offering — distributed via Devraj Computers (TN).</p>
 
   <table>
     <thead>
       <tr><th></th><th>Display Config</th><th>Monitor</th><th class="price">MRP (INR)</th></tr>
     </thead>
     <tbody>
-      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/mon-gs32qc.jpg" alt=""></td><td><strong>Triple 32" 1440p</strong> &nbsp;<span class="label">Sim + Pro default</span></td><td>3 × Gigabyte GS32QC 32" 165 Hz Curved</td><td class="price">61,500 (triple) / 20,500 (single)</td></tr>
-      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/mon-gs27f.jpg" alt=""></td><td>Triple 27" 1080p (entry triple)</td><td>3 × Gigabyte GS27F 27" 165 Hz Flat</td><td class="price">37,500 (triple)</td></tr>
-      <tr class="row-highlight"><td class="thumb-cell"><img class="thumb" src="optimized-images/mon-g34wqc.jpg" alt=""></td><td><strong>Single 34" Ultrawide</strong> &nbsp;<span class="label muted">Starter default</span></td><td>Gigabyte G34WQC 34" 2K Curved</td><td class="price">34,500</td></tr>
-      <tr><td class="thumb-cell"><img class="thumb" src="optimized-images/mon-co49dq.jpg" alt=""></td><td>Single 49" Ultrawide OLED</td><td>Gigabyte CO49DQ 49" 144 Hz OLED Curved</td><td class="price">1,34,500</td></tr>
+      <tr class="row-highlight">
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/mon-gs32qc.jpg" alt=""></td>
+        <td><strong>Triple 32" 1440p</strong> <span class="badge badge-red">Sim + Pro default</span></td>
+        <td>3 × Gigabyte GS32QC 32" 165 Hz Curved</td>
+        <td class="price">61,500 (triple) / 20,500 (ea)</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/mon-gs27f.jpg" alt=""></td>
+        <td>Triple 27" 1080p (entry triple)</td>
+        <td>3 × Gigabyte GS27F 27" 165 Hz Flat</td>
+        <td class="price">37,500 (triple)</td>
+      </tr>
+      <tr class="row-highlight">
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/mon-g34wqc.jpg" alt=""></td>
+        <td><strong>Single 34" Ultrawide</strong> <span class="badge badge-gray">Starter default</span></td>
+        <td>Gigabyte G34WQC 34" 2K Curved</td>
+        <td class="price">34,500</td>
+      </tr>
+      <tr>
+        <td class="thumb-cell"><img class="thumb" src="optimized-images/mon-co49dq.jpg" alt=""></td>
+        <td>Single 49" Ultrawide OLED</td>
+        <td>Gigabyte CO49DQ 49" 144 Hz OLED Curved</td>
+        <td class="price">1,34,500</td>
+      </tr>
     </tbody>
   </table>
 
-  <h3>Sim PC</h3>
+  <h3>Sim PC — standard build</h3>
   <p>Built to order, Chennai. Standard build for all three presets:</p>
+
   <table>
     <thead>
       <tr><th>Component</th><th>Spec</th></tr>
@@ -1096,17 +1507,26 @@
       <tr class="row-highlight"><td><strong>Standard Build MRP</strong></td><td><strong>~₹2,40,000</strong></td></tr>
     </tbody>
   </table>
+
 </section>
 
 
-<!-- ===========================================================
-     SECTION 4 — AUDIO & HAPTICS
-     =========================================================== -->
+<!-- ============================================================
+     SECTION 04 — AUDIO & HAPTICS
+     ============================================================ -->
 <section class="section-break">
-  <h2><span class="num">04</span>Audio & Haptics</h2>
+
+  <div class="section-eyebrow">
+    <div class="section-num">04</div>
+    <div class="section-title-block">
+      <div class="section-label">Section Four</div>
+      <div class="section-heading">Audio &amp; Haptics</div>
+    </div>
+  </div>
+
   <p>Two audio tiers (mid / high-end), one haptics tier (standard with optional premium upgrade).</p>
 
-  <h3>Audio &mdash; MID tier <span class="label muted">Default for Starter & Sim presets</span></h3>
+  <h3>Audio — Mid tier <span class="badge badge-gray">Default: Starter &amp; Sim</span></h3>
   <table>
     <thead>
       <tr><th>Component</th><th>Pick</th><th class="price">MRP</th></tr>
@@ -1114,12 +1534,12 @@
     <tbody>
       <tr><td>Speakers</td><td>Logitech Z906 5.1</td><td class="price">~40,000–45,000</td></tr>
       <tr><td>Sound card</td><td>Creative Sound Blaster AE-5+</td><td class="price">~15,000–18,000</td></tr>
-      <tr><td>Headphones</td><td>Razer Black Shark V2 Hyperspeed Wireless</td><td class="price">~14,000–16,000</td></tr>
-      <tr class="row-highlight"><td colspan="2"><strong>Total &mdash; mid audio</strong></td><td class="price"><strong>~₹75,000</strong></td></tr>
+      <tr><td>Headphones</td><td>Razer BlackShark V2 Hyperspeed Wireless</td><td class="price">~14,000–16,000</td></tr>
+      <tr class="row-highlight"><td colspan="2"><strong>Total — mid audio</strong></td><td class="price"><strong>~₹75,000</strong></td></tr>
     </tbody>
   </table>
 
-  <h3>Audio &mdash; HIGH-END tier <span class="label">Pro preset default</span></h3>
+  <h3>Audio — High-end tier <span class="badge badge-red">Default: Pro</span></h3>
   <table>
     <thead>
       <tr><th>Component</th><th>Pick</th><th class="price">MRP</th></tr>
@@ -1130,13 +1550,13 @@
       <tr><td>Surrounds</td><td>2 × Sonos Era 100</td><td class="price">~50,000</td></tr>
       <tr><td>Headphones</td><td>Audeze Maxwell wireless (or Arctis Nova Pro Wireless)</td><td class="price">~40,000</td></tr>
       <tr><td>Cables, brackets, switch</td><td>HDMI 2.1 + Sanus + Vogel's + 5-port gigabit switch</td><td class="price">~5,500</td></tr>
-      <tr class="row-highlight"><td colspan="2"><strong>Total &mdash; high-end (Beam path)</strong></td><td class="price"><strong>~₹1,90,000</strong></td></tr>
-      <tr class="row-highlight"><td colspan="2"><strong>Total &mdash; high-end (Arc Ultra path)</strong></td><td class="price"><strong>~₹2,50,000</strong></td></tr>
+      <tr class="row-highlight"><td colspan="2"><strong>Total — high-end (Beam path)</strong></td><td class="price"><strong>~₹1,90,000</strong></td></tr>
+      <tr class="row-highlight"><td colspan="2"><strong>Total — high-end (Arc Ultra path)</strong></td><td class="price"><strong>~₹2,50,000</strong></td></tr>
     </tbody>
   </table>
 
-  <h3>Haptics &mdash; STANDARD <span class="label">Default for all presets</span></h3>
-  <p>Body-felt impact via tactile transducers. Telemetry-driven (SimHub Shake-It module) &mdash; not audio-tap, so no signal conflict with the speaker tier.</p>
+  <h3>Haptics — Standard <span class="badge badge-red">Default: all presets</span></h3>
+  <p>Body-felt impact via tactile transducers. Telemetry-driven (SimHub Shake-It) — not audio-tap, so no signal conflict with the speaker tier.</p>
   <table>
     <thead>
       <tr><th>Component</th><th>Pick</th><th class="price">MRP</th></tr>
@@ -1145,19 +1565,28 @@
       <tr><td>Bass transducers</td><td>2 × Dayton Audio BTS-1</td><td class="price">~10,000–14,000</td></tr>
       <tr><td>Amplifier</td><td>Nobsound 2-channel USB DAC amp</td><td class="price">~4,000–6,000</td></tr>
       <tr><td>Mount kit</td><td>RaceSims SKU 11 (PETG ₹999 / PA-CF ₹1,499)</td><td class="price">~1,500</td></tr>
-      <tr class="row-highlight"><td colspan="2"><strong>Total &mdash; haptics standard</strong></td><td class="price"><strong>~₹17,000</strong></td></tr>
+      <tr class="row-highlight"><td colspan="2"><strong>Total — haptics standard</strong></td><td class="price"><strong>~₹17,000</strong></td></tr>
       <tr><td colspan="2">Premium upgrade: Buttkicker LFE Kit + amp</td><td class="price">+1,00,000</td></tr>
     </tbody>
   </table>
+
 </section>
 
 
-<!-- ===========================================================
-     SECTION 5 — 3D-PRINTED ACCESSORIES
-     =========================================================== -->
+<!-- ============================================================
+     SECTION 05 — 3D-PRINTED ACCESSORIES
+     ============================================================ -->
 <section class="section-break">
-  <h2><span class="num">05</span>3D-printed Accessories</h2>
-  <p class="lede">In-house 3D-printed accessory line. <strong>13 SKUs</strong> across 4 design sprints. Produced on the Bambu Lab X1 Carbon at our Chennai workshop. Most ship bundled with rigs; all sold standalone for retrofits.</p>
+
+  <div class="section-eyebrow">
+    <div class="section-num">05</div>
+    <div class="section-title-block">
+      <div class="section-label">Section Five</div>
+      <div class="section-heading">3D-printed Accessories</div>
+    </div>
+  </div>
+
+  <p class="lede">In-house 3D-printed accessory line. <strong>13 SKUs</strong> across 4 design sprints. Produced on the Bambu Lab X1 Carbon at our Chennai workshop.</p>
 
   <table>
     <thead>
@@ -1165,112 +1594,200 @@
     </thead>
     <tbody>
       <tr><td>1</td><td>Catalogue basics</td><td>Phone holder, cup holder, profile end caps, RaceSims logo badge</td><td class="price">₹299–999</td></tr>
-      <tr><td>2</td><td>Lighting & premium add-ons</td><td>LED strip channel, Hue Play holder, Conspit 310 Apex side plates, bass-shaker enclosure</td><td class="price">₹599–1,499</td></tr>
-      <tr><td>3</td><td>Premium & custom</td><td>Wind-simulator fan housing, custom shift knob</td><td class="price">₹1,499–2,499</td></tr>
+      <tr><td>2</td><td>Lighting &amp; premium add-ons</td><td>LED strip channel, Hue Play holder, Conspit 310 Apex side plates, bass-shaker enclosure</td><td class="price">₹599–1,499</td></tr>
+      <tr><td>3</td><td>Premium &amp; custom</td><td>Wind-simulator fan housing, custom shift knob</td><td class="price">₹1,499–2,499</td></tr>
       <tr><td>4</td><td>Audio tier mounts</td><td>BTS-1 mount kit, Sonos Era 100 rig mount, universal soundbar shelf</td><td class="price">₹999–2,499</td></tr>
     </tbody>
   </table>
 
   <p class="footnote">Bundled free with every kit: profile end caps + RaceSims logo badge.</p>
+
 </section>
 
 
-<!-- ===========================================================
-     CONFIGURATOR
-     =========================================================== -->
+<!-- ============================================================
+     THE CONFIGURATOR
+     ============================================================ -->
 <section class="section-break">
   <h1>The Configurator</h1>
-  <p class="lede">Each component shows the <strong>picked default</strong> with inline alternatives and explicit price deltas. Customer swaps any component up or down on the same page.</p>
+  <p class="lede">Each component shows the picked default with inline alternatives and explicit price deltas. Swap any component up or down on the same page.</p>
 
-  <h3>Wheelbase</h3>
-  <div class="config-block">
-    <div class="config-options">
-      <div class="config-row is-default">
-        <div class="name"><span class="marker"></span><strong>Conspit Ares 12Nm CDR QR</strong> <span class="recommended">Default</span></div>
-        <div class="price zero">₹59,999</div>
-      </div>
-      <div class="config-row"><div class="name"><span class="marker"></span>Conspit Ares Apex 8Nm CDR QR</div><div class="price down">−₹10,000</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>VNM DD Premier 13Nm</div><div class="price up">+₹15,001</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>Conspit Ares Platinum 20Nm CDR QR</div><div class="price up">+₹25,001</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>VNM DD Elite 18Nm</div><div class="price up">+₹35,001</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>VNM DD Supreme 25Nm</div><div class="price up">+₹55,001</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>VNM DD Xtreme 32Nm</div><div class="price up">+₹80,001</div></div>
+  <div class="config-section">
+    <div class="config-label">Wheelbase</div>
+    <div class="config-row is-default">
+      <span class="config-dot"></span>
+      <span class="config-name"><strong>Conspit Ares 12Nm CDR QR</strong> <span class="config-badge">Default</span></span>
+      <span class="config-price">₹59,999</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">Conspit Ares Apex 8Nm CDR QR</span>
+      <span class="config-price down">−₹10,000</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">VNM DD Premier 13Nm</span>
+      <span class="config-price up">+₹15,001</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">Conspit Ares Platinum 20Nm CDR QR</span>
+      <span class="config-price up">+₹25,001</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">VNM DD Elite 18Nm</span>
+      <span class="config-price up">+₹35,001</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">VNM DD Supreme 25Nm</span>
+      <span class="config-price up">+₹55,001</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">VNM DD Xtreme 32Nm</span>
+      <span class="config-price up">+₹80,001</span>
     </div>
   </div>
 
-  <h3>Wheel</h3>
-  <div class="config-block">
-    <div class="config-options">
-      <div class="config-row is-default">
-        <div class="name"><span class="marker"></span><strong>Conspit 300GT</strong> <span class="recommended">Default</span></div>
-        <div class="price zero">₹49,999</div>
-      </div>
-      <div class="config-row"><div class="name"><span class="marker"></span>Conspit 310 APEX</div><div class="price down">−₹10,000</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>VNM GT Steering Wheel V1</div><div class="price up">+₹10,000</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>Conspit 290GP (formula-style)</div><div class="price up">+₹19,501</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>Conspit MAX-01</div><div class="price up">+₹26,501</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>Conspit PW-1 Formula (pro F1)</div><div class="price up">+₹1,60,001</div></div>
+  <div class="config-section">
+    <div class="config-label">Wheel</div>
+    <div class="config-row is-default">
+      <span class="config-dot"></span>
+      <span class="config-name"><strong>Conspit 300GT</strong> <span class="config-badge">Default</span></span>
+      <span class="config-price">₹49,999</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">Conspit 310 APEX</span>
+      <span class="config-price down">−₹10,000</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">VNM GT Steering Wheel V1</span>
+      <span class="config-price up">+₹10,000</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">Conspit 290GP (formula-style)</span>
+      <span class="config-price up">+₹19,501</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">Conspit MAX-01</span>
+      <span class="config-price up">+₹26,501</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">Conspit PW-1 Formula (pro F1)</span>
+      <span class="config-price up">+₹1,60,001</span>
     </div>
   </div>
 
-  <h3>Pedals</h3>
-  <div class="config-block">
-    <div class="config-options">
-      <div class="config-row is-default">
-        <div class="name"><span class="marker"></span><strong>VNM Lite Pedal</strong> <span class="recommended">Default</span></div>
-        <div class="price zero">₹42,000</div>
-      </div>
-      <div class="config-row"><div class="name"><span class="marker"></span>Conspit CPP Apex</div><div class="price down">−₹9,000</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>Conspit CPP Lite (2-pedal)</div><div class="price up">+₹17,999</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>Conspit CPP EVO V2 (2-pedal)</div><div class="price up">+₹37,999</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>Conspit CPP EVO V2 (3-pedal — clutch)</div><div class="price up">+₹53,999</div></div>
+  <div class="config-section">
+    <div class="config-label">Pedals</div>
+    <div class="config-row is-default">
+      <span class="config-dot"></span>
+      <span class="config-name"><strong>VNM Lite Pedal</strong> <span class="config-badge">Default</span></span>
+      <span class="config-price">₹42,000</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">Conspit CPP Apex</span>
+      <span class="config-price down">−₹9,000</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">Conspit CPP Lite (2-pedal)</span>
+      <span class="config-price up">+₹17,999</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">Conspit CPP EVO V2 (2-pedal)</span>
+      <span class="config-price up">+₹37,999</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">Conspit CPP EVO V2 (3-pedal — clutch)</span>
+      <span class="config-price up">+₹53,999</span>
     </div>
   </div>
 
-  <h3>Display</h3>
-  <div class="config-block">
-    <div class="config-options">
-      <div class="config-row is-default">
-        <div class="name"><span class="marker"></span><strong>Triple 32" 1440p (3 × Gigabyte GS32QC + Triple Stand)</strong> <span class="recommended">Default</span></div>
-        <div class="price zero">₹92,000</div>
-      </div>
-      <div class="config-row"><div class="name"><span class="marker"></span>Single 34" Ultrawide (Gigabyte G34WQC)</div><div class="price down">−₹35,000</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>Triple 27" 1080p (3 × Gigabyte GS27F)</div><div class="price down">−₹24,000</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>Single 49" OLED (Gigabyte CO49DQ)</div><div class="price up">+₹65,000</div></div>
+  <div class="config-section">
+    <div class="config-label">Display</div>
+    <div class="config-row is-default">
+      <span class="config-dot"></span>
+      <span class="config-name"><strong>Triple 32" 1440p (3 × GS32QC + Precision Triple Stand)</strong> <span class="config-badge">Default</span></span>
+      <span class="config-price">₹92,000</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">Single 34" Ultrawide (Gigabyte G34WQC)</span>
+      <span class="config-price down">−₹35,000</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">Triple 27" 1080p (3 × Gigabyte GS27F)</span>
+      <span class="config-price down">−₹24,000</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">Single 49" OLED (Gigabyte CO49DQ)</span>
+      <span class="config-price up">+₹65,000</span>
     </div>
   </div>
 
-  <h3>Audio</h3>
-  <div class="config-block">
-    <div class="config-options">
-      <div class="config-row is-default">
-        <div class="name"><span class="marker"></span><strong>Mid tier (Z906 + AE-5+ + Razer)</strong> <span class="recommended">Default</span></div>
-        <div class="price zero">₹75,000</div>
-      </div>
-      <div class="config-row"><div class="name"><span class="marker"></span>High-end Sonos Beam path</div><div class="price up">+₹1,15,000</div></div>
-      <div class="config-row"><div class="name"><span class="marker"></span>High-end Sonos Arc Ultra path</div><div class="price up">+₹1,75,000</div></div>
+  <div class="config-section">
+    <div class="config-label">Audio</div>
+    <div class="config-row is-default">
+      <span class="config-dot"></span>
+      <span class="config-name"><strong>Mid tier (Z906 + AE-5+ + Razer)</strong> <span class="config-badge">Default</span></span>
+      <span class="config-price">₹75,000</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">High-end Sonos Beam path</span>
+      <span class="config-price up">+₹1,15,000</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">High-end Sonos Arc Ultra path</span>
+      <span class="config-price up">+₹1,75,000</span>
     </div>
   </div>
 
-  <h3>Haptics</h3>
-  <div class="config-block">
-    <div class="config-options">
-      <div class="config-row is-default">
-        <div class="name"><span class="marker"></span><strong>Standard (2 × Dayton BTS-1 + Nobsound)</strong> <span class="recommended">Default</span></div>
-        <div class="price zero">₹17,000</div>
-      </div>
-      <div class="config-row"><div class="name"><span class="marker"></span>Premium (Buttkicker LFE Kit + amp)</div><div class="price up">+₹1,00,000</div></div>
+  <div class="config-section">
+    <div class="config-label">Haptics</div>
+    <div class="config-row is-default">
+      <span class="config-dot"></span>
+      <span class="config-name"><strong>Standard (2 × Dayton BTS-1 + Nobsound)</strong> <span class="config-badge">Default</span></span>
+      <span class="config-price">₹17,000</span>
+    </div>
+    <div class="config-row">
+      <span class="config-dot"></span>
+      <span class="config-name">Premium (Buttkicker LFE Kit + amp)</span>
+      <span class="config-price up">+₹1,00,000</span>
     </div>
   </div>
+
 </section>
 
 
-<!-- ===========================================================
+<!-- ============================================================
      ADD-ON PACKS
-     =========================================================== -->
+     ============================================================ -->
 <section class="section-break">
-  <h2><span class="num">06</span>Cross-tier Add-on Packs</h2>
-  <p class="lede">Independent of preset / configurator picks. Add to any sim configuration.</p>
+
+  <div class="section-eyebrow">
+    <div class="section-num">06</div>
+    <div class="section-title-block">
+      <div class="section-label">Section Six</div>
+      <div class="section-heading">Cross-tier Add-on Packs</div>
+    </div>
+  </div>
+
+  <p class="lede">Independent of preset or configurator picks. Add to any sim configuration.</p>
 
   <div class="pack-grid">
     <div class="pack">
@@ -1322,7 +1839,7 @@
       <ul class="pack-list">
         <li>HD Castor Wheels (₹5,000)</li>
         <li>Mouse Tray (₹500)</li>
-        <li>Cup holder &mdash; 3D printed (₹799)</li>
+        <li>Cup holder — 3D printed (₹799)</li>
       </ul>
     </div>
 
@@ -1343,12 +1860,12 @@
         <div class="pack-name">Branding Pack</div>
         <div class="pack-price">+₹4,000 typical</div>
       </div>
-      <p class="pack-desc">Race-engineer voice in physical hardware &mdash; RaceSims-printed accessories.</p>
+      <p class="pack-desc">RaceSims-printed accessories — race-engineer identity in physical hardware.</p>
       <ul class="pack-list">
         <li>Phone holder (3D SKU 1)</li>
         <li>Cup holder (3D SKU 2)</li>
         <li>Custom shift knob (3D SKU 10)</li>
-        <li>Conspit 310 APEX branded plates (only if running 310 APEX)</li>
+        <li>Conspit 310 APEX branded plates</li>
       </ul>
     </div>
 
@@ -1365,81 +1882,99 @@
       </ul>
     </div>
   </div>
+
 </section>
 
 
-<!-- ===========================================================
+<!-- ============================================================
      SAMPLE JOURNEYS
-     =========================================================== -->
+     ============================================================ -->
 <section class="section-break">
-  <h2><span class="num">07</span>Sample Customer Journeys</h2>
-  <p class="lede">How the catalogue applies to typical customer profiles. Each starts at a Quick Start preset (or the default Sim) and adds documented configurator changes / add-on packs &mdash; no off-catalogue bespoke pricing.</p>
+
+  <div class="section-eyebrow">
+    <div class="section-num">07</div>
+    <div class="section-title-block">
+      <div class="section-label">Section Seven</div>
+      <div class="section-heading">Sample Customer Journeys</div>
+    </div>
+  </div>
+
+  <p class="lede">How the catalogue applies to typical customer profiles. Each starts at a Quick Start preset and adds documented configurator changes — no off-catalogue bespoke pricing.</p>
 
   <div class="journey">
-    <div class="journey-header">"I want to start sim racing seriously, single screen is fine for now"</div>
+    <div class="journey-title">"I want to start sim racing seriously, single screen is fine for now"</div>
     <div class="journey-line start"><strong>Starter preset as-is</strong></div>
     <div class="journey-total">Total: ₹5,65,498</div>
   </div>
 
   <div class="journey">
-    <div class="journey-header">"I race iRacing GT3 in regional leagues, triple screen + premium audio"</div>
+    <div class="journey-title">"I race iRacing GT3 in regional leagues, triple screen + premium audio"</div>
     <div class="journey-line start"><strong>Sim default</strong> (₹6,50,998)</div>
-    <div class="journey-line">Audio upgrade Mid → Sonos Beam path (₹1,15,000)</div>
+    <div class="journey-line">Audio upgrade Mid → Sonos Beam path (+₹1,15,000)</div>
     <div class="journey-total">Total: ₹7,65,998</div>
   </div>
 
   <div class="journey">
-    <div class="journey-header">"I race rally on weekends + circuit weekdays"</div>
+    <div class="journey-title">"I race rally on weekends + circuit weekdays"</div>
     <div class="journey-line start"><strong>Sim default</strong> (₹6,50,998)</div>
-    <div class="journey-line">Rally Pack &mdash; handbrake + mount (₹39,000)</div>
-    <div class="journey-line">Shifter Pack &mdash; mount shared with Rally Pack (₹35,000)</div>
+    <div class="journey-line">Rally Pack — handbrake + mount (+₹39,000)</div>
+    <div class="journey-line">Shifter Pack — mount shared with Rally Pack (+₹35,000)</div>
     <div class="journey-total">Total: ₹7,24,998</div>
   </div>
 
   <div class="journey">
-    <div class="journey-header">"Shifting from real karting to F1 sim &mdash; formula content focus"</div>
+    <div class="journey-title">"Shifting from real karting to F1 sim — formula content focus"</div>
     <div class="journey-line start"><strong>Sim default</strong> (₹6,50,998)</div>
-    <div class="journey-line">Wheel swap 300GT → Conspit 290GP formula-style (₹19,501)</div>
-    <div class="journey-line">Pedals swap VNM Lite → CPP EVO V2 3-pedal (₹53,999)</div>
-    <div class="journey-line">Audio upgrade Mid → Sonos Beam (₹1,15,000)</div>
-    <div class="journey-line">Custom shift knob (₹2,499)</div>
+    <div class="journey-line">Wheel swap 300GT → Conspit 290GP formula-style (+₹19,501)</div>
+    <div class="journey-line">Pedals swap VNM Lite → CPP EVO V2 3-pedal (+₹53,999)</div>
+    <div class="journey-line">Audio upgrade Mid → Sonos Beam (+₹1,15,000)</div>
+    <div class="journey-line">Custom shift knob (+₹2,499)</div>
     <div class="journey-total">Total: ₹8,41,997</div>
   </div>
 
   <div class="journey">
-    <div class="journey-header">"I want pro F1 wheel without full motion build"</div>
+    <div class="journey-title">"I want pro F1 wheel without full motion build"</div>
     <div class="journey-line start"><strong>Sim default</strong> (₹6,50,998)</div>
-    <div class="journey-line">Wheel swap 300GT → Conspit PW-1 Formula (₹1,60,001)</div>
-    <div class="journey-line">Pedals swap VNM Lite → CPP EVO V2 3-pedal (₹53,999)</div>
-    <div class="journey-line">Wheelbase upgrade 12Nm → Ares Platinum 20Nm (₹25,001)</div>
-    <div class="journey-line">Audio upgrade Mid → Sonos Arc Ultra (₹1,75,000)</div>
+    <div class="journey-line">Wheel swap 300GT → Conspit PW-1 Formula (+₹1,60,001)</div>
+    <div class="journey-line">Pedals swap VNM Lite → CPP EVO V2 3-pedal (+₹53,999)</div>
+    <div class="journey-line">Wheelbase upgrade 12Nm → Ares Platinum 20Nm (+₹25,001)</div>
+    <div class="journey-line">Audio upgrade Mid → Sonos Arc Ultra (+₹1,75,000)</div>
     <div class="journey-total">Total: ₹10,64,999</div>
   </div>
 
   <div class="journey">
-    <div class="journey-header">"I run a racing academy and want full motion"</div>
+    <div class="journey-title">"I run a racing academy and want full motion"</div>
     <div class="journey-line start"><strong>Pro preset</strong> as-is (₹17,03,999)</div>
-    <div class="journey-line">Premium haptics (Buttkicker LFE Kit) (₹1,00,000)</div>
+    <div class="journey-line">Premium haptics — Buttkicker LFE Kit (+₹1,00,000)</div>
     <div class="journey-total">Total: ₹18,03,999</div>
   </div>
 
   <div class="journey">
-    <div class="journey-header">"Commercial install &mdash; enclosed cabin, brand-conscious"</div>
-    <div class="journey-line start"><strong>See Commercial / B2B section</strong> &mdash; custom quote, R&D in progress</div>
+    <div class="journey-title">"Commercial install — enclosed cabin, brand-conscious"</div>
+    <div class="journey-line start"><strong>See Commercial / B2B section</strong> — custom quote, R&amp;D in progress</div>
     <div class="journey-total">Custom quote required</div>
   </div>
+
 </section>
 
 
-<!-- ===========================================================
+<!-- ============================================================
      COMMERCIAL / B2B
-     =========================================================== -->
+     ============================================================ -->
 <section class="section-break">
-  <h2><span class="num">08</span>Commercial / B2B</h2>
-  <p class="lede">The consumer catalogue covers home and individual customers. For <strong>commercial</strong> &mdash; corporate experience installations, hospitality, lounges, retail experience zones, racing academies, esports content studios &mdash; RaceSims has a separate quote process and product roadmap.</p>
+
+  <div class="section-eyebrow">
+    <div class="section-num">08</div>
+    <div class="section-title-block">
+      <div class="section-label">Section Eight</div>
+      <div class="section-heading">Commercial / B2B</div>
+    </div>
+  </div>
+
+  <p class="lede">For corporate experience installations, hospitality, lounges, retail experience zones, racing academies, and esports content studios — RaceSims has a separate quote process and product roadmap.</p>
 
   <div class="commercial-banner">
-    <h3>The Enclosed Rig <span class="accent">— in R&D</span></h3>
+    <h3>The Enclosed Rig <span class="accent">— in R&amp;D</span></h3>
     <p>A fully-enclosed driving simulator cabin, RaceSims-designed, for commercial environments where customers sit inside a <em>cabin</em>, not on a rig. Available for early-customer development partnerships and pilots.</p>
   </div>
 
@@ -1447,14 +1982,14 @@
   <ul>
     <li>Full enclosure (sides, roof, customisable cladding panels)</li>
     <li>Custom-branded livery surfaces (front + sides + interior)</li>
-    <li>Acoustic isolation &mdash; Atmos audio inside the cabin, minimal leakage outside</li>
+    <li>Acoustic isolation — Atmos audio inside the cabin, minimal leakage outside</li>
     <li>Integrated lighting (cabin ambient, idle-mode brand visuals, in-sim displays)</li>
     <li>Single-cable customer-facing operation (kiosk mode, no staff intervention required)</li>
     <li>Optional in-cabin webcam for guest reaction capture / social shareables</li>
     <li>24/7 commercial-grade thermal management (PC + audio + motion all rated for sustained operation)</li>
   </ul>
 
-  <p><strong>Reference order of magnitude:</strong> ~₹35–50L+ depending on enclosure scope, cladding, motion configuration. <strong>Custom quote per project.</strong></p>
+  <p style="margin-top:4mm;"><strong>Reference order of magnitude:</strong> ~₹35–50L+ depending on enclosure scope, cladding, motion configuration. <strong>Custom quote per project.</strong></p>
 
   <h3>Existing commercial customers</h3>
   <table>
@@ -1462,13 +1997,20 @@
       <tr><th>Customer</th><th>Configuration</th><th>Status</th></tr>
     </thead>
     <tbody>
-      <tr><td>Online Instruments</td><td>Mahindra Thar Roxx half-cut as the simulator shell &mdash; rolling caster base, ~1,200 kg, RaceSims-built half-cut + integration. Transport spec PDF shipped to client.</td><td>Active &mdash; pivoted from custom enclosure to Thar variant April 2026</td></tr>
-      <tr><td>Araya Airport</td><td>Airport lounge simulator (~₹6.86–6.96L/unit) &mdash; RaceSims-built rig with cladding, premium recliner, triple GS32QC</td><td>Active reference build (April 2025)</td></tr>
+      <tr>
+        <td>Online Instruments</td>
+        <td>Mahindra Thar Roxx half-cut as simulator shell — rolling caster base, ~1,200 kg, RaceSims-built half-cut + integration</td>
+        <td>Active — pivoted from custom enclosure to Thar variant April 2026</td>
+      </tr>
+      <tr>
+        <td>Araya Airport</td>
+        <td>Airport lounge simulator (~₹6.86–6.96L/unit) — RaceSims-built rig with cladding, premium recliner, triple GS32QC</td>
+        <td>Active reference build (April 2025)</td>
+      </tr>
     </tbody>
   </table>
 
   <h3>How to engage</h3>
-  <p>This is not a configurator decision. Commercial customers should:</p>
   <ol>
     <li>Email Thambu at <strong>thambu@racesims.in</strong> with: use case, location, brand, target installation date, expected daily traffic / utilisation</li>
     <li>Initial discovery call to understand requirements</li>
@@ -1477,26 +2019,27 @@
     <li>Build, install, commissioning</li>
   </ol>
 
-  <p><strong>Lead times:</strong> custom quote discovery → 4–6 weeks. Build + install → 8–12 weeks once spec is locked.</p>
+  <p style="margin-top:4mm;" class="small"><strong>Lead times:</strong> custom quote discovery → 4–6 weeks. Build + install → 8–12 weeks once spec is locked.</p>
+
 </section>
 
 
-<!-- ===========================================================
+<!-- ============================================================
      BACK COVER
-     =========================================================== -->
+     ============================================================ -->
 <section class="back-cover">
   <img class="back-cover-logo" src="optimized-images/logo.png" alt="RaceSims">
   <h2>Build your sim<br><span class="red">with us.</span></h2>
-  <div class="tag">India's pro-grade sim racing hardware company.<br>Race-engineer founder. Championship-winning teams background.</div>
-  <div class="contact">
-    <div><strong>RaceSims Solutions Pvt Ltd</strong></div>
-    <div>Chennai, India</div>
-    <div style="margin-top: 5mm;">
-      <a href="mailto:thambu@racesims.in">thambu@racesims.in</a> &nbsp;·&nbsp; +91 97417 88226
-    </div>
+  <div class="tagline">
+    India's pro-grade sim racing hardware company.<br>
+    Race-engineer founder. Championship-winning teams background.
+  </div>
+  <div class="contact-block">
+    <div><strong>RaceSims Solutions Pvt Ltd</strong> — Chennai, India</div>
+    <div><a href="mailto:thambu@racesims.in">thambu@racesims.in</a> &nbsp;·&nbsp; +91 97417 88226</div>
     <div><a href="https://www.racesims.in">www.racesims.in</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/race.sims">@race.sims</a></div>
   </div>
-  <div class="footer-meta">RaceSims Catalogue 2026 &mdash; Issued May 2026 &mdash; Confidential</div>
+  <div class="back-footer">RaceSims Catalogue 2026 — Issued May 2026 — Confidential</div>
 </section>
 
 </body>
