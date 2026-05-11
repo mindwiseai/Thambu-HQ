@@ -11,6 +11,38 @@ let productsKB;
 let faqKB;
 let vnmTechKB;
 let conspitTechKB;
+let staticSystemBlock;
+
+const intelligenceInstruction = `
+
+IMPORTANT: After your response to the customer, add a line break and then output a JSON block wrapped in <lead_intel> tags with any new information you learned from this conversation turn. Only include fields that have NEW information from the latest message:
+<lead_intel>
+{
+  "name": "customer name if mentioned",
+  "budget_range": "budget if mentioned (e.g., '3-5L', '10L+')",
+  "product_interest": "specific product/kit if mentioned",
+  "experience_level": "beginner/intermediate/advanced/professional",
+  "city": "city if mentioned",
+  "intent_signals": ["list of buying signals detected"],
+  "escalation_needed": false,
+  "escalation_reason": "",
+  "score_adjustments": [
+    {"event": "description", "delta": 0}
+  ]
+}
+</lead_intel>
+
+Score adjustment guide:
+- Mentions specific product: +2
+- Shares budget: +2
+- Asks about EMI/payment: +2
+- Wants to visit/call: +2
+- B2B/corporate inquiry: +3
+- Says "ready to buy" / "want to order": +3
+- Asks about delivery/shipping: +1
+- Just browsing / general question: +0
+- Asks about competitor: +1
+- Shares space/room dimensions: +1`;
 
 export function initAI() {
   client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
@@ -61,6 +93,9 @@ export function initAI() {
                   (productsKB.vnm?.pedals?.length || 0) +
                   (productsKB.vnm?.motion?.length || 0);
   const faqCount = faqKB.categories?.reduce((sum, c) => sum + (c.faqs?.length || 0), 0) || 0;
+
+  // Pre-build the static system block once — reused + cached on every API call
+  staticSystemBlock = systemPrompt + buildKnowledgeContext() + intelligenceInstruction;
 
   console.log('[AI] Claude engine initialized');
   console.log(`[AI] Knowledge base: ${bundleCount} featured bundles, ${conspitSkus} Conspit SKUs, ${vnmSkus} VNM SKUs`);
@@ -302,51 +337,27 @@ export async function generateResponse(conversationHistory, contactInfo) {
   if (contactInfo.city) customerContext += `City: ${contactInfo.city}\n`;
   customerContext += `Channel: ${contactInfo.channel || 'whatsapp'}\n`;
 
-  const fullSystemPrompt = systemPrompt + buildKnowledgeContext() + customerContext;
-
   // Convert history to Claude message format
   const messages = conversationHistory.map(msg => ({
     role: msg.role === 'customer' ? 'user' : 'assistant',
     content: msg.content
   }));
 
-  // Also ask Claude to extract lead intelligence in a structured way
-  const intelligenceInstruction = `
-
-IMPORTANT: After your response to the customer, add a line break and then output a JSON block wrapped in <lead_intel> tags with any new information you learned from this conversation turn. Only include fields that have NEW information from the latest message:
-<lead_intel>
-{
-  "name": "customer name if mentioned",
-  "budget_range": "budget if mentioned (e.g., '3-5L', '10L+')",
-  "product_interest": "specific product/kit if mentioned",
-  "experience_level": "beginner/intermediate/advanced/professional",
-  "city": "city if mentioned",
-  "intent_signals": ["list of buying signals detected"],
-  "escalation_needed": false,
-  "escalation_reason": "",
-  "score_adjustments": [
-    {"event": "description", "delta": 0}
-  ]
-}
-</lead_intel>
-
-Score adjustment guide:
-- Mentions specific product: +2
-- Shares budget: +2
-- Asks about EMI/payment: +2
-- Wants to visit/call: +2
-- B2B/corporate inquiry: +3
-- Says "ready to buy" / "want to order": +3
-- Asks about delivery/shipping: +1
-- Just browsing / general question: +0
-- Asks about competitor: +1
-- Shares space/room dimensions: +1`;
-
   try {
     const response = await client.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-haiku-4-5-20251001',
       max_tokens: 800,
-      system: fullSystemPrompt + intelligenceInstruction,
+      system: [
+        {
+          type: 'text',
+          text: staticSystemBlock,
+          cache_control: { type: 'ephemeral' }
+        },
+        {
+          type: 'text',
+          text: customerContext
+        }
+      ],
       messages: messages
     });
 
@@ -371,7 +382,9 @@ Score adjustment guide:
       intelligence,
       usage: {
         input_tokens: response.usage.input_tokens,
-        output_tokens: response.usage.output_tokens
+        output_tokens: response.usage.output_tokens,
+        cache_read_input_tokens: response.usage.cache_read_input_tokens ?? 0,
+        cache_creation_input_tokens: response.usage.cache_creation_input_tokens ?? 0
       }
     };
   } catch (error) {
