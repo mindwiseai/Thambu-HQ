@@ -28,6 +28,11 @@ Per the [[2026-03-26-thambu-voice-brief|March 26 voice brief]], [[thambu]] is ac
 - **Content-rich** — every step of this R&D generates content that [[virtual-racing-hub|VRH]] cannot replicate (telemetry comparison videos, setup guides, data analysis posts)
 - **Commercially valuable** — racing academies and professional drivers would pay for validated sim-to-real correlation data
 
+## Active R&D Projects (from [[2026-04-13-racesims-raw-dump]])
+
+- **Suzuki Baleno (client: Jason)** — CAN bus data being read from Jason's modified Suzuki Baleno rally car
+- **AiM C125 dashboard** — V3 through V8 iterations attempting to decode AiM C125 telemetry display protocol + checksum logic
+
 ## Content unlocked
 
 - Telemetry comparison content: sim vs real overlay videos
