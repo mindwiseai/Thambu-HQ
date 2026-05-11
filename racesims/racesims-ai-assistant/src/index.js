@@ -8,7 +8,7 @@ import { dirname, join } from 'path';
 
 import { getDB, findOrCreateContact, addMessage, getConversationHistory, updateContact,
          getDashboardStats, getActiveConversations, getPendingEscalations,
-         resolveEscalation } from './database.js';
+         resolveEscalation, logTokenUsage, getTokenStats } from './database.js';
 import { initAI, generateResponse } from './ai.js';
 import { sendWhatsAppMessage, parseWebhookMessage, markAsRead, isBusinessReply } from './whatsapp.js';
 import { sendInstagramMessage, parseInstagramWebhook } from './instagram.js';
@@ -156,7 +156,8 @@ async function handleWhatsAppMessage(body) {
     usage: aiResult.usage
   });
 
-  console.log(`[AI] Tokens: ${aiResult.usage.input_tokens} in / ${aiResult.usage.output_tokens} out`);
+  logTokenUsage('claude-haiku-4-5-20251001', aiResult.usage);
+  console.log(`[AI] Tokens: ${aiResult.usage.input_tokens} in / ${aiResult.usage.output_tokens} out | cache read: ${aiResult.usage.cache_read_input_tokens} / created: ${aiResult.usage.cache_creation_input_tokens}`);
 }
 
 // --- Instagram Message Handler ---
@@ -203,6 +204,8 @@ async function handleInstagramMessage(body) {
     addMessage(contact.id, 'assistant', aiResult.response, 'instagram');
   }
 
+  logTokenUsage('claude-haiku-4-5-20251001', aiResult.usage);
+
   broadcastDashboard('new_message', {
     contactId: contact.id,
     role: 'assistant',
@@ -242,6 +245,11 @@ app.post('/api/resume/:contactId', (req, res) => {
   updateContact(parseInt(req.params.contactId), { is_paused: 0 });
   broadcastDashboard('contact_resumed', { contactId: parseInt(req.params.contactId) });
   res.json({ success: true, message: 'Bot resumed for this conversation' });
+});
+
+app.get('/api/token-stats', (req, res) => {
+  const days = parseInt(req.query.days) || 7;
+  res.json(getTokenStats(days));
 });
 
 app.post('/api/resolve-escalation/:id', (req, res) => {

@@ -76,6 +76,19 @@ function initTables() {
     CREATE INDEX IF NOT EXISTS idx_contacts_status ON contacts(status);
     CREATE INDEX IF NOT EXISTS idx_contacts_lead_score ON contacts(lead_score DESC);
     CREATE INDEX IF NOT EXISTS idx_escalations_status ON escalations(status);
+
+    CREATE TABLE IF NOT EXISTS token_usage (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      date TEXT NOT NULL,
+      model TEXT NOT NULL,
+      input_tokens INTEGER DEFAULT 0,
+      output_tokens INTEGER DEFAULT 0,
+      cache_read_tokens INTEGER DEFAULT 0,
+      cache_creation_tokens INTEGER DEFAULT 0,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_token_usage_date ON token_usage(date);
   `);
 }
 
@@ -222,6 +235,51 @@ export function getDashboardStats() {
     todayMessages,
     pausedBots
   };
+}
+
+export function logTokenUsage(model, usage) {
+  const db = getDB();
+  const date = new Date().toISOString().split('T')[0];
+  db.prepare(`
+    INSERT INTO token_usage (date, model, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens)
+    VALUES (?, ?, ?, ?, ?, ?)
+  `).run(
+    date, model,
+    usage.input_tokens || 0,
+    usage.output_tokens || 0,
+    usage.cache_read_input_tokens || 0,
+    usage.cache_creation_input_tokens || 0
+  );
+}
+
+export function getTokenStats(days = 7) {
+  const db = getDB();
+  const daily = db.prepare(`
+    SELECT date,
+      model,
+      SUM(input_tokens) as input_tokens,
+      SUM(output_tokens) as output_tokens,
+      SUM(cache_read_tokens) as cache_read_tokens,
+      SUM(cache_creation_tokens) as cache_creation_tokens,
+      COUNT(*) as api_calls
+    FROM token_usage
+    WHERE date >= date('now', ?)
+    GROUP BY date, model
+    ORDER BY date DESC
+  `).all(`-${days - 1} days`);
+
+  const totals = db.prepare(`
+    SELECT
+      SUM(input_tokens) as input_tokens,
+      SUM(output_tokens) as output_tokens,
+      SUM(cache_read_tokens) as cache_read_tokens,
+      SUM(cache_creation_tokens) as cache_creation_tokens,
+      COUNT(*) as api_calls
+    FROM token_usage
+    WHERE date >= date('now', ?)
+  `).get(`-${days - 1} days`);
+
+  return { daily, totals };
 }
 
 export function getActiveConversations(limit = 50) {

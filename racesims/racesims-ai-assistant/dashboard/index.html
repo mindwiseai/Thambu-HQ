@@ -341,14 +341,133 @@
     }
 
     .toast.show { transform: translateX(0); }
+
+    /* Token usage panel */
+    .usage-panel {
+      display: none;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+    }
+    .usage-panel.open { display: block; }
+
+    .usage-panel h2 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .usage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .usage-card {
+      background: var(--surface2);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+
+    .usage-card .u-val {
+      font-size: 22px;
+      font-weight: 700;
+      color: white;
+    }
+    .usage-card .u-val.cost { color: var(--yellow); }
+    .usage-card .u-val.savings { color: var(--green); }
+    .usage-card .u-label {
+      font-size: 11px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-top: 4px;
+    }
+
+    .usage-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      height: 60px;
+      margin-top: 4px;
+    }
+
+    .usage-chart-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      height: 100%;
+      justify-content: flex-end;
+    }
+
+    .usage-bar {
+      width: 100%;
+      background: var(--red-dim);
+      border-radius: 3px 3px 0 0;
+      min-height: 2px;
+      transition: height 0.3s;
+    }
+
+    .usage-bar.cache { background: #1a3a2a; }
+
+    .usage-chart-label {
+      font-size: 10px;
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+
+    .usage-model-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 12px;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+
+    .usage-note {
+      margin-top: 12px;
+      padding: 10px 14px;
+      background: rgba(234, 179, 8, 0.08);
+      border: 1px solid rgba(234, 179, 8, 0.25);
+      border-radius: 6px;
+      font-size: 12px;
+      color: var(--yellow);
+      line-height: 1.5;
+    }
+
+    .btn-usage {
+      padding: 5px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-dim);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-usage:hover, .btn-usage.active { border-color: var(--red); color: var(--red); }
   </style>
 </head>
 <body>
   <div class="header">
     <h1>🏎️ <span>RaceSims</span> AI Assistant</h1>
-    <div class="status-badge">
-      <div class="status-dot"></div>
-      <span id="status-text">Connected</span>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <button class="btn-usage" id="btn-usage" onclick="toggleUsage()">Token Usage</button>
+      <div class="status-badge">
+        <div class="status-dot"></div>
+        <span id="status-text">Connected</span>
+      </div>
     </div>
   </div>
 
@@ -380,6 +499,30 @@
     <div class="stat-card">
       <div class="value" id="stat-messages">0</div>
       <div class="label">Messages Today</div>
+    </div>
+  </div>
+
+  <!-- Token Usage Panel -->
+  <div class="usage-panel" id="usage-panel">
+    <h2>Bot Token Usage — Last 7 Days</h2>
+    <div class="usage-model-badge">
+      <span style="width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block;"></span>
+      claude-haiku-4-5-20251001 &nbsp;·&nbsp; Prompt caching enabled
+    </div>
+    <div class="usage-grid" id="usage-cards">
+      <div class="usage-card"><div class="u-val" id="u-calls">—</div><div class="u-label">API Calls</div></div>
+      <div class="usage-card"><div class="u-val" id="u-input">—</div><div class="u-label">Input Tokens</div></div>
+      <div class="usage-card"><div class="u-val" id="u-output">—</div><div class="u-label">Output Tokens</div></div>
+      <div class="usage-card"><div class="u-val" id="u-cache">—</div><div class="u-label">Cache Reads</div></div>
+      <div class="usage-card"><div class="u-val cost" id="u-cost">—</div><div class="u-label">Est. Cost (USD)</div></div>
+      <div class="usage-card"><div class="u-val savings" id="u-savings">—</div><div class="u-label">Cache Savings</div></div>
+    </div>
+
+    <h2>Daily Breakdown</h2>
+    <div class="usage-chart" id="usage-chart"></div>
+
+    <div class="usage-note">
+      <strong>Note on your 42% weekly limit:</strong> This tracks the <em>bot's</em> API usage (separate, pay-per-use billing). The weekly limit you're seeing is your <strong>Claude Code subscription</strong> — consumed by our planning sessions, agent spawning, and file exploration. Minimise heavy Claude Code sessions mid-week to stay under the limit.
     </div>
   </div>
 
@@ -628,6 +771,81 @@
       toast.textContent = message;
       toast.classList.add('show');
       setTimeout(() => toast.classList.remove('show'), 4000);
+    }
+
+    // --- Token Usage Panel ---
+    // Haiku 4.5 pricing (USD per million tokens)
+    const PRICE = { input: 0.80, output: 4.00, cache_read: 0.08, cache_creation: 0.80 };
+
+    function fmtTokens(n) {
+      if (!n) return '0';
+      if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + 'M';
+      if (n >= 1_000) return (n / 1_000).toFixed(1) + 'K';
+      return String(n);
+    }
+
+    function calcCost(t) {
+      return (
+        (t.input_tokens || 0) / 1e6 * PRICE.input +
+        (t.output_tokens || 0) / 1e6 * PRICE.output +
+        (t.cache_read_tokens || 0) / 1e6 * PRICE.cache_read +
+        (t.cache_creation_tokens || 0) / 1e6 * PRICE.cache_creation
+      );
+    }
+
+    function calcSavings(t) {
+      // What input would have cost without caching
+      const withoutCache = ((t.input_tokens || 0) + (t.cache_read_tokens || 0)) / 1e6 * PRICE.input;
+      const withCache = (t.input_tokens || 0) / 1e6 * PRICE.input + (t.cache_read_tokens || 0) / 1e6 * PRICE.cache_read;
+      return Math.max(0, withoutCache - withCache);
+    }
+
+    async function refreshUsage() {
+      const res = await fetch('/api/token-stats?days=7');
+      const data = await res.json();
+      const t = data.totals || {};
+
+      document.getElementById('u-calls').textContent = t.api_calls || 0;
+      document.getElementById('u-input').textContent = fmtTokens(t.input_tokens);
+      document.getElementById('u-output').textContent = fmtTokens(t.output_tokens);
+      document.getElementById('u-cache').textContent = fmtTokens(t.cache_read_tokens);
+      document.getElementById('u-cost').textContent = '$' + calcCost(t).toFixed(4);
+      document.getElementById('u-savings').textContent = '$' + calcSavings(t).toFixed(4);
+
+      // Bar chart — last 7 days
+      const daily = data.daily || [];
+      const maxTokens = Math.max(1, ...daily.map(d => (d.input_tokens || 0) + (d.output_tokens || 0)));
+
+      // Build date labels for last 7 days
+      const days = [];
+      for (let i = 6; i >= 0; i--) {
+        const d = new Date(); d.setDate(d.getDate() - i);
+        days.push(d.toISOString().split('T')[0]);
+      }
+
+      const chart = document.getElementById('usage-chart');
+      chart.innerHTML = days.map(date => {
+        const row = daily.find(d => d.date === date) || {};
+        const total = (row.input_tokens || 0) + (row.output_tokens || 0);
+        const cacheH = Math.round((row.cache_read_tokens || 0) / maxTokens * 52);
+        const totalH = Math.max(2, Math.round(total / maxTokens * 52));
+        const label = date.slice(5); // MM-DD
+        return `<div class="usage-chart-col">
+          <div style="display:flex;flex-direction:column;justify-content:flex-end;height:52px;width:100%;gap:1px;">
+            <div class="usage-bar cache" style="height:${cacheH}px;" title="Cache reads: ${fmtTokens(row.cache_read_tokens)}"></div>
+            <div class="usage-bar" style="height:${Math.max(0,totalH-cacheH)}px;" title="Input+Output: ${fmtTokens(total)}"></div>
+          </div>
+          <div class="usage-chart-label">${label}</div>
+        </div>`;
+      }).join('');
+    }
+
+    function toggleUsage() {
+      const panel = document.getElementById('usage-panel');
+      const btn = document.getElementById('btn-usage');
+      const isOpen = panel.classList.toggle('open');
+      btn.classList.toggle('active', isOpen);
+      if (isOpen) refreshUsage();
     }
 
     // --- Init ---
