@@ -75,6 +75,14 @@ VRH's legal entity is **U Tashtri (OPC) Pvt Ltd**, registered in Dwarka, New Del
 
 **Significant:** RaceSims was buying from its primary competitor before establishing direct supply chains. This relationship has since inverted — VRH is now a **controlled reseller** for [[conspit]] products, required to procure exclusively through RaceSims (contract signed 22 Jul 2025). See [[conspit]] for contract details.
 
+## Distribution Contract (effective 22 Jul 2025, from [[2026-04-13-racesims-raw-dump]])
+
+Key terms for VRH as Conspit-exclusive reseller:
+- **Duration:** 12 months from July 22, 2025
+- **Non-circumvention clause:** 24 months post-termination (unusually long)
+- **MAP enforcement required** — minimum advertised price controls
+- **Marketing pre-approval required** — all RaceSims content about VRH brands must be approved before publication
+
 ## Don't trash VRH publicly
 
 The VRH battle plan is internal. Public content positions on RaceSims' strengths. **Never name VRH in public content.** Punch the gap, not the brand.

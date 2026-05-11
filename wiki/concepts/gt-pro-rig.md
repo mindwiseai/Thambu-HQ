@@ -43,6 +43,18 @@ RaceSims manufactures/sources its own:
 - **Monitor stands** (single + triple) — Rs.30,000 in Araya builds
 - **Exterior cladding** (for commercial builds like [[araya-airport]]) — ~Rs.90,000
 
+## BOM Costing (pre-tax, from [[2026-04-13-racesims-raw-dump]])
+
+Base rig configurations available with laser-cut inventory on site + 3D printed parts in R&D:
+
+| Config | Entry | Mid | Pro |
+|--------|-------|-----|-----|
+| **Rig + Seat + Wheel/Base** | Rs.32,683 | Rs.34,760 | Rs.37,460 |
+
+**PC Build options:**
+- RTX 5070: ~Rs.1,58,000
+- RTX 5070 Ti: ~Rs.1,82,000
+
 ## Next generation
 
 [[mr-leela-krishnan]] (boss at [[arka-motorsports]]) is mentoring [[thambu]] on **cast aluminum bracket and mounting hardware design** for [[next-gen-racesims-rigs]] — a significant product evolution beyond the current aluminium-profile approach.

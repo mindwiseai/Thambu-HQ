@@ -9,6 +9,11 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-11] ingest | RaceSims technical detail — GT Pro Rig BOM, CAN bus R&D specifics, VRH distribution contract terms
+- Source: [[2026-04-13-racesims-raw-dump]]
+- Updated: [[gt-pro-rig]] (BOM costing entry/mid/pro + PC builds), [[can-bus-telemetry]] (Suzuki Baleno/Jason + AiM C125 iterations), [[virtual-racing-hub]] (distribution contract July 22 2025 + 24-month non-circumvention)
+- Domain: racesims
+
 ## [2026-05-07] update | Catalogue: Tesla model + VNM Lite default + Conspit cockpits out of production + Commercial section added
 - Updated: [[racesims-catalogue]], [[kit-pricing]]
 - **Catalogue model changed from 4-tier to Tesla-style.** After psychology brainstorm with Thambu (Apple vs Tesla product strategies), landed on Tesla model: ONE default Sim + Quick Start presets (Starter / Sim / Pro) + per-component configurator with explicit price deltas + cross-tier add-on packs.
