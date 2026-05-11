@@ -9,6 +9,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-11] ingest | Mindwise technical — CTD module status, NDAs, security flags documented
+- Source: [[2026-04-13-mindwise-raw-dump]]
+- Updated: [[ctd-module-2]] (status breakdown: modules 2.4/2.5/2.7 completed, 1/2.1-2.3/2.6/3-5 pending), [[domains/mindwise/_index]] (legal & NDA section added)
+- Created: [[meta/security-flags]] (Razorpay credentials + 2FA backup codes documented with warnings)
+- Domain: mindwise
+
 ## [2026-05-11] ingest | RaceSims commercial leads — IPL team pipeline + Araya Airport configs + Techxhub/Fanatec pricing
 - Source: [[2026-04-13-racesims-raw-dump]]
 - Created: [[ipl-team-pipeline]]
