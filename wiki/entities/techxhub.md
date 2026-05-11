@@ -9,7 +9,7 @@ tags: [partner, retail, fanatec, playseat]
 
 Authorized Retailer Partner (ARP) supplying [[domains/racesims/_index|RaceSims]] with **Fanatec** and **Playseat** products in India. Retail channel agreement signed; pricelists dated March 2026 (active).
 
-## Fanatec product range (INR, incl. GST)
+## Fanatec product range (INR, incl. GST, March 2026 RRP)
 
 | Product | MRP | MAP |
 |---------|-----|-----|
@@ -22,7 +22,9 @@ Authorized Retailer Partner (ARP) supplying [[domains/racesims/_index|RaceSims]]
 | CSL Steering Wheel P1 V2 | 27,999 | 24,999 |
 | ClubSport Cockpit | ~1,50,000 | ~1,35,000 |
 
-## Playseat range (INR, incl. GST)
+**Key reference:** CSL DD 5Nm (₹72,199), ClubSport DD+ 15Nm (₹2,05,999) are the primary direct-drive wheelbases available via Techxhub as of March 2026.
+
+## Playseat range (INR, incl. GST, March 2026 pricing)
 
 | Product | MRP | MAP |
 |---------|-----|-----|
@@ -31,6 +33,8 @@ Authorized Retailer Partner (ARP) supplying [[domains/racesims/_index|RaceSims]]
 | Playseat Trophy | 99,999 | 89,999 |
 | Playseat Sensation PRO | 1,99,999 | 1,79,999 |
 | Playseat Formula Intelligence | 3,88,889 | 3,49,999 |
+
+**Price range:** Challenge (entry, ₹38,999) → Formula Intelligence (premium, ₹3,88,889). Playseat cockpits offer a branded alternative to RaceSims' own GT rig frames for customers who want a recognized name.
 
 ## Strategic significance
 

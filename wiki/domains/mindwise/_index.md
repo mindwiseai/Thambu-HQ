@@ -80,6 +80,14 @@ Cognitive wellness supplement (CDRI-08 Bacopa monnieri extract) launching 2026-0
 - [[chemiloids-life-sciences]] — Terminalia chebula processing (Vijayawada), second CSIR-CDRI license
 - [[aavishkar-oral-strips]] — Oral Disintegrating Strips (Hyderabad)
 
+## Legal & NDAs
+- [[chemiloids-life-sciences]] NDA — covers Terminalia chebula / BPH product (Diafit trademark)
+- [[indus-life-sciences]] NDA — covers dosage forms & formulation partnership
+- [[aavishkar-oral-strips]] NDA — covers Oral Disintegrating Strips format
+- **Trademarks registered or in progress:** Diafit (BPH), Life Essence, Voli, Lumen
+
+Source: [[2026-04-13-mindwise-raw-dump]]
+
 ## People
 - [[thambu]] (cross) — owner
 - [[shivendra-selvam]] — secondary lead

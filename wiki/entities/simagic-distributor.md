@@ -21,7 +21,7 @@ tags: [partner, distributor, contract, simagic]
 | MOQ per order | 50,000 RMB (~Rs.5.8L) |
 | Annual minimum | 250,000 RMB (~Rs.29L) |
 | MAP | No less than 95% of SRP (90% during promo periods) |
-| Status | **Active — expires May 2026** |
+| Status | **⚠️ EXPIRED — May 9, 2026. Auto-renewal missed if no 60-day notice was sent (deadline was Mar 10, 2026). Renewal decision required NOW.** |
 
 ## Key obligations
 

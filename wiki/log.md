@@ -9,6 +9,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-11] ingest | RaceSims commercial leads — IPL team pipeline + Araya Airport configs + Techxhub/Fanatec pricing
+- Source: [[2026-04-13-racesims-raw-dump]]
+- Created: [[ipl-team-pipeline]]
+- Updated: [[araya-airport]] (Config A/B pricing), [[techxhub]] (Fanatec + Playseat March 2026 pricing)
+- Domain: racesims
+
 ## [2026-05-11] ingest | RaceSims technical detail — GT Pro Rig BOM, CAN bus R&D specifics, VRH distribution contract terms
 - Source: [[2026-04-13-racesims-raw-dump]]
 - Updated: [[gt-pro-rig]] (BOM costing entry/mid/pro + PC builds), [[can-bus-telemetry]] (Suzuki Baleno/Jason + AiM C125 iterations), [[virtual-racing-hub]] (distribution contract July 22 2025 + 24-month non-circumvention)

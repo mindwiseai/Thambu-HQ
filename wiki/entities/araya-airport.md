@@ -33,6 +33,12 @@ Fully enclosed, modular racing simulators designed for unmanned operation in air
 | Display | 1,10,000 (49" ultrawide) | 1,00,000 (3x32" + bezel-free) |
 | **Total** | **6,96,500** | **6,86,500** |
 
+## Pricing Configurations
+
+- **Config A (49" single screen):** Rs.6,96,500 per unit
+- **Config B (triple 32" screens):** Rs.6,86,500 per unit
+- **Note:** Config B is slightly cheaper despite triple screens because 32" monitors are lower cost than the 49" ultrawide
+
 ## Supporting documents
 
 - `old files/Companys/Araya Airport/Araya_Global_Simulator_Proposal.pptx` — full proposal deck

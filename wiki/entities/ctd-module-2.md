@@ -12,6 +12,23 @@ The **ICH Common Technical Document Module 2** package compiled for [[domains/mi
 > [!note]
 > **Document lineage (per Gmail March 31 draft):** The CTD Module 2 documents in the repo were originally **KeenMind** / **SFI (Soho Flordis International)** branded documents. They were converted to Mindwise by doing a find-replace of all references ("KeenMind / Keen Mind" → "Mindwise"; "SFI / Soho Flordis" → "Lumen Marketing Company" equivalent). The underlying clinical trials, CDRI internal reports, dosing, and safety data are **identical** because they refer to the same CDRI-08 extract that KeenMind (Australia) has been selling for decades. But this is important context: when reading the CTD docs and encountering a reference that seems "Mindwise-specific," check whether it was actually a KeenMind-era claim that got mechanically replaced. Anything specific to the Indian launch (FSSAI, Indian market positioning, etc.) would need to be freshly authored, not carried over from the Australian dossier.
 
+## Status as of April 2026
+
+**Completed and converted to Mindwise branding:**
+- Module 2.4 — Nonclinical Overview
+- Module 2.5 — Clinical Overview
+- Module 2.7 — Clinical Summary
+
+**NOT yet started / missing:**
+- Module 1 (administrative data, product information)
+- Module 2.1, 2.2, 2.3 (summaries)
+- Module 2.6 (case report tabulations)
+- Module 3 (quality overall summary)
+- Module 4 (nonclinical study reports)
+- Module 5 (clinical study reports)
+
+Source: [[2026-04-13-mindwise-raw-dump]]
+
 ## What CTD Module 2 is
 
 The Common Technical Document is the international format for submitting regulatory data to medicines regulators (FDA, TGA, EMA, CDSCO, etc.). Module 2 contains the **summaries** — the parts a reviewer reads first to understand the safety and efficacy story:
