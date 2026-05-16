@@ -9,48 +9,47 @@ tags: [seo, technical, backlog]
 
 The technical SEO fixes flagged in the [[2026-03-25-seo-geo-audit|SEO/GEO audit]] for racesims.in. Some are already done; some are pending.
 
-## ✅ Already done (per VRH battle plan)
+## ✅ Already done (per VRH battle plan + 2026-05-17 full audit)
 - **AI crawler access (robots.txt)** — GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot allowed → see [[geo-first-mover-advantage]]
 - Fixed duplicate H1 tags
-- Fixed Organization schema duplication (partial — see [[brand-name-consistency-issue]] for the still-open naming bug)
+- **Organization schema** — fixed brand naming, added `address` (PostalAddress), `legalName`, `Simagic` removed (not authorised reseller) — [[2026-05-17-gmc-seo-optimisation]]
+- **Product schema** — replaced `{{ product | structured_data }}` with custom Liquid: adds `seller` with `PostalAddress`, `itemCondition: NewCondition`, absolute `@id` URLs, `https://schema.org/` — fixes GMC counterfeit flag
+- **LocalBusiness schema** — added to `</body>`: Chennai address, geo (13.0468, 80.2186), Mon–Sat 10–18 hours
+- **AggregateRating (Judge.me)** — Product JSON-LD enabled; confirmed live on GT Sim Cockpit (5.00★, 1 review)
+- **Image alt text** — 40 images across 13 products updated via GraphQL
+- **Collection SEO** — 9/10 collections now have title + description
+- **Brand name standardised** — "RaceSims Solutions Pvt Ltd" everywhere; home page + commercial page fixed
 - Added BreadcrumbList structured data
-- Shortened title tags for better CTR
 - Fixed 404 errors with proper redirects
 
 ## 🔴 Critical priority — open
 
-### 1. Fix duplicate Organization schemas + brand naming (still partially open)
-Every page had two Org schemas with different names: "Race Sims" and "RaceSims solutions Pvt Ltd". Picking ONE canonical name and standardizing across all schemas + content. See [[brand-name-consistency-issue]].
-
-### 2. Fix 51 pages returning 404 errors
+### 1. Fix 51 pages returning 404 errors
 Review the 51 URLs in Google Search Console (Indexing → Pages → "Not found"). Set up 301 redirects for any that had traffic.
+
+### 2. GMC resubmission
+Schema changes live as of 2026-05-17. Wait 3–5 days for Google to re-crawl, then resubmit in Google Merchant Centre. GBP shows "Fix product details" card — expected to clear.
 
 ## 🟡 High priority — open
 
-### 3. Fix duplicate H1 tags (theme edit, possibly still partial)
-Audit confirms 2 H1 tags on every product page. Shopify theme outputs both a page-level H1 and a product title H1. Edit theme to ensure exactly **one H1 per page**. Change logo/header to `<div>` or `<span>`.
+### 3. GTINs / MPNs from suppliers
+Add EAN barcodes from Conspit and VNM to Shopify product variant → Barcode field. Schema will auto-populate `gtin`. Add MPN metafield (`custom.mpn`) per product. Both are strong GMC anti-counterfeit signals.
 
-### 4. Add Product Review/Rating schema
-Implement a product review system (Judge.me, Loox, or Shopify native). Add `AggregateRating` and `Review` schema to Product JSON-LD. AI models heavily favor products with visible social proof.
-
-### 5. Fix missing alt text on images
-Multiple product pages have images without alt text (4 on homepage, 5 on VNM Elite page). Bulk-add via Hextom app.
-
-### 6. Shorten title tags
+### 4. Shorten title tags
 Currently 80-95 chars (Google truncates at ~60). Drop " – RaceSims solutions Pvt Ltd" suffix.
 
 ## 🟢 Medium priority — plan for next month
 
-### 7. Create buying guide / comparison blog content
+### 5. Create buying guide / comparison blog content
 See [[blog-content-pipeline]] — 10-article plan from the VRH battle plan. AI models cite comparison articles 3-5× more than product pages.
 
-### 8. Add LocalBusiness schema
-Add `Store` schema with Chennai office address, phone, email, geo-coordinates. Helps "sim racing near me" and India-specific AI queries.
-
-### 9. Strengthen About Us / Authority page
+### 6. Strengthen About Us / Authority page
 Build E-E-A-T signals: authorized [[conspit]] / [[vnm]] distributor status, service partner credentials, years in business, team expertise, customer base.
 
-### 10. Review "Crawled - Currently Not Indexed" pages (63)
+### 7. GBP photos
+Add 5–10 product/showroom photos to business.google.com → Photos. Already have 5.0★/8 reviews + 761 interactions.
+
+### 8. Review "Crawled - Currently Not Indexed" pages (63)
 63 pages were crawled by Google but not indexed. Either improve content, consolidate, or noindex them.
 
 ## Stats baseline (from the audit)

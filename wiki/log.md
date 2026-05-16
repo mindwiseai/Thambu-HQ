@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-17] ingest | RaceSims GMC & SEO full audit — schema stack, Judge.me, image alt text, collection SEO
+- Source: [[2026-05-17-gmc-seo-optimisation]]
+- Created: [[2026-05-17-gmc-seo-optimisation]]
+- Updated: [[seo-technical-fixes]] (marked 8 items done, updated open backlog)
+- Updated: [[hot]] (new latest entry)
+- Domain: racesims
+
 ## [2026-05-11] ingest | Mindwise technical — CTD module status, NDAs, security flags documented
 - Source: [[2026-04-13-mindwise-raw-dump]]
 - Updated: [[ctd-module-2]] (status breakdown: modules 2.4/2.5/2.7 completed, 1/2.1-2.3/2.6/3-5 pending), [[domains/mindwise/_index]] (legal & NDA section added)

@@ -8,7 +8,18 @@ updated: 2026-05-11
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-11 (latest) — Ingest: RaceSims catalogs + ARKA media + Simagic contract EXPIRED
+## 2026-05-17 (latest) — GMC & SEO full audit: schema stack complete, Judge.me AggregateRating live
+
+- **GMC counterfeit flag root cause FIXED**: replaced `{{ product | structured_data }}` with custom Liquid on `sections/main-product.liquid` — now includes `seller` with `PostalAddress`, `itemCondition: NewCondition`, absolute `@id` URLs. Organization schema updated with `address` + `legalName`. LocalBusiness schema added to `theme.liquid`.
+- **Schema stack on every product page**: Organization + LocalBusiness + BreadcrumbList + Product (seller) + AggregateRating (Judge.me) ✅
+- **Judge.me**: enabled Product JSON-LD (`enable_json_ld_products: true`). AggregateRating confirmed live on GT Sim Cockpit (5.00★/1 review). 5 product reviews total, 5.0★ avg.
+- **40 image alt texts** updated across 13 products via GraphQL. **9 collection SEO titles/descriptions** added. Commercial page H1 fixed. Home page brand name standardised.
+- **Google Business Profile**: already set up — 5.0★, 8 reviews, 761 customer interactions. Motorsports store, Chennai.
+- **Shopify store handle confirmed**: `hhck1u-zz.myshopify.com`. Live theme ID: `145052794958`.
+- **Next action**: wait 3–5 days for Google re-crawl, then resubmit in GMC. Get GTINs/MPNs from Conspit + VNM. Add GBP photos.
+- See [[seo-technical-fixes]] for updated status, [[2026-05-17-gmc-seo-optimisation]] for full detail.
+
+## 2026-05-11 — Ingest: RaceSims catalogs + ARKA media + Simagic contract EXPIRED
 
 - **⚠️ SIMAGIC CONTRACT EXPIRED MAY 9, 2026** — contract (10 May 2025 – 9 May 2026) has lapsed. Auto-renewal required 60-day notice (deadline was Mar 10, 2026). **Thambu must contact Simagic immediately** to clarify renewal status. South India exclusivity may be at risk. See [[simagic-distributor]].
 - **ARKA Motorsports / FIA APRC media** — 5 photos from South India Rally (April 21) moved to `racesims/marketing/partnerships/arka/`: podium, team photo, VW Polo action shot, ARKA logo, MRF logo. RaceSims wordmark moved to `racesims/marketing/brand/`.
