@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Events — IERL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/tokens.css">
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="/"><span class="b-mark">◆</span>IERL</a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/events" class="is-current">Events</a>
+      <a href="/championship">Championship</a>
+      <a href="/partners">Partners</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="section">
+      <div class="head">
+        <div>
+          <div class="label">All rounds</div>
+          <h2>Events</h2>
+        </div>
+      </div>
+      <p class="lede">Every round of the IERL season — current, upcoming, and finished. Click any round to open the leaderboard.</p>
+      <div id="events" class="cards"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="credit">The Indian Esports Racing League is presented by RaceSims, India's pro-grade sim-racing brand.</span>
+      <div class="meta">
+        <a href="/about">About</a>
+        <a href="/status">Data status</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { api, el } from '/assets/app.js';
+
+    (async () => {
+      const data = await api('/api/events');
+      const cards = (data.events ?? []).map((e) => el('a', {
+          className: 'card', href: `/events/${e.slug}`, style: 'display:block;border-bottom:1px solid var(--rule)'
+        },
+        el('div', { className: 'eyebrow' }, `${e.season_year ?? ''} · Round ${e.round_number}`),
+        el('h3', {}, e.name),
+        el('div', { className: 'meta' }, `${e.car} · ${e.track}`),
+        el('div', { className: 'meta', style: 'margin-top:8px;color:var(--accent)' },
+          e.status === 'live' ? '● Live' : (e.status[0].toUpperCase() + e.status.slice(1))
+        )
+      ));
+      document.getElementById('events').replaceChildren(...(cards.length ? cards : [el('div', { className: 'empty' }, 'No events scheduled yet.')]));
+    })();
+  </script>
+</body>
+</html>

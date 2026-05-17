@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Championship — IERL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/tokens.css">
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="/"><span class="b-mark">◆</span>IERL</a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/events">Events</a>
+      <a href="/championship" class="is-current">Championship</a>
+      <a href="/partners">Partners</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="section">
+      <div class="head">
+        <div>
+          <div class="label" id="season-label">Season</div>
+          <h2 id="season-title">Championship standings</h2>
+        </div>
+        <span class="muted" id="rules-meta"></span>
+      </div>
+      <p class="lede" id="rules-text"></p>
+      <div id="standings"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="credit">The Indian Esports Racing League is presented by RaceSims, India's pro-grade sim-racing brand.</span>
+      <div class="meta">
+        <a href="/about">About</a>
+        <a href="/status">Data status</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { api } from '/assets/app.js';
+    import { renderChampionship } from '/assets/leaderboard.js';
+
+    (async () => {
+      const data = await api('/api/championship');
+      if (data.error) {
+        document.getElementById('season-title').textContent = 'No active season';
+        return;
+      }
+      document.getElementById('season-label').textContent = `${data.season.year} season`;
+      document.getElementById('season-title').textContent = data.season.name;
+
+      const points = JSON.parse(data.season.point_system);
+      document.getElementById('rules-text').textContent =
+        `Points are awarded by finishing position in each round: ${points.join(', ')}. ` +
+        `Each driver's worst ${data.season.drop_lowest_n} round${data.season.drop_lowest_n === 1 ? '' : 's'} ${data.season.drop_lowest_n === 1 ? 'is' : 'are'} dropped from their total. ` +
+        `Tied totals are settled by countback — most wins first, then most second places, and so on.`;
+      document.getElementById('rules-meta').textContent =
+        `${data.events?.length ?? 0} round${data.events?.length === 1 ? '' : 's'} · drop ${data.season.drop_lowest_n}`;
+
+      renderChampionship('#standings', data.standings ?? [], data.events ?? []);
+    })();
+  </script>
+</body>
+</html>

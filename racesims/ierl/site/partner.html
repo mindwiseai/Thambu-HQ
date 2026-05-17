@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Partner — IERL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/tokens.css">
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="/"><span class="b-mark">◆</span>IERL</a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/events">Events</a>
+      <a href="/championship">Championship</a>
+      <a href="/partners" class="is-current">Partners</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow" id="p-eyebrow">Loading…</div>
+      <h1 id="p-name">—</h1>
+      <p class="subtitle" id="p-sub"></p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section class="section">
+      <div class="head">
+        <div>
+          <div class="label">Drivers</div>
+          <h2>Who races here</h2>
+        </div>
+      </div>
+      <div id="drivers"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="credit">The Indian Esports Racing League is presented by RaceSims, India's pro-grade sim-racing brand.</span>
+      <div class="meta"><a href="/partners">All partners</a><a href="/status">Data status</a></div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { api, el, fmtLapTime, qs } from '/assets/app.js';
+
+    const slug = qs('slug') || (location.pathname.split('/').pop() || '').replace(/\.html$/, '');
+
+    (async () => {
+      const data = await api(`/api/partner/${slug}`);
+      if (data.error) {
+        document.getElementById('p-name').textContent = 'Partner not found';
+        return;
+      }
+      const p = data.partner;
+      document.title = `${p.name} — IERL`;
+      document.getElementById('p-eyebrow').textContent = p.state ?? 'India';
+      document.getElementById('p-name').textContent = p.name;
+      document.getElementById('p-sub').textContent = p.city;
+
+      const rows = data.drivers ?? [];
+      if (rows.length === 0) {
+        document.getElementById('drivers').innerHTML = '<div class="empty">No driver activity recorded yet for this partner.</div>';
+        return;
+      }
+      const table = el('table', { className: 'leaderboard' },
+        el('thead', {}, el('tr', {},
+          el('th', {}, 'Driver'),
+          el('th', { style: 'text-align:right' }, 'Best lap'),
+          el('th', { style: 'text-align:right' }, 'Laps recorded')
+        )),
+        el('tbody', {}, rows.map((d) => el('tr', {},
+          el('td', { className: 'lb-driver' }, d.display_name),
+          el('td', { className: 'lb-time', html: d.best_lap_ms ? fmtLapTime(d.best_lap_ms) : '—' }),
+          el('td', { className: 'lb-laps' }, d.lap_count ?? 0)
+        )))
+      );
+      document.getElementById('drivers').replaceChildren(table);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Indian Esports Racing League</title>
+  <meta name="description" content="A monthly hot-lap series and championship across India's premier sim-racing partner network. Presented by RaceSims.">
+  <meta property="og:title" content="Indian Esports Racing League">
+  <meta property="og:description" content="A monthly hot-lap series and championship across India's premier sim-racing partner network.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/tokens.css">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="/"><span class="b-mark">◆</span>IERL</a>
+    <nav class="nav">
+      <a href="/" class="is-current">Home</a>
+      <a href="/events">Events</a>
+      <a href="/championship">Championship</a>
+      <a href="/partners">Partners</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="wrap">
+      <div class="eyebrow" id="hero-eyebrow">Loading…</div>
+      <h1 id="hero-title">Indian Esports Racing League</h1>
+      <p class="subtitle" id="hero-sub">A monthly hot-lap series and championship across India's premier sim-racing partner network.</p>
+      <dl class="meta-row" id="hero-meta"></dl>
+    </div>
+  </section>
+
+  <main class="wrap">
+
+    <dl class="kpi-strip" id="kpis">
+      <div class="kpi"><dt>Season</dt><dd id="kpi-season">—</dd></div>
+      <div class="kpi"><dt>Partners</dt><dd id="kpi-partners">—</dd></div>
+      <div class="kpi"><dt>Round</dt><dd id="kpi-round">—</dd></div>
+      <div class="kpi"><dt>Status</dt><dd id="kpi-status">—</dd></div>
+    </dl>
+
+    <section class="section">
+      <div class="head">
+        <div>
+          <div class="label">Current round — Top five</div>
+          <h2 id="lb-title">Hot lap leaderboard</h2>
+        </div>
+        <a id="lb-link" href="/events">Full leaderboard →</a>
+      </div>
+      <div id="leaderboard"></div>
+    </section>
+
+    <section class="section">
+      <div class="head">
+        <div>
+          <div class="label">Season standings</div>
+          <h2>Championship — Top five</h2>
+        </div>
+        <a href="/championship">Full standings →</a>
+      </div>
+      <div id="championship"></div>
+    </section>
+
+    <section class="section">
+      <div class="head">
+        <div>
+          <div class="label">How it works</div>
+          <h2>One hot lap. One month. One winner.</h2>
+        </div>
+      </div>
+      <p class="lede">
+        Each month, every IERL partner runs the same car around the same circuit. Drivers post their fastest lap to a public time-trial board. The clock decides everything. We pull every result, dedupe, and publish a single national leaderboard — with championship points scored across the season.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="credit">The Indian Esports Racing League is presented by RaceSims, India's pro-grade sim-racing brand. Data refreshes hourly from partner timing pages.</span>
+      <div class="meta">
+        <a href="/about">About</a>
+        <a href="/status">Data status</a>
+        <a href="https://racesims.in" target="_blank" rel="noreferrer">RaceSims</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { api, el, fmtLapTime } from '/assets/app.js';
+    import { renderLeaderboard, renderChampionship } from '/assets/leaderboard.js';
+
+    (async () => {
+      try {
+        const data = await api('/api/home');
+        const ev = data.current_event;
+        if (ev) {
+          document.getElementById('hero-eyebrow').innerHTML =
+            `${ev.status === 'live' ? '<span class="tag-live"><span class="live-dot"></span>Live now</span> · ' : ''}` +
+            `Round ${ev.round_number} · ${data.season?.name ?? ''}`;
+          document.getElementById('hero-title').textContent = ev.name;
+          document.getElementById('hero-sub').textContent = `${ev.car} · ${ev.track}`;
+          const meta = document.getElementById('hero-meta');
+          meta.replaceChildren(
+            el('div', {}, el('dt', {}, 'Track'), el('dd', {}, ev.track)),
+            el('div', {}, el('dt', {}, 'Car'), el('dd', {}, ev.car)),
+            el('div', {}, el('dt', {}, 'Window'), el('dd', {}, fmtWindow(ev.starts_at, ev.ends_at)))
+          );
+          document.getElementById('kpi-round').textContent = `R${ev.round_number}`;
+          document.getElementById('kpi-status').textContent = ev.status[0].toUpperCase() + ev.status.slice(1);
+          document.getElementById('lb-title').textContent = `${ev.track} — ${ev.car}`;
+          document.getElementById('lb-link').href = `/events/${ev.slug}`;
+        }
+        document.getElementById('kpi-season').textContent = data.season?.year ?? '—';
+        document.getElementById('kpi-partners').textContent = data.partner_count ?? '—';
+
+        renderLeaderboard('#leaderboard', data.top5);
+
+        const champ = await api('/api/championship');
+        if (champ.standings) {
+          renderChampionship('#championship', champ.standings.slice(0, 5), champ.events ?? []);
+        }
+      } catch (e) {
+        console.error(e);
+        document.getElementById('hero-eyebrow').textContent = 'Data unavailable';
+      }
+    })();
+
+    function fmtWindow(a, b) {
+      const opts = { month: 'short', day: 'numeric' };
+      const da = new Date(a).toLocaleDateString('en-IN', opts);
+      const db = new Date(b).toLocaleDateString('en-IN', opts);
+      return `${da} – ${db}`;
+    }
+  </script>
+</body>
+</html>

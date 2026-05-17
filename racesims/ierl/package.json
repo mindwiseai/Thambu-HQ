@@ -1,0 +1,28 @@
+{
+  "name": "ierl",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Indian Esports Racing League — public leaderboard site, Cloudflare Pages + Worker + D1",
+  "scripts": {
+    "dev:worker": "wrangler dev",
+    "dev:site": "wrangler pages dev site --service WORKER=http://localhost:8787 --port 8788",
+    "db:reset": "wrangler d1 execute ierl --local --file=worker/migrations/0001_init.sql",
+    "db:seed": "wrangler d1 execute ierl --local --file=worker/migrations/0002_seed_seasons.sql",
+    "db:remote:apply": "wrangler d1 migrations apply ierl --remote",
+    "sync-config": "wrangler d1 execute ierl --local --command \"$(node worker/src/admin/sync-config.mjs)\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "deploy:worker": "wrangler deploy",
+    "deploy:site": "wrangler pages deploy site --project-name=ierl"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20251001.0",
+    "@types/node": "^25.6.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5",
+    "wrangler": "^3.90.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

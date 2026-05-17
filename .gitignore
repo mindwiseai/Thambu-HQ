@@ -21,6 +21,8 @@ raw/racesims/01_Company/Security/
 raw/racesims/08_Software/
 **/2FA*
 **/backup_codes*
+**/*backup_codes*
+**/*backup*codes*
 **/*secret*
 **/*credentials*
 **/*api_key*
@@ -143,3 +145,5 @@ racesims/**/*.jpeg
 graphify-out/.graphify_*
 graphify-out/cache/
 graphify-out/obsidian-vault/
+raw/racesims/01_Company/Registration/discord_backup_codes.txt
+racesims/.claude/worktrees/

@@ -1,0 +1,24 @@
+{
+  "season": 2026,
+  "events": [
+    {
+      "slug": "2026-r01-monza-formula-hybrid-x",
+      "round_number": 1,
+      "name": "Round 1 — Monza",
+      "track": "Autodromo Nazionale Monza",
+      "car": "RSS Formula Hybrid X 2026",
+      "car_class": "Open Wheel",
+      "starts_at": "2026-04-01T00:00:00Z",
+      "ends_at": "2026-04-30T23:55:00Z",
+      "status": "live",
+      "notes": "Inaugural round of the IERL 2026 season. Sourced from Sim Racing Adda (sra.racecenters.com).",
+      "sources": [
+        {
+          "kind": "sra-vms",
+          "url": "https://api.simracing.co.uk/v0.1/hotlap_events/141",
+          "partner": "sim-racing-adda"
+        }
+      ]
+    }
+  ]
+}

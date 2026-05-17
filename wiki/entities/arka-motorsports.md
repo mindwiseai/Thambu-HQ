@@ -96,6 +96,22 @@ From the new ARKA context, dozens of content pieces become possible:
 5. **"What 123 championships teach you about setup engineering"** — long-form blog post, zero competitors can write this
 6. **Cast aluminum rig design story** — document the ARKA input process into [[next-gen-racesims-rigs]]
 
+## Engineering Tools
+
+17 Excel calculators + 1 reference PDF catalogued in [[2026-04-19-arka-calculator-inventory]]. 7 functional groups:
+
+| Group | Files | Key tool |
+|-------|-------|----------|
+| Gear ratio | 4 files, ~33 sheets | PPG per-car template (XUV300, VW Vento, Polo, Swift…) |
+| Suspension WTW | 5 files | Smithees WTW + bespoke Polo extension |
+| ECU wiring | 1 file | Polo 1.0 TSI → OBR ECU pin map (132 rows) |
+| Sensor math | 2 files | NTC→ADC + V→resistance (Bosch, PST sensors) |
+| Engine math | 2 files | Cyl-lobe volume, deg→time |
+| Setup log | 1 file | Per-session capture template |
+| Manufacturing BoM | 1 file + PDF | Alcon caliper CNC tool schedule |
+
+POC automation rank: **(1) OBR wiring DB** (safety-critical — typo = blown ECU), (2) unified gear ratio, (3) WTW + setup workbook.
+
 ## Open questions
 - What do the 123 championships break down to — rally vs. circuit vs. autocross vs. hill climb?
 - Who are ARKA's current drivers beyond Leelakrishnan? Need a team roster ingest.

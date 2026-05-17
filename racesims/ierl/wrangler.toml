@@ -1,0 +1,28 @@
+name = "ierl-worker"
+main = "worker/src/index.ts"
+compatibility_date = "2025-09-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+[triggers]
+crons = ["0 * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ierl"
+database_id = "REPLACE_WITH_D1_ID_AFTER_wrangler_d1_create"
+migrations_dir = "worker/migrations"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "REPLACE_WITH_KV_ID_AFTER_wrangler_kv_namespace_create"
+
+[vars]
+ENVIRONMENT = "production"
+SCRAPE_USER_AGENT = "IERL-Scraper/1.0 (+https://indianesportsracingleague.com/about)"
+
+# Secrets (set via `wrangler secret put`):
+#   ADMIN_TOKEN — gates POST /api/admin/scrape
+
+[observability]
+enabled = true

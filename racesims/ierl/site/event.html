@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Event — IERL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/tokens.css">
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="/"><span class="b-mark">◆</span>IERL</a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/events" class="is-current">Events</a>
+      <a href="/championship">Championship</a>
+      <a href="/partners">Partners</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow" id="ev-eyebrow">Loading…</div>
+      <h1 id="ev-title">—</h1>
+      <p class="subtitle" id="ev-sub"></p>
+      <dl class="meta-row" id="ev-meta"></dl>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section class="section">
+      <div class="head">
+        <div>
+          <div class="label">Hot lap leaderboard</div>
+          <h2 id="lb-head">Times</h2>
+        </div>
+        <span class="muted" id="lb-meta"></span>
+      </div>
+      <div id="leaderboard"></div>
+    </section>
+
+    <section class="section">
+      <div class="head">
+        <div>
+          <div class="label">Sources</div>
+          <h2>Where this data comes from</h2>
+        </div>
+      </div>
+      <div id="sources" class="cards"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="credit">The Indian Esports Racing League is presented by RaceSims, India's pro-grade sim-racing brand.</span>
+      <div class="meta">
+        <a href="/about">About</a>
+        <a href="/status">Data status</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { api, el, qs, relTime } from '/assets/app.js';
+    import { renderLeaderboard } from '/assets/leaderboard.js';
+
+    const slug = qs('slug') || (location.pathname.split('/').pop() || '').replace(/\.html$/, '');
+
+    (async () => {
+      try {
+        const data = await api(`/api/event/${slug}`);
+        if (data.error) {
+          document.getElementById('ev-title').textContent = 'Event not found';
+          return;
+        }
+        const ev = data.event;
+        document.title = `${ev.name} — IERL`;
+
+        document.getElementById('ev-eyebrow').innerHTML =
+          `${ev.status === 'live' ? '<span class="tag-live"><span class="live-dot"></span>Live now</span> · ' : ''}` +
+          `Round ${ev.round_number} · ${ev.season_name ?? ''}`;
+        document.getElementById('ev-title').textContent = ev.name;
+        document.getElementById('ev-sub').textContent = `${ev.car} · ${ev.track}`;
+
+        const meta = document.getElementById('ev-meta');
+        meta.replaceChildren(
+          el('div', {}, el('dt', {}, 'Track'), el('dd', {}, ev.track)),
+          el('div', {}, el('dt', {}, 'Car'), el('dd', {}, ev.car)),
+          el('div', {}, el('dt', {}, 'Class'), el('dd', {}, ev.car_class ?? '—')),
+          el('div', {}, el('dt', {}, 'Window'), el('dd', {}, fmtWindow(ev.starts_at, ev.ends_at)))
+        );
+
+        document.getElementById('lb-head').textContent = `${data.leaderboard.length} drivers · fastest single lap counts`;
+        document.getElementById('lb-meta').textContent = ev.notes ?? '';
+
+        renderLeaderboard('#leaderboard', data.leaderboard);
+
+        const sources = data.sources ?? [];
+        const cards = sources.length === 0
+          ? [el('div', { className: 'empty' }, 'No sources configured yet for this round.')]
+          : sources.map((s) => el('div', { className: 'card' },
+              el('div', { className: 'eyebrow' }, s.source_kind),
+              el('h3', {}, s.last_status === 'ok' ? 'Healthy' : (s.last_status ?? 'Pending')),
+              el('div', { className: 'meta' }, s.last_scraped_at ? `Last scraped ${relTime(s.last_scraped_at)}` : 'Never scraped')
+            ));
+        document.getElementById('sources').replaceChildren(...cards);
+      } catch (e) {
+        console.error(e);
+        document.getElementById('ev-title').textContent = 'Could not load event';
+      }
+    })();
+
+    function fmtWindow(a, b) {
+      const opts = { month: 'short', day: 'numeric', year: 'numeric' };
+      const da = new Date(a).toLocaleDateString('en-IN', opts);
+      const db = new Date(b).toLocaleDateString('en-IN', opts);
+      return `${da} – ${db}`;
+    }
+  </script>
+</body>
+</html>

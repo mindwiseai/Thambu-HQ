@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ARKA — APRC + INRC R1 Victory</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700;800&family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0a; padding: 30px; display: flex; flex-direction: column; align-items: center; gap: 50px; }
+  .label { font-family: 'Oswald'; font-size: 11px; color: #444; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 6px; text-align: center; }
+  .post { width: 540px; height: 540px; position: relative; overflow: hidden; }
+
+  /* ============================================================
+     POST 1 — VICTORY HERO (Car action with dramatic angular design)
+     ============================================================ */
+  .p1 { background: #080C1A; }
+
+  /* Photo placed in an angular clip */
+  .p1 .photo-zone {
+    position: absolute; top: 0; left: 0; right: 0; height: 65%;
+    background: url('car-action.jpg') center 35% / cover no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  }
+  .p1 .photo-zone::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(8,12,26,0.3) 0%, rgba(8,12,26,0) 30%, rgba(8,12,26,0.5) 70%, rgba(8,12,26,0.9) 100%);
+  }
+
+  /* Gold diagonal accent stripe */
+  .p1 .gold-slash {
+    position: absolute; top: 0; right: 80px; width: 6px; height: 110%;
+    background: linear-gradient(180deg, #D4AF37, #F5D76E, #D4AF37);
+    transform: rotate(-8deg); transform-origin: top center;
+    z-index: 3; opacity: 0.7;
+  }
+  .p1 .gold-slash2 {
+    position: absolute; top: 0; right: 68px; width: 2px; height: 110%;
+    background: linear-gradient(180deg, #D4AF37, transparent);
+    transform: rotate(-8deg); transform-origin: top center;
+    z-index: 3; opacity: 0.4;
+  }
+
+  /* Logos - large and prominent */
+  .p1 .logos {
+    position: absolute; top: 16px; left: 20px;
+    display: flex; align-items: center; gap: 10px; z-index: 5;
+  }
+  .p1 .logos img {
+    height: 34px; padding: 5px 10px;
+    background: rgba(8,12,26,0.75); backdrop-filter: blur(12px);
+    border-radius: 4px; border: 1px solid rgba(212,175,55,0.15);
+  }
+
+  /* P1 badge top-right */
+  .p1 .p1-badge {
+    position: absolute; top: 14px; right: 14px; z-index: 5;
+    width: 68px; height: 68px;
+    background: linear-gradient(135deg, #D4AF37, #F5D76E);
+    border-radius: 50%; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(212,175,55,0.4);
+  }
+  .p1 .p1-badge .num { font-family: 'Oswald'; font-size: 32px; font-weight: 800; color: #0A0F1E; line-height: 1; }
+  .p1 .p1-badge .lbl { font-family: 'Barlow Condensed'; font-size: 7px; font-weight: 700; letter-spacing: 2px; color: #0A0F1E; text-transform: uppercase; }
+
+  /* Bottom content block */
+  .p1 .content {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 0 28px 22px; z-index: 5;
+  }
+  .p1 .title-block {
+    display: flex; align-items: flex-end; gap: 14px; margin-bottom: 12px;
+  }
+  .p1 .title-block .big {
+    font-family: 'Oswald'; font-size: 52px; font-weight: 800;
+    color: #fff; text-transform: uppercase; letter-spacing: 2px; line-height: 0.9;
+  }
+  .p1 .title-block .big .gold { color: #D4AF37; }
+  .p1 .title-block .side {
+    font-family: 'Barlow Condensed'; font-size: 13px; font-weight: 700;
+    letter-spacing: 3px; color: #D4AF37; text-transform: uppercase;
+    padding-bottom: 6px; border-left: 3px solid #D4AF37; padding-left: 10px;
+    line-height: 1.4;
+  }
+
+  .p1 .meta-row {
+    display: flex; align-items: center; gap: 8px;
+    font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 600;
+    color: #6680aa; letter-spacing: 2px; text-transform: uppercase;
+  }
+  .p1 .meta-row .sep { color: #D4AF37; }
+
+  .p1 .gold-bar {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, #8B6914, #D4AF37, #F5D76E, #D4AF37, #8B6914);
+    z-index: 10;
+  }
+
+  /* ============================================================
+     POST 2 — PODIUM (Drivers with geometric framing)
+     ============================================================ */
+  .p2 { background: #080C1A; }
+
+  .p2 .photo-zone {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: url('podium-drivers.jpg') center 10% / cover no-repeat;
+  }
+  .p2 .photo-zone::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg,
+      rgba(8,12,26,0.5) 0%, rgba(8,12,26,0) 15%,
+      rgba(8,12,26,0) 40%, rgba(8,12,26,0.85) 60%,
+      rgba(8,12,26,0.98) 75%, rgba(8,12,26,1) 100%);
+  }
+
+  /* Geometric corner accents */
+  .p2 .corner-bl { position: absolute; bottom: 0; left: 0; width: 200px; height: 200px; border-left: 3px solid rgba(212,175,55,0.15); border-bottom: 3px solid rgba(212,175,55,0.15); z-index: 3; }
+  .p2 .corner-tr { position: absolute; top: 0; right: 0; width: 120px; height: 120px; border-right: 3px solid rgba(212,175,55,0.15); border-top: 3px solid rgba(212,175,55,0.15); z-index: 3; }
+
+  .p2 .logos {
+    position: absolute; top: 16px; left: 20px;
+    display: flex; align-items: center; gap: 10px; z-index: 5;
+  }
+  .p2 .logos img {
+    height: 34px; padding: 5px 10px;
+    background: rgba(8,12,26,0.75); backdrop-filter: blur(12px);
+    border-radius: 4px; border: 1px solid rgba(212,175,55,0.15);
+  }
+
+  .p2 .content {
+    position: absolute; bottom: 18px; left: 0; right: 0;
+    text-align: center; z-index: 5; padding: 0 24px;
+  }
+  .p2 .driver-row { display: flex; justify-content: center; gap: 36px; margin-bottom: 14px; }
+  .p2 .driver { text-align: center; }
+  .p2 .driver .role {
+    font-family: 'Barlow Condensed'; font-size: 10px; font-weight: 700;
+    letter-spacing: 4px; color: #D4AF37; text-transform: uppercase; margin-bottom: 4px;
+  }
+  .p2 .driver .name {
+    font-family: 'Oswald'; font-size: 28px; font-weight: 800;
+    color: #fff; text-transform: uppercase; letter-spacing: 3px; line-height: 1.1;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+  }
+
+  .p2 .badges { display: flex; justify-content: center; gap: 10px; margin-bottom: 10px; }
+  .p2 .badge {
+    font-family: 'Oswald'; font-size: 12px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; padding: 7px 18px;
+    border-radius: 3px;
+  }
+  .p2 .badge.gold { color: #0A0F1E; background: linear-gradient(135deg, #C9A430, #F5D76E, #D4AF37); box-shadow: 0 2px 12px rgba(212,175,55,0.3); }
+  .p2 .badge.blue { color: #fff; background: linear-gradient(135deg, #1256A0, #2196F3, #1976D2); box-shadow: 0 2px 12px rgba(33,150,243,0.3); }
+
+  .p2 .meta {
+    font-family: 'Barlow Condensed'; font-size: 10px; font-weight: 600;
+    color: #5a7099; letter-spacing: 2px; text-transform: uppercase;
+  }
+
+  .p2 .gold-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #8B6914, #D4AF37, #F5D76E, #D4AF37, #8B6914); z-index: 10; }
+
+  /* ============================================================
+     POST 3 — DOUBLE CROWN (Premium split with depth)
+     ============================================================ */
+  .p3 { background: linear-gradient(160deg, #060914 0%, #0C1228 50%, #0A0F1E 100%); }
+
+  /* Subtle diagonal texture */
+  .p3::before {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      -45deg, transparent, transparent 30px,
+      rgba(212,175,55,0.015) 30px, rgba(212,175,55,0.015) 31px
+    );
+    z-index: 1;
+  }
+
+  .p3 .logos {
+    position: absolute; top: 16px; left: 20px;
+    display: flex; align-items: center; gap: 10px; z-index: 5;
+  }
+  .p3 .logos img {
+    height: 34px; padding: 5px 10px;
+    background: rgba(255,255,255,0.05); border-radius: 4px;
+    border: 1px solid rgba(212,175,55,0.1);
+  }
+
+  .p3 .event-tag {
+    position: absolute; top: 18px; right: 20px; z-index: 5;
+    font-family: 'Barlow Condensed'; font-size: 10px; font-weight: 700;
+    letter-spacing: 3px; color: #D4AF37; text-transform: uppercase;
+    padding: 5px 12px; background: rgba(212,175,55,0.08);
+    border: 1px solid rgba(212,175,55,0.2); border-radius: 3px;
+  }
+
+  .p3 .kadur-line {
+    position: absolute; top: 62px; left: 0; right: 0; text-align: center; z-index: 5;
+    font-family: 'Oswald'; font-size: 18px; font-weight: 700;
+    letter-spacing: 8px; color: #fff; text-transform: uppercase;
+  }
+
+  .p3 .crowns {
+    position: absolute; top: 100px; bottom: 48px; left: 16px; right: 16px;
+    display: flex; gap: 6px; z-index: 5;
+  }
+
+  .p3 .crown {
+    flex: 1; border-radius: 12px; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; padding: 16px; text-align: center;
+    position: relative;
+  }
+  .p3 .crown.aprc {
+    background: linear-gradient(180deg, rgba(212,175,55,0.1) 0%, rgba(212,175,55,0.02) 100%);
+    border: 1px solid rgba(212,175,55,0.2);
+    box-shadow: inset 0 1px 0 rgba(212,175,55,0.15), 0 8px 30px rgba(0,0,0,0.3);
+  }
+  .p3 .crown.inrc {
+    background: linear-gradient(180deg, rgba(33,150,243,0.1) 0%, rgba(33,150,243,0.02) 100%);
+    border: 1px solid rgba(33,150,243,0.2);
+    box-shadow: inset 0 1px 0 rgba(33,150,243,0.15), 0 8px 30px rgba(0,0,0,0.3);
+  }
+
+  .p3 .crown .cat {
+    font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 700;
+    letter-spacing: 4px; text-transform: uppercase;
+  }
+  .p3 .crown.aprc .cat { color: #D4AF37; }
+  .p3 .crown.inrc .cat { color: #42A5F5; }
+
+  .p3 .crown .champ {
+    font-family: 'Oswald'; font-size: 42px; font-weight: 800;
+    color: #fff; letter-spacing: 4px; margin-top: 4px;
+  }
+
+  .p3 .crown .round {
+    font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 600;
+    letter-spacing: 3px; color: #5a7099; text-transform: uppercase; margin-top: 6px;
+  }
+
+  /* P1 with laurel */
+  .p3 .p1-laurel {
+    margin-top: 16px; position: relative;
+    width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;
+  }
+  .p3 .p1-laurel svg { position: absolute; inset: 0; }
+  .p3 .p1-laurel .p1-num {
+    font-family: 'Oswald'; font-size: 48px; font-weight: 800;
+    position: relative; z-index: 1;
+    text-shadow: 0 2px 15px currentColor;
+  }
+  .p3 .crown.aprc .p1-num { color: #D4AF37; }
+  .p3 .crown.inrc .p1-num { color: #42A5F5; }
+
+  .p3 .crown .place {
+    font-family: 'Barlow Condensed'; font-size: 10px; font-weight: 700;
+    letter-spacing: 4px; color: #5a7099; text-transform: uppercase; margin-top: 6px;
+  }
+
+  .p3 .foot {
+    position: absolute; bottom: 14px; left: 20px; right: 20px;
+    display: flex; justify-content: space-between; z-index: 5;
+    font-family: 'Barlow Condensed'; font-size: 10px; font-weight: 600;
+    color: #3a4a6a; letter-spacing: 2px; text-transform: uppercase;
+  }
+
+  .p3 .gold-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #8B6914, #D4AF37, #F5D76E, #D4AF37, #8B6914); z-index: 10; }
+
+  /* ============================================================
+     POST 4 — TEAM CELEBRATION (Dynamic diagonal split)
+     ============================================================ */
+  .p4 { background: #080C1A; }
+
+  .p4 .photo-zone {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: url('team-celebration.jpg') center center / cover no-repeat;
+  }
+  .p4 .photo-zone::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg,
+      rgba(8,12,26,0.88) 0%, rgba(8,12,26,0.4) 20%,
+      rgba(8,12,26,0.1) 35%, rgba(8,12,26,0.1) 60%,
+      rgba(8,12,26,0.7) 75%, rgba(8,12,26,0.98) 90%);
+  }
+
+  /* Angular gold accent */
+  .p4 .angle-accent {
+    position: absolute; top: -20px; left: 30px; width: 4px; height: 160px;
+    background: linear-gradient(180deg, #D4AF37, transparent);
+    transform: rotate(-15deg); z-index: 3; opacity: 0.5;
+  }
+  .p4 .angle-accent2 {
+    position: absolute; top: -20px; left: 42px; width: 1px; height: 120px;
+    background: linear-gradient(180deg, #D4AF37, transparent);
+    transform: rotate(-15deg); z-index: 3; opacity: 0.3;
+  }
+
+  .p4 .logos {
+    position: absolute; top: 16px; right: 20px;
+    display: flex; align-items: center; gap: 8px; z-index: 5;
+  }
+  .p4 .logos img {
+    height: 32px; padding: 5px 8px;
+    background: rgba(8,12,26,0.75); backdrop-filter: blur(12px);
+    border-radius: 4px; border: 1px solid rgba(212,175,55,0.15);
+  }
+
+  .p4 .top-content {
+    position: absolute; top: 16px; left: 24px; z-index: 5;
+  }
+  .p4 .top-event {
+    font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 700;
+    letter-spacing: 4px; color: #D4AF37; text-transform: uppercase;
+  }
+  .p4 .top-title {
+    font-family: 'Oswald'; font-size: 40px; font-weight: 800;
+    color: #fff; text-transform: uppercase; letter-spacing: 3px;
+    line-height: 1; margin-top: 2px;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.7);
+  }
+
+  .p4 .bottom-content {
+    position: absolute; bottom: 14px; left: 0; right: 0;
+    text-align: center; z-index: 5; padding: 0 20px;
+  }
+  .p4 .bottom-content .stat {
+    font-family: 'Oswald'; font-size: 12px; font-weight: 700;
+    letter-spacing: 3px; color: #D4AF37; text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .p4 .bottom-content .meta {
+    font-family: 'Barlow Condensed'; font-size: 10px; font-weight: 600;
+    color: #5a7099; letter-spacing: 2px; text-transform: uppercase;
+  }
+
+  .p4 .gold-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #8B6914, #D4AF37, #F5D76E, #D4AF37, #8B6914); z-index: 10; }
+</style>
+</head>
+<body>
+
+<!-- Laurel SVG defs -->
+<svg style="display:none">
+  <defs>
+    <symbol id="laurel-gold" viewBox="0 0 100 100">
+      <g opacity="0.85">
+        <path d="M45,85 Q20,72 18,45" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+        <ellipse cx="22" cy="70" rx="10" ry="5" transform="rotate(-25,22,70)" fill="#D4AF37" opacity="0.25" stroke="#D4AF37" stroke-width="0.5"/>
+        <ellipse cx="18" cy="58" rx="10" ry="5" transform="rotate(-40,18,58)" fill="#D4AF37" opacity="0.25" stroke="#D4AF37" stroke-width="0.5"/>
+        <ellipse cx="18" cy="46" rx="9" ry="4.5" transform="rotate(-55,18,46)" fill="#D4AF37" opacity="0.25" stroke="#D4AF37" stroke-width="0.5"/>
+        <ellipse cx="24" cy="36" rx="8" ry="4" transform="rotate(-70,24,36)" fill="#D4AF37" opacity="0.25" stroke="#D4AF37" stroke-width="0.5"/>
+        <ellipse cx="34" cy="28" rx="7" ry="3.5" transform="rotate(-80,34,28)" fill="#D4AF37" opacity="0.25" stroke="#D4AF37" stroke-width="0.5"/>
+        <path d="M55,85 Q80,72 82,45" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+        <ellipse cx="78" cy="70" rx="10" ry="5" transform="rotate(25,78,70)" fill="#D4AF37" opacity="0.25" stroke="#D4AF37" stroke-width="0.5"/>
+        <ellipse cx="82" cy="58" rx="10" ry="5" transform="rotate(40,82,58)" fill="#D4AF37" opacity="0.25" stroke="#D4AF37" stroke-width="0.5"/>
+        <ellipse cx="82" cy="46" rx="9" ry="4.5" transform="rotate(55,82,46)" fill="#D4AF37" opacity="0.25" stroke="#D4AF37" stroke-width="0.5"/>
+        <ellipse cx="76" cy="36" rx="8" ry="4" transform="rotate(70,76,36)" fill="#D4AF37" opacity="0.25" stroke="#D4AF37" stroke-width="0.5"/>
+        <ellipse cx="66" cy="28" rx="7" ry="3.5" transform="rotate(80,66,28)" fill="#D4AF37" opacity="0.25" stroke="#D4AF37" stroke-width="0.5"/>
+      </g>
+    </symbol>
+    <symbol id="laurel-blue" viewBox="0 0 100 100">
+      <g opacity="0.85">
+        <path d="M45,85 Q20,72 18,45" fill="none" stroke="#42A5F5" stroke-width="1.5"/>
+        <ellipse cx="22" cy="70" rx="10" ry="5" transform="rotate(-25,22,70)" fill="#42A5F5" opacity="0.2" stroke="#42A5F5" stroke-width="0.5"/>
+        <ellipse cx="18" cy="58" rx="10" ry="5" transform="rotate(-40,18,58)" fill="#42A5F5" opacity="0.2" stroke="#42A5F5" stroke-width="0.5"/>
+        <ellipse cx="18" cy="46" rx="9" ry="4.5" transform="rotate(-55,18,46)" fill="#42A5F5" opacity="0.2" stroke="#42A5F5" stroke-width="0.5"/>
+        <ellipse cx="24" cy="36" rx="8" ry="4" transform="rotate(-70,24,36)" fill="#42A5F5" opacity="0.2" stroke="#42A5F5" stroke-width="0.5"/>
+        <ellipse cx="34" cy="28" rx="7" ry="3.5" transform="rotate(-80,34,28)" fill="#42A5F5" opacity="0.2" stroke="#42A5F5" stroke-width="0.5"/>
+        <path d="M55,85 Q80,72 82,45" fill="none" stroke="#42A5F5" stroke-width="1.5"/>
+        <ellipse cx="78" cy="70" rx="10" ry="5" transform="rotate(25,78,70)" fill="#42A5F5" opacity="0.2" stroke="#42A5F5" stroke-width="0.5"/>
+        <ellipse cx="82" cy="58" rx="10" ry="5" transform="rotate(40,82,58)" fill="#42A5F5" opacity="0.2" stroke="#42A5F5" stroke-width="0.5"/>
+        <ellipse cx="82" cy="46" rx="9" ry="4.5" transform="rotate(55,82,46)" fill="#42A5F5" opacity="0.2" stroke="#42A5F5" stroke-width="0.5"/>
+        <ellipse cx="76" cy="36" rx="8" ry="4" transform="rotate(70,76,36)" fill="#42A5F5" opacity="0.2" stroke="#42A5F5" stroke-width="0.5"/>
+        <ellipse cx="66" cy="28" rx="7" ry="3.5" transform="rotate(80,66,28)" fill="#42A5F5" opacity="0.2" stroke="#42A5F5" stroke-width="0.5"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+
+<!-- POST 1 — VICTORY HERO -->
+<div class="label">Post 1 — Victory Hero</div>
+<div class="post p1">
+  <div class="photo-zone"></div>
+  <div class="gold-slash"></div>
+  <div class="gold-slash2"></div>
+  <div class="logos">
+    <img src="arka-logo-vertical.jpg" alt="ARKA">
+    <img src="racesims-logo.jpg" alt="RaceSims">
+    <img src="mrf-logo.jpg" alt="MRF">
+  </div>
+  <div class="p1-badge"><div class="num">P1</div><div class="lbl">Winner</div></div>
+  <div class="content">
+    <div class="title-block">
+      <div class="big"><span class="gold">Double</span><br>Victory</div>
+      <div class="side">APRC<br>Round 1<br>+<br>INRC<br>Round 1</div>
+    </div>
+    <div class="meta-row">
+      <span>Karna Kadur</span>
+      <span class="sep">&bull;</span>
+      <span>Kumar Ramaswamy</span>
+      <span class="sep">&bull;</span>
+      <span>VW Polo R2</span>
+      <span class="sep">&bull;</span>
+      <span>MRF Tyres</span>
+    </div>
+  </div>
+  <div class="gold-bar"></div>
+</div>
+
+
+<!-- POST 2 — PODIUM -->
+<div class="label">Post 2 — Podium</div>
+<div class="post p2">
+  <div class="photo-zone"></div>
+  <div class="corner-bl"></div>
+  <div class="corner-tr"></div>
+  <div class="logos">
+    <img src="arka-logo-vertical.jpg" alt="ARKA">
+    <img src="racesims-logo.jpg" alt="RaceSims">
+    <img src="mrf-logo.jpg" alt="MRF">
+  </div>
+  <div class="content">
+    <div class="driver-row">
+      <div class="driver"><div class="role">Driver</div><div class="name">Karna<br>Kadur</div></div>
+      <div class="driver"><div class="role">Co-Driver</div><div class="name">Kumar<br>Ramaswamy</div></div>
+    </div>
+    <div class="badges">
+      <div class="badge gold">APRC R1 &mdash; P1</div>
+      <div class="badge blue">INRC R1 &mdash; P1</div>
+    </div>
+    <div class="meta">Arka Motorsports &nbsp;&bull;&nbsp; 130+ Championship Titles &nbsp;&bull;&nbsp; Chennai</div>
+  </div>
+  <div class="gold-bar"></div>
+</div>
+
+
+<!-- POST 3 — DOUBLE CROWN -->
+<div class="label">Post 3 — Double Crown</div>
+<div class="post p3">
+  <div class="logos">
+    <img src="arka-logo-vertical.jpg" alt="ARKA">
+    <img src="racesims-logo.jpg" alt="RaceSims">
+    <img src="mrf-logo.jpg" alt="MRF">
+  </div>
+  <div class="event-tag">Chennai 2026</div>
+  <div class="kadur-line">Kadur &nbsp;/&nbsp; Ramaswamy</div>
+  <div class="crowns">
+    <div class="crown aprc">
+      <div class="cat">FIA Asia Pacific</div>
+      <div class="champ">APRC</div>
+      <div class="round">Round 1 &mdash; Chennai</div>
+      <div class="p1-laurel">
+        <svg width="100" height="100"><use href="#laurel-gold"/></svg>
+        <div class="p1-num">P1</div>
+      </div>
+      <div class="place">Overall Winner</div>
+    </div>
+    <div class="crown inrc">
+      <div class="cat">Indian National</div>
+      <div class="champ">INRC</div>
+      <div class="round">Round 1 &mdash; Chennai</div>
+      <div class="p1-laurel">
+        <svg width="100" height="100"><use href="#laurel-blue"/></svg>
+        <div class="p1-num">P1</div>
+      </div>
+      <div class="place">Overall Winner</div>
+    </div>
+  </div>
+  <div class="foot">
+    <span>VW Polo R2 &bull; MRF Tyres</span>
+    <span>Arka Motorsports &bull; 130+ Titles</span>
+  </div>
+  <div class="gold-bar"></div>
+</div>
+
+
+<!-- POST 4 — TEAM -->
+<div class="label">Post 4 — Team Celebration</div>
+<div class="post p4">
+  <div class="photo-zone"></div>
+  <div class="angle-accent"></div>
+  <div class="angle-accent2"></div>
+  <div class="logos">
+    <img src="arka-logo-vertical.jpg" alt="ARKA">
+    <img src="racesims-logo.jpg" alt="RaceSims">
+    <img src="mrf-logo.jpg" alt="MRF">
+  </div>
+  <div class="top-content">
+    <div class="top-event">APRC + INRC Round 1</div>
+    <div class="top-title">Champions<br>Together</div>
+  </div>
+  <div class="bottom-content">
+    <div class="stat">Arka Motorsports &nbsp;&bull;&nbsp; 130+ Championship Titles</div>
+    <div class="meta">Kadur &bull; Ramaswamy &bull; VW Polo R2 &bull; MRF Tyres &bull; Chennai 2026</div>
+  </div>
+  <div class="gold-bar"></div>
+</div>
+
+</body>
+</html>

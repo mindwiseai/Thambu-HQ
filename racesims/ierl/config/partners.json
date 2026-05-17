@@ -1,0 +1,10 @@
+{
+  "partners": [
+    { "slug": "racesims-chennai",   "name": "RaceSims Chennai",   "city": "Chennai",   "state": "Tamil Nadu" },
+    { "slug": "racesims-bengaluru", "name": "RaceSims Bengaluru", "city": "Bengaluru", "state": "Karnataka" },
+    { "slug": "racesims-mumbai",    "name": "RaceSims Mumbai",    "city": "Mumbai",    "state": "Maharashtra" },
+    { "slug": "racesims-delhi",     "name": "RaceSims Delhi",     "city": "New Delhi", "state": "Delhi" },
+    { "slug": "racesims-hyderabad", "name": "RaceSims Hyderabad", "city": "Hyderabad", "state": "Telangana" },
+    { "slug": "sim-racing-adda",   "name": "Sim Racing Adda",   "city": "Faridabad", "state": "Haryana" }
+  ]
+}

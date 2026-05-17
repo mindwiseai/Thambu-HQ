@@ -9,6 +9,18 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-17] ingest | RaceSims Chennai Flagship Centre — Multi-Session Planning
+- Source: [[2026-05-17-racesims-chennai-flagship-planning]]
+- Created: [[2026-05-17-racesims-chennai-flagship-planning]], [[racesims-chennai-flagship]], [[racesims-drive-train-compete]], [[racesims-championship-architecture]], [[racesims-the-ladder]], [[racesims-vms-build]], [[racesims-india-saturation-plan]], [[racesims-revenue-stack]]
+- Domain: racesims
+
+## [2026-05-17] ingest | Reddit AMA Draft + Conspit Import Letter + ARKA Calculator Inventory
+- Source: [[2026-05-17-reddit-ama-draft]], [[2026-05-17-conspit-import-justification]], [[2026-04-19-arka-calculator-inventory]]
+- Created: [[2026-05-17-reddit-ama-draft]], [[2026-05-17-conspit-import-justification]], [[2026-04-19-arka-calculator-inventory]]
+- Updated: [[arka-motorsports]] (Engineering Tools section)
+- Security: discord_backup_codes.txt added to .gitignore
+- Domain: racesims
+
 ## [2026-05-17] ingest | RaceSims GMC & SEO full audit — schema stack, Judge.me, image alt text, collection SEO
 - Source: [[2026-05-17-gmc-seo-optimisation]]
 - Created: [[2026-05-17-gmc-seo-optimisation]]

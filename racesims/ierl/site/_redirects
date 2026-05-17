@@ -1,0 +1,2 @@
+/events/:slug    /event.html?slug=:slug      200
+/partners/:slug  /partner.html?slug=:slug    200

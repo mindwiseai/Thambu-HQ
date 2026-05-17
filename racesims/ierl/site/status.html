@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Data status — IERL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/tokens.css">
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="/"><span class="b-mark">◆</span>IERL</a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/events">Events</a>
+      <a href="/championship">Championship</a>
+      <a href="/partners">Partners</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="section">
+      <div class="label">Internal</div>
+      <h1 style="margin-top:8px">Scraper health</h1>
+      <p class="lede" style="margin-top:24px">Last cron run, recent errors, and per-source freshness. Used to spot broken sources before they affect the public leaderboard.</p>
+
+      <h2 style="margin-top:40px">Last run</h2>
+      <div id="last-run" class="card" style="max-width:640px"></div>
+
+      <h2 style="margin-top:48px">Active sources</h2>
+      <div id="sources"></div>
+
+      <h2 style="margin-top:48px">Recent errors</h2>
+      <div id="errors"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="credit">Data refreshes hourly. Errors here usually mean a partner timing page changed shape — fix the corresponding parser and the leaderboard self-heals on the next run.</span>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { api, el, relTime } from '/assets/app.js';
+
+    (async () => {
+      const data = await api('/api/status');
+
+      const lr = data.last_run;
+      document.getElementById('last-run').replaceChildren(
+        el('div', { className: 'eyebrow' }, lr ? `Run #${lr.id}` : 'No runs yet'),
+        el('h3', {}, lr ? (lr.finished_at ? 'Completed' : 'In progress') : '—'),
+        el('div', { className: 'meta', html: lr
+          ? `${lr.sources_ok}/${lr.sources_attempted} sources ok · ${lr.laps_inserted} laps inserted · ${lr.laps_deduped} deduped<br>started ${relTime(lr.started_at)}${lr.finished_at ? `, finished ${relTime(lr.finished_at)}` : ''}`
+          : 'Run the cron once to populate this panel.' })
+      );
+
+      const sources = data.sources ?? [];
+      const sTable = sources.length === 0
+        ? el('div', { className: 'empty' }, 'No active sources configured.')
+        : el('table', { className: 'leaderboard' },
+            el('thead', {}, el('tr', {},
+              el('th', {}, 'Event'),
+              el('th', {}, 'Kind'),
+              el('th', {}, 'Last status'),
+              el('th', { style: 'text-align:right' }, 'Last scraped')
+            )),
+            el('tbody', {}, sources.map((s) => el('tr', {},
+              el('td', { className: 'lb-driver' }, s.event_name),
+              el('td', { className: 'mono', style: 'font-size:14px' }, s.source_kind),
+              el('td', { className: 'mono', style: `font-size:14px;color:${s.last_status === 'ok' ? 'var(--ink-2)' : 'var(--accent)'}` }, s.last_status ?? 'pending'),
+              el('td', { className: 'lb-gap' }, s.last_scraped_at ? relTime(s.last_scraped_at) : 'never')
+            )))
+          );
+      document.getElementById('sources').replaceChildren(sTable);
+
+      const errs = data.recent_errors ?? [];
+      const eTable = errs.length === 0
+        ? el('div', { className: 'empty' }, 'No errors in the last 50 events. Things are quiet.')
+        : el('table', { className: 'leaderboard' },
+            el('thead', {}, el('tr', {},
+              el('th', {}, 'When'),
+              el('th', {}, 'Kind'),
+              el('th', {}, 'Message')
+            )),
+            el('tbody', {}, errs.map((e) => el('tr', {},
+              el('td', { className: 'lb-gap' }, relTime(e.occurred_at)),
+              el('td', { className: 'mono', style: 'font-size:14px' }, e.kind),
+              el('td', { className: 'mono', style: 'font-size:13px;color:var(--ink-2)' }, (e.message ?? '').slice(0, 200))
+            )))
+          );
+      document.getElementById('errors').replaceChildren(eTable);
+    })();
+  </script>
+</body>
+</html>

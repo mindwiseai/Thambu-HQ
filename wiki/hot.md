@@ -1,14 +1,22 @@
 ---
 title: Hot Cache
 type: meta
-updated: 2026-05-11
+updated: 2026-05-17
 ---
 
 # Hot Cache
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-17 (latest) — GMC & SEO full audit: schema stack complete, Judge.me AggregateRating live
+## 2026-05-17 (latest) — ingest: Reddit AMA draft + Conspit import letter + ARKA calculators + Chennai flagship
+
+- **Reddit AMA drafted** — Thambu as race engineer + RaceSims founder, r/simracing, sim-to-real focus. Not yet posted. See [[2026-05-17-reddit-ama-draft]].
+- **Conspit import letter** — HS 9023.00.90 justification filed under "RACE.SIMS" for motorsport training classification. See [[2026-05-17-conspit-import-justification]].
+- **ARKA Engineering tools** — 17 Excel calculators catalogued (7 groups). POC priority: OBR wiring DB (safety-critical). See [[2026-04-19-arka-calculator-inventory]], [[arka-motorsports]].
+- **Chennai Flagship** — ₹66-68L investment, Drive·Train·Compete framework, 4-layer championship stack (LMU/iRacing/AC Rally/RBR), VMS build in-house, India saturation 43 centres/5 years. See [[2026-05-17-racesims-chennai-flagship-planning]].
+- **Project restructure** — Thambu-HQ split into 3 separate Claude project roots: racesims/, mindwise/, prenatal/. Shopify scoped to racesims only.
+
+## 2026-05-17 — GMC & SEO full audit: schema stack complete, Judge.me AggregateRating live
 
 - **GMC counterfeit flag root cause FIXED**: replaced `{{ product | structured_data }}` with custom Liquid on `sections/main-product.liquid` — now includes `seller` with `PostalAddress`, `itemCondition: NewCondition`, absolute `@id` URLs. Organization schema updated with `address` + `legalName`. LocalBusiness schema added to `theme.liquid`.
 - **Schema stack on every product page**: Organization + LocalBusiness + BreadcrumbList + Product (seller) + AggregateRating (Judge.me) ✅

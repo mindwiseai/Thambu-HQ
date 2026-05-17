@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ierl-worker",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["wrangler", "dev", "--port", "8787", "--local"],
+      "port": 8787
+    },
+    {
+      "name": "ierl-site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["wrangler", "pages", "dev", "site", "--port", "8788"],
+      "port": 8788
+    }
+  ]
+}
