@@ -9,9 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
-## [2026-05-17] ingest | RaceSims Chennai Flagship Centre — Multi-Session Planning
-- Source: [[2026-05-17-racesims-chennai-flagship-planning]]
-- Created: [[2026-05-17-racesims-chennai-flagship-planning]], [[racesims-chennai-flagship]], [[racesims-drive-train-compete]], [[racesims-championship-architecture]], [[racesims-the-ladder]], [[racesims-vms-build]], [[racesims-india-saturation-plan]], [[racesims-revenue-stack]]
+## [2026-05-17] ingest | RaceSims Chennai Flagship — full strategic plan (positioning, championship, ladder, VMS, India saturation, revenue stack)
+- Source: [[2026-05-17-racesims-chennai-flagship-planning]] (multi-session planning conversation, ~12K words)
+- Created: [[racesims-chennai-flagship]] (₹66L investment, 6 seats, 1,800 sqft, ₹32L Y1 EBITDA, 17mo payback), [[racesims-drive-train-compete]] (positioning framework), [[racesims-championship-architecture]] (4-layer competition structure + season + Grand Final), [[racesims-the-ladder]] (sim-to-reality pathway), [[racesims-vms-build]] (custom software platform, replaces ₹30K/mo SaaS), [[racesims-india-saturation-plan]] (43-centre 5-year network, ₹1,000-1,300 cr valuation), [[racesims-revenue-stack]] (6 adjacencies: AMC, Junior Academy, Merch, Coaching Academy, Karting Academy, College Curriculum)
+- Updated: [[arka-motorsports]] (Real-Drive Prize partnership, Rally School endorsement, recommendation to formalise exclusivity contract)
+- Key decisions locked: 6 seats Day 1, lean industrial fit-out, full café, VMS built in-house (saves ₹3.6L/year/centre), ARKA + Polo Cup as Real-Drive prizes, Drive·Train·Compete positioning, two parallel championships (Circuit on LMU+iRacing, Rally on AC Rally+Richard Burns Rally)
+- Director ([[thambu]]) remuneration ₹75K/month from Day 1 (no deferral). Working capital ₹15.80L (3 months).
+- Strategic context: India saturation as base case (Path B); global hyper-scale (₹6,000-12,000 cr valuation) discussed but deferred to Year 4+
 - Domain: racesims
 
 ## [2026-05-17] ingest | Reddit AMA Draft + Conspit Import Letter + ARKA Calculator Inventory

@@ -91,6 +91,15 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ### Strategy & positioning
 - [[race-engineer-positioning]] — the moat
 - [[90-day-execution-plan]]
+- [[racesims-drive-train-compete]] ⭐ — locked positioning framework (Drive · Train · Compete)
+- [[racesims-india-saturation-plan]] ⭐ — 43-centre 5-year network roadmap
+
+### Chennai Flagship Centre
+- [[racesims-chennai-flagship]] ⭐ — ₹66L flagship venue, 6 seats, 1,800 sqft, Y1 EBITDA ₹32L
+- [[racesims-championship-architecture]] — 4-layer competition season + Grand Final
+- [[racesims-the-ladder]] ⭐⭐ — sim-to-reality pathway, ARKA + Polo Cup Real-Drive Prizes
+- [[racesims-vms-build]] — custom Venue Management Software platform
+- [[racesims-revenue-stack]] — 6 adjacencies (AMC, Junior Academy, Merch, Coaching/Engineering, Karting, College)
 
 ### Competitive & market
 - [[seo-content-gap]]
@@ -255,6 +264,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[2026-ctd-module-2.4-nonclinical-overview]]
 
 ### RaceSims
+- [[2026-05-17-racesims-chennai-flagship-planning]] ⭐ — Chennai flagship planning conversation (positioning, championship, ladder, VMS, India saturation, revenue stack)
 - [[2026-04-13-racesims-raw-dump]] — full operational dump (sales, finance, partners, pricing)
 - [[2026-03-26-thambu-voice-brief]] — also covers RaceSims year-end + ARKA
 - [[2026-03-25-vrh-battle-plan]] — competitive intel

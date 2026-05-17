@@ -120,11 +120,28 @@ POC automation rank: **(1) OBR wiring DB** (safety-critical — typo = blown ECU
 - Does Leelakrishnan have any public presence (YouTube, podcasts, interviews) that Mindwise / RaceSims could cross-reference?
 - Is [[abdul]] still on speaking terms with the current ARKA team, or did he leave and there's bad blood?
 
+## Role in RaceSims Chennai Flagship + Network strategy (May 2026)
+
+Per [[2026-05-17-racesims-chennai-flagship-planning|the flagship planning conversation]], ARKA's role expands beyond R&D mentor + sim install to become the **anchor prize partner for [[racesims-the-ladder|the Ladder]]**:
+
+- **Rally Annual Champion Prize**: ARKA Rally Drive (₹1,00,000 cost to RaceSims per year) — Annual Rally Champion gets a development driver/co-driver seat at an ARKA-affiliated event
+- **Rally School curriculum endorsement**: [[racesims-drive-train-compete|Rally School]] training programme positioned as "endorsed by ARKA Motorsports"
+- **Annual Grand Final attendance**: ARKA representatives invited as guests at Chennai December Grand Final
+- **Sim-to-rally talent pipeline**: Annual Champion + standout Junior Academy / Karting Academy graduates get ARKA assessment opportunities
+- **Strategic recommendation**: Lock the partnership via **formal multi-year exclusivity contract** with India-wide rights and international expansion clauses — before brand value compounds. Currently a relationship; should become a legal asset.
+
+This positions ARKA as the **single most important strategic asset of the RaceSims brand** — no competitor can replicate the 130+ title relationship in any short timeframe.
+
 ## Connections
 - [[thambu]] — race engineer here
 - [[mr-leela-krishnan]] — 7-time National Rally Champion, founder/leader, design mentor
 - [[abdul]] — ex-ARKA / Red Rooster, now RaceSims field installer
 - [[race-engineer-positioning]] ⭐⭐ — the moat this proves
+- [[racesims-the-ladder]] ⭐⭐ — anchors the Rally Annual Champion prize
+- [[racesims-chennai-flagship]] — Rally Pathway operates from here
+- [[racesims-drive-train-compete]] — Rally School endorsed by ARKA
+- [[racesims-india-saturation-plan]] — partnership scales across 43-centre network
+- [[2026-05-17-racesims-chennai-flagship-planning]] — Real-Drive prize partnership locked
 - [[next-gen-racesims-rigs]] — design mentored by Leelakrishnan
 - [[2026-03-26-thambu-voice-brief]] — source that revealed Thambu's active role here
 - [[csk-partnership-pitch]] — credibility anchor for the CSK cold outreach
