@@ -9,6 +9,24 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-18] ingest | Chennai Flagship Proposal v2 — investor-grade single-centre business case
+- Source: [[2026-05-18-chennai-flagship-proposal-v2]] (long deep-dive session, 11-slide deck delivered)
+- Created: [[2026-05-18-chennai-flagship-proposal-v2]]
+- Updated: [[racesims-chennai-flagship]] — **v2 numbers locked, supersedes May 17 v1** with `> [!contradiction]` callout
+- Key decisions locked (v2):
+  - **₹92L Y1 total** (₹69L hard capex + ₹23L WC, 5 months) — was ₹66-68L v1
+  - **Rigs ₹39.09L** — 5 Rally @ ₹5,84,900 + 1 Motion @ ₹9,84,900 (Conspit/VNM at distributor cost, from `RaceSims Outlet.xlsx`)
+  - **Built-in equity ₹26-31L** — rigs retail ₹65-70L vs. our ₹39L cost
+  - **Lean 4-person team** — Senior Lead ₹35K + 2 multi-role ₹20K + housekeeping ₹5K. CA outsourced ₹7K. No security guard, no in-house accountant/marketing
+  - **Monthly opex ₹4.63L** — rent ₹1.5L premium location (6 mo deposit)
+  - **Utilisation ramp 30/50/60/65/68** (base case, revised down from aggressive 30/50/65/70/72)
+  - **Blended rate ramp ₹750-1,100** with full rate-card decomposition
+  - **Ancillary 14% → 28% of rig revenue** (merch recalibrated to 3-4% walk-in attach)
+  - **5Y cumulative EBITDA ₹4.74cr, payback 26 months, 5.1× capital multiple, Y5 65% margin**
+- Output artefacts: `racesims/marketing/decks/chennai-centre-proposal.html` + `.pdf` (RaceSims editorial theme — cream + RS Red + Montserrat)
+- Git: commits `47e6a3d` (v2 initial) + `d357a56` (merch recalibration)
+- Domain: racesims
+
 ## [2026-05-17] ingest | RaceSims Chennai Flagship — full strategic plan (positioning, championship, ladder, VMS, India saturation, revenue stack)
 - Source: [[2026-05-17-racesims-chennai-flagship-planning]] (multi-session planning conversation, ~12K words)
 - Created: [[racesims-chennai-flagship]] (₹66L investment, 6 seats, 1,800 sqft, ₹32L Y1 EBITDA, 17mo payback), [[racesims-drive-train-compete]] (positioning framework), [[racesims-championship-architecture]] (4-layer competition structure + season + Grand Final), [[racesims-the-ladder]] (sim-to-reality pathway), [[racesims-vms-build]] (custom software platform, replaces ₹30K/mo SaaS), [[racesims-india-saturation-plan]] (43-centre 5-year network, ₹1,000-1,300 cr valuation), [[racesims-revenue-stack]] (6 adjacencies: AMC, Junior Academy, Merch, Coaching Academy, Karting Academy, College Curriculum)

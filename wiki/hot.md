@@ -1,14 +1,19 @@
 ---
 title: Hot Cache
 type: meta
-updated: 2026-05-17
+updated: 2026-05-18
 ---
 
 # Hot Cache
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-17 (latest) — ingest: Reddit AMA draft + Conspit import letter + ARKA calculators + Chennai flagship
+## 2026-05-18 (latest) — ingest: Chennai Flagship Proposal v2 (investor-grade)
+
+- **Chennai Flagship v2 locked** — full rebuild of single-centre business case over deep-dive session. Numbers revised from May 17 v1: **₹92L Y1 total** (₹69L hard capex + ₹23L WC), monthly opex **₹4.63L**, **Y1 EBITDA ₹12.1L → Y5 ₹164.8L**, **5Y cumulative EBITDA ₹4.74cr**, payback **26 months**, **5.1× capital multiple**, Y5 EBITDA margin **65%**. **6 rigs = 5 Rally @ ₹5,84,900 + 1 Motion @ ₹9,84,900** at [[conspit]]/[[vnm]] distributor cost (Excel-sourced). Built-in equity ₹26-31L per centre vs retail. **Lean 4-person team:** Senior Lead ₹35K + 2 multi-role ₹20K + housekeeping ₹5K (no security, no in-house accountant — Senior Lead does Zoho Books, CA outsourced ₹7K). **Rent ₹1.5L** premium location, 6 mo deposit. **Base case utilisation 30/50/60/65/68** (industry benchmark 50-65% for mature venues; 68% Y5 defensible-ambitious). **Blended rate ramp ₹750-1,100/hr** with full rate-card decomposition. **Ancillary 14% → 28% of rig revenue** (café ~50%, events ~25%, coaching ~8%, championship ~5%, merch ~6-9% — merch recalibrated to 3-4% walk-in attach + event spikes, NOT 10% daily). **Capacity ceiling 26,280 seat-hours/yr** (hard cap); Centre #2 trigger = weekday peak ≥90% for 3 consecutive months (expected mid-Y3). HTML+PDF deck delivered (11 slides, RaceSims editorial theme — cream + RS Red + Montserrat). See [[racesims-chennai-flagship]] (updated, v1 numbers contradiction-flagged), [[2026-05-18-chennai-flagship-proposal-v2]].
+- **Next step:** multi-centre rollout proposal building on the validated single-centre template.
+
+## 2026-05-17 — ingest: Reddit AMA draft + Conspit import letter + ARKA calculators + Chennai flagship (v1, superseded)
 
 - **Reddit AMA drafted** — Thambu as race engineer + RaceSims founder, r/simracing, sim-to-real focus. Not yet posted. See [[2026-05-17-reddit-ama-draft]].
 - **Conspit import letter** — HS 9023.00.90 justification filed under "RACE.SIMS" for motorsport training classification. See [[2026-05-17-conspit-import-justification]].
@@ -91,32 +96,6 @@ Most recently touched context. Read this first for any query — it often answer
 - **Custom mount SKUs added to [[racesims-accessory-catalogue]]** (Sprint 4): SKU 11 (BTS-1 mount kit ₹999/₹1,499), SKU 12 (Sonos Era 100 rig mount ₹1,499), SKU 13 (universal soundbar shelf ₹2,499). Each high-end sale → ~₹5,500 in mount-SKU revenue
 - **PC build verified compatible**: Gigabyte B850 Gaming X / MSI Pro X870-P + 9800X3D or 9700X (both have RDNA 2 iGPU) + RTX 5070 Ti (3× DP + 1× HDMI 2.1 with eARC for Atmos to Sonos). 4-monitor case handled by motherboard HDMI from iGPU
 - **Decision history captured** in [[racesims-audio-tiers]] iteration trail for future reference
-
-## 2026-04-23 — RaceSims: 3D-printing capex decision + Online Instruments pivot
-
-- **Capex recommendation locked:** Bambu Lab X1 Carbon Combo + ancillaries, **~₹1,55,000**. Enclosed chamber + CoreXY + AMS. Rationale + ROI in [[2026-04-23-3d-printing-capex-decision]].
-- **Payback:** ~3 mo steady state, ~6 mo with realistic ramp. Year 1 ROI ~320% on 70 units/mo mixed portfolio.
-- **10-SKU catalogue plan** across three two-week sprints — see [[racesims-accessory-catalogue]]. Sprint 1: phone holder, cup holder, profile caps, logo badge. Sprint 2: LED channel, Hue holder, [[conspit]] 310 Apex side plates, bass-shaker enclosure. Sprint 3: wind-sim fan housing, custom shift knob.
-- **Race-engineer voice applied to hardware:** every SKU listing answers "why would a race engineer build this?" — measured (not guessed), functional (phone holder for telemetry apps), durability-tested (100 hr vibration + 48 hr heat soak), subtle branding.
-- **[[online-instruments]] pivot:** client rejected the custom-enclosure design in [[2026-04-23-3d-printing-capex-decision|the original deck]]. Wants a Mahindra Thar Roxx cut in half as the simulator shell, delivered assembled, no on-site reassembly. [[thambu]] raised building-access concern.
-- **Transport spec PDF shipped:** `racesims/technical/partners/Online Instruments/Online_Instruments_Transport_Spec.pdf` — unit dims (2.9 × 1.9 × 2.2 m, ~1,200 kg), full clearances, mandatory service lift spec, install room requirements. Client to confirm their building measurements before dispatch.
-
-## 2026-04-19 — Prenatal: launch budget locked at Rs.70-90L (Tier 2)
-
-- Build Rs.25-38L + Marketing Rs.25-40L + Runway Rs.13-20L = **Rs.70-90L**. Math Comparison table updated. Proposal aligned with pitch deck.
-
-## 2026-04-17 — Prenatal: manifesto lock + entity reversal + fundraising next
-
-- **Brand manifesto LOCKED:** [[prenatal-brand-manifesto|"The wellness brand India was missing."]] (supersedes the "TTC is a team job" version; "Together from the Start" rejected).
-- **Entity reversal:** The Edit will NOT use [[lumen-marketing-company|LMC]] umbrella — incorporates as its own Pvt Ltd to protect LMC from cross-liability.
-- **Cost + timeline:** Rs.25-30L launch capital, 18-20 month build.
-- **Next topic:** fundraising strategy (F&F vs angel vs seed, valuation, cap table with eventual gyno co-founder, Indian wellness investor list, timing). Captured for next session.
-
-## 2026-04-14 — Major prenatal pivot + lint pass
-
-- Edit is India's first couples reproductive wellness brand (not prenatal-only). [[prenatal-launch-architecture-scenario-d|Scenario D]] launch: Couples Bundle + Prenatal Day 1, Postnatal Month 9–12.
-- Manufacturer: [[tanishq-lifecare|Tanishq]] over [[brukem-life-care|Brukem]] (organic-cert fit). Flags: therapeutic claim on Boranutri, no DHA in current formulation.
-- Lint pass: 197 pages, strong health. FSSAI dosage = "two capsules a day, after breakfast"; LMC pincode 600083.
 
 ## Current state of the businesses
 
