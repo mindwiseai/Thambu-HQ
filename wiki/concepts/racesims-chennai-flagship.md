@@ -1,5 +1,5 @@
 ---
-title: RaceSims Chennai Flagship Experience Centre
+title: RaceSims · Chennai (Flagship Centre)
 type: concept
 domain: racesims
 status: PLANNING
@@ -7,9 +7,23 @@ tags: [venue, flagship, chennai, direct-operation, capex]
 updated: 2026-05-18
 ---
 
-# RaceSims Chennai Flagship Experience Centre
+# RaceSims · Chennai (Flagship Centre)
 
-The direct-operated premium sim racing centre opening in Chennai under [[racesims-company|RaceSims Solutions Pvt Ltd]]. **Total Y1 investment ₹92L (₹69L hard capex + ₹23L working capital)**, monthly opex ₹4.63L, **Y1 EBITDA ₹12.1L, 5-year cumulative EBITDA ₹4.74cr, 26-month payback**. Serves as the proof point and franchise prototype for the [[racesims-india-saturation-plan|43-centre India saturation plan]]. Latest v2 proposal: [[2026-05-18-chennai-flagship-proposal-v2]].
+The direct-operated premium sim racing centre opening in Chennai under [[racesims-company|RaceSims Solutions Pvt Ltd]]. **Centre name on the door: "RaceSims · Chennai"** (low-friction, casual-funnel-friendly). **The Motorsport Academy** lives inside as the structured upsell programme. **Total Y1 investment ₹92L (₹69L hard capex + ₹23L working capital)**, monthly opex ₹4.63L, **Y1 EBITDA ₹12.1L, 5-year cumulative EBITDA ₹4.74cr, 26-month payback**. Serves as the proof point and franchise prototype for the [[racesims-india-saturation-plan|43-centre India saturation plan]]. Latest v2 proposal: [[2026-05-18-chennai-flagship-proposal-v2]]. Brand architecture: [[racesims-naming-architecture]].
+
+## Naming architecture (locked May 18)
+
+The centre's customer-facing name is **"RaceSims · Chennai"** — *not* "RaceSims Motorsport Academy." [[racesims-motorsport-academy|The Motorsport Academy]] is the structured **programme inside**, not the centre's name. The unbundle preserves the casual funnel (college kids already calling about drop-in racing) while reserving Academy legitimacy for serious aspirants. Full reasoning: [[racesims-naming-architecture]].
+
+| Surface | Name | Audience |
+|---------|------|----------|
+| Storefront / Google / Instagram bio | **RaceSims · Chennai** | Anyone — walk-in friendly |
+| Casual access | **Open Sessions** | Drop-ins, college kids, dates, groups |
+| Recurring access | **Pass 8 / Pass 16** | Regulars |
+| Group experiences | **Experiences** (Team Day, Birthday, Corporate) | B2B, parties |
+| Career-track training | **[[racesims-motorsport-academy|The Motorsport Academy]]** | Aspirants, parents, sponsors |
+| Competitive arc | **RaceSims Championship** | Competitors, fans |
+| Sim-to-seat pathway | **[[racesims-the-ladder|The Ladder]]** | Top graduates → ARKA / Polo Cup |
 
 > [!contradiction]
 > **Numbers revised from v1 (May 17) to v2 (May 18).** The May 17 planning conversation had ₹66-68L investment / ₹4.97L opex / ₹32L Y1 EBITDA / 17-month payback. The May 18 deep-dive rebuild replaces those with: ₹92L investment / ₹4.63L opex / ₹12.1L Y1 EBITDA / 26-month payback. **Why the change:**
@@ -203,6 +217,8 @@ Corporate team-building, coaching/race academy, schools/colleges (esports clubs)
 ## Connections
 
 - [[2026-05-18-chennai-flagship-proposal-v2]] — **v2 source (authoritative)**
+- [[racesims-naming-architecture]] — **brand & naming architecture (centre vs programme split)**
+- [[racesims-motorsport-academy]] — **the structured training programme inside the centre**
 - [[2026-05-17-racesims-chennai-flagship-planning]] — v1 source (superseded numerically; concepts/strategy still valid)
 - [[racesims-drive-train-compete]] — positioning framework
 - [[racesims-championship-architecture]] — championship hosted here

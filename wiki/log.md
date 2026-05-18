@@ -9,6 +9,21 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-18] ingest | RaceSims naming architecture LOCKED — centre = "RaceSims · Chennai", programme inside = "The Motorsport Academy"
+- Created: [[racesims-naming-architecture]] (full brand architecture rationale), [[racesims-motorsport-academy]] (the structured training programme)
+- Updated: [[racesims-chennai-flagship]] — renamed from "Flagship Experience Centre" to "RaceSims · Chennai (Flagship Centre)" + naming architecture section added
+- **Key decision: Academy is the PROGRAMME, not the PLACE.** Earlier candidate "RaceSims Motorsport Academy" as the whole-centre name was rejected because it risked gating out the casual college-kid funnel that's already converting via Instagram → phone calls. Apple Store pattern adopted: front door = "RaceSims · Chennai" (low-friction), inside = "The Motorsport Academy" (serious upsell tier).
+- **Customer architecture locked:**
+  - Front door: `RaceSims · Chennai` (storefront/Google/IG bio)
+  - Open Sessions (drop-in, ₹750-1,000/hr)
+  - Pass 8 / Pass 16 (memberships)
+  - Experiences (Team Day, Birthday, Corporate Track Day)
+  - **The Motorsport Academy** (Initiation ₹8K · Race Academy ₹14K · Rally School ₹16K · Pro Track bespoke · Tuner Lab ₹28K corporate)
+  - RaceSims Championship (competitive arc)
+  - The Ladder (sim-to-seat pathway → ARKA Rally Drive / Polo Cup)
+- **Strategic upsides:** preserves casual phone-call funnel, defensible premium pricing on Academy programmes, sponsor magnetism for academies (MRF/JK Tyre/Castrol-class), Champions become "Academy graduates" (brandable outcome), franchise sells as "academy network" not "sim café chain"
+- Domain: racesims
+
 ## [2026-05-18] ingest | Chennai Flagship Proposal v2 — investor-grade single-centre business case
 - Source: [[2026-05-18-chennai-flagship-proposal-v2]] (long deep-dive session, 11-slide deck delivered)
 - Created: [[2026-05-18-chennai-flagship-proposal-v2]]
