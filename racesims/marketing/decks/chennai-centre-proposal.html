@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>RaceSims Chennai Flagship — Single-Centre Proposal</title>
+<meta name="viewport" content="width=1280" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:       #FAF9F5;
+    --cream-dark:  #F3EFEA;
+    --cream-mid:   #EDE8E2;
+    --rs-red:      #C8102E;
+    --rs-red-dim:  rgba(200, 16, 46, 0.10);
+    --rs-red-soft: rgba(200, 16, 46, 0.05);
+    --rs-black:    #0F0F10;
+    --ink:         #1F1B18;
+    --ink-mid:     #4A4440;
+    --ink-muted:   #7A7470;
+    --rule:        #DDD8D2;
+    --rule-mid:    #C8C0B8;
+    --green:       #1E6B3A;
+    --amber:       #B8731F;
+    --serif:       'Montserrat', -apple-system, sans-serif;
+    --sans:        'Montserrat', -apple-system, sans-serif;
+    --mono:        'JetBrains Mono', 'SF Mono', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #E8E3DC;
+    font-family: var(--sans);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  body { padding: 32px 0; }
+  .slide {
+    width: 1280px;
+    height: 720px;
+    margin: 0 auto 32px;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    page-break-after: always;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+  .slide-inner {
+    padding: 48px 64px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Red accent bar — left edge, editorial stripe */
+  .slide::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 5px;
+    background: var(--rs-red);
+    z-index: 2;
+  }
+  .slide-num {
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-muted);
+    letter-spacing: 0.18em;
+    z-index: 3;
+  }
+  .brand {
+    position: absolute;
+    top: 22px;
+    left: 32px;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--rs-red);
+    letter-spacing: 0.22em;
+    font-weight: 600;
+    z-index: 3;
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--rs-red);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  h1, h2 { font-family: var(--sans); color: var(--ink); }
+  h1 { font-size: 54px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+  h2 { font-size: 36px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; margin-bottom: 18px; }
+  h2 .italic { font-style: italic; color: var(--rs-red); font-weight: 600; }
+  h3 {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--rs-red);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 12px;
+  }
+  h3.serif {
+    font-family: var(--sans);
+    text-transform: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+  }
+  p { font-size: 14px; line-height: 1.55; color: var(--ink-mid); }
+  .lead { font-size: 17px; color: var(--ink); line-height: 1.55; font-weight: 400; }
+
+  /* COVER */
+  .cover { display: flex; flex-direction: column; justify-content: center; padding: 0 96px; }
+  .cover .badge {
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1.5px solid var(--rs-red);
+    color: var(--rs-red);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    margin-bottom: 28px;
+    width: max-content;
+    font-weight: 600;
+  }
+  .cover h1 {
+    font-family: var(--sans);
+    font-size: 92px;
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+    margin-bottom: 28px;
+  }
+  .cover h1 .accent {
+    color: var(--rs-red);
+    font-style: italic;
+    font-weight: 700;
+  }
+  .cover .sub {
+    font-size: 20px;
+    color: var(--ink-mid);
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 780px;
+  }
+  .cover .footer {
+    position: absolute;
+    bottom: 48px;
+    left: 96px;
+    right: 96px;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.18em;
+    z-index: 3;
+  }
+
+  /* GRID & TABLES */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+  .card {
+    background: var(--cream-dark);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 18px 20px;
+  }
+  .card.accent { border-left: 3px solid var(--rs-red); padding-left: 20px; }
+  .card.elev { background: #fff; border: 1px solid var(--rule); }
+  .card.red { background: var(--rs-red-soft); border-color: rgba(200, 16, 46, 0.3); }
+
+  .stat { display: flex; flex-direction: column; gap: 4px; }
+  .stat .label {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--ink-muted);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .stat .value {
+    font-family: var(--sans);
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--rs-red);
+    letter-spacing: -0.025em;
+    line-height: 1;
+  }
+  .stat .value.ink { color: var(--ink); }
+  .stat .note { font-size: 11px; color: var(--ink-mid); margin-top: 3px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th {
+    text-align: left;
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--rs-red);
+    letter-spacing: 0.18em;
+    padding: 8px 6px;
+    border-bottom: 1.5px solid var(--rs-red);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  th.r, td.r { text-align: right; }
+  td {
+    padding: 6px 6px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink);
+    font-size: 12.5px;
+    line-height: 1.4;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr.total td {
+    font-weight: 700;
+    color: var(--rs-red);
+    border-top: 1.5px solid var(--rs-red);
+    border-bottom: none;
+    padding-top: 9px;
+  }
+  tr.subtotal td {
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--rs-red-dim);
+  }
+
+  ul.bullets { list-style: none; padding: 0; }
+  ul.bullets li {
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 7px;
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  ul.bullets li:last-child { margin-bottom: 0; }
+  ul.bullets li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 10px;
+    height: 2px;
+    background: var(--rs-red);
+  }
+
+  .pl-table th, .pl-table td { font-size: 11.5px; padding: 5px 6px; }
+  .pl-table th.year, .pl-table td.year { text-align: right; width: 82px; }
+  .pl-table tr.section td {
+    font-weight: 700;
+    color: var(--rs-red);
+    padding-top: 10px;
+    padding-bottom: 4px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border-bottom: none;
+  }
+  .pl-table tr.section:first-child td { padding-top: 0; }
+  .pl-table tr.highlight td {
+    background: var(--rs-red-dim);
+    font-weight: 700;
+    color: var(--rs-red);
+  }
+
+  .pill {
+    display: inline-block;
+    padding: 4px 11px;
+    border-radius: 2px;
+    background: var(--rs-red);
+    color: white;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+  }
+  .pill.green { background: var(--green); }
+
+  .divider { height: 1px; background: var(--rule); margin: 16px 0; }
+  .divider.tight { margin: 10px 0; }
+  .divider.red { background: var(--rs-red); height: 2px; width: 40px; margin: 14px 0 18px; }
+
+  /* Capacity bar */
+  .cap-row { margin-bottom: 9px; }
+  .cap-row .cap-label {
+    font-size: 10px;
+    color: var(--ink-mid);
+    margin-bottom: 4px;
+    font-family: var(--mono);
+    letter-spacing: 0.15em;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+  }
+  .cap-row .cap-label .right { color: var(--ink-muted); font-weight: 500; }
+  .cap-bar {
+    height: 26px;
+    background: var(--cream-mid);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  .cap-bar .fill {
+    height: 100%;
+    background: var(--rs-red);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 11px;
+    font-family: var(--mono);
+    letter-spacing: 0.05em;
+  }
+  .cap-bar.saturation .fill {
+    background: repeating-linear-gradient(45deg, var(--rs-red), var(--rs-red) 6px, #a30d27 6px, #a30d27 12px);
+  }
+
+  /* Utility */
+  .text-red { color: var(--rs-red); }
+  .text-green { color: var(--green); }
+  .small { font-size: 11.5px; line-height: 1.5; color: var(--ink-mid); }
+  .tiny { font-size: 10px; color: var(--ink-muted); font-family: var(--mono); letter-spacing: 0.15em; font-weight: 600; }
+  b { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: COVER -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">01 / 11</div>
+  <div class="slide-inner cover">
+    <span class="badge">CHENNAI FLAGSHIP · 2026</span>
+    <h1>RaceSims <span class="accent">Chennai</span><br/>Flagship Centre</h1>
+    <p class="sub">A 6-rig premium sim racing centre — built by the country's only Conspit &amp; VNM distributor, on cost-price kit, in the city where motorsport already lives.</p>
+    <div class="footer">
+      <span>RACESIMS SOLUTIONS PVT LTD</span>
+      <span>SINGLE-CENTRE BUSINESS CASE</span>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 2: OPPORTUNITY -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">02 / 11</div>
+  <div class="slide-inner">
+    <div class="eyebrow">02 · The Opportunity</div>
+    <h2>Sim racing in India is where karting was <span class="italic">in 2010.</span></h2>
+    <div class="divider red"></div>
+    <div class="grid-2" style="margin-top: 4px;">
+      <div>
+        <h3>Why now</h3>
+        <ul class="bullets">
+          <li>1M+ active sim racers in India (Steam + console + mobile crossover)</li>
+          <li>Zero premium dedicated centres — only home setups &amp; cybercafé-grade rooms</li>
+          <li>Direct-drive hardware now affordable; motion platforms credible sub-₹10L</li>
+          <li>Motorsport audience (F1, MotoGP, INRC) growing 25-30% YoY in India</li>
+          <li>Esports recognised by Govt of India (2022) — competitive sim racing has a path</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Why us</h3>
+        <ul class="bullets">
+          <li><b>India distributor for Conspit &amp; VNM</b> — premium rigs at cost price</li>
+          <li>ARKA Motorsports lineage — 130+ championship titles, real racing credibility</li>
+          <li>Existing dealer network across 4 cities running our Hot Lap pool</li>
+          <li>National Sim Racing Championship announced for 2027</li>
+          <li>Operator + distributor + championship organiser — integrated stack</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3: CENTRE -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">03 / 11</div>
+  <div class="slide-inner">
+    <div class="eyebrow">03 · The Centre</div>
+    <h2>6 rigs. 12 hours a day. <span class="italic">365 days a year.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-4" style="margin-top: 4px;">
+      <div class="card accent">
+        <div class="stat">
+          <span class="label">Rigs</span>
+          <span class="value">6</span>
+          <span class="note">5 Rally/GT + 1 Motion</span>
+        </div>
+      </div>
+      <div class="card accent">
+        <div class="stat">
+          <span class="label">Operating Hours</span>
+          <span class="value">12<span style="font-size: 18px; color: var(--ink-muted);"> hr</span></span>
+          <span class="note">Daily, 7 days a week</span>
+        </div>
+      </div>
+      <div class="card accent">
+        <div class="stat">
+          <span class="label">Annual Capacity</span>
+          <span class="value" style="font-size: 30px;">26,280</span>
+          <span class="note">Seat-hours (hard ceiling)</span>
+        </div>
+      </div>
+      <div class="card accent">
+        <div class="stat">
+          <span class="label">Team</span>
+          <span class="value">4</span>
+          <span class="note">Direct + outsourced CA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="grid-2">
+      <div>
+        <h3>Format &amp; experience</h3>
+        <ul class="bullets">
+          <li>Premium location · 1,200-1,500 sq ft commercial space</li>
+          <li>5 Rally/GT rigs · Conspit DD wheelbase, load-cell pedals, H+seq shifter</li>
+          <li>1 Motion rig · Conspit/VNM motion platform — premium tier offering</li>
+          <li>Café-lounge, branded photo zone, viewing area</li>
+          <li>Event/streaming kit from day one — RaceSims Championship build-up</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Revenue streams</h3>
+        <ul class="bullets">
+          <li>Per-hour sessions · peak / off-peak / motion premium tiers</li>
+          <li>Memberships &amp; multi-hour packs</li>
+          <li>Corporate events, birthdays, team-building</li>
+          <li>Coaching &amp; race academy</li>
+          <li>Championship entry fees (from 2027)</li>
+          <li>Café, merch &amp; brand collaborations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4: DISTRIBUTOR EDGE -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">04 / 11</div>
+  <div class="slide-inner">
+    <div class="eyebrow">04 · The Unfair Advantage</div>
+    <h2>We build a ₹65L centre for ₹39L. <span class="italic">Every centre.</span></h2>
+    <div class="divider red"></div>
+    <p class="lead" style="margin-bottom: 18px; max-width: 1000px;">Premium Conspit &amp; VNM kit at distributor cost. A competitor pays ₹65-70L retail for the same rigs we deploy at ₹39L. A ₹26-31L structural cost advantage per centre.</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3 class="serif">Rally Rig — ₹5,84,900 each</h3>
+        <table>
+          <tr><td>High-end PC (RTX 4070Ti+)</td><td class="r">₹2,70,000</td></tr>
+          <tr><td>Monitor (premium tier)</td><td class="r">₹75,000</td></tr>
+          <tr><td>Conspit cockpit frame</td><td class="r">₹35,000</td></tr>
+          <tr><td>Conspit / VNM bucket seat</td><td class="r">₹20,000</td></tr>
+          <tr><td>Conspit DD wheelbase</td><td class="r">₹42,000</td></tr>
+          <tr><td>Conspit GT / rally wheel</td><td class="r">₹28,000</td></tr>
+          <tr><td>QR + load-cell pedals</td><td class="r">₹34,900</td></tr>
+          <tr><td>Handbrake + shifter</td><td class="r">₹40,000</td></tr>
+          <tr><td>Audio system + speakers</td><td class="r">₹40,000</td></tr>
+          <tr class="total"><td>Total per rig</td><td class="r">₹5,84,900</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3 class="serif">Motion Rig — ₹9,84,900</h3>
+        <table>
+          <tr><td>Rally rig base (above)</td><td class="r">₹5,84,900</td></tr>
+          <tr><td>Conspit / VNM motion system</td><td class="r">₹4,00,000</td></tr>
+          <tr class="total"><td>Total motion rig</td><td class="r">₹9,84,900</td></tr>
+        </table>
+
+        <div class="divider tight"></div>
+
+        <h3 class="serif">6-rig deployment</h3>
+        <table>
+          <tr><td>5 × Rally Rig</td><td class="r">₹29,24,500</td></tr>
+          <tr><td>1 × Motion Rig</td><td class="r">₹9,84,900</td></tr>
+          <tr class="total"><td>Total rig deployment</td><td class="r">₹39,09,400</td></tr>
+        </table>
+        <p class="small" style="margin-top: 10px; color: var(--rs-red); font-weight: 600;"><b>Retail equivalent: ₹65-70L</b> — built-in equity of ₹26-31L per centre.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5: CAPEX -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">05 / 11</div>
+  <div class="slide-inner">
+    <div class="eyebrow">05 · Capex</div>
+    <h2>Total Y1 investment: <span class="italic">₹92L</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-2" style="margin-top: 4px;">
+      <div>
+        <h3>Hard capex · ₹69.3L</h3>
+        <table>
+          <tr><td>Rigs (5 Rally + 1 Motion)</td><td class="r">₹39,09,400</td></tr>
+          <tr><td>Space prep (HVAC, interior, flooring, lighting, furniture)</td><td class="r">₹8,50,000</td></tr>
+          <tr><td>Power &amp; electrical (wiring + UPS 6 KVA)</td><td class="r">₹2,50,000</td></tr>
+          <tr><td>IT, software, networking, POS</td><td class="r">₹2,55,000</td></tr>
+          <tr><td>Brand &amp; CX (signage, café, streaming kit)</td><td class="r">₹4,60,000</td></tr>
+          <tr><td>Safety, spares &amp; tools</td><td class="r">₹1,08,000</td></tr>
+          <tr><td>Deposits &amp; pre-opening (incl. ₹9L rent deposit)</td><td class="r">₹11,00,000</td></tr>
+          <tr class="total"><td>Hard capex total</td><td class="r">₹69,32,400</td></tr>
+        </table>
+
+        <div class="divider tight"></div>
+
+        <h3>Working capital · ₹23.1L</h3>
+        <table>
+          <tr><td>5 months × ₹4.63L monthly opex</td><td class="r">₹23,13,000</td></tr>
+        </table>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div class="card accent">
+          <h3 class="serif">Grand total</h3>
+          <table>
+            <tr><td>Hard capex</td><td class="r">₹69.32L</td></tr>
+            <tr><td>Working capital (5 mo)</td><td class="r">₹23.13L</td></tr>
+            <tr class="total"><td>Total Y1 cash need</td><td class="r" style="font-size: 16px;">₹92.45L</td></tr>
+          </table>
+        </div>
+
+        <div class="card red">
+          <h3 class="serif" style="margin-bottom: 8px;">Built-in equity</h3>
+          <p style="color: var(--ink); font-size: 13px; line-height: 1.55;">Rigs deployed at our cost (<b>₹39L</b>) are worth <b class="text-red">₹65-70L at retail</b>.</p>
+          <p style="color: var(--ink); font-size: 13px; margin-top: 6px; line-height: 1.55;">Day-one balance sheet equity of <b class="text-red">₹26-31L</b> — invisible on cash flow, real on the balance sheet.</p>
+        </div>
+
+        <div class="card elev">
+          <p class="tiny" style="margin-bottom: 6px;">PAYBACK WINDOW</p>
+          <p style="color: var(--ink); font-size: 13px; line-height: 1.55;">Invested capital recovered on cumulative EBITDA by <b class="text-red">Q2 of Year 3</b>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 6: OPEX -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">06 / 11</div>
+  <div class="slide-inner">
+    <div class="eyebrow">06 · Operations</div>
+    <h2>₹4.63L / month. <span class="italic">Lean by design.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-2" style="margin-top: 4px;">
+      <div>
+        <h3>Team — 4 direct + outsourced CA</h3>
+        <table>
+          <tr><th>Role</th><th class="r">Count</th><th class="r">₹ / month</th></tr>
+          <tr><td>Senior Team Lead</td><td class="r">1</td><td class="r">₹35,000</td></tr>
+          <tr><td>Multi-role Team Member</td><td class="r">2</td><td class="r">₹40,000</td></tr>
+          <tr><td>Housekeeping</td><td class="r">1</td><td class="r">₹5,000</td></tr>
+          <tr class="subtotal"><td>Direct payroll</td><td class="r">4</td><td class="r">₹80,000</td></tr>
+          <tr><td>Statutory (PF + ESI + bonus, ~28%)</td><td class="r"></td><td class="r">₹22,400</td></tr>
+          <tr><td>Outsourced CA (filings only)</td><td class="r"></td><td class="r">₹7,000</td></tr>
+          <tr class="total"><td>Total staff cost</td><td class="r"></td><td class="r">₹1,09,400</td></tr>
+        </table>
+        <p class="small" style="margin-top: 10px;">Senior Lead handles Zoho Books day-to-day; CA does filings. Team is multi-role: sim ops, floor, marketing, community.</p>
+      </div>
+      <div>
+        <h3>Overheads</h3>
+        <table>
+          <tr><td>Rent (premium location)</td><td class="r">₹1,50,000</td></tr>
+          <tr><td>Electricity &amp; utilities</td><td class="r">₹1,05,000</td></tr>
+          <tr><td>Maintenance &amp; spares</td><td class="r">₹25,000</td></tr>
+          <tr><td>Marketing budget</td><td class="r">₹25,000</td></tr>
+          <tr><td>Incentive pool reserve</td><td class="r">₹25,000</td></tr>
+          <tr><td>Software, insurance, bank, music, misc</td><td class="r">₹23,200</td></tr>
+          <tr class="subtotal"><td>Non-staff overheads</td><td class="r">₹3,53,200</td></tr>
+          <tr class="total"><td>Total monthly opex</td><td class="r" style="font-size: 14px;">₹4,62,600</td></tr>
+        </table>
+        <p class="small" style="margin-top: 10px; color: var(--rs-red); font-weight: 600;"><b>Annual opex Y1 · ₹55.5L</b></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 7: REVENUE MODEL -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">07 / 11</div>
+  <div class="slide-inner">
+    <div class="eyebrow">07 · Revenue Model</div>
+    <h2>Break-even at 28%. <span class="italic">Y1 lands at 30%.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-2" style="margin-top: 4px;">
+      <div>
+        <h3>Utilisation ramp · base case</h3>
+        <table>
+          <tr><th>Year</th><th class="r">Util %</th><th class="r">Hrs/rig/day</th><th class="r">Blended ₹/hr</th></tr>
+          <tr><td>Y1 · 2026</td><td class="r">30%</td><td class="r">3.6</td><td class="r">₹750</td></tr>
+          <tr><td>Y2 · 2027</td><td class="r">50%</td><td class="r">6.0</td><td class="r">₹800</td></tr>
+          <tr><td>Y3 · 2028</td><td class="r">60%</td><td class="r">7.2</td><td class="r">₹900</td></tr>
+          <tr><td>Y4 · 2029</td><td class="r">65%</td><td class="r">7.8</td><td class="r">₹1,000</td></tr>
+          <tr><td>Y5 · 2030</td><td class="r">68%</td><td class="r">8.2</td><td class="r">₹1,100</td></tr>
+        </table>
+        <p class="small" style="margin-top: 10px;">Blended rate weighs off-peak ₹500-650, peak ₹900-1,200, motion premium ₹1,200-1,500, group/corporate bookings. Industry benchmark for mature entertainment venues: 50-65%. 68% by Y5 is defensible-ambitious.</p>
+      </div>
+      <div>
+        <h3>Revenue build (₹L)</h3>
+        <table>
+          <tr><th>Year</th><th class="r">Rig</th><th class="r">Ancillary</th><th class="r">Total</th></tr>
+          <tr><td>Y1</td><td class="r">59.1</td><td class="r">8.9</td><td class="r"><b>68.0</b></td></tr>
+          <tr><td>Y2</td><td class="r">105.1</td><td class="r">21.0</td><td class="r"><b>126.1</b></td></tr>
+          <tr><td>Y3</td><td class="r">141.9</td><td class="r">35.5</td><td class="r"><b>177.4</b></td></tr>
+          <tr><td>Y4</td><td class="r">170.8</td><td class="r">47.8</td><td class="r"><b>218.7</b></td></tr>
+          <tr><td>Y5</td><td class="r">196.6</td><td class="r">59.0</td><td class="r"><b>255.5</b></td></tr>
+          <tr class="total"><td>5Y total</td><td class="r">673.5</td><td class="r">172.2</td><td class="r">845.7</td></tr>
+        </table>
+        <p class="small" style="margin-top: 10px;">Ancillary = café + merch + events + coaching + championship entries. Grows from 15% → 30% of rig revenue as community builds.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 8: CAPACITY -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">08 / 11</div>
+  <div class="slide-inner">
+    <div class="eyebrow">08 · Capacity Reality</div>
+    <h2>The constraint isn't average utilisation — <span class="italic">it's peak saturation.</span></h2>
+    <div class="divider red"></div>
+
+    <div style="margin-top: 4px;">
+      <p class="tiny" style="margin-bottom: 8px;">ANNUAL CEILING · 26,280 SEAT-HOURS (IMMOVABLE)</p>
+      <div class="cap-row">
+        <div class="cap-label"><span>Y1 · 30%</span><span class="right">18,396 hrs unused</span></div>
+        <div class="cap-bar"><div class="fill" style="width: 30%;">7,884 hrs</div></div>
+      </div>
+      <div class="cap-row">
+        <div class="cap-label"><span>Y3 · 60%</span><span class="right">10,512 hrs unused</span></div>
+        <div class="cap-bar"><div class="fill" style="width: 60%;">15,768 hrs</div></div>
+      </div>
+      <div class="cap-row">
+        <div class="cap-label"><span>Y5 · 68%</span><span class="right">8,410 hrs unused</span></div>
+        <div class="cap-bar"><div class="fill" style="width: 68%;">17,870 hrs</div></div>
+      </div>
+      <div class="cap-row">
+        <div class="cap-label"><span style="color: var(--amber);">Realistic saturation · ~75%</span><span class="right">where peak hits 95%</span></div>
+        <div class="cap-bar saturation"><div class="fill" style="width: 75%;">19,710 hrs</div></div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top: 14px;">
+      <div class="card">
+        <h3>Peak vs off-peak split · Y5</h3>
+        <table>
+          <tr><th>Slot</th><th class="r">Hrs/wk</th><th class="r">Util</th><th class="r">Status</th></tr>
+          <tr><td>Weekday off-peak (11am-6pm)</td><td class="r">210</td><td class="r">~45%</td><td class="r text-green">Room</td></tr>
+          <tr><td>Weekday peak (6pm-11pm)</td><td class="r">150</td><td class="r">~90%</td><td class="r" style="color: var(--amber);">Near full</td></tr>
+          <tr><td>Weekend (all day)</td><td class="r">144</td><td class="r">~88%</td><td class="r" style="color: var(--amber);">Near full</td></tr>
+          <tr class="total"><td>Blended</td><td class="r">504</td><td class="r">68%</td><td class="r"></td></tr>
+        </table>
+        <p class="small" style="margin-top: 8px;">At Y5, peak slots are 90%+ booked. Growth from here = raise peak prices or open Centre #2.</p>
+      </div>
+      <div class="card red">
+        <h3 class="serif" style="margin-bottom: 6px;">Centre #2 trigger</h3>
+        <p style="font-size: 13px; color: var(--ink); line-height: 1.5;">Weekday peak hits <b class="text-red">90%+ for 3 consecutive months</b> (expected mid-Y3) → trigger Centre #2 rollout.</p>
+        <div class="divider tight"></div>
+        <h3>Off-peak strategy</h3>
+        <ul class="bullets">
+          <li>Corporate team-building (₹15-25K per session)</li>
+          <li>Coaching &amp; race academy (recurring weekday mornings)</li>
+          <li>Schools/colleges (esports clubs, mornings + early afternoons)</li>
+          <li>League play (Championship qualifiers)</li>
+          <li>Influencer / content shoots (paid)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 9: P&L -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">09 / 11</div>
+  <div class="slide-inner">
+    <div class="eyebrow">09 · 5-Year P&amp;L · Base Case</div>
+    <h2>₹4.80cr cumulative EBITDA. <span class="italic">65% margin by Y5.</span></h2>
+    <div class="divider red"></div>
+
+    <table class="pl-table" style="margin-top: 6px;">
+      <tr>
+        <th style="width: 30%;">All figures in ₹ Lakhs</th>
+        <th class="year">Y1</th>
+        <th class="year">Y2</th>
+        <th class="year">Y3</th>
+        <th class="year">Y4</th>
+        <th class="year">Y5</th>
+        <th class="year">5Y Total</th>
+      </tr>
+      <tr class="section"><td colspan="7">Revenue</td></tr>
+      <tr><td>Rig revenue</td><td class="year">59.1</td><td class="year">105.1</td><td class="year">141.9</td><td class="year">170.8</td><td class="year">196.6</td><td class="year">673.5</td></tr>
+      <tr><td>Ancillary (café, merch, events)</td><td class="year">8.9</td><td class="year">21.0</td><td class="year">35.5</td><td class="year">47.8</td><td class="year">59.0</td><td class="year">172.2</td></tr>
+      <tr class="subtotal"><td>Total revenue</td><td class="year">68.0</td><td class="year">126.1</td><td class="year">177.4</td><td class="year">218.7</td><td class="year">255.5</td><td class="year">845.7</td></tr>
+
+      <tr class="section"><td colspan="7">Operating expenses</td></tr>
+      <tr><td>Payroll + statutory + CA</td><td class="year">13.1</td><td class="year">17.2</td><td class="year">18.2</td><td class="year">19.3</td><td class="year">20.4</td><td class="year">88.2</td></tr>
+      <tr><td>Rent (5% escalation)</td><td class="year">18.0</td><td class="year">18.9</td><td class="year">19.8</td><td class="year">20.8</td><td class="year">21.9</td><td class="year">99.4</td></tr>
+      <tr><td>Electricity &amp; utilities</td><td class="year">12.6</td><td class="year">13.5</td><td class="year">14.5</td><td class="year">15.5</td><td class="year">17.0</td><td class="year">73.1</td></tr>
+      <tr><td>Maintenance &amp; spares</td><td class="year">3.0</td><td class="year">3.5</td><td class="year">4.0</td><td class="year">4.5</td><td class="year">5.0</td><td class="year">20.0</td></tr>
+      <tr><td>Marketing</td><td class="year">3.0</td><td class="year">4.0</td><td class="year">5.0</td><td class="year">5.5</td><td class="year">6.0</td><td class="year">23.5</td></tr>
+      <tr><td>Incentive pool</td><td class="year">3.0</td><td class="year">4.0</td><td class="year">5.0</td><td class="year">5.5</td><td class="year">6.0</td><td class="year">23.5</td></tr>
+      <tr><td>Café COGS + other variable</td><td class="year">2.8</td><td class="year">5.1</td><td class="year">7.7</td><td class="year">10.1</td><td class="year">12.2</td><td class="year">37.9</td></tr>
+      <tr class="subtotal"><td>Total opex</td><td class="year">55.5</td><td class="year">66.2</td><td class="year">74.2</td><td class="year">81.1</td><td class="year">88.5</td><td class="year">365.5</td></tr>
+
+      <tr class="highlight"><td>EBITDA</td><td class="year">12.5</td><td class="year">59.9</td><td class="year">103.2</td><td class="year">137.6</td><td class="year">167.0</td><td class="year">480.2</td></tr>
+      <tr><td>EBITDA margin %</td><td class="year">18%</td><td class="year">48%</td><td class="year">58%</td><td class="year">63%</td><td class="year">65%</td><td class="year">57%</td></tr>
+
+      <tr><td>Depreciation (rig 5yr + infra 7yr SLM)</td><td class="year">10.9</td><td class="year">10.9</td><td class="year">10.9</td><td class="year">10.9</td><td class="year">10.9</td><td class="year">54.3</td></tr>
+      <tr><td>PBT</td><td class="year">1.7</td><td class="year">49.0</td><td class="year">92.3</td><td class="year">126.7</td><td class="year">156.1</td><td class="year">425.9</td></tr>
+      <tr><td>Tax @ 25%</td><td class="year">0.4</td><td class="year">12.3</td><td class="year">23.1</td><td class="year">31.7</td><td class="year">39.0</td><td class="year">106.5</td></tr>
+      <tr class="highlight"><td>PAT</td><td class="year">1.2</td><td class="year">36.8</td><td class="year">69.2</td><td class="year">95.0</td><td class="year">117.0</td><td class="year">319.4</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- SLIDE 10: RETURNS -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">10 / 11</div>
+  <div class="slide-inner">
+    <div class="eyebrow">10 · Returns</div>
+    <h2>Payback in 26 months. <span class="italic">5.2× EBITDA on capital.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-4" style="margin-top: 4px;">
+      <div class="card accent">
+        <div class="stat">
+          <span class="label">Y1 Investment</span>
+          <span class="value">₹92L</span>
+          <span class="note">₹69L capex + ₹23L WC</span>
+        </div>
+      </div>
+      <div class="card accent">
+        <div class="stat">
+          <span class="label">Payback Period</span>
+          <span class="value">26<span style="font-size: 18px;"> mo</span></span>
+          <span class="note">Q2 of Y3 on EBITDA</span>
+        </div>
+      </div>
+      <div class="card accent">
+        <div class="stat">
+          <span class="label">5Y Cumulative EBITDA</span>
+          <span class="value">₹4.80<span style="font-size: 18px;"> cr</span></span>
+          <span class="note">5.2× capital deployed</span>
+        </div>
+      </div>
+      <div class="card accent">
+        <div class="stat">
+          <span class="label">Y5 EBITDA Margin</span>
+          <span class="value">65<span style="font-size: 18px;">%</span></span>
+          <span class="note">Mature steady state</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="grid-2">
+      <div>
+        <h3>Cumulative cash position (₹L)</h3>
+        <table>
+          <tr><th>Year</th><th class="r">EBITDA</th><th class="r">Cumulative</th><th class="r">Net of ₹92L</th></tr>
+          <tr><td>Y1</td><td class="r">12.5</td><td class="r">12.5</td><td class="r text-red">−79.5</td></tr>
+          <tr><td>Y2</td><td class="r">59.9</td><td class="r">72.4</td><td class="r text-red">−19.6</td></tr>
+          <tr><td>Y3</td><td class="r">103.2</td><td class="r"><b>175.6</b></td><td class="r text-green"><b>+83.6</b></td></tr>
+          <tr><td>Y4</td><td class="r">137.6</td><td class="r">313.2</td><td class="r text-green">+221.2</td></tr>
+          <tr><td>Y5</td><td class="r">167.0</td><td class="r">480.2</td><td class="r text-green">+388.2</td></tr>
+        </table>
+        <p class="small" style="margin-top: 10px; color: var(--green); font-weight: 600;"><b>Cash positive early Y3. Capital fully returned by Q2 Y3.</b></p>
+      </div>
+      <div>
+        <h3>Three scenarios · sensitivity to Y5 util</h3>
+        <table>
+          <tr><th>Scenario</th><th class="r">Y5 util</th><th class="r">5Y EBITDA</th><th class="r">Payback</th></tr>
+          <tr><td>Conservative</td><td class="r">62%</td><td class="r">₹4.1cr</td><td class="r">~30 mo</td></tr>
+          <tr class="subtotal"><td>Base case</td><td class="r">68%</td><td class="r"><b>₹4.80cr</b></td><td class="r"><b>~26 mo</b></td></tr>
+          <tr><td>Aggressive</td><td class="r">72%</td><td class="r">₹5.20cr</td><td class="r">~24 mo</td></tr>
+        </table>
+        <div class="divider tight"></div>
+        <h3>Y3 EBITDA sensitivities</h3>
+        <table>
+          <tr><td>Each 1% utilisation change</td><td class="r">±₹1.8L</td></tr>
+          <tr><td>Each ₹50 blended rate change</td><td class="r">±₹3.6L</td></tr>
+          <tr><td>10% rent variance</td><td class="r">±₹1.8L</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 11: ASK -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">11 / 11</div>
+  <div class="slide-inner">
+    <div class="eyebrow">11 · The Ask</div>
+    <h2>₹92L for the Chennai flagship. <span class="italic">The proof point.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-3" style="margin-top: 8px;">
+      <div class="card accent">
+        <h3>What ₹92L buys</h3>
+        <ul class="bullets">
+          <li>6-rig premium centre at our cost-price kit</li>
+          <li>Premium Chennai location (1,200-1,500 sq ft)</li>
+          <li>5 months operating runway built in</li>
+          <li>Event/streaming kit for Championship 2027</li>
+          <li>Founding team of 4 in place from month one</li>
+        </ul>
+      </div>
+      <div class="card accent">
+        <h3>What it returns</h3>
+        <ul class="bullets">
+          <li><b class="text-red">₹4.80 cr</b> cumulative EBITDA over 5 years</li>
+          <li><b class="text-red">₹3.19 cr</b> cumulative PAT</li>
+          <li><b class="text-red">26-month</b> payback on EBITDA</li>
+          <li><b class="text-red">65%</b> EBITDA margin at steady state</li>
+          <li>Operating template for national rollout</li>
+        </ul>
+      </div>
+      <div class="card accent">
+        <h3>Why this first</h3>
+        <ul class="bullets">
+          <li>Single centre — single proof point</li>
+          <li>Numbers built bottom-up, line by line</li>
+          <li>Distributor edge → structural moat</li>
+          <li>Chennai · motorsport's natural home</li>
+          <li>Centre #2 triggered by saturation, not calendar</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div>
+        <p class="tiny" style="margin-bottom: 4px;">NEXT CONVERSATION</p>
+        <p style="font-size: 15px; color: var(--ink); line-height: 1.4;">Multi-centre national rollout · Franchisee economics · Championship monetisation</p>
+      </div>
+      <span class="pill green">PROPOSAL · v2 BASE CASE</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
