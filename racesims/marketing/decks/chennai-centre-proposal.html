@@ -27,6 +27,10 @@
     --sans:        'Montserrat', -apple-system, sans-serif;
     --mono:        'JetBrains Mono', 'SF Mono', monospace;
   }
+  @page {
+    size: 1280px 720px;
+    margin: 0;
+  }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body {
     background: #E8E3DC;
@@ -46,7 +50,22 @@
     overflow: hidden;
     border: 1px solid var(--rule);
     page-break-after: always;
+    page-break-inside: avoid;
+    break-inside: avoid;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+  .slide:last-child {
+    page-break-after: auto;
+    margin-bottom: 0;
+  }
+  @media print {
+    html, body { background: white; }
+    body { padding: 0; margin: 0; }
+    .slide {
+      margin: 0 auto;
+      border: none;
+      box-shadow: none;
+    }
   }
   .slide-inner {
     padding: 48px 64px;
