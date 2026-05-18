@@ -9,6 +9,29 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-18 PM] ingest | Chennai Flagship v3 — overhead line audit + 5Y P&L re-cascade
+- Source: continuation of [[2026-05-18-chennai-flagship-proposal-v2]] (source page updated in-place)
+- Updated: [[racesims-chennai-flagship]] (full v3 P&L + opex tables + cumulative cash position)
+- **Material overhead corrections (line-by-line audit):**
+  - Rent: ₹1.5L → **₹1.25L** (found 2,000 sq ft place at ₹1L, modelled at ₹1.25L for safety)
+  - Electricity: ₹1L → **₹50K** (honest math with 4 × 1.5T 5-star inverter ACs + realistic PC load curves — not 800W constant. Previous ₹1L over-estimated)
+  - Maintenance: ₹25K → **₹7.5K** (rig preventive ₹1K not ₹10K; CCTV upkeep dropped; realistic line items)
+  - Software: ₹5K → **₹3K** (Zoho Books + Google Workspace billed elsewhere already)
+  - Music & content licence: **REMOVED** (₹3K → ₹0, no licensed background music)
+  - Insurance: ₹4.2K → **₹7.5K** (proper ₹50L+ asset cover + public liability + business interruption)
+  - Payment gateway: ₹3K flat → **2% of digital revenue** (scales with utilisation; Y1 ₹8.4K → Y5 ₹35.7K)
+  - Marketing: **₹35K Y1 launch boost, taper to ₹25K from Y2** (was flat ₹25K)
+- **Y1 monthly opex: ₹4.63L → ₹3.84L** (-₹79K/month, -₹9.5L/year)
+- **Y1 cash need: ₹92L → ₹89L** (₹69L capex + ₹20L WC at 5 mo × ₹3.98L including café COGS)
+- **5Y cumulative EBITDA: ₹4.74cr → ₹5.24cr** (+₹50L, materially better despite rent precision)
+- **5Y cumulative PAT: ₹3.14cr → ₹3.53cr**
+- **Payback: 26 mo → 24 mo** (end of Y2, was mid-Y3)
+- **Capital multiple: 5.1× → 5.9×**
+- **Y5 EBITDA margin: 65% → 70%**
+- **Break-even: 28% → 21% blended** (Y1 plan 30% → 9-pt cushion, was 2-pt)
+- Deck updated: cover, slide 6 (Capex), 7 (Operations), 8 (Revenue), 10 (P&L), 11 (Returns), 12 (Ask). PDF exported, zero overflow on any slide.
+- Domain: racesims
+
 ## [2026-05-18] ingest | RaceSims naming architecture LOCKED — centre = "RaceSims · Chennai", programme inside = "The Motorsport Academy"
 - Created: [[racesims-naming-architecture]] (full brand architecture rationale), [[racesims-motorsport-academy]] (the structured training programme)
 - Updated: [[racesims-chennai-flagship]] — renamed from "Flagship Experience Centre" to "RaceSims · Chennai (Flagship Centre)" + naming architecture section added

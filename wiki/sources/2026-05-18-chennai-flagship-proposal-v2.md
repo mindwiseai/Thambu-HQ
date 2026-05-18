@@ -13,7 +13,7 @@ ingested: 2026-05-18
 
 ## Summary
 
-Locked the **₹92L Y1 single-centre business case** for Chennai flagship — replaces earlier ₹66-68L planning estimate from May 17. Honest rebuild using Excel rig specs (5 Rally + 1 Motion at Conspit/VNM cost), full infrastructure breakdown, lean 4-person team, base-case utilisation ramp respecting the 26,280-hour annual ceiling, recalibrated merch attach. **5-year cumulative EBITDA ₹4.74cr, 26-month payback, 5.1× capital multiple, 65% Y5 EBITDA margin.**
+Locked the **₹89L Y1 single-centre business case** for Chennai flagship — replaces earlier ₹66-68L planning estimate from May 17 and supersedes own earlier v2 (₹92L). Honest rebuild over deep-dive session using Excel rig specs (5 Rally + 1 Motion at Conspit/VNM cost), full infrastructure breakdown, lean 4-person team, base-case utilisation ramp respecting the 26,280-hour annual ceiling, recalibrated merch attach, line-by-line overhead audit (rent corrected to ₹1.25L for found 2,000 sq ft place, electricity honest recalc to ₹50K with 5-star ACs, maintenance trimmed to ₹7.5K, payment gateway as 2% of digital revenue, music licence removed, insurance properly sized for ₹50L+ asset cover). **5-year cumulative EBITDA ₹5.24cr, 24-month payback (end of Y2), 5.9× capital multiple, 70% Y5 EBITDA margin, 21% blended break-even.** Brand architecture locked: centre = "RaceSims · Chennai" (low-friction door), [[racesims-motorsport-academy|The Motorsport Academy]] is the programme inside.
 
 ## Key facts
 
