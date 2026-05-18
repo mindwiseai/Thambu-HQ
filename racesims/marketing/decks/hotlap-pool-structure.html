@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RaceSims Hot Lap — Prize Pool Structure</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --gold:    #C9A03C;
+    --gold-lt: #F5E09A;
+    --charcoal:#1A1A1A;
+    --dark:    #2D2D2D;
+    --mid:     #3A3A3A;
+    --grey:    #4A4A4A;
+    --light:   #F2F2F2;
+    --white:   #FFFFFF;
+  }
+
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #111;
+    color: var(--white);
+  }
+
+  .slide {
+    width: 1280px;
+    min-height: 720px;
+    background: var(--charcoal);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .slide::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: var(--gold);
+  }
+
+  .slide::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 5px;
+    background: var(--gold);
+  }
+
+  .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  /* ── SLIDE 1: COVER ── */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 70px;
+    min-height: 720px;
+  }
+
+  .cover-flag {
+    font-size: 56px;
+    margin-bottom: 20px;
+  }
+
+  .cover h1 {
+    font-size: 52px;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+
+  .cover h1 span { color: var(--gold); }
+
+  .cover-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--gold);
+    margin: 24px 0;
+  }
+
+  .cover-sub {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .cover-centres {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 60px;
+  }
+
+  .cover-footer {
+    position: absolute;
+    bottom: 22px;
+    left: 70px;
+    font-size: 11px;
+    color: #555;
+    font-style: italic;
+  }
+
+  /* ── SLIDE 2: POOL OVERVIEW ── */
+  .pool-slide {
+    padding: 36px 60px 36px;
+    min-height: 720px;
+  }
+
+  .slide-header { margin-bottom: 24px; }
+
+  .slide-header h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .slide-header p {
+    font-size: 14px;
+    color: #777;
+  }
+
+  .divider {
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin-bottom: 24px;
+  }
+
+  .stat-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .stat-box {
+    flex: 1;
+    background: var(--dark);
+    border-top: 4px solid var(--gold);
+    padding: 20px 24px;
+    border-radius: 2px;
+  }
+
+  .stat-box .big {
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-box .small {
+    font-size: 13px;
+    color: #999;
+    line-height: 1.4;
+  }
+
+  .note {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 18px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead tr {
+    background: var(--gold);
+  }
+
+  thead th {
+    padding: 10px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--charcoal);
+    text-align: left;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  tbody tr:nth-child(odd)  { background: var(--dark); }
+  tbody tr:nth-child(even) { background: var(--mid); }
+  tbody tr.total-row { background: #111; }
+
+  tbody td {
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--white);
+  }
+
+  tbody tr.total-row td {
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 13px;
+    border-top: 1px solid var(--gold);
+  }
+
+  /* ── SLIDE 3: PRIZES ── */
+  .prizes-slide {
+    padding: 36px 60px;
+    min-height: 720px;
+  }
+
+  .prize-cards {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .prize-card {
+    flex: 1;
+    background: var(--dark);
+    border-radius: 2px;
+    padding: 30px 24px;
+    text-align: center;
+  }
+
+  .prize-card.gold-card   { border-top: 5px solid #FFD700; }
+  .prize-card.silver-card { border-top: 5px solid #C0C0C0; }
+  .prize-card.bronze-card { border-top: 5px solid #CD7F32; }
+
+  .prize-emoji { font-size: 48px; margin-bottom: 12px; }
+
+  .prize-pos {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .prize-card.gold-card   .prize-pos { color: #FFD700; }
+  .prize-card.silver-card .prize-pos { color: #C0C0C0; }
+  .prize-card.bronze-card .prize-pos { color: #CD7F32; }
+
+  .prize-amount {
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .prize-type {
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+  }
+
+  .how-section { margin-top: 16px; }
+
+  .how-section h3 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .how-points {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .how-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.4;
+  }
+
+  .how-point .arrow {
+    color: var(--gold);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .total-note {
+    margin-top: 18px;
+    padding: 12px 20px;
+    background: var(--dark);
+    border-left: 3px solid var(--gold);
+    font-size: 13px;
+    color: #aaa;
+  }
+
+  /* ── SLIDE 4: TRANSFERS ── */
+  .transfers-slide {
+    padding: 36px 60px;
+    min-height: 720px;
+  }
+
+  .centre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 4px;
+  }
+
+  .centre-card {
+    background: var(--dark);
+    border-top: 4px solid var(--gold);
+    padding: 20px 22px;
+    border-radius: 2px;
+  }
+
+  .centre-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .centre-meta {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 14px;
+  }
+
+  .centre-divider {
+    height: 1px;
+    background: var(--grey);
+    margin-bottom: 12px;
+  }
+
+  .transfer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 13px;
+  }
+
+  .transfer-row .amount {
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .transfer-row .dest {
+    color: #bbb;
+  }
+
+  .transfer-row .irc-dest {
+    color: #777;
+  }
+
+  .transfer-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+  }
+
+  /* ── SLIDE 5: RULES ── */
+  .rules-slide {
+    padding: 36px 60px;
+    min-height: 720px;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 24px;
+  }
+
+  .timeline-row {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .timeline-day {
+    width: 160px;
+    flex-shrink: 0;
+    background: var(--gold);
+    color: var(--charcoal);
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px 10px;
+    line-height: 1.3;
+  }
+
+  .timeline-desc {
+    flex: 1;
+    background: var(--dark);
+    padding: 14px 20px;
+    font-size: 14px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--charcoal);
+  }
+
+  .timeline-connector {
+    width: 160px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 14px;
+    height: 20px;
+  }
+
+  .connector-spacer {
+    flex: 1;
+    background: transparent;
+    height: 20px;
+    border-bottom: 1px solid transparent;
+  }
+
+  .warning-box {
+    background: #1a1500;
+    border: 1px solid var(--gold);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .warning-icon { font-size: 20px; }
+
+  @media print {
+    body { background: white; }
+    .slide { page-break-after: always; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 1 — COVER
+══════════════════════════════════════════ -->
+<div class="slide">
+  <div class="cover">
+    <div class="cover-flag">🏁</div>
+    <div class="label">RaceSims Network</div>
+    <h1>Hot Lap<br><span>Prize Pool</span></h1>
+    <div class="cover-divider"></div>
+    <div class="cover-sub">How It Works — Partner Brief</div>
+    <div class="cover-centres">
+      Racing Point Esports &nbsp;·&nbsp; Sim Racing Adda &nbsp;·&nbsp; Niyusuki &nbsp;·&nbsp; Lights Out Racing
+    </div>
+  </div>
+  <div class="cover-footer">Confidential — Network Partners Only</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 2 — THE POOL
+══════════════════════════════════════════ -->
+<div class="slide">
+  <div class="pool-slide">
+    <div class="slide-header">
+      <div class="label">The Pool at a Glance</div>
+      <h2>Simple math. Proportional. Fully transparent.</h2>
+    </div>
+    <div class="divider"></div>
+
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="big">17</div>
+        <div class="small">Rigs across<br>4 centres</div>
+      </div>
+      <div class="stat-box">
+        <div class="big">₹42,500</div>
+        <div class="small">Collected<br>every month</div>
+      </div>
+      <div class="stat-box">
+        <div class="big">₹27,500</div>
+        <div class="small">Back to<br>winners</div>
+      </div>
+      <div class="stat-box">
+        <div class="big">₹15,000</div>
+        <div class="small">IRC — event<br>operations</div>
+      </div>
+    </div>
+
+    <p class="note">₹15,000/month goes to IRC who handle leaderboard tracking, winner announcements and transfer coordination.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Centre</th>
+          <th>Rigs</th>
+          <th>Monthly Fee</th>
+          <th>→ Prize Pool</th>
+          <th>→ IRC</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Racing Point Esports</td>
+          <td>8</td>
+          <td>₹20,000</td>
+          <td>₹13,000</td>
+          <td>₹7,000</td>
+        </tr>
+        <tr>
+          <td>Sim Racing Adda</td>
+          <td>4</td>
+          <td>₹10,000</td>
+          <td>₹6,500</td>
+          <td>₹3,500</td>
+        </tr>
+        <tr>
+          <td>Niyusuki</td>
+          <td>3</td>
+          <td>₹7,500</td>
+          <td>₹4,750</td>
+          <td>₹2,750</td>
+        </tr>
+        <tr>
+          <td>Lights Out Racing</td>
+          <td>2</td>
+          <td>₹5,000</td>
+          <td>₹3,250</td>
+          <td>₹1,750</td>
+        </tr>
+        <tr class="total-row">
+          <td>TOTAL</td>
+          <td>17</td>
+          <td>₹42,500</td>
+          <td>₹27,500</td>
+          <td>₹15,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 3 — PRIZES
+══════════════════════════════════════════ -->
+<div class="slide">
+  <div class="prizes-slide">
+    <div class="slide-header">
+      <div class="label">Monthly Prizes</div>
+      <h2>Every month. Every fastest lap. Straight to the winner.</h2>
+    </div>
+    <div class="divider"></div>
+
+    <div class="prize-cards">
+      <div class="prize-card gold-card">
+        <div class="prize-emoji">🥇</div>
+        <div class="prize-pos">1st Place</div>
+        <div class="prize-amount">₹17,750</div>
+        <div class="prize-type">Amazon Gift Card</div>
+      </div>
+      <div class="prize-card silver-card">
+        <div class="prize-emoji">🥈</div>
+        <div class="prize-pos">2nd Place</div>
+        <div class="prize-amount">₹6,500</div>
+        <div class="prize-type">Amazon Gift Card</div>
+      </div>
+      <div class="prize-card bronze-card">
+        <div class="prize-emoji">🥉</div>
+        <div class="prize-pos">3rd Place</div>
+        <div class="prize-amount">₹3,250</div>
+        <div class="prize-type">Amazon Gift Card</div>
+      </div>
+    </div>
+
+    <div class="how-section">
+      <h3>How winners are decided</h3>
+      <div class="how-points">
+        <div class="how-point">
+          <span class="arrow">›</span>
+          <span>Fastest lap time set on any rig across all 4 centres during the calendar month</span>
+        </div>
+        <div class="how-point">
+          <span class="arrow">›</span>
+          <span>VMS tracks it automatically — no manual submission, no disputes, no arguments</span>
+        </div>
+        <div class="how-point">
+          <span class="arrow">›</span>
+          <span>Your customers race each other across cities — best lap wins, whoever's centre they're on</span>
+        </div>
+        <div class="how-point">
+          <span class="arrow">›</span>
+          <span>IRC posts final leaderboard on the 1st · Transfers completed by the 5th</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="total-note">
+      Total monthly payout: ₹27,500 &nbsp;·&nbsp; Prize pool grows proportionally as more centres join the network
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 4 — YOUR TRANSFERS
+══════════════════════════════════════════ -->
+<div class="slide">
+  <div class="transfers-slide">
+    <div class="slide-header">
+      <div class="label">Your Monthly Transfers</div>
+      <h2>2 transfers per centre. 5 minutes on the 1st. Done.</h2>
+    </div>
+    <div class="divider"></div>
+
+    <div class="centre-grid">
+
+      <div class="centre-card">
+        <div class="centre-name">Racing Point Esports</div>
+        <div class="centre-meta">8 rigs &nbsp;·&nbsp; ₹20,000 / month</div>
+        <div class="centre-divider"></div>
+        <div class="transfer-row">
+          <span class="amount">₹13,000</span>
+          <span class="dest">→ 🥇 1st place winner</span>
+        </div>
+        <div class="transfer-row">
+          <span class="amount">₹7,000</span>
+          <span class="irc-dest">→ IRC</span>
+        </div>
+      </div>
+
+      <div class="centre-card">
+        <div class="centre-name">Sim Racing Adda</div>
+        <div class="centre-meta">4 rigs &nbsp;·&nbsp; ₹10,000 / month</div>
+        <div class="centre-divider"></div>
+        <div class="transfer-row">
+          <span class="amount">₹6,500</span>
+          <span class="dest">→ 🥈 2nd place winner</span>
+        </div>
+        <div class="transfer-row">
+          <span class="amount">₹3,500</span>
+          <span class="irc-dest">→ IRC</span>
+        </div>
+      </div>
+
+      <div class="centre-card">
+        <div class="centre-name">Niyusuki</div>
+        <div class="centre-meta">3 rigs &nbsp;·&nbsp; ₹7,500 / month</div>
+        <div class="centre-divider"></div>
+        <div class="transfer-row">
+          <span class="amount">₹4,750</span>
+          <span class="dest">→ 🥇 1st place winner</span>
+        </div>
+        <div class="transfer-row">
+          <span class="amount">₹2,750</span>
+          <span class="irc-dest">→ IRC</span>
+        </div>
+      </div>
+
+      <div class="centre-card">
+        <div class="centre-name">Lights Out Racing</div>
+        <div class="centre-meta">2 rigs &nbsp;·&nbsp; ₹5,000 / month</div>
+        <div class="centre-divider"></div>
+        <div class="transfer-row">
+          <span class="amount">₹3,250</span>
+          <span class="dest">→ 🥉 3rd place winner</span>
+        </div>
+        <div class="transfer-row">
+          <span class="amount">₹1,750</span>
+          <span class="irc-dest">→ IRC</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="transfer-footer">
+      IRC posts winner UPI details in the group on the 1st &nbsp;·&nbsp; Screenshot your transfer and drop it here &nbsp;·&nbsp; IRC confirms all received by the 6th
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 5 — RULES & TIMELINE
+══════════════════════════════════════════ -->
+<div class="slide">
+  <div class="rules-slide">
+    <div class="slide-header">
+      <div class="label">Rules &amp; Monthly Timeline</div>
+      <h2>Clean. Simple. Self-enforcing.</h2>
+    </div>
+    <div class="divider"></div>
+
+    <div class="timeline">
+
+      <div class="timeline-row">
+        <div class="timeline-day">MONTH<br>END</div>
+        <div class="timeline-desc">Leaderboard locks at 11:59 PM. No more laps counted.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-connector">▼</div>
+        <div class="connector-spacer"></div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-day">1st OF<br>MONTH</div>
+        <div class="timeline-desc">IRC posts final standings + winner UPI IDs in the WhatsApp group.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-connector">▼</div>
+        <div class="connector-spacer"></div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-day">BY<br>5th</div>
+        <div class="timeline-desc">Each centre transfers directly to assigned winner(s) + IRC. Screenshot posted in group.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-connector">▼</div>
+        <div class="connector-spacer"></div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-day">6th</div>
+        <div class="timeline-desc">IRC confirms all transfers received. Publishes confirmation. Month closed.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-connector">▼</div>
+        <div class="connector-spacer"></div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-day">7th<br>ONWARDS</div>
+        <div class="timeline-desc">New month leaderboard is live. Fastest lap wins again. 🎮</div>
+      </div>
+
+    </div>
+
+    <div class="warning-box">
+      <span class="warning-icon">⚠</span>
+      <span>Miss the 5th deadline = your rigs are excluded from the next month's leaderboard. No exceptions. No extensions.</span>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
