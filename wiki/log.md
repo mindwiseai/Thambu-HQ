@@ -9,6 +9,21 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-18 EVE] ingest | RaceSims 3-Year Vision — investor narrative LOCKED (v4)
+- Created: [[racesims-3-year-vision]] — full v4 narrative concept page (~850 words, humble/partnership-led/story-first)
+- Output artefacts:
+  - `racesims/marketing/decks/racesims-investor-narrative.html` + `.pdf` (A4 standalone one-pager for pre-meeting investor reading)
+  - `racesims/marketing/decks/racesims-multi-centre-rollout.html` + `.pdf` (3 slides: Cover + What is RaceSims + Where in 3 years — opening of multi-centre rollout deck)
+- **Tone principles locked:** humble (no put-downs of existing motorsport ecosystem), partnership-led (credits ARKA, INRC, Polo Cup, MRF, JK Tyre), additive not disruptive, story-first then numbers
+- **Three pillars locked:**
+  1. The equipment — DD wheelbases, motion, load-cell pedals affordable for commercial India deployment
+  2. The pedigree — Thambu race engineer at [[arka-motorsports|ARKA]] (130+ titles), Academy graduates earn real seats via ARKA Rally Drive / Polo Cup
+  3. The integration — **direct distributor for both Conspit AND VNM** (corrected from earlier "VNM via Uday" misreading); ₹65L spec built for ₹39L; full stack under one brand
+- **3-year vision:** 17 centres, ₹40cr network revenue, ₹25-28cr RaceSims direct, ₹8-10cr EBITDA, ₹250-400cr valuation, 100K+ customers, 2K+ Academy graduates, first Academy graduate in real INRC/Polo Cup seat
+- **Closing line:** *"The next great Indian driver will tell their story starting with three words: 'I started at RaceSims.'"*
+- 4 narrative drafts iterated before lock — v1 too confrontational, v2 used "private club" framing that risked offending motorsport partners, v3 still too disruptor-toned, v4 humble + story-first
+- Domain: racesims
+
 ## [2026-05-18 PM] ingest | Chennai Flagship v3 — overhead line audit + 5Y P&L re-cascade
 - Source: continuation of [[2026-05-18-chennai-flagship-proposal-v2]] (source page updated in-place)
 - Updated: [[racesims-chennai-flagship]] (full v3 P&L + opex tables + cumulative cash position)

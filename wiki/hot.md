@@ -8,7 +8,14 @@ updated: 2026-05-18
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-18 PM (latest) — Chennai Flagship v3: overhead audit + P&L re-cascade
+## 2026-05-18 EVE (latest) — RaceSims 3-Year Vision LOCKED · Investor narrative + multi-centre deck opener
+
+- **Investor narrative v4 LOCKED** answering "What is RaceSims?" and "Where in 3 years?" — humble, partnership-led, story-first, ~850 words. Iterated through 4 drafts to land on a tone that doesn't disrupt motorsport-establishment sensibilities. Three pillars: **The equipment** (DD/motion/load-cell affordable now) · **The pedigree** ([[arka-motorsports|ARKA]] race engineer founder, 130+ titles, real seats via The Ladder) · **The integration** (direct Conspit + VNM distributor, ₹65L → ₹39L cost edge, full stack under one brand). Year 3 vision opens on universal teenage dream of becoming a racing driver, narrows to specific kids (Chennai → INRC, Hyderabad young woman, Vijayawada teen), then drops the numbers (17 centres · ₹40cr network rev · ₹8-10cr EBITDA · ₹250-400cr valuation · 100K+ customers · 2K+ Academy graduates). Closing line: *"The next great Indian driver will tell their story starting with three words: 'I started at RaceSims.'"*
+- **Output artefacts:** `racesims-investor-narrative.html`+`.pdf` (A4 standalone one-pager for pre-meeting reading), `racesims-multi-centre-rollout.html`+`.pdf` (3-slide deck opener: Cover + What is + Where in 3 years).
+- See [[racesims-3-year-vision]] (full narrative + tone principles + rejected drafts captured).
+- **Next step:** build out the rest of the multi-centre rollout deck (network economics, capital ask, year-by-year, valuation case).
+
+## 2026-05-18 PM — Chennai Flagship v3: overhead audit + P&L re-cascade
 
 - **Overhead line-by-line audit done.** Material corrections: rent ₹1.5L → **₹1.25L** (found 2,000 sq ft place at ₹1L, modelled +25% for safety). Electricity ₹1L → **₹50K** (honest math: 4 × 1.5T 5-star inverter ACs + realistic PC load curves at ~500W gaming, ~130W idle — not 800W constant). Maintenance ₹25K → **₹7.5K**. Software ₹5K → **₹3K** (Zoho + Workspace billed elsewhere). Music licence **REMOVED**. Insurance ₹4.2K → **₹7.5K** (₹50L+ asset cover). Payment gateway: **2% of digital revenue** (scales). Marketing **₹35K Y1 boost, ₹25K from Y2**.
 - **Y1 monthly opex ₹3.84L** (was ₹4.63L · -₹9.5L/year). **Y1 cash need ₹89L** (was ₹92L). **5Y EBITDA ₹5.24cr** (was ₹4.74cr · +₹50L). **Payback 24 months** (end of Y2). **Capital multiple 5.9×**. **Y5 EBITDA margin 70%**. **Break-even ~21% blended** (Y1 plan 30% → 9-pt cushion). PDF deck exported clean, 12 slides, zero overflow. See [[racesims-chennai-flagship]] (v3 numbers locked), [[2026-05-18-chennai-flagship-proposal-v2]].

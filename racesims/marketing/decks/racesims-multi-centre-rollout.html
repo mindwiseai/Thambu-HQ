@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>RaceSims — National Network Rollout Proposal</title>
+<meta name="viewport" content="width=1280" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:       #FAF9F5;
+    --cream-dark:  #F3EFEA;
+    --cream-mid:   #EDE8E2;
+    --rs-red:      #C8102E;
+    --rs-red-dim:  rgba(200, 16, 46, 0.10);
+    --rs-red-soft: rgba(200, 16, 46, 0.05);
+    --rs-black:    #0F0F10;
+    --ink:         #1F1B18;
+    --ink-mid:     #4A4440;
+    --ink-muted:   #7A7470;
+    --rule:        #DDD8D2;
+    --rule-mid:    #C8C0B8;
+    --green:       #1E6B3A;
+    --amber:       #B8731F;
+    --sans:        'Montserrat', -apple-system, sans-serif;
+    --mono:        'JetBrains Mono', 'SF Mono', monospace;
+  }
+  @page { size: 1280px 720px; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #E8E3DC;
+    font-family: var(--sans);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  body { padding: 32px 0; }
+  .slide {
+    width: 1280px;
+    height: 720px;
+    margin: 0 auto 32px;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    page-break-after: always;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+  .slide:last-child { page-break-after: auto; margin-bottom: 0; }
+  @media print {
+    html, body { background: white; }
+    body { padding: 0; margin: 0; }
+    .slide { margin: 0 auto; border: none; box-shadow: none; }
+  }
+  .slide-inner {
+    padding: 48px 64px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 5px;
+    background: var(--rs-red);
+    z-index: 2;
+  }
+  .slide-num {
+    position: absolute;
+    top: 22px; right: 28px;
+    font-family: var(--mono); font-size: 10px;
+    color: var(--ink-muted); letter-spacing: 0.18em;
+    z-index: 3;
+  }
+  .brand {
+    position: absolute;
+    top: 22px; left: 32px;
+    font-family: var(--mono); font-size: 10px;
+    color: var(--rs-red); letter-spacing: 0.22em;
+    font-weight: 600; z-index: 3;
+  }
+  .eyebrow {
+    font-family: var(--mono); font-size: 10px;
+    color: var(--rs-red); letter-spacing: 0.22em;
+    text-transform: uppercase; margin-bottom: 14px;
+    font-weight: 600;
+  }
+  h1 { font-family: var(--sans); font-size: 54px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; color: var(--ink); }
+  h2 { font-family: var(--sans); font-size: 38px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; margin-bottom: 18px; color: var(--ink); }
+  h2 .italic { font-style: italic; color: var(--rs-red); font-weight: 600; }
+  h3 {
+    font-family: var(--sans); font-size: 11px;
+    font-weight: 700; color: var(--rs-red);
+    text-transform: uppercase; letter-spacing: 0.18em;
+    margin-bottom: 12px;
+  }
+  h3.serif { font-family: var(--sans); text-transform: none; font-size: 18px; font-weight: 700; color: var(--ink); letter-spacing: -0.015em; }
+  p { font-size: 14px; line-height: 1.55; color: var(--ink-mid); }
+  .lead { font-size: 17px; color: var(--ink); line-height: 1.6; font-weight: 400; }
+  .lead-large { font-size: 21px; color: var(--ink); line-height: 1.55; font-weight: 500; letter-spacing: -0.01em; }
+
+  /* COVER */
+  .cover { display: flex; flex-direction: column; justify-content: center; padding: 0 96px; }
+  .cover .badge {
+    display: inline-block; padding: 7px 14px;
+    border: 1.5px solid var(--rs-red); color: var(--rs-red);
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.22em; margin-bottom: 28px;
+    width: max-content; font-weight: 600;
+  }
+  .cover h1 { font-family: var(--sans); font-size: 92px; font-weight: 800; line-height: 0.98; letter-spacing: -0.035em; margin-bottom: 28px; }
+  .cover h1 .accent { color: var(--rs-red); font-style: italic; font-weight: 700; }
+  .cover .sub { font-size: 20px; color: var(--ink-mid); font-weight: 400; line-height: 1.5; max-width: 780px; }
+  .cover .footer {
+    position: absolute; bottom: 48px; left: 96px; right: 96px;
+    display: flex; justify-content: space-between;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-muted); letter-spacing: 0.18em; z-index: 3;
+  }
+
+  /* GRID & TABLES */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+  .card {
+    background: var(--cream-dark); border: 1px solid var(--rule);
+    border-radius: 4px; padding: 20px 22px;
+  }
+  .card.accent { border-left: 3px solid var(--rs-red); padding-left: 22px; }
+  .card.red { background: var(--rs-red-soft); border-color: rgba(200, 16, 46, 0.3); }
+
+  .stat { display: flex; flex-direction: column; gap: 4px; }
+  .stat .label {
+    font-family: var(--mono); font-size: 9px;
+    color: var(--ink-muted); letter-spacing: 0.18em;
+    text-transform: uppercase; font-weight: 600;
+  }
+  .stat .value {
+    font-family: var(--sans); font-size: 32px; font-weight: 800;
+    color: var(--rs-red); letter-spacing: -0.025em; line-height: 1;
+  }
+  .stat .note { font-size: 11px; color: var(--ink-mid); margin-top: 3px; }
+
+  .divider { height: 1px; background: var(--rule); margin: 16px 0; }
+  .divider.tight { margin: 10px 0; }
+  .divider.red { background: var(--rs-red); height: 2px; width: 40px; margin: 14px 0 18px; }
+
+  .pillar-num {
+    font-family: var(--sans); font-size: 36px;
+    font-weight: 800; color: var(--rs-red);
+    letter-spacing: -0.025em; line-height: 1;
+    margin-bottom: 8px;
+  }
+  .pillar-title {
+    font-size: 16px; font-weight: 700;
+    color: var(--ink); margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .pillar-body { font-size: 13px; line-height: 1.5; color: var(--ink-mid); }
+
+  .vignette {
+    background: var(--cream-dark); border-left: 2px solid var(--rs-red);
+    padding: 12px 16px; margin-bottom: 8px;
+    font-size: 14px; line-height: 1.55; color: var(--ink);
+  }
+  .vignette .who { font-family: var(--mono); font-size: 9px; color: var(--rs-red); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; margin-bottom: 4px; }
+
+  .text-red { color: var(--rs-red); }
+  .small { font-size: 11.5px; line-height: 1.5; color: var(--ink-mid); }
+  .tiny { font-size: 10px; color: var(--ink-muted); font-family: var(--mono); letter-spacing: 0.15em; font-weight: 600; }
+  b { font-weight: 700; }
+  em { font-style: italic; }
+
+  .closing-line {
+    font-size: 22px; font-weight: 700; color: var(--ink);
+    line-height: 1.4; letter-spacing: -0.015em;
+    border-left: 3px solid var(--rs-red); padding-left: 18px;
+    margin-top: 14px;
+  }
+  .closing-line .em { color: var(--rs-red); }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: COVER -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">01 / 03</div>
+  <div class="slide-inner cover">
+    <span class="badge">NATIONAL NETWORK · Y2 → Y5 ROLLOUT</span>
+    <h1>RaceSims<br/><span class="accent">·</span> National Network</h1>
+    <p class="sub">India's integrated motorsport development platform. Chennai is the proof point. This is the path from one centre to a national network — and to the next generation of Indian racing drivers.</p>
+    <div class="footer">
+      <span>RACESIMS SOLUTIONS PVT LTD</span>
+      <span>MULTI-CENTRE ROLLOUT · SERIES A PROPOSAL</span>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 2: WHAT IS RACESIMS -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">02 / 03</div>
+  <div class="slide-inner">
+    <div class="eyebrow">02 · What is RaceSims?</div>
+    <h2>India's integrated <span class="italic">motorsport development platform.</span></h2>
+    <div class="divider red"></div>
+
+    <p class="lead" style="margin-bottom: 14px; max-width: 1060px;">Indian motorsport is in a moment most of us have waited a long time for. F1 viewership is growing every year, the INRC is delivering season after season of close racing, and teams like <b>ARKA Motorsports</b> have spent four decades building championship pedigree. The audience is there. The talent is there. What's been narrow is the runway in between — the path from <em>loving racing</em> to <em>racing</em>.</p>
+
+    <p class="lead" style="margin-bottom: 16px; max-width: 1060px;">That's the gap RaceSims is built to fill. A place where someone who loves racing can develop the craft, compete in real championships, and earn a path toward real-world seats through partners like <b>ARKA</b> and <b>Polo Cup</b>. We're not replacing the motorsport ecosystem. We're adding a new on-ramp to it.</p>
+
+    <div class="divider tight"></div>
+
+    <div class="grid-3" style="margin-top: 4px;">
+      <div class="card accent">
+        <div class="pillar-num">01</div>
+        <div class="pillar-title">The equipment</div>
+        <div class="pillar-body">Direct-drive wheelbases, motion platforms, load-cell pedals — the same technology behind F1 driver simulators — has finally become affordable enough to deploy commercially in India.</div>
+      </div>
+      <div class="card accent">
+        <div class="pillar-num">02</div>
+        <div class="pillar-title">The pedigree</div>
+        <div class="pillar-body">Founded by a working race engineer at <b>ARKA Motorsports</b> (130+ national championship titles). Every curriculum, every coaching session, every centre standard is shaped by motorsport people. The Ladder pathway to real-world seats is real.</div>
+      </div>
+      <div class="card accent">
+        <div class="pillar-num">03</div>
+        <div class="pillar-title">The integration</div>
+        <div class="pillar-body">Direct distributor in India for both <b>Conspit</b> and <b>VNM</b>. We get the gear at trade pricing — a <b>₹65L</b> centre built for <b>₹39L</b>. And we run the full stack: centres + hardware + championship + curriculum + sim-to-real pathway.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3: WHERE IN 3 YEARS -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">03 / 03</div>
+  <div class="slide-inner">
+    <div class="eyebrow">03 · Where I see RaceSims in 3 years</div>
+    <h2>The dream is common. <span class="italic">What's been missing is a place to develop it.</span></h2>
+    <div class="divider red"></div>
+
+    <p class="lead" style="margin-bottom: 14px; max-width: 1060px;">There's a particular kind of dream that nearly every Indian teenager has held at some point — <em>racing driver.</em> F1 broadcasts on Sundays, INRC at Coimbatore, MotoGP reruns, Drive to Survive on Netflix. The audience for motorsport in India is in the <b>millions and growing 25%+ a year.</b> The dream is common. <b>We are building the place to develop it.</b></p>
+
+    <div class="grid-2" style="margin-top: 4px; gap: 28px;">
+      <div>
+        <h3>By May 2029 — the stories we'll have helped write</h3>
+        <div class="vignette">
+          <div class="who">CHENNAI → INRC</div>
+          A 15-year-old who watched a Polo Cup round on YouTube in 2026 and walked into our Chennai centre, qualifying for their first INRC round.
+        </div>
+        <div class="vignette">
+          <div class="who">HYDERABAD</div>
+          A young woman who never thought motorsport could include her, on our championship grid.
+        </div>
+        <div class="vignette">
+          <div class="who">VIJAYAWADA</div>
+          A teenager whose family could never have afforded karting, racing — because the path finally had a starting point they could reach.
+        </div>
+      </div>
+      <div>
+        <h3>Then come the numbers</h3>
+        <div class="grid-2" style="gap: 12px; margin-bottom: 12px;">
+          <div class="card accent"><div class="stat"><span class="label">Centres operating</span><span class="value">17</span><span class="note">7 Tier 1 + 5 Tier 2 cities</span></div></div>
+          <div class="card accent"><div class="stat"><span class="label">Network revenue</span><span class="value">₹40 cr</span><span class="note">RaceSims direct ₹25-28 cr</span></div></div>
+          <div class="card accent"><div class="stat"><span class="label">EBITDA</span><span class="value">₹8-10 cr</span><span class="note">Operating cash funds rollout</span></div></div>
+          <div class="card accent"><div class="stat"><span class="label">Valuation</span><span class="value">₹250-400 cr</span><span class="note">Series B in conversation</span></div></div>
+        </div>
+        <p class="small">100,000+ customers across the network · 2,000+ Motorsport Academy graduates · First Academy graduate in real-world motorsport seat.</p>
+
+        <div class="closing-line">
+          The numbers are how we'll know it's working. <span class="em">The teenagers are why we're doing it.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
