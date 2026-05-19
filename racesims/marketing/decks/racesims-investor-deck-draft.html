@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RaceSims — Investor Deck 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Barlow+Condensed:wght@400;600;700;800;900&display=swap');
+
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-dim: rgba(201,168,76,0.15);
+    --red: #C8102E;
+    --bg: #09090F;
+    --bg2: #0F0F18;
+    --bg3: #141420;
+    --text: #F0EDE6;
+    --text-dim: rgba(240,237,230,0.55);
+    --text-muted: rgba(240,237,230,0.3);
+    --border: rgba(201,168,76,0.18);
+    --slide-w: 1280px;
+    --slide-h: 720px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #000;
+    font-family: 'Barlow', -apple-system, sans-serif;
+    color: var(--text);
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* CLOTH TEXTURE */
+  .cloth-texture {
+    background-color: var(--bg);
+    background-image:
+      url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c9a84c' fill-opacity='0.035'%3E%3Cpath d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E"),
+      repeating-linear-gradient(
+        135deg,
+        rgba(201,168,76,0.02) 0px,
+        rgba(201,168,76,0.02) 1px,
+        transparent 1px,
+        transparent 6px
+      );
+  }
+
+  /* PRESENTATION WRAPPER */
+  .deck {
+    width: var(--slide-w);
+    height: var(--slide-h);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 120px rgba(201,168,76,0.08);
+  }
+
+  /* SLIDES */
+  .slide {
+    position: absolute;
+    inset: 0;
+    width: var(--slide-w);
+    height: var(--slide-h);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+  .slide.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* GOLD RULE */
+  .rule {
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold) 0%, rgba(201,168,76,0.3) 60%, transparent 100%);
+    margin: 0;
+  }
+  .rule-full {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 30%, var(--gold) 70%, transparent 100%);
+  }
+
+  /* SLIDE HEADER */
+  .slide-header {
+    padding: 22px 52px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+  .slide-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+  .slide-num {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+  }
+
+  /* SLIDE BODY */
+  .slide-body {
+    flex: 1;
+    padding: 0 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* TYPOGRAPHY */
+  .display {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 0.9;
+  }
+  .h1 { font-size: 88px; }
+  .h2 { font-size: 52px; }
+  .h3 { font-size: 36px; }
+  .h4 { font-size: 24px; }
+  .body { font-size: 15px; line-height: 1.6; color: var(--text-dim); }
+  .small { font-size: 12px; color: var(--text-muted); }
+  .gold { color: var(--gold); }
+  .red { color: var(--red); }
+  .white { color: var(--text); }
+  .dim { color: var(--text-dim); }
+
+  /* STAT BLOCK */
+  .stat-block {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--gold);
+    padding: 18px 24px;
+    flex: 1;
+  }
+  .stat-block .stat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .stat-block .stat-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-top: 6px;
+  }
+  .stat-block .stat-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* GRID */
+  .cols { display: flex; gap: 20px; }
+  .col { flex: 1; }
+
+  /* TABLE */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .data-table th {
+    background: var(--bg2);
+    color: var(--gold);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--gold);
+  }
+  .data-table td {
+    padding: 9px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-dim);
+  }
+  .data-table tr:last-child td {
+    border-bottom: none;
+  }
+  .data-table .total-row td {
+    background: var(--gold-dim);
+    color: var(--text);
+    font-weight: 700;
+    border-top: 1px solid var(--border);
+  }
+  .data-table .highlight td { color: var(--text); }
+
+  /* PILL TAG */
+  .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    background: var(--gold-dim);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* RACING STRIPE ACCENT */
+  .stripe-accent {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--gold) 0%, var(--red) 100%);
+  }
+
+  /* BOTTOM BAR */
+  .slide-footer {
+    padding: 10px 52px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+  .footer-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  /* NAVIGATION */
+  .nav {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+    background: rgba(9,9,15,0.8);
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+  }
+  .nav-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--text-muted);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .nav-dot.active { background: var(--gold); border-radius: 2px; width: 20px; }
+  .nav-dot:hover { background: var(--gold-light); }
+
+  .nav-arrows {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    z-index: 100;
+    pointer-events: none;
+  }
+  .nav-btn {
+    pointer-events: all;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    background: rgba(9,9,15,0.7);
+    border: 1px solid var(--border);
+    color: var(--gold);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .nav-btn:hover { background: var(--gold-dim); }
+
+  /* COVER SPECIFIC */
+  .cover-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 96px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--text);
+  }
+  .cover-logo span { color: var(--gold); }
+  .cover-sub {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-top: 12px;
+  }
+  .cover-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 32px;
+  }
+  .cover-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin-top: 24px;
+  }
+  .cover-meta {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 16px;
+    letter-spacing: 0.08em;
+  }
+  .cover-corner {
+    position: absolute;
+    right: 52px;
+    bottom: 48px;
+    text-align: right;
+  }
+  .cover-year {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 120px;
+    font-weight: 900;
+    color: rgba(201,168,76,0.06);
+    line-height: 1;
+    position: absolute;
+    right: 40px;
+    top: 80px;
+  }
+
+  /* FRAMEWORK CARDS */
+  .framework-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 28px 24px;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  .framework-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .framework-card.drive::before { background: var(--gold); }
+  .framework-card.train::before { background: #5B8AF0; }
+  .framework-card.compete::before { background: var(--red); }
+  .framework-card .card-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+  .framework-card .card-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .framework-card.drive .card-title { color: var(--gold); }
+  .framework-card.train .card-title { color: #5B8AF0; }
+  .framework-card.compete .card-title { color: var(--red); }
+  .framework-card .card-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .framework-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .framework-card ul li {
+    font-size: 13px;
+    color: var(--text-dim);
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    padding-left: 14px;
+    position: relative;
+  }
+  .framework-card ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--text-muted);
+    font-size: 10px;
+  }
+
+  /* MOAT ITEMS */
+  .moat-item {
+    display: flex;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    align-items: flex-start;
+  }
+  .moat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--gold);
+    opacity: 0.4;
+    line-height: 1;
+    min-width: 44px;
+  }
+  .moat-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 3px;
+  }
+  .moat-body { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+
+  /* LADDER STEPS */
+  .ladder {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .ladder-step {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 20px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-bottom: none;
+    position: relative;
+  }
+  .ladder-step:last-child { border-bottom: 1px solid var(--border); }
+  .ladder-step.highlight-step {
+    background: var(--gold-dim);
+    border-color: var(--gold);
+  }
+  .step-icon { font-size: 22px; min-width: 32px; }
+  .step-title { font-weight: 700; font-size: 14px; color: var(--text); }
+  .step-desc { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+  .step-badge {
+    margin-left: auto;
+    padding: 3px 10px;
+    background: var(--gold);
+    color: #000;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* REVENUE STREAM ROW */
+  .rev-stream {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-bottom: none;
+  }
+  .rev-stream:last-child { border-bottom: 1px solid var(--border); }
+  .rev-stream.featured {
+    background: rgba(201,168,76,0.08);
+    border-color: var(--gold);
+  }
+  .rev-stream .stream-name {
+    font-weight: 700;
+    font-size: 14px;
+    min-width: 220px;
+  }
+  .rev-stream .stream-rev {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gold);
+    min-width: 100px;
+  }
+  .rev-stream .stream-ebitda {
+    font-size: 13px;
+    color: var(--text-dim);
+    min-width: 80px;
+  }
+  .rev-stream .stream-margin {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .rev-stream .stream-bar {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .rev-stream .stream-bar-fill {
+    height: 100%;
+    background: var(--gold);
+    border-radius: 2px;
+  }
+  .rev-stream.featured .stream-bar-fill { background: var(--gold-light); }
+
+  /* SCALE MAP */
+  .scale-phase {
+    padding: 10px 16px;
+    border-left: 3px solid var(--gold);
+    background: var(--bg2);
+    margin-bottom: 8px;
+  }
+  .scale-phase .phase-year {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .scale-phase .phase-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-top: 2px;
+  }
+
+  /* VALUATION */
+  .val-scenario {
+    flex: 1;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .val-scenario.featured {
+    background: var(--gold-dim);
+    border-color: var(--gold);
+    border-top: 3px solid var(--gold);
+  }
+  .val-scenario .val-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  .val-scenario .val-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 46px;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .val-scenario .val-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 8px;
+  }
+
+  /* ASK */
+  .ask-block {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    padding: 20px 24px;
+    margin-bottom: 12px;
+  }
+  .ask-amount {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--gold);
+  }
+  .ask-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  /* TEAM */
+  .team-card {
+    flex: 1;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--gold);
+    padding: 28px 24px;
+  }
+  .team-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .team-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .team-cred {
+    font-size: 13px;
+    color: var(--text-dim);
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .team-cred::before {
+    content: '▸';
+    color: var(--gold);
+    font-size: 10px;
+  }
+
+  /* COACHING SPECIFIC */
+  .cert-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--gold);
+    padding: 20px;
+    flex: 1;
+  }
+  .cert-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: #000;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    margin-bottom: 10px;
+  }
+
+  /* APPENDIX */
+  .future-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .future-arrow {
+    color: var(--gold);
+    font-size: 14px;
+    margin-top: 2px;
+  }
+</style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+  <!-- ═══════════════════════════════ SLIDE 1: COVER ═══════════════════════════════ -->
+  <div class="slide cloth-texture active" id="slide-1">
+    <div class="stripe-accent"></div>
+    <div class="cover-year">2026</div>
+    <div class="slide-body" style="justify-content: flex-end; padding-bottom: 80px;">
+      <div class="tag" style="margin-bottom: 20px;">Confidential · Series Seed</div>
+      <div class="cover-logo">Race<span>Sims</span></div>
+      <div class="cover-sub">India's Premier Motorsport Simulation Network</div>
+      <div class="cover-divider"></div>
+      <div class="cover-tag">Drive · Train · Compete</div>
+      <div class="cover-meta" style="margin-top: 20px;">
+        RaceSims Solutions Pvt Ltd &nbsp;·&nbsp; Chennai, India &nbsp;·&nbsp; thambu@racesims.in
+      </div>
+    </div>
+    <div style="position: absolute; right: 80px; bottom: 60px;">
+      <div style="text-align: right;">
+        <div style="font-family: 'Barlow Condensed'; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted);">Founded by</div>
+        <div style="font-family: 'Barlow Condensed'; font-size: 20px; font-weight: 700; color: var(--text);">Thambu</div>
+        <div style="font-size: 11px; color: var(--text-muted);">Race Engineer · ARKA Motorsports</div>
+      </div>
+    </div>
+    <div style="padding: 14px 52px; flex-shrink: 0;">
+      <div class="rule"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ SLIDE 2: OPPORTUNITY ═══════════════════════════════ -->
+  <div class="slide cloth-texture" id="slide-2">
+    <div class="stripe-accent"></div>
+    <div class="slide-header">
+      <span class="slide-label">The Opportunity</span>
+      <span class="slide-num">02 / 15</span>
+    </div>
+    <div style="padding: 0 52px; margin-top: 8px;"><div class="rule"></div></div>
+    <div class="slide-body" style="gap: 28px;">
+      <div>
+        <div class="display h2" style="margin-bottom: 8px;">India Has No Professional<br><span class="gold">Sim Racing Infrastructure</span></div>
+        <div class="body" style="max-width: 660px;">The global sim racing market is ₹65,000 cr and growing at 12% CAGR. India's motorsport following is 150M+ — yet zero dedicated, professional-grade sim racing development facilities exist.</div>
+      </div>
+      <div class="cols" style="gap: 16px;">
+        <div class="stat-block">
+          <div class="stat-num">₹65K cr</div>
+          <div class="stat-label">Global Sim Racing Market</div>
+          <div class="stat-sub">12% CAGR · ₹28K cr in Asia Pacific</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">150M+</div>
+          <div class="stat-label">Indian Motorsport Enthusiasts</div>
+          <div class="stat-sub">F1, MotoGP, INRC, rally following</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">0</div>
+          <div class="stat-label">Professional Sim Racing Venues</div>
+          <div class="stat-sub">No structured development pathway exists in India</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">25K+</div>
+          <div class="stat-label">Licensed Motorsport Drivers</div>
+          <div class="stat-sub">Need structured off-track training infrastructure</div>
+        </div>
+      </div>
+      <div style="background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--gold); padding: 16px 20px;">
+        <div style="font-weight: 700; font-size: 15px; margin-bottom: 4px;">The gap: sim racing exists as gaming entertainment, not motorsport infrastructure.</div>
+        <div class="body" style="font-size: 13px;">No venue in India positions sim racing as a legitimate driver development tool, integrates with real racing pathways, or operates championship infrastructure. RaceSims is building that category from scratch.</div>
+      </div>
+    </div>
+    <div style="padding: 0 52px 14px;"><div class="rule"></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════ SLIDE 3: DRIVE TRAIN COMPETE ═══════════════════════════════ -->
+  <div class="slide cloth-texture" id="slide-3">
+    <div class="stripe-accent"></div>
+    <div class="slide-header">
+      <span class="slide-label">The Framework</span>
+      <span class="slide-num">03 / 15</span>
+    </div>
+    <div style="padding: 0 52px; margin-top: 8px;"><div class="rule"></div></div>
+    <div class="slide-body" style="gap: 20px;">
+      <div>
+        <div class="display h3" style="margin-bottom: 4px;">Three Words.<br><span class="gold">One Clear Journey.</span></div>
+        <div class="body" style="font-size: 13px;">Every product and service maps to exactly one of three stages. Customers enter anywhere and progress naturally.</div>
+      </div>
+      <div class="cols">
+        <div class="framework-card drive">
+          <div class="card-title">Drive</div>
+          <div class="card-sub">Experience Layer</div>
+          <ul>
+            <li>Drop-In Sessions ₹700–900/hr</li>
+            <li>Group Experience (6 seats) ₹8,000/hr</li>
+            <li>Corporate Event Packages</li>
+            <li>F1 Race Weekend Viewing Events</li>
+            <li>Member Passes (8 or 16 hrs/month)</li>
+          </ul>
+        </div>
+        <div class="framework-card train">
+          <div class="card-title">Train</div>
+          <div class="card-sub">Development Layer</div>
+          <ul>
+            <li>Initiation Programme ₹8,000 (4 sessions)</li>
+            <li>Race Academy ₹14,000 (8 sessions)</li>
+            <li>Rally School ₹16,000 (10 sessions)</li>
+            <li>Tuner Lab ₹28,000 (corporate engineering)</li>
+            <li>Coaching & Engineering Certification</li>
+          </ul>
+        </div>
+        <div class="framework-card compete">
+          <div class="card-title">Compete</div>
+          <div class="card-sub">Championship Layer</div>
+          <ul>
+            <li>Always-On Daily Leaderboard</li>
+            <li>Weekly Hot Lap (₹200 entry)</li>
+            <li>Quarterly Shootouts (5 rounds)</li>
+            <li>Annual Grand Final (double points)</li>
+            <li>Championship Pass ₹4,500/year</li>
+          </ul>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: var(--bg2); border: 1px solid var(--border);">
+        <div style="font-size: 12px; color: var(--text-muted); letter-spacing: 0.08em;">BLENDED SEAT RATE</div>
+        <div style="font-family: 'Barlow Condensed'; font-size: 28px; font-weight: 800; color: var(--gold);">₹750/hr</div>
+        <div style="font-size: 12px; color: var(--text-muted);">Y1 · rising to ₹850/hr Y2 as training mix matures</div>
+        <div style="margin-left: auto; font-size: 12px; color: var(--text-dim);">Break-even at just <span style="color: var(--gold); font-weight: 700;">18% utilization</span> — 450 seat-hours/month</div>
+      </div>
+    </div>
+    <div style="padding: 0 52px 14px;"><div class="rule"></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════ SLIDE 4: FLAGSHIP ═══════════════════════════════ -->
+  <div class="slide cloth-texture" id="slide-4">
+    <div class="stripe-accent"></div>
+    <div class="slide-header">
+      <span class="slide-label">Chennai Flagship</span>
+      <span class="slide-num">04 / 15</span>
+    </div>
+    <div style="padding: 0 52px; margin-top: 8px;"><div class="rule"></div></div>
+    <div class="slide-body" style="flex-direction: row; gap: 32px; align-items: stretch; padding-top: 16px; padding-bottom: 16px;">
+      <div style="flex: 1.2; display: flex; flex-direction: column; gap: 16px;">
+        <div class="display h3">India's First <span class="gold">Professional</span><br>Sim Racing Centre</div>
+        <div class="body" style="font-size: 13px;">1,800–2,000 sqft · 6 premium rigs · Kilpauk / Anna Nagar · Lean industrial fit-out · Full café · 4-zone layout</div>
+        <div>
+          <div style="font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px;">Per-Rig Specification</div>
+          <table class="data-table" style="font-size: 12px;">
+            <thead><tr><th>Component</th><th>Spec</th><th>Cost</th></tr></thead>
+            <tbody>
+              <tr><td>PC Build</td><td>AMD 9800X3D · RTX 5070Ti</td><td class="gold">₹2,70,000</td></tr>
+              <tr><td>Displays</td><td>Triple 32" Samsung Curved</td><td class="gold">₹75,000</td></tr>
+              <tr><td>Wheel Base</td><td>12 Nm Direct Drive</td><td class="gold">₹40,000</td></tr>
+              <tr><td>Pedals + Shifter</td><td>VNM Light + H-shifter + Handbrake</td><td class="gold">₹34,000</td></tr>
+              <tr><td>Rig + Racing Seat</td><td>Cockpit frame + Pro racing seat</td><td class="gold">₹65,000</td></tr>
+              <tr class="total-row"><td colspan="2">Per Seat Total</td><td>₹5,03,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0px;">Capital Investment</div>
+        <table class="data-table" style="font-size: 12px;">
+          <thead><tr><th>Component</th><th>₹</th></tr></thead>
+          <tbody>
+            <tr><td>6-seat Hardware</td><td class="gold">₹30,18,000</td></tr>
+            <tr><td>Infrastructure (lean industrial)</td><td class="gold">₹15,45,000</td></tr>
+            <tr><td>Café (full build)</td><td class="gold">₹3,00,000</td></tr>
+            <tr><td>Software + Content</td><td class="gold">₹1,60,000</td></tr>
+            <tr><td>VMS Platform Build</td><td class="gold">₹2,00,000</td></tr>
+            <tr><td>Working Capital (3 months)</td><td class="gold">₹15,80,000</td></tr>
+            <tr class="total-row"><td><strong>TOTAL INVESTMENT</strong></td><td><strong>₹68,03,000</strong></td></tr>
+          </tbody>
+        </table>
+        <div style="background: var(--gold-dim); border: 1px solid var(--border); padding: 12px 16px; margin-top: 4px;">
+          <div style="font-size: 11px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase;">Software Stack (locked)</div>
+          <div style="font-size: 13px; color: var(--text); margin-top: 6px; line-height: 1.8;">
+            Le Mans Ultimate · iRacing<br>
+            <span style="color: var(--text-dim);">AC Rally · Richard Burns Rally</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 0 52px 14px;"><div class="rule"></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════ SLIDE 5: CHAMPIONSHIP + LADDER ═══════════════════════════════ -->
+  <div class="slide cloth-texture" id="slide-5">
+    <div class="stripe-accent"></div>
+    <div class="slide-header">
+      <span class="slide-label">The Competition Ecosystem</span>
+      <span class="slide-num">05 / 15</span>
+    </div>
+    <div style="padding: 0 52px; margin-top: 8px;"><div class="rule"></div></div>
+    <div class="slide-body" style="flex-direction: row; gap: 28px; padding-top: 16px; padding-bottom: 16px;">
+      <div style="flex: 1.1;">
+        <div style="font-family: 'Barlow Condensed'; font-size: 13px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px;">4-Layer Championship Architecture</div>
+        <div class="ladder" style="gap: 0;">
+          <div class="ladder-step">
+            <div class="step-icon">⏱</div>
+            <div>
+              <div class="step-title">Layer 1 — Always-On Leaderboard</div>
+              <div class="step-desc">Daily personal best · free with every session · permanent ranking</div>
+            </div>
+          </div>
+          <div class="ladder-step">
+            <div class="step-icon">🔥</div>
+            <div>
+              <div class="step-title">Layer 2 — Weekly Hot Lap</div>
+              <div class="step-desc">Continuous rolling event · ₹200 entry · weekly reset ·
+national with other centres</div>
+            </div>
+            <div class="step-badge">₹200</div>
+          </div>
+          <div class="ladder-step">
+            <div class="step-icon">🏁</div>
+            <div>
+              <div class="step-title">Layer 3 — Quarterly Shootout</div>
+              <div class="step-desc">5 rounds/quarter (3 Time Trial + 2 Live Race) · points accumulate · top 3 qualify for Annual</div>
+            </div>
+          </div>
+          <div class="ladder-step highlight-step">
+            <div class="step-icon">🏆</div>
+            <div>
+              <div class="step-title">Layer 4 — Annual Grand Final</div>
+              <div class="step-desc">Double points · Q1+Q2+Q3 + Grand Final = Annual Champion</div>
+            </div>
+            <div class="step-badge">CHAMPION</div>
+          </div>
+        </div>
+        <div style="margin-top: 10px; font-size: 12px; color: var(--text-muted); text-align: center;">Championship Pass: ₹4,500/year per discipline (Circuit or Rally)</div>
+      </div>
+      <div style="flex: 1;">
+        <div style="font-family: 'Barlow Condensed'; font-size: 13px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px;">The Ladder — Sim to Reality</div>
+        <div class="ladder">
+          <div class="ladder-step">
+            <div class="step-icon">🎮</div>
+            <div>
+              <div class="step-title">Initiation Programme</div>
+              <div class="step-desc">Entry point · 4 sessions · ₹8,000</div>
+            </div>
+          </div>
+          <div class="ladder-step">
+            <div class="step-icon">📈</div>
+            <div>
+              <div class="step-title">Train Up · Qualify for Quarters</div>
+              <div class="step-desc">Race Academy / Rally School · earn ranking</div>
+            </div>
+          </div>
+          <div class="ladder-step highlight-step">
+            <div class="step-icon">🚗</div>
+            <div>
+              <div class="step-title">Live Race Win → Polo Cup Follow Car</div>
+              <div class="step-desc">Real circuit drive at VW Polo Cup event · ₹1.5L prize value</div>
+            </div>
+            <div class="step-badge">REAL DRIVE</div>
+          </div>
+          <div class="ladder-step highlight-step" style="border-top: none;">
+            <div class="step-icon">🏔</div>
+            <div>
+              <div class="step-title">Annual Champion → ARKA Rally Drive</div>
+              <div class="step-desc">Development seat at ARKA Motorsports rally event · ₹1L prize value</div>
+            </div>
+            <div class="step-badge">REAL DRIVE</div>
+          </div>
+        </div>
+        <div style="margin-top: 10px; background: var(--bg2); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; color: var(--text-dim);">
+          Real-drive prizes are self-funding from Y1 — championship revenue covers prize cost with <span style="color: var(--gold); font-weight: 700;">₹2L+ net positive</span>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 0 52px 14px;"><div class="rule"></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════ SLIDE 6: ARKA MOAT ═══════════════════════════════ -->
+  <div class="slide cloth-texture" id="slide-6">
+    <div class="stripe-accent"></div>
+    <div class="slide-header">
+      <span class="slide-label">The Moat — Why We Can't Be Copied</span>
+      <span class="slide-num">06 / 15</span>
+    </div>
+    <div style="padding: 0 52px; margin-top: 8px;"><div class="rule"></div></div>
+    <div class="slide-body" style="flex-direction: row; gap: 32px; padding-top: 16px; padding-bottom: 16px;">
+      <div style="flex: 1.1; display: flex; flex-direction: column; gap: 0;">
+        <div style="background: var(--gold-dim); border: 1px solid var(--gold); padding: 20px 20px 16px; margin-bottom: 12px;">
+          <div style="font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px;">The Partnership</div>
+          <div style="font-size: 18px; font-weight: 700; margin-bottom: 4px;">ARKA Motorsports</div>
+          <div style="font-size: 13px; color: var(--text-dim); line-height: 1.6;">India's most decorated motorsport team.<br><span style="color: var(--gold); font-weight: 700;">130+ Championship Titles since 1987.</span><br>"The only team in the country to have this prestigious record."</div>
+        </div>
+        <div class="moat-item">
+          <div class="moat-num">01</div>
+          <div>
+            <div class="moat-title">Race Engineer of India's Winningest Team</div>
+            <div class="moat-body">Thambu is the active race engineer for ARKA Motorsports — not an advisor, not a brand ambassador. Working race engineer with current operational involvement.</div>
+          </div>
+        </div>
+        <div class="moat-item">
+          <div class="moat-num">02</div>
+          <div>
+            <div class="moat-title">7-Time National Rally Champion Design Input</div>
+            <div class="moat-body">Mr. N. Leelakrishnan (ARKA founder) personally contributed to next-gen rig design. 35+ years of Indian motorsport engineering in our hardware DNA.</div>
+          </div>
+        </div>
+        <div class="moat-item">
+          <div class="moat-num">03</div>
+          <div>
+            <div class="moat-title">Live Sim-to-Real Feedback Loop</div>
+            <div class="moat-body">RaceSims simulator installed at ARKA facility. Active racing drivers use our rigs between race weekends — creating a live telemetry feedback loop no competitor can replicate.</div>
+          </div>
+        </div>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0;">Strategic ARKA Partnership Value</div>
+        <div class="ask-block" style="border-left-color: var(--gold); margin-bottom: 0;">
+          <div class="ask-label">Rally School — ARKA Endorsed</div>
+          <div style="font-size: 13px; color: var(--text-dim);">Rally training programme carries ARKA Motorsports endorsement — India's most credentialed rally team backs our curriculum.</div>
+        </div>
+        <div class="ask-block" style="border-left-color: var(--gold); margin-bottom: 0;">
+          <div class="ask-label">Annual Champion Prize Partner</div>
+          <div style="font-size: 13px; color: var(--text-dim);">ARKA provides the development driver/co-driver seat for Annual Rally Champion. ₹1L cost → priceless positioning.</div>
+        </div>
+        <div class="ask-block" style="border-left-color: var(--gold); margin-bottom: 0;">
+          <div class="ask-label">Strategic Recommendation</div>
+          <div style="font-size: 13px; color: var(--text-dim);">Formalize into a <span style="color: var(--gold); font-weight: 700;">multi-year exclusivity contract</span> with India-wide rights before brand value compounds. Currently a relationship — must become a legal asset.</div>
+        </div>
+        <div style="background: var(--bg2); border: 1px solid var(--border); padding: 14px 16px; font-size: 12px; color: var(--text-dim); line-height: 1.6; margin-top: auto;">
+          <span style="color: var(--gold); font-weight: 700;">This credential stack cannot be acquired.</span><br>
+          It took 37 years of racing to build. Any competitor starting today is 37 years behind.
+        </div>
+      </div>
+    </div>
+    <div style="padding: 0 52px 14px;"><div class="rule"></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════ SLIDE 7: CHENNAI FINANCIALS ═══════════════════════════════ -->
+  <div class="slide cloth-texture" id="slide-7">
+    <div class="stripe-accent"></div>
+    <div class="slide-header">
+      <span class="slide-label">Chennai Flagship — Financial Projections</span>
+      <span class="slide-num">07 / 15</span>
+    </div>
+    <div style="padding: 0 52px; margin-top: 8px;"><div class="rule"></div></div>
+    <div class="slide-body" style="gap: 18px; padding-top: 14px; padding-bottom: 14px;">
+      <div class="cols" style="gap: 16px; flex-shrink: 0;">
+        <div class="stat-block">
+          <div class="stat-num">₹68L</div>
+          <div class="stat-label">Total Investment</div>
+          <div class="stat-sub">Hardware + fit-out + working capital</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">17 mo</div>
+          <div class="stat-label">Full Payback</div>
+          <div class="stat-sub">Month 2 onwards cash-flow positive</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">₹32L</div>
+          <div class="stat-label">Year 1 EBITDA</div>
+          <div class="stat-sub">35% margin · 47% seat utilization</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">₹87L</div>
+          <div class="stat-label">Year 2 EBITDA</div>
+          <div class="stat-sub">58% margin · 65% utilization</div>
+        </div>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>P&amp;L Line</th>
+            <th>Year 1</th>
+            <th>Year 2</th>
+            <th>Year 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight"><td>Seat Utilization</td><td>47%</td><td>65%</td><td>75%</td></tr>
+          <tr class="highlight"><td>Blended Rate/hr</td><td>₹750</td><td>₹850</td><td>₹950</td></tr>
+          <tr class="highlight"><td><strong>Gross Revenue</strong></td><td><strong>₹91.6L</strong></td><td><strong>₹1.49 cr</strong></td><td><strong>₹1.75 cr</strong></td></tr>
+          <tr><td>Rent</td><td>₹16.8L</td><td>₹17.3L</td><td>₹17.9L</td></tr>
+          <tr><td>Staff (incl. Director ₹75K)</td><td>₹17.6L</td><td>₹18.5L</td><td>₹19.5L</td></tr>
+          <tr><td>Utilities + Internet</td><td>₹3.4L</td><td>₹3.5L</td><td>₹3.6L</td></tr>
+          <tr><td>Software + Marketing + Misc</td><td>₹6.5L</td><td>₹7.0L</td><td>₹7.5L</td></tr>
+          <tr><td>Café COGS</td><td>₹10.9L</td><td>₹11.8L</td><td>₹12.5L</td></tr>
+          <tr><td>Insurance + Maintenance</td><td>₹2.2L</td><td>₹2.4L</td><td>₹2.5L</td></tr>
+          <tr class="total-row"><td><strong>Total Opex</strong></td><td><strong>₹57.4L</strong></td><td><strong>₹60.5L</strong></td><td><strong>₹63.5L</strong></td></tr>
+          <tr class="total-row"><td><strong>EBITDA</strong></td><td><strong>₹32L (35%)</strong></td><td><strong>₹87L (58%)</strong></td><td><strong>₹1.10 cr (63%)</strong></td></tr>
+        </tbody>
+      </table>
+      <div style="font-size: 11px; color: var(--text-muted);">Break-even at 18% utilization (~450 seat-hrs/month) · Month 1 only negative month (₹-0.10L) covered by working capital · Grand Final month shows dip from ₹2.5L prize payout</div>
+    </div>
+    <div style="padding: 0 52px 14px;"><div class="rule"></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════ SLIDE 8: INDIA SCALE ═══════════════════════════════ -->
+  <div class="slide cloth-texture" id="slide-8">
+    <div class="stripe-accent"></div>
+    <div class="slide-header">
+      <span class="slide-label">India Saturation Plan</span>
+      <span class="slide-num">08 / 15</span>
+    </div>
+    <div style="padding: 0 52px; margin-top: 8px;"><div class="rule"></div></div>
+    <div class="slide-body" style="flex-direction: row; gap: 28px; padding-top: 14px; padding-bottom: 14px;">
+      <div style="flex: 1.2;">
+        <div class="display h3" style="margin-bottom: 14px;"><span class="gold">43</span> Centres<br>in 5 Years</div>
+        <div class="scale-phase">
+          <div class="phase-year">Y1</div>
+          <div class="phase-desc"><strong>1 centre</strong> · Chennai Flagship (direct) · Proof of concept · VMS built</div>
+        </div>
+        <div class="scale-phase" style="border-color: #888;">
+          <div class="phase-year" style="color: var(--text-dim);">Y2</div>
+          <div class="phase-desc"><strong>4 centres</strong> · +3 franchise (Bangalore, Hyderabad, Mumbai) · VMS multi-tenant live</div>
+        </div>
+        <div class="scale-phase" style="border-color: #888;">
+          <div class="phase-year" style="color: var(--text-dim);">Y3</div>
+          <div class="phase-desc"><strong>12 centres</strong> · +8 franchise · Tier 2 entry (Pune, Kochi, Ahmedabad, Jaipur…)</div>
+        </div>
+        <div class="scale-phase" style="border-color: #888;">
+          <div class="phase-year" style="color: var(--text-dim);">Y4</div>
+          <div class="phase-desc"><strong>28 centres</strong> · +16 · 3 Mega Flagships operational (Chennai, Bangalore, Delhi NCR)</div>
+        </div>
+        <div class="scale-phase" style="border-color: var(--gold);">
+          <div class="phase-year">Y5</div>
+          <div class="phase-desc"><strong>43 centres</strong> · 7 Mega Flagships + 36 Boutiques · 26 cities covered</div>
+        </div>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 14px;">
+        <div style="font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold);">Network Economics at Year 5</div>
+        <div class="cols" style="gap: 12px;">
+          <div class="stat-block">
+            <div class="stat-num">₹83 cr</div>
+            <div class="stat-label">Network Revenue</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">₹33 cr</div>
+            <div class="stat-label">EBITDA</div>
+          </div>
+        </div>
+        <table class="data-table" style="font-size: 12px;">
+          <thead><tr><th>Metric</th><th>Y3</th><th>Y4</th><th>Y5</th></tr></thead>
+          <tbody>
+            <tr><td>Centres</td><td>12</td><td>28</td><td>43</td></tr>
+            <tr class="highlight"><td>Network Revenue</td><td>₹18 cr</td><td>₹42 cr</td><td>₹83 cr</td></tr>
+            <tr class="highlight"><td>EBITDA</td><td>₹6.5 cr</td><td>₹16 cr</td><td>₹33 cr</td></tr>
+            <tr><td>EBITDA Margin</td><td>36%</td><td>38%</td><td>40%</td></tr>
+          </tbody>
+        </table>
+        <div style="background: var(--bg2); border: 1px solid var(--border); padding: 14px 16px;">
+          <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Franchise Model</div>
+          <div style="font-size: 13px; color: var(--text-dim); line-height: 1.8;">
+            Royalty: <span class="gold font-bold" style="font-weight: 700;">6% of gross revenue</span><br>
+            Hardware: supplied at margin by RaceSims<br>
+            VMS: mandatory licence fee per centre<br>
+            AMC: mandatory maintenance contract
+          </div>
+        </div>
+        <div style="background: var(--gold-dim); border: 1px solid var(--gold); padding: 12px 16px; font-size: 13px; color: var(--text);">
+          <span style="font-weight: 700;">Asset-light after Chennai.</span> Franchise model means capital efficiency — franchisees fund their own rigs. RaceSims earns on royalty + hardware + software.
+        </div>
+      </div>
+    </div>
+    <div style="padding: 0 52px 14px;"><div class="rule"></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════ SLIDE 9: COACHING ACADEMY ═══════════════════════════════ -->
+  <div class="slide cloth-texture" id="slide-9">
+    <div class="stripe-accent"></div>
+    <div class="slide-header">
+      <span class="slide-label">Coaching & Engineering Academy</span>
+      <span class="slide-num">09 / 15</span>
+    </div>
+    <div style="padding: 0 52px; margin-top: 8px;"><div class="rule"></div></div>
+    <div class="slide-body" style="flex-direction: row; gap: 32px; padding-top: 14px; padding-bottom: 14px;">
+      <div style="flex: 1.2;">
+        <div style="margin-bottom: 14px;">
+          <div class="display h3" style="margin-bottom: 6px;">India's First<br><span class="gold">Sim Racing Certification</span></div>
+          <div class="body" style="font-size: 13px;">Creating a national pool of certified sim coaches and motorsport engineers — supplying our own franchise network while building the industry standard.</div>
+        </div>
+        <div class="cols" style="gap: 14px; margin-bottom: 14px;">
+          <div class="cert-card">
+            <div class="cert-badge">CDC</div>
+            <div style="font-family: 'Barlow Condensed'; font-size: 18px; font-weight: 700; margin-bottom: 6px;">Certified Driver Coach</div>
+            <div style="font-size: 12px; color: var(--text-dim); line-height: 1.7;">4-week intensive · Chennai HQ<br>3 cohorts/year · 10 candidates<br>₹75,000 per person<br><span style="color: var(--gold); font-weight: 700;">₹22.5L annual</span></div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-badge">CTE</div>
+            <div style="font-family: 'Barlow Condensed'; font-size: 18px; font-weight: 700; margin-bottom: 6px;">Certified Tuner Engineer</div>
+            <div style="font-size: 12px; color: var(--text-dim); line-height: 1.7;">6-week intensive · Chennai HQ<br>3 cohorts/year · 8 candidates<br>₹1,20,000 per person<br><span style="color: var(--gold); font-weight: 700;">₹28.8L annual</span></div>
+          </div>
+        </div>
+        <div style="background: var(--bg2); border: 1px solid var(--border); padding: 12px 16px;">
+          <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">+ Online Self-Paced</div>
+          <div style="font-size: 13px; color: var(--text-dim);">Online CDC ₹25K (60 enrollments) = ₹15L · Online CTE ₹35K (40 enrollments) = ₹14L · Recertification = ₹6L</div>
+        </div>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 14px;">
+        <div style="font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold);">Why This Matters Strategically</div>
+        <div class="moat-item" style="padding-top: 0;">
+          <div class="moat-num" style="font-size: 28px;">01</div>
+          <div>
+            <div class="moat-title">Franchises Need Our Certified People</div>
+            <div class="moat-body" style="font-size: 12px;">Every franchise centre needs a head coach + head engineer. Our certified pool fills those roles — driving demand for the programme at scale.</div>
+          </div>
+        </div>
+        <div class="moat-item">
+          <div class="moat-num" style="font-size: 28px;">02</div>
+          <div>
+            <div class="moat-title">Sets the Industry Standard</div>
+            <div class="moat-body" style="font-size: 12px;">"RaceSims Certified" becomes the credential employers, race teams, and OEMs hire against — like FIA licensing for sim racing.</div>
+          </div>
+        </div>
+        <div class="moat-item">
+          <div class="moat-num" style="font-size: 28px;">03</div>
+          <div>
+            <div class="moat-title">ARKA-Backed Curriculum Authority</div>
+            <div class="moat-body" style="font-size: 12px;">Our engineering certification is backed by the race engineer of a 130-title team. No competitor can match this credentials stack.</div>
+          </div>
+        </div>
+        <div class="cols" style="gap: 12px; margin-top: 4px;">
+          <div class="stat-block">
+            <div class="stat-num">₹86L</div>
+            <div class="stat-label">Y5 Revenue</div>
+            <div class="stat-sub">₹41L EBITDA · 47% margin</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">₹31L</div>
+            <div class="stat-label">Total Capex</div>
+            <div class="stat-sub">Lean — uses Chennai HQ facility</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 0 52px 14px;"><div class="rule"></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════ SLIDE 10: REVENUE STACK ═══════════════════════════════ -->
+  <div class="slide cloth-texture" id="slide-10">
+    <div class="stripe-accent"></div>
+    <div class="slide-header">
+      <span class="slide-label">Revenue Stack — Strategic Adjacencies</span>
+      <span class="slide-num">10 / 15</span>
+    </div>
+    <div style="padding: 0 52px; margin-top: 8px;"><div class="rule"></div></div>
+    <div class="slide-body" style="gap: 10px; padding-top: 10px; padding-bottom: 10px; flex-direction: row; flex-wrap: wrap; align-items: stretch;">
+      <!-- AMC -->
+      <div style="flex: 1; min-width: 280px; background: var(--bg2); border: 1px solid var(--border); border-top: 2px solid var(--gold); padding: 14px 16px;">
+        <div style="font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;">Annual Maintenance Contracts</div>
+        <table style="width:100%; border-collapse:collapse; font-size: 11px;">
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">186 franchise rigs × ₹15K</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹27.9L</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">300 premium home × ₹12K</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹36L</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">500 standard home × ₹6K</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹30L</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">300 on-demand calls × ₹3.5K</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹10.5L</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0;">Upgrade upsells via visits</td><td style="text-align:right; color:var(--text); padding: 3px 0;">₹15L</td></tr>
+        </table>
+        <div style="margin-top: 8px; display:flex; justify-content:space-between; border-top:1px solid var(--border); padding-top: 6px;">
+          <span style="font-family:'Barlow Condensed'; font-size:18px; font-weight:800; color:var(--gold);">₹1.19 cr</span>
+          <span style="font-size:11px; color:var(--text-muted); align-self:flex-end;">₹78L EBITDA · 65%</span>
+        </div>
+        <div style="font-size:10px; color:var(--text-muted); margin-top:4px;">186 rigs = conservative (43 centres × 6 = 258 possible — partial uptake modelled)</div>
+      </div>
+      <!-- Merch -->
+      <div style="flex: 1; min-width: 280px; background: var(--bg2); border: 1px solid var(--border); border-top: 2px solid var(--gold); padding: 14px 16px;">
+        <div style="font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;">Merchandise</div>
+        <table style="width:100%; border-collapse:collapse; font-size: 11px;">
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">7 Mega corners · 1,200 txn × ₹1,800 avg</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹1.51 cr</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">36 Boutique corners · 400 txn × ₹900 avg</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹1.30 cr</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">Online D2C</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹80L</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">Championship / event drops</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹25L</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0;">B2B / wholesale</td><td style="text-align:right; color:var(--text); padding: 3px 0;">₹30L</td></tr>
+        </table>
+        <div style="margin-top: 8px; display:flex; justify-content:space-between; border-top:1px solid var(--border); padding-top: 6px;">
+          <span style="font-family:'Barlow Condensed'; font-size:18px; font-weight:800; color:var(--gold);">₹4.16 cr</span>
+          <span style="font-size:11px; color:var(--text-muted); align-self:flex-end;">₹1.45 cr EBITDA · 35%</span>
+        </div>
+        <div style="font-size:10px; color:var(--text-muted); margin-top:4px;">₹75L capex (design, initial inventory, retail fixtures × 7 Megas, e-comm)</div>
+      </div>
+      <!-- Coaching — FEATURED -->
+      <div style="flex: 1; min-width: 280px; background: rgba(201,168,76,0.08); border: 1px solid var(--gold); border-top: 2px solid var(--gold-light); padding: 14px 16px;">
+        <div style="font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 6px;">Coaching & Engineering Academy ★</div>
+        <table style="width:100%; border-collapse:collapse; font-size: 11px;">
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">CDC in-person · 3 cohorts × 10 × ₹75K</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹22.5L</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">CTE in-person · 3 cohorts × 8 × ₹1.2L</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹28.8L</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">Online CDC · 60 enroll × ₹25K</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹15L</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">Online CTE · 40 enroll × ₹35K</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹14L</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0;">Annual recertification</td><td style="text-align:right; color:var(--text); padding: 3px 0;">₹6L</td></tr>
+        </table>
+        <div style="margin-top: 8px; display:flex; justify-content:space-between; border-top:1px solid var(--border); padding-top: 6px;">
+          <span style="font-family:'Barlow Condensed'; font-size:18px; font-weight:800; color:var(--gold-light);">₹86.3L</span>
+          <span style="font-size:11px; color:var(--text-muted); align-self:flex-end;">₹41L EBITDA · 47%</span>
+        </div>
+        <div style="font-size:10px; color:var(--text-muted); margin-top:4px;">₹31L capex · uses Chennai HQ facility · scales with franchise demand</div>
+      </div>
+      <!-- College Curriculum — downplayed -->
+      <div style="flex: 1; min-width: 280px; background: var(--bg2); border: 1px solid var(--border); border-top: 2px solid rgba(201,168,76,0.3); padding: 14px 16px; opacity: 0.75;">
+        <div style="font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;">College Curriculum Licensing</div>
+        <table style="width:100%; border-collapse:collapse; font-size: 11px;">
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">4 engineering colleges × ₹4L/sem</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹16L</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">8 BAJA/SUPRA teams × ₹2.5L</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹20L</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">2 sports mgmt modules × ₹2L</td><td style="text-align:right; color:var(--text); padding: 3px 0; border-bottom:1px solid rgba(255,255,255,0.04);">₹4L</td></tr>
+          <tr><td style="color:var(--text-dim); padding: 3px 0;">Guest lecture circuit</td><td style="text-align:right; color:var(--text); padding: 3px 0;">₹4L</td></tr>
+        </table>
+        <div style="margin-top: 8px; display:flex; justify-content:space-between; border-top:1px solid var(--border); padding-top: 6px;">
+          <span style="font-family:'Barlow Condensed'; font-size:18px; font-weight:800; color:var(--text-dim);">₹44L</span>
+          <span style="font-size:11px; color:var(--text-muted); align-self:flex-end;">₹28L EBITDA · 62%</span>
+        </div>
+        <div style="font-size:10px; color:var(--text-muted); margin-top:4px;">₹10L capex · primarily for brand credibility + talent pipeline, not revenue play</div>
+      </div>
+      <!-- Total bar -->
+      <div style="width: 100%; display:flex; align-items:center; gap: 20px; padding: 10px 16px; background: var(--gold-dim); border: 1px solid var(--gold);">
+        <div style="font-weight:700; font-size:13px;">4-Stream Total</div>
+        <div style="font-family:'Barlow Condensed'; font-size:24px; font-weight:800; color:var(--gold);">₹6.46 cr revenue</div>
+        <div style="font-size:13px; color:var(--text);">₹2.92 cr EBITDA</div>
+        <div style="font-size:12px; color:var(--text-muted);">45% blended margin</div>
+        <div style="margin-left:auto; font-size:12px; color:var(--text-dim);">Total incremental capex: <span style="color:var(--gold); font-weight:700;">₹1.53 cr</span> · Funded from ops cash flow Y2 onwards</div>
+      </div>
+    </div>
+    <div style="padding: 0 52px 14px;"><div class="rule"></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════ SLIDE 11: 5-YEAR P&L ═══════════════════════════════ -->
+  <div class="slide cloth-texture" id="slide-11">
+    <div class="stripe-accent"></div>
+    <div class="slide-header">
+      <span class="slide-label">5-Year Consolidated P&L</span>
+      <span class="slide-num">11 / 15</span>
+    </div>
+    <div style="padding: 0 52px; margin-top: 8px;"><div class="rule"></div></div>
+    <div class="slide-body" style="gap: 18px; padding-top: 14px; padding-bottom: 14px;">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Line Item</th>
+            <th>Year 1</th>
+            <th>Year 2</th>
+            <th>Year 3</th>
+            <th>Year 4</th>
+            <th>Year 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Centres Open</td><td>1</td><td>4</td><td>12</td><td>28</td><td>43</td></tr>
+          <tr class="highlight"><td>Centre Revenue</td><td>₹92L</td><td>₹5.2 cr</td><td>₹18 cr</td><td>₹42 cr</td><td>₹83 cr</td></tr>
+          <tr><td>Adjacency Revenue</td><td>—</td><td>₹30L</td><td>₹1.5 cr</td><td>₹4.0 cr</td><td>₹6.46 cr</td></tr>
+          <tr class="highlight"><td><strong>Total Revenue</strong></td><td><strong>₹92L</strong></td><td><strong>₹5.5 cr</strong></td><td><strong>₹19.5 cr</strong></td><td><strong>₹46 cr</strong></td><td><strong>₹89.5 cr</strong></td></tr>
+          <tr class="highlight"><td><strong>EBITDA</strong></td><td><strong>₹32L</strong></td><td><strong>₹1.65 cr</strong></td><td><strong>₹7.2 cr</strong></td><td><strong>₹17.5 cr</strong></td><td><strong>₹35.9 cr</strong></td></tr>
+          <tr><td>EBITDA Margin</td><td>35%</td><td>30%</td><td>37%</td><td>38%</td><td>40%</td></tr>
+          <tr><td>Capex Deployed</td><td>₹68L</td><td>₹10 cr</td><td>₹28 cr</td><td>₹55 cr</td><td>₹90 cr</td></tr>
+        </tbody>
+      </table>
+      <div class="cols" style="gap: 16px;">
+        <div style="background: var(--bg2); border: 1px solid var(--border); padding: 14px 16px; flex: 1;">
+          <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">Y2 Margin Dip Note</div>
+          <div style="font-size: 13px; color: var(--text-dim);">Y2 margin compression (35%→30%) reflects franchise ramp-up lag + VMS multi-tenant development cost amortizing. Normalises from Y3.</div>
+        </div>
+        <div style="background: var(--bg2); border: 1px solid var(--border); padding: 14px 16px; flex: 1;">
+          <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">Capital Efficiency</div>
+          <div style="font-size: 13px; color: var(--text-dim);">Asset-light franchise model means franchisees fund their own hardware from Y2. RaceSims earns royalty + software + AMC without deploying centre capex.</div>
+        </div>
+        <div style="background: var(--gold-dim); border: 1px solid var(--gold); padding: 14px 16px; flex: 1;">
+          <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">VMS SaaS Upside (not modelled)</div>
+          <div style="font-size: 13px; color: var(--text-dim);">If VMS licensed to third-party sim centres globally: <span style="color: var(--gold); font-weight: 700;">₹8–15 cr additional Y5 revenue</span>. Not in base case.</div>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 0 52px 14px;"><div class="rule"></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════ SLIDE 12: VALUATION ═══════════════════════════════ -->
+  <div class="slide cloth-texture" id="slide-12">
+    <div class="stripe-accent"></div>
+    <div class="slide-header">
+      <span class="slide-label">Valuation Framework</span>
+      <span class="slide-num">12 / 15</span>
+    </div>
+    <div style="padding: 0 52px; margin-top: 8px;"><div class="rule"></div></div>
+    <div class="slide-body" style="gap: 20px; padding-top: 14px; padding-bottom: 14px;">
+      <div class="body" style="font-size: 13px;">Comp set: F1 Arcade (branded sim entertainment network), Topgolf (experiential venue network), sim racing SaaS platforms. All trade 30–45× EBITDA at Series B+.</div>
+      <div class="cols" style="gap: 16px;">
+        <div class="val-scenario">
+          <div class="val-label">Base Case</div>
+          <div class="val-num">₹1,080 cr<br>–<br>₹1,440 cr</div>
+          <div class="val-sub">43 centres · ₹35.9 cr EBITDA<br>30–40× multiple · Year 5</div>
+        </div>
+        <div class="val-scenario featured">
+          <div class="val-label">With VMS SaaS</div>
+          <div class="val-num">₹1,350 cr<br>–<br>₹1,800 cr</div>
+          <div class="val-sub">+₹8–15 cr SaaS EBITDA<br>35–45× blended multiple · Y5</div>
+        </div>
+        <div class="val-scenario">
+          <div class="val-label">Full Upside</div>
+          <div class="val-num">₹1,900 cr<br>–<br>₹2,500 cr</div>
+          <div class="val-sub">+B2B Corporate + Hardware Export<br>₹55+ cr EBITDA · global SaaS re-rating</div>
+        </div>
+      </div>
+      <div style="background: var(--bg2); border: 1px solid var(--border); padding: 16px 20px;">
+        <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px;">What moves the multiple up</div>
+        <div class="cols" style="gap: 20px;">
+          <div style="font-size: 13px; color: var(--text-dim); line-height: 1.7;">
+            ▸ VMS becomes a SaaS product (re-rated as tech company)<br>
+            ▸ ARKA exclusivity formalized (brand moat becomes contractual)
+          </div>
+          <div style="font-size: 13px; color: var(--text-dim); line-height: 1.7;">
+            ▸ Hardware export to UAE / Southeast Asia begins<br>
+            ▸ B2B corporate driver training (OEM + insurance + fleet)
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; padding: 10px 0;">
+        <div style="font-family: 'Barlow Condensed'; font-size: 15px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted);">Seed stage entry · Chennai proof point · Y2 institutional raise</div>
+      </div>
+    </div>
+    <div style="padding: 0 52px 14px;"><div class="rule"></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════ SLIDE 13: TEAM ═══════════════════════════════ -->
+  <div class="slide cloth-texture" id="slide-13">
+    <div class="stripe-accent"></div>
+    <div class="slide-header">
+      <span class="slide-label">The Team</span>
+      <span class="slide-num">13 / 15</span>
+    </div>
+    <div style="padding: 0 52px; margin-top: 8px;"><div class="rule"></div></div>
+    <div class="slide-body" style="gap: 12px; padding-top: 12px; padding-bottom: 12px;">
+      <!-- Row 1: Core leadership -->
+      <div style="display:flex; gap:16px;">
+        <div class="team-card" style="flex: 1.1;">
+          <div class="team-name">Thambu</div>
+          <div class="team-title">Founder & Director — RaceSims Solutions Pvt Ltd</div>
+          <div class="team-cred">Active Race Engineer · ARKA Motorsports (India's most titled team)</div>
+          <div class="team-cred">Founded RaceSims — hardware design, simulator R&D, national dealer network</div>
+          <div class="team-cred">Rig manufacturer with existing B2C + B2B distribution across India</div>
+          <div style="margin-top: 10px; padding: 8px 12px; background: var(--gold-dim); border: 1px solid var(--border); font-size: 11px; color: var(--text-dim);">
+            Not a "tech founder building a racing product" — an <span style="color: var(--gold); font-weight: 700;">actual racing professional</span> building the infrastructure his sport needs.
+          </div>
+        </div>
+        <div class="team-card" style="flex: 1.1;">
+          <div class="team-name" style="font-size: 22px;">Mr. N. Leelakrishnan</div>
+          <div class="team-title">Strategic Partner — ARKA Motorsports Founder</div>
+          <div class="team-cred">7-time National Rally Champion · Multiple National Racing Champion</div>
+          <div class="team-cred">35+ years in Indian motorsport · ARKA Motorsports: 130+ titles since 1987</div>
+          <div class="team-cred">Design mentor on next-gen rig · endorses Rally School curriculum</div>
+          <div style="margin-top: 10px; padding: 8px 12px; background: var(--gold-dim); border: 1px solid var(--border); font-size: 11px; color: var(--text-dim);">
+            <span style="color: var(--gold); font-weight: 700;">"Little or no introduction needed"</span> — ARKA Motorsports official site
+          </div>
+        </div>
+        <div class="team-card" style="flex: 0.8;">
+          <div class="team-name" style="font-size: 20px;">Abdul</div>
+          <div class="team-title">Field Operations</div>
+          <div class="team-cred">Ex-ARKA / Red Rooster Performance</div>
+          <div class="team-cred">Field installer — venue setup + commissioning</div>
+          <div style="margin-top: 10px;">
+            <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;">Hiring Next</div>
+            <div style="font-size: 11px; color: var(--text-dim); line-height: 1.7;">Centre Manager<br>Sim Coach / Technical<br>Front Desk + Barista<br>Junior VMS Dev</div>
+          </div>
+        </div>
+      </div>
+      <!-- Row 2: Training Faculty -->
+      <div style="background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--gold); padding: 12px 16px;">
+        <div style="font-family: 'Barlow Condensed'; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px;">Training Faculty — Certified Driver-Coaches</div>
+        <div style="display:flex; gap: 16px;">
+          <div style="flex:1; padding: 10px 14px; background: var(--bg3); border: 1px solid var(--border);">
+            <div style="font-family:'Barlow Condensed'; font-size:18px; font-weight:800; text-transform:uppercase;">Karna Kadur</div>
+            <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin: 3px 0 6px;">Circuit & Rally</div>
+            <div style="font-size: 11px; color: var(--text-dim); line-height: 1.6;">Multiple INRC Champion · International rally experience · Škoda India Rally Team</div>
+          </div>
+          <div style="flex:1; padding: 10px 14px; background: var(--bg3); border: 1px solid var(--border);">
+            <div style="font-family:'Barlow Condensed'; font-size:18px; font-weight:800; text-transform:uppercase;">Amit</div>
+            <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin: 3px 0 6px;">Circuit Racing</div>
+            <div style="font-size: 11px; color: var(--text-dim); line-height: 1.6;">Indian motorsport driver · Coaching programme faculty</div>
+          </div>
+          <div style="flex:1; padding: 10px 14px; background: var(--bg3); border: 1px solid var(--border);">
+            <div style="font-family:'Barlow Condensed'; font-size:18px; font-weight:800; text-transform:uppercase;">Arjun Narendran</div>
+            <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin: 3px 0 6px;">Circuit Racing</div>
+            <div style="font-size: 11px; color: var(--text-dim); line-height: 1.6;">Indian motorsport driver · Sim-to-real coaching faculty</div>
+          </div>
+          <div style="flex:1; padding: 10px 14px; background: var(--gold-dim); border: 1px solid var(--border); display:flex; align-items:center; justify-content:center; text-align:center;">
+            <div>
+              <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:4px;">Why this matters</div>
+              <div style="font-size:12px; color:var(--text-dim); line-height:1.6;">Actual racing drivers coaching on the same rigs they train on. <span style="color:var(--gold); font-weight:700;">No competitor in India can offer this faculty.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 0 52px 14px;"><div class="rule"></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════ SLIDE 14: THE ASK ═══════════════════════════════ -->
+  <div class="slide cloth-texture" id="slide-14">
+    <div class="stripe-accent"></div>
+    <div class="slide-header">
+      <span class="slide-label">The Ask</span>
+      <span class="slide-num">14 / 15</span>
+    </div>
+    <div style="padding: 0 52px; margin-top: 8px;"><div class="rule"></div></div>
+    <div class="slide-body" style="gap: 14px; padding-top: 14px; padding-bottom: 14px;">
+      <!-- Self-fund banner -->
+      <div style="background: var(--gold-dim); border: 1px solid var(--gold); padding: 12px 20px; display:flex; align-items:center; gap: 20px;">
+        <div style="font-family:'Barlow Condensed'; font-size:28px; font-weight:900; color:var(--gold); white-space:nowrap;">Chennai Pilot</div>
+        <div style="width:1px; height:36px; background:var(--border);"></div>
+        <div>
+          <div style="font-weight:700; font-size:14px; color:var(--text);">Self-funded by founders · ₹68 lakhs · No external capital required</div>
+          <div style="font-size:12px; color:var(--text-dim); margin-top:2px;">We build the proof ourselves. When we walk in to raise, every number on this deck is already validated.</div>
+        </div>
+        <div style="margin-left:auto; text-align:right;">
+          <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em;">Operational by</div>
+          <div style="font-family:'Barlow Condensed'; font-size:22px; font-weight:800; color:var(--gold);">Q4 2026</div>
+        </div>
+      </div>
+      <!-- Two rounds -->
+      <div style="display:flex; gap:16px;">
+        <!-- Series A -->
+        <div style="flex:1; background:var(--bg2); border:1px solid var(--border); border-top:3px solid var(--gold); padding:16px 18px;">
+          <div style="font-size:11px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin-bottom:6px;">Series A — Year 2</div>
+          <div style="font-family:'Barlow Condensed'; font-size:38px; font-weight:900; color:var(--gold); line-height:1; margin-bottom:10px;">₹12–15 cr</div>
+          <div style="font-size:12px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">Use of funds</div>
+          <div class="ask-block" style="margin-bottom:8px;">
+            <div class="ask-label">2–3 Additional Direct-Owned Centres</div>
+            <div class="ask-amount" style="font-size:24px;">₹8–9 cr</div>
+            <div style="font-size:12px; color:var(--text-dim);">Bangalore, Hyderabad, Mumbai — same unit economics as Chennai, now proven</div>
+          </div>
+          <div class="ask-block" style="margin-bottom:0;">
+            <div class="ask-label">Franchise Support Infrastructure</div>
+            <div class="ask-amount" style="font-size:24px;">₹4–5 cr</div>
+            <div style="font-size:12px; color:var(--text-dim);">VMS v2 multi-tenant · franchise ops team · ARKA exclusivity contract · coaching academy launch</div>
+          </div>
+          <div style="margin-top:10px; font-size:11px; color:var(--text-muted);">Entry point: after Chennai proves ~₹32L EBITDA Y1 · 17-month payback validated</div>
+        </div>
+        <!-- Series B -->
+        <div style="flex:1; background:var(--bg2); border:1px solid var(--border); border-top:3px solid rgba(201,168,76,0.4); padding:16px 18px;">
+          <div style="font-size:11px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-muted); margin-bottom:6px;">Series B — Year 3–4</div>
+          <div style="font-family:'Barlow Condensed'; font-size:38px; font-weight:900; color:var(--text-dim); line-height:1; margin-bottom:10px;">₹50 cr</div>
+          <div style="font-size:12px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">Use of funds</div>
+          <div class="ask-block" style="margin-bottom:8px;">
+            <div class="ask-label">Mega Flagship Buildouts (5 cities)</div>
+            <div class="ask-amount" style="font-size:24px; color:var(--text-dim);">₹35 cr</div>
+            <div style="font-size:12px; color:var(--text-dim);">Delhi NCR, Pune, Kochi, Ahmedabad, Kolkata — 3,000–4,000 sqft each with championship infrastructure</div>
+          </div>
+          <div class="ask-block" style="margin-bottom:0;">
+            <div class="ask-label">Hardware Export + VMS SaaS Launch</div>
+            <div class="ask-amount" style="font-size:24px; color:var(--text-dim);">₹15 cr</div>
+            <div style="font-size:12px; color:var(--text-dim);">UAE + SEA distribution · VMS licensed to third-party centres globally</div>
+          </div>
+          <div style="margin-top:10px; font-size:11px; color:var(--text-muted);">Entry point: after 12+ centres live · network EBITDA ₹7+ cr · Series A returns visible</div>
+        </div>
+        <!-- What you get -->
+        <div style="flex:0.7; display:flex; flex-direction:column; gap:10px;">
+          <div style="font-size:11px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold);">Series A Return Scenario</div>
+          <div class="stat-block">
+            <div class="stat-num" style="font-size:32px;">3.5–5×</div>
+            <div class="stat-label">Series A Multiple</div>
+            <div class="stat-sub">Entry at Y2 · exit at Series B or Y5 strategic</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num" style="font-size:32px;">₹1,100 cr+</div>
+            <div class="stat-label">Y5 Valuation (base)</div>
+            <div class="stat-sub">43 centres · ₹36 cr EBITDA · 30× floor</div>
+          </div>
+          <div style="background: var(--gold-dim); border:1px solid var(--gold); padding:10px 12px; font-size:11px; color:var(--text-dim);">
+            <span style="color:var(--gold); font-weight:700;">No pilot risk.</span> Chennai is already funded and building. Series A buys into a live, cash-flowing business.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 0 52px 14px;"><div class="rule"></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════ SLIDE 15: APPENDIX ═══════════════════════════════ -->
+  <div class="slide cloth-texture" id="slide-15">
+    <div class="stripe-accent"></div>
+    <div class="slide-header">
+      <span class="slide-label">Future Horizons — Phase 3 onwards</span>
+      <span class="slide-num">15 / 15</span>
+    </div>
+    <div style="padding: 0 52px; margin-top: 8px;"><div class="rule"></div></div>
+    <div class="slide-body" style="gap: 14px; padding-top: 14px; padding-bottom: 14px;">
+      <div class="body" style="font-size: 13px;">These streams are identified, modelled, and ready to activate — but intentionally deferred to keep the seed-stage narrative focused. They add up to <span style="color: var(--gold); font-weight: 700;">₹16 cr+ additional Y5 revenue</span> when activated.</div>
+      <div class="cols" style="gap: 20px; align-items: flex-start;">
+        <div style="flex: 1;">
+          <div style="font-family: 'Barlow Condensed'; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px;">Junior Motorsport Academy</div>
+          <div class="future-item"><div class="future-arrow">▸</div><div style="font-size: 13px; color: var(--text-dim);">Kids 8–17 · Cadets / Juniors / Cadets Pro programmes</div></div>
+          <div class="future-item"><div class="future-arrow">▸</div><div style="font-size: 13px; color: var(--text-dim);">₹50K–₹1L/year per student · run at Mega Flagships only</div></div>
+          <div class="future-item"><div class="future-arrow">▸</div><div style="font-size: 13px; color: var(--text-dim);">Y5: ₹2.73 cr revenue · ₹2.17 cr EBITDA (80% margin)</div></div>
+          <div class="future-item" style="border: none;"><div class="future-arrow">▸</div><div style="font-size: 13px; color: var(--text-dim);">10-year customer LTV ₹3–5L per graduate</div></div>
+        </div>
+        <div style="flex: 1;">
+          <div style="font-family: 'Barlow Condensed'; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px;">Karting Academy</div>
+          <div class="future-item"><div class="future-arrow">▸</div><div style="font-size: 13px; color: var(--text-dim);">Stage 1 (Y3–4): partner karting tracks in 4 cities — 50/50 revenue split</div></div>
+          <div class="future-item"><div class="future-arrow">▸</div><div style="font-size: 13px; color: var(--text-dim);">Stage 2 (Y4–5): 2 RaceSims-owned karting venues (Chennai + Bangalore)</div></div>
+          <div class="future-item"><div class="future-arrow">▸</div><div style="font-size: 13px; color: var(--text-dim);">Y5: ₹6.32 cr revenue · ₹2.40 cr EBITDA · ₹7.4 cr capex</div></div>
+          <div class="future-item" style="border: none;"><div class="future-arrow">▸</div><div style="font-size: 13px; color: var(--text-dim);">Completes the full Sim → Karting → Championship → Real Drive pathway</div></div>
+        </div>
+        <div style="flex: 1;">
+          <div style="font-family: 'Barlow Condensed'; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px;">Global Expansion</div>
+          <div class="future-item"><div class="future-arrow">▸</div><div style="font-size: 13px; color: var(--text-dim);">Hardware export: UAE, Southeast Asia, Australia — ₹12–20 cr Y5</div></div>
+          <div class="future-item"><div class="future-arrow">▸</div><div style="font-size: 13px; color: var(--text-dim);">VMS SaaS to third-party venues globally — ₹8–15 cr Y5</div></div>
+          <div class="future-item"><div class="future-arrow">▸</div><div style="font-size: 13px; color: var(--text-dim);">B2B Corporate Driver Training (OEM, insurance, fleet, defence) — ₹10–18 cr</div></div>
+          <div class="future-item" style="border: none;"><div class="future-arrow">▸</div><div style="font-size: 13px; color: var(--text-dim);">Esports + Content as media property — ₹5–8 cr</div></div>
+        </div>
+      </div>
+      <div style="background: var(--gold-dim); border: 1px solid var(--gold); padding: 14px 20px; text-align: center;">
+        <div style="font-family: 'Barlow Condensed'; font-size: 20px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em;">The full potential is ₹2,000–2,500 cr. The seed ask is ₹68 lakhs.</div>
+        <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Everything on this slide is optionality — available when the proof point is ready. It doesn't affect the base case return.</div>
+      </div>
+    </div>
+    <div style="padding: 0 52px 14px;"><div class="rule"></div></div>
+  </div>
+
+</div><!-- /.deck -->
+
+<!-- Navigation -->
+<div class="nav-arrows">
+  <div class="nav-btn" onclick="prevSlide()">‹</div>
+  <div class="nav-btn" onclick="nextSlide()">›</div>
+</div>
+<div class="nav" id="nav-dots"></div>
+
+<script>
+  const totalSlides = 15;
+  let current = 1;
+
+  function buildDots() {
+    const nav = document.getElementById('nav-dots');
+    for (let i = 1; i <= totalSlides; i++) {
+      const d = document.createElement('div');
+      d.className = 'nav-dot' + (i === 1 ? ' active' : '');
+      d.onclick = () => goTo(i);
+      nav.appendChild(d);
+    }
+  }
+
+  function goTo(n) {
+    document.getElementById('slide-' + current).classList.remove('active');
+    document.querySelectorAll('.nav-dot')[current - 1].classList.remove('active');
+    current = Math.max(1, Math.min(totalSlides, n));
+    document.getElementById('slide-' + current).classList.add('active');
+    document.querySelectorAll('.nav-dot')[current - 1].classList.add('active');
+  }
+
+  function nextSlide() { goTo(current + 1); }
+  function prevSlide() { goTo(current - 1); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') nextSlide();
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') prevSlide();
+  });
+
+  // Scale to viewport
+  function scaleToViewport() {
+    const deck = document.getElementById('deck');
+    const scaleX = window.innerWidth / 1280;
+    const scaleY = window.innerHeight / 720;
+    const scale = Math.min(scaleX, scaleY) * 0.96;
+    deck.style.transform = `scale(${scale})`;
+    deck.style.transformOrigin = 'center center';
+  }
+
+  window.addEventListener('resize', scaleToViewport);
+  buildDots();
+  scaleToViewport();
+</script>
+</body>
+</html>
