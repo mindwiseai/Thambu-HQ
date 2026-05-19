@@ -9,7 +9,7 @@ updated: 2026-05-18
 
 # RaceSims · Chennai (Flagship Centre)
 
-The direct-operated premium sim racing centre opening in Chennai under [[racesims-company|RaceSims Solutions Pvt Ltd]]. **Centre name on the door: "RaceSims · Chennai"** (low-friction, casual-funnel-friendly). **The Motorsport Academy** lives inside as the structured upsell programme. **Total Y1 investment ₹95L (₹72L hard capex + ₹22L working capital)**, monthly opex ₹4.34L (Y1), **Y1 EBITDA ₹13.7L, 5-year cumulative EBITDA ₹4.91cr, 26-month payback, 5.2× capital multiple, Y5 EBITDA margin 67%**. Serves as the proof point and franchise prototype for the [[racesims-india-saturation-plan|43-centre India saturation plan]]. Latest v2 proposal: [[2026-05-18-chennai-flagship-proposal-v2]]. Brand architecture: [[racesims-naming-architecture]].
+The direct-operated premium sim racing centre opening in Chennai under [[racesims-company|RaceSims Solutions Pvt Ltd]]. **Centre name on the door: "RaceSims · Chennai"** (low-friction, casual-funnel-friendly). **The Motorsport Academy** lives inside as the structured upsell programme. **Total Y1 investment ₹95L (₹72L hard capex + ₹22L working capital)**, monthly opex ₹4.34L (Y1), **Y1 EBITDA ₹15.1L, 5-year cumulative EBITDA ₹5.16cr, 25-month payback, 5.4× capital multiple, Y5 EBITDA margin 68%**. Includes Track Day Programmes revenue stream (Chennai-specific HNI supercar coaching). Serves as the proof point and franchise prototype for the [[racesims-india-saturation-plan|43-centre India saturation plan]]. Latest v2 proposal: [[2026-05-18-chennai-flagship-proposal-v2]]. Brand architecture: [[racesims-naming-architecture]].
 
 ## Naming architecture (locked May 18)
 
@@ -159,18 +159,21 @@ Corporate team-building, coaching/race academy, schools/colleges (esports clubs)
 - **Championship entries** ~5% (from 2027)
 - **Merchandise** ~6-9% (realistic 3-4% walk-in attach + event-day spikes)
 
-## 5-year P&L (base case, ₹L) — v3.1 LOCKED (₹1.75L rent)
+## 5-year P&L (base case, ₹L) — v3.2 LOCKED (₹1.75L rent + Track Day Programmes)
 
 | | Y1 | Y2 | Y3 | Y4 | Y5 | **5Y Total** |
 |---|---|---|---|---|---|---|
-| Revenue | 67.4 | 124.6 | 175.1 | 215.9 | 251.7 | **834.7** |
-| Opex (incl. café/merch COGS) | 53.7 | 62.1 | 69.2 | 75.9 | 82.6 | **343.5** |
-| **EBITDA** | **13.7** | **62.5** | **105.9** | **140.0** | **169.1** | **491.2** |
-| EBITDA margin | 20% | 50% | 60% | 65% | 67% | 59% |
+| Rig revenue | 59.1 | 105.1 | 141.9 | 170.8 | 196.6 | 673.5 |
+| Ancillary (café, events, Academy, Real Drives, merch) | 8.3 | 19.5 | 33.2 | 45.1 | 55.1 | 161.2 |
+| Track Day Programmes (NEW · supercar coaching) | 1.5 | 3.0 | 5.0 | 7.0 | 10.0 | 26.5 |
+| **Total Revenue** | **68.9** | **127.6** | **180.1** | **222.9** | **261.7** | **861.2** |
+| Opex (incl. café/merch/Track Day COGS) | 53.8 | 62.3 | 69.5 | 76.3 | 83.2 | **345.1** |
+| **EBITDA** | **15.1** | **65.3** | **110.6** | **146.6** | **178.5** | **516.1** |
+| EBITDA margin | 22% | 51% | 61% | 66% | 68% | 60% |
 | Depreciation | 10.9 | 10.9 | 10.9 | 10.9 | 10.9 | 54.3 |
-| PBT | 2.8 | 51.6 | 95.0 | 129.1 | 158.2 | 436.7 |
-| Tax @ 25% | 0.7 | 12.9 | 23.7 | 32.3 | 39.5 | 109.1 |
-| **PAT** | **2.1** | **38.7** | **71.2** | **96.8** | **118.7** | **327.6** |
+| PBT | 4.2 | 54.4 | 99.7 | 135.7 | 167.6 | 461.6 |
+| Tax @ 25% | 1.1 | 13.6 | 24.9 | 33.9 | 41.9 | 115.4 |
+| **PAT** | **3.2** | **40.8** | **74.8** | **101.8** | **125.7** | **346.2** |
 
 ### Opex line detail (Y1 → Y5, ₹L)
 
@@ -188,39 +191,39 @@ Corporate team-building, coaching/race academy, schools/colleges (esports clubs)
 | Software, internet, cleaning, misc | 1.3 | 1.4 | 1.5 | 1.7 | 1.8 | 7.7 |
 | **Total opex** | **53.7** | **62.1** | **69.2** | **75.9** | **82.6** | **343.5** |
 
-## Headline metrics (v3.1 LOCKED)
+## Headline metrics (v3.2 LOCKED)
 
 | Metric | Value |
 |---|---|
 | Y1 cash need | **₹95L** (₹72L capex + ₹22L WC) |
-| Y3 EBITDA | ₹1.06 cr |
-| Y5 EBITDA | ₹1.69 cr |
-| 5Y cumulative EBITDA | **₹4.91 cr** |
-| 5Y cumulative PAT | ₹3.28 cr |
-| EBITDA on capital multiple | **5.2×** |
-| Payback period | **~26 months** (early Q1 of Y3) |
-| Y5 EBITDA margin | **67%** |
-| Break-even utilisation | **~24% blended** (Y1 plan 30% → 6-pt cushion) |
+| Y3 EBITDA | ₹1.11 cr |
+| Y5 EBITDA | ₹1.79 cr |
+| 5Y cumulative EBITDA | **₹5.16 cr** |
+| 5Y cumulative PAT | ₹3.46 cr |
+| EBITDA on capital multiple | **5.4×** |
+| Payback period | **~25 months** (Q1 of Y3) |
+| Y5 EBITDA margin | **68%** |
+| Break-even utilisation | **~23% blended** (Y1 plan 30% → 7-pt cushion) |
 
 ## Cumulative cash position (₹L)
 
 | Year | EBITDA | Cumulative | Net of ₹95L |
 |---|---|---|---|
-| Y1 | 13.7 | 13.7 | −81.3 |
-| Y2 | 62.5 | **76.2** | −18.8 |
-| Y3 | 105.9 | 182.1 | **+87.1** |
-| Y4 | 140.0 | 322.1 | +227.1 |
-| Y5 | 169.1 | 491.2 | +396.2 |
+| Y1 | 15.1 | 15.1 | −79.9 |
+| Y2 | 65.3 | **80.4** | −14.6 |
+| Y3 | 110.6 | 191.0 | **+96.0** |
+| Y4 | 146.6 | 337.6 | +242.6 |
+| Y5 | 178.5 | 516.1 | +421.1 |
 
-Capital fully returned by early Q1 of Y3. Pure compounding thereafter.
+Capital fully returned by Q1 of Y3. Pure compounding thereafter.
 
 ## Sensitivity scenarios
 
 | Scenario (Y5 util) | 5Y EBITDA | Payback |
 |---|---|---|
-| Conservative · 62% | ₹4.2 cr | ~30 mo |
-| **Base case · 68%** | **₹4.91 cr** | **~26 mo** |
-| Aggressive · 72% | ₹5.30 cr | ~24 mo |
+| Conservative · 62% | ₹4.4 cr | ~28 mo |
+| **Base case · 68%** | **₹5.16 cr** | **~25 mo** |
+| Aggressive · 72% | ₹5.55 cr | ~23 mo |
 
 ## Strategic role
 
