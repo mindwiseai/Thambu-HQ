@@ -9,6 +9,31 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-19 EVE] ingest | Multi-centre rollout deck COMPLETE (slides 5-13 built)
+- Updated: `racesims-multi-centre-rollout.html` + `.pdf` — full 13-slide Series A deck
+- **Deck structure (locked):**
+  - Slide 1: Cover · National Network · Y2-Y5 rollout
+  - Slide 2: What is RaceSims? · 3 pillars (Equipment, Pedigree, Integration)
+  - Slide 3: Where in 3 years? · Universal motorsport curiosity → numbers
+  - Slide 4: Per-centre revenue model · Drive · Train · Compete (3 columns)
+  - **Slide 5: Chennai proof point** · ₹95L / ₹4.91cr 5Y EBITDA / 26mo payback / 5.2× / mini P&L table
+  - **Slide 6: Two formats** · Boutique (Chennai template, ₹95L, 67% margin Y5) vs Mega Flagship (4-6K sqft, ₹4-5cr capex, 30-35% margin)
+  - **Slide 7: 5-year rollout timeline** · Y1 Chennai → Y2 Mumbai Mega + 5 boutique → Y3 BLR+DEL Megas + 8 boutique → Y4 +3 Megas + 12 → Y5 saturation 43 centres
+  - **Slide 8: Network economics Y5** · 43 centres · ₹105cr network · ₹83cr RaceSims direct · ₹33cr EBITDA · full breakdown table
+  - **Slide 9: Capital roadmap** · ₹56.95cr 5Y total · ₹20-25cr Series A first 30 months · operating cash funds rest after Y3
+  - **Slide 10: Franchise economics** · Franchisee Y1 ₹1.2cr → 5Y ₹4.3cr EBITDA · 30mo payback · RaceSims books ₹85L per franchise over 5Y
+  - **Slide 11: Five moats** · Pedigree · Integration · Cost · Network · Brand (deeper than cover-slide treatment)
+  - **Slide 12: Valuation case** · ₹1,000-1,300cr Y5 base case · ₹1,250-1,650cr with adjacencies · IPO / strategic / PE / private exit options
+  - **Slide 13: The Ask** · ₹15-20cr Series A · use of funds + what it returns + 90-day timeline · closing line: *"Help us put the next great Indian driver on a real grid by 2029"*
+- **PDF: 13 pages · 984 KB · zero overflow on any slide**
+- All 4 investor decks now visually consistent (cream + RS Red + Montserrat)
+- **Investor pack ready:**
+  - `racesims-investor-narrative.pdf` (A4, pre-meeting send)
+  - `racesims-multi-centre-rollout.pdf` (13 slides, meeting opener + full pitch)
+  - `chennai-centre-proposal.pdf` (12 slides, proof-point companion)
+  - `hotlap-pool-structure.pdf` (5 slides, dealer brief context)
+- Domain: racesims
+
 ## [2026-05-19 PM] ingest | Multi-centre deck Slide 4 — Per-centre revenue model (Drive · Train · Compete)
 - Updated: `racesims-multi-centre-rollout.html` + `.pdf` — added Slide 4 (now 4 total slides; previously 3)
 - **Slide 4 structure:** 3-column grid aligned to [[racesims-drive-train-compete|Drive · Train · Compete]] brand framework — brand structure = revenue structure

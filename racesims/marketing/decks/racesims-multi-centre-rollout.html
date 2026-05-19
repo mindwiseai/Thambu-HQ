@@ -184,6 +184,75 @@
     margin-top: 14px;
   }
   .closing-line .em { color: var(--rs-red); }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th { text-align: left; font-family: var(--mono); font-size: 9px; color: var(--rs-red); letter-spacing: 0.18em; padding: 8px 6px; border-bottom: 1.5px solid var(--rs-red); text-transform: uppercase; font-weight: 600; }
+  th.r, td.r { text-align: right; }
+  td { padding: 6px 6px; border-bottom: 1px solid var(--rule); color: var(--ink); font-size: 12.5px; line-height: 1.4; }
+  tr:last-child td { border-bottom: none; }
+  tr.total td { font-weight: 700; color: var(--rs-red); border-top: 1.5px solid var(--rs-red); border-bottom: none; padding-top: 9px; }
+  tr.subtotal td { font-weight: 600; color: var(--ink); background: var(--rs-red-dim); }
+  tr.highlight td { background: var(--rs-red-dim); font-weight: 700; color: var(--rs-red); }
+  .pl-table th, .pl-table td { font-size: 11px; padding: 4px 6px; line-height: 1.3; }
+  .pl-table th.year, .pl-table td.year { text-align: right; width: 80px; }
+  .pl-table tr.section td { font-weight: 700; color: var(--rs-red); padding-top: 7px; padding-bottom: 2px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; border-bottom: none; }
+  .pl-table tr.section:first-child td { padding-top: 0; }
+
+  ul.bullets { list-style: none; padding: 0; }
+  ul.bullets li {
+    padding-left: 18px; position: relative;
+    margin-bottom: 8px; font-size: 13.5px;
+    color: var(--ink); line-height: 1.5;
+  }
+  ul.bullets li:last-child { margin-bottom: 0; }
+  ul.bullets li:before {
+    content: ""; position: absolute;
+    left: 0; top: 9px; width: 10px; height: 2px;
+    background: var(--rs-red);
+  }
+
+  .moat-card {
+    background: var(--cream-dark);
+    border-left: 3px solid var(--rs-red);
+    padding: 14px 18px;
+    margin-bottom: 10px;
+  }
+  .moat-card .moat-label {
+    font-family: var(--mono); font-size: 9px;
+    color: var(--rs-red); letter-spacing: 0.18em;
+    text-transform: uppercase; font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .moat-card .moat-title {
+    font-size: 14px; font-weight: 700; color: var(--ink);
+    margin-bottom: 4px; letter-spacing: -0.01em;
+  }
+  .moat-card .moat-body {
+    font-size: 12px; line-height: 1.45; color: var(--ink-mid);
+  }
+
+  .timeline-year {
+    display: grid;
+    grid-template-columns: 90px 1fr 130px;
+    gap: 14px; align-items: center;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 12.5px;
+  }
+  .timeline-year:last-child { border-bottom: none; }
+  .timeline-year .year-tag {
+    background: var(--rs-red); color: white;
+    padding: 6px 8px; text-align: center;
+    font-family: var(--mono); font-size: 10px;
+    font-weight: 700; letter-spacing: 0.1em;
+    border-radius: 2px;
+  }
+  .timeline-year .year-desc { color: var(--ink); line-height: 1.45; }
+  .timeline-year .year-total {
+    text-align: right; font-family: var(--mono);
+    color: var(--rs-red); font-weight: 700; font-size: 12px;
+  }
 </style>
 </head>
 <body>
@@ -191,7 +260,7 @@
 <!-- SLIDE 1: COVER -->
 <div class="slide">
   <div class="brand">RACESIMS · PROPOSAL</div>
-  <div class="slide-num">01 / 04</div>
+  <div class="slide-num">01 / 13</div>
   <div class="slide-inner cover">
     <span class="badge">NATIONAL NETWORK · Y2 → Y5 ROLLOUT</span>
     <h1>RaceSims<br/><span class="accent">·</span> National Network</h1>
@@ -206,7 +275,7 @@
 <!-- SLIDE 2: WHAT IS RACESIMS -->
 <div class="slide">
   <div class="brand">RACESIMS · PROPOSAL</div>
-  <div class="slide-num">02 / 04</div>
+  <div class="slide-num">02 / 13</div>
   <div class="slide-inner">
     <div class="eyebrow">02 · What is RaceSims?</div>
     <h2>India's integrated <span class="italic">motorsport development platform.</span></h2>
@@ -243,7 +312,7 @@
 <!-- SLIDE 3: WHERE IN 3 YEARS -->
 <div class="slide">
   <div class="brand">RACESIMS · PROPOSAL</div>
-  <div class="slide-num">03 / 04</div>
+  <div class="slide-num">03 / 13</div>
   <div class="slide-inner">
     <div class="eyebrow">03 · Where I see RaceSims in 3 years</div>
     <h2>By 2029, RaceSims will be <span class="italic">two things at once.</span></h2>
@@ -292,7 +361,7 @@
 <!-- SLIDE 4: PER-CENTRE REVENUE MODEL -->
 <div class="slide">
   <div class="brand">RACESIMS · PROPOSAL</div>
-  <div class="slide-num">04 / 04</div>
+  <div class="slide-num">04 / 13</div>
   <div class="slide-inner">
     <div class="eyebrow">04 · Per-centre revenue model</div>
     <h2>Three pillars. <span class="italic">The same three that define the brand.</span></h2>
@@ -412,6 +481,423 @@
     <div class="closing-line" style="margin-top: 14px;">
       ₹2.5 cr Y5 revenue per mature centre · multi-stream resilience · <span class="em">Compete compounds with every new centre.</span>
     </div>
+  </div>
+</div>
+
+<!-- SLIDE 5: CHENNAI PROOF POINT -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">05 / 13</div>
+  <div class="slide-inner">
+    <div class="eyebrow">05 · The Proof Point</div>
+    <h2>Chennai is what <span class="italic">every centre will look like.</span></h2>
+    <div class="divider red"></div>
+
+    <p class="lead" style="margin-bottom: 14px; max-width: 1060px;">We've built the single-centre business case bottom-up. <b>₹95L Y1 investment. ₹4.91 cr 5-year EBITDA. 26-month payback.</b> Every centre in the network — Mumbai, Bangalore, Delhi, all of them — runs to this template, adjusted for city.</p>
+
+    <div class="grid-4" style="margin-top: 4px;">
+      <div class="card accent"><div class="stat"><span class="label">Y1 Cash Need</span><span class="value">₹95L</span><span class="note">₹72L capex + ₹22L WC</span></div></div>
+      <div class="card accent"><div class="stat"><span class="label">Payback</span><span class="value">26<span style="font-size: 16px;"> mo</span></span><span class="note">Early Q1 of Year 3</span></div></div>
+      <div class="card accent"><div class="stat"><span class="label">5Y Cumulative EBITDA</span><span class="value">₹4.91<span style="font-size: 16px;"> cr</span></span><span class="note">5.2× capital multiple</span></div></div>
+      <div class="card accent"><div class="stat"><span class="label">Y5 EBITDA Margin</span><span class="value">67<span style="font-size: 16px;">%</span></span><span class="note">Break-even at 24%</span></div></div>
+    </div>
+
+    <div class="divider tight"></div>
+
+    <table class="pl-table" style="margin-top: 4px;">
+      <tr>
+        <th style="width: 32%;">Chennai P&amp;L · ₹ Lakhs</th>
+        <th class="year">Y1</th><th class="year">Y2</th><th class="year">Y3</th><th class="year">Y4</th><th class="year">Y5</th><th class="year">5Y Total</th>
+      </tr>
+      <tr><td>Rig revenue</td><td class="year">59.1</td><td class="year">105.1</td><td class="year">141.9</td><td class="year">170.8</td><td class="year">196.6</td><td class="year">673.5</td></tr>
+      <tr><td>Ancillary (café, events, coaching, etc.)</td><td class="year">8.3</td><td class="year">19.5</td><td class="year">33.2</td><td class="year">45.1</td><td class="year">55.1</td><td class="year">161.2</td></tr>
+      <tr class="subtotal"><td>Total revenue</td><td class="year">67.4</td><td class="year">124.6</td><td class="year">175.1</td><td class="year">215.9</td><td class="year">251.7</td><td class="year">834.7</td></tr>
+      <tr><td>Total opex (incl. café/merch COGS)</td><td class="year">53.7</td><td class="year">62.1</td><td class="year">69.2</td><td class="year">75.9</td><td class="year">82.6</td><td class="year">343.5</td></tr>
+      <tr class="highlight"><td>EBITDA</td><td class="year">13.7</td><td class="year">62.5</td><td class="year">105.9</td><td class="year">140.0</td><td class="year">169.1</td><td class="year">491.2</td></tr>
+      <tr><td>EBITDA margin %</td><td class="year">20%</td><td class="year">50%</td><td class="year">60%</td><td class="year">65%</td><td class="year">67%</td><td class="year">59%</td></tr>
+      <tr class="highlight"><td>PAT (after dep + 25% tax)</td><td class="year">2.1</td><td class="year">38.7</td><td class="year">71.2</td><td class="year">96.8</td><td class="year">118.7</td><td class="year">327.6</td></tr>
+    </table>
+
+    <p class="small" style="margin-top: 12px; text-align: center; font-style: italic;">Full Chennai proposal in the companion deck (12 slides). Numbers locked. Investor-grade.</p>
+  </div>
+</div>
+
+<!-- SLIDE 6: TWO FORMATS -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">06 / 13</div>
+  <div class="slide-inner">
+    <div class="eyebrow">06 · Two formats, one system</div>
+    <h2>Mega Flagship and Boutique. <span class="italic">Different roles. Shared brand.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-2" style="margin-top: 4px;">
+
+      <div class="card accent">
+        <div style="font-family: var(--mono); font-size: 10px; color: var(--rs-red); letter-spacing: 0.22em; font-weight: 700; margin-bottom: 4px;">BOUTIQUE</div>
+        <h3 class="serif" style="margin-bottom: 12px;">The Chennai template, replicated</h3>
+        <table>
+          <tr><td>Footprint</td><td class="r">1,200-2,000 sq ft</td></tr>
+          <tr><td>Rigs</td><td class="r">6 (5 Rally + 1 Motion)</td></tr>
+          <tr><td>Capex per centre</td><td class="r"><b>~₹95 L</b></td></tr>
+          <tr><td>Y5 revenue</td><td class="r">₹2.5 cr</td></tr>
+          <tr><td>Y5 EBITDA margin</td><td class="r">~67%</td></tr>
+          <tr><td>Payback</td><td class="r">~26 months</td></tr>
+          <tr><td>Capital multiple (5Y)</td><td class="r">5.2×</td></tr>
+        </table>
+        <p class="small" style="margin-top: 12px;"><b>Role:</b> volume + training + local community. Most centres are Boutiques — <b>36 of 43</b> at saturation.</p>
+      </div>
+
+      <div class="card accent">
+        <div style="font-family: var(--mono); font-size: 10px; color: var(--rs-red); letter-spacing: 0.22em; font-weight: 700; margin-bottom: 4px;">MEGA FLAGSHIP</div>
+        <h3 class="serif" style="margin-bottom: 12px;">F1 Arcade-style experience venue</h3>
+        <table>
+          <tr><td>Footprint</td><td class="r">4,000-6,000 sq ft</td></tr>
+          <tr><td>Rigs</td><td class="r">12-18 (mix of Rally + Motion)</td></tr>
+          <tr><td>Capex per centre</td><td class="r"><b>~₹4-5 cr</b></td></tr>
+          <tr><td>Y5 revenue</td><td class="r">₹5-7 cr</td></tr>
+          <tr><td>Y5 EBITDA margin</td><td class="r">30-35%</td></tr>
+          <tr><td>Payback</td><td class="r">~36 months</td></tr>
+          <tr><td>Capital multiple (5Y)</td><td class="r">4.5×</td></tr>
+        </table>
+        <p class="small" style="margin-top: 12px;"><b>Role:</b> brand + events + championship rounds + premium F&amp;B. <b>7 Megas</b> at saturation — one per Tier 1 metro.</p>
+      </div>
+
+    </div>
+
+    <div class="closing-line" style="margin-top: 14px;">
+      Both formats share the <b>Drive · Train · Compete</b> framework, the Conspit/VNM kit, and the ARKA pedigree. <span class="em">The difference is scale, not DNA.</span>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 7: 5-YEAR ROLLOUT -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">07 / 13</div>
+  <div class="slide-inner">
+    <div class="eyebrow">07 · The 5-year rollout</div>
+    <h2>From one centre in 2026 <span class="italic">to 43 across India by 2030.</span></h2>
+    <div class="divider red"></div>
+
+    <div style="margin-top: 4px;">
+      <div class="timeline-year">
+        <div class="year-tag">Y1 · 2026</div>
+        <div class="year-desc"><b>Chennai opens.</b> Operating playbook documented as the franchise prototype. Hot Lap pool live across 4 dealer cities.</div>
+        <div class="year-total">1 centre · ₹0.7 cr rev</div>
+      </div>
+      <div class="timeline-year">
+        <div class="year-tag">Y2 · 2027</div>
+        <div class="year-desc"><b>Mumbai Mega Flagship</b> opens (direct, Powai). 5 boutique franchises: Hyderabad · Bangalore Indiranagar · Gurgaon · Pune · Kochi. <b>National Championship Season 1 launches.</b></div>
+        <div class="year-total">7 centres · ₹15-20 cr</div>
+      </div>
+      <div class="timeline-year">
+        <div class="year-tag">Y3 · 2028</div>
+        <div class="year-desc"><b>Bangalore Mega + Delhi-NCR Mega</b> (direct). 8 boutique franchises: Chennai-OMR · Bangalore-Whitefield · Hyderabad-Gachibowli · Mumbai-Bandra · Coimbatore · Jaipur · Chandigarh · Ahmedabad.</div>
+        <div class="year-total">17 centres · ₹35-45 cr</div>
+      </div>
+      <div class="timeline-year">
+        <div class="year-tag">Y4 · 2029</div>
+        <div class="year-desc">3 more Mega Flagships: <b>Hyderabad · Pune · Chennai-OMR</b>. 12 boutiques: Goa · Lucknow · Indore · Surat · Mysore · Mangalore · Vadodara · Trivandrum · Vijayawada · Madurai · Bhubaneswar · Visakhapatnam.</div>
+        <div class="year-total">32 centres · ₹70-85 cr</div>
+      </div>
+      <div class="timeline-year">
+        <div class="year-tag">Y5 · 2030</div>
+        <div class="year-desc"><b>Ahmedabad Mega + Kolkata Boutique</b> open. Final 9 Tier-1 second-location + Tier-2 boutiques across remaining cities. <b>India saturated.</b></div>
+        <div class="year-total">43 centres · ₹105-115 cr</div>
+      </div>
+    </div>
+
+    <div class="divider tight"></div>
+
+    <p class="small" style="text-align: center;"><b>7 Mega Flagships in Tier-1 metros</b> · <b>36 Boutiques</b> (5 direct + 31 franchise) across Tier-1 second-locations and 18 Tier-2 cities · Every centre runs the Chennai template.</p>
+  </div>
+</div>
+
+<!-- SLIDE 8: NETWORK ECONOMICS -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">08 / 13</div>
+  <div class="slide-inner">
+    <div class="eyebrow">08 · Network economics at saturation (Y5)</div>
+    <h2>₹105 cr network revenue. <span class="italic">₹33 cr EBITDA to RaceSims.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-4" style="margin-top: 4px;">
+      <div class="card accent"><div class="stat"><span class="label">Total centres</span><span class="value">43</span><span class="note">12 direct + 31 franchise</span></div></div>
+      <div class="card accent"><div class="stat"><span class="label">Network Revenue</span><span class="value">₹105<span style="font-size: 16px;"> cr</span></span><span class="note">All centres combined</span></div></div>
+      <div class="card accent"><div class="stat"><span class="label">RaceSims direct revenue</span><span class="value">₹83<span style="font-size: 16px;"> cr</span></span><span class="note">Operator + Distributor + Champ</span></div></div>
+      <div class="card accent"><div class="stat"><span class="label">RaceSims EBITDA</span><span class="value">₹33<span style="font-size: 16px;"> cr</span></span><span class="note">40% blended margin</span></div></div>
+    </div>
+
+    <div class="divider tight"></div>
+
+    <table style="margin-top: 6px;">
+      <tr><th>Revenue stream · Y5</th><th class="r">Volume</th><th class="r">₹/unit</th><th class="r">RaceSims revenue</th></tr>
+      <tr><td>Mega Flagship centres (direct)</td><td class="r">7</td><td class="r">₹6 cr</td><td class="r">₹42.0 cr</td></tr>
+      <tr><td>Boutique centres (direct)</td><td class="r">5</td><td class="r">₹1.8 cr</td><td class="r">₹9.0 cr</td></tr>
+      <tr><td>Franchise royalty (6% × revenue)</td><td class="r">31</td><td class="r">~₹9L</td><td class="r">₹2.8 cr</td></tr>
+      <tr><td>Franchise fees (new openings)</td><td class="r">~5/yr</td><td class="r">₹20-25L</td><td class="r">₹0.8 cr</td></tr>
+      <tr><td>Hardware sales to franchises</td><td class="r">—</td><td class="r">—</td><td class="r">₹5.5 cr</td></tr>
+      <tr><td>Hardware sales to consumers (centres as showroom)</td><td class="r">—</td><td class="r">—</td><td class="r">₹12.0 cr</td></tr>
+      <tr><td>VMS (network + external SaaS)</td><td class="r">—</td><td class="r">—</td><td class="r">₹1.8 cr</td></tr>
+      <tr><td>Championship sponsorships + broadcast</td><td class="r">—</td><td class="r">—</td><td class="r">₹4.0 cr</td></tr>
+      <tr><td>Training programmes + corporate</td><td class="r">—</td><td class="r">—</td><td class="r">₹5.1 cr</td></tr>
+      <tr class="total"><td>Total RaceSims direct revenue Y5</td><td class="r"></td><td class="r"></td><td class="r">~₹83 cr</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- SLIDE 9: CAPITAL ROADMAP -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">09 / 13</div>
+  <div class="slide-inner">
+    <div class="eyebrow">09 · Capital roadmap</div>
+    <h2>₹20-25 cr external capital. <span class="italic">Then operating cash funds the rest.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-2" style="margin-top: 4px; gap: 28px;">
+      <div>
+        <h3>5-year capital deployment (₹ cr)</h3>
+        <table>
+          <tr><th>Year</th><th class="r">Direct capex</th><th class="r">Franchise + Mkt</th><th class="r">Total</th></tr>
+          <tr><td>Y1 · 2026</td><td class="r">0.95</td><td class="r">0.5</td><td class="r">1.45</td></tr>
+          <tr><td>Y2 · 2027</td><td class="r">4.0</td><td class="r">3.5</td><td class="r">7.5</td></tr>
+          <tr><td>Y3 · 2028</td><td class="r">8.0</td><td class="r">6.0</td><td class="r">14.0</td></tr>
+          <tr><td>Y4 · 2029</td><td class="r">12.0</td><td class="r">8.0</td><td class="r">20.0</td></tr>
+          <tr><td>Y5 · 2030</td><td class="r">6.0</td><td class="r">8.0</td><td class="r">14.0</td></tr>
+          <tr class="total"><td>5-year total</td><td class="r">30.95</td><td class="r">26.0</td><td class="r">56.95</td></tr>
+        </table>
+      </div>
+
+      <div>
+        <h3>The funding logic</h3>
+        <p class="lead" style="font-size: 14px; margin-bottom: 12px;">External capital needed only in the first 30 months. After Y3, operating cash from mature centres + franchise royalties + hardware sales funds the rest of the rollout.</p>
+
+        <div class="card red" style="margin-top: 10px;">
+          <h3 class="serif" style="margin-bottom: 6px;">Series A · now</h3>
+          <p style="font-size: 13px; color: var(--ink); line-height: 1.55;"><b>₹15-20 cr</b> · funds Y1 (Chennai) + Y2 (Mumbai Mega + 5 boutique franchises) + championship launch + brand build.</p>
+        </div>
+
+        <div class="card" style="margin-top: 10px;">
+          <h3 class="serif" style="margin-bottom: 6px;">Series B · optional, Y3</h3>
+          <p style="font-size: 13px; color: var(--ink); line-height: 1.55;">₹25-35 cr at <b>₹500-700 cr valuation</b> if we want to accelerate Y3-Y5 buildout or fund international expansion. Not required for India saturation — operating cash covers it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 10: FRANCHISE ECONOMICS -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">10 / 13</div>
+  <div class="slide-inner">
+    <div class="eyebrow">10 · The franchise model</div>
+    <h2>Why a franchisee says yes. <span class="italic">And why this scales.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-2" style="margin-top: 4px; gap: 28px;">
+
+      <div>
+        <h3>Franchisee economics</h3>
+        <table>
+          <tr><td>Franchise fee (one-time)</td><td class="r">₹25 L</td></tr>
+          <tr><td>Setup capex (Chennai template)</td><td class="r">₹95 L</td></tr>
+          <tr><td>Total Y1 investment</td><td class="r"><b>₹1.2 cr</b></td></tr>
+          <tr><td>Royalty to RaceSims</td><td class="r">6% of revenue</td></tr>
+          <tr><td>Marketing fund (pooled)</td><td class="r">2% of revenue</td></tr>
+          <tr><td>Hardware purchased through RaceSims</td><td class="r">At distributor pricing</td></tr>
+          <tr class="subtotal"><td>Y5 franchisee EBITDA (after deductions)</td><td class="r">₹1.4-1.5 cr</td></tr>
+          <tr class="highlight"><td>Franchisee payback</td><td class="r">~30 months</td></tr>
+          <tr class="highlight"><td>5Y franchisee EBITDA</td><td class="r">~₹4.3 cr</td></tr>
+        </table>
+      </div>
+
+      <div>
+        <h3>RaceSims unit economics from each franchise</h3>
+        <table>
+          <tr><td>Franchise fee (Y0)</td><td class="r">₹25 L</td></tr>
+          <tr><td>Hardware GM at setup (~30%)</td><td class="r">₹12 L</td></tr>
+          <tr><td>Royalty + marketing fund Y5</td><td class="r">~₹20 L/yr</td></tr>
+          <tr><td>Ongoing hardware replenishment GM</td><td class="r">~₹5 L/yr</td></tr>
+          <tr class="subtotal"><td>5Y revenue from one franchise to RaceSims</td><td class="r">~₹85 L</td></tr>
+        </table>
+
+        <div class="divider tight"></div>
+
+        <h3>Why franchisees say yes</h3>
+        <ul class="bullets" style="font-size: 12.5px;">
+          <li>Proven concept · Chennai unit economics already locked</li>
+          <li>Brand · already known in motorsport circles via ARKA</li>
+          <li>Cost edge · distributor pricing on hardware (saves ~₹25 L vs retail)</li>
+          <li>Training + ongoing support from RaceSims HQ team</li>
+          <li>Championship pipeline · customers flow in from national programmes</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p class="small" style="margin-top: 14px; text-align: center; font-style: italic;">31 franchise centres at saturation = capital-light scaling. RaceSims books ₹26 cr+ from the franchise channel over 5 years.</p>
+  </div>
+</div>
+
+<!-- SLIDE 11: FIVE MOATS -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">11 / 13</div>
+  <div class="slide-inner">
+    <div class="eyebrow">11 · The moats</div>
+    <h2>Five moats. <span class="italic">What we hold that no one else can replicate.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-2" style="margin-top: 4px; gap: 14px;">
+      <div>
+        <div class="moat-card">
+          <div class="moat-label">01 · PEDIGREE MOAT</div>
+          <div class="moat-title">ARKA exclusivity + The Ladder</div>
+          <div class="moat-body">Founder is a working race engineer at <b>ARKA Motorsports</b> (130+ national championship titles since 1987). First Academy graduates in real ARKA seats by Y3. Years to build, almost impossible to replicate from cold.</div>
+        </div>
+
+        <div class="moat-card">
+          <div class="moat-label">02 · INTEGRATION MOAT</div>
+          <div class="moat-title">Centres + championship + curriculum + sim-to-real</div>
+          <div class="moat-body">The only brand in India running the full stack under one roof. Hardware-only and community-only competitors play one slice. <b>We play the whole.</b></div>
+        </div>
+
+        <div class="moat-card">
+          <div class="moat-label">03 · COST MOAT</div>
+          <div class="moat-title">Direct Conspit + VNM distribution</div>
+          <div class="moat-body">Every centre at trade pricing — ₹65L spec for ₹39L. National network funds itself off operating cash from Y3 onward. <b>Capital-light scaling.</b></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="moat-card">
+          <div class="moat-label">04 · NETWORK MOAT</div>
+          <div class="moat-title">43 centres feeding one brand</div>
+          <div class="moat-body">17 centres by Y3 · 43 by Y5 — leaderboards, championship rounds, member migrations all compound across the network. The brand becomes a <b>flywheel</b>, not a venue chain.</div>
+        </div>
+
+        <div class="moat-card">
+          <div class="moat-label">05 · BRAND MOAT</div>
+          <div class="moat-title">"Motorsport Academy graduate" as a credential</div>
+          <div class="moat-body"><i>"Motorsport Academy graduate"</i> becomes a recognised mark inside the Indian motorsport ecosystem. <b>RaceSims Champion</b> means something. Years to earn, permanent once landed.</div>
+        </div>
+
+        <div class="card red" style="margin-top: 14px;">
+          <h3 class="serif" style="margin-bottom: 6px;">Together they compound</h3>
+          <p style="font-size: 12.5px; color: var(--ink); line-height: 1.5;">Each moat alone is meaningful. Together they form a <b>defensive structure no specialist competitor can assemble in under 5 years</b> — even with capital.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 12: VALUATION -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">12 / 13</div>
+  <div class="slide-inner">
+    <div class="eyebrow">12 · Valuation case</div>
+    <h2>₹1,000-1,300 cr at Year 5. <span class="italic">Realistic, not aspirational.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-2" style="margin-top: 4px; gap: 28px;">
+
+      <div>
+        <h3>Three valuation lenses · Y5</h3>
+        <table>
+          <tr><th>Lens</th><th class="r">Multiple</th><th class="r">Valuation</th></tr>
+          <tr><td>Revenue (premium growing brand)</td><td class="r">12-15×</td><td class="r">₹1,000-1,250 cr</td></tr>
+          <tr><td>EBITDA (mature platform)</td><td class="r">25-30×</td><td class="r">₹825-990 cr</td></tr>
+          <tr><td>Strategic (PE / motorsport buyer)</td><td class="r">15-18× rev + growth</td><td class="r">₹1,250-1,500 cr</td></tr>
+          <tr class="highlight"><td>Realistic Y5 range</td><td class="r"></td><td class="r">₹1,000-1,300 cr</td></tr>
+          <tr><td>With adjacency stack layered <span style="font-size: 10px; color: var(--ink-muted);">(AMC, junior academy, merch retail, college curriculum, etc.)</span></td><td class="r"></td><td class="r"><b>₹1,250-1,650 cr</b></td></tr>
+        </table>
+      </div>
+
+      <div>
+        <h3>Exit scenarios</h3>
+        <ul class="bullets" style="font-size: 13px;">
+          <li><b>IPO</b> · Y5-Y6 at ₹1,500 cr+ if 43-centre saturation hits + adjacencies deployed</li>
+          <li><b>Strategic acquisition</b> · global esports / motorsport group, Indian sports conglomerate (Tata Sports, Reliance, Mahindra Racing)</li>
+          <li><b>PE growth fund</b> · build-and-hold to ₹3,000 cr+ via international expansion</li>
+          <li><b>Continued private at scale</b> · founder retains control through cash-flow funding</li>
+        </ul>
+
+        <div class="divider tight"></div>
+
+        <h3>Comparable benchmarks</h3>
+        <ul class="bullets" style="font-size: 12.5px;">
+          <li>Cure.fit / Cult.fit at peak: $1.5B (~₹12,000 cr)</li>
+          <li>F1 Arcade (global): NYSE-traded parent · comparable model</li>
+          <li>Topgolf / Drive Shack: $2B+ entertainment-experience venues</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="closing-line" style="margin-top: 12px;">
+      Premium · scarce · category-defining. <span class="em">India's only integrated motorsport development platform.</span>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 13: THE ASK -->
+<div class="slide">
+  <div class="brand">RACESIMS · PROPOSAL</div>
+  <div class="slide-num">13 / 13</div>
+  <div class="slide-inner">
+    <div class="eyebrow">13 · The Ask</div>
+    <h2>₹15-20 cr Series A. <span class="italic">Built to compound.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-3" style="margin-top: 4px;">
+
+      <div class="card accent">
+        <h3>Use of funds</h3>
+        <ul class="bullets" style="font-size: 12.5px;">
+          <li><b>Chennai flagship</b> · ₹1 cr</li>
+          <li><b>Mumbai Mega Flagship</b> · ₹4-5 cr</li>
+          <li><b>5 boutique franchise support</b> · ₹1.5 cr</li>
+          <li><b>Marketing + brand + championship</b> · ₹3-4 cr</li>
+          <li><b>VMS platform + team</b> · ₹2 cr</li>
+          <li><b>HQ ops + working capital</b> · ₹3-5 cr</li>
+        </ul>
+      </div>
+
+      <div class="card accent">
+        <h3>What it returns</h3>
+        <ul class="bullets" style="font-size: 12.5px;">
+          <li><b>7 centres operating</b> by end of Y2</li>
+          <li><b>17 centres · ₹8-10 cr EBITDA</b> by end of Y3</li>
+          <li><b>₹1,000-1,300 cr</b> Y5 valuation</li>
+          <li><b>50-70× return</b> potential on Series A</li>
+          <li><b>Operating cash positive</b> by Y3 — no further dilution required</li>
+        </ul>
+      </div>
+
+      <div class="card accent">
+        <h3>Timeline</h3>
+        <ul class="bullets" style="font-size: 12.5px;">
+          <li><b>Close Series A</b> · 90 days from term sheet</li>
+          <li><b>Chennai open</b> · Q3 2026</li>
+          <li><b>Mumbai Mega open</b> · Q2 2027</li>
+          <li><b>7 centres operating</b> · End Y2</li>
+          <li><b>17 centres + championship S2</b> · End Y3</li>
+          <li><b>Series B conversation</b> · End Y3 (optional)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="closing-line">
+      We built the unit economics. We built the brand. <span class="em">Now we want to build the network.</span>
+    </div>
+    <p class="lead" style="margin-top: 8px; text-align: center; font-style: italic;">Help us put the next great Indian driver on a real grid by 2029.</p>
   </div>
 </div>
 

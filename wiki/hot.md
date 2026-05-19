@@ -8,7 +8,14 @@ updated: 2026-05-18
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-19 PM (latest) — Multi-centre deck Slide 4: Per-centre revenue model (Drive · Train · Compete)
+## 2026-05-19 EVE (latest) — Multi-centre rollout deck COMPLETE (13 slides)
+
+- **`racesims-multi-centre-rollout.pdf` is now 13 slides** · full Series A pitch deck. Structure: **Cover → What is RaceSims → Where in 3yr → Per-centre revenue (Drive·Train·Compete) → Chennai proof point → Two formats (Boutique vs Mega) → 5-year rollout timeline → Network economics Y5 → Capital roadmap → Franchise economics → Five moats → Valuation case → The Ask**
+- **The Ask:** ₹15-20cr Series A · funds 7 centres by end of Y2 · 17 centres + ₹8-10cr EBITDA by end of Y3 · ₹1,000-1,300cr Y5 valuation. Operating cash positive from Y3 — no further dilution required for India saturation.
+- **Investor pack now complete:** investor-narrative one-pager · multi-centre rollout 13-slide deck · Chennai single-centre 12-slide proof point · Hot Lap dealer brief (5 slides, design-aligned).
+- All four decks share the same RaceSims editorial system (cream + RS Red + Montserrat + JetBrains Mono).
+
+## 2026-05-19 PM — Multi-centre deck Slide 4: Per-centre revenue model (Drive · Train · Compete)
 
 - **Slide 4 added** to `racesims-multi-centre-rollout.html`. Three-column grid aligned to the [[racesims-drive-train-compete|Drive · Train · Compete]] brand framework. Each pillar = a revenue column.
 - **DRIVE** (volume): rig sessions + memberships · group/corporate/private hire · café/merch. **TRAIN** (depth): Motorsport Academy programmes · Pro Driver Training B2B · **Real Driving Experiences via ARKA + Buzzing Hornet**. **COMPETE** (brand engine): championship participation revenue · centre share of championship operating profits (sponsorship/broadcast/hosting).
