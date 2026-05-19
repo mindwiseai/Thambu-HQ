@@ -9,6 +9,27 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-19] ingest | Chennai Flagship v3.1 — rent locked at ₹1.75L
+- Source: continuation of [[2026-05-18-chennai-flagship-proposal-v2]]
+- Updated: [[racesims-chennai-flagship]] (full v3.1 P&L cascade), Chennai proposal deck slides 6/7/8/10/11/12
+- **Single change:** rent ₹1.25L → **₹1.75L** (conservative budget for premium 2,000 sq ft location)
+- **Cascaded impacts:**
+  - Y1 monthly opex (incl COGS): ₹3.98L → **₹4.48L**
+  - Annual Y1 opex: ₹47.7L → **₹53.7L**
+  - Hard capex (incl ₹10.5L deposit at 6 mo × ₹1.75L): ₹69.32L → **₹72.32L**
+  - Working capital (5 mo): ₹19.9L → **₹22.4L**
+  - **Y1 cash need: ₹89L → ₹95L**
+  - Y1 EBITDA: ₹19.7L → ₹13.7L (margin 29% → 20%)
+  - 5Y cumulative EBITDA: ₹5.24cr → **₹4.91cr**
+  - 5Y cumulative PAT: ₹3.53cr → **₹3.28cr**
+  - Payback: 24 mo → **26 mo**
+  - Capital multiple: 5.9× → **5.2×**
+  - Y5 EBITDA margin: 70% → **67%**
+  - Break-even: 21% blended → **24% blended** (6-pt cushion vs Y1 plan 30%)
+- Network Year 3 projections (17 centres · ₹40cr · ₹8-10cr EBITDA · ₹250-400cr valuation) unchanged — aggregate ranges, not Chennai-specific
+- 3-slide opener + investor one-pager don't reference Chennai-specific cash need (only ₹65L→₹39L rig cost edge, which is unchanged); re-exported for cleanliness
+- Domain: racesims
+
 ## [2026-05-18 EVE] ingest | RaceSims 3-Year Vision — investor narrative LOCKED (v4)
 - Created: [[racesims-3-year-vision]] — full v4 narrative concept page (~850 words, humble/partnership-led/story-first)
 - Output artefacts:

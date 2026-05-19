@@ -8,7 +8,12 @@ updated: 2026-05-18
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-18 EVE (latest) — RaceSims 3-Year Vision LOCKED · Investor narrative + multi-centre deck opener
+## 2026-05-19 (latest) — Chennai Flagship v3.1: rent ₹1.75L locked
+
+- **Single change cascaded through Chennai P&L:** rent ₹1.25L → **₹1.75L** for conservative budgeting on premium 2,000 sq ft location. Y1 monthly opex ₹3.84L → **₹4.34L**. Hard capex ₹69.3L → **₹72.3L** (incl ₹10.5L 6-mo deposit). WC ₹19.9L → **₹22.4L**. **Y1 cash need ₹89L → ₹95L**. Y1 EBITDA ₹19.7L → ₹13.7L (20% margin). 5Y cumulative EBITDA ₹5.24cr → **₹4.91cr**. 5Y PAT ₹3.53cr → **₹3.28cr**. **Payback ~26 months**. **Capital multiple 5.2×**. **Y5 EBITDA margin 67%**. Break-even ~24% blended (Y1 plan 30% → 6-pt cushion). Network Year 3 projections unchanged (aggregate, not Chennai-specific). See [[racesims-chennai-flagship]] v3.1.
+- **Next step:** review the 3-slide opener (`racesims-multi-centre-rollout.pdf`) + one-pager (`racesims-investor-narrative.pdf`) — both unchanged numerically — then build out the full multi-centre rollout deck (Chennai proof point recap, Mega vs Boutique formats, city map, network economics, capital ask, valuation case).
+
+## 2026-05-18 EVE — RaceSims 3-Year Vision LOCKED · Investor narrative + multi-centre deck opener
 
 - **Investor narrative v4 LOCKED** answering "What is RaceSims?" and "Where in 3 years?" — humble, partnership-led, story-first, ~850 words. Iterated through 4 drafts to land on a tone that doesn't disrupt motorsport-establishment sensibilities. Three pillars: **The equipment** (DD/motion/load-cell affordable now) · **The pedigree** ([[arka-motorsports|ARKA]] race engineer founder, 130+ titles, real seats via The Ladder) · **The integration** (direct Conspit + VNM distributor, ₹65L → ₹39L cost edge, full stack under one brand). Year 3 vision opens on universal teenage dream of becoming a racing driver, narrows to specific kids (Chennai → INRC, Hyderabad young woman, Vijayawada teen), then drops the numbers (17 centres · ₹40cr network rev · ₹8-10cr EBITDA · ₹250-400cr valuation · 100K+ customers · 2K+ Academy graduates). Closing line: *"The next great Indian driver will tell their story starting with three words: 'I started at RaceSims.'"*
 - **Output artefacts:** `racesims-investor-narrative.html`+`.pdf` (A4 standalone one-pager for pre-meeting reading), `racesims-multi-centre-rollout.html`+`.pdf` (3-slide deck opener: Cover + What is + Where in 3 years).
