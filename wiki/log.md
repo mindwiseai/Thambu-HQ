@@ -9,6 +9,22 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-19 PM] ingest | Multi-centre deck Slide 4 — Per-centre revenue model (Drive · Train · Compete)
+- Updated: `racesims-multi-centre-rollout.html` + `.pdf` — added Slide 4 (now 4 total slides; previously 3)
+- **Slide 4 structure:** 3-column grid aligned to [[racesims-drive-train-compete|Drive · Train · Compete]] brand framework — brand structure = revenue structure
+- **DRIVE column** *(the volume)*: Per-session rigs (Open Sessions ₹500-1K/hr · Pass 8/16 · Motion premium ₹1.2-2.5K) · Group/Corporate (team days ₹40-60K · birthdays · private nights · brand activations) · Café+Merch+Content
+- **TRAIN column** *(the depth)*: Motorsport Academy (Initiation ₹8K → Pro Track) · Pro Driver Training B2B · **Real Driving Experiences** (NEW · highlighted card)
+- **COMPETE column** *(the brand engine)*: Championship participation (round entry · season pass · qualifying) · **Championship operating profits** (centre share of hosted rounds + sponsorship + broadcast + content)
+- **Real Driving Experiences pricing locked (Option B):**
+  - ARKA Real Drive — customer ₹1.75L · our cost ₹1L · **₹75K margin · 43% GM**
+  - Buzzing Hornet Real Drive — customer ₹2.25L · our cost ₹1.25L · **₹1L margin · 44% GM**
+  - Sold individually + corporate packages
+  - Volume: 1-3 packages/month per mature centre → ₹20-80L annual experience revenue per centre
+- **NEW REVENUE STREAMS added explicitly:** Pro Driver Training (B2B), Real Driving Experiences (ARKA + Buzzing Hornet bridge), Championship operating profits (centre share of HQ-level revenue)
+- **Scope guard:** Slide intentionally excludes RaceSims trading/distribution streams (hardware sales, dealer wholesale, B2B installations, 3D printing accessories, Hot Lap pool management) — those are HQ trading business, not centre revenue. This slide is **centre-only**.
+- Closing line: *"₹2.5cr Y5 revenue per mature centre · multi-stream resilience · Compete compounds with every new centre."*
+- Domain: racesims
+
 ## [2026-05-19] ingest | Chennai Flagship v3.1 — rent locked at ₹1.75L
 - Source: continuation of [[2026-05-18-chennai-flagship-proposal-v2]]
 - Updated: [[racesims-chennai-flagship]] (full v3.1 P&L cascade), Chennai proposal deck slides 6/7/8/10/11/12

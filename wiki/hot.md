@@ -8,7 +8,16 @@ updated: 2026-05-18
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-19 (latest) — Chennai Flagship v3.1: rent ₹1.75L locked
+## 2026-05-19 PM (latest) — Multi-centre deck Slide 4: Per-centre revenue model (Drive · Train · Compete)
+
+- **Slide 4 added** to `racesims-multi-centre-rollout.html`. Three-column grid aligned to the [[racesims-drive-train-compete|Drive · Train · Compete]] brand framework. Each pillar = a revenue column.
+- **DRIVE** (volume): rig sessions + memberships · group/corporate/private hire · café/merch. **TRAIN** (depth): Motorsport Academy programmes · Pro Driver Training B2B · **Real Driving Experiences via ARKA + Buzzing Hornet**. **COMPETE** (brand engine): championship participation revenue · centre share of championship operating profits (sponsorship/broadcast/hosting).
+- **Real Driving Experiences pricing locked:** ARKA Real Drive ₹1.75L customer (our cost ₹1L · 43% GM) · Buzzing Hornet Real Drive ₹2.25L (₹1.25L cost · 44% GM). Sim morning + real-car afternoon. Sold individually + corporate.
+- **Scope:** centre-only revenue. RaceSims trading/distribution business (hardware, B2B installations, 3D printing, Hot Lap fees) intentionally excluded — that's HQ revenue, not per-centre.
+- Closing line: *"₹2.5cr Y5 revenue per mature centre · multi-stream resilience · Compete compounds with every new centre."*
+- Multi-centre deck now 4 slides (Cover · What is · Where in 3 years · Per-centre revenue model). Ready for investor review.
+
+## 2026-05-19 — Chennai Flagship v3.1: rent ₹1.75L locked
 
 - **Single change cascaded through Chennai P&L:** rent ₹1.25L → **₹1.75L** for conservative budgeting on premium 2,000 sq ft location. Y1 monthly opex ₹3.84L → **₹4.34L**. Hard capex ₹69.3L → **₹72.3L** (incl ₹10.5L 6-mo deposit). WC ₹19.9L → **₹22.4L**. **Y1 cash need ₹89L → ₹95L**. Y1 EBITDA ₹19.7L → ₹13.7L (20% margin). 5Y cumulative EBITDA ₹5.24cr → **₹4.91cr**. 5Y PAT ₹3.53cr → **₹3.28cr**. **Payback ~26 months**. **Capital multiple 5.2×**. **Y5 EBITDA margin 67%**. Break-even ~24% blended (Y1 plan 30% → 6-pt cushion). Network Year 3 projections unchanged (aggregate, not Chennai-specific). See [[racesims-chennai-flagship]] v3.1.
 - **Next step:** review the 3-slide opener (`racesims-multi-centre-rollout.pdf`) + one-pager (`racesims-investor-narrative.pdf`) — both unchanged numerically — then build out the full multi-centre rollout deck (Chennai proof point recap, Mega vs Boutique formats, city map, network economics, capital ask, valuation case).
