@@ -11,15 +11,15 @@ updated: 2026-05-18
 
 The locked v4 founder narrative answering the two investor questions: **"What is RaceSims?"** and **"Where do I see RaceSims in three years?"** Designed to be **humble, partnership-led, and crisp** — tells a real story without disrupting motorsport-establishment sensibilities. ~850 words. Locked May 18 2026.
 
-## The two questions answered
+## The two questions answered (v5.1 locked)
 
 ### What is RaceSims?
 
-> RaceSims is **India's integrated motorsport development platform** — a place where someone who loves racing can develop the craft, compete in real championships, and earn a path toward real-world seats through partners like [[arka-motorsports|ARKA]] and Polo Cup. We're not replacing the motorsport ecosystem. We're adding a new on-ramp to it.
+> **RaceSims is built for both** — the millions of people who'd love to try motorsport but have never had an affordable way in, and those who want to take it further into real racing. A place where anyone can try motorsport for the price of a movie ticket, and where those serious about it can find a real path to the racing grid through partnerships with [[arka-motorsports|ARKA]] and Polo Cup. We're not replacing the motorsport ecosystem — we're adding a new on-ramp to it, one wide enough for casual curiosity, steep enough for serious ambition.
 
 ### Where in three years?
 
-> By May 2029, **RaceSims will be where thousands of Indian teenagers count their racing journey as having begun.** The dream of becoming a racing driver is one of the most enduring aspirations of growing up in India. The audience is in the millions. The dream is common. What's been missing is a place to develop it. We are building that place.
+> By May 2029, **RaceSims will be two things, equally important**: (a) **the most accessible motorsport experience in India** — the cricket-net / padel-court / climbing-gym equivalent for motorsport, where anyone can walk in for the price of a movie ticket, and (b) **the platform where Indian motorsport development starts** — Motorsport Academy + RaceSims Championship + The Ladder pathway for those who want to take it further.
 
 ## The narrative structure
 
@@ -71,13 +71,24 @@ RaceSims is a **direct distributor in India for both Conspit and VNM** — the w
 1. **Humble, not disruptive** — never frame as "changing motorsport" or "disrupting karting." We are **additive** to the ecosystem.
 2. **Partnership-led** — credit ARKA, INRC, Polo Cup, MRF, JK Tyre, Castrol as the world we operate within
 3. **No put-downs** — never criticise existing motorsport access, family-based pathways, or competitors (including [[virtual-racing-hub|VRH]])
-4. **Crisp, ~850 words** — long enough to be substantive, short enough to land
-5. **Story before numbers** — teenagers' dreams open the 3-year vision; numbers follow as byproduct
-6. **Specific over abstract** — Hyderabad/Vijayawada/Coimbatore, not "Tier 2 cities"
+4. **Two audiences, equal weight** — the casual experience-seekers (the volume of the business) and those serious about motorsport (the brand + moat). **Never frame the aspirant audience as "few" or "small."** Just say "for those who want to take it further, the Academy is there."
+5. **Accessibility analogy** — padel courts, cricket nets, climbing gyms, tennis clubs make sport casual + affordable. Motorsport hasn't had that. We are it.
+6. **Cost positioning** — "price of a movie ticket" for first session. Concrete + relatable.
+7. **Crisp, ~900 words** — long enough to be substantive, short enough to land
+8. **Story before numbers** — universal motorsport curiosity opens the 3-year vision; numbers follow as byproduct
+9. **Specific over abstract** — Hyderabad/Vijayawada/Coimbatore, not "Tier 2 cities"
 
-## The closing line (locked)
+## The closing line (locked · v5.1)
 
-> We don't think we're the only path to that future. But if we do this right — **the next great Indian driver will tell their story starting with three words: *"I started at RaceSims."***
+> It isn't a slide in a deck. It's **two things at once**.
+>
+> **Tens of thousands of Indians will have tried motorsport for the first time** — at our centres, on world-class equipment, for less than the price of dinner. And **the next great Indian driver will tell their story starting with three words: *"I started at RaceSims."***
+>
+> We don't think we're the only path to that future. But if we do this right — we'll be **the place where motorsport in this country finally becomes something anyone can try, and where the path to the racing grid begins for those who want to take it.**
+
+## Founder name (locked)
+
+**Thambu Samy** — Founder, RaceSims Solutions Pvt Ltd; Race Engineer, ARKA Motorsports. *(Not "Thambu Selvarajalu" — that was an earlier auto-generated placeholder, now corrected throughout.)*
 
 ## Tonal rejected drafts (kept for institutional memory)
 
