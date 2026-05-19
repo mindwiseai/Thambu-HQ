@@ -47,6 +47,14 @@ A tiered set of structured programmes, each with defined curriculum, instructor 
 - Curriculum: pace notes, gravel/tarmac transitions, rally techniques on AC Rally + Richard Burns Rally
 - Outcome: ready for Rally Championship + potential [[arka-motorsports|ARKA Rally Drive]]
 
+### Tier 3b · Track Day Programmes (Chennai-specific revenue driver)
+- **Track Day Prep · 4 sessions · ₹25,000** — for first-time supercar/track-day participants
+- **Advanced Performance · 6 sessions · ₹50,000** — for repeat track-day drivers transitioning from sim to MMRT
+- For: HNI supercar owners (Lamborghini, Ferrari, Porsche, McLaren, Mercedes-AMG, etc.) heading to MMRT, Buddh, Coimbatore track days. Track-day participation has been growing significantly in India — these owners currently have no safe place to train before going to the real circuit.
+- Curriculum: track familiarisation (MMRT layout in particular), braking points + corner entry, recovery techniques, throttle control, telemetry-led feedback
+- Margin: 90%+ (premium coaching, low variable cost)
+- Y5 contribution per centre: ~₹10L (~5% of centre revenue, but very high-margin)
+
 ### Tier 4 · Pro Track
 - **Bespoke pricing** — programme tailored per driver
 - For: career-path aspirants
@@ -80,8 +88,7 @@ When they come back the 3rd time, the staff might mention: *"You've done a few s
 
 The Academy's credibility rests on its instructor and partner network:
 - **[[arka-motorsports|ARKA Motorsports]]** — pro driver coaching, Rally pathway, real seat at the end
-- **Buzzing Hornet** — partner racing team (TBC formal contract)
-- **Mind Motorsport** — partner motorsport network (TBC formal contract)
+- **Buzzing Hornet** — partner racing team for Real Driving Experiences
 - **[[mr-leela-krishnan|Mr. N. Leelakrishnan]]** — 7× national rally champion, ARKA team leader, masterclass anchor
 - **Pro guest drivers** — periodic 1-on-1 sessions billed as premium add-ons
 
