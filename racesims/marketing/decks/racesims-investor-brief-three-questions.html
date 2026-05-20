@@ -151,6 +151,32 @@
     font-size: 8.5pt; line-height: 1.45; color: var(--ink);
   }
 
+  /* 4-LoB Quadrant */
+  .lob-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 10px; margin: 10px 0 4px;
+  }
+  .lob-cell {
+    background: var(--cream-dark);
+    border-left: 3px solid var(--rs-red);
+    padding: 10px 14px;
+    position: relative;
+  }
+  .lob-cell .lob-num {
+    font-family: var(--mono); font-size: 8pt;
+    color: var(--rs-red); letter-spacing: 0.18em;
+    font-weight: 700; margin-bottom: 2px;
+  }
+  .lob-cell .lob-name {
+    font-size: 11pt; font-weight: 800;
+    color: var(--ink); letter-spacing: -0.01em;
+    line-height: 1.2; margin-bottom: 5px;
+  }
+  .lob-cell .lob-body {
+    font-size: 9pt; line-height: 1.5; color: var(--ink);
+  }
+  .lob-cell .lob-body b { color: var(--ink); font-weight: 700; }
+
   .stat-strip {
     display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 8px; margin: 10px 0;
@@ -211,16 +237,36 @@
     <div class="qnum">QUESTION ONE</div>
     <h2>What is RaceSims?</h2>
 
-    <p class="lead">RaceSims is <b>India's integrated motorsport development platform</b>. India has thousands of motorsport aspirants — but unlike most other sports, the entry barrier into motorsport is brutally high. Kart fees, equipment costs, training infrastructure, time: all gate the path to a real cockpit. Everyone aspires; few get the chance to try. RaceSims creates that path — <b>accessible to try for the price of a movie ticket</b>, with a <b>structured development path</b> for those serious about racing through The Motorsport Academy and partnerships with <b>ARKA Motorsports</b> and <b>Polo Cup</b> that lead to real-world race seats.</p>
+    <p class="lead"><b>RaceSims is India's gateway to motorsport.</b> Whether you want to try racing once or pursue it as a career — this is where you start.</p>
 
-    <p>Three businesses, one brand:</p>
-    <ul class="bullets">
-      <li><b>Operator</b> of premium sim racing centres — Chennai flagship opens 2026, with a 43-centre national rollout mapped over five years</li>
-      <li><b>Official distributor and service partner</b> in India for Conspit and VNM — the world's leading premium sim racing hardware brands</li>
-      <li><b>Championship organiser</b> — the National Sim Racing Championship launches 2027 with broadcast, sponsors, and real-world race seats at the end</li>
-    </ul>
+    <p>India has thousands of motorsport aspirants — but unlike most other sports, the entry barrier into motorsport is excruciatingly high. Kart fees, equipment costs, training infrastructure, time: all gate the path to a real cockpit. Everyone aspires; few get the chance to try. <b>RaceSims removes that gate.</b> We make racing accessible for the price of a movie ticket, and we give those serious about it a structured ladder all the way to the grid.</p>
 
-    <p>Inside every centre sits <b>The Motorsport Academy</b> (structured curriculum from Initiation through Pro Track) and <b>The Ladder</b> (the sim-to-real pathway via ARKA Rally Drive and Polo Cup Follow Car). Founded by <b>Thambu Samy</b>, a working race engineer at ARKA Motorsports — India's most-decorated motorsport team with <b>130+ national championship titles since 1987</b>.</p>
+    <p style="margin-bottom: 4px;">Built across <b>four lines of business</b>:</p>
+
+    <div class="lob-grid">
+      <div class="lob-cell">
+        <div class="lob-num">01</div>
+        <div class="lob-name">Sim Centres</div>
+        <div class="lob-body">Premium motorsport sim centres. <b>Chennai flagship opens 2026</b>, with a <b>43-centre national rollout</b> over five years.</div>
+      </div>
+      <div class="lob-cell">
+        <div class="lob-num">02</div>
+        <div class="lob-name">Hardware Distribution</div>
+        <div class="lob-body">Official distributor and service partner in India for <b>Conspit and VNM</b> — the world's leading premium sim racing hardware brands.</div>
+      </div>
+      <div class="lob-cell">
+        <div class="lob-num">03</div>
+        <div class="lob-name">The Motorsport Academy</div>
+        <div class="lob-body">Driver development under one roof. Curriculum (Initiation → Pro Track) · 1-on-1 coaching · <b>Track Day Programmes for supercar drivers</b> · Real Driving Experiences via exclusive partnerships.</div>
+      </div>
+      <div class="lob-cell">
+        <div class="lob-num">04</div>
+        <div class="lob-name">RaceSims Championship</div>
+        <div class="lob-body">India's national sim racing championship launches <b>2027</b> — broadcast, sponsors, and real-world race seats for the season's best.</div>
+      </div>
+    </div>
+
+    <p style="margin-top: 14px;">Founded by <b>Thambu Samy</b>, a working race engineer at ARKA Motorsports — India's most-decorated motorsport team with <b>130+ national championship titles since 1987</b>.</p>
   </div>
 
   <!-- Q2 -->
