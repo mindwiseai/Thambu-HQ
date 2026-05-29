@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>RaceSims · Chennai — Execution Plan</title>
+<style>
+:root{--cream:#F4EFE3;--paper:#FBF8F1;--red:#D81E33;--dark:#1A1A1A;--gold:#C9A24A;--steel:#3A4A5A;--mut:#7A736A;--line:#E4DAC2;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--dark);font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;line-height:1.6;font-size:15px}
+.wrap{max-width:980px;margin:0 auto;padding:0 26px 80px}
+header{background:var(--dark);color:var(--cream);padding:46px 0 38px;margin-bottom:0}
+header .wrap{padding-bottom:0}
+header h1{font-size:38px;font-weight:800;letter-spacing:.5px;margin:0}
+header h1 b{color:var(--red)}
+header .tag{color:var(--gold);font-weight:600;letter-spacing:1px;font-size:13px;margin-top:6px;text-transform:uppercase}
+header .meta{color:#b9b2a6;font-size:12px;margin-top:14px;font-family:'JetBrains Mono',monospace}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0 8px}
+.kpi{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 14px;text-align:center}
+.kpi .v{font-size:24px;font-weight:800;color:var(--red);font-family:'JetBrains Mono',monospace}
+.kpi .l{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;margin-top:4px}
+h2{font-size:22px;font-weight:800;margin:46px 0 6px;padding-top:14px;border-top:3px solid var(--red)}
+h2 .n{color:var(--red);font-family:'JetBrains Mono',monospace;margin-right:10px}
+h3{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--steel)}
+p{margin:8px 0}
+.lead{font-size:16px;color:#37322c}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px;background:var(--paper);border-radius:10px;overflow:hidden}
+th{background:var(--steel);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12px}
+td{padding:8px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:rgba(228,218,194,.25)}
+.tot td{font-weight:800;background:rgba(216,30,51,.08) !important}
+code,.mono{font-family:'JetBrains Mono',monospace;font-size:12.5px}
+.callout{background:var(--paper);border-left:4px solid var(--gold);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:14px}
+.warn{border-left-color:var(--red)}
+.phase{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:4px 16px 12px;margin:12px 0}
+.phase h3{color:var(--red)}
+.fig{margin:22px 0;text-align:center}
+.fig img{max-width:100%;border:1px solid var(--line);border-radius:12px}
+.fig .cap{font-size:12px;color:var(--mut);margin-top:6px}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;padding:11px 20px;border-radius:8px;font-weight:700;font-size:14px;margin:6px 8px 6px 0}
+.btn.alt{background:var(--dark)}
+ol.actions{counter-reset:a;list-style:none;padding:0}
+ol.actions li{counter-increment:a;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px 12px 56px;margin:9px 0;position:relative}
+ol.actions li:before{content:counter(a);position:absolute;left:14px;top:12px;width:30px;height:30px;background:var(--red);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'JetBrains Mono',monospace}
+ol.actions b{display:block;font-size:14px}
+ol.actions span{font-size:12.5px;color:var(--mut)}
+.foot{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--mut)}
+@media(max-width:680px){.kpis{grid-template-columns:repeat(2,1fr)}header h1{font-size:28px}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header><div class="wrap">
+  <h1>RaceSims · <b>Chennai</b></h1>
+  <div class="tag">Centre Execution Plan — Variant C</div>
+  <div class="meta">8 rigs (7 race/rally + 1 three-DOF motion) · 2 staff · sim-only baseline · prepared 2026-05-29</div>
+</div></header>
+
+<div class="wrap">
+
+<div class="kpis">
+  <div class="kpi"><div class="v">₹68.3L</div><div class="l">Net cash deployed</div></div>
+  <div class="kpi"><div class="v">10.1%</div><div class="l">Break-even occ.</div></div>
+  <div class="kpi"><div class="v">~16 wks</div><div class="l">Decision → open</div></div>
+  <div class="kpi"><div class="v">~13 mo</div><div class="l">Payback (sunk)</div></div>
+</div>
+
+<h2><span class="n">01</span>Executive summary</h2>
+<p class="lead">RaceSims · Chennai opens as an 8-rig premium sim-racing centre run under <b>Racesims Solutions Pvt Ltd</b> (existing GSTIN, no new entity). Net cash deployed ₹68.3L; sunk ₹59.0L after the refundable deposit. Break-even is 10.1% occupancy — well below the ~20% dealer Uday proved at month 6. Year-1 EBITDA ₹28.9L (good) / ₹8.4L (bad — still profitable). Profitable from ~month 3; payback ~13 months. Target public opening: <b>week 16</b> from decision-to-proceed.</p>
+
+<div class="fig">
+  <img src="racesims-chennai-floorplan.png" alt="Floor plan"/>
+  <div class="cap">To-scale floor plan · 1,142 sq ft hall · 8 rigs at 25% floor coverage</div>
+</div>
+<p style="text-align:center">
+  <a class="btn" href="racesims-chennai-3d.html">▶ Open interactive 3D model</a>
+  <a class="btn alt" href="racesims-chennai-premium-forecast.xlsx">▦ Open financial model</a>
+</p>
+
+<h2><span class="n">02</span>Phased timeline</h2>
+<table>
+<tr><th>Phase</th><th>Span</th><th>Focus</th><th>Key milestones</th></tr>
+<tr><td><b>0 · Validate</b></td><td>Wk 0–2</td><td>Decide, call Uday</td><td>Uday playbook call · CA brief (SAC/80-IAC) · venue shortlist · Conspit/VNM pro-forma · go/no-go + capital locked</td></tr>
+<tr><td><b>1 · Lease & legal</b></td><td>Wk 2–6</td><td>Sign, register, design</td><td>Lease (6-mo deposit, rent-free fit-out clause) · S&E + Trade Licence + Prof. Tax · floor plan · <b>hardware order placed by wk 4</b> · electrical survey · Fire NOC · insurance · VMS kick-off · Senior Lead hired</td></tr>
+<tr><td><b>2 · Fit-out & build</b></td><td>Wk 6–12</td><td>Electrical, interiors, procurement</td><td>Wiring + UPS + AC · flooring/acoustics/branding · networking · PCs configured · rigs cleared at port · rig + motion assembly · VMS build running</td></tr>
+<tr><td><b>3 · Commission</b></td><td>Wk 12–14</td><td>Test + train + soft launch</td><td>Systems commissioning · staff training · compliance walkthrough · 30-guest soft launch · punch-list cleared</td></tr>
+<tr><td><b>4 · Launch & ramp</b></td><td>Wk 14–16+</td><td>Public open → grow</td><td>Grand launch + ARKA media · Hot Lap #1 · month-4 checkpoint · layer academy/café on triggers</td></tr>
+</table>
+
+<h2><span class="n">03</span>Legal &amp; compliance</h2>
+<table>
+<tr><th>Item</th><th>Detail</th><th>Cost (₹)</th></tr>
+<tr><td>GST</td><td>Existing GSTIN 33AAOCR6378K1ZO. SAC <b>999694</b> (amusement/recreation, 18%). Prices GST-inclusive.</td><td>nil</td></tr>
+<tr><td>Lease registration</td><td>Sub-Registrar, Chennai. 1% stamp duty + reg fee.</td><td>25k–40k</td></tr>
+<tr><td>Shops &amp; Establishments</td><td>TN S&E Act, labour.tn.gov.in, within 30 days.</td><td>0.5k–2k</td></tr>
+<tr><td>Trade Licence</td><td>Greater Chennai Corporation — amusement category. Annual.</td><td>2k–8k/yr</td></tr>
+<tr><td>Fire NOC</td><td>TN Fire & Rescue. Extinguishers, smoke detectors, exit signage.</td><td>15k–30k</td></tr>
+<tr><td>Professional Tax</td><td>TN employer reg; ₹2,400/yr per employee.</td><td>per staff</td></tr>
+<tr><td>Music licence</td><td>PPL + IPRS if music played.</td><td>8k–15k/yr</td></tr>
+<tr><td>Insurance</td><td>₹50L+ asset cover + public liability.</td><td>~90k/yr</td></tr>
+<tr><td>EPF / ESI</td><td>EPF only at 20+ staff (N/A now); ESI N/A above ₹21k gross.</td><td>—</td></tr>
+</table>
+<div class="callout"><b>Tax flag:</b> The 80-IAC startup income-tax exemption is <b>not yet claimed this year</b> — Year-1 tax is ~₹4k anyway (depreciation shield), but the exemption matters in Years 2–3 when EBITDA grows. CA to confirm the FY2027 window and file. Don't miss it.</div>
+
+<h2><span class="n">04</span>Procurement &amp; build</h2>
+<p>Rigs sourced internally through Racesims Solutions as the Conspit/VNM distributor — at cost, not retail. <b>Order by week 4</b> (8-week lead time is the critical path; one week's slip here = one week's slip to opening).</p>
+<table>
+<tr><th>Equipment</th><th>Qty</th><th>₹</th></tr>
+<tr><td>Race/rally rigs (complete)</td><td>7 × ₹5,84,900</td><td>40,94,300</td></tr>
+<tr><td>Motion rig (3-DOF, complete)</td><td>1 × ₹9,84,900</td><td>9,84,900</td></tr>
+<tr class="tot"><td>Rig equipment total</td><td>8</td><td>50,79,200</td></tr>
+</table>
+<p>Plus: 6 KVA UPS · managed switch + business fibre · 4 × 1.5T 5-star ACs (≈4.5 kW heat load from PCs+screens+motion) · 3-phase wiring + DB board · flooring + acoustic panels · LED track lighting · reception + coffee counter (~₹0.8–1L) · glass training-room partition (~₹1–1.5L) · 65″ leaderboard · CCTV · fire kit · branding/signage.</p>
+
+<h2><span class="n">05</span>Fit-out &amp; interiors</h2>
+<p>1,142 sq ft hall, <b>L-shape</b>: 4 rigs along the back wall + 3 along the right wall, with the <b>motion rig as a hero island</b> (centre-left, visible on entry, 3 m clearance + spot lighting — the Instagram magnet). <b>Entrance</b> on the lift-lobby wall, with a combined <b>reception + coffee counter</b> just inside it. <b>Two washroom doors</b> on the front-left wall kept clear. <b>Glass training / academy room</b> (~11.5 m², 6–8 seats) in the back-left corner — enables the Phase-2 Academy without moving a rig. Lounge/spectator strip centre, 65″ leaderboard on the right wall. Floor-ducted cabling, acoustic panels behind the rig rows, ACs high on end walls. Editorial system: cream base + RS Red accent band, Montserrat headings, JetBrains Mono on the leaderboard. See the floor plan and 3D model above.</p>
+
+<h2><span class="n">06</span>Software &amp; ops</h2>
+<p>Run on <b>Uday's in-house VMS</b> (network) — Driver Card, live leaderboard, session management, booking + UPI payments, championship data — avoiding the ₹30k/mo SaaS. Sim stack: Le Mans Ultimate, iRacing, F1 25, AC Rally, Richard Burns Rally. UPI + card only (no cash). Hours: 12/day weekdays, 13/day weekends.</p>
+
+<h2><span class="n">07</span>Hiring &amp; staffing</h2>
+<table>
+<tr><th>Role</th><th>₹/mo</th><th>Shift</th></tr>
+<tr><td>Senior Team Lead (ops + Zoho Books)</td><td>35,000</td><td>Day, overlaps both</td></tr>
+<tr><td>Sim Ops Staff #1</td><td>25,000</td><td>11:00–19:00</td></tr>
+<tr><td>Sim Ops Staff #2</td><td>25,000</td><td>15:00–23:00 (overlap covers peak)</td></tr>
+</table>
+<p>Hire for customer energy + basic tech comfort (sim skill is trainable in a week). Brief both on the ARKA story so they can answer "are you legit?" factually. <b>Add a 3rd ops hire</b> when weekend peak holds &gt;60% (expected month 3–4).</p>
+
+<h2><span class="n">08</span>Marketing &amp; launch</h2>
+<p>Pre-launch teaser content (rig assembly time-lapse, motion-rig unboxing), then the <b>motion-rig test reel</b> as the hero pre-launch piece. Lead with ARKA/INRC pedigree — the one thing VRH (15× bigger on IG) can't claim. <b>Sell experiences + corporate first</b> (Chennai IT corridor: OMR/Tidel/SIPCOT) — they absorb premium pricing and fill weekday dead hours. Hot Lap weekly as the always-on funnel. Pass 8/16 prepaid bundles + referral for retention.</p>
+
+<h2><span class="n">09</span>Budget</h2>
+<h3>One-time capital</h3>
+<table>
+<tr><th>Line</th><th>₹</th></tr>
+<tr><td>Rig equipment (8, distributor cost)</td><td>50,79,200</td></tr>
+<tr><td>Power, electrical, UPS</td><td>2,50,000</td></tr>
+<tr><td>Brand, CX, fit-out</td><td>4,60,000</td></tr>
+<tr><td>Deposit (6 months, refundable)</td><td>9,31,500</td></tr>
+<tr><td>Working capital (2 months)</td><td>6,10,000</td></tr>
+<tr><td>Contingency (~5%)</td><td>~3,50,000</td></tr>
+<tr class="tot"><td>Net cash deployed (after ITC, ex sunk-only view)</td><td>~68,30,000</td></tr>
+</table>
+<h3>Monthly OpEx</h3>
+<div class="callout warn"><b>Reconcile before locking:</b> the model's <b>₹3,05,500</b> is core fixed lights-on (rent, maintenance, 2 staff + lead, electricity, internet, supplies). Adding sim subscriptions (~₹9k), single-venue VMS cloud (~₹3–5k), insurance (~₹7.5k), payment gateway (~2% of revenue) and Year-1 marketing (~₹25k) lifts the realistic all-in to <b>~₹3.6–3.9L/mo</b>. Break-even still ~12–13% on the larger figure — fold these lines into the Excel before final sign-off.</div>
+<div class="callout"><b>Runway buffer:</b> hold <b>~₹17L</b> separate (FD/liquid) — covers the worst-case (Brand Lags) ₹7.6L drawdown plus a motion-rig repair contingency, with room to spare. Ring-fence personal house rent from the business.</div>
+
+<h2><span class="n">10</span>KPIs &amp; guardrails</h2>
+<p>Track weekly (Mon, 5 min): rig-hours sold, motion-rig utilisation, weekly revenue, new Driver Cards, repeat-customer %. <b>Month-4 hard checkpoint:</b> occupancy must be &gt;10% and trending up, cumulative drawdown &lt;₹10L, ≥2 corporate bookings done, motion rig &gt;30% booked. If any two fail → trigger mitigation. Layer academy at &gt;15% sustained; café at &gt;20%; 2nd floor when weekday peak &gt;60% for 3 months.</p>
+
+<h2><span class="n">11</span>Risks &amp; mitigations</h2>
+<table>
+<tr><th>Risk</th><th>Mitigation</th></tr>
+<tr><td>Demand below Uday's ramp</td><td>Pre-activate corporate pipeline before launch — 1 corporate booking ≈ 2 walk-in days. Thambu to call 5 motorsport-affinity firms in month 1.</td></tr>
+<tr><td>Premium-price resistance</td><td>Never discount publicly; spread cost via Pass 8 + corporate packages. Frame vs. dinner+movie (₹1,500/3hr).</td></tr>
+<tr><td>Motion-rig failure</td><td>Extended warranty; Abdul trained on actuator reset; spare control board stocked; VMS range-of-motion alert.</td></tr>
+<tr><td>Key-person (Thambu)</td><td>Senior Lead runs centre independently within 90 days; runbooks; remote monitoring via VMS + Zoho.</td></tr>
+<tr><td>Customs / shipment delay</td><td>Order by wk 4; sea freight ~28 days + 2-wk buffer; clearing agent lined up; push soft launch rather than rush install.</td></tr>
+<tr><td>Trade Licence / Fire NOC delay</td><td>Apply all in wk 3; if NOC late, run invite-only soft launch (not public-charging) — confirm with CA.</td></tr>
+</table>
+
+<h2><span class="n">12</span>Immediate next 10 actions</h2>
+<ol class="actions">
+<li><b>Call Uday</b><span>45 min: month-by-month occupancy M1–6, quiet months, what marketing worked, customer mix, motion-rig utilisation, peak hours, what he'd change. Replaces weeks of guesswork.</span></li>
+<li><b>Lock the ₹68.3L capital decision</b><span>Confirm funds/source before anything else moves.</span></li>
+<li><b>Brief CA</b><span>SAC 999694, ESI non-applicability at ₹25k, 80-IAC FY2027 window, GST ITC capture on imports.</span></li>
+<li><b>Scout 3 venues</b><span>Anna Nagar / Kilpauk / Alwarpet-T.Nagar. 1,100–1,300 sq ft clear, 3-phase, lift for rig delivery, rent ≤₹1.6L. Measure each hall.</span></li>
+<li><b>Get Conspit/VNM pro-forma</b><span>7 rally + 1 motion BOM with HS codes + declared values; confirm 8-wk lead time + deposit.</span></li>
+<li><b>Engage a Chennai customs clearing agent</b><span>For rig import via Chennai Harbour; you have the IE code already.</span></li>
+<li><b>Line up electrical + interior contractor</b><span>Must have a commercial fit-out portfolio (3-phase). One quote by end of wk 2.</span></li>
+<li><b>Draft Senior Team Lead job post</b><span>₹35k, 6-day week, motorsport interest essential. Hire early — present during fit-out.</span></li>
+<li><b>Align VMS path with Uday</b><span>Collaborate / parallel-build / acquire. Kick off no later than wk 6.</span></li>
+<li><b>Set up a project tracker</b><span>One sheet: phase / milestone / owner / due / status. Weekly Monday review — embryo of the franchise playbook.</span></li>
+</ol>
+
+<div class="callout"><b>The single biggest de-risker costs nothing: the call to Uday (action #1).</b> Everything else follows from what he tells you.</div>
+
+<div class="foot">
+RaceSims · Chennai — Variant C execution plan · built around the conservative sim-only baseline (academy / café / The Ladder are upside layered on later). Figures from the locked financial model <span class="mono">racesims-chennai-premium-forecast.xlsx</span>. Generated 2026-05-29.
+</div>
+
+</div>
+</body>
+</html>
