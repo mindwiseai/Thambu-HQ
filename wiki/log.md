@@ -9,6 +9,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-30] edit | Academy simplified to 3 tiers
+- Updated: [[racesims-motorsport-academy]] — 7-tier programme collapsed to 3: Initiation (₹8K) · Advanced Circuit/Rally (₹20K/₹25K) · Sim + Reality Rally/Circuit (₹1.75L/₹2.25L). Pro Track removed. Track Day Programmes + Tuner Lab moved out of Academy into separate offerings.
+- Updated: [[racesims-master-rate-card]] TRAIN section to match
+- Updated: [[racesims-drive-train-compete]] TRAIN table to match
+- Domain: racesims
+
 ## [2026-05-30] edit | Group pricing rework + 8-seat correction
 - Updated: [[racesims-master-rate-card]] group section — replaced 4 overlapping flat-rate products with: Group Race (₹1,000/hr/seat rally, non-exclusive), Private Event (₹12,000/hr all 8 seats, 3-hr min), Corporate Shootout (₹45-65K/event), Corporate Retainer (₹1,000/hr/seat B2B)
 - Updated: [[racesims-drive-train-compete]] DRIVE table to reflect new group products

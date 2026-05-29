@@ -50,19 +50,23 @@ Centre has **8 seats: 7 rally + 1 motion**. See [[racesims-master-rate-card]] fo
 
 For drivers who want to get measurably faster. Three core schools + premium HNI experiences.
 
-| Programme | Sessions | Price | Customer |
-|-----------|----------|-------|----------|
-| **Initiation** | 4 × 1hr | ₹8,000 | First-timers — earns Initiation Licence |
-| **Race Academy** | 8 × 1hr | ₹20,000 | Enthusiasts to serious circuit racers |
-| **Rally School** | 10 × 1hr | ₹25,000 | Rally-focused — ARKA-endorsed curriculum |
-| **Track Day Prep** *(Chennai)* | 4 × 90min | ₹25,000 | Supercar owners pre-MMRT/Buddh |
-| **Advanced Performance** *(Chennai)* | 6 × 90min | ₹50,000 | Repeat track-day drivers → MMRT mastery |
-| **Pro Track** | Bespoke | ~₹4,500/session | Career-path aspirants |
-| **Tuner Lab** *(corporate)* | 8 × 3hrs | ₹28,000/person | Corporate team-building with substance |
-| **ARKA Real Drive** | Full day | ₹1,75,000 | Sim morning + ARKA rally stage |
-| **Buzzing Hornet Real Drive** | Full day | ₹2,25,000 | Sim morning + race car afternoon |
+**The Motorsport Academy — 3 tiers:**
 
-All Academy programme fees include coached rig time. Between-session practice billed at open session rates.
+| Tier | Programme | Price | What it is |
+|------|-----------|-------|------------|
+| 1 | **Initiation** | ₹8,000 | 4 coached sessions · earns Initiation Licence · Step 1 of The Ladder |
+| 2 | **Advanced** | Circuit ₹20,000 · Rally ₹25,000 | 8–10 coached sessions · championship-ready |
+| 3 | **Sim + Reality** | Rally ₹1,75,000 · Circuit ₹2,25,000 | Sim prep + real car day (ARKA / Buzzing Hornet) |
+
+Academy fees include coached rig time. Between-session practice billed at open session rates.
+
+**Separate (not Academy tiers):**
+
+| Programme | Price | Who |
+|-----------|-------|-----|
+| **Track Day Prep** *(Chennai)* | ₹25,000 | Supercar owners pre-MMRT/Buddh — 4 × 90min |
+| **Advanced Performance** *(Chennai)* | ₹50,000 | Repeat track-day drivers — 6 × 90min |
+| **Tuner Lab** *(corporate)* | ₹28,000/person | Data-led team-building · 8 × 3hr sessions |
 
 ## COMPETE — race against other people
 

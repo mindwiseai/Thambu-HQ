@@ -85,42 +85,34 @@ For companies booking regular sim-racing team sessions (employee engagement, mot
 
 ## TRAIN — The Motorsport Academy
 
-> Academy programme fees **include coached rig time** for all programme sessions. Between-session practice is billed at open session rates.
+> Academy programme fees **include coached rig time** for all programme sessions. Between-session practice billed at open session rates.
 
-### Core Programmes
+### Academy — 3 tiers
 
-| Programme | Sessions | Duration each | Total seat-hrs | Price | ₹/session |
-|-----------|----------|---------------|----------------|-------|-----------|
-| **Initiation** | 4 | 1 hr | 4 hrs | **₹8,000** | ₹2,000 |
-| **Race Academy** | 8 | 1 hr | 8 hrs | **₹20,000** | ₹2,500 |
-| **Rally School** | 10 | 1 hr | 10 hrs | **₹25,000** | ₹2,500 |
+| Tier | Programme | Sessions | Duration | Price |
+|------|-----------|----------|----------|-------|
+| 1 | **Initiation** | 4 | 1 hr coached | **₹8,000** |
+| 2 | **Advanced – Circuit** | 8 | 1 hr coached | **₹20,000** |
+| 2 | **Advanced – Rally** | 10 | 1 hr coached | **₹25,000** |
+| 3 | **Sim + Reality – Rally** | 4 sim prep + ARKA rally drive day | — | **₹1,75,000** |
+| 3 | **Sim + Reality – Circuit** | 4 sim prep + Buzzing Hornet race day | — | **₹2,25,000** |
 
-All three include: telemetry-led coaching, ARKA-endorsed curriculum, completion certificate, progression to next tier.
+Tier 3 is both sold as a premium package and earned as [[racesims-the-ladder|The Ladder]] prize by the Annual Champion (they win it — not buy it).
 
-### Track Day Programmes *(Chennai-specific · HNI supercar owners)*
+### Track Day Programmes *(Chennai-specific · separate from Academy)*
 
-| Programme | Sessions | Duration each | Price | ₹/session |
-|-----------|----------|---------------|-------|-----------|
-| **Track Day Prep** | 4 | 90 min | **₹25,000** | ₹6,250 |
-| **Advanced Performance** | 6 | 90 min | **₹50,000** | ₹8,333 |
+For supercar owners preparing for real circuit days. Not part of the Academy career path.
 
-For Lamborghini / Ferrari / Porsche / AMG owners preparing for MMRT, Buddh, Coimbatore circuit days. Margin 90%+.
+| Programme | Sessions | Duration | Price |
+|-----------|----------|----------|-------|
+| **Track Day Prep** | 4 | 90 min coached | **₹25,000** |
+| **Advanced Performance** | 6 | 90 min coached | **₹50,000** |
 
-### Advanced / Bespoke
+### Tuner Lab *(corporate · separate from Academy)*
 
-| Programme | Format | Price |
-|-----------|--------|-------|
-| **Pro Track** | Bespoke per driver · 1–2 hr sessions · telemetry-led weekly training | **~₹4,500/session** |
-| **Tuner Lab** *(corporate)* | 8 sessions × 3 hrs · min 4 people per cohort | **₹28,000/person** |
-
-### Real Driving Experiences *(Apex of TRAIN — sold separately and as Ladder prize)*
-
-| Experience | Customer price | Our cost | GM |
-|------------|---------------|----------|----|
-| **ARKA Real Drive** — sim morning + ARKA rally stage | **₹1,75,000** | ₹1,00,000 | 43% |
-| **Buzzing Hornet Real Drive** — sim morning + race car | **₹2,25,000** | ₹1,25,000 | 44% |
-
-Sold individually + as corporate experiences. Real Drive prizes are also the Annual Champion's earned reward via [[racesims-the-ladder|The Ladder]] (not purchasable — they are won).
+| Format | Price |
+|--------|-------|
+| 8 sessions × 3 hrs · min 4 people per cohort | **₹28,000/person** |
 
 ---
 
