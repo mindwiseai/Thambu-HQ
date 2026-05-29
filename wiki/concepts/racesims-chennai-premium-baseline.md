@@ -15,9 +15,14 @@ A **conservative, ground-truth forecast** for the [[racesims-chennai-flagship|Ch
 > - **This baseline:** 18% average Year-1 occupancy (brand-lands case), **anchored to Uday's actual ~20% at month 6** on 8 rigs at ₹800/hr.
 > The deck assumes 1.5-3× the occupancy the one real network operator achieved. **Treat this page as the conservative floor; treat the deck as the upside-funded-by-academy/café case.** Do not present the deck's occupancy to investors without flagging Uday's real number.
 
-## Configuration
-- **6 rigs:** 5 race/rally + **1 three-DOF motion rig** (the hero / footfall magnet).
-- **Equipment:** 5 × ₹5,84,900 + 1 × ₹9,84,900 = **₹39,09,400** at [[conspit]]/[[vnm]] distributor cost (vs ₹65-70L retail → ₹26-31L day-one equity, the distributor moat).
+## Configuration — CHOSEN: Variant C (8 rigs)
+**Decision (2026-05-29): go with 8 rigs — 7 race/rally + 1 three-DOF motion**, 2 staff (lean). The live Excel base case (Summary + P&L) is now set to this; the 6-rig builds remain in the `Variants` tab for reference.
+- **Equipment:** 7 × ₹5,84,900 + 1 × ₹9,84,900 = **₹50,79,200** at [[conspit]]/[[vnm]] distributor cost (~₹85-95L retail → big day-one equity).
+- **Net cash deployed ₹68.3L · sunk ₹59.0L · break-even 10.1% occupancy** (below [[uday-hyderabad|Uday]]'s proven ~20%).
+- **Year 1: ₹28.9L EBITDA (brand-lands) / ₹8.4L (brand-lags — profitable even in the bad case)**, profitable from month 3, payback ~13 months sunk.
+
+### Floor fit (confirmed)
+Venue = typical floor (1st–4th), clear office hall **8.73 m × 12.15 m = 28.6 × 39.9 ft ≈ 1,142 sq ft** (service core separate). At 6×6 ft/rig, 8 rigs = 288 sq ft = **25% of floor** — fits with room for reception, lounge, leaderboard. Hall could hold 12–16 rigs with aisles, so **floor is not the constraint**; expansion to a 2nd floor available later. Layout: 2 rows of 4 along long walls, ~6 ft central aisle, motion rig cornered with clearance, ~16 ft entrance zone for reception/lounge.
 - Run under [[racesims-company|Racesims Solutions Pvt Ltd]] — existing GSTIN, full ITC, shared CA/books, [[abdul]] services rigs in-house, director cost stays at HQ.
 
 ## Pricing — tiered premium (GST-inclusive)
