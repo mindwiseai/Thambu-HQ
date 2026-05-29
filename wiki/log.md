@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-29] edit | Chennai execution plan + final floor plan/3D
+- Created: [[racesims-chennai-execution-plan]] (12-section build-and-launch plan, Variant C)
+- Updated: [[racesims-chennai-premium-baseline]] floor-fit section (final layout)
+- Deliverables in `racesims/`: floor plan (final — entrance on lift-lobby wall, coffee+reception cluster, 2 washroom doors kept clear, glass training/academy room, L-shape 8 rigs), interactive 3D model, branded plan HTML, live Excel
+- Layout corrected over 3 iterations per Thambu's PDF markups (entrance, then coffee clear of washroom, then 2 washroom doors)
+- Domain: racesims
+
 ## [2026-05-29] ingest | Chennai Premium Baseline Forecast
 - Source: [[2026-05-29-chennai-premium-baseline-forecast]]
 - Created: 3 new pages — [[racesims-chennai-premium-baseline]], [[uday-hyderabad]], [[2026-05-29-chennai-premium-baseline-forecast]]
