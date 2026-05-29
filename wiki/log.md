@@ -9,6 +9,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-30] edit | Group pricing rework + 8-seat correction
+- Updated: [[racesims-master-rate-card]] group section — replaced 4 overlapping flat-rate products with: Group Race (₹1,000/hr/seat rally, non-exclusive), Private Event (₹12,000/hr all 8 seats, 3-hr min), Corporate Shootout (₹45-65K/event), Corporate Retainer (₹1,000/hr/seat B2B)
+- Updated: [[racesims-drive-train-compete]] DRIVE table to reflect new group products
+- Updated: [[racesims-chennai-flagship]] — added contradiction callout: centre is 8 seats (7 rally + 1 motion), P&L was built on 6-rig assumption. P&L recalibration pending.
+- Domain: racesims
+
 ## [2026-05-29] edit | Pricing restructure — master rate card + 5 page updates
 - Created: [[racesims-master-rate-card]] (new single source of truth for all pricing)
 - Updated: [[racesims-drive-train-compete]], [[racesims-motorsport-academy]], [[racesims-chennai-flagship]], [[racesims-naming-architecture]], [[racesims-championship-architecture]]

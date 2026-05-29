@@ -38,10 +38,13 @@ For walk-ins, casual users, corporate groups. No commitment, no progression requ
 | Motion rig surcharge | +₹500/hr |
 | Pass 8 — 8 hrs/month | ₹8,000/mo |
 | Pass 16 — 16 hrs/month | ₹14,000/mo |
-| Team Day (4–6 seats · 3 hrs) | ₹20,000 flat |
-| Private Centre Hire (all 6 seats) | ₹8,000/hr · 3-hr min |
+| **Group Race** (3+ people, non-exclusive) | ₹1,000/hr/seat rally · ₹1,500/hr motion |
+| **Private Event** (all 8 seats exclusive) | ₹12,000/hr · 3-hr min |
+| **Corporate Shootout** (structured, up to 16) | ₹45,000–65,000/event |
 
 > *"₹750 for a quick 30-minute drive, ₹1,250 for an hour. Just walk in."*
+
+Centre has **8 seats: 7 rally + 1 motion**. See [[racesims-master-rate-card]] for full group pricing detail.
 
 ## TRAIN — structured programmes with a coach
 

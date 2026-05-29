@@ -11,7 +11,9 @@ updated: 2026-05-29
 
 Single source of truth for all customer-facing pricing. All product pages link here — do NOT maintain separate pricing tables elsewhere.
 
-> **P&L note:** The Chennai flagship P&L (v3.2) used a ₹750 blended/hr assumption built on older rates. These new rates (₹750/30min · ₹1,250/1hr) will yield a higher blended rate at steady-state. P&L to be recalibrated separately.
+> **Seat config:** Chennai centre has **8 seats — 7 rally/circuit + 1 motion**. Older documents (Chennai flagship P&L v3.2, capex model) used a 6-rig assumption — these need recalibration. Capacity ceiling is now 8 × 12 × 365 = **35,040 seat-hours/year** (vs 26,280).
+
+> **P&L note:** The Chennai flagship P&L (v3.2) used a ₹750 blended/hr assumption built on older rates. New rates (₹750/30min · ₹1,250/1hr) and the 8-seat config both require a full P&L recalibration.
 
 ---
 
@@ -39,13 +41,45 @@ Pass holders get: advance booking priority + fixed monthly rate. Rig time booked
 
 ### Group & Events
 
-| Product | Price | Format |
-|---------|-------|--------|
-| Team Day | **₹20,000 flat** | 4–6 seats · 3-hr session · 1 staff host included |
-| Birthday Package | **₹15,000 flat** | 4 seats · 3 hrs + ₹2,000 F&B credit |
-| Corporate Track Day | **₹45,000–60,000** | 6 seats · 4 hrs · custom briefing · quote required |
-| Private Centre Hire | **₹8,000/hr** | All 6 seats exclusive · 3-hr minimum |
-| Corporate Rate (B2B recurring) | **₹1,000/hr/seat** | Requires ≥8 hrs/month commitment |
+**Centre has 8 seats — 7 rally + 1 motion.** All group products below.
+
+#### Group Race *(non-exclusive — walk-ins may occupy remaining seats)*
+
+| Seat type | Rate | Min |
+|-----------|------|-----|
+| Rally seat | **₹1,000/hr/seat** | 3 seats · 2-hr minimum |
+| Motion seat | **₹1,500/hr** | 1 seat · 2-hr minimum |
+
+Includes: group leaderboard on main display, race host on standby. Ideal for friends, birthday groups, date nights, college outings. Remaining seats sold to walk-ins as normal.
+
+*Example — 6 friends, 2 hrs:* 5 rally × ₹1,000 × 2 hrs + 1 motion × ₹1,500 × 2 hrs = ₹13,000 total.
+
+#### Private Event *(exclusive — all 8 seats reserved)*
+
+| Rate | Minimum | Includes |
+|------|---------|----------|
+| **₹12,000/hr** | 3 hrs (₹36,000) | All 8 seats locked · dedicated host · custom branded leaderboard · no walk-ins |
+
+Premium for full exclusivity. For birthdays wanting the whole venue, product launches, content shoots, corporate events with external guests.
+
+*Example — 8 people, 3 hrs:* ₹36,000 flat. ₹4,500/person — cheaper per head than most corporate team-building.
+
+#### Corporate Shootout *(structured team-building event)*
+
+| Scale | Duration | Price |
+|-------|----------|-------|
+| Up to 8 participants | 3 hrs | **₹45,000** |
+| Up to 16 participants (2 rotations) | 3 hrs | **₹65,000** |
+
+Includes: race engineer briefing, individual telemetry review per driver, team championship format, printed branded results + certificates. For company off-sites, incentive events, leadership programmes.
+
+#### Corporate Retainer *(B2B recurring)*
+
+| Rate | Commitment | Billing |
+|------|------------|---------|
+| **₹1,000/hr/seat** | ≥8 hrs/month | Monthly invoice |
+
+For companies booking regular sim-racing team sessions (employee engagement, motorsport-adjacent industries). Priority booking over walk-ins. Motion surcharge applies.
 
 ---
 
@@ -130,15 +164,18 @@ Graduates at 18+ automatically receive 50% discount on first Championship Pass y
 
 ## Quick reference — per-hour economics
 
-| Product | ₹/hr effective | Premium over self-directed |
-|---------|---------------|---------------------------|
-| 30-min walk-in | ₹1,500 | — |
-| 1-hr open session | ₹1,250 | — |
-| Pass 16 | ₹875 | −30% (loyalty discount) |
-| Initiation session | ₹2,000 | +60% (coached premium) |
-| Race / Rally Academy session | ₹2,500 | +100% (coached premium) |
-| Track Day Prep session | ₹4,167 | +233% (HNI premium) |
-| Advanced Performance session | ₹5,556 | +344% (HNI premium) |
+| Product | ₹/hr effective | vs 1-hr open session |
+|---------|---------------|----------------------|
+| 30-min walk-in | ₹1,500/hr | +20% |
+| 1-hr open session | ₹1,250/hr | — baseline |
+| Group Race (rally seat) | ₹1,000/hr | −20% (group loyalty) |
+| Pass 16 | ₹875/hr | −30% (membership loyalty) |
+| Group Race (motion seat) | ₹1,500/hr | +20% (motion premium) |
+| Private Event (per seat) | ₹1,500/hr | +20% (exclusivity premium) |
+| Initiation session | ₹2,000/hr | +60% (coached) |
+| Race / Rally Academy session | ₹2,500/hr | +100% (coached) |
+| Track Day Prep session | ₹4,167/hr | +233% (HNI coached) |
+| Advanced Performance session | ₹5,556/hr | +344% (HNI coached) |
 
 ---
 

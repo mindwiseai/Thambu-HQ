@@ -35,9 +35,12 @@ The centre's customer-facing name is **"RaceSims · Chennai"** — *not* "RaceSi
 > - Y1 ancillary corrected — was modelling 50%+ of rig revenue (unrealistic for Y1), now 14% Y1 → 28% Y5
 > v2 numbers are honest, defensible, investor-grade. **v2 is authoritative going forward.**
 
+> [!contradiction]
+> **Seat count discrepancy.** The executed floor plan (May 29 layout, L-shape 8 rigs) has **8 seats: 7 rally + 1 motion**. The P&L model and capex table below were built on a 6-rig assumption (5 rally + 1 motion). Capacity ceiling, capex, and all P&L numbers need recalibration for 8 rigs. See [[racesims-master-rate-card]] for current seat config.
+
 ## What this is
 
-A 1,200-1,500 sqft premium sim racing venue with 6 rigs (5 Rally + 1 Motion), café-lounge, viewing/event area, and event-streaming kit. Not a gaming café — a professional motorsport development facility positioned via [[racesims-drive-train-compete|Drive · Train · Compete]] with a clear pathway from walk-in customer to real-motorsport seat via [[racesims-the-ladder|the Ladder]].
+A 2,000 sqft premium sim racing venue with 8 rigs (7 Rally + 1 Motion), café-lounge, viewing/event area, and event-streaming kit. Not a gaming café — a professional motorsport development facility positioned via [[racesims-drive-train-compete|Drive · Train · Compete]] with a clear pathway from walk-in customer to real-motorsport seat via [[racesims-the-ladder|the Ladder]].
 
 ## Capital investment — v2 (locked)
 
