@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-29] ingest | Chennai Premium Baseline Forecast
+- Source: [[2026-05-29-chennai-premium-baseline-forecast]]
+- Created: 3 new pages — [[racesims-chennai-premium-baseline]], [[uday-hyderabad]], [[2026-05-29-chennai-premium-baseline-forecast]]
+- Updated: [[racesims-chennai-flagship]] (contradiction callout + backlink), domain index, hot
+- Domain: racesims
+- Note: conservative sim-only forecast anchored to real dealer data. Y1 EBITDA ₹11.7L (brand-lands), break-even 13.8%, payback ~19-22mo. Flags v3.1 deck occupancy (30-68%) as 1.5-3× Uday's real ~20%. Live model in racesims-chennai-premium-forecast.xlsx (gitignored).
+
 ## [2026-05-19 EVE] ingest | Multi-centre rollout deck COMPLETE (slides 5-13 built)
 - Updated: `racesims-multi-centre-rollout.html` + `.pdf` — full 13-slide Series A deck
 - **Deck structure (locked):**

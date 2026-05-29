@@ -1,14 +1,23 @@
 ---
 title: Hot Cache
 type: meta
-updated: 2026-05-18
+updated: 2026-05-29
 ---
 
 # Hot Cache
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-19 EVE (latest) — Multi-centre rollout deck COMPLETE (13 slides)
+## 2026-05-29 (latest) — Chennai Premium Baseline Forecast (conservative, Uday-anchored)
+
+- Built a **conservative sim-only forecast** for [[racesims-chennai-flagship|Chennai]] with [[thambu]] — see [[racesims-chennai-premium-baseline]]. Live Excel: `racesims-chennai-premium-forecast.xlsx` (gitignored).
+- **Config:** 5 race/rally + 1 three-DOF motion rig (₹39.09L distributor cost). Tiered premium pricing (race ₹750/₹1,250, motion ₹1,000/₹1,600), **fleet blended ₹1,225/hr net**. OpEx ₹3.17L (lean 2-staff ₹2.92L). Net cash ₹57.6L, sunk ₹48.3L.
+- **Year 1 (brand-lands):** ₹49.8L net rev, **₹11.7L EBITDA**, ₹3.5L max drawdown, profitable month 5. Break-even **13.8%**. Income tax ≈ ₹4k Y1 (depreciation shield, no exemption needed). **Payback ~19-22 months** at 25% steady (corrected down from an erroneous ~8-10mo).
+- **Key reality check:** anchored to [[uday-hyderabad|Uday]] (Hyderabad dealer, NOT competition) — 8 rigs, ₹800/hr, **peaked ₹4.5L at month 6 ≈ ~20% occupancy, still climbing**. This flags the [[racesims-chennai-flagship]] v3.1 deck's 30-68% occupancy as **1.5-3× optimistic**. Baseline = conservative floor; deck = academy/café-funded upside.
+- **Open:** can space hold 8 rigs? · get Uday's full playbook (biggest free de-risker) · confirm 80-IAC exemption FY2027 with CA.
+- Thambu nervous about overhead jump (₹90k→₹3.17L/mo) — worked the risk framing: hold ~₹19L runway, ring-fence house rent, watch month 4 as the go/no-go signal.
+
+## 2026-05-19 EVE — Multi-centre rollout deck COMPLETE (13 slides)
 
 - **`racesims-multi-centre-rollout.pdf` is now 13 slides** · full Series A pitch deck. Structure: **Cover → What is RaceSims → Where in 3yr → Per-centre revenue (Drive·Train·Compete) → Chennai proof point → Two formats (Boutique vs Mega) → 5-year rollout timeline → Network economics Y5 → Capital roadmap → Franchise economics → Five moats → Valuation case → The Ask**
 - **The Ask:** ₹15-20cr Series A · funds 7 centres by end of Y2 · 17 centres + ₹8-10cr EBITDA by end of Y3 · ₹1,000-1,300cr Y5 valuation. Operating cash positive from Y3 — no further dilution required for India saturation.

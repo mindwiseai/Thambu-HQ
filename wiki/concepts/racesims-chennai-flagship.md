@@ -252,8 +252,12 @@ Capital fully returned by Q1 of Y3. Pure compounding thereafter.
 - **PDF deck:** `racesims/marketing/decks/chennai-centre-proposal.pdf`
 - **Source page:** [[2026-05-18-chennai-flagship-proposal-v2]]
 
+> [!contradiction]
+> A conservative counter-model, [[racesims-chennai-premium-baseline]] (2026-05-29), assumes **18% Year-1 occupancy** — anchored to real dealer [[uday-hyderabad|Uday]]'s ~20%-at-month-6 — vs this page's 30→68% ramp. The deck's occupancy is 1.5-3× the only real network data point. Use the baseline as the conservative floor; this page is the upside case (academy/café/Ladder funded).
+
 ## Connections
 
+- [[racesims-chennai-premium-baseline]] — **conservative sim-only baseline (Uday-anchored, more pessimistic occupancy)**
 - [[2026-05-18-chennai-flagship-proposal-v2]] — **v2 source (authoritative)**
 - [[racesims-naming-architecture]] — **brand & naming architecture (centre vs programme split)**
 - [[racesims-motorsport-academy]] — **the structured training programme inside the centre**
