@@ -75,7 +75,7 @@ Apple's stores are called "Apple [City/Mall]." The classes inside are called *"T
 
 **Casual kid scenario:**
 - *Kid:* "How much to drive?"
-- *Staff:* "₹750 weekday, ₹1,000 weekend. Just come in, no booking needed."
+- *Staff:* "₹750 for a quick 30-minute drive, ₹1,250 for an hour. Just walk in."
 - → Academy never comes up. Brings 4 friends.
 
 **Aspirant's parent scenario:**
@@ -85,7 +85,7 @@ Apple's stores are called "Apple [City/Mall]." The classes inside are called *"T
 
 ## Strategic upsides downstream
 
-1. **Pricing power** — Academy positioning lets the centre charge ₹900-1,200/hr peak without competitor-style price wars. Sim cafés can't charge that — they lack legitimacy.
+1. **Pricing power** — Academy positioning lets the centre charge ₹1,250/hr (1-hr session) without competitor-style price wars. Sim cafés can't charge that — they lack legitimacy.
 2. **Sponsorship magnetism** — Brands sponsor *Academies*, not arcades. MRF Tyres, Castrol, JK Tyre, Conspit India sponsorship potential opens.
 3. **Talent pipeline value** — Championship winners are *"Motorsport Academy graduates"* — a real, brandable outcome.
 4. **National Championship credibility** — A national championship hosted by an *Academy* is a championship. Hosted by an *arcade* is a tournament.

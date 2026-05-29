@@ -35,8 +35,10 @@ LAYER 1  ALWAYS-ON   Drive & Race →  Walk in, drive, leaderboard
 | | Circuit | Rally |
 |---|---|---|
 | Platforms | Le Mans Ultimate + iRacing | AC Rally + Richard Burns Rally |
-| Pass | ₹4,500/year | ₹4,500/year |
+| Championship Pass | ₹4,500/year (single) · ₹7,500/year (dual) | ₹4,500/year (single) · ₹7,500/year (dual) |
 | Annual Champion prize | Polo Cup Follow Car Programme (₹1.5L value) | [[arka-motorsports|ARKA Rally Drive]] (₹1L value) |
+
+**Championship Pass covers:** competition entry + VMS points tracking + event priority booking. **Rig time is always billed separately** — Time Trial rounds at Pass holder rates (Pass 8/16), Live Race rounds as normal rig bookings. Pass holders are expected to carry Pass 8 or Pass 16 to cover their weekly TT practice.
 
 Drivers can hold a Pass in one or both. Separate points, separate champions, separate Grand Finals.
 

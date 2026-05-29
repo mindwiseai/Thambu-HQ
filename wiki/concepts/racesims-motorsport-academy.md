@@ -4,12 +4,12 @@ type: concept
 domain: racesims
 status: LOCKED
 tags: [programme, training, academy, career-path, curriculum]
-updated: 2026-05-18
+updated: 2026-05-29
 ---
 
 # The Motorsport Academy
 
-The structured training programme inside [[racesims-chennai-flagship|RaceSims Chennai]] that takes aspirants from first lap to championship-grade racer, with a documented pathway to real motorsport via [[arka-motorsports|ARKA Motorsports]] and partner teams. **The Academy is the *programme*, not the *place*** — the centre is just *RaceSims · Chennai*, the Academy lives inside it. Locked May 18 as part of [[racesims-naming-architecture]].
+The structured training programme inside [[racesims-chennai-flagship|RaceSims Chennai]] that takes aspirants from first lap to championship-grade racer, with a documented pathway to real motorsport via [[arka-motorsports|ARKA Motorsports]] and partner teams. **The Academy is the *programme*, not the *place*** — the centre is just *RaceSims · Chennai*, the Academy lives inside it. Locked May 18 as part of [[racesims-naming-architecture]]. Pricing updated May 29 — master reference at [[racesims-master-rate-card]].
 
 ## Positioning
 
@@ -24,55 +24,79 @@ The structured training programme inside [[racesims-chennai-flagship|RaceSims Ch
 
 A tiered set of structured programmes, each with defined curriculum, instructor allocation, telemetry feedback, and progression criteria. Optional but central to the centre's identity. Most casual customers will never touch the Academy and that's fine — but its existence elevates the centre's whole brand.
 
+**All Academy programme fees include coached rig time** for all programme sessions. Between-session practice billed at open session rates (see [[racesims-master-rate-card]]).
+
+---
+
 ## Programme tiers
 
 ### Tier 0 · Open Sessions
-*Not technically Academy* — included for clarity. Drop-in racing. ₹750-1,000/hr. No commitment. The lowest rung of the funnel; many customers stop here and never progress.
+*Not technically Academy* — included for clarity. Drop-in racing, ₹750 (30 min) or ₹1,250 (1 hr). No commitment. The lowest rung of the funnel; many customers stop here and never progress.
 
 ### Tier 1 · Initiation
-- **4 sessions · ₹8,000**
+- **4 sessions · 1 hr each · ₹8,000** (₹2,000/session)
 - For: first-time customers who want to learn properly
-- Curriculum: sim racing fundamentals, racing line, braking points, basic car control
-- Outcome: certificate + readiness for Race Academy
+- Curriculum: sim racing fundamentals, racing line, braking points, basic car control, timed assessment in session 4
+- Outcome: **Initiation Licence** (lifetime, doesn't expire) + readiness for Race Academy or RaceSims Championship
+- This is **Step 1 of [[racesims-the-ladder|The Ladder]]** — must be completed to be Championship-eligible
 
 ### Tier 2 · Race Academy
-- **8 sessions · ₹14,000**
+- **8 sessions · 1 hr each · ₹20,000** (₹2,500/session)
 - For: enthusiasts to serious racers
-- Curriculum: race craft, overtaking, defensive driving, tyre management, advanced lines
-- Outcome: ready to enter [[racesims-championship-architecture|RaceSims Championship]] qualifiers
+- Curriculum: race craft, overtaking, defensive driving, tyre management, advanced lines, telemetry review each session
+- Platforms: Le Mans Ultimate + iRacing
+- Outcome: championship-ready + direct shot at qualifying for Quarterly Shootouts
 
 ### Tier 3 · Rally School
-- **10 sessions · ₹16,000**
+- **10 sessions · 1 hr each · ₹25,000** (₹2,500/session)
 - For: rally-focused racers
-- Curriculum: pace notes, gravel/tarmac transitions, rally techniques on AC Rally + Richard Burns Rally
-- Outcome: ready for Rally Championship + potential [[arka-motorsports|ARKA Rally Drive]]
+- Curriculum: pace notes, gravel/tarmac transitions, rally-specific techniques on AC Rally + Richard Burns Rally
+- ARKA-endorsed curriculum — Mr. Leelakrishnan's fingerprints on the syllabus
+- Outcome: ready for Rally Championship + potential [[arka-motorsports|ARKA Rally Drive]] pathway
 
-### Tier 3b · Track Day Programmes (Chennai-specific revenue driver)
-- **Track Day Prep · 4 sessions · ₹25,000** — for first-time supercar/track-day participants
-- **Advanced Performance · 6 sessions · ₹50,000** — for repeat track-day drivers transitioning from sim to MMRT
-- For: HNI supercar owners (Lamborghini, Ferrari, Porsche, McLaren, Mercedes-AMG, etc.) heading to MMRT, Buddh, Coimbatore track days. Track-day participation has been growing significantly in India — these owners currently have no safe place to train before going to the real circuit.
-- Curriculum: track familiarisation (MMRT layout in particular), braking points + corner entry, recovery techniques, throttle control, telemetry-led feedback
-- Margin: 90%+ (premium coaching, low variable cost)
-- Y5 contribution per centre: ~₹10L (~5% of centre revenue, but very high-margin)
+### Tier 3b · Track Day Programmes *(Chennai-specific · HNI revenue driver)*
+- **Track Day Prep · 4 sessions × 90 min · ₹25,000** (₹6,250/session)
+  - For: supercar owners preparing for their first MMRT / Buddh / Coimbatore circuit day
+  - Curriculum: MMRT layout familiarisation, braking zones, corner entry, recovery techniques, throttle control
+- **Advanced Performance · 6 sessions × 90 min · ₹50,000** (₹8,333/session)
+  - For: repeat track-day drivers transitioning from casual laps to proper performance driving
+  - Curriculum: data-led telemetry coaching, qualifying pace vs race pace, tyre degradation management, MMRT sector optimisation
+
+Target customer: Lamborghini, Ferrari, Porsche, McLaren, AMG owners. Chennai has a growing track-day culture at MMRT. These owners currently have no structured sim-prep option before real circuit days. Margin 90%+. Y5 contribution ~₹10L/centre.
 
 ### Tier 4 · Pro Track
-- **Bespoke pricing** — programme tailored per driver
+- **Bespoke pricing · ~₹4,500/session**
 - For: career-path aspirants
-- Curriculum: telemetry-led coaching, weekly training, championship support, ARKA pathway preparation
-- Outcome: direct shot at real motorsport seats
+- Curriculum: telemetry-led coaching, weekly training plan, race data debrief, ARKA pathway preparation
+- Outcome: direct shot at real motorsport seats via [[racesims-the-ladder|The Ladder]]
 
-### Tier 5 · Tuner Lab (Corporate)
-- **₹28,000 per person (corporate cohort)**
-- For: corporate team-building with substance
-- Curriculum: data-led performance coaching, telemetry analysis, racing as a leadership metaphor
+### Tier 5 · Tuner Lab *(Corporate)*
+- **8 sessions × 3 hrs each · ₹28,000 per person · min 4 per cohort**
+- For: corporate team-building with substance; also for motorsport-adjacent engineers
+- Curriculum: vehicle dynamics, setup theory, data-led performance coaching, racing as a leadership metaphor
 - Outcome: corporate revenue + Academy brand exposure to decision-makers
+
+---
+
+## Real Driving Experiences *(pinnacle of TRAIN)*
+
+The apex of the Academy programme stack — available both as sold experiences and as [[racesims-the-ladder|Ladder]] prizes.
+
+| Experience | Price | Format | Margin |
+|------------|-------|--------|--------|
+| **ARKA Real Drive** | ₹1,75,000 | Sim coaching morning + ARKA rally stage drive afternoon | 43% |
+| **Buzzing Hornet Real Drive** | ₹2,25,000 | Sim coaching morning + race car afternoon | 44% |
+
+Sold individually + as premium corporate experiences. The Annual Rally Champion earns the ARKA Real Drive via The Ladder (not purchasable — it is won). The Annual Circuit Champion earns the Polo Cup Follow Car Programme.
+
+---
 
 ## Why the Academy badge matters
 
 | Effect | Description |
 |--------|-------------|
 | Legitimacy | Parents of aspirants and corporate buyers say yes because it reads as real institutional training |
-| Premium pricing | ₹14-20K programme fees are defensible because they're *programmes*, not just track time |
+| Premium pricing | ₹20-25K programme fees are defensible because they're *programmes*, not just track time |
 | Sponsor magnetism | MRF, JK Tyre, Castrol-class sponsors back *academies*, not arcades |
 | Talent pipeline narrative | Championship winners are "Academy graduates" — a brandable outcome |
 | National Championship credibility | Hosted by an Academy = real championship. Hosted by an arcade = tournament. |
@@ -86,7 +110,6 @@ When they come back the 3rd time, the staff might mention: *"You've done a few s
 
 ## Partner faculty
 
-The Academy's credibility rests on its instructor and partner network:
 - **[[arka-motorsports|ARKA Motorsports]]** — pro driver coaching, Rally pathway, real seat at the end
 - **Buzzing Hornet** — partner racing team for Real Driving Experiences
 - **[[mr-leela-krishnan|Mr. N. Leelakrishnan]]** — 7× national rally champion, ARKA team leader, masterclass anchor
@@ -102,16 +125,17 @@ The Academy's credibility rests on its instructor and partner network:
 ## Naming guardrails
 
 - Always written as **"The Motorsport Academy"** in long-form, **"Motorsport Academy"** in shorthand. Never just "the Academy" outside RaceSims surfaces (too generic).
-- Sub-programmes drop "Academy": *Initiation*, *Race Academy*, *Rally School*, *Pro Track*, *Tuner Lab* (note: *Race Academy* is a tier name; the parent brand is *The Motorsport Academy*)
+- Sub-programmes drop "Academy": *Initiation*, *Race Academy*, *Rally School*, *Pro Track*, *Tuner Lab*
 - City-specific: *The Motorsport Academy at RaceSims Chennai* / *...at RaceSims Mumbai*
 
 ## Connections
 
+- [[racesims-master-rate-card]] — **full pricing reference**
 - [[racesims-naming-architecture]] — the unbundled brand structure (Academy = programme, not place)
 - [[racesims-chennai-flagship]] — the centre that hosts the Academy
 - [[racesims-championship-architecture]] — competitive arc that Academy graduates feed into
 - [[racesims-the-ladder]] — sim-to-reality pathway after Academy completion
 - [[arka-motorsports]] — partner faculty + real-seat pathway
 - [[mr-leela-krishnan]] — masterclass anchor
-- [[2026-05-18-chennai-flagship-proposal-v2]] — source for programme pricing + structure
+- [[2026-05-18-chennai-flagship-proposal-v2]] — source for programme origins
 - [[domains/racesims/_index]]

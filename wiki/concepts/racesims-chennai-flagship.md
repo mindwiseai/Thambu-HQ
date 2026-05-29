@@ -132,16 +132,21 @@ Café COGS + merch COGS modelled as variable (~35% café revenue / ~40% merch re
 
 Break-even at 28% util; Y1 lands just above at 30%.
 
-### Rate card (Y3)
-| Slot | Rate |
+### Rate card (locked May 29 — see [[racesims-master-rate-card]] for full detail)
+
+| Product | Rate |
 |---|---|
-| Rally off-peak (wkday 11am-6pm) | ₹600 |
-| Rally peak (wkday eve + weekend) | ₹1,000 |
-| Motion off-peak | ₹900 |
-| Motion peak | ₹1,500 |
-| Group / corporate | ₹700 |
-| Coaching session (incl. coach) | ₹1,500 |
-| Membership pack (10-hr prepaid) | ₹650 |
+| 30-minute session | ₹750 |
+| 1-hour session | ₹1,250 |
+| Motion rig surcharge | +₹500/hr |
+| Pass 8 (8 hrs/month) | ₹8,000/mo |
+| Pass 16 (16 hrs/month) | ₹14,000/mo |
+| Team Day (4–6 seats · 3 hrs flat) | ₹20,000 |
+| Private Centre Hire | ₹8,000/hr (3-hr min) |
+| Initiation Programme | ₹8,000 (4 × 1hr coached) |
+| Race Academy | ₹20,000 (8 × 1hr coached) |
+| Rally School | ₹25,000 (10 × 1hr coached) |
+| Championship Pass (per discipline) | ₹4,500/yr |
 
 ### Peak vs off-peak saturation (Y5)
 - Weekday off-peak (210 hrs/wk): ~45% util · room to grow

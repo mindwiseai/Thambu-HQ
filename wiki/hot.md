@@ -8,7 +8,16 @@ updated: 2026-05-29
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-29 (latest) — Chennai Premium Baseline Forecast (conservative, Uday-anchored)
+## 2026-05-29 (latest) — Pricing restructure LOCKED
+
+- **Master rate card created**: [[racesims-master-rate-card]]. Session-based pricing: **30 min = ₹750 · 1 hr = ₹1,250 · Motion +₹500/hr**. Replaces 4 conflicting rate tables across the wiki.
+- **Academy prices updated**: Race Academy ₹14K → **₹20K** (8 × 1hr sessions, ₹2,500/session). Rally School ₹16K → **₹25K** (10 × 1hr sessions, ₹2,500/session). Initiation stays ₹8K. Session durations now explicit (1 hr coached) across all tiers.
+- **Real Driving Experiences** added to TRAIN tier: ARKA Real Drive ₹1,75,000 · Buzzing Hornet ₹2,25,000.
+- **Championship Pass clarified**: covers entry only (₹4,500/yr per discipline, ₹7,500/yr dual). Rig time for Time Trials always billed separately.
+- **Pass 8/16** set as monthly: ₹8,000/mo (8 hrs) · ₹14,000/mo (16 hrs). **Provisional — confirm monthly vs prepaid model.**
+- **P&L note**: v3.2 was built on ₹750 blended/hr (old pricing). New rates yield higher blended; P&L recalibration is next step.
+
+## 2026-05-29 — Chennai Premium Baseline Forecast (conservative, Uday-anchored)
 
 - Built a **conservative sim-only forecast** for [[racesims-chennai-flagship|Chennai]] with [[thambu]] — see [[racesims-chennai-premium-baseline]]. Live Excel: `racesims-chennai-premium-forecast.xlsx` (gitignored).
 - **Config:** 5 race/rally + 1 three-DOF motion rig (₹39.09L distributor cost). Tiered premium pricing (race ₹750/₹1,250, motion ₹1,000/₹1,600), **fleet blended ₹1,225/hr net**. OpEx ₹3.17L (lean 2-staff ₹2.92L). Net cash ₹57.6L, sunk ₹48.3L.

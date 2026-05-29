@@ -9,6 +9,14 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-29] edit | Pricing restructure — master rate card + 5 page updates
+- Created: [[racesims-master-rate-card]] (new single source of truth for all pricing)
+- Updated: [[racesims-drive-train-compete]], [[racesims-motorsport-academy]], [[racesims-chennai-flagship]], [[racesims-naming-architecture]], [[racesims-championship-architecture]]
+- Key changes: session-based pricing (30min ₹750 · 1hr ₹1,250) · Race Academy ₹20K · Rally School ₹25K · Real Drives added to TRAIN · Championship Pass rig-time policy clarified · 4 contradictory rate tables eliminated
+- Pass 8/16 model (monthly vs prepaid) still provisional — confirm with Thambu
+- P&L v3.2 blended rate (₹750/hr) pre-dates new pricing; recalibration needed separately
+- Domain: racesims
+
 ## [2026-05-29] edit | Chennai execution plan + final floor plan/3D
 - Created: [[racesims-chennai-execution-plan]] (12-section build-and-launch plan, Variant C)
 - Updated: [[racesims-chennai-premium-baseline]] floor-fit section (final layout)
