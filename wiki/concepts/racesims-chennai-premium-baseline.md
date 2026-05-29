@@ -58,6 +58,26 @@ Rent ₹1,55,250 · building maint ₹17,250 · rig maint + replacement reserve 
 | EBITDA | ₹0.27L | ₹1.42L | ₹2.56L | ₹3.71L | ₹6.00L |
 | Margin | 8% | 31% | 45% | 54% | 65% |
 
+## Variants (in the Excel `Variants` tab)
+
+All on the brand-lands ramp, lean staffing except Base:
+
+| | A · Base (6 rig, 3 staff) | B · Lean (6 rig, 2 staff) | C · 8-rig 7+1 (2 staff) | D · 8-rig 6+2 (2 staff) |
+|---|---|---|---|---|
+| Capacity (hrs/mo) | 1,872 | 1,872 | 2,496 | 2,496 |
+| Blended net rate | ₹1,225 | ₹1,225 | ₹1,210 | ₹1,255 |
+| Monthly OpEx | ₹3,17,000 | ₹2,92,000 | ₹3,05,500 | ₹3,05,500 |
+| Break-even occ | 13.8% | 12.7% | 10.1% | 9.8% |
+| Net cash deployed | ₹57.6L | ₹57.1L | ₹68.3L | ₹71.9L |
+| **Y1 EBITDA — Lands** | ₹11.7L | ₹14.7L | ₹28.9L | ₹31.3L |
+| Y1 EBITDA — Lags | (₹3.9L) | (₹0.9L) | ₹8.4L | ₹10.0L |
+| Payback (sunk, @25%) | 18.8 mo | 17.0 mo | 13.1 mo | 13.1 mo |
+
+**Findings:**
+- **Lean (B) is a free win** — open on 2 staff; +₹3L Y1 EBITDA, lower drawdown, same capital. Add 3rd staff when weekends force it.
+- **8-rig is the real lever** if the space holds 8: break-even drops below Uday's proven 20%, Y1 EBITDA roughly **doubles**, and even the bad case (Lags) is *profitable*.
+- **D (6+2 motion) edges C** (+₹2.4L/yr for ₹4L more capital) **but only if motion demand fills two seats** — equal-occupancy assumption is generous for a second premium novelty rig. C is safer; confirm motion utilisation (ask [[uday-hyderabad|Uday]]) before doubling motion.
+
 ## Execution levers (decide which Year-1 column you get)
 1. **Get [[uday-hyderabad|Uday]]'s 6-month playbook** — he's the Hyderabad dealer, not competition. Marketing, customer mix, peak hours, Hot Lap impact. Free, biggest de-risker.
 2. Lead with the **motion rig + ARKA story**, not hardware specs.
