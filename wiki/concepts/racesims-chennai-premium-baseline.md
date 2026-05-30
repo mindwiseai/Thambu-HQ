@@ -18,11 +18,11 @@ A **conservative, ground-truth forecast** for the [[racesims-chennai-flagship|Ch
 ## Configuration — CHOSEN: Variant C (8 rigs)
 **Decision (2026-05-29): go with 8 rigs — 7 race/rally + 1 three-DOF motion**, 2 staff (lean). The live Excel base case (Summary + P&L) is now set to this; the 6-rig builds remain in the `Variants` tab for reference.
 - **Equipment:** 7 × ₹5,84,900 + 1 × ₹9,84,900 = **₹50,79,200** at [[conspit]]/[[vnm]] distributor cost (~₹85-95L retail → big day-one equity).
-- **Net cash deployed ₹68.3L · sunk ₹59.0L · break-even 10.1% occupancy** (below [[uday-hyderabad|Uday]]'s proven ~20%).
-- **Year 1: ₹28.9L EBITDA (brand-lands) / ₹8.4L (brand-lags — profitable even in the bad case)**, profitable from month 3, payback ~13 months sunk.
+- **Net cash deployed ₹68.3L · sunk ₹59.0L · break-even 10.0% occupancy** (below [[uday-hyderabad|Uday]]'s proven ~20%).
+- **Year 1: ₹29.3L EBITDA (brand-lands) / ₹8.6L (brand-lags — profitable even in the bad case)**, profitable from month 3, payback ~13 months sunk. *(Reconciled to [[racesims-master-rate-card]]: motion +₹500/hr → fleet blended ₹1,218/hr net. Source of truth: `racesims-chennai-economics.pdf` + `racesims-chennai-premium-forecast.xlsx`.)*
 
 ### Floor fit (v4 — Vastu-aligned)
-**Office (= training room) in the bottom-right (SW) corner** per [[thambu]]'s Vastu preference; **motion hero rig top-left**; 8 rigs (4 back wall + 2 left + 1 upper-right + motion); reception front-centre with a **small coffee counter behind it** (SuperLap-style); two washroom doors front-left kept clear; lounge centre, leaderboard top-right, perimeter windows. Look & feel referenced from SuperLap (US): woven pendant lamps, cream + light carpet, brushed-steel reception, menu board + merch pegboard. See `racesims-chennai-floorplan.png` / `racesims-chennai-3d.html`.
+**Office (= training room) in the bottom-right (SW) corner** per [[thambu]]'s Vastu preference; **motion hero rig on the right wall beside the office**; **7 static rigs grouped in an L** (4 back wall + 3 left wall); reception **just right of the entrance** with a **small coffee counter behind it** (SuperLap-style); two washroom doors front-left kept clear; lounge centre-left, leaderboard top-right, perimeter windows. Look & feel referenced from SuperLap (US): woven pendant lamps, cream + light carpet, brushed-steel reception, menu board + merch pegboard. See `racesims-chennai-floorplan.png` / `racesims-chennai-3d.html`.
 
 ### (earlier note — superseded by v4 above)
 Venue = typical floor (1st–4th), clear office hall **8.73 m × 12.15 m = 28.6 × 39.9 ft ≈ 1,142 sq ft** (service core separate). Final layout (`racesims-chennai-floorplan.png`, `racesims-chennai-3d.html`): **L-shape — 4 rigs back wall + 3 right wall + motion hero island**; **entrance on the lift-lobby wall** with a **reception + coffee counter** beside it; **two washroom doors kept clear** on the front-left wall; **glass training/academy room (~11.5 m², 6–8 seats)** back-left for Phase-2 [[racesims-motorsport-academy|Academy]]; lounge centre; leaderboard right wall. Feature footprint ~55% of floor — comfortable, and the hall could take 12–16 rigs, so **floor is not the constraint**; a 2nd floor is available later. Coffee + training room add ~₹2–2.5L one-time fit-out (folded into capex).
@@ -32,7 +32,7 @@ Venue = typical floor (1st–4th), clear office hall **8.73 m × 12.15 m = 28.6 
 | Rig | 30 min | 60 min | Net /hr (ex-GST) |
 |---|---|---|---|
 | Race/rally (×5) | ₹750 | ₹1,250 | ₹1,165 |
-| Motion 3-DOF (×1) | ₹1,000 | ₹1,600 | ₹1,525 |
+| Motion 3-DOF (×1) | ₹1,000 | ₹1,750 | ₹1,589 |
 
 **Fleet blended net ₹1,225/hr.** ~2× Uday's ₹800/hr — justified by motion + triple-screen DD kit + [[arka-motorsports|ARKA]] + the Ladder. Protect the headline rate via memberships / [[racesims-championship-architecture|Hot Lap]] / off-peak hours, never visible discounts.
 

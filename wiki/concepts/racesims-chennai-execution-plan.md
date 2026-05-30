@@ -19,9 +19,9 @@ The full build-and-launch plan for the chosen [[racesims-chennai-premium-baselin
 ## Layout (v4 — Vastu-aligned · see `racesims-chennai-floorplan.png` + `racesims-chennai-3d.html`)
 Revised to [[thambu]]'s Hindu-Vastu preference and a SuperLap (US sim-studio) reference:
 - **Office (doubles as the training / academy room) → bottom-right (SW) corner**, glass-partitioned, ~11.5 m² — owner cabin + briefings/coaching; keeps Phase-2 [[racesims-motorsport-academy|Academy]] possible without moving a rig.
-- **Motion hero rig → top-left corner** (clearance ring + spot lighting; the Instagram magnet).
-- **8 rigs:** 4 along the back wall + 2 on the left wall + 1 upper-right + the motion hero.
-- **Reception** front-centre by the entrance, with a **small coffee counter just behind it** (SuperLap-style — not a full café). **Two washroom doors** front-left kept clear.
+- **Motion hero rig → right wall, beside the office** (clearance ring + spot lighting; the Instagram magnet) — so all the static rigs sit together and the motion rig anchors the office side.
+- **8 rigs:** 7 static grouped in an L (4 along the back wall + 3 on the left wall) + the motion hero on the right wall.
+- **Bottom row aligned:** front-left **two washroom doors** (kept clear) → **entrance** (by the lift) → **reception just to its right** → **small coffee counter behind reception** (SuperLap-style, not a full café) → **office** (front-right).
 - **Lounge/spectator** centre; **leaderboard** top-right; **perimeter windows** on three walls (the property is bright with large windows).
 - **Look & feel from SuperLap:** woven pendant lamps over reception, warm light, cream walls + light carpet, brushed-steel reception counter, menu board + merch pegboard, ceiling track lighting. Editorial: cream + RS Red + Montserrat + JetBrains Mono.
 
