@@ -9,6 +9,14 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-30] build | Academy full curriculum + illustrated deck
+- Created: [[racesims-academy-curriculum]] (hub: B·D·A·D session model, progression logic, 16-concept glossary) + 6 per-programme curriculum pages — [[racesims-curriculum-initiation]], [[racesims-curriculum-advanced-circuit]], [[racesims-curriculum-advanced-rally]], [[racesims-curriculum-sim-reality]], [[racesims-curriculum-track-day]], [[racesims-curriculum-tuner-lab]]
+- Each curriculum is session-by-session with assessment gates + outcomes
+- Built deck: `racesims/marketing/decks/motorsport-academy-curriculum.html` + `.pdf` — 21 slides, layered (aspirational → 9 custom-SVG concept diagrams → per-programme session detail). RaceSims editorial system. Verified render via Playwright; PDF 1280×720, 21pp.
+- Custom SVG diagrams: racing line, braking/threshold, trail braking, throttle/exit, understeer-oversteer, switchback overtake, Scandinavian flick, pace notes, weight transfer
+- Updated: [[racesims-motorsport-academy]], index (new Academy & curriculum cluster)
+- Domain: racesims
+
 ## [2026-05-30] edit | Academy simplified to 3 tiers
 - Updated: [[racesims-motorsport-academy]] — 7-tier programme collapsed to 3: Initiation (₹8K) · Advanced Circuit/Rally (₹20K/₹25K) · Sim + Reality Rally/Circuit (₹1.75L/₹2.25L). Pro Track removed. Track Day Programmes + Tuner Lab moved out of Academy into separate offerings.
 - Updated: [[racesims-master-rate-card]] TRAIN section to match

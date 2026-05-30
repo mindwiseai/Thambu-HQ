@@ -117,6 +117,7 @@ Most customers stop at Open Sessions. Some progress to Initiation. Fewer reach A
 
 ## Connections
 
+- [[racesims-academy-curriculum]] — **full session-by-session curriculum + concept glossary**
 - [[racesims-master-rate-card]] — full pricing reference
 - [[racesims-naming-architecture]] — Academy is the programme, not the place
 - [[racesims-chennai-flagship]] — the centre that hosts it

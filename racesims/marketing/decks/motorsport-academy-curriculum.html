@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>The Motorsport Academy — Curriculum & Concepts</title>
+<meta name="viewport" content="width=1280" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:       #FAF9F5;
+    --cream-dark:  #F3EFEA;
+    --cream-mid:   #EDE8E2;
+    --rs-red:      #C8102E;
+    --rs-red-dim:  rgba(200, 16, 46, 0.10);
+    --rs-red-soft: rgba(200, 16, 46, 0.05);
+    --rs-black:    #0F0F10;
+    --ink:         #1F1B18;
+    --ink-mid:     #4A4440;
+    --ink-muted:   #7A7470;
+    --rule:        #DDD8D2;
+    --rule-mid:    #C8C0B8;
+    --green:       #1E6B3A;
+    --amber:       #B8731F;
+    --sans:        'Montserrat', -apple-system, sans-serif;
+    --mono:        'JetBrains Mono', 'SF Mono', monospace;
+  }
+  @page { size: 1280px 720px; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #E8E3DC;
+    font-family: var(--sans);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  body { padding: 32px 0; }
+  .slide {
+    width: 1280px; height: 720px;
+    margin: 0 auto 32px;
+    background: var(--cream);
+    position: relative; overflow: hidden;
+    border: 1px solid var(--rule);
+    page-break-after: always; page-break-inside: avoid; break-inside: avoid;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+  .slide:last-child { page-break-after: auto; margin-bottom: 0; }
+  @media print {
+    html, body { background: white; }
+    body { padding: 0; margin: 0; }
+    .slide { margin: 0 auto; border: none; box-shadow: none; }
+  }
+  .slide-inner { padding: 48px 64px; height: 100%; display: flex; flex-direction: column; }
+  .slide::before {
+    content: ""; position: absolute; top: 0; left: 0; bottom: 0;
+    width: 5px; background: var(--rs-red); z-index: 2;
+  }
+  .slide-num {
+    position: absolute; top: 22px; right: 28px;
+    font-family: var(--mono); font-size: 10px; color: var(--ink-muted);
+    letter-spacing: 0.18em; z-index: 3;
+  }
+  .brand {
+    position: absolute; top: 22px; left: 32px;
+    font-family: var(--mono); font-size: 10px; color: var(--rs-red);
+    letter-spacing: 0.22em; font-weight: 600; z-index: 3;
+  }
+  .eyebrow {
+    font-family: var(--mono); font-size: 10px; color: var(--rs-red);
+    letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 14px; font-weight: 600;
+  }
+  h1, h2 { color: var(--ink); }
+  h1 { font-size: 54px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+  h2 { font-size: 34px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; margin-bottom: 16px; }
+  h2 .italic { font-style: italic; color: var(--rs-red); font-weight: 600; }
+  h3 {
+    font-size: 11px; font-weight: 700; color: var(--rs-red);
+    text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 10px;
+  }
+  h3.plain { text-transform: none; font-size: 17px; font-weight: 700; color: var(--ink); letter-spacing: -0.015em; }
+  p { font-size: 14px; line-height: 1.55; color: var(--ink-mid); }
+  .lead { font-size: 18px; color: var(--ink); line-height: 1.5; font-weight: 400; }
+  .muted { color: var(--ink-muted); }
+  .mono { font-family: var(--mono); }
+  .head-row { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
+  .head-row .tag { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); letter-spacing: 0.1em; white-space: nowrap; }
+
+  /* COVER */
+  .cover { display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; }
+  .cover .badge {
+    display: inline-block; padding: 7px 14px; border: 1.5px solid var(--rs-red);
+    color: var(--rs-red); font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em;
+    margin-bottom: 28px; width: max-content; font-weight: 600;
+  }
+  .cover h1 { font-size: 88px; font-weight: 800; line-height: 0.98; letter-spacing: -0.035em; margin-bottom: 26px; }
+  .cover h1 .red { color: var(--rs-red); }
+  .cover .sub { font-size: 20px; color: var(--ink-mid); max-width: 720px; line-height: 1.5; }
+  .cover .foot { position: absolute; bottom: 48px; left: 96px; right: 96px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .cover .foot .mono { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.1em; }
+
+  /* PATHWAY */
+  .pathway { display: flex; align-items: stretch; gap: 0; margin-top: 8px; }
+  .path-step { flex: 1; position: relative; padding: 0 6px; }
+  .path-card {
+    background: var(--cream-dark); border: 1px solid var(--rule); border-top: 3px solid var(--rule-mid);
+    border-radius: 3px; padding: 18px 16px; height: 100%; display: flex; flex-direction: column;
+  }
+  .path-card.live { border-top-color: var(--rs-red); background: #fff; }
+  .path-step .arrow { position: absolute; top: 50%; right: -9px; transform: translateY(-50%); z-index: 4; color: var(--rule-mid); font-size: 20px; }
+  .path-card .k { font-family: var(--mono); font-size: 10px; color: var(--ink-muted); letter-spacing: 0.14em; margin-bottom: 8px; }
+  .path-card .nm { font-size: 18px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
+  .path-card .nm.red { color: var(--rs-red); }
+  .path-card .ds { font-size: 11.5px; color: var(--ink-mid); line-height: 1.4; margin-bottom: 10px; flex: 1; }
+  .path-card .pr { font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--ink); }
+
+  /* LOOP (BDAD) */
+  .loop { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 10px; }
+  .loop-cell { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 20px 18px; position: relative; }
+  .loop-cell .step-n { font-family: var(--mono); font-size: 10px; color: var(--rs-red); letter-spacing: 0.16em; }
+  .loop-cell .step-t { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; margin: 6px 0 4px; }
+  .loop-cell .step-time { font-family: var(--mono); font-size: 10px; color: var(--ink-muted); margin-bottom: 10px; }
+  .loop-cell .step-d { font-size: 12px; color: var(--ink-mid); line-height: 1.45; }
+  .loop-cell .conn { position: absolute; top: 50%; right: -11px; color: var(--rule-mid); font-size: 16px; z-index: 4; }
+
+  /* TIER CARDS */
+  .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 6px; }
+  .tier { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 22px 20px; display: flex; flex-direction: column; }
+  .tier .tn { font-family: var(--mono); font-size: 10px; color: var(--rs-red); letter-spacing: 0.16em; margin-bottom: 10px; }
+  .tier .th { font-size: 24px; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 4px; }
+  .tier .ts { font-size: 12px; color: var(--ink-muted); margin-bottom: 14px; }
+  .tier .tp { font-family: var(--mono); font-size: 20px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .tier .tpx { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); }
+  .tier ul { list-style: none; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .tier li { font-size: 12px; color: var(--ink-mid); padding: 4px 0 4px 16px; position: relative; line-height: 1.4; }
+  .tier li::before { content: "›"; position: absolute; left: 0; color: var(--rs-red); font-weight: 700; }
+  .sep-row { display: flex; gap: 16px; margin-top: 16px; }
+  .sep-card { flex: 1; background: var(--cream-dark); border: 1px solid var(--rule); border-left: 3px solid var(--amber); border-radius: 3px; padding: 14px 18px; }
+  .sep-card .sh { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+  .sep-card .sp { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); }
+
+  /* CONCEPT layout: diagram + explanation */
+  .concept { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 32px; flex: 1; align-items: center; margin-top: 4px; }
+  .diagram { background: var(--cream-dark); border: 1px solid var(--rule); border-radius: 4px; padding: 22px; display: flex; align-items: center; justify-content: center; height: 100%; }
+  .diagram svg { width: 100%; height: auto; max-height: 380px; }
+  .explain h3.plain { margin-bottom: 14px; }
+  .explain .why { font-size: 15px; color: var(--ink); line-height: 1.55; margin-bottom: 16px; }
+  .points { list-style: none; }
+  .points li { font-size: 13px; color: var(--ink-mid); line-height: 1.4; padding: 7px 0 7px 22px; position: relative; border-top: 1px solid var(--rule); }
+  .points li:first-child { border-top: none; }
+  .points li::before { content: ""; position: absolute; left: 2px; top: 13px; width: 7px; height: 7px; background: var(--rs-red); border-radius: 50%; }
+  .points li b { color: var(--ink); font-weight: 700; }
+  .legend { display: flex; gap: 18px; margin-top: 14px; flex-wrap: wrap; }
+  .legend span { font-family: var(--mono); font-size: 10px; color: var(--ink-muted); display: flex; align-items: center; gap: 6px; letter-spacing: 0.04em; }
+  .legend i { width: 22px; height: 0; display: inline-block; }
+  .taught-tag { display: inline-block; font-family: var(--mono); font-size: 10px; color: var(--rs-red); border: 1px solid var(--rs-red-dim); background: var(--rs-red-soft); padding: 3px 9px; border-radius: 2px; letter-spacing: 0.1em; margin-bottom: 14px; }
+
+  /* SESSION LIST (programme detail) */
+  .prog-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; border-bottom: 2px solid var(--ink); padding-bottom: 14px; margin-bottom: 18px; }
+  .prog-head .pmeta { text-align: right; }
+  .prog-head .pmeta .pp { font-family: var(--mono); font-size: 22px; font-weight: 600; color: var(--rs-red); }
+  .prog-head .pmeta .px { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); }
+  .sessions { display: grid; gap: 0; flex: 1; align-content: start; }
+  .sessions.two { grid-template-columns: 1fr 1fr; gap: 0 36px; }
+  .srow { display: flex; gap: 14px; padding: 9px 0; border-top: 1px solid var(--rule); align-items: baseline; }
+  .srow:first-child { border-top: none; }
+  .scol .srow:first-child { border-top: none; }
+  .real-day { margin-top: 14px; background: var(--ink); border-radius: 4px; padding: 16px 22px; color: var(--cream); display: flex; gap: 28px; align-items: center; }
+  .real-day .rl { font-family: var(--mono); font-size: 10px; color: #E8A0AC; letter-spacing: 0.16em; margin-bottom: 6px; }
+  .real-day .rt { font-size: 13px; line-height: 1.5; color: var(--cream); }
+  .real-day .rt b { color: #fff; font-weight: 700; }
+  .scol-head { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1.5px solid var(--rule-mid); padding-bottom: 8px; margin-bottom: 6px; }
+  .scol-head .ch { font-size: 15px; font-weight: 800; letter-spacing: -0.015em; }
+  .scol-head .cp { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--rs-red); }
+  .srow .sn { font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--rs-red); width: 30px; flex-shrink: 0; }
+  .srow .st { font-size: 13.5px; font-weight: 700; color: var(--ink); width: 188px; flex-shrink: 0; letter-spacing: -0.01em; }
+  .srow .sd { font-size: 12px; color: var(--ink-mid); line-height: 1.4; }
+  .assess { margin-top: 14px; background: var(--rs-red-soft); border: 1px solid var(--rs-red-dim); border-left: 3px solid var(--rs-red); border-radius: 3px; padding: 12px 18px; }
+  .assess .al { font-family: var(--mono); font-size: 10px; color: var(--rs-red); letter-spacing: 0.16em; margin-bottom: 4px; }
+  .assess .at { font-size: 13px; color: var(--ink); line-height: 1.45; }
+  .assess .at b { font-weight: 700; }
+
+  /* generic two/three column text */
+  .cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; flex: 1; align-content: start; }
+  .stat-row { display: flex; gap: 40px; margin-top: 18px; }
+  .stat .sv { font-size: 40px; font-weight: 800; letter-spacing: -0.03em; color: var(--rs-red); line-height: 1; }
+  .stat .sl { font-size: 12px; color: var(--ink-muted); margin-top: 6px; max-width: 180px; line-height: 1.35; }
+
+  /* CLOSE */
+  .close { display: flex; flex-direction: column; justify-content: center; padding: 0 96px; }
+  .close h1 { font-size: 60px; line-height: 1.02; letter-spacing: -0.035em; margin-bottom: 24px; }
+  .close h1 .red { color: var(--rs-red); }
+  .close .quote { font-size: 22px; color: var(--ink-mid); font-style: italic; line-height: 1.5; max-width: 760px; }
+</style>
+</head>
+<body>
+
+<!-- 1 · COVER -->
+<div class="slide">
+  <div class="brand">RACESIMS · CHENNAI</div>
+  <span class="slide-num">01</span>
+  <div class="slide-inner cover">
+    <span class="badge">THE MOTORSPORT ACADEMY</span>
+    <h1>Drive it.<br>Train for it.<br><span class="red">Race for real.</span></h1>
+    <p class="sub">The complete curriculum — every programme, every session, and the racing concepts behind them. From a first lap to a real seat.</p>
+    <div class="foot">
+      <div class="mono">CURRICULUM &amp; CONCEPTS · v1</div>
+      <div class="mono">ENDORSED BY ARKA MOTORSPORTS · 130+ TITLES</div>
+    </div>
+  </div>
+</div>
+
+<!-- 2 · WHAT IT IS -->
+<div class="slide">
+  <div class="brand">THE MOTORSPORT ACADEMY</div>
+  <span class="slide-num">02</span>
+  <div class="slide-inner">
+    <span class="eyebrow">What the Academy is</span>
+    <h2>Not track time. <span class="italic">A pathway.</span></h2>
+    <p class="lead" style="max-width:880px; margin-bottom:30px;">Most places sell you hours on a machine. The Motorsport Academy is a structured programme — taught in real lessons, measured against real benchmarks, ending at a real motorsport seat. It is the only place in India where a beginner can start at a screen and finish in a race car.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="sv">3</div><div class="sl">tiers — Initiation, Advanced, Sim&nbsp;+&nbsp;Reality</div></div>
+      <div class="stat"><div class="sv">B·D·A·D</div><div class="sl">every session: Brief, Drill, Apply, Debrief</div></div>
+      <div class="stat"><div class="sv">100%</div><div class="sl">telemetry-led — the data is the teacher</div></div>
+      <div class="stat"><div class="sv">1</div><div class="sl">real seat earned every year via The Ladder</div></div>
+    </div>
+    <p class="muted" style="margin-top:auto; font-size:13px;">Parents say yes because it reads as institutional training. Sponsors back academies, not arcades. Champions become <b>Academy graduates</b> — a brandable outcome.</p>
+  </div>
+</div>
+
+<!-- 3 · THE JOURNEY -->
+<div class="slide">
+  <div class="brand">THE MOTORSPORT ACADEMY</div>
+  <span class="slide-num">03</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The journey · one customer, five steps</span>
+    <h2>From your first lap to <span class="italic">a real seat.</span></h2>
+    <div class="pathway" style="flex:1; align-items:stretch; margin-top:18px; margin-bottom:14px;">
+      <div class="path-step">
+        <div class="path-card">
+          <div class="k">START</div><div class="nm">Open Session</div>
+          <div class="ds">Walk in, drive. No commitment. Where most people meet the sport.</div>
+          <div class="pr">₹750 / 30 min</div>
+        </div><span class="arrow">→</span>
+      </div>
+      <div class="path-step">
+        <div class="path-card live">
+          <div class="k">TIER 1</div><div class="nm red">Initiation</div>
+          <div class="ds">4 coached sessions. Earn your Licence — the entry to The Ladder.</div>
+          <div class="pr">₹8,000</div>
+        </div><span class="arrow">→</span>
+      </div>
+      <div class="path-step">
+        <div class="path-card live">
+          <div class="k">TIER 2</div><div class="nm red">Advanced</div>
+          <div class="ds">8–10 sessions, circuit or rally. Become championship-competitive.</div>
+          <div class="pr">₹20–25K</div>
+        </div><span class="arrow">→</span>
+      </div>
+      <div class="path-step">
+        <div class="path-card live">
+          <div class="k">TIER 3</div><div class="nm red">Sim + Reality</div>
+          <div class="ds">Sim prep + a real car on a real stage with ARKA / Buzzing Hornet.</div>
+          <div class="pr">₹1.75–2.25L</div>
+        </div><span class="arrow">→</span>
+      </div>
+      <div class="path-step">
+        <div class="path-card">
+          <div class="k">DESTINATION</div><div class="nm">A Real Seat</div>
+          <div class="ds">Polo Cup / ARKA Rally Drive. Earned by the Annual Champion.</div>
+          <div class="pr">THE LADDER</div>
+        </div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12.5px;">Most stop at Open Sessions. Some progress. The few who reach the top earn the seat — one driver, every year, drives for real.</p>
+  </div>
+</div>
+
+<!-- 4 · HOW WE TEACH -->
+<div class="slide">
+  <div class="brand">THE MOTORSPORT ACADEMY</div>
+  <span class="slide-num">04</span>
+  <div class="slide-inner">
+    <span class="eyebrow">How we teach · the same shape, every session</span>
+    <h2>The <span class="italic">B·D·A·D</span> loop.</h2>
+    <p class="lead" style="max-width:860px;">One concept per session. We teach it, isolate it in a drill, apply it on a full lap, then read the data together. Run identically by every coach, at every centre.</p>
+    <div class="loop">
+      <div class="loop-cell">
+        <div class="step-n">01 · ~10 MIN</div><div class="step-t">Brief</div><div class="step-time">WHITEBOARD + DATA</div>
+        <div class="step-d">Teach the one concept of the session. Never more than one. Shown on a real telemetry example.</div>
+        <span class="conn">→</span>
+      </div>
+      <div class="loop-cell">
+        <div class="step-n">02 · ~20 MIN</div><div class="step-t">Drill</div><div class="step-time">ISOLATED SKILL</div>
+        <div class="step-d">The skill alone, stripped of everything else — braking with no steering, one corner repeated. Repetition builds the pattern.</div>
+        <span class="conn">→</span>
+      </div>
+      <div class="loop-cell">
+        <div class="step-n">03 · ~25 MIN</div><div class="step-t">Apply</div><div class="step-time">FULL LAP / STAGE</div>
+        <div class="step-d">Return the skill to a full lap under realistic conditions. Make it hold up at speed.</div>
+        <span class="conn">→</span>
+      </div>
+      <div class="loop-cell">
+        <div class="step-n">04 · ~5 MIN</div><div class="step-t">Debrief</div><div class="step-time">TELEMETRY REVIEW</div>
+        <div class="step-d">Coach + driver read the trace against the session target. Next session's goal is set here.</div>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:24px; font-size:13px;">Progression is <b>earned, never given</b> — every tier is gated by a benchmark time logged on the driver's VMS Driver Card. Attendance passes nothing.</p>
+  </div>
+</div>
+
+<!-- 5 · THE MENU -->
+<div class="slide">
+  <div class="brand">THE MOTORSPORT ACADEMY</div>
+  <span class="slide-num">05</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The programmes at a glance</span>
+    <h2>Three tiers. <span class="italic">One clear path.</span></h2>
+    <div class="tiers">
+      <div class="tier">
+        <div class="tn">TIER 1 · ENTRY</div>
+        <div class="th">Initiation</div><div class="ts">4 sessions × 1 hr</div>
+        <div class="tp">₹8,000</div><div class="tpx">cohorts of 4–6</div>
+        <ul><li>Learn properly, earn your Licence</li><li>Step 1 of The Ladder</li><li>Unlocks Championship + Advanced</li></ul>
+      </div>
+      <div class="tier">
+        <div class="tn">TIER 2 · ADVANCED</div>
+        <div class="th">Advanced</div><div class="ts">Circuit 8 · Rally 10 sessions</div>
+        <div class="tp">₹20–25K</div><div class="tpx">circuit / rally</div>
+        <ul><li>Racecraft, setup, tyre management</li><li>Or rally: pace notes, loose surface</li><li>Become championship-ready</li></ul>
+      </div>
+      <div class="tier">
+        <div class="tn">TIER 3 · PINNACLE</div>
+        <div class="th">Sim + Reality</div><div class="ts">4 prep + real-car day</div>
+        <div class="tp">₹1.75–2.25L</div><div class="tpx">ARKA / Buzzing Hornet</div>
+        <ul><li>Sim prep, then a real car, real venue</li><li>Telemetry: sim vs real</li><li>Also won as The Ladder prize</li></ul>
+      </div>
+    </div>
+    <div class="sep-row">
+      <div class="sep-card"><div class="sh">Track Day Programmes — ₹25K / ₹50K</div><div class="sp">SEPARATE · HNI SUPERCAR OWNERS · MMRT / BUDDH PREP</div></div>
+      <div class="sep-card"><div class="sh">Tuner Lab — ₹28K / person</div><div class="sp">SEPARATE · CORPORATE · VEHICLE DYNAMICS &amp; SETUP</div></div>
+    </div>
+    <p class="muted" style="margin-top:16px; font-size:12px;">Track Day and Tuner Lab sit outside the career path — premium products for distinct audiences, not steps on The Ladder.</p>
+  </div>
+</div>
+
+<!-- 6 · RACING LINE -->
+<div class="slide">
+  <div class="brand">CONCEPTS · CIRCUIT</div>
+  <span class="slide-num">06</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The concepts · 01</span>
+    <h2 style="margin-bottom:6px;">The Racing Line</h2>
+    <div class="concept">
+      <div class="diagram">
+        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <!-- track ribbon -->
+          <path d="M430,16 L430,97.5 A202.5 202.5 0 0 0 227.5,300 L60,300" fill="none" stroke="#C8C0B8" stroke-width="86"/>
+          <path d="M430,16 L430,97.5 A202.5 202.5 0 0 0 227.5,300 L60,300" fill="none" stroke="#EAE4DB" stroke-width="78"/>
+          <path d="M430,16 L430,97.5 A202.5 202.5 0 0 0 227.5,300 L60,300" fill="none" stroke="#FAF9F5" stroke-width="2" stroke-dasharray="6 10"/>
+          <!-- slow geometric line -->
+          <path d="M400,16 L400,140 A148 148 0 0 0 282,290 L60,290" fill="none" stroke="#A39C94" stroke-width="2.5" stroke-dasharray="5 6"/>
+          <!-- ideal racing line -->
+          <path d="M460,16 C460,128 408,184 318,184 C228,184 118,262 70,326" fill="none" stroke="#C8102E" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- markers -->
+          <circle cx="460" cy="86" r="6" fill="#C8102E"/><text x="472" y="90" font-size="11" fill="#1F1B18">TURN-IN</text>
+          <circle cx="318" cy="184" r="6" fill="#C8102E"/><text x="300" y="166" font-size="11" fill="#1F1B18" text-anchor="end">APEX</text>
+          <circle cx="104" cy="304" r="6" fill="#C8102E"/><text x="116" y="332" font-size="11" fill="#1F1B18">EXIT</text>
+          <!-- out/in/out -->
+          <text x="498" y="40" font-size="12" font-weight="600" fill="#C8102E">OUT</text>
+          <text x="340" y="210" font-size="12" font-weight="600" fill="#C8102E">IN</text>
+          <text x="58" y="356" font-size="12" font-weight="600" fill="#C8102E">OUT</text>
+          <!-- direction -->
+          <path d="M446,30 l8,14 l8,-14 z" fill="#1F1B18"/>
+        </svg>
+      </div>
+      <div class="explain">
+        <span class="taught-tag">TAUGHT · INITIATION S2</span>
+        <p class="why"><b>The fastest way through a corner is rarely the shortest.</b> Enter wide, clip the inside at the apex, run wide again on exit — straightening the corner to carry more speed.</p>
+        <ul class="points">
+          <li><b>Out</b> — start at the outer edge to open the corner up</li>
+          <li><b>In</b> — touch the apex, the latest point you meet the inside</li>
+          <li><b>Out</b> — let the car run to the outer edge on exit</li>
+          <li>The dashed line hugs the inside — shorter, but <b>slower</b>: it forces a tighter, lower-speed arc</li>
+        </ul>
+        <div class="legend">
+          <span><i style="border-top:4px solid #C8102E;"></i>Racing line</span>
+          <span><i style="border-top:2.5px dashed #A39C94;"></i>Slow / geometric line</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 7 · BRAKING -->
+<div class="slide">
+  <div class="brand">CONCEPTS · CIRCUIT</div>
+  <span class="slide-num">07</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The concepts · 02</span>
+    <h2 style="margin-bottom:6px;">Braking — Points &amp; Threshold</h2>
+    <div class="concept">
+      <div class="diagram">
+        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <!-- lock-up zone -->
+          <rect x="60" y="40" width="460" height="32" fill="#C8102E" opacity="0.08"/>
+          <text x="516" y="60" font-size="10" fill="#C8102E" text-anchor="end">LOCK-UP — over the limit</text>
+          <!-- threshold line -->
+          <line x1="60" y1="72" x2="520" y2="72" stroke="#C8102E" stroke-width="1.5" stroke-dasharray="5 5"/>
+          <text x="64" y="86" font-size="10" fill="#C8102E">THRESHOLD · max grip</text>
+          <!-- axes -->
+          <line x1="60" y1="40" x2="60" y2="320" stroke="#C8C0B8" stroke-width="1.5"/>
+          <line x1="60" y1="320" x2="520" y2="320" stroke="#C8C0B8" stroke-width="1.5"/>
+          <!-- braking point -->
+          <line x1="180" y1="40" x2="180" y2="320" stroke="#1F1B18" stroke-width="1.5" stroke-dasharray="4 5"/>
+          <text x="186" y="312" font-size="10" fill="#1F1B18">BRAKING POINT</text>
+          <!-- speed trace (red) -->
+          <polyline points="60,96 178,96 270,250 360,250 520,150" fill="none" stroke="#C8102E" stroke-width="4" stroke-linecap="round"/>
+          <text x="92" y="88" font-size="10" fill="#C8102E">SPEED</text>
+          <!-- brake trace (ink) -->
+          <polyline points="60,300 178,300 192,80 300,82 312,300 520,300" fill="none" stroke="#4A4440" stroke-width="3" stroke-linecap="round"/>
+          <text x="330" y="296" font-size="10" fill="#4A4440">BRAKE INPUT</text>
+          <text x="250" y="342" font-size="10" fill="#7A7470" text-anchor="middle">DISTANCE INTO CORNER →</text>
+        </svg>
+      </div>
+      <div class="explain">
+        <span class="taught-tag">TAUGHT · INITIATION S3</span>
+        <p class="why"><b>Brake hard, brake late, brake at the same place every lap.</b> Pick a fixed reference — a board, a kerb — and hit the pedal there. Then brake as hard as the tyres allow, just short of locking.</p>
+        <ul class="points">
+          <li><b>Braking point</b> — a fixed marker you can repeat lap after lap</li>
+          <li><b>Threshold braking</b> — maximum deceleration right up to the edge of grip</li>
+          <li>Push past it and the wheels <b>lock</b> — you slide straight on, slower</li>
+          <li>The load-cell pedal teaches this by <b>force</b>, exactly like a real car</li>
+        </ul>
+        <div class="legend">
+          <span><i style="border-top:4px solid #C8102E;"></i>Speed</span>
+          <span><i style="border-top:3px solid #4A4440;"></i>Brake input</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 8 · TRAIL BRAKING -->
+<div class="slide">
+  <div class="brand">CONCEPTS · CIRCUIT</div>
+  <span class="slide-num">08</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The concepts · 03</span>
+    <h2 style="margin-bottom:6px;">Trail Braking</h2>
+    <div class="concept">
+      <div class="diagram">
+        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <!-- trail zone -->
+          <rect x="170" y="40" width="190" height="280" fill="#C8102E" opacity="0.07"/>
+          <text x="265" y="58" font-size="10" fill="#C8102E" text-anchor="middle">TRAIL ZONE</text>
+          <!-- axes -->
+          <line x1="60" y1="40" x2="60" y2="320" stroke="#C8C0B8" stroke-width="1.5"/>
+          <line x1="60" y1="320" x2="520" y2="320" stroke="#C8C0B8" stroke-width="1.5"/>
+          <!-- brake (ink): high then bleeds to zero at apex -->
+          <polyline points="60,80 150,86 250,170 350,310 520,316" fill="none" stroke="#4A4440" stroke-width="3.5" stroke-linecap="round"/>
+          <text x="74" y="72" font-size="10" fill="#4A4440">BRAKE</text>
+          <!-- steering (red): rises into apex -->
+          <polyline points="60,312 150,300 250,180 345,96 520,150" fill="none" stroke="#C8102E" stroke-width="4" stroke-linecap="round"/>
+          <text x="360" y="92" font-size="10" fill="#C8102E">STEERING</text>
+          <!-- phase labels -->
+          <text x="110" y="342" font-size="10" fill="#7A7470" text-anchor="middle">ENTRY</text>
+          <text x="265" y="342" font-size="10" fill="#7A7470" text-anchor="middle">APEX</text>
+          <text x="440" y="342" font-size="10" fill="#7A7470" text-anchor="middle">EXIT</text>
+        </svg>
+      </div>
+      <div class="explain">
+        <span class="taught-tag">TAUGHT · ADVANCED S1</span>
+        <p class="why"><b>Don't finish braking before you turn — overlap them.</b> Keep bleeding off the brake as you add steering lock. The load stays on the front tyres, they keep biting, and the car rotates into the apex.</p>
+        <ul class="points">
+          <li>Brake and steering inputs <b>overlap</b> through the entry</li>
+          <li>Trailing brake pressure keeps weight on the <b>front tyres</b> for grip</li>
+          <li>The car <b>rotates</b> — pointing at the apex instead of running wide</li>
+          <li>The single biggest pace gain past beginner level</li>
+        </ul>
+        <div class="legend">
+          <span><i style="border-top:3.5px solid #4A4440;"></i>Brake pressure</span>
+          <span><i style="border-top:4px solid #C8102E;"></i>Steering angle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 9 · THROTTLE & EXIT -->
+<div class="slide">
+  <div class="brand">CONCEPTS · CIRCUIT</div>
+  <span class="slide-num">09</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The concepts · 04</span>
+    <h2 style="margin-bottom:6px;">Throttle &amp; Corner Exit</h2>
+    <div class="concept">
+      <div class="diagram">
+        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <!-- ribbon: corner onto a straight (exit up) -->
+          <path d="M60,300 L300,300 A150 150 0 0 1 450,150 L450,20" fill="none" stroke="#C8C0B8" stroke-width="86"/>
+          <path d="M60,300 L300,300 A150 150 0 0 1 450,150 L450,20" fill="none" stroke="#EAE4DB" stroke-width="78"/>
+          <path d="M60,300 L300,300 A150 150 0 0 1 450,150 L450,20" fill="none" stroke="#FAF9F5" stroke-width="2" stroke-dasharray="6 10"/>
+          <!-- early apex (slow out) dashed -->
+          <path d="M60,278 C230,278 300,250 318,176 C330,120 360,40 384,20" fill="none" stroke="#A39C94" stroke-width="2.5" stroke-dasharray="5 6"/>
+          <!-- late apex (fast out) red -->
+          <path d="M60,322 C250,322 360,300 392,232 C418,176 418,90 418,20" fill="none" stroke="#C8102E" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- late apex dot -->
+          <circle cx="402" cy="222" r="6" fill="#C8102E"/><text x="388" y="226" font-size="11" fill="#1F1B18" text-anchor="end">LATE APEX</text>
+          <!-- on power -->
+          <circle cx="416" cy="150" r="6" fill="#1E6B3A"/><text x="430" y="154" font-size="10" fill="#1E6B3A">ON POWER</text>
+          <!-- exit speed arrow -->
+          <path d="M468,150 L468,40" stroke="#1E6B3A" stroke-width="2.5"/><path d="M468,34 l-6,12 l12,0 z" fill="#1E6B3A"/>
+          <text x="476" y="100" font-size="10" fill="#1E6B3A">EXIT<tspan x="476" dy="13">SPEED</tspan></text>
+        </svg>
+      </div>
+      <div class="explain">
+        <span class="taught-tag">TAUGHT · ADVANCED S2</span>
+        <p class="why"><b>Slow in, fast out.</b> Sacrifice a little entry speed for a later apex. It points the car straight earlier, so you can get on the throttle sooner — and that speed multiplies all the way down the next straight.</p>
+        <ul class="points">
+          <li>A <b>later apex</b> opens the exit and straightens the car</li>
+          <li>Get to <b>full throttle</b> earlier, feeding power to the grip limit</li>
+          <li>Exit speed carries down the <b>entire straight</b> — worth far more than entry</li>
+          <li>The dashed early-apex line looks fast on entry but runs wide and bogs the exit</li>
+        </ul>
+        <div class="legend">
+          <span><i style="border-top:4px solid #C8102E;"></i>Fast out (late apex)</span>
+          <span><i style="border-top:2.5px dashed #A39C94;"></i>Slow out (early apex)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 10 · UNDERSTEER / OVERSTEER -->
+<div class="slide">
+  <div class="brand">CONCEPTS · CIRCUIT</div>
+  <span class="slide-num">10</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The concepts · 05</span>
+    <h2 style="margin-bottom:6px;">Understeer vs Oversteer</h2>
+    <div class="concept">
+      <div class="diagram">
+        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <!-- divider -->
+          <line x1="280" y1="30" x2="280" y2="350" stroke="#DDD8D2" stroke-width="1.5"/>
+          <!-- PANEL A: understeer -->
+          <path d="M40,210 A150 150 0 0 1 190,60" fill="none" stroke="#C8C0B8" stroke-width="58"/>
+          <path d="M40,210 A150 150 0 0 1 190,60" fill="none" stroke="#EAE4DB" stroke-width="50"/>
+          <!-- intended line dashed -->
+          <path d="M44,232 A172 172 0 0 1 210,66" fill="none" stroke="#A39C94" stroke-width="2.5" stroke-dasharray="5 6"/>
+          <!-- actual: washes wide (red) -->
+          <path d="M44,232 C120,150 150,120 250,96" fill="none" stroke="#C8102E" stroke-width="4" stroke-linecap="round"/>
+          <!-- car -->
+          <g transform="translate(150,150) rotate(-32)"><rect x="-13" y="-22" width="26" height="44" rx="6" fill="#1F1B18"/><rect x="-9" y="-20" width="18" height="10" rx="2" fill="#C8C0B8"/></g>
+          <!-- front push arrow -->
+          <path d="M196,108 L240,92" stroke="#C8102E" stroke-width="2.5"/><path d="M246,90 l-12,-2 l5,11 z" fill="#C8102E"/>
+          <text x="40" y="300" font-size="13" font-weight="700" fill="#1F1B18">UNDERSTEER</text>
+          <text x="40" y="320" font-size="10.5" fill="#7A7470">Front washes wide —</text>
+          <text x="40" y="335" font-size="10.5" fill="#7A7470">car won't turn in.</text>
+          <!-- PANEL B: oversteer -->
+          <path d="M330,210 A150 150 0 0 1 480,60" fill="none" stroke="#C8C0B8" stroke-width="58"/>
+          <path d="M330,210 A150 150 0 0 1 480,60" fill="none" stroke="#EAE4DB" stroke-width="50"/>
+          <path d="M334,232 A172 172 0 0 1 500,66" fill="none" stroke="#A39C94" stroke-width="2.5" stroke-dasharray="5 6"/>
+          <!-- actual: tucks in / rotates (red) -->
+          <path d="M334,232 C400,176 426,150 420,96" fill="none" stroke="#C8102E" stroke-width="4" stroke-linecap="round"/>
+          <!-- car rotated more -->
+          <g transform="translate(428,150) rotate(-58)"><rect x="-13" y="-22" width="26" height="44" rx="6" fill="#1F1B18"/><rect x="-9" y="-20" width="18" height="10" rx="2" fill="#C8C0B8"/></g>
+          <!-- rear rotation arrow -->
+          <path d="M452,176 a26 26 0 1 1 -20,-14" fill="none" stroke="#C8102E" stroke-width="2.5"/><path d="M432,158 l-2,12 l11,-5 z" fill="#C8102E"/>
+          <text x="330" y="300" font-size="13" font-weight="700" fill="#1F1B18">OVERSTEER</text>
+          <text x="330" y="320" font-size="10.5" fill="#7A7470">Rear steps out —</text>
+          <text x="330" y="335" font-size="10.5" fill="#7A7470">car rotates too much.</text>
+        </svg>
+      </div>
+      <div class="explain">
+        <span class="taught-tag">TAUGHT · ADVANCED S4</span>
+        <p class="why"><b>Every car has a balance — and you can read it, then change it.</b> Understeer is the front giving up first; oversteer is the rear. Knowing which you have tells you how to drive it, and which setup knob to turn.</p>
+        <ul class="points">
+          <li><b>Understeer</b> — nose pushes wide; ease off, or add front grip</li>
+          <li><b>Oversteer</b> — rear slides; catch it with steering + throttle</li>
+          <li>Setup shifts the balance: tyre pressures, anti-roll bars, wing, diff</li>
+          <li>Advanced teaches you to <b>dial out a problem</b> — Tuner Lab makes you an engineer</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 11 · OVERTAKING -->
+<div class="slide">
+  <div class="brand">CONCEPTS · RACECRAFT</div>
+  <span class="slide-num">11</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The concepts · 06</span>
+    <h2 style="margin-bottom:6px;">Overtaking — The Switchback</h2>
+    <div class="concept">
+      <div class="diagram">
+        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <!-- ribbon: straight into a corner exiting up-left -->
+          <path d="M40,250 L300,250 A140 140 0 0 1 360,118 L420,30" fill="none" stroke="#C8C0B8" stroke-width="90"/>
+          <path d="M40,250 L300,250 A140 140 0 0 1 360,118 L420,30" fill="none" stroke="#EAE4DB" stroke-width="82"/>
+          <path d="M40,250 L300,250 A140 140 0 0 1 360,118 L420,30" fill="none" stroke="#FAF9F5" stroke-width="2" stroke-dasharray="6 10"/>
+          <!-- defender (ink): normal early-apex line, slow exit -->
+          <path d="M40,232 C220,232 300,210 322,150 C336,108 360,60 378,30" fill="none" stroke="#4A4440" stroke-width="3.5"/>
+          <!-- attacker (red): deep entry, cutback, better exit -->
+          <path d="M40,272 C250,272 348,250 378,182 C398,120 392,60 392,30" fill="none" stroke="#C8102E" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- defender car -->
+          <g transform="translate(120,232) rotate(0)"><rect x="-22" y="-12" width="44" height="24" rx="6" fill="#4A4440"/></g>
+          <text x="120" y="214" font-size="10" fill="#4A4440" text-anchor="middle">DEFENDER</text>
+          <!-- attacker car behind -->
+          <g transform="translate(120,272) rotate(0)"><rect x="-22" y="-12" width="44" height="24" rx="6" fill="#C8102E"/></g>
+          <text x="120" y="300" font-size="10" fill="#C8102E" text-anchor="middle">ATTACKER</text>
+          <!-- numbered beats -->
+          <circle cx="300" cy="272" r="11" fill="#C8102E"/><text x="300" y="276" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">1</text>
+          <text x="300" y="304" font-size="9.5" fill="#7A7470" text-anchor="middle">sacrifice entry</text>
+          <circle cx="380" cy="186" r="11" fill="#C8102E"/><text x="380" y="190" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">2</text>
+          <text x="404" y="190" font-size="9.5" fill="#7A7470">cut back</text>
+          <circle cx="392" cy="70" r="11" fill="#1E6B3A"/><text x="392" y="74" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">3</text>
+          <text x="410" y="74" font-size="9.5" fill="#1E6B3A">better exit · pass</text>
+        </svg>
+      </div>
+      <div class="explain">
+        <span class="taught-tag">TAUGHT · ADVANCED S5</span>
+        <p class="why"><b>The best pass often happens on the way out, not the way in.</b> Sacrifice the entry, let the defender take the normal line, then cut back underneath for a far better drive onto the next straight.</p>
+        <ul class="points">
+          <li><b>1 · Sacrifice entry</b> — go in deeper and wider, off the normal line</li>
+          <li><b>2 · Cut back</b> — rotate behind the defender toward the apex</li>
+          <li><b>3 · Better exit</b> — superior drive lets you complete the pass cleanly</li>
+          <li>Also taught: the late-brake, the undercut, and racing etiquette — one move, leave space</li>
+        </ul>
+        <div class="legend">
+          <span><i style="border-top:4.5px solid #C8102E;"></i>Attacker</span>
+          <span><i style="border-top:3.5px solid #4A4440;"></i>Defender</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 12 · SCANDINAVIAN FLICK -->
+<div class="slide">
+  <div class="brand">CONCEPTS · RALLY</div>
+  <span class="slide-num">12</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The concepts · 07 · rally</span>
+    <h2 style="margin-bottom:6px;">The Scandinavian Flick</h2>
+    <div class="concept">
+      <div class="diagram">
+        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <!-- gravel texture -->
+          <g fill="#C8C0B8" opacity="0.5">
+            <circle cx="120" cy="60" r="1.6"/><circle cx="180" cy="100" r="1.4"/><circle cx="240" cy="70" r="1.8"/><circle cx="300" cy="120" r="1.4"/><circle cx="360" cy="80" r="1.6"/><circle cx="430" cy="120" r="1.5"/><circle cx="90" cy="140" r="1.4"/><circle cx="470" cy="200" r="1.6"/><circle cx="150" cy="200" r="1.4"/>
+          </g>
+          <!-- ribbon: corner -->
+          <path d="M60,300 L260,300 A150 150 0 0 1 410,150 L470,150" fill="none" stroke="#B7AFA4" stroke-width="86"/>
+          <path d="M60,300 L260,300 A150 150 0 0 1 410,150 L470,150" fill="none" stroke="#D8CFC2" stroke-width="78"/>
+          <!-- flick line (red): wiggle out then rotate in -->
+          <path d="M60,310 C160,310 200,300 232,272 C252,254 246,300 300,300 C356,300 372,252 392,210 C404,184 430,168 470,166" fill="none" stroke="#C8102E" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- beats -->
+          <circle cx="236" cy="270" r="11" fill="#C8102E"/><text x="236" y="274" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">1</text>
+          <text x="214" y="250" font-size="9.5" fill="#1F1B18">flick away</text>
+          <circle cx="316" cy="298" r="11" fill="#C8102E"/><text x="316" y="302" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">2</text>
+          <text x="300" y="330" font-size="9.5" fill="#7A7470">weight transfers</text>
+          <circle cx="392" cy="210" r="11" fill="#1E6B3A"/><text x="392" y="214" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">3</text>
+          <text x="408" y="214" font-size="9.5" fill="#1E6B3A">rotate + power</text>
+        </svg>
+      </div>
+      <div class="explain">
+        <span class="taught-tag">TAUGHT · RALLY S2</span>
+        <p class="why"><b>On a loose surface, you steer with weight, not just the wheel.</b> A quick flick away from the corner loads the outside tyres — then releasing it swings the car like a pendulum, rotating it into the turn before you've even reached it.</p>
+        <ul class="points">
+          <li><b>1 · Flick away</b> — a deliberate jab toward the outside</li>
+          <li><b>2 · Weight transfers</b> — load swings, the rear goes light</li>
+          <li><b>3 · Rotate &amp; power</b> — the car pivots; you're already pointed at the exit</li>
+          <li>Pairs with <b>trailing-throttle oversteer</b> — lifting to rotate, not braking</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 13 · PACE NOTES -->
+<div class="slide">
+  <div class="brand">CONCEPTS · RALLY</div>
+  <span class="slide-num">13</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The concepts · 08 · rally</span>
+    <h2 style="margin-bottom:6px;">Pace Notes</h2>
+    <div class="concept">
+      <div class="diagram">
+        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <!-- winding road -->
+          <path d="M40,330 C140,330 150,250 220,250 C300,250 300,150 230,150 C150,150 150,70 250,70 C360,70 380,150 470,150 L520,150" fill="none" stroke="#C8C0B8" stroke-width="46"/>
+          <path d="M40,330 C140,330 150,250 220,250 C300,250 300,150 230,150 C150,150 150,70 250,70 C360,70 380,150 470,150 L520,150" fill="none" stroke="#EAE4DB" stroke-width="38"/>
+          <path d="M40,330 C140,330 150,250 220,250 C300,250 300,150 230,150 C150,150 150,70 250,70 C360,70 380,150 470,150 L520,150" fill="none" stroke="#FAF9F5" stroke-width="1.5" stroke-dasharray="5 8"/>
+          <!-- call tags -->
+          <g font-size="11" font-weight="600">
+            <rect x="60" y="300" width="78" height="22" rx="3" fill="#C8102E"/><text x="99" y="315" fill="#fff" text-anchor="middle">L4 · 100</text>
+            <rect x="240" y="230" width="96" height="22" rx="3" fill="#1F1B18"/><text x="288" y="245" fill="#fff" text-anchor="middle">R5 INTO L2</text>
+            <rect x="60" y="120" width="120" height="22" rx="3" fill="#C8102E"/><text x="120" y="135" fill="#fff" text-anchor="middle">L4 TIGHTENS !</text>
+            <rect x="300" y="40" width="110" height="22" rx="3" fill="#1F1B18"/><text x="355" y="55" fill="#fff" text-anchor="middle">CREST · DON'T CUT</text>
+            <rect x="430" y="170" width="90" height="22" rx="3" fill="#1E6B3A"/><text x="475" y="185" fill="#fff" text-anchor="middle">R6 FLAT</text>
+          </g>
+          <!-- legend -->
+          <text x="40" y="362" font-size="10" fill="#7A7470">1 = hairpin · · · · · 6 = flat-out</text>
+        </svg>
+      </div>
+      <div class="explain">
+        <span class="taught-tag">TAUGHT · RALLY S4–S5</span>
+        <p class="why"><b>A rally driver races a road they've never seen — read to them, in code, by a co-driver.</b> Pace notes describe every corner before it arrives: how sharp, how far, what's hiding over the crest.</p>
+        <ul class="points">
+          <li><b>Number</b> — corner severity, 1 (hairpin) to 6 (flat-out)</li>
+          <li><b>Distance</b> — metres to the next call ("100")</li>
+          <li><b>Links &amp; modifiers</b> — "into", "tightens", "opens", "don't cut", "crest"</li>
+          <li>The skill is <b>rhythm and trust</b> — the call lands exactly when you need it</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 14 · WEIGHT TRANSFER -->
+<div class="slide">
+  <div class="brand">CONCEPTS · ENGINEERING</div>
+  <span class="slide-num">14</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The concepts · 09 · engineering</span>
+    <h2 style="margin-bottom:6px;">Weight Transfer &amp; The Contact Patch</h2>
+    <div class="concept">
+      <div class="diagram">
+        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <!-- ground -->
+          <line x1="40" y1="270" x2="520" y2="270" stroke="#C8C0B8" stroke-width="2"/>
+          <!-- car body, nose-down under braking -->
+          <g transform="rotate(-5 280 200)">
+            <path d="M150,200 L180,160 L360,150 L420,180 L420,210 L150,210 Z" fill="#1F1B18"/>
+            <rect x="210" y="158" width="120" height="22" rx="4" fill="#C8C0B8"/>
+          </g>
+          <!-- wheels -->
+          <circle cx="200" cy="262" r="26" fill="#0F0F10"/><circle cx="200" cy="262" r="10" fill="#7A7470"/>
+          <circle cx="400" cy="262" r="26" fill="#0F0F10"/><circle cx="400" cy="262" r="10" fill="#7A7470"/>
+          <!-- braking direction -->
+          <path d="M150,110 L70,110" stroke="#1F1B18" stroke-width="2.5"/><path d="M64,110 l12,-6 l0,12 z" fill="#1F1B18"/>
+          <text x="80" y="100" font-size="10" fill="#1F1B18">BRAKING</text>
+          <!-- weight shift arrow -->
+          <path d="M300,120 C340,130 360,150 372,180" stroke="#C8102E" stroke-width="3" fill="none"/><path d="M372,186 l6,-12 l-12,3 z" fill="#C8102E"/>
+          <text x="250" y="118" font-size="11" fill="#C8102E" font-weight="600">WEIGHT SHIFTS FORWARD</text>
+          <!-- contact patches -->
+          <rect x="176" y="290" width="48" height="14" rx="3" fill="#C8102E"/><text x="200" y="324" font-size="10" fill="#C8102E" text-anchor="middle" font-weight="600">FRONT GRIP ↑</text>
+          <rect x="386" y="294" width="28" height="9" rx="3" fill="#7A7470"/><text x="400" y="324" font-size="10" fill="#7A7470" text-anchor="middle">REAR GRIP ↓</text>
+        </svg>
+      </div>
+      <div class="explain">
+        <span class="taught-tag">TAUGHT · TUNER LAB + EVERYWHERE</span>
+        <p class="why"><b>Grip follows load.</b> Brake, and weight pitches onto the front tyres — their contact patch grows and they grip harder, while the rears go light. Every input you make moves weight, and weight is grip. This is the idea behind <em>all</em> of car control.</p>
+        <ul class="points">
+          <li>The <b>contact patch</b> — palm-sized — is all that connects car to road</li>
+          <li>Brake → load forward (front grip up). Accelerate → load rear. Turn → load outside</li>
+          <li><b>Trail braking</b> and the <b>Scandinavian flick</b> are just weight transfer, used deliberately</li>
+          <li>Tuner Lab turns this instinct into setup: springs, dampers, bars, pressures</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 15 · INITIATION CURRICULUM -->
+<div class="slide">
+  <div class="brand">CURRICULUM · TIER 1</div>
+  <span class="slide-num">15</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The curriculum · session by session</span>
+    <div class="prog-head">
+      <div><h2 style="margin:0;">Initiation</h2><p class="muted" style="font-size:13px; margin-top:4px;">4 sessions × 1 hr · beginner → licence-ready · cohorts of 4–6</p></div>
+      <div class="pmeta"><div class="pp">₹8,000</div><div class="px">STEP 1 OF THE LADDER</div></div>
+    </div>
+    <div class="sessions">
+      <div class="srow"><div class="sn">S1</div><div class="st">Cockpit &amp; Car Control</div><div class="sd">It's not a video game. Seating, force-feedback wheel, load-cell brake. Smooth inputs and the basics of weight transfer. Drill: brake modulation + slalom.</div></div>
+      <div class="srow"><div class="sn">S2</div><div class="st">The Racing Line</div><div class="sd">Out–in–out, the apex, slow-in-fast-out. Corner types and how the apex moves. Drill: one corner repeated; apply over a full lap.</div></div>
+      <div class="srow"><div class="sn">S3</div><div class="st">Braking</div><div class="sd">Braking points &amp; reference markers. Threshold braking — max deceleration without locking. Begin braking into the turn. Drill: the braking box.</div></div>
+      <div class="srow"><div class="sn">S4</div><div class="st">The Complete Lap + Assessment</div><div class="sd">Linking corners, rhythm, vision. Timed run against the Licence Lap benchmark, then a cohort race to finish.</div></div>
+    </div>
+    <div class="assess">
+      <div class="al">ASSESSMENT &amp; OUTCOME</div>
+      <div class="at"><b>Pass</b> = beat the benchmark → <b>Initiation Licence</b> (lifetime) + certificate + VMS Driver Card. <b>Distinction</b> = beat Gold Standard. <b>Win</b> = top the cohort race (counts as Ladder Step 1).</div>
+    </div>
+  </div>
+</div>
+
+<!-- 16 · ADVANCED CIRCUIT -->
+<div class="slide">
+  <div class="brand">CURRICULUM · TIER 2 · CIRCUIT</div>
+  <span class="slide-num">16</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The curriculum · session by session</span>
+    <div class="prog-head">
+      <div><h2 style="margin:0;">Advanced — Circuit</h2><p class="muted" style="font-size:13px; margin-top:4px;">8 sessions × 1 hr · Le Mans Ultimate + iRacing · requires Initiation Licence</p></div>
+      <div class="pmeta"><div class="pp">₹20,000</div><div class="px">→ CHAMPIONSHIP-READY</div></div>
+    </div>
+    <div class="sessions two">
+      <div class="scol">
+        <div class="srow"><div class="sn">S1</div><div class="st">Trail Braking</div><div class="sd">Overlap brake &amp; steering to rotate the car. The biggest pace unlock.</div></div>
+        <div class="srow"><div class="sn">S2</div><div class="st">Throttle &amp; Exit</div><div class="sd">Modulate to the traction limit; exit speed feeds the whole straight.</div></div>
+        <div class="srow"><div class="sn">S3</div><div class="st">Advanced Line</div><div class="sd">Compromise lines, double-apex, elevation &amp; camber.</div></div>
+        <div class="srow"><div class="sn">S4</div><div class="st">Setup Basics</div><div class="sd">Read understeer/oversteer; make one change, feel it. Dial out a problem.</div></div>
+      </div>
+      <div class="scol">
+        <div class="srow"><div class="sn">S5</div><div class="st">Racecraft I</div><div class="sd">Starts, the run to T1, overtaking: late-brake, switchback, undercut.</div></div>
+        <div class="srow"><div class="sn">S6</div><div class="st">Racecraft II</div><div class="sd">Defensive line, side-by-side, wheel-to-wheel awareness.</div></div>
+        <div class="srow"><div class="sn">S7</div><div class="st">Tyre &amp; Race Mgmt</div><div class="sd">Degradation, stint pacing, qualifying vs race pace.</div></div>
+        <div class="srow"><div class="sn">S8</div><div class="st">Race Sim + Assessment</div><div class="sd">Full weekend: qualifying + sprint + feature. Graded on pace, consistency, craft.</div></div>
+      </div>
+    </div>
+    <div class="assess">
+      <div class="al">OUTCOME</div>
+      <div class="at"><b>Championship-ready certification</b> — eligible to enter the Circuit Championship and target Quarterly Shootouts and the Grand Final.</div>
+    </div>
+  </div>
+</div>
+
+<!-- 17 · ADVANCED RALLY -->
+<div class="slide">
+  <div class="brand">CURRICULUM · TIER 2 · RALLY</div>
+  <span class="slide-num">17</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The curriculum · session by session · ARKA-endorsed</span>
+    <div class="prog-head">
+      <div><h2 style="margin:0;">Advanced — Rally</h2><p class="muted" style="font-size:13px; margin-top:4px;">10 sessions × 1 hr · AC Rally + Richard Burns Rally · requires Initiation Licence</p></div>
+      <div class="pmeta"><div class="pp">₹25,000</div><div class="px">→ ARKA RALLY DRIVE PATH</div></div>
+    </div>
+    <div class="sessions two">
+      <div class="scol">
+        <div class="srow"><div class="sn">S1</div><div class="st">The Loose Surface</div><div class="sd">Grip on gravel, slip angle, commitment, looking far ahead.</div></div>
+        <div class="srow"><div class="sn">S2</div><div class="st">Scandinavian Flick</div><div class="sd">Pendulum weight transfer to rotate before the corner.</div></div>
+        <div class="srow"><div class="sn">S3</div><div class="st">Left-Foot Braking</div><div class="sd">Set attitude without lifting; keep the turbo spooled.</div></div>
+        <div class="srow"><div class="sn">S4</div><div class="st">Pace Notes I</div><div class="sd">The numbering system, distances, links &amp; modifiers.</div></div>
+        <div class="srow"><div class="sn">S5</div><div class="st">Pace Notes II + Co-Driver</div><div class="sd">Blind stage on a co-driver's calls — the real experience.</div></div>
+      </div>
+      <div class="scol">
+        <div class="srow"><div class="sn">S6</div><div class="st">Surface Reading</div><div class="sd">Swept gravel, ruts, mud, tarmac transitions, rain &amp; night.</div></div>
+        <div class="srow"><div class="sn">S7</div><div class="st">Jumps &amp; Crests</div><div class="sd">Attitude over jumps, blind crests, don't-cut hazards.</div></div>
+        <div class="srow"><div class="sn">S8</div><div class="st">Stage Craft</div><div class="sd">Pace without over-driving; recover from a moment; preserve the car.</div></div>
+        <div class="srow"><div class="sn">S9</div><div class="st">Tarmac Rally</div><div class="sd">More grip, tighter line, kerbs — the mindset shift.</div></div>
+        <div class="srow"><div class="sn">S10</div><div class="st">Rally Sim + Assessment</div><div class="sd">Multi-stage mini-rally, combined time. Graded on pace + note execution.</div></div>
+      </div>
+    </div>
+    <div class="assess">
+      <div class="al">OUTCOME</div>
+      <div class="at"><b>Rally Championship-ready</b> — exceptional graduates flagged for the ARKA Rally Drive pathway via The Ladder.</div>
+    </div>
+  </div>
+</div>
+
+<!-- 18 · SIM + REALITY -->
+<div class="slide">
+  <div class="brand">CURRICULUM · TIER 3</div>
+  <span class="slide-num">18</span>
+  <div class="slide-inner">
+    <span class="eyebrow">The curriculum · the pinnacle</span>
+    <div class="prog-head">
+      <div><h2 style="margin:0;">Sim + Reality</h2><p class="muted" style="font-size:13px; margin-top:4px;">4 sim-prep sessions + 1 real-car day · also won as The Ladder prize</p></div>
+      <div class="pmeta"><div class="pp">₹1.75–2.25L</div><div class="px">ARKA RALLY / BUZZING HORNET CIRCUIT</div></div>
+    </div>
+    <div class="sessions">
+      <div class="srow"><div class="sn">P1</div><div class="st">The Real Car</div><div class="sd">What changes sim → real: g-forces, fear, fatigue, no reset. The specific car — specs, controls, quirks. The mindset shift.</div></div>
+      <div class="srow"><div class="sn">P2</div><div class="st">Learn the Venue Cold</div><div class="sd">The actual stage / circuit (e.g. MMRT) replicated in sim. Memorise every corner, marker and surface change before arriving.</div></div>
+      <div class="srow"><div class="sn">P3</div><div class="st">Technique Transfer</div><div class="sd">The techniques that matter most in this car on this venue — what translates 1:1, what feels different, the reference points that hold in reality.</div></div>
+      <div class="srow"><div class="sn">P4</div><div class="st">Safety &amp; The Plan</div><div class="sd">HANS, harness, fire, marshals, flags, comms; rally co-driver protocol. The minute-by-minute plan for the day.</div></div>
+    </div>
+    <div class="real-day">
+      <div><div class="rl">THE REAL-CAR DAY</div><div class="rt"><b>Morning:</b> sim warm-up on the venue + final brief &amp; scrutineering. &nbsp; <b>Afternoon:</b> a real car on a real stage/circuit with the ARKA / Buzzing Hornet team and full safety crew. &nbsp; <b>Debrief:</b> sim trace vs real trace, side by side — plus an edited onboard video. The proof, delivered.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 19 · TRACK DAY -->
+<div class="slide">
+  <div class="brand">CURRICULUM · SEPARATE · HNI</div>
+  <span class="slide-num">19</span>
+  <div class="slide-inner">
+    <span class="eyebrow">Outside the Academy path · Chennai-specific</span>
+    <h2 style="margin-bottom:4px;">Track Day Programmes</h2>
+    <p class="muted" style="font-size:13px; margin-bottom:18px;">For supercar owners preparing for real circuit days at MMRT / Buddh / Coimbatore. 90-minute sessions. 90%+ margin.</p>
+    <div class="sessions two">
+      <div class="scol">
+        <div class="scol-head"><span class="ch">Track Day Prep</span><span class="cp">₹25,000 · 4 × 90min</span></div>
+        <div class="srow"><div class="sn">S1</div><div class="st">Why Sim Prep + MMRT</div><div class="sd">Learn the circuit cold, corner by corner, before you arrive.</div></div>
+        <div class="srow"><div class="sn">S2</div><div class="st">Braking &amp; References</div><div class="sd">Threshold braking in a high-power car; fixed markers per corner.</div></div>
+        <div class="srow"><div class="sn">S3</div><div class="st">Line &amp; Managing Power</div><div class="sd">Racing line at MMRT; controlling a powerful RWD exit.</div></div>
+        <div class="srow"><div class="sn">S4</div><div class="st">Recovery &amp; Safety</div><div class="sd">Spin recovery, flags, etiquette, when to back off. Full lap.</div></div>
+      </div>
+      <div class="scol">
+        <div class="scol-head"><span class="ch">Advanced Performance</span><span class="cp">₹50,000 · 6 × 90min</span></div>
+        <div class="srow"><div class="sn">S1</div><div class="st">Reading Your Data</div><div class="sd">Telemetry literacy — find your own time loss.</div></div>
+        <div class="srow"><div class="sn">S2</div><div class="st">Quali vs Race Pace</div><div class="sd">The one-lap max vs the sustainable, repeatable pace.</div></div>
+        <div class="srow"><div class="sn">S3</div><div class="st">Advanced Braking</div><div class="sd">Trail braking in the real-car context.</div></div>
+        <div class="srow"><div class="sn">S4</div><div class="st">Tyre &amp; Consistency</div><div class="sd">Keep tyres alive over a 20-min session.</div></div>
+        <div class="srow"><div class="sn">S5</div><div class="st">Sector Optimisation</div><div class="sd">Data-led, sector by sector at MMRT.</div></div>
+        <div class="srow"><div class="sn">S6</div><div class="st">Mock Session + Plan</div><div class="sd">Full debrief + personal improvement plan.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 20 · TUNER LAB -->
+<div class="slide">
+  <div class="brand">CURRICULUM · SEPARATE · CORPORATE</div>
+  <span class="slide-num">20</span>
+  <div class="slide-inner">
+    <span class="eyebrow">Outside the Academy path · corporate &amp; engineering</span>
+    <div class="prog-head">
+      <div><h2 style="margin:0;">Tuner Lab</h2><p class="muted" style="font-size:13px; margin-top:4px;">8 sessions × 3 hrs · min 4 per cohort · vehicle dynamics as a teamwork metaphor</p></div>
+      <div class="pmeta"><div class="pp">₹28,000</div><div class="px">PER PERSON</div></div>
+    </div>
+    <div class="sessions two">
+      <div class="scol">
+        <div class="srow"><div class="sn">S1</div><div class="st">Vehicle Dynamics 101</div><div class="sd">Contact patch, friction circle, weight transfer — the mental model.</div></div>
+        <div class="srow"><div class="sn">S2</div><div class="st">The Tyre</div><div class="sd">Grip, slip angle, temperature, pressure — the centre of every decision.</div></div>
+        <div class="srow"><div class="sn">S3</div><div class="st">Springs &amp; Dampers</div><div class="sd">Mechanical grip and body control; how fast weight transfers.</div></div>
+        <div class="srow"><div class="sn">S4</div><div class="st">Anti-Roll Bars &amp; Balance</div><div class="sd">Tune understeer/oversteer front-to-rear; feel it flip.</div></div>
+      </div>
+      <div class="scol">
+        <div class="srow"><div class="sn">S5</div><div class="st">Aero &amp; Gearing</div><div class="sd">Downforce vs drag; ratios matched to the track.</div></div>
+        <div class="srow"><div class="sn">S6</div><div class="st">Alignment</div><div class="sd">Camber, toe, caster — grip, wear and stability.</div></div>
+        <div class="srow"><div class="sn">S7</div><div class="st">Data-Driven Setup</div><div class="sd">Diagnose from the trace. Hypothesis → one change → test.</div></div>
+        <div class="srow"><div class="sn">S8</div><div class="st">Team Setup Challenge</div><div class="sd">Teams tune a car against the clock, then race off. Leadership metaphor in full.</div></div>
+      </div>
+    </div>
+    <div class="assess">
+      <div class="al">THE HOOK</div>
+      <div class="at">Every other corporate offsite is paintball. This one teaches your team how engineers actually solve problems — <b>data over opinion, disciplined iteration</b> — and ends in a race.</div>
+    </div>
+  </div>
+</div>
+
+<!-- 21 · CLOSE -->
+<div class="slide">
+  <div class="brand">THE MOTORSPORT ACADEMY</div>
+  <span class="slide-num">21</span>
+  <div class="slide-inner close">
+    <span class="eyebrow">The pathway, in three words</span>
+    <h1>Drive it. Train for it.<br><span class="red">Race for real.</span></h1>
+    <p class="quote">"The next great Indian driver will tell their story starting with three words: <b>I started at RaceSims.</b>"</p>
+    <div style="margin-top:40px; display:flex; gap:40px;">
+      <div class="stat"><div class="sv" style="font-size:30px;">Initiation</div><div class="sl">₹8,000 · earn your licence</div></div>
+      <div class="stat"><div class="sv" style="font-size:30px;">Advanced</div><div class="sl">₹20–25K · championship-ready</div></div>
+      <div class="stat"><div class="sv" style="font-size:30px;">Sim + Reality</div><div class="sl">₹1.75–2.25L · a real seat</div></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

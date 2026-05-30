@@ -8,7 +8,14 @@ updated: 2026-05-29
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-29 (latest) — Pricing restructure LOCKED
+## 2026-05-30 (latest) — Academy curriculum + illustrated deck COMPLETE
+
+- **Full curriculum designed** for all 6 programmes — see [[racesims-academy-curriculum]] (hub: **B·D·A·D session model** = Brief·Drill·Apply·Debrief, earned progression gates, 16-concept glossary). Per-programme session-by-session pages: [[racesims-curriculum-initiation]] (4 sessions), [[racesims-curriculum-advanced-circuit]] (8), [[racesims-curriculum-advanced-rally]] (10, ARKA-endorsed), [[racesims-curriculum-sim-reality]] (4 prep + real-car day), [[racesims-curriculum-track-day]] (Prep 4 / Advanced 6), [[racesims-curriculum-tuner-lab]] (8, corporate).
+- **Illustrated deck built**: `racesims/marketing/decks/motorsport-academy-curriculum.html` + `.pdf` — **21 slides**, layered: aspirational open → **9 custom hand-built SVG concept diagrams** (racing line, braking/threshold, trail braking, throttle/exit, understeer-oversteer, switchback overtake, Scandinavian flick, pace notes, weight transfer) → per-programme session detail → close. RaceSims editorial system. Render-verified via Playwright; PDF is 1280×720, 21pp.
+- Decisions this session: layered deck (parent + ops in one), custom SVG (not AI images).
+- **Open:** Pass 8/16 monthly-vs-prepaid still unconfirmed · Chennai P&L still on 6-rig/old-pricing assumption — needs recalibration for 8 seats + new rates.
+
+## 2026-05-29 — Pricing restructure LOCKED
 
 - **Master rate card created**: [[racesims-master-rate-card]]. Session-based pricing: **30 min = ₹750 · 1 hr = ₹1,250 · Motion +₹500/hr**. Replaces 4 conflicting rate tables across the wiki.
 - **Academy prices updated**: Race Academy ₹14K → **₹20K** (8 × 1hr sessions, ₹2,500/session). Rally School ₹16K → **₹25K** (10 × 1hr sessions, ₹2,500/session). Initiation stays ₹8K. Session durations now explicit (1 hr coached) across all tiers.

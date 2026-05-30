@@ -118,6 +118,13 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ### Products & pricing
 - [[gt-pro-rig]] — flagship GT rig product, BOM, variants
 - [[kit-pricing]] — 4 kit tiers (Rs.2.5L to Rs.11L+)
+- [[racesims-master-rate-card]] ⭐ — single source of truth for all centre/Academy pricing
+
+### Academy & curriculum
+- [[racesims-motorsport-academy]] — 3-tier training programme (Initiation · Advanced · Sim+Reality)
+- [[racesims-academy-curriculum]] ⭐ — curriculum system: B·D·A·D session model + concept glossary
+- [[racesims-curriculum-initiation]] · [[racesims-curriculum-advanced-circuit]] · [[racesims-curriculum-advanced-rally]]
+- [[racesims-curriculum-sim-reality]] · [[racesims-curriculum-track-day]] · [[racesims-curriculum-tuner-lab]]
 
 ### Ops
 - [[discord-server-setup-kit]]
