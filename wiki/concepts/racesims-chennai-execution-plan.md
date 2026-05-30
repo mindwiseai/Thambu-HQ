@@ -16,14 +16,12 @@ The full build-and-launch plan for the chosen [[racesims-chennai-premium-baselin
 - `racesims-chennai-premium-forecast.xlsx` — live financial model
 - raw input: `2nd, 3rd & 4th floor plan.pdf` (typical floor, hall 8.73 × 12.15 m)
 
-## Layout (v4 — Vastu-aligned · see `racesims-chennai-floorplan.png` + `racesims-chennai-3d.html`)
-Revised to [[thambu]]'s Hindu-Vastu preference and a SuperLap (US sim-studio) reference:
-- **Office (doubles as the training / academy room) → bottom-right (SW) corner**, glass-partitioned, ~11.5 m² — owner cabin + briefings/coaching; keeps Phase-2 [[racesims-motorsport-academy|Academy]] possible without moving a rig.
-- **Motion hero rig → right wall, beside the office** (clearance ring + spot lighting; the Instagram magnet) — so all the static rigs sit together and the motion rig anchors the office side.
-- **8 rigs:** 7 static grouped in an L (4 along the back wall + 3 on the left wall) + the motion hero on the right wall.
-- **Bottom row aligned:** front-left **two washroom doors** (kept clear) → **entrance** (by the lift) → **reception just to its right** → **small coffee counter behind reception** (SuperLap-style, not a full café) → **office** (front-right).
-- **Lounge/spectator** centre; **leaderboard** top-right; **perimeter windows** on three walls (the property is bright with large windows).
-- **Look & feel from SuperLap:** woven pendant lamps over reception, warm light, cream walls + light carpet, brushed-steel reception counter, menu board + merch pegboard, ceiling track lighting. Editorial: cream + RS Red + Montserrat + JetBrains Mono.
+## Layout (v6 — North-up · Vastu-oriented · see `racesims-chennai-floorplan.png` + `racesims-chennai-3d.html`)
+**Compass confirmed with [[thambu]]:** room taller N–S (**12.15 m**) than E–W (**8.73 m**). **Entrance = EAST** (right wall, off the lift lobby) · **Office/training = NORTH-EAST corner** (owner cabin, doubles as Phase-2 [[racesims-motorsport-academy|Academy]] room) · **motion rig faces NORTH**. Plan and 3D are both drawn North-up with a compass + north arrow.
+- **8 rigs:** 7 static grouped — **4 along the WEST wall** (face East) + **3 along the SOUTH wall** (face North) — plus the **motion hero near the NORTH wall** beside the office, screens facing North (clearance ring + spot lighting; the Instagram magnet).
+- **East (entrance) wall, N→S:** office (NE) → reception + **small coffee counter behind it** (SuperLap-style) → entrance → **two washroom doors** (kept clear).
+- **Lounge/spectator** centre; **leaderboard** on the north wall; **perimeter windows** on the west and south walls (bright property).
+- **Look & feel from SuperLap:** woven pendant lamps over reception, warm light, cream walls + light carpet, brushed-steel reception counter, menu board, ceiling track lighting. Editorial: cream + RS Red + Montserrat + JetBrains Mono.
 
 ## Phased timeline
 | Phase | Span | Milestones |
