@@ -23,6 +23,9 @@ A **conservative, ground-truth forecast** for the [[racesims-chennai-flagship|Ch
 
 ## LOCKED — property confirmed (2026-05-30)
 Property **locked** in **Nungambakkam** (central Chennai); opens **July 2026**. Full detail: `racesims-chennai-project-report.pdf` + `racesims-chennai-5yr-business-plan.pdf` (in `marketing/decks/`). Component costing refined to sourced 2025-26 prices and a **brand-partnership/sponsorship plan** — see [[racesims-chennai-partnerships]] (PC = RTX 5070 Ti build ₹3.24L/rig · AC = energy-efficient 5-star inverter splits ₹2.4L · 2× fibre Jio+Airtel · list capital ~₹73.5L, target ~₹55-58L after sponsorships).
+
+> **Landed-cost variant (2026-05-30):** a second report on **actual landed prices** — `racesims-chennai-project-report-landed-cost.pdf` (11 pp), source [[2026-05-30-chennai-landed-cost-bom]]. Real Conspit/VNM rig BOM (incl. tax) replaces the ₹5.85L/rig distributor estimate: **4 Formula/GT** (Apex 2-pedal) + **4 Rally/GT** (VNM 3-pedal + shifter + handbrake), motion platform **₹3.70L**. **Fleet equipment ₹44.64L · net capital ₹70.2L · cost of capital ₹5.62L/yr · payback ~2.0 yr · ~3.0× multiple.** Premium/distributor report stays as-is.
+
 - **Capital (full room-only fit-out):** equipment ₹50.79L + deposit ₹9.32L + **fit-out ₹16.1L** (itemised) + WC ₹6.11L + contingency ₹3.81L → gross ₹86.1L, less GST ITC ₹9.84L = **net ₹76.3L** (sunk ₹67.0L; deposit refundable).
 - **Cost of capital:** 8% p.a. blended (part loan / part own) = **₹6.10L/yr**.
 - **5-year forecast (base case, occ 18→35%):** cumulative **EBITDA ₹3.57 cr · PAT ~₹2.11 cr · payback ~2.1 yrs · ~2.8× capital multiple.** Café & academy excluded (upside).

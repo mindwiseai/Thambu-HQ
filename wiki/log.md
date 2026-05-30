@@ -9,6 +9,16 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-30] ingest | Chennai landed-cost equipment BOM + capital
+- Source: [[2026-05-30-chennai-landed-cost-bom]] — [[thambu]]'s actual landed-cost figures (incl. tax) for the rig hardware.
+- Created: 1 new page ([[2026-05-30-chennai-landed-cost-bom]]).
+- Updated: [[racesims-chennai-partnerships]] (landed BOM in costing section), [[racesims-chennai-premium-baseline]] (landed-cost variant callout).
+- **Build mix:** 4 Formula/GT (Apex 2-pedal ₹1,60,750 sim hw) + 4 Rally/GT (VNM 3-pedal + shifter + handbrake ₹2,14,750); +PC+screens ₹3,23,995 ⇒ Formula ₹4,84,745 / Rally ₹5,38,745 per rig. **Motion platform ₹3,70,000** (supplier-quoted) ⇒ motion rig ₹9,08,745. 7 static + 1 motion.
+- **Fleet equipment ₹44.64L landed** (vs ₹50.79L est) → **net capital ₹70.2L · cost of capital ₹5.62L/yr · payback ~2.0 yr · ~3.0× multiple.** Break-even unchanged (10.0% / 11.6%).
+- Deliverable: `racesims/marketing/decks/racesims-chennai-project-report-landed-cost.pdf` (11 pp, separate from premium report). Premium report also redesigned this session (landscape, RaceSims editorial).
+- Contradiction flagged: landed build is Conspit/VNM only vs the 2C/2V/2Fanatec/2-reserved sponsorship showcase — landed = buy-it-ourselves baseline.
+- Domain: racesims
+
 ## [2026-05-30] strategy | Chennai partnerships + Nungambakkam + costing refine
 - Created: [[racesims-chennai-partnerships]] — brand-partner/sponsorship plan to cut ₹73.5L list capital toward ~₹55-58L.
 - **Location locked: Nungambakkam** (central Chennai).
