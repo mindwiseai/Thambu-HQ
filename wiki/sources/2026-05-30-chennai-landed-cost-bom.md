@@ -3,14 +3,14 @@ title: Chennai — Landed-Cost Equipment BOM & Capital
 type: source
 source_type: strategy
 domain: racesims
-raw_path: racesims/racesims-chennai-project-report-landed-cost.pdf
+raw_path: racesims/racesims-chennai-project-report.pdf
 ingested: 2026-05-30
 ---
 
 # Chennai — Landed-Cost Equipment BOM & Capital
 
 ## Summary
-[[thambu]] supplied **actual landed-cost figures (all incl. tax)** for the Chennai sim-rig hardware, replacing the earlier ₹5,84,900/rig distributor estimate. The 8-rig fleet is now costed bottom-up: **4 Formula/GT rigs** (Apex 2 pedals, no clutch/shifter/handbrake) + **4 Rally/GT rigs** (VNM 3-pedal + shifter + handbrake), with one rally rig carrying the 3-DOF motion platform (**7 static + 1 motion**). A second, separate report — `racesims-chennai-project-report-landed-cost.pdf` (11 pp) — was built on this basis; the original premium report is left untouched. Fleet equipment lands at **₹44.64L** (vs ₹50.79L estimate) and **net capital at ₹70.2L**.
+[[thambu]] supplied **actual landed-cost figures (all incl. tax)** for the Chennai sim-rig hardware, replacing the earlier ₹5,84,900/rig distributor estimate. The 8-rig fleet is now costed bottom-up: **4 Formula/GT rigs** (Apex 2 pedals, no clutch/shifter/handbrake) + **4 Rally/GT rigs** (VNM 3-pedal + shifter + handbrake), with one rally rig carrying the 3-DOF motion platform (**7 static + 1 motion**). This report — now the **primary** `racesims-chennai-project-report.pdf` (11 pp, promoted 2026-05-30 from the former `-landed-cost` name) — was built on this basis; the earlier distributor-value report is kept as `racesims-chennai-project-report-distributor.pdf`. Fleet equipment lands at **₹44.64L** (vs ₹50.79L estimate) and **net capital at ₹70.2L**.
 
 ## Key facts — per-rig bill of materials (landed, incl. tax)
 Common to all 8 rigs: Conspit Ares 12 Nm wheelbase ₹41,500 · 300GT steering wheel ₹32,750 · quick release ₹4,500 · seat ₹20,000 · rig frame ₹22,000 · triple monitor stand ₹15,000 = **₹1,35,750**.

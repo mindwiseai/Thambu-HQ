@@ -3,7 +3,7 @@ title: Chennai — Fit-Out Real-World Sourcing & Line-by-Line Optimisation
 type: source
 source_type: strategy
 domain: racesims
-raw_path: racesims/racesims-chennai-project-report-landed-cost.pdf
+raw_path: racesims/racesims-chennai-project-report.pdf
 ingested: 2026-05-30
 ---
 

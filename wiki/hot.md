@@ -18,7 +18,7 @@ Most recently touched context. Read this first for any query — it often answer
 
 ## 2026-05-30 — Chennai landed-cost BOM + two project reports
 - **Actual landed-cost rig BOM** from [[thambu]] (incl. tax) — [[2026-05-30-chennai-landed-cost-bom]]. **4 Formula/GT** (Apex 2-pedal, ₹1,60,750 sim hw) + **4 Rally/GT** (VNM 3-pedal + shifter + handbrake, ₹2,14,750). +PC+screens ₹3,23,995 ⇒ Formula ₹4,84,745 / Rally ₹5,38,745. **Motion platform ₹3,70,000** ⇒ motion rig ₹9,08,745. 7 static + 1 motion. **Fleet equipment ₹44.64L.**
-- **Two reports:** `racesims-chennai-project-report.pdf` (premium/distributor, 10 pp landscape) and `racesims-chennai-project-report-landed-cost.pdf` (landed, 11 pp, now on the optimised fit-out). Old drafts archived.
+- **Primary report:** `racesims-chennai-project-report.pdf` is now THE project report (landed-cost basis, 11 pp, optimised fit-out — promoted 2026-05-30 from `-landed-cost`). The distributor-value version is kept as `racesims-chennai-project-report-distributor.pdf` (10 pp). Old drafts archived.
 - **Office (NE corner):** ~12.2 × 12.1 ft (~148 sq ft).
 
 ## 2026-05-30 — Chennai partnerships + Nungambakkam + costing
