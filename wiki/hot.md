@@ -8,7 +8,15 @@ updated: 2026-05-29
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-30 (latest) — Academy curriculum + illustrated deck COMPLETE
+## 2026-05-30 (latest) — Chennai property LOCKED · 5-year report + AC sizing
+
+- **Property LOCKED, opens July 2026.** Layout final at **v7** (North-up, Vastu): entrance **EAST**, office/training **NORTH-EAST corner**, motion rig faces **NORTH**, 7 static rigs on west + south walls with **all screens against the walls**. Room 8.73 m E–W × 12.15 m N–S. See [[racesims-chennai-premium-baseline]] (LOCKED section), `racesims-chennai-floorplan.png`, `racesims-chennai-3d.html`.
+- **Financials rechecked + cost of capital added** (8% blended, part loan/part own = ₹5.79L/yr). **AC sized: ~6 T calculated → install 8 T** (4×2-ton inverter splits, 3 hall + 1 office), ~₹4.5L; glazing solar gain is the swing factor (needs solar film + blinds). Net capital ₹68.3L → **₹72.3L** with AC.
+- **5-year base case (occ 18→35%):** cumulative **EBITDA ₹3.57 cr · PAT ~₹2.14 cr · payback ~2 yrs · ~3.2× multiple.** Break-even 10% (11.5% incl. cost of capital). Café & academy excluded (upside).
+- Deliverables (`racesims/marketing/decks/`): **`racesims-chennai-project-report.pdf`** (8-pg consolidated — concept, floor plan, 3D, financials, 5yr, execution), `racesims-chennai-5yr-business-plan.pdf`, `racesims-chennai-economics.pdf`. Live model `racesims-chennai-premium-forecast.xlsx`.
+- **Next:** glazing area/orientation to HVAC contractor · Conspit/VNM rig pro-forma + order (8-wk lead) · CA on SAC/80-IAC · call [[uday-hyderabad|Uday]] for the operator playbook.
+
+## 2026-05-30 — Academy curriculum + illustrated deck COMPLETE
 
 - **Full curriculum designed** for all 6 programmes — see [[racesims-academy-curriculum]] (hub: **B·D·A·D session model** = Brief·Drill·Apply·Debrief, earned progression gates, 16-concept glossary). Per-programme session-by-session pages: [[racesims-curriculum-initiation]] (4 sessions), [[racesims-curriculum-advanced-circuit]] (8), [[racesims-curriculum-advanced-rally]] (10, ARKA-endorsed), [[racesims-curriculum-sim-reality]] (4 prep + real-car day), [[racesims-curriculum-track-day]] (Prep 4 / Advanced 6), [[racesims-curriculum-tuner-lab]] (8, corporate).
 - **Illustrated deck built**: `racesims/marketing/decks/motorsport-academy-curriculum.html` + `.pdf` — **21 slides**, layered: aspirational open → **9 custom hand-built SVG concept diagrams** (racing line, braking/threshold, trail braking, throttle/exit, understeer-oversteer, switchback overtake, Scandinavian flick, pace notes, weight transfer) → per-programme session detail → close. RaceSims editorial system. Render-verified via Playwright; PDF is 1280×720, 21pp.

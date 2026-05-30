@@ -9,6 +9,15 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-30] LOCK | Chennai property confirmed + AC sizing + 5yr report
+- **Property LOCKED**, opens July 2026. Updated [[racesims-chennai-premium-baseline]] (locked financials) + [[racesims-chennai-execution-plan]] (HVAC).
+- **Numbers rechecked:** fleet blended ₹1,218/hr, break-even 10.0%, 5yr EBITDA ₹3.57cr / PAT ~₹2.14cr / payback ~2yr — all confirmed.
+- **Cost of capital added:** 8% p.a. blended (part loan/part own) = ₹5.79L/yr.
+- **AC sized:** calculated ~6 T peak (PCs + solar-through-glass + fresh air); install **8 T** (4×2-ton inverter splits), capex ~₹4.5L → net capital ₹68.3L → **₹72.3L**.
+- **Layout LOCKED at v7:** North-up, entrance EAST, office NE, motion faces N, all rigs face their walls.
+- Deliverables in `racesims/marketing/decks/`: `racesims-chennai-project-report.pdf` (8-pg consolidated), `racesims-chennai-5yr-business-plan.pdf`, `racesims-chennai-economics.pdf`. Floor plan + 3D in `racesims/`.
+- Domain: racesims
+
 ## [2026-05-30] build | Academy full curriculum + illustrated deck
 - Created: [[racesims-academy-curriculum]] (hub: B·D·A·D session model, progression logic, 16-concept glossary) + 6 per-programme curriculum pages — [[racesims-curriculum-initiation]], [[racesims-curriculum-advanced-circuit]], [[racesims-curriculum-advanced-rally]], [[racesims-curriculum-sim-reality]], [[racesims-curriculum-track-day]], [[racesims-curriculum-tuner-lab]]
 - Each curriculum is session-by-session with assessment gates + outcomes

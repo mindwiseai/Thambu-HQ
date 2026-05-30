@@ -37,7 +37,9 @@ GST already registered — **SAC 999694** (amusement/recreation, 18%). Lease reg
 > **Tax flag:** [[startup-tax-exemption|80-IAC]] not yet claimed this year — Y1 tax ~₹4k anyway (depreciation), but the exemption matters in Y2–3. CA to confirm FY2027 window and file.
 
 ## Procurement (critical path)
-Rigs via RaceSims as [[conspit]]/[[vnm]] distributor at cost: 7 × ₹5,84,900 + 1 × ₹9,84,900 = **₹50,79,200**. **Order by week 4** (8-week lead time is the schedule driver). Plus 6 KVA UPS, managed switch + business fibre, 4 × 1.5T ACs (~4.5 kW heat load), 3-phase wiring + DB, flooring/acoustics, lighting, reception + **coffee counter** (machine + counter ~₹0.8–1L), **glass training-room partition** (~₹1–1.5L), 65″ leaderboard, CCTV, fire kit, branding. Import via existing IE code through Chennai Harbour.
+Rigs via RaceSims as [[conspit]]/[[vnm]] distributor at cost: 7 × ₹5,84,900 + 1 × ₹9,84,900 = **₹50,79,200**. **Order by week 4** (8-week lead time is the schedule driver). Plus 6 KVA UPS, managed switch + business fibre, 3-phase wiring + DB, flooring/acoustics, lighting, reception + **coffee counter** (machine + counter ~₹0.8–1L), **glass training-room partition** (~₹1–1.5L), 65″ leaderboard, CCTV, fire kit, branding. Import via existing IE code through Chennai Harbour.
+
+**HVAC (air conditioning).** Calculated peak cooling load **~6 tons** (PCs+screens 5.4 kW · solar gain through glazing 9.2 kW · fresh air 2.5 kW · lighting 1.3 kW · people 2.3 kW = ~20.7 kW). **Install ~8 tons** (≈25% margin for Chennai summer, full-house crowds, PC heat spikes, 1-unit redundancy): **4 × 2-ton 5-star inverter splits** — 3 across the open hall + 1 in the NE office/training room. **The glazing is the swing factor** — spec solar film + internal blinds or step up to 9–10 T. Capex **~₹4.5L** (incl. copper, stabilisers, install). Running cost sits inside the ₹45–50k/mo electricity.
 
 ## Staffing
 Senior Team Lead ₹35k (ops + Zoho Books) + 2 × Sim Ops ₹25k (shifts overlap at peak). Hire for customer energy; brief on the [[arka-motorsports|ARKA]] story. Add 3rd ops hire when weekend peak holds >60% (~month 3–4).
