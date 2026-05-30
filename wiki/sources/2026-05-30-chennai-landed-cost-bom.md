@@ -28,7 +28,7 @@ Common to all 8 rigs: Conspit Ares 12 Nm wheelbase ₹41,500 · 300GT steering w
 | Rally / GT · 3-DOF motion | 1 | ₹9,08,745 | ₹9,08,745 |
 | **Fleet equipment · landed** | **8** | | **₹44,63,960** |
 
-- Capital stack: equipment ₹44.64L + deposit ₹9.32L (refundable) + fit-out ₹16.10L + working capital ₹6.11L + contingency ₹3.04L (5% of equip+fit-out) = **gross ₹79.20L**, less GST ITC ₹9.01L = **net cash deployed ₹70.19L**; **capital truly at risk ₹60.88L**.
+- Capital stack: equipment ₹44.64L + deposit ₹9.32L (refundable) + fit-out ₹16.10L + working capital ₹6.11L + contingency ₹3.04L (5% of equip+fit-out) = **gross ₹79.20L**, less GST ITC ₹9.01L = **net cash deployed ₹70.19L**; **capital truly at risk ₹60.88L**. *(Superseded 2026-05-30: fit-out later optimised ₹16.10L → ₹14.20L, reflowing the stack to gross ₹77.21L · net ₹68.46L · at-risk ₹59.14L · CoC ₹5.48L/yr · break-even 11.5% · multiple ~3.1× — see [[racesims-chennai-fitout]] and [[2026-05-30-chennai-fitout-optimisation]].)*
 - **Cost of capital:** 8% p.a. on ₹70.2L = **₹5.62L/yr**.
 - **5-year base case (occ 18→35%, opex/pricing unchanged):** cumulative **EBITDA ₹3.57 cr · PAT ₹2.11 cr · payback ~2.0 yrs · ~3.0× multiple**. Break-even unchanged (10.0% operating / 11.6% incl. cost of capital). Depreciation blended WDV on the ₹60.7L equipment + fit-out base.
 

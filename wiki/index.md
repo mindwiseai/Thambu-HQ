@@ -227,6 +227,9 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[abdul]] — field technical installer (Bangalore, ex-ARKA)
 - [[shahid-moto-mind]] — cladding design vendor (direction being rejected)
 
+### RaceSims Chennai centre (Nungambakkam)
+- [[guru-moorthy]] — architect, fit-out (see [[racesims-chennai-fitout]])
+
 ### Influencers
 - [[jamie-shaw-racing]]
 

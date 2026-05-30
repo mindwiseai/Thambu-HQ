@@ -40,7 +40,7 @@ If the partners cover even 30–40% of their components, equipment drops ~₹15�
 - **PC (per rig) = ₹3,23,995** — MD Computers quote: Ryzen 7 9700X + **Zotac RTX 5070 Ti** + Gigabyte B850 + Corsair (Dominator RGB RAM ₹42,880, 360 AIO, RM850e, 3500X case) + **3 × Samsung Odyssey G5 32″** (₹72k) + Corsair headset. RAM is at market (DRAM prices spiked on AI demand — not bling).
 - **AC = 8 T as 4 × 2-ton 5-star inverter HIGH-WALL SPLITS, ₹2.4L** — the **most energy-efficient** type (ISEER ~4.5, e.g. LG US-Q24ENZE ₹54,990; cassette/ceiling-suspended are ~3-star ISEER 3.5 and cost more). Exposed black ceiling rules out cassettes anyway. Solar film + blinds on the glazing is the swing factor.
 - **Internet = 2 × normal high-speed fibre (Jio + Airtel) with a dual-WAN failover router** — cheaper + more resilient than a leased line (~₹4,500/mo OpEx).
-- **Fit-out validated ~₹16L** (room-only; brand-new building has power + fire) against real India retail prices.
+- **[2026-05-30] Fit-out re-sourced + optimised to ₹14.20L** (was a ~₹16L estimate) — every line re-grounded from real 2026 India quotes/listings and walked with [[thambu]]. Full living schedule: [[racesims-chennai-fitout]]; method: [[2026-05-30-chennai-fitout-optimisation]]. Net capital ₹70.2L → **₹68.46L**. Interior brand walls + leaderboard TV are sponsor-targetable (fold into the partner asks below).
 
 ## Backlinks
 - [[racesims-chennai-premium-baseline]] · [[racesims-chennai-execution-plan]] · [[conspit]] · [[vnm]] · [[arka-motorsports]]

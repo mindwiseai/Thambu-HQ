@@ -9,6 +9,14 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-30] ingest | Chennai fit-out real-world sourcing + line-by-line optimisation
+- Source: [[2026-05-30-chennai-fitout-optimisation]] — re-grounded the carried-forward ₹16.1L fit-out from real 2026 India listings/rate-cards (IndiaMART, Philips, Moglix, Chennai contractors) + C&W/JLL benchmarks; walked all 17 lines with [[thambu]].
+- Created: 2 new pages ([[racesims-chennai-fitout]] living schedule, [[2026-05-30-chennai-fitout-optimisation]] source) + 1 new entity ([[guru-moorthy]] architect).
+- Updated: [[2026-05-30-chennai-landed-cost-bom]] (superseded-capital note), [[racesims-chennai-partnerships]] (fit-out ₹14.2L), [[racesims-chennai-premium-baseline]] (landed callout + fit-out note), [[wiki/index|index]].
+- **Fit-out ₹16.10L → ₹14.20L** (15 funded lines; acoustic + ambient audio → Phase 2). Old estimate was a *lean* number (₹1,240/sqft, not premium) and *incomplete* (buried UPS, no WiFi); honest premium = ₹21.3L; optimised to ₹14.2L via VE + phasing + sponsor-shift.
+- **Capital reflow:** gross ₹77.21L · ITC ₹8.75L · **net ₹68.46L** · at-risk ₹59.14L · CoC ₹5.48L/yr · break-even 11.5% · **~3.1× multiple.** Landed report rebuilt (commit 2ce3d8d).
+- **Open:** 5 lines provisional (AC/UPS/lighting/solar/signage quotes pending) · washroom line unconfirmed · Conspit-vs-sponsorship build of record.
+
 ## [2026-05-30] ingest | Chennai landed-cost equipment BOM + capital
 - Source: [[2026-05-30-chennai-landed-cost-bom]] — [[thambu]]'s actual landed-cost figures (incl. tax) for the rig hardware.
 - Created: 1 new page ([[2026-05-30-chennai-landed-cost-bom]]).
