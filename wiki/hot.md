@@ -12,6 +12,7 @@ Most recently touched context. Read this first for any query — it often answer
 
 - **Corsair partner deck revised → 8 slides** (`racesims-chennai-partner-corsair.pdf` + **`.html` now committed**, was PDF-only). Per [[thambu]]: break down the cost + show a **clear distinction between Corsair (the PC) and Fanatec (the cockpit)** — same group since 2024, but run as separate businesses, so **two clean numbers**: **Corsair PC ₹5.9L** (RAM/cooling/PSU/case/headset ×8 rigs) + **Fanatec ₹11.5L** (complete DD+ cockpit ×2 featured rigs) = **₹17.4L total**.
 - **Fanatec parts list locked:** ClubSport DD+ 15Nm base, ClubSport Cockpit, Pedals V3, Formula V2.5 X wheel, Shifter SQ V1.5, Handbrake V1.5, QR2. Dropped the "Podium" tier (voice-brief artifact) → DD+ throughout. Prices = [[techxhub]] India RRP (base ₹2.06L + pedals ₹66.7k confirmed; rest indicative). User's "₹10-12L" recollection reconciled: 3 hero parts ×2 = ₹6.6L, so added full cockpit kit per rig to land in-band.
+- **Design restored:** [[thambu]] flagged the cream rebuild lost the look — re-skinned to the **bold Corsair treatment** (black/yellow cover, red ask slide, Corsair-yellow highlights, big **real sails logo** vector-extracted from the old PDF). Two-division content kept.
 - See [[racesims-chennai-partnerships]]. **Next:** Zotac/Samsung/AMD decks pending.
 
 ## 2026-05-30 — Chennai partnerships + Nungambakkam + costing refine
