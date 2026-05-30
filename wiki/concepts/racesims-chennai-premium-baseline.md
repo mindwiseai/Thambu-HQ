@@ -23,10 +23,11 @@ A **conservative, ground-truth forecast** for the [[racesims-chennai-flagship|Ch
 
 ## LOCKED — property confirmed (2026-05-30)
 Property **locked**; opens **July 2026**. Full detail: `racesims-chennai-project-report.pdf` + `racesims-chennai-5yr-business-plan.pdf` (in `marketing/decks/`).
-- **Capital (with AC):** equipment ₹50.79L + deposit ₹9.32L + power ₹3L + **AC ~8 ton ₹4.5L** + interiors ₹4.6L + WC ₹6.11L + contingency → gross ₹81.9L, less GST ITC ₹9.6L = **net ₹72.3L** (sunk ₹63.0L; deposit refundable).
-- **Cost of capital:** 8% p.a. blended (part loan / part own) = **₹5.79L/yr**.
-- **5-year forecast (base case, occ 18→35%):** cumulative **EBITDA ₹3.57 cr · PAT ~₹2.14 cr · payback ~2 yrs · ~3.2× capital multiple.** Café & academy excluded (upside).
-- **AC:** calculated ~6 T peak load; install **8 T** (4 × 2-ton inverter splits — 3 hall + 1 office); glazing solar gain is the swing factor (solar film + blinds). See [[racesims-chennai-execution-plan]] HVAC note.
+- **Capital (full room-only fit-out):** equipment ₹50.79L + deposit ₹9.32L + **fit-out ₹16.1L** (itemised) + WC ₹6.11L + contingency ₹3.81L → gross ₹86.1L, less GST ITC ₹9.84L = **net ₹76.3L** (sunk ₹67.0L; deposit refundable).
+- **Cost of capital:** 8% p.a. blended (part loan / part own) = **₹6.10L/yr**.
+- **5-year forecast (base case, occ 18→35%):** cumulative **EBITDA ₹3.57 cr · PAT ~₹2.11 cr · payback ~2.1 yrs · ~2.8× capital multiple.** Café & academy excluded (upside).
+- **Fit-out ₹16.1L (room-only — brand-new building has power + fire in place):** AC 8T + in-room electrical/UPS + solar film/blinds + flooring + black ceiling/wall paint (exposed look) + acoustic + lighting + glass office partition + reception/coffee + furniture + branding (name boards at cost) + value TVs + simple networking + audio + CCTV + biometric access + mobile billing. Full breakdown in `racesims-chennai-project-report.pdf`.
+- **AC:** calculated ~6 T peak; install **8 T**. **Exposed black ceiling (no false ceiling) → NO cassettes** — use **ceiling-suspended (slab-mount) or heavy-duty high-wall inverter units**. Glazing solar gain is the swing factor (solar film + blinds). See [[racesims-chennai-execution-plan]] HVAC note.
 
 ### Floor fit (v7 — North-up · Vastu-oriented · LOCKED)
 North-up with compass. **Entrance EAST · office/training NORTH-EAST corner · motion rig faces NORTH.** 7 static rigs along the **west wall** + **south wall**, **all screens against the walls** (drivers face out, backs to the room for spectating); motion hero at the north wall by the office. Reception + small coffee counter on the **east wall** by the entrance; two washroom doors east-south (kept clear); lounge centre; leaderboard north wall; perimeter windows west/south. Room **8.73 m E–W × 12.15 m N–S**. SuperLap look (pendant lamps, cream + carpet, steel reception). See `racesims-chennai-floorplan.png` / `racesims-chennai-3d.html`.
