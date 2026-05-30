@@ -9,6 +9,15 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-30] strategy | Chennai partnerships + Nungambakkam + costing refine
+- Created: [[racesims-chennai-partnerships]] — brand-partner/sponsorship plan to cut ₹73.5L list capital toward ~₹55-58L.
+- **Location locked: Nungambakkam** (central Chennai).
+- **Rig split:** 2 Conspit + 2 VNM + 2 Fanatec + 2 reserved (multi-brand showcase).
+- **Partner pitches:** Corsair (PC + Fanatec, ₹10-18L — Corsair owns Fanatec), Zotac (8× RTX 5070 Ti ₹9.1L), Samsung (24× Odyssey G5 ₹5.8L), AMD (8× Ryzen 7 ₹2.5L), Fanatec (₹4-12L). Ask = full sponsorship, implied not stated; branding in exchange.
+- **Costing refined (sourced prices):** PC = RTX 5070 Ti build ₹3.24L/rig (RAM at market — AI-driven DRAM spike); AC = energy-efficient 5-star inverter high-wall splits ₹2.4L (most efficient; cassettes ruled out — exposed ceiling); internet = 2× fibre (Jio+Airtel) failover.
+- Built: `racesims/marketing/decks/racesims-chennai-partner-corsair.pdf` (7-slide template, real Corsair sails logo). 4 more decks pending (Zotac, Samsung, AMD, Fanatec).
+- Domain: racesims
+
 ## [2026-05-30] LOCK | Chennai property confirmed + AC sizing + 5yr report
 - **Property LOCKED**, opens July 2026. Updated [[racesims-chennai-premium-baseline]] (locked financials) + [[racesims-chennai-execution-plan]] (HVAC).
 - **Numbers rechecked:** fleet blended ₹1,218/hr, break-even 10.0%, 5yr EBITDA ₹3.57cr / PAT ~₹2.14cr / payback ~2yr — all confirmed.

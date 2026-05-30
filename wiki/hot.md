@@ -8,7 +8,15 @@ updated: 2026-05-29
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-30 (latest) — Chennai property LOCKED · 5-year report + AC sizing
+## 2026-05-30 (latest) — Chennai partnerships + Nungambakkam + costing refine
+
+- **Location: Nungambakkam** (central Chennai). **Brand-partnership/sponsorship plan** to cut the ₹73.5L list capital toward **~₹55-58L** — see [[racesims-chennai-partnerships]].
+- **Rig split:** 2 Conspit + 2 VNM + 2 Fanatec + 2 reserved (multi-brand showcase). **Partner pitches:** Corsair (PC + Fanatec — *Corsair owns Fanatec*), Zotac (8× RTX 5070 Ti ₹9.1L), Samsung (24× Odyssey G5 ₹5.8L), AMD (8× Ryzen 7 ₹2.5L). Ask = full sponsorship, *implied not stated*.
+- **Costing refined to sourced prices:** PC = RTX 5070 Ti build **₹3.24L/rig** (MD Computers; RAM at market — AI DRAM spike); AC = **energy-efficient 5-star inverter high-wall splits ₹2.4L** (most efficient; cassettes out — exposed black ceiling); internet = **2× fibre (Jio+Airtel) failover**.
+- **Decks:** `racesims-chennai-partner-corsair.pdf` built (7-slide template, real Corsair sails logo, space-filling, natural copy). **Pending:** Zotac, Samsung, AMD, Fanatec.
+- **Next:** generate the 4 remaining partner decks · pursue sponsorships · finalise glazing area for HVAC.
+
+## 2026-05-30 — Chennai property LOCKED · 5-year report + AC sizing
 
 - **Property LOCKED, opens July 2026.** Layout final at **v7** (North-up, Vastu): entrance **EAST**, office/training **NORTH-EAST corner**, motion rig faces **NORTH**, 7 static rigs on west + south walls with **all screens against the walls**. Room 8.73 m E–W × 12.15 m N–S. See [[racesims-chennai-premium-baseline]] (LOCKED section), `racesims-chennai-floorplan.png`, `racesims-chennai-3d.html`.
 - **Financials rechecked + cost of capital added** (8% blended, part loan/part own = ₹5.79L/yr). **AC sized: ~6 T calculated → install 8 T** (4×2-ton inverter splits, 3 hall + 1 office), ~₹4.5L; glazing solar gain is the swing factor (needs solar film + blinds). Net capital ₹68.3L → **₹72.3L** with AC.

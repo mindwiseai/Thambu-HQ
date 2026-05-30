@@ -22,7 +22,7 @@ A **conservative, ground-truth forecast** for the [[racesims-chennai-flagship|Ch
 - **Year 1: ₹29.3L EBITDA (brand-lands) / ₹8.6L (brand-lags — profitable even in the bad case)**, profitable from month 3, payback ~13 months sunk. *(Reconciled to [[racesims-master-rate-card]]: motion +₹500/hr → fleet blended ₹1,218/hr net. Source of truth: `racesims-chennai-economics.pdf` + `racesims-chennai-premium-forecast.xlsx`.)*
 
 ## LOCKED — property confirmed (2026-05-30)
-Property **locked**; opens **July 2026**. Full detail: `racesims-chennai-project-report.pdf` + `racesims-chennai-5yr-business-plan.pdf` (in `marketing/decks/`).
+Property **locked** in **Nungambakkam** (central Chennai); opens **July 2026**. Full detail: `racesims-chennai-project-report.pdf` + `racesims-chennai-5yr-business-plan.pdf` (in `marketing/decks/`). Component costing refined to sourced 2025-26 prices and a **brand-partnership/sponsorship plan** — see [[racesims-chennai-partnerships]] (PC = RTX 5070 Ti build ₹3.24L/rig · AC = energy-efficient 5-star inverter splits ₹2.4L · 2× fibre Jio+Airtel · list capital ~₹73.5L, target ~₹55-58L after sponsorships).
 - **Capital (full room-only fit-out):** equipment ₹50.79L + deposit ₹9.32L + **fit-out ₹16.1L** (itemised) + WC ₹6.11L + contingency ₹3.81L → gross ₹86.1L, less GST ITC ₹9.84L = **net ₹76.3L** (sunk ₹67.0L; deposit refundable).
 - **Cost of capital:** 8% p.a. blended (part loan / part own) = **₹6.10L/yr**.
 - **5-year forecast (base case, occ 18→35%):** cumulative **EBITDA ₹3.57 cr · PAT ~₹2.11 cr · payback ~2.1 yrs · ~2.8× capital multiple.** Café & academy excluded (upside).
