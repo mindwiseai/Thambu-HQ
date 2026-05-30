@@ -21,7 +21,10 @@ A **conservative, ground-truth forecast** for the [[racesims-chennai-flagship|Ch
 - **Net cash deployed ₹68.3L · sunk ₹59.0L · break-even 10.1% occupancy** (below [[uday-hyderabad|Uday]]'s proven ~20%).
 - **Year 1: ₹28.9L EBITDA (brand-lands) / ₹8.4L (brand-lags — profitable even in the bad case)**, profitable from month 3, payback ~13 months sunk.
 
-### Floor fit (confirmed — final layout)
+### Floor fit (v4 — Vastu-aligned)
+**Office (= training room) in the bottom-right (SW) corner** per [[thambu]]'s Vastu preference; **motion hero rig top-left**; 8 rigs (4 back wall + 2 left + 1 upper-right + motion); reception front-centre with a **small coffee counter behind it** (SuperLap-style); two washroom doors front-left kept clear; lounge centre, leaderboard top-right, perimeter windows. Look & feel referenced from SuperLap (US): woven pendant lamps, cream + light carpet, brushed-steel reception, menu board + merch pegboard. See `racesims-chennai-floorplan.png` / `racesims-chennai-3d.html`.
+
+### (earlier note — superseded by v4 above)
 Venue = typical floor (1st–4th), clear office hall **8.73 m × 12.15 m = 28.6 × 39.9 ft ≈ 1,142 sq ft** (service core separate). Final layout (`racesims-chennai-floorplan.png`, `racesims-chennai-3d.html`): **L-shape — 4 rigs back wall + 3 right wall + motion hero island**; **entrance on the lift-lobby wall** with a **reception + coffee counter** beside it; **two washroom doors kept clear** on the front-left wall; **glass training/academy room (~11.5 m², 6–8 seats)** back-left for Phase-2 [[racesims-motorsport-academy|Academy]]; lounge centre; leaderboard right wall. Feature footprint ~55% of floor — comfortable, and the hall could take 12–16 rigs, so **floor is not the constraint**; a 2nd floor is available later. Coffee + training room add ~₹2–2.5L one-time fit-out (folded into capex).
 - Run under [[racesims-company|Racesims Solutions Pvt Ltd]] — existing GSTIN, full ITC, shared CA/books, [[abdul]] services rigs in-house, director cost stays at HQ.
 

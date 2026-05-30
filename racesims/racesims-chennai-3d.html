@@ -1,137 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>RaceSims · Chennai — 3D Layout</title>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>RaceSims · Chennai — 3D Layout (Vastu / SuperLap theme)</title>
 <style>
-  :root{--cream:#F4EFE3;--red:#D81E33;--dark:#1A1A1A;--gold:#C9A24A;}
-  *{margin:0;padding:0;box-sizing:border-box}
-  html,body{height:100%;overflow:hidden;background:#101316;font-family:'Montserrat','Helvetica Neue',Arial,sans-serif}
-  #c{display:block;width:100vw;height:100vh}
-  #hud{position:fixed;top:16px;left:16px;color:var(--cream);max-width:340px;z-index:10}
-  #hud h1{font-size:20px;font-weight:800}#hud h1 b{color:var(--red)}
-  #hud .sub{font-size:12px;color:var(--gold);margin:4px 0 10px;font-weight:600}
-  #hud .card{background:rgba(20,20,20,.72);border:1px solid rgba(201,162,74,.4);border-radius:10px;padding:12px 14px;backdrop-filter:blur(6px)}
-  #hud .card p{font-size:11.5px;line-height:1.6;color:#e8e2d4}
-  #hud .k{color:var(--gold);font-weight:700}
-  #legend{position:fixed;bottom:16px;left:16px;z-index:10;background:rgba(20,20,20,.72);border:1px solid rgba(201,162,74,.4);border-radius:10px;padding:10px 14px;color:#e8e2d4;font-size:11px;backdrop-filter:blur(6px)}
-  #legend span{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:middle}
-  #views{position:fixed;top:16px;right:16px;z-index:10;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;max-width:340px}
-  #views button{background:rgba(20,20,20,.72);color:var(--cream);border:1px solid rgba(201,162,74,.5);border-radius:8px;padding:8px 12px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit}
-  #views button:hover{background:var(--red);border-color:var(--red)}
-</style>
-</head>
-<body>
+ :root{--cream:#F4EFE3;--red:#D81E33;--gold:#C9A24A;}
+ *{margin:0;padding:0;box-sizing:border-box}
+ html,body{height:100%;overflow:hidden;background:#1c2024;font-family:'Montserrat','Helvetica Neue',Arial,sans-serif}
+ #c{display:block;width:100vw;height:100vh}
+ #hud{position:fixed;top:16px;left:16px;color:var(--cream);max-width:340px;z-index:10}
+ #hud h1{font-size:20px;font-weight:800}#hud h1 b{color:var(--red)}
+ #hud .sub{font-size:11.5px;color:var(--gold);margin:4px 0 10px;font-weight:600}
+ #hud .card{background:rgba(20,20,20,.7);border:1px solid rgba(201,162,74,.4);border-radius:10px;padding:12px 14px;backdrop-filter:blur(6px)}
+ #hud .card p{font-size:11.5px;line-height:1.6;color:#e8e2d4}#hud .k{color:var(--gold);font-weight:700}
+ #views{position:fixed;top:16px;right:16px;z-index:10;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;max-width:340px}
+ #views button{background:rgba(20,20,20,.7);color:var(--cream);border:1px solid rgba(201,162,74,.5);border-radius:8px;padding:8px 12px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit}
+ #views button:hover{background:var(--red);border-color:var(--red)}
+ #legend{position:fixed;bottom:16px;left:16px;z-index:10;background:rgba(20,20,20,.7);border:1px solid rgba(201,162,74,.4);border-radius:10px;padding:10px 14px;color:#e8e2d4;font-size:11px}
+ #legend span{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:middle}
+</style></head><body>
 <canvas id="c"></canvas>
-<div id="hud">
-  <h1>RaceSims · <b>Chennai</b></h1>
-  <div class="sub">3D LAYOUT — 8 RIGS · COFFEE · TRAINING ROOM · WASHROOMS CLEAR</div>
-  <div class="card"><p>
-    <span class="k">Entrance</span> on the lift-lobby wall (front)<br>
-    <span class="k">8 rigs:</span> 4 along back wall + 3 along right wall + 1 motion hero<br>
-    <span class="k">Added:</span> glass training/academy room · coffee station<br>
-    Drag to orbit · scroll to zoom · right-drag to pan
-  </p></div>
-</div>
+<div id="hud"><h1>RaceSims · <b>Chennai</b></h1>
+ <div class="sub">3D LAYOUT v4 — VASTU-ALIGNED · SUPERLAP THEME</div>
+ <div class="card"><p>
+  <span class="k">Office (+ training)</span> in the bottom-right (Vastu)<br>
+  <span class="k">Motion hero rig</span> in the top-left corner<br>
+  <span class="k">Small coffee counter</span> behind reception · perimeter windows<br>
+  Drag to orbit · scroll zoom · right-drag pan</p></div></div>
 <div id="views">
-  <button data-v="iso">Isometric</button>
-  <button data-v="top">Top</button>
-  <button data-v="entry">From entry</button>
-  <button data-v="motion">Motion rig</button>
-  <button data-v="training">Training room</button>
-</div>
+ <button data-v="iso">Isometric</button><button data-v="top">Top</button>
+ <button data-v="entry">From entry</button><button data-v="office">Office</button><button data-v="motion">Motion rig</button></div>
 <div id="legend">
-  <div><span style="background:#3A4A5A"></span>Race rig <span style="background:#D81E33"></span>Motion <span style="background:#6F4A2F"></span>Coffee</div>
-  <div style="margin-top:5px"><span style="background:#9fc2cc"></span>Training room <span style="background:#C9A24A"></span>Leaderboard <span style="background:#2E8B30"></span>Entrance</div>
-</div>
+ <div><span style="background:#3A4A5A"></span>Race rig <span style="background:#D81E33"></span>Motion <span style="background:#6F4A2F"></span>Coffee</div>
+ <div style="margin-top:5px"><span style="background:#cfe0e6"></span>Office <span style="background:#B89968"></span>Pendant <span style="background:#8fb9d6"></span>Window</div></div>
 
-<script type="importmap">
-{ "imports": {
-  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
-}}
-</script>
+<script type="importmap">{ "imports": {
+ "three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+ "three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script type="module">
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
-const W=12.15, D=8.73, WALL=2.8;
-const CREAM=0xF4EFE3, RED=0xD81E33, GOLD=0xC9A24A, STEEL=0x3A4A5A, LOUNGE=0xE4DAC2, COFFEE=0x6F4A2F, GREEN=0x2E8B30;
+const W=12.15,D=8.73,WALL=2.8;
+const CREAM=0xF4EFE3,RED=0xD81E33,GOLD=0xC9A24A,STEEL=0x3A4A5A,LOUNGE=0xE4DAC2,COFFEE=0x6F4A2F,GREEN=0x2E8B30,WICKER=0xB89968;
 const renderer=new THREE.WebGLRenderer({canvas:document.getElementById('c'),antialias:true});
-renderer.setPixelRatio(Math.min(devicePixelRatio,2)); renderer.setSize(innerWidth,innerHeight);
-renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
-const scene=new THREE.Scene(); scene.background=new THREE.Color(0x101316); scene.fog=new THREE.Fog(0x101316,30,58);
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);
+renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x1c2024);scene.fog=new THREE.Fog(0x1c2024,34,62);
 const cam=new THREE.PerspectiveCamera(50,innerWidth/innerHeight,0.1,200);
-const controls=new OrbitControls(cam,renderer.domElement); controls.enableDamping=true; controls.maxPolarAngle=Math.PI/2.05;
-scene.add(new THREE.HemisphereLight(0xffffff,0x404040,0.75));
-const sun=new THREE.DirectionalLight(0xfff3e0,1.05); sun.position.set(8,16,4); sun.castShadow=true;
-sun.shadow.mapSize.set(2048,2048); sun.shadow.camera.left=-16;sun.shadow.camera.right=16;sun.shadow.camera.top=16;sun.shadow.camera.bottom=-16; scene.add(sun);
-const floor=new THREE.Mesh(new THREE.PlaneGeometry(W,D),new THREE.MeshStandardMaterial({color:0x23272b,roughness:.9}));
-floor.rotation.x=-Math.PI/2; floor.position.set(W/2,0,D/2); floor.receiveShadow=true; scene.add(floor);
-// accent strips: back-wall row + right-wall column
-let s1=new THREE.Mesh(new THREE.PlaneGeometry(8.2,2.0),new THREE.MeshStandardMaterial({color:RED,roughness:.7})); s1.rotation.x=-Math.PI/2; s1.position.set(7.85,0.01,7.75); scene.add(s1);
-let s2=new THREE.Mesh(new THREE.PlaneGeometry(2.0,4.4),new THREE.MeshStandardMaterial({color:RED,roughness:.7})); s2.rotation.x=-Math.PI/2; s2.position.set(11.0,0.01,3.45); scene.add(s2);
+const controls=new OrbitControls(cam,renderer.domElement);controls.enableDamping=true;controls.maxPolarAngle=Math.PI/2.05;
+// bright, warm lighting (SuperLap feel)
+scene.add(new THREE.HemisphereLight(0xffffff,0x9a958a,1.05));
+const sun=new THREE.DirectionalLight(0xfff1da,0.95);sun.position.set(7,15,5);sun.castShadow=true;
+sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-16;sun.shadow.camera.right=16;sun.shadow.camera.top=16;sun.shadow.camera.bottom=-16;scene.add(sun);
+scene.add(new THREE.AmbientLight(0xffffff,0.25));
+// floor — light warm carpet + front tile band
+const carpet=new THREE.Mesh(new THREE.PlaneGeometry(W,D),new THREE.MeshStandardMaterial({color:0x9d988c,roughness:.97}));
+carpet.rotation.x=-Math.PI/2;carpet.position.set(W/2,0,D/2);carpet.receiveShadow=true;scene.add(carpet);
+const tile=new THREE.Mesh(new THREE.PlaneGeometry(W,2.6),new THREE.MeshStandardMaterial({color:0xd9d2c5,roughness:.6}));
+tile.rotation.x=-Math.PI/2;tile.position.set(W/2,0.005,1.3);scene.add(tile);
+// walls
 const wm=new THREE.MeshStandardMaterial({color:CREAM,roughness:.95,side:THREE.DoubleSide});
-function wall(x,z,w,r){const g=new THREE.Mesh(new THREE.BoxGeometry(w,WALL,0.12),wm);g.position.set(x,WALL/2,z);g.rotation.y=r;scene.add(g);}
-wall(W/2,0,W,0); wall(W/2,D,W,0); wall(0,D/2,D,Math.PI/2); wall(W,D/2,D,Math.PI/2);
+function wall(x,z,w,r){const g=new THREE.Mesh(new THREE.BoxGeometry(w,WALL,0.12),wm);g.position.set(x,WALL/2,z);g.rotation.y=r;g.receiveShadow=true;scene.add(g);}
+wall(W/2,0,W,0);wall(W/2,D,W,0);wall(0,D/2,D,Math.PI/2);wall(W,D/2,D,Math.PI/2);
+// windows — bright panels on back + side walls (greenery outside)
+const winMat=new THREE.MeshStandardMaterial({color:0xdff1f5,emissive:0xbfe6d8,emissiveIntensity:.9,roughness:.2});
+function win(x,z,w,r){const g=new THREE.Mesh(new THREE.BoxGeometry(w,1.5,0.06),winMat);g.position.set(x,1.5,z);g.rotation.y=r;scene.add(g);}
+win(3.1,D-0.02,2.2,0);win(6.3,D-0.02,2.2,0);win(9.5,D-0.02,2.2,0);          // back
+win(0.02,2.8,2.0,Math.PI/2);win(0.02,6.0,2.0,Math.PI/2);                     // left
+win(W-0.02,5.1,1.8,Math.PI/2);win(W-0.02,7.7,1.4,Math.PI/2);                 // right
+// rig
+function rig(x,z,rotY,motion){const g=new THREE.Group();const col=motion?RED:STEEL;
+ const base=new THREE.Mesh(new THREE.BoxGeometry(1.5,0.18,1.7),new THREE.MeshStandardMaterial({color:0x15191d,roughness:.8}));base.position.y=0.09;base.castShadow=true;g.add(base);
+ if(motion){for(const dx of[-0.5,0.5])for(const dz of[-0.55,0.55]){const l=new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.07,0.32),new THREE.MeshStandardMaterial({color:GOLD,metalness:.6,roughness:.4}));l.position.set(dx,0.18,dz);g.add(l);}}
+ const fr=new THREE.Mesh(new THREE.BoxGeometry(0.7,0.12,1.5),new THREE.MeshStandardMaterial({color:col,roughness:.5,metalness:.3}));fr.position.y=0.36;fr.castShadow=true;g.add(fr);
+ const seat=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.5,0.55),new THREE.MeshStandardMaterial({color:0x111,roughness:.6}));seat.position.set(0,0.62,0.25);g.add(seat);
+ const back=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.7,0.14),new THREE.MeshStandardMaterial({color:0x111,roughness:.6}));back.position.set(0,0.85,0.5);g.add(back);
+ const wl=new THREE.Mesh(new THREE.TorusGeometry(0.16,0.04,12,24),new THREE.MeshStandardMaterial({color:0x0a0a0a}));wl.position.set(0,0.72,-0.35);g.add(wl);
+ const sM=new THREE.MeshStandardMaterial({color:0x05070a,emissive:0x16456b,emissiveIntensity:.8,roughness:.3});
+ function sc(ox,a){const s=new THREE.Mesh(new THREE.BoxGeometry(0.62,0.4,0.04),sM);s.position.set(ox,0.95,-0.7);s.rotation.y=a;s.castShadow=true;g.add(s);}
+ sc(0,0);sc(-0.58,0.5);sc(0.58,-0.5);
+ const st=new THREE.Mesh(new THREE.BoxGeometry(1.5,0.05,0.1),new THREE.MeshStandardMaterial({color:0x222}));st.position.set(0,0.55,-0.7);g.add(st);
+ g.position.set(x,0,z);g.rotation.y=rotY;scene.add(g);}
+// motion hero — top-left
+rig(1.7,7.0,-Math.PI/4,true);
+const ring=new THREE.Mesh(new THREE.RingGeometry(1.45,1.5,48),new THREE.MeshBasicMaterial({color:GOLD,side:THREE.DoubleSide}));ring.rotation.x=-Math.PI/2;ring.position.set(1.7,0.02,7.0);scene.add(ring);
+// back wall 4 (face -z)
+[4.0,6.0,8.0,10.0].forEach(x=>rig(x,7.75,Math.PI,false));
+// left wall 2 (face +x)
+[2.7,4.6].forEach(z=>rig(1.0,z,Math.PI/2,false));
+// right wall 1 (face -x), above office
+rig(11.05,5.0,-Math.PI/2,false);
+// red accent strip behind back row
+const strip=new THREE.Mesh(new THREE.PlaneGeometry(8.4,1.9),new THREE.MeshStandardMaterial({color:RED,roughness:.7}));strip.rotation.x=-Math.PI/2;strip.position.set(7.0,0.011,7.85);scene.add(strip);
+// OFFICE / training — glass, bottom-right
+const glass=new THREE.MeshStandardMaterial({color:0xCFE0E6,transparent:true,opacity:.15,roughness:.1,metalness:.1,side:THREE.DoubleSide});
+function gwall(x,z,w,r){const m=new THREE.Mesh(new THREE.BoxGeometry(w,2.2,0.06),glass);m.position.set(x,1.1,z);m.rotation.y=r;scene.add(m);const e=new THREE.Mesh(new THREE.BoxGeometry(w,0.05,0.07),new THREE.MeshStandardMaterial({color:GOLD,metalness:.5}));e.position.set(x,2.2,z);e.rotation.y=r;scene.add(e);}
+gwall(8.55+(W-8.55)/2,3.7,W-8.55,0);   // top face of office
+gwall(8.55,3.7/2+0.06,3.6,Math.PI/2);   // left face
+const desk=new THREE.Mesh(new THREE.BoxGeometry(2.2,0.75,0.95),new THREE.MeshStandardMaterial({color:0x6b4a2e,roughness:.6}));desk.position.set(10.4,0.38,1.5);desk.castShadow=true;scene.add(desk);
+const chair=new THREE.Mesh(new THREE.BoxGeometry(0.55,0.9,0.55),new THREE.MeshStandardMaterial({color:0x222}));chair.position.set(10.4,0.45,2.4);scene.add(chair);
+// RECEPTION — brushed-steel curved counter, front-centre
+const steel=new THREE.MeshStandardMaterial({color:0xB9BFC4,metalness:.85,roughness:.35});
+const recpt=new THREE.Mesh(new THREE.CylinderGeometry(1.2,1.2,1.05,32,1,false,-Math.PI*0.55,Math.PI*1.1),steel);recpt.position.set(5.6,0.52,1.0);scene.add(recpt);
+const recTop=new THREE.Mesh(new THREE.CylinderGeometry(1.28,1.28,0.08,32,1,false,-Math.PI*0.55,Math.PI*1.1),new THREE.MeshStandardMaterial({color:0x2a2a2a,roughness:.5}));recTop.position.set(5.6,1.06,1.0);scene.add(recTop);
+// small coffee counter — behind reception (wood front + steel top)
+const cof=new THREE.Mesh(new THREE.BoxGeometry(1.5,0.95,0.6),new THREE.MeshStandardMaterial({color:COFFEE,roughness:.6}));cof.position.set(5.6,0.48,2.0);cof.castShadow=true;scene.add(cof);
+const cofTop=new THREE.Mesh(new THREE.BoxGeometry(1.6,0.07,0.7),steel);cofTop.position.set(5.6,0.99,2.0);scene.add(cofTop);
+const machine=new THREE.Mesh(new THREE.BoxGeometry(0.4,0.35,0.35),new THREE.MeshStandardMaterial({color:0x111}));machine.position.set(5.2,1.2,2.0);scene.add(machine);
+// menu board (white panel + dark header) standing behind coffee, facing entry
+const menu=new THREE.Mesh(new THREE.BoxGeometry(1.3,1.5,0.05),new THREE.MeshStandardMaterial({color:0xf6f3ec,roughness:.5}));menu.position.set(6.6,1.6,2.25);scene.add(menu);
+const menuHdr=new THREE.Mesh(new THREE.BoxGeometry(1.3,0.32,0.06),new THREE.MeshStandardMaterial({color:0x15171a}));menuHdr.position.set(6.6,2.2,2.26);scene.add(menuHdr);
+// merch pegboard on reception counter
+const peg=new THREE.Mesh(new THREE.BoxGeometry(0.7,0.6,0.05),new THREE.MeshStandardMaterial({color:0x15171a,roughness:.6}));peg.position.set(6.3,1.35,1.0);scene.add(peg);
+for(const[dx,dy,c]of[[-0.18,0.12,RED],[0.0,0.12,0x2aa84a],[0.18,0.12,0x2f7fd1],[-0.1,-0.12,GOLD],[0.12,-0.12,RED]]){const d=new THREE.Mesh(new THREE.BoxGeometry(0.12,0.12,0.03),new THREE.MeshStandardMaterial({color:c,emissive:c,emissiveIntensity:.25}));d.position.set(6.3+dx,1.35+dy,1.04);scene.add(d);}
+// lounge
+const lounge=new THREE.Mesh(new THREE.BoxGeometry(3.3,0.4,1.8),new THREE.MeshStandardMaterial({color:LOUNGE,roughness:.85}));lounge.position.set(6.1,0.2,4.1);lounge.castShadow=true;scene.add(lounge);
+// leaderboard — right wall top corner
+const lb=new THREE.Mesh(new THREE.BoxGeometry(0.1,1.4,2.2),new THREE.MeshStandardMaterial({color:0x05070a,emissive:0x16456b,emissiveIntensity:.7}));lb.position.set(W-0.12,1.8,7.4);scene.add(lb);
+const lbf=new THREE.Mesh(new THREE.BoxGeometry(0.14,1.5,2.3),new THREE.MeshStandardMaterial({color:GOLD,metalness:.5}));lbf.position.set(W-0.16,1.8,7.4);scene.add(lbf);
+// woven pendant lamps over reception (warm light)
+function pendant(x,z){const cord=new THREE.Mesh(new THREE.CylinderGeometry(0.015,0.015,0.5),new THREE.MeshStandardMaterial({color:0x222}));cord.position.set(x,2.55,z);scene.add(cord);
+ const dome=new THREE.Mesh(new THREE.ConeGeometry(0.42,0.42,18,1,true),new THREE.MeshStandardMaterial({color:WICKER,roughness:.85,side:THREE.DoubleSide}));dome.position.set(x,2.18,z);scene.add(dome);
+ const bulb=new THREE.Mesh(new THREE.SphereGeometry(0.08),new THREE.MeshStandardMaterial({color:0xfff1c0,emissive:0xffe39a,emissiveIntensity:1.4}));bulb.position.set(x,2.12,z);scene.add(bulb);
+ const pl=new THREE.PointLight(0xffe1a8,0.9,7,2);pl.position.set(x,2.1,z);scene.add(pl);}
+pendant(4.5,1.4);pendant(6.8,1.4);
+// ceiling track lights over rig rows
+function track(x0,z0,x1,z1){const len=Math.hypot(x1-x0,z1-z0);const rail=new THREE.Mesh(new THREE.BoxGeometry(len,0.05,0.05),new THREE.MeshStandardMaterial({color:0x2a2a2a}));rail.position.set((x0+x1)/2,2.74,(z0+z1)/2);rail.rotation.y=-Math.atan2(z1-z0,x1-x0);scene.add(rail);}
+track(3.5,7.55,10.5,7.55);track(1.0,2.4,1.0,5.0);
+// washroom (WC) markers + entrance (front wall)
+for(const wx of[1.25,3.0]){const wc=new THREE.Mesh(new THREE.BoxGeometry(1.0,1.6,0.08),new THREE.MeshStandardMaterial({color:GREEN,transparent:true,opacity:.5}));wc.position.set(wx,0.8,0.05);scene.add(wc);}
+const clr=new THREE.Mesh(new THREE.PlaneGeometry(3.3,1.7),new THREE.MeshStandardMaterial({color:GREEN,transparent:true,opacity:.07}));clr.rotation.x=-Math.PI/2;clr.position.set(2.1,0.015,0.9);scene.add(clr);
+const entry=new THREE.Mesh(new THREE.PlaneGeometry(1.4,1.4),new THREE.MeshStandardMaterial({color:GREEN,transparent:true,opacity:.4}));entry.rotation.x=-Math.PI/2;entry.position.set(7.3,0.02,0.5);scene.add(entry);
 
-function rig(x,z,rotY,motion){
-  const g=new THREE.Group(); const col=motion?RED:STEEL;
-  const base=new THREE.Mesh(new THREE.BoxGeometry(1.5,0.18,1.7),new THREE.MeshStandardMaterial({color:0x15191d,roughness:.8})); base.position.y=0.09; base.castShadow=true; g.add(base);
-  if(motion){for(const dx of[-0.5,0.5])for(const dz of[-0.55,0.55]){const leg=new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.07,0.32),new THREE.MeshStandardMaterial({color:GOLD,metalness:.6,roughness:.4}));leg.position.set(dx,0.18,dz);g.add(leg);}}
-  const frame=new THREE.Mesh(new THREE.BoxGeometry(0.7,0.12,1.5),new THREE.MeshStandardMaterial({color:col,roughness:.5,metalness:.3})); frame.position.y=0.36; frame.castShadow=true; g.add(frame);
-  const seat=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.5,0.55),new THREE.MeshStandardMaterial({color:0x0d0f12,roughness:.6})); seat.position.set(0,0.62,0.25); g.add(seat);
-  const back=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.7,0.14),new THREE.MeshStandardMaterial({color:0x0d0f12,roughness:.6})); back.position.set(0,0.85,0.5); g.add(back);
-  const wheel=new THREE.Mesh(new THREE.TorusGeometry(0.16,0.04,12,24),new THREE.MeshStandardMaterial({color:0x111,roughness:.4})); wheel.position.set(0,0.72,-0.35); g.add(wheel);
-  const sMat=new THREE.MeshStandardMaterial({color:0x05070a,emissive:0x123a5c,roughness:.3});
-  function screen(ox,a){const s=new THREE.Mesh(new THREE.BoxGeometry(0.62,0.4,0.04),sMat);s.position.set(ox,0.95,-0.7);s.rotation.y=a;s.castShadow=true;g.add(s);}
-  screen(0,0); screen(-0.58,0.5); screen(0.58,-0.5);
-  const stand=new THREE.Mesh(new THREE.BoxGeometry(1.5,0.05,0.1),new THREE.MeshStandardMaterial({color:0x222})); stand.position.set(0,0.55,-0.7); g.add(stand);
-  g.position.set(x,0,z); g.rotation.y=rotY; scene.add(g); return g;
-}
-// back wall: 4 race facing into room (-z => rot PI)
-[4.85,6.85,8.85,10.85].forEach(x=>rig(x,7.75,Math.PI,false));
-// right wall: 3 race facing left (-x => rot -PI/2)
-[1.6,3.45,5.3].forEach(z=>rig(11.05,z,-Math.PI/2,false));
-// motion hero center-left facing right (+x => rot PI/2)
-rig(2.25,3.85,Math.PI/2,true);
-const ring=new THREE.Mesh(new THREE.RingGeometry(1.45,1.5,48),new THREE.MeshBasicMaterial({color:GOLD,side:THREE.DoubleSide})); ring.rotation.x=-Math.PI/2; ring.position.set(2.25,0.02,3.85); scene.add(ring);
-
-// training room (glass partition, top-left)
-const glassMat=new THREE.MeshStandardMaterial({color:0xCFE0E6,transparent:true,opacity:0.16,roughness:.1,metalness:.1,side:THREE.DoubleSide});
-const trW=3.55, trD=3.4;
-function glassWall(x,z,w,r){const m=new THREE.Mesh(new THREE.BoxGeometry(w,2.2,0.06),glassMat);m.position.set(x,1.1,z);m.rotation.y=r;scene.add(m);const e=new THREE.Mesh(new THREE.BoxGeometry(w,0.05,0.07),new THREE.MeshStandardMaterial({color:GOLD,metalness:.5}));e.position.set(x,2.2,z);e.rotation.y=r;scene.add(e);}
-glassWall(0.12+trW/2,5.2,trW,0);
-glassWall(3.67,5.2+trD/2,trD,Math.PI/2);
-// classroom table + screen
-const tbl=new THREE.Mesh(new THREE.BoxGeometry(2.2,0.05,1.0),new THREE.MeshStandardMaterial({color:0x2a2a2a})); tbl.position.set(1.9,0.75,6.9); scene.add(tbl);
-const cscreen=new THREE.Mesh(new THREE.BoxGeometry(1.4,0.8,0.05),new THREE.MeshStandardMaterial({color:0x05070a,emissive:0x123a5c})); cscreen.position.set(1.9,1.5,8.4); scene.add(cscreen);
-
-// reception (just inside entrance, front-centre)
-const desk=new THREE.Mesh(new THREE.BoxGeometry(2.0,1.05,0.7),new THREE.MeshStandardMaterial({color:RED,roughness:.5})); desk.position.set(7.5,0.52,0.95); desk.castShadow=true; scene.add(desk);
-const dtop=new THREE.Mesh(new THREE.BoxGeometry(2.1,0.08,0.8),new THREE.MeshStandardMaterial({color:0x111})); dtop.position.set(7.5,1.08,0.95); scene.add(dtop);
-// coffee station (front-RIGHT, beside reception — clear of washroom doors)
-const cof=new THREE.Mesh(new THREE.BoxGeometry(1.6,1.0,1.0),new THREE.MeshStandardMaterial({color:COFFEE,roughness:.6})); cof.position.set(9.6,0.5,0.9); cof.castShadow=true; scene.add(cof);
-const coftop=new THREE.Mesh(new THREE.BoxGeometry(1.7,0.08,1.1),new THREE.MeshStandardMaterial({color:0x2a1a10})); coftop.position.set(9.6,1.05,0.9); scene.add(coftop);
-for(const sx of[9.1,9.6,10.1]){const st=new THREE.Mesh(new THREE.CylinderGeometry(0.15,0.15,0.55),new THREE.MeshStandardMaterial({color:0x3a2a1c}));st.position.set(sx,0.27,1.7);scene.add(st);}
-// two washroom (WC) doors on front-left wall — kept clear
-for(const wx of[1.25,3.0]){const wc=new THREE.Mesh(new THREE.BoxGeometry(1.0,1.6,0.08),new THREE.MeshStandardMaterial({color:GREEN,transparent:true,opacity:.55})); wc.position.set(wx,0.8,0.04); scene.add(wc);}
-const clear=new THREE.Mesh(new THREE.PlaneGeometry(3.3,1.7),new THREE.MeshStandardMaterial({color:GREEN,transparent:true,opacity:.08})); clear.rotation.x=-Math.PI/2; clear.position.set(2.1,0.015,0.9); scene.add(clear);
-// lounge (centre)
-const lounge=new THREE.Mesh(new THREE.BoxGeometry(3.4,0.4,1.9),new THREE.MeshStandardMaterial({color:LOUNGE,roughness:.85})); lounge.position.set(6.45,0.2,3.85); lounge.castShadow=true; scene.add(lounge);
-// leaderboard (right wall, above rig column)
-const lb=new THREE.Mesh(new THREE.BoxGeometry(0.1,1.5,2.4),new THREE.MeshStandardMaterial({color:0x05070a,emissive:0x16406a})); lb.position.set(W-0.12,1.7,7.0); scene.add(lb);
-const lbf=new THREE.Mesh(new THREE.BoxGeometry(0.14,1.6,2.5),new THREE.MeshStandardMaterial({color:GOLD,metalness:.5})); lbf.position.set(W-0.16,1.7,7.0); scene.add(lbf);
-// entrance marker (front wall centre, green)
-const entry=new THREE.Mesh(new THREE.PlaneGeometry(1.4,1.4),new THREE.MeshStandardMaterial({color:GREEN,transparent:true,opacity:.4})); entry.rotation.x=-Math.PI/2; entry.position.set(5.2,0.02,0.5); scene.add(entry);
-
-const views={ iso:[-6,12,-5], top:[W/2,27,D/2+0.01], entry:[5.2,2.0,-5.5], motion:[-1.8,3,3.85], training:[6,4,9] };
+const views={iso:[-6,12,-5],top:[W/2,27,D/2+0.01],entry:[7,2.0,-5.5],office:[14,3,-1],motion:[-2,3,7]};
 function go(v){const p=views[v];cam.position.set(p[0],p[1],p[2]);
-  controls.target.set(v==='motion'?2.25:(v==='training'?1.9:W/2), v==='top'?0:0.9, v==='motion'?3.85:(v==='training'?7:D/2));}
-document.querySelectorAll('#views button').forEach(b=>b.onclick=()=>go(b.dataset.v));
-go('iso');
+ controls.target.set(v==='motion'?1.7:(v==='office'?10.4:W/2),v==='top'?0:0.9,v==='motion'?7:(v==='office'?1.8:D/2));}
+document.querySelectorAll('#views button').forEach(b=>b.onclick=()=>go(b.dataset.v));go('iso');
 addEventListener('resize',()=>{cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
 (function loop(){requestAnimationFrame(loop);controls.update();renderer.render(scene,cam);})();
-</script>
-</body>
-</html>
+</script></body></html>

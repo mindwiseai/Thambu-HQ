@@ -16,8 +16,14 @@ The full build-and-launch plan for the chosen [[racesims-chennai-premium-baselin
 - `racesims-chennai-premium-forecast.xlsx` — live financial model
 - raw input: `2nd, 3rd & 4th floor plan.pdf` (typical floor, hall 8.73 × 12.15 m)
 
-## Layout (final — see `racesims-chennai-floorplan.png` + `racesims-chennai-3d.html`)
-**L-shape:** 4 rigs along the back wall + 3 along the right wall + the **motion rig as a hero island** (centre-left, visible on entry, 3 m clearance + spot lighting — the Instagram magnet). **Entrance** on the lift-lobby wall (per markup), with a combined **reception + coffee counter** just inside it on the right. **Two washroom doors** on the front-left wall are kept clear (no fixtures in that zone). **Glass-partitioned training / academy room** (~11.5 m², 6–8 seats) in the back-left corner — enables the Phase-2 [[racesims-motorsport-academy|Academy]] without moving a rig. Lounge/spectator strip centre, 65″ leaderboard on the right wall. Floor-ducted cabling, acoustic panels behind the rig rows, ACs high on end walls. Total feature footprint ~55% of the 1,142 sq ft hall. Editorial: cream base + RS Red accent, Montserrat headings, JetBrains Mono leaderboard.
+## Layout (v4 — Vastu-aligned · see `racesims-chennai-floorplan.png` + `racesims-chennai-3d.html`)
+Revised to [[thambu]]'s Hindu-Vastu preference and a SuperLap (US sim-studio) reference:
+- **Office (doubles as the training / academy room) → bottom-right (SW) corner**, glass-partitioned, ~11.5 m² — owner cabin + briefings/coaching; keeps Phase-2 [[racesims-motorsport-academy|Academy]] possible without moving a rig.
+- **Motion hero rig → top-left corner** (clearance ring + spot lighting; the Instagram magnet).
+- **8 rigs:** 4 along the back wall + 2 on the left wall + 1 upper-right + the motion hero.
+- **Reception** front-centre by the entrance, with a **small coffee counter just behind it** (SuperLap-style — not a full café). **Two washroom doors** front-left kept clear.
+- **Lounge/spectator** centre; **leaderboard** top-right; **perimeter windows** on three walls (the property is bright with large windows).
+- **Look & feel from SuperLap:** woven pendant lamps over reception, warm light, cream walls + light carpet, brushed-steel reception counter, menu board + merch pegboard, ceiling track lighting. Editorial: cream + RS Red + Montserrat + JetBrains Mono.
 
 ## Phased timeline
 | Phase | Span | Milestones |
