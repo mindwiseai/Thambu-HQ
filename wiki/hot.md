@@ -8,7 +8,12 @@ updated: 2026-05-30
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-30 (latest) — Chennai fit-out re-sourced & optimised ₹16.1L → ₹14.2L
+## 2026-05-31 (latest) — RaceSims website built (Next.js)
+- New site at `racesims/racesims-web/` (Next.js 16 / React 19 / Tailwind v4): **home, configurator, sim-centre + booking, league, products**. Build passes clean, pushed on `claude/admiring-spence-4b6c7d`, **not deployed**. Source: [[2026-05-31-racesims-website-build]].
+- Configurator implements the [[racesims-catalogue]] Tesla-style flow (Starter ₹5.65L / The Sim ₹6.51L / Pro ₹17.04L). Sim-centre page uses [[racesims-master-rate-card]] + 8-rig fleet ([[racesims-chennai-premium-baseline]]); league page uses real [[ielr-league|IERL]] config. Forms are front-end only (Razorpay/booking backend = future).
+- **Open:** deploy decision (replace [[shopify]] store or run alongside?); hero imagery pending (Gemini key); ~57 raw files still in `raw/racesims/` unprocessed.
+
+## 2026-05-30 — Chennai fit-out re-sourced & optimised ₹16.1L → ₹14.2L
 - [[thambu]] challenged the carried-forward ₹16.1L fit-out ("where are these numbers from?"). Re-grounded all 17 lines from **real 2026 India quotes/listings** (IndiaMART, Philips, Moglix, Chennai contractors) + C&W/JLL benchmarks, then walked every line with him. Living schedule: [[racesims-chennai-fitout]]; method: [[2026-05-30-chennai-fitout-optimisation]].
 - **Fit-out ₹16.10L → ₹14.20L** (15 funded lines). Key calls: carpet **tiles** (not SPC, −₹1L) · **black-framed** glass (−₹47k) · mid-tier magnetic-track lighting (−₹76k) · **4-cam** CCTV · attendance-only biometric (door is a shutter) · 65″ QLED leaderboard (₹0 if Samsung) · tablet POS. **Acoustic + ambient audio → Phase 2.** AC stays **8 T** (don't undersize); UPS PC-only, outdoors → weatherproof enclosure + heat-derating watch (lithium vs VRLA).
 - **Founder insight:** old ₹16.1L = ₹1,240/sqft = a *lean* finish, not premium (real premium ₹1,800–2,700/sqft; honest MID ₹21.3L) — and it was *incomplete* (buried UPS, no WiFi). ₹14.2L is lower **and** complete.

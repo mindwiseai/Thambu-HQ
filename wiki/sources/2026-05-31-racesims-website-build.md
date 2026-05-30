@@ -11,7 +11,9 @@ ingested: 2026-05-31
 
 ## Summary
 
-A full marketing + commerce website for [[racesims]] was built on **2026-05-31**, located at `racesims/racesims-web/` (Next.js 16 · React 19 · Tailwind v4 · TypeScript, App Router). It implements the long-pending **configurator** that [[website-development]] and [[racesims-catalogue]] flagged as the missing piece, plus dedicated pages for the [[racesims-chennai-flagship|Chennai Sim Centre]] (with a booking widget) and the [[ielr-league|Indian Esports Racing League]]. The production build passes clean (TypeScript ✓, all 5 routes prerender static). It is committed and pushed on branch `claude/admiring-spence-4b6c7d` (HEAD `5cbdd46`). This is a **separate Next.js build from the live [[shopify]] store at racesims.in** — a candidate replacement/expansion, not yet deployed.
+A full marketing + commerce website for [[racesims]] was built on **2026-05-31**, located at `racesims/racesims-web/` (Next.js 16 · React 19 · Tailwind v4 · TypeScript, App Router). It implements the long-pending **configurator** that [[racesims-catalogue]] flagged as the missing piece, plus dedicated pages for the [[racesims-chennai-flagship|Chennai Sim Centre]] (with a booking widget) and the [[ielr-league|Indian Esports Racing League]]. The production build passes clean (TypeScript ✓, all 5 routes prerender static). It is committed and pushed on branch `claude/admiring-spence-4b6c7d` (HEAD `5cbdd46`). This is a **separate Next.js build from the live [[shopify]] store at racesims.in** — a candidate replacement/expansion, not yet deployed.
+
+> Note: the existing wiki page `website-development` is the **Mindwise** website concept (separate company) — not linked here per the no-conflation rule. This RaceSims build has no dedicated concept page yet.
 
 ## Key facts
 
@@ -43,7 +45,7 @@ A full marketing + commerce website for [[racesims]] was built on **2026-05-31**
 
 ## Backlinks
 
-- [[website-development]]
 - [[racesims-catalogue]]
 - [[racesims-chennai-flagship]]
 - [[ielr-league]]
+- [[racesims-master-rate-card]]

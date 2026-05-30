@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-31] ingest | RaceSims website build (Next.js)
+- Source: [[2026-05-31-racesims-website-build]] — new Next.js site at `racesims/racesims-web/` (home, configurator, sim-centre + booking, league, products); build passes clean, pushed (not deployed).
+- Created: 1 source page ([[2026-05-31-racesims-website-build]]).
+- Updated: 0 existing pages (RaceSims has no `website-development` concept page; existing `website-development` is the Mindwise one — left untouched per no-conflation rule).
+- Domain: racesims
+- Note: real raw backlog still present in `raw/racesims/` (~57 files) — NOT processed this run; flagged for a dedicated raw ingest.
+
 ## [2026-05-30] ingest | Chennai fit-out real-world sourcing + line-by-line optimisation
 - Source: [[2026-05-30-chennai-fitout-optimisation]] — re-grounded the carried-forward ₹16.1L fit-out from real 2026 India listings/rate-cards (IndiaMART, Philips, Moglix, Chennai contractors) + C&W/JLL benchmarks; walked all 17 lines with [[thambu]].
 - Created: 2 new pages ([[racesims-chennai-fitout]] living schedule, [[2026-05-30-chennai-fitout-optimisation]] source) + 1 new entity ([[guru-moorthy]] architect).
