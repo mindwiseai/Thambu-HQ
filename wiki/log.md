@@ -16,6 +16,11 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 - **AC sized:** calculated ~6 T peak (PCs + solar-through-glass + fresh air); install **8 T** (4×2-ton inverter splits), capex ~₹4.5L → net capital ₹68.3L → **₹72.3L**.
 - **Layout LOCKED at v7:** North-up, entrance EAST, office NE, motion faces N, all rigs face their walls.
 - Deliverables in `racesims/marketing/decks/`: `racesims-chennai-project-report.pdf` (8-pg consolidated), `racesims-chennai-5yr-business-plan.pdf`, `racesims-chennai-economics.pdf`. Floor plan + 3D in `racesims/`.
+
+## [2026-05-30] fix | Rebuilt all 9 concept diagrams (were geometrically wrong)
+- All 9 SVG concept diagrams in `motorsport-academy-curriculum.html` rebuilt on verifiable geometry after the first versions read as nonsense.
+- Method: each diagram authored as an isolated standalone, rendered via headless Chrome, visually verified, then ported into the deck. Racing line / late-apex / overtake / flick now use a clean L-corner (apex = inner corner) instead of error-prone arc-sweeps; braking + trail-braking are proper aligned telemetry traces; understeer/oversteer show correct car attitudes; weight transfer is a clean side-view.
+- All 21 pages re-verified in-context. PDF regenerated.
 - Domain: racesims
 
 ## [2026-05-30] build | Academy full curriculum + illustrated deck

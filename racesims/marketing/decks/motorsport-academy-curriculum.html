@@ -354,25 +354,18 @@
     <h2 style="margin-bottom:6px;">The Racing Line</h2>
     <div class="concept">
       <div class="diagram">
-        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
-          <!-- track ribbon -->
-          <path d="M430,16 L430,97.5 A202.5 202.5 0 0 0 227.5,300 L60,300" fill="none" stroke="#C8C0B8" stroke-width="86"/>
-          <path d="M430,16 L430,97.5 A202.5 202.5 0 0 0 227.5,300 L60,300" fill="none" stroke="#EAE4DB" stroke-width="78"/>
-          <path d="M430,16 L430,97.5 A202.5 202.5 0 0 0 227.5,300 L60,300" fill="none" stroke="#FAF9F5" stroke-width="2" stroke-dasharray="6 10"/>
-          <!-- slow geometric line -->
-          <path d="M400,16 L400,140 A148 148 0 0 0 282,290 L60,290" fill="none" stroke="#A39C94" stroke-width="2.5" stroke-dasharray="5 6"/>
-          <!-- ideal racing line -->
-          <path d="M460,16 C460,128 408,184 318,184 C228,184 118,262 70,326" fill="none" stroke="#C8102E" stroke-width="4.5" stroke-linecap="round"/>
-          <!-- markers -->
-          <circle cx="460" cy="86" r="6" fill="#C8102E"/><text x="472" y="90" font-size="11" fill="#1F1B18">TURN-IN</text>
-          <circle cx="318" cy="184" r="6" fill="#C8102E"/><text x="300" y="166" font-size="11" fill="#1F1B18" text-anchor="end">APEX</text>
-          <circle cx="104" cy="304" r="6" fill="#C8102E"/><text x="116" y="332" font-size="11" fill="#1F1B18">EXIT</text>
-          <!-- out/in/out -->
-          <text x="498" y="40" font-size="12" font-weight="600" fill="#C8102E">OUT</text>
-          <text x="340" y="210" font-size="12" font-weight="600" fill="#C8102E">IN</text>
-          <text x="58" y="356" font-size="12" font-weight="600" fill="#C8102E">OUT</text>
-          <!-- direction -->
-          <path d="M446,30 l8,14 l8,-14 z" fill="#1F1B18"/>
+        <svg viewBox="0 0 480 470" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <!-- L-corner: horizontal entry (top) + vertical exit (down). Apex = inner corner (360,150). -->
+          <path d="M40,60 L450,60 L450,440 L360,440 L360,150 L40,150 Z" fill="#EAE4DB" stroke="#C8C0B8" stroke-width="3"/>
+          <path d="M40,150 L330,150 Q360,150 360,180 L360,440" fill="none" stroke="#A39C94" stroke-width="2.5" stroke-dasharray="5 6"/>
+          <path d="M40,82 C210,82 300,110 360,150 C405,178 432,250 432,440" fill="none" stroke="#C8102E" stroke-width="5" stroke-linecap="round"/>
+          <path d="M150,72 l18,8 l-18,8 z" fill="#1F1B18"/>
+          <circle cx="300" cy="104" r="6" fill="#C8102E"/><text x="296" y="98" font-size="12" fill="#1F1B18" text-anchor="end">TURN-IN</text>
+          <circle cx="360" cy="150" r="7" fill="#C8102E"/><text x="376" y="146" font-size="12" fill="#1F1B18">APEX</text>
+          <circle cx="432" cy="360" r="6" fill="#C8102E"/><text x="420" y="364" font-size="12" fill="#1F1B18" text-anchor="end">EXIT</text>
+          <text x="46" y="50" font-size="13" font-weight="700" fill="#C8102E">OUT</text>
+          <text x="392" y="130" font-size="13" font-weight="700" fill="#C8102E">IN</text>
+          <text x="442" y="404" font-size="13" font-weight="700" fill="#C8102E">OUT</text>
         </svg>
       </div>
       <div class="explain">
@@ -402,26 +395,26 @@
     <h2 style="margin-bottom:6px;">Braking — Points &amp; Threshold</h2>
     <div class="concept">
       <div class="diagram">
-        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
-          <!-- lock-up zone -->
-          <rect x="60" y="40" width="460" height="32" fill="#C8102E" opacity="0.08"/>
-          <text x="516" y="60" font-size="10" fill="#C8102E" text-anchor="end">LOCK-UP — over the limit</text>
-          <!-- threshold line -->
-          <line x1="60" y1="72" x2="520" y2="72" stroke="#C8102E" stroke-width="1.5" stroke-dasharray="5 5"/>
-          <text x="64" y="86" font-size="10" fill="#C8102E">THRESHOLD · max grip</text>
-          <!-- axes -->
-          <line x1="60" y1="40" x2="60" y2="320" stroke="#C8C0B8" stroke-width="1.5"/>
-          <line x1="60" y1="320" x2="520" y2="320" stroke="#C8C0B8" stroke-width="1.5"/>
-          <!-- braking point -->
-          <line x1="180" y1="40" x2="180" y2="320" stroke="#1F1B18" stroke-width="1.5" stroke-dasharray="4 5"/>
-          <text x="186" y="312" font-size="10" fill="#1F1B18">BRAKING POINT</text>
-          <!-- speed trace (red) -->
-          <polyline points="60,96 178,96 270,250 360,250 520,150" fill="none" stroke="#C8102E" stroke-width="4" stroke-linecap="round"/>
-          <text x="92" y="88" font-size="10" fill="#C8102E">SPEED</text>
-          <!-- brake trace (ink) -->
-          <polyline points="60,300 178,300 192,80 300,82 312,300 520,300" fill="none" stroke="#4A4440" stroke-width="3" stroke-linecap="round"/>
-          <text x="330" y="296" font-size="10" fill="#4A4440">BRAKE INPUT</text>
-          <text x="250" y="342" font-size="10" fill="#7A7470" text-anchor="middle">DISTANCE INTO CORNER →</text>
+        <svg viewBox="0 0 520 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <!-- braking point + apex verticals span both charts -->
+          <line x1="178" y1="40" x2="178" y2="330" stroke="#1F1B18" stroke-width="1.5" stroke-dasharray="4 5"/>
+          <line x1="300" y1="40" x2="300" y2="330" stroke="#7A7470" stroke-width="1.2" stroke-dasharray="2 4"/>
+          <!-- SPEED chart -->
+          <text x="60" y="44" font-size="11" fill="#C8102E" font-weight="700">SPEED</text>
+          <line x1="70" y1="40" x2="70" y2="150" stroke="#C8C0B8" stroke-width="1.4"/>
+          <line x1="70" y1="150" x2="490" y2="150" stroke="#C8C0B8" stroke-width="1.4"/>
+          <polyline points="70,58 175,58 250,134 305,134 490,72" fill="none" stroke="#C8102E" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- BRAKE chart -->
+          <text x="60" y="206" font-size="11" fill="#4A4440" font-weight="700">BRAKE %</text>
+          <rect x="70" y="210" width="420" height="13" fill="#C8102E" opacity="0.10"/>
+          <line x1="70" y1="223" x2="490" y2="223" stroke="#C8102E" stroke-width="1.3" stroke-dasharray="5 5"/>
+          <text x="486" y="219" font-size="9" fill="#C8102E" text-anchor="end">THRESHOLD — max grip · lock-up above</text>
+          <line x1="70" y1="210" x2="70" y2="330" stroke="#C8C0B8" stroke-width="1.4"/>
+          <line x1="70" y1="330" x2="490" y2="330" stroke="#C8C0B8" stroke-width="1.4"/>
+          <polyline points="70,330 175,330 187,226 250,240 305,330 490,330" fill="none" stroke="#4A4440" stroke-width="3.5" stroke-linecap="round"/>
+          <text x="182" y="346" font-size="10" fill="#1F1B18">BRAKING POINT</text>
+          <text x="300" y="346" font-size="10" fill="#7A7470" text-anchor="middle">APEX</text>
+          <text x="490" y="362" font-size="10" fill="#7A7470" text-anchor="end">DISTANCE INTO CORNER →</text>
         </svg>
       </div>
       <div class="explain">
@@ -451,23 +444,23 @@
     <h2 style="margin-bottom:6px;">Trail Braking</h2>
     <div class="concept">
       <div class="diagram">
-        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
-          <!-- trail zone -->
-          <rect x="170" y="40" width="190" height="280" fill="#C8102E" opacity="0.07"/>
-          <text x="265" y="58" font-size="10" fill="#C8102E" text-anchor="middle">TRAIL ZONE</text>
-          <!-- axes -->
-          <line x1="60" y1="40" x2="60" y2="320" stroke="#C8C0B8" stroke-width="1.5"/>
-          <line x1="60" y1="320" x2="520" y2="320" stroke="#C8C0B8" stroke-width="1.5"/>
-          <!-- brake (ink): high then bleeds to zero at apex -->
-          <polyline points="60,80 150,86 250,170 350,310 520,316" fill="none" stroke="#4A4440" stroke-width="3.5" stroke-linecap="round"/>
-          <text x="74" y="72" font-size="10" fill="#4A4440">BRAKE</text>
-          <!-- steering (red): rises into apex -->
-          <polyline points="60,312 150,300 250,180 345,96 520,150" fill="none" stroke="#C8102E" stroke-width="4" stroke-linecap="round"/>
-          <text x="360" y="92" font-size="10" fill="#C8102E">STEERING</text>
-          <!-- phase labels -->
-          <text x="110" y="342" font-size="10" fill="#7A7470" text-anchor="middle">ENTRY</text>
-          <text x="265" y="342" font-size="10" fill="#7A7470" text-anchor="middle">APEX</text>
-          <text x="440" y="342" font-size="10" fill="#7A7470" text-anchor="middle">EXIT</text>
+        <svg viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <rect x="150" y="50" width="195" height="250" fill="#C8102E" opacity="0.08"/>
+          <text x="247" y="44" font-size="10" fill="#C8102E" text-anchor="middle" font-weight="700">TRAIL ZONE · bleed brake as you add lock</text>
+          <line x1="70" y1="50" x2="70" y2="300" stroke="#C8C0B8" stroke-width="1.4"/>
+          <line x1="70" y1="300" x2="490" y2="300" stroke="#C8C0B8" stroke-width="1.4"/>
+          <text x="64" y="64" font-size="9" fill="#7A7470" text-anchor="end">100%</text>
+          <text x="64" y="300" font-size="9" fill="#7A7470" text-anchor="end">0</text>
+          <!-- brake: full at turn-in, trails to 0 at apex -->
+          <polyline points="70,66 150,70 255,160 345,296" fill="none" stroke="#4A4440" stroke-width="3.5" stroke-linecap="round"/>
+          <text x="92" y="58" font-size="11" fill="#4A4440" font-weight="700">BRAKE</text>
+          <!-- steering: 0 to max at apex then unwind -->
+          <polyline points="70,298 150,290 255,165 345,70 490,150" fill="none" stroke="#C8102E" stroke-width="3.5" stroke-linecap="round"/>
+          <text x="356" y="64" font-size="11" fill="#C8102E" font-weight="700">STEERING</text>
+          <text x="110" y="318" font-size="9.5" fill="#7A7470" text-anchor="middle">ENTRY</text>
+          <line x1="150" y1="300" x2="150" y2="306" stroke="#7A7470"/><text x="150" y="318" font-size="9.5" fill="#7A7470" text-anchor="middle">TURN-IN</text>
+          <line x1="345" y1="300" x2="345" y2="306" stroke="#7A7470"/><text x="345" y="318" font-size="9.5" fill="#7A7470" text-anchor="middle">APEX</text>
+          <text x="460" y="318" font-size="9.5" fill="#7A7470" text-anchor="middle">EXIT</text>
         </svg>
       </div>
       <div class="explain">
@@ -497,22 +490,19 @@
     <h2 style="margin-bottom:6px;">Throttle &amp; Corner Exit</h2>
     <div class="concept">
       <div class="diagram">
-        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
-          <!-- ribbon: corner onto a straight (exit up) -->
-          <path d="M60,300 L300,300 A150 150 0 0 1 450,150 L450,20" fill="none" stroke="#C8C0B8" stroke-width="86"/>
-          <path d="M60,300 L300,300 A150 150 0 0 1 450,150 L450,20" fill="none" stroke="#EAE4DB" stroke-width="78"/>
-          <path d="M60,300 L300,300 A150 150 0 0 1 450,150 L450,20" fill="none" stroke="#FAF9F5" stroke-width="2" stroke-dasharray="6 10"/>
-          <!-- early apex (slow out) dashed -->
-          <path d="M60,278 C230,278 300,250 318,176 C330,120 360,40 384,20" fill="none" stroke="#A39C94" stroke-width="2.5" stroke-dasharray="5 6"/>
-          <!-- late apex (fast out) red -->
-          <path d="M60,322 C250,322 360,300 392,232 C418,176 418,90 418,20" fill="none" stroke="#C8102E" stroke-width="4.5" stroke-linecap="round"/>
-          <!-- late apex dot -->
-          <circle cx="402" cy="222" r="6" fill="#C8102E"/><text x="388" y="226" font-size="11" fill="#1F1B18" text-anchor="end">LATE APEX</text>
-          <!-- on power -->
-          <circle cx="416" cy="150" r="6" fill="#1E6B3A"/><text x="430" y="154" font-size="10" fill="#1E6B3A">ON POWER</text>
-          <!-- exit speed arrow -->
-          <path d="M468,150 L468,40" stroke="#1E6B3A" stroke-width="2.5"/><path d="M468,34 l-6,12 l12,0 z" fill="#1E6B3A"/>
-          <text x="476" y="100" font-size="10" fill="#1E6B3A">EXIT<tspan x="476" dy="13">SPEED</tspan></text>
+        <svg viewBox="0 0 490 470" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <!-- L-corner, exit = the straight (down). late vs early apex. -->
+          <path d="M40,60 L450,60 L450,455 L360,455 L360,150 L40,150 Z" fill="#EAE4DB" stroke="#C8C0B8" stroke-width="3"/>
+          <!-- early apex (slow out) dashed: apex early, runs wide on exit -->
+          <path d="M40,80 C190,80 292,108 340,150 C380,186 442,250 442,440" fill="none" stroke="#A39C94" stroke-width="3" stroke-dasharray="6 6"/>
+          <!-- late apex (fast out) red: deeper apex, straight exit, power early -->
+          <path d="M40,98 C232,98 330,138 362,184 C380,222 386,330 386,455" fill="none" stroke="#C8102E" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="362" cy="184" r="6" fill="#C8102E"/><text x="350" y="182" font-size="11" fill="#1F1B18" text-anchor="end">LATE APEX</text>
+          <circle cx="386" cy="300" r="6" fill="#1E6B3A"/><text x="400" y="304" font-size="10.5" fill="#1E6B3A" font-weight="700">ON POWER</text>
+          <path d="M420,300 L420,440" stroke="#1E6B3A" stroke-width="2.5"/><path d="M420,452 l-6,-14 l12,0 z" fill="#1E6B3A"/>
+          <text x="428" y="384" font-size="10" fill="#1E6B3A">EXIT SPEED</text>
+          <text x="334" y="118" font-size="10" fill="#7A7470" text-anchor="end">early apex —</text>
+          <text x="334" y="132" font-size="10" fill="#7A7470" text-anchor="end">runs wide → lift</text>
         </svg>
       </div>
       <div class="explain">
@@ -542,36 +532,38 @@
     <h2 style="margin-bottom:6px;">Understeer vs Oversteer</h2>
     <div class="concept">
       <div class="diagram">
-        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
-          <!-- divider -->
-          <line x1="280" y1="30" x2="280" y2="350" stroke="#DDD8D2" stroke-width="1.5"/>
-          <!-- PANEL A: understeer -->
-          <path d="M40,210 A150 150 0 0 1 190,60" fill="none" stroke="#C8C0B8" stroke-width="58"/>
-          <path d="M40,210 A150 150 0 0 1 190,60" fill="none" stroke="#EAE4DB" stroke-width="50"/>
-          <!-- intended line dashed -->
-          <path d="M44,232 A172 172 0 0 1 210,66" fill="none" stroke="#A39C94" stroke-width="2.5" stroke-dasharray="5 6"/>
-          <!-- actual: washes wide (red) -->
-          <path d="M44,232 C120,150 150,120 250,96" fill="none" stroke="#C8102E" stroke-width="4" stroke-linecap="round"/>
-          <!-- car -->
-          <g transform="translate(150,150) rotate(-32)"><rect x="-13" y="-22" width="26" height="44" rx="6" fill="#1F1B18"/><rect x="-9" y="-20" width="18" height="10" rx="2" fill="#C8C0B8"/></g>
-          <!-- front push arrow -->
-          <path d="M196,108 L240,92" stroke="#C8102E" stroke-width="2.5"/><path d="M246,90 l-12,-2 l5,11 z" fill="#C8102E"/>
-          <text x="40" y="300" font-size="13" font-weight="700" fill="#1F1B18">UNDERSTEER</text>
-          <text x="40" y="320" font-size="10.5" fill="#7A7470">Front washes wide —</text>
-          <text x="40" y="335" font-size="10.5" fill="#7A7470">car won't turn in.</text>
-          <!-- PANEL B: oversteer -->
-          <path d="M330,210 A150 150 0 0 1 480,60" fill="none" stroke="#C8C0B8" stroke-width="58"/>
-          <path d="M330,210 A150 150 0 0 1 480,60" fill="none" stroke="#EAE4DB" stroke-width="50"/>
-          <path d="M334,232 A172 172 0 0 1 500,66" fill="none" stroke="#A39C94" stroke-width="2.5" stroke-dasharray="5 6"/>
-          <!-- actual: tucks in / rotates (red) -->
-          <path d="M334,232 C400,176 426,150 420,96" fill="none" stroke="#C8102E" stroke-width="4" stroke-linecap="round"/>
-          <!-- car rotated more -->
-          <g transform="translate(428,150) rotate(-58)"><rect x="-13" y="-22" width="26" height="44" rx="6" fill="#1F1B18"/><rect x="-9" y="-20" width="18" height="10" rx="2" fill="#C8C0B8"/></g>
-          <!-- rear rotation arrow -->
-          <path d="M452,176 a26 26 0 1 1 -20,-14" fill="none" stroke="#C8102E" stroke-width="2.5"/><path d="M432,158 l-2,12 l11,-5 z" fill="#C8102E"/>
-          <text x="330" y="300" font-size="13" font-weight="700" fill="#1F1B18">OVERSTEER</text>
-          <text x="330" y="320" font-size="10.5" fill="#7A7470">Rear steps out —</text>
-          <text x="330" y="335" font-size="10.5" fill="#7A7470">car rotates too much.</text>
+        <svg viewBox="0 0 540 370" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <defs>
+            <g id="usocar">
+              <rect x="-13" y="-23" width="26" height="46" rx="7" fill="#1F1B18"/>
+              <rect x="-9" y="-18" width="18" height="11" rx="2" fill="#C24B5C"/>
+              <rect x="-16" y="-18" width="5" height="12" rx="2" fill="#0F0F10"/><rect x="11" y="-18" width="5" height="12" rx="2" fill="#0F0F10"/>
+              <rect x="-16" y="8" width="5" height="12" rx="2" fill="#0F0F10"/><rect x="11" y="8" width="5" height="12" rx="2" fill="#0F0F10"/>
+            </g>
+          </defs>
+          <line x1="270" y1="20" x2="270" y2="350" stroke="#DDD8D2" stroke-width="1.5"/>
+          <!-- UNDERSTEER -->
+          <path d="M60,340 C60,200 110,120 240,110" fill="none" stroke="#C8C0B8" stroke-width="70"/>
+          <path d="M60,340 C60,200 110,120 240,110" fill="none" stroke="#EAE4DB" stroke-width="64"/>
+          <path d="M74,340 C74,205 120,150 240,140" fill="none" stroke="#A39C94" stroke-width="2.5" stroke-dasharray="6 6"/>
+          <text x="206" y="132" font-size="9.5" fill="#7A7470">intended</text>
+          <path d="M74,340 C90,235 150,210 250,212" fill="none" stroke="#C8102E" stroke-width="4.5" stroke-linecap="round"/>
+          <use href="#usocar" transform="translate(120,250) rotate(-12)"/>
+          <path d="M150,232 L198,214" stroke="#C8102E" stroke-width="3"/><path d="M205,211 l-13,-1 l4,12 z" fill="#C8102E"/>
+          <text x="158" y="205" font-size="9.5" fill="#C8102E" font-weight="700">pushes wide</text>
+          <text x="30" y="320" font-size="14" font-weight="700" fill="#1F1B18">UNDERSTEER</text>
+          <text x="30" y="338" font-size="10.5" fill="#7A7470">front grips less → won't turn in</text>
+          <!-- OVERSTEER -->
+          <path d="M340,340 C340,200 390,120 520,110" fill="none" stroke="#C8C0B8" stroke-width="70"/>
+          <path d="M340,340 C340,200 390,120 520,110" fill="none" stroke="#EAE4DB" stroke-width="64"/>
+          <path d="M354,340 C354,205 400,150 520,140" fill="none" stroke="#A39C94" stroke-width="2.5" stroke-dasharray="6 6"/>
+          <text x="486" y="132" font-size="9.5" fill="#7A7470" text-anchor="end">intended</text>
+          <path d="M360,340 C362,235 350,178 286,150" fill="none" stroke="#C8102E" stroke-width="4.5" stroke-linecap="round"/>
+          <use href="#usocar" transform="translate(372,224) rotate(-46)"/>
+          <path d="M398,250 L442,272" stroke="#C8102E" stroke-width="3"/><path d="M449,275 l-13,0 l4,-12 z" fill="#C8102E"/>
+          <text x="410" y="240" font-size="9.5" fill="#C8102E" font-weight="700">tail out</text>
+          <text x="330" y="320" font-size="14" font-weight="700" fill="#1F1B18">OVERSTEER</text>
+          <text x="330" y="338" font-size="10.5" fill="#7A7470">rear grips less → rotates in</text>
         </svg>
       </div>
       <div class="explain">
@@ -597,28 +589,30 @@
     <h2 style="margin-bottom:6px;">Overtaking — The Switchback</h2>
     <div class="concept">
       <div class="diagram">
-        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
-          <!-- ribbon: straight into a corner exiting up-left -->
-          <path d="M40,250 L300,250 A140 140 0 0 1 360,118 L420,30" fill="none" stroke="#C8C0B8" stroke-width="90"/>
-          <path d="M40,250 L300,250 A140 140 0 0 1 360,118 L420,30" fill="none" stroke="#EAE4DB" stroke-width="82"/>
-          <path d="M40,250 L300,250 A140 140 0 0 1 360,118 L420,30" fill="none" stroke="#FAF9F5" stroke-width="2" stroke-dasharray="6 10"/>
-          <!-- defender (ink): normal early-apex line, slow exit -->
-          <path d="M40,232 C220,232 300,210 322,150 C336,108 360,60 378,30" fill="none" stroke="#4A4440" stroke-width="3.5"/>
-          <!-- attacker (red): deep entry, cutback, better exit -->
-          <path d="M40,272 C250,272 348,250 378,182 C398,120 392,60 392,30" fill="none" stroke="#C8102E" stroke-width="4.5" stroke-linecap="round"/>
-          <!-- defender car -->
-          <g transform="translate(120,232) rotate(0)"><rect x="-22" y="-12" width="44" height="24" rx="6" fill="#4A4440"/></g>
-          <text x="120" y="214" font-size="10" fill="#4A4440" text-anchor="middle">DEFENDER</text>
-          <!-- attacker car behind -->
-          <g transform="translate(120,272) rotate(0)"><rect x="-22" y="-12" width="44" height="24" rx="6" fill="#C8102E"/></g>
-          <text x="120" y="300" font-size="10" fill="#C8102E" text-anchor="middle">ATTACKER</text>
-          <!-- numbered beats -->
-          <circle cx="300" cy="272" r="11" fill="#C8102E"/><text x="300" y="276" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">1</text>
-          <text x="300" y="304" font-size="9.5" fill="#7A7470" text-anchor="middle">sacrifice entry</text>
-          <circle cx="380" cy="186" r="11" fill="#C8102E"/><text x="380" y="190" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">2</text>
-          <text x="404" y="190" font-size="9.5" fill="#7A7470">cut back</text>
-          <circle cx="392" cy="70" r="11" fill="#1E6B3A"/><text x="392" y="74" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">3</text>
-          <text x="410" y="74" font-size="9.5" fill="#1E6B3A">better exit · pass</text>
+        <svg viewBox="0 0 500 470" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <defs>
+            <g id="otcar">
+              <rect x="-12" y="-21" width="24" height="42" rx="6"/>
+              <rect x="-14" y="-16" width="4" height="11" rx="2" fill="#0F0F10"/><rect x="10" y="-16" width="4" height="11" rx="2" fill="#0F0F10"/>
+              <rect x="-14" y="7" width="4" height="11" rx="2" fill="#0F0F10"/><rect x="10" y="7" width="4" height="11" rx="2" fill="#0F0F10"/>
+            </g>
+          </defs>
+          <!-- L-corner, exit = the straight (down) -->
+          <path d="M30,60 L460,60 L460,455 L360,455 L360,150 L30,150 Z" fill="#EAE4DB" stroke="#C8C0B8" stroke-width="3"/>
+          <!-- DEFENDER (ink): normal line, drifts wide on exit -->
+          <path d="M110,84 C250,84 322,118 360,150 C398,184 440,250 442,455" fill="none" stroke="#4A4440" stroke-width="3.5"/>
+          <!-- ATTACKER (red): deep inside, late apex, tight fast exit -->
+          <path d="M150,120 C260,120 330,152 364,186 C380,224 384,340 384,455" fill="none" stroke="#C8102E" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="150" cy="120" r="11" fill="#C8102E"/><text x="150" y="124" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">1</text>
+          <text x="167" y="118" font-size="10" fill="#1F1B18">sacrifice entry — stay inside</text>
+          <circle cx="364" cy="186" r="11" fill="#C8102E"/><text x="364" y="190" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">2</text>
+          <text x="349" y="206" font-size="10" fill="#1F1B18" text-anchor="end">cut back</text>
+          <circle cx="384" cy="276" r="11" fill="#1E6B3A"/><text x="384" y="280" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">3</text>
+          <text x="369" y="280" font-size="10" fill="#1E6B3A" font-weight="700" text-anchor="end">better exit · PASS</text>
+          <use href="#otcar" transform="translate(384,408) rotate(180)" fill="#C8102E"/>
+          <use href="#otcar" transform="translate(440,352) rotate(180)" fill="#4A4440"/>
+          <text x="40" y="392" font-size="11" fill="#C8102E" font-weight="700">— attacker</text>
+          <text x="40" y="410" font-size="11" fill="#4A4440" font-weight="700">— defender</text>
         </svg>
       </div>
       <div class="explain">
@@ -648,23 +642,23 @@
     <h2 style="margin-bottom:6px;">The Scandinavian Flick</h2>
     <div class="concept">
       <div class="diagram">
-        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
-          <!-- gravel texture -->
-          <g fill="#C8C0B8" opacity="0.5">
-            <circle cx="120" cy="60" r="1.6"/><circle cx="180" cy="100" r="1.4"/><circle cx="240" cy="70" r="1.8"/><circle cx="300" cy="120" r="1.4"/><circle cx="360" cy="80" r="1.6"/><circle cx="430" cy="120" r="1.5"/><circle cx="90" cy="140" r="1.4"/><circle cx="470" cy="200" r="1.6"/><circle cx="150" cy="200" r="1.4"/>
+        <svg viewBox="0 0 500 460" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <g fill="#B7AFA4" opacity="0.55">
+            <circle cx="80" cy="120" r="1.6"/><circle cx="120" cy="200" r="1.4"/><circle cx="60" cy="300" r="1.5"/><circle cx="360" cy="70" r="1.6"/><circle cx="420" cy="110" r="1.4"/><circle cx="300" cy="300" r="1.5"/><circle cx="380" cy="360" r="1.6"/><circle cx="100" cy="400" r="1.4"/><circle cx="440" cy="300" r="1.5"/><circle cx="160" cy="90" r="1.4"/>
           </g>
-          <!-- ribbon: corner -->
-          <path d="M60,300 L260,300 A150 150 0 0 1 410,150 L470,150" fill="none" stroke="#B7AFA4" stroke-width="86"/>
-          <path d="M60,300 L260,300 A150 150 0 0 1 410,150 L470,150" fill="none" stroke="#D8CFC2" stroke-width="78"/>
-          <!-- flick line (red): wiggle out then rotate in -->
-          <path d="M60,310 C160,310 200,300 232,272 C252,254 246,300 300,300 C356,300 372,252 392,210 C404,184 430,168 470,166" fill="none" stroke="#C8102E" stroke-width="4.5" stroke-linecap="round"/>
-          <!-- beats -->
-          <circle cx="236" cy="270" r="11" fill="#C8102E"/><text x="236" y="274" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">1</text>
-          <text x="214" y="250" font-size="9.5" fill="#1F1B18">flick away</text>
-          <circle cx="316" cy="298" r="11" fill="#C8102E"/><text x="316" y="302" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">2</text>
-          <text x="300" y="330" font-size="9.5" fill="#7A7470">weight transfers</text>
-          <circle cx="392" cy="210" r="11" fill="#1E6B3A"/><text x="392" y="214" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">3</text>
-          <text x="408" y="214" font-size="9.5" fill="#1E6B3A">rotate + power</text>
+          <!-- road: vertical approach (bottom) -> right-hand bend -> exit (top right) -->
+          <path d="M200,455 L200,260 Q200,150 310,150 L475,150" fill="none" stroke="#B7AFA4" stroke-width="82"/>
+          <path d="M200,455 L200,260 Q200,150 310,150 L475,150" fill="none" stroke="#D8CFC2" stroke-width="74"/>
+          <!-- racing line with the flick -->
+          <path d="M198,455 C198,400 196,360 178,330 C166,310 165,300 182,286 C210,262 226,224 250,196 C286,158 360,150 475,150" fill="none" stroke="#C8102E" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="172" cy="312" r="11" fill="#C8102E"/><text x="172" y="316" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">1</text>
+          <text x="156" y="316" font-size="10" fill="#1F1B18" text-anchor="end">flick AWAY from corner</text>
+          <circle cx="208" cy="252" r="11" fill="#C8102E"/><text x="208" y="256" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">2</text>
+          <text x="224" y="256" font-size="10" fill="#1F1B18">weight transfers · rear comes round</text>
+          <circle cx="296" cy="172" r="11" fill="#1E6B3A"/><text x="296" y="176" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">3</text>
+          <text x="312" y="190" font-size="10" fill="#1E6B3A" font-weight="700">rotate &amp; power out</text>
+          <path d="M188,430 l12,-18 l12,18 z" fill="#1F1B18"/>
+          <text x="40" y="40" font-size="13" fill="#1F1B18" font-weight="700">GRAVEL · loose surface</text>
         </svg>
       </div>
       <div class="explain">
@@ -690,21 +684,26 @@
     <h2 style="margin-bottom:6px;">Pace Notes</h2>
     <div class="concept">
       <div class="diagram">
-        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
-          <!-- winding road -->
-          <path d="M40,330 C140,330 150,250 220,250 C300,250 300,150 230,150 C150,150 150,70 250,70 C360,70 380,150 470,150 L520,150" fill="none" stroke="#C8C0B8" stroke-width="46"/>
-          <path d="M40,330 C140,330 150,250 220,250 C300,250 300,150 230,150 C150,150 150,70 250,70 C360,70 380,150 470,150 L520,150" fill="none" stroke="#EAE4DB" stroke-width="38"/>
-          <path d="M40,330 C140,330 150,250 220,250 C300,250 300,150 230,150 C150,150 150,70 250,70 C360,70 380,150 470,150 L520,150" fill="none" stroke="#FAF9F5" stroke-width="1.5" stroke-dasharray="5 8"/>
-          <!-- call tags -->
-          <g font-size="11" font-weight="600">
-            <rect x="60" y="300" width="78" height="22" rx="3" fill="#C8102E"/><text x="99" y="315" fill="#fff" text-anchor="middle">L4 · 100</text>
-            <rect x="240" y="230" width="96" height="22" rx="3" fill="#1F1B18"/><text x="288" y="245" fill="#fff" text-anchor="middle">R5 INTO L2</text>
-            <rect x="60" y="120" width="120" height="22" rx="3" fill="#C8102E"/><text x="120" y="135" fill="#fff" text-anchor="middle">L4 TIGHTENS !</text>
-            <rect x="300" y="40" width="110" height="22" rx="3" fill="#1F1B18"/><text x="355" y="55" fill="#fff" text-anchor="middle">CREST · DON'T CUT</text>
-            <rect x="430" y="170" width="90" height="22" rx="3" fill="#1E6B3A"/><text x="475" y="185" fill="#fff" text-anchor="middle">R6 FLAT</text>
+        <svg viewBox="0 0 520 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <!-- winding rally road -->
+          <path d="M20,210 C90,210 100,95 185,95 C265,95 250,250 335,250 C405,250 400,110 480,110 L510,110" fill="none" stroke="#C8C0B8" stroke-width="40"/>
+          <path d="M20,210 C90,210 100,95 185,95 C265,95 250,250 335,250 C405,250 400,110 480,110 L510,110" fill="none" stroke="#EAE4DB" stroke-width="33"/>
+          <path d="M20,210 C90,210 100,95 185,95 C265,95 250,250 335,250 C405,250 400,110 480,110 L510,110" fill="none" stroke="#FAF9F5" stroke-width="1.4" stroke-dasharray="5 8"/>
+          <path d="M44,196 l-16,14 l16,14 z" fill="#1F1B18" transform="rotate(180 36 210)"/>
+          <g font-size="11" font-weight="700">
+            <line x1="150" y1="120" x2="150" y2="95" stroke="#7A7470" stroke-width="1"/>
+            <rect x="96" y="100" width="84" height="22" rx="3" fill="#C8102E"/><text x="138" y="115" fill="#fff" text-anchor="middle">L4 · 100</text>
+            <line x1="300" y1="225" x2="300" y2="250" stroke="#7A7470" stroke-width="1"/>
+            <rect x="246" y="256" width="120" height="22" rx="3" fill="#1F1B18"/><text x="306" y="271" fill="#fff" text-anchor="middle">R5 TIGHTENS !</text>
+            <rect x="250" y="170" width="118" height="22" rx="3" fill="#1F1B18"/><text x="309" y="185" fill="#fff" text-anchor="middle">CREST · DON'T CUT</text>
+            <line x1="300" y1="170" x2="300" y2="192" stroke="#7A7470" stroke-width="1" stroke-dasharray="3 3"/>
+            <line x1="440" y1="135" x2="440" y2="110" stroke="#7A7470" stroke-width="1"/>
+            <rect x="404" y="80" width="74" height="22" rx="3" fill="#1E6B3A"/><text x="441" y="95" fill="#fff" text-anchor="middle">L6 FLAT</text>
           </g>
-          <!-- legend -->
-          <text x="40" y="362" font-size="10" fill="#7A7470">1 = hairpin · · · · · 6 = flat-out</text>
+          <line x1="20" y1="345" x2="180" y2="345" stroke="#C8C0B8" stroke-width="6"/>
+          <circle cx="20" cy="345" r="5" fill="#C8102E"/><text x="14" y="368" font-size="10" fill="#1F1B18">1 hairpin</text>
+          <circle cx="180" cy="345" r="5" fill="#1E6B3A"/><text x="186" y="368" font-size="10" fill="#1F1B18">6 flat-out</text>
+          <text x="300" y="350" font-size="10.5" fill="#7A7470">number = severity · distance · modifiers</text>
         </svg>
       </div>
       <div class="explain">
@@ -730,26 +729,26 @@
     <h2 style="margin-bottom:6px;">Weight Transfer &amp; The Contact Patch</h2>
     <div class="concept">
       <div class="diagram">
-        <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
-          <!-- ground -->
-          <line x1="40" y1="270" x2="520" y2="270" stroke="#C8C0B8" stroke-width="2"/>
-          <!-- car body, nose-down under braking -->
-          <g transform="rotate(-5 280 200)">
-            <path d="M150,200 L180,160 L360,150 L420,180 L420,210 L150,210 Z" fill="#1F1B18"/>
-            <rect x="210" y="158" width="120" height="22" rx="4" fill="#C8C0B8"/>
+        <svg viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <line x1="30" y1="292" x2="500" y2="292" stroke="#C8C0B8" stroke-width="2.5"/>
+          <path d="M180,70 L96,70" stroke="#1F1B18" stroke-width="2.5"/><path d="M88,70 l16,-7 l0,14 z" fill="#1F1B18"/>
+          <text x="190" y="74" font-size="11" fill="#1F1B18" font-weight="700">DIRECTION OF TRAVEL · BRAKING</text>
+          <!-- car, nose-down (front=left dips) -->
+          <g transform="rotate(-4 380 250)">
+            <path d="M120,250 L135,212 Q150,205 185,202 L225,200 Q250,158 312,156 L350,158 Q392,166 410,202 L440,210 Q458,216 458,238 L458,252 Z" fill="#1F1B18"/>
+            <path d="M236,200 Q258,166 305,164 L305,200 Z" fill="#9aa0a6" opacity="0.55"/>
+            <path d="M312,164 L348,166 Q378,172 396,200 L312,200 Z" fill="#9aa0a6" opacity="0.55"/>
           </g>
-          <!-- wheels -->
-          <circle cx="200" cy="262" r="26" fill="#0F0F10"/><circle cx="200" cy="262" r="10" fill="#7A7470"/>
-          <circle cx="400" cy="262" r="26" fill="#0F0F10"/><circle cx="400" cy="262" r="10" fill="#7A7470"/>
-          <!-- braking direction -->
-          <path d="M150,110 L70,110" stroke="#1F1B18" stroke-width="2.5"/><path d="M64,110 l12,-6 l0,12 z" fill="#1F1B18"/>
-          <text x="80" y="100" font-size="10" fill="#1F1B18">BRAKING</text>
-          <!-- weight shift arrow -->
-          <path d="M300,120 C340,130 360,150 372,180" stroke="#C8102E" stroke-width="3" fill="none"/><path d="M372,186 l6,-12 l-12,3 z" fill="#C8102E"/>
-          <text x="250" y="118" font-size="11" fill="#C8102E" font-weight="600">WEIGHT SHIFTS FORWARD</text>
-          <!-- contact patches -->
-          <rect x="176" y="290" width="48" height="14" rx="3" fill="#C8102E"/><text x="200" y="324" font-size="10" fill="#C8102E" text-anchor="middle" font-weight="600">FRONT GRIP ↑</text>
-          <rect x="386" y="294" width="28" height="9" rx="3" fill="#7A7470"/><text x="400" y="324" font-size="10" fill="#7A7470" text-anchor="middle">REAR GRIP ↓</text>
+          <circle cx="178" cy="262" r="30" fill="#0F0F10"/><circle cx="178" cy="262" r="12" fill="#7A7470"/>
+          <circle cx="390" cy="262" r="30" fill="#0F0F10"/><circle cx="390" cy="262" r="12" fill="#7A7470"/>
+          <path d="M320,150 C270,150 220,170 196,205" fill="none" stroke="#C8102E" stroke-width="4"/><path d="M192,212 l3,-15 l11,8 z" fill="#C8102E"/>
+          <text x="250" y="130" font-size="12" fill="#C8102E" font-weight="700" text-anchor="middle">WEIGHT SHIFTS FORWARD</text>
+          <rect x="150" y="296" width="56" height="13" rx="3" fill="#C8102E"/>
+          <text x="178" y="330" font-size="11" fill="#C8102E" text-anchor="middle" font-weight="700">FRONT GRIP ↑</text>
+          <text x="178" y="346" font-size="9" fill="#7A7470" text-anchor="middle">big contact patch</text>
+          <rect x="372" y="298" width="30" height="8" rx="3" fill="#7A7470"/>
+          <text x="390" y="330" font-size="11" fill="#7A7470" text-anchor="middle">REAR GRIP ↓</text>
+          <text x="390" y="346" font-size="9" fill="#7A7470" text-anchor="middle">light · less grip</text>
         </svg>
       </div>
       <div class="explain">
