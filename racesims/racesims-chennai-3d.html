@@ -121,7 +121,7 @@ for(const wx of[1.25,3.0]){const wc=new THREE.Mesh(new THREE.BoxGeometry(1.0,1.6
 const clr=new THREE.Mesh(new THREE.PlaneGeometry(3.3,1.7),new THREE.MeshStandardMaterial({color:GREEN,transparent:true,opacity:.07}));clr.rotation.x=-Math.PI/2;clr.position.set(2.1,0.015,0.9);scene.add(clr);
 const entry=new THREE.Mesh(new THREE.PlaneGeometry(1.4,1.4),new THREE.MeshStandardMaterial({color:GREEN,transparent:true,opacity:.4}));entry.rotation.x=-Math.PI/2;entry.position.set(5.3,0.02,0.5);scene.add(entry);
 
-const views={iso:[-6,12,-5],top:[W/2,27,D/2+0.01],entry:[5.3,2.0,-5.5],office:[14,3,-1],motion:[6,3,5.3]};
+const views={iso:[16.5,13,15],top:[W/2,27,D/2+0.01],entry:[14,2.4,13],office:[14,3,-1],motion:[6,3,5.3]};
 function go(v){const p=views[v];cam.position.set(p[0],p[1],p[2]);
  controls.target.set(v==='motion'?11:(v==='office'?10.4:W/2),v==='top'?0:0.9,v==='motion'?5.3:(v==='office'?1.8:D/2));}
 document.querySelectorAll('#views button').forEach(b=>b.onclick=()=>go(b.dataset.v));go('iso');
