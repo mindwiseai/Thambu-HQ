@@ -20,13 +20,18 @@ If the partners cover even 30–40% of their components, equipment drops ~₹15�
 ## Partner targets & the ask (component value at India RRP)
 | Partner | Supplies | Ask value |
 |---|---|---|
-| **Corsair** (the PC) | RAM, cooling, PSU, cases, headsets — all 8 PCs | **₹5.9L** |
+| **Corsair** (the PC) | RAM, **SSD**, cooling, PSU, cases, headsets — all 8 PCs | **₹7.1L** |
 | **Fanatec** (the cockpit, Corsair group) | DD+ base, pedals, Formula wheel, shifter, handbrake, QR2, ClubSport cockpit — **2 featured rigs** | **₹11.5L** |
 | **Zotac** | 8 × RTX 5070 Ti GPUs | ₹9.1L |
 | **Samsung** | 24 × Odyssey G5 32″ monitors | ₹5.8L |
 | **AMD** | 8 × Ryzen 7 9700X CPUs | ₹2.5L |
 
-> **Key insight: Corsair now owns Fanatec** (acquired late 2024). So **one Corsair conversation covers both the PCs and the sim rigs**. But the deck deliberately keeps them as **two divisions / two clean numbers** — Corsair (the PC) **₹5.9L** + Fanatec (the cockpit) **₹11.5L** = **₹17.4L total** — because the two run as separate businesses with separate budget lines.
+> **Key insight: Corsair now owns Fanatec** (acquired late 2024). So **one Corsair conversation covers both the PCs and the sim rigs**. But the deck deliberately keeps them as **two divisions / two clean numbers** — Corsair (the PC) **₹7.1L** + Fanatec (the cockpit) **₹11.5L** = **₹18.7L total** — because the two run as separate businesses with separate budget lines.
+
+### Corsair parts list (per PC × 8, from the MD Computers build quote 30-May-2026, incl. GST)
+Sourced from the real ₹3,23,995/rig quote (`racesims/marketing/partnerships/quotes/md-computers-pc-build-2026-05-30.pdf`). Corsair-branded lines only:
+- **Dominator Platinum RGB 32GB DDR5** ₹42,880 · **MP600 PRO NH 1TB Gen4 SSD** ₹15,316 · **RM850e ATX 3.1 Gold PSU** ₹9,900 · **3500X RS-R ARGB case** ₹9,320 · **Nautilus 360 RS ARGB AIO** ₹8,370 · **HS35 v2 Carbon headset** ₹3,410.
+- Per PC = ₹89,196 · **×8 = ₹7,13,568 ≈ ₹7.1L**. (Non-Corsair in the build = AMD 9700X, Gigabyte B850, Zotac RTX 5070 Ti, Samsung Odyssey G5 ×3 — each its own partner ask.)
 
 ### Fanatec parts list (per featured rig × 2, India RRP incl. GST)
 - **ClubSport DD+ 15Nm wheelbase** — ₹2,05,999 *(confirmed [[techxhub]] Mar-2026 RRP)*
