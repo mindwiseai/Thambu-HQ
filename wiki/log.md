@@ -9,6 +9,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-30] edit | Corsair partner deck rev — two-division split + itemized cost
+- Updated: [[racesims-chennai-partnerships]] (partner table → Corsair ₹5.9L + Fanatec ₹11.5L = ₹17.4L; added Fanatec parts list + deck rev notes).
+- Rebuilt `racesims/marketing/decks/racesims-chennai-partner-corsair.pdf` → **8 slides** + **committed `.html` source** (was PDF-only). New S6 (two businesses, two numbers) + S7 (itemized parts breakdown); S5 reframed.
+- Decision: present Corsair (PC, ₹5.9L) and Fanatec (cockpit, ₹11.5L) as **separate divisions / separate numbers** despite shared ownership. Fanatec wishlist finalised (DD+ 15Nm base, cockpit, Pedals V3, Formula V2.5 X, Shifter SQ V1.5, Handbrake V1.5, QR2); "Podium" base dropped. Prices = [[techxhub]] India RRP.
+- Domain: racesims
+
 ## [2026-05-30] strategy | Chennai partnerships + Nungambakkam + costing refine
 - Created: [[racesims-chennai-partnerships]] — brand-partner/sponsorship plan to cut ₹73.5L list capital toward ~₹55-58L.
 - **Location locked: Nungambakkam** (central Chennai).

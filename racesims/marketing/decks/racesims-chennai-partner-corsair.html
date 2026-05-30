@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>RaceSims · Chennai — Corsair Partnership Proposal</title>
+<meta name="viewport" content="width=1280" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:       #FAF9F5;
+    --cream-dark:  #F3EFEA;
+    --cream-mid:   #EDE8E2;
+    --rs-red:      #C8102E;
+    --rs-red-dim:  rgba(200, 16, 46, 0.10);
+    --rs-red-soft: rgba(200, 16, 46, 0.05);
+    --rs-black:    #0F0F10;
+    --ink:         #1F1B18;
+    --ink-mid:     #4A4440;
+    --ink-muted:   #7A7470;
+    --rule:        #DDD8D2;
+    --rule-mid:    #C8C0B8;
+    --corsair:     #0B0B0C;
+    --corsair-y:   #FFD200;
+    --sans:        'Montserrat', -apple-system, sans-serif;
+    --mono:        'JetBrains Mono', 'SF Mono', monospace;
+  }
+  @page { size: 1280px 720px; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #E8E3DC;
+    font-family: var(--sans);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  body { padding: 32px 0; }
+  .slide {
+    width: 1280px;
+    height: 720px;
+    margin: 0 auto 32px;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    page-break-after: always;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+  .slide:last-child { page-break-after: auto; margin-bottom: 0; }
+  @media print {
+    html, body { background: white; }
+    body { padding: 0; margin: 0; }
+    .slide { margin: 0 auto; border: none; box-shadow: none; }
+  }
+  .slide-inner {
+    padding: 48px 64px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 5px;
+    background: var(--rs-red);
+    z-index: 2;
+  }
+  .slide-num {
+    position: absolute;
+    top: 22px; right: 28px;
+    font-family: var(--mono); font-size: 10px;
+    color: var(--ink-muted); letter-spacing: 0.18em;
+    z-index: 3;
+  }
+  .brand {
+    position: absolute;
+    top: 22px; left: 32px;
+    font-family: var(--mono); font-size: 10px;
+    color: var(--rs-red); letter-spacing: 0.22em;
+    font-weight: 600; z-index: 3;
+  }
+  /* CORSAIR co-brand mark (sails) */
+  .corsair-mark { display: inline-flex; align-items: center; gap: 9px; }
+  .corsair-mark svg { display: block; }
+  .corsair-mark .wm {
+    font-family: var(--sans); font-weight: 700;
+    letter-spacing: 0.30em; color: var(--corsair);
+    font-size: 13px;
+  }
+  .corsair-corner {
+    position: absolute; bottom: 26px; right: 36px; z-index: 3;
+    opacity: 0.92;
+  }
+  .eyebrow {
+    font-family: var(--mono); font-size: 10px;
+    color: var(--rs-red); letter-spacing: 0.22em;
+    text-transform: uppercase; margin-bottom: 12px;
+    font-weight: 600;
+  }
+  h1 { font-family: var(--sans); color: var(--ink); }
+  h2 { font-family: var(--sans); font-size: 33px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.14; margin-bottom: 16px; color: var(--ink); }
+  h2 .italic { font-style: italic; color: var(--rs-red); font-weight: 600; }
+  h3 {
+    font-family: var(--sans); font-size: 11px;
+    font-weight: 700; color: var(--rs-red);
+    text-transform: uppercase; letter-spacing: 0.18em;
+    margin-bottom: 12px;
+  }
+  p { font-size: 14.5px; line-height: 1.6; color: var(--ink-mid); }
+  p.lead { font-size: 16px; color: var(--ink-mid); max-width: 900px; }
+
+  /* COVER */
+  .cover { display: flex; flex-direction: column; justify-content: center; padding: 0 96px; }
+  .cover .badge {
+    display: inline-block; padding: 7px 14px;
+    border: 1.5px solid var(--rs-red); color: var(--rs-red);
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.22em; margin-bottom: 28px;
+    width: max-content; font-weight: 600;
+  }
+  .cover .teaming { font-family: var(--mono); font-size: 12px; color: var(--ink-muted); letter-spacing: 0.18em; margin-bottom: 14px; }
+  .cover h1 { font-family: var(--sans); font-size: 80px; font-weight: 800; line-height: 0.98; letter-spacing: -0.035em; margin-bottom: 18px; color: var(--ink); }
+  .cover h1 .accent { color: var(--rs-red); font-style: italic; font-weight: 700; }
+  .cover .x { display: flex; align-items: center; gap: 22px; margin: 6px 0 26px; }
+  .cover .x .plus { font-family: var(--mono); color: var(--rs-red); font-size: 22px; font-weight: 600; }
+  .cover .sub { font-size: 18px; color: var(--ink-mid); font-weight: 500; line-height: 1.5; max-width: 780px; }
+  .cover .footer {
+    position: absolute; bottom: 44px; left: 96px; right: 96px;
+    display: flex; justify-content: space-between;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-muted); letter-spacing: 0.16em; z-index: 3;
+  }
+
+  /* GRID & CARDS */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+  .card {
+    background: var(--cream-dark); border: 1px solid var(--rule);
+    border-radius: 4px; padding: 18px 20px;
+  }
+  .card.accent { border-left: 3px solid var(--rs-red); }
+
+  .stat { display: flex; flex-direction: column; gap: 4px; }
+  .stat .label {
+    font-family: var(--mono); font-size: 9px;
+    color: var(--ink-muted); letter-spacing: 0.18em;
+    text-transform: uppercase; font-weight: 600;
+  }
+  .stat .value {
+    font-family: var(--sans); font-size: 34px; font-weight: 800;
+    color: var(--rs-red); letter-spacing: -0.025em; line-height: 1;
+  }
+  .stat .note { font-size: 11px; color: var(--ink-mid); margin-top: 3px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th {
+    text-align: left; font-family: var(--mono); font-size: 9px;
+    color: var(--rs-red); letter-spacing: 0.16em;
+    padding: 8px 8px; border-bottom: 1.5px solid var(--rs-red);
+    text-transform: uppercase; font-weight: 600;
+  }
+  th.r, td.r { text-align: right; }
+  td {
+    padding: 6.5px 8px; border-bottom: 1px solid var(--rule);
+    color: var(--ink); font-size: 12.5px; line-height: 1.35;
+  }
+  td .mono { font-family: var(--mono); font-size: 11.5px; }
+  tr:last-child td { border-bottom: none; }
+  tr.total td {
+    font-weight: 700; color: var(--rs-red);
+    border-top: 1.5px solid var(--rs-red); border-bottom: none;
+    padding-top: 9px; background: var(--rs-red-dim);
+    font-family: var(--mono); font-size: 12.5px;
+  }
+
+  .divider { height: 1px; background: var(--rule); margin: 14px 0; }
+  .divider.red { background: var(--rs-red); height: 2px; width: 40px; margin: 12px 0 16px; }
+
+  .pill-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 9px 28px; margin-top: 6px; }
+  .pill-list li { padding-left: 20px; position: relative; font-size: 14.5px; color: var(--ink); line-height: 1.45; }
+  .pill-list li::before { content: "—"; position: absolute; left: 0; color: var(--rs-red); font-weight: 700; }
+
+  .where-list { list-style: none; padding: 0; }
+  .where-list li { padding: 12px 0 12px 26px; position: relative; font-size: 15px; color: var(--ink); line-height: 1.45; border-bottom: 1px solid var(--rule); }
+  .where-list li:last-child { border-bottom: none; }
+  .where-list li::before { content: "▸"; position: absolute; left: 0; color: var(--rs-red); font-weight: 700; }
+  .where-list li b { font-weight: 700; }
+
+  .small { font-size: 11.5px; line-height: 1.5; color: var(--ink-mid); }
+  .tiny { font-size: 10px; color: var(--ink-muted); font-family: var(--mono); letter-spacing: 0.12em; }
+  b { font-weight: 700; }
+  em { font-style: italic; }
+  .text-red { color: var(--rs-red); }
+
+  .note {
+    font-size: 12.5px; color: var(--ink-muted);
+    font-style: italic; margin-bottom: 14px;
+    padding-left: 12px; border-left: 2px solid var(--cream-mid);
+  }
+
+  /* DIVISION CARDS (slide 6) */
+  .div-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 6px; }
+  .div-card {
+    border: 1px solid var(--rule); border-top: 4px solid var(--rs-red);
+    border-radius: 5px; padding: 26px 28px; background: var(--cream-dark);
+    display: flex; flex-direction: column;
+  }
+  .div-card .who { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; color: var(--ink-muted); text-transform: uppercase; margin-bottom: 6px; }
+  .div-card .what { font-size: 21px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 4px; }
+  .div-card .desc { font-size: 13px; color: var(--ink-mid); line-height: 1.5; margin-bottom: 18px; min-height: 62px; }
+  .div-card .num { font-family: var(--sans); font-size: 52px; font-weight: 800; letter-spacing: -0.03em; color: var(--rs-red); line-height: 1; }
+  .div-card .num-sub { font-family: var(--mono); font-size: 10.5px; color: var(--ink-muted); letter-spacing: 0.12em; margin-top: 8px; }
+  .total-strip {
+    margin-top: 20px; display: flex; align-items: center; justify-content: space-between;
+    border: 1.5px solid var(--rs-red); border-radius: 5px; padding: 16px 26px; background: var(--rs-red-dim);
+  }
+  .total-strip .lab { font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; color: var(--ink); text-transform: uppercase; font-weight: 600; }
+  .total-strip .amt { font-family: var(--sans); font-size: 32px; font-weight: 800; color: var(--rs-red); letter-spacing: -0.02em; }
+</style>
+</head>
+<body>
+
+<!-- ===== SLIDE 1 — COVER ===== -->
+<div class="slide">
+  <div class="brand">RACESIMS · CHENNAI</div>
+  <div class="slide-num">01 / 08</div>
+  <div class="slide-inner cover">
+    <span class="badge">A PARTNERSHIP PROPOSAL · CONFIDENTIAL</span>
+    <div class="teaming">TEAMING UP WITH</div>
+    <h1>RaceSims <span class="accent">·</span> Chennai</h1>
+    <div class="x">
+      <span class="plus">×</span>
+      <span class="corsair-mark">
+        <svg width="42" height="30" viewBox="0 0 42 30" aria-label="Corsair">
+          <g fill="#0B0B0C">
+            <path d="M2 28 L11 2 L15 2 L8 28 Z"/>
+            <path d="M14 28 L23 2 L27 2 L20 28 Z"/>
+            <path d="M26 28 L35 2 L39 2 L32 28 Z"/>
+          </g>
+        </svg>
+        <span class="wm" style="font-size:18px;">CORSAIR</span>
+      </span>
+    </div>
+    <p class="sub">India's first real motorsport sim-racing centre — Nungambakkam, Chennai. Eight pro rigs, a championship-winning race team behind it, and an open invitation for Corsair to own the cockpit.</p>
+    <div class="footer">
+      <span>RACESIMS SOLUTIONS PVT LTD · OPENING JULY 2026</span>
+      <span>DRIVE · TRAIN · COMPETE</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 2 — WHAT WE'RE BUILDING ===== -->
+<div class="slide">
+  <div class="brand">RACESIMS · CHENNAI</div>
+  <div class="slide-num">02 / 08</div>
+  <div class="slide-inner">
+    <div class="eyebrow">01 · First — what we're building</div>
+    <h2>It's not a gaming café. <span class="italic">It's a real motorsport centre.</span></h2>
+    <div class="divider red"></div>
+    <p class="lead">Eight pro racing rigs — one on a full 3-DOF motion platform — right in the middle of Nungambakkam. And it's run by the people behind <b>ARKA Motorsports</b>, a championship-winning race team with 130+ national titles. This isn't a screen in a mall. It's the real thing, built by racers.</p>
+
+    <div class="grid-4" style="margin-top: 28px;">
+      <div class="card accent"><div class="stat"><span class="label">Pro rigs</span><span class="value">8</span><span class="note">+ a 3-DOF motion sim</span></div></div>
+      <div class="card accent"><div class="stat"><span class="label">ARKA titles behind it</span><span class="value">130+</span><span class="note">National championships</span></div></div>
+      <div class="card accent"><div class="stat"><span class="label">In India</span><span class="value">1st</span><span class="note">Of its kind</span></div></div>
+      <div class="card accent"><div class="stat"><span class="label">Location</span><span class="value" style="font-size:22px;">Nungambakkam</span><span class="note">Heart of central Chennai</span></div></div>
+    </div>
+  </div>
+  <div class="corsair-corner"><span class="corsair-mark"><svg width="26" height="19" viewBox="0 0 42 30"><g fill="#0B0B0C"><path d="M2 28 L11 2 L15 2 L8 28 Z"/><path d="M14 28 L23 2 L27 2 L20 28 Z"/><path d="M26 28 L35 2 L39 2 L32 28 Z"/></g></svg><span class="wm">CORSAIR</span></span></div>
+</div>
+
+<!-- ===== SLIDE 3 — THE JOURNEY ===== -->
+<div class="slide">
+  <div class="brand">RACESIMS · CHENNAI</div>
+  <div class="slide-num">03 / 08</div>
+  <div class="slide-inner">
+    <div class="eyebrow">02 · And there's a lot more than racing</div>
+    <h2>It's a whole journey <span class="italic">under one roof.</span></h2>
+    <div class="divider red"></div>
+    <p class="lead">Drive. Train. Compete. All in one place — for the first time in India.</p>
+    <p class="lead" style="margin-top:18px;">People don't just drop in to drive — they come to learn. Our <b>Motorsport Academy</b> takes them from their very first lap to a real race car: sim mornings, real-track afternoons with ARKA. We run our own championships and weekly hot-lap battles that keep people coming back. And the best of them climb <b>the Ladder</b> — straight into actual race seats.</p>
+    <p class="lead" style="margin-top:18px; color: var(--ink); font-weight:600;">This is where India's next drivers will start.</p>
+
+    <div class="grid-3" style="margin-top: 30px;">
+      <div class="card accent"><div class="stat"><span class="label">Drive</span><span class="value" style="font-size:20px;">Walk-in &amp; hire</span><span class="note">Sessions, memberships, corporate days</span></div></div>
+      <div class="card accent"><div class="stat"><span class="label">Train</span><span class="value" style="font-size:20px;">The Academy</span><span class="note">Sim mornings → real-track with ARKA</span></div></div>
+      <div class="card accent"><div class="stat"><span class="label">Compete</span><span class="value" style="font-size:20px;">Championships</span><span class="note">Weekly hot laps → the Ladder</span></div></div>
+    </div>
+  </div>
+  <div class="corsair-corner"><span class="corsair-mark"><svg width="26" height="19" viewBox="0 0 42 30"><g fill="#0B0B0C"><path d="M2 28 L11 2 L15 2 L8 28 Z"/><path d="M14 28 L23 2 L27 2 L20 28 Z"/><path d="M26 28 L35 2 L39 2 L32 28 Z"/></g></svg><span class="wm">CORSAIR</span></span></div>
+</div>
+
+<!-- ===== SLIDE 4 — THE CROWD ===== -->
+<div class="slide">
+  <div class="brand">RACESIMS · CHENNAI</div>
+  <div class="slide-num">04 / 08</div>
+  <div class="slide-inner">
+    <div class="eyebrow">03 · And look who's walking in</div>
+    <h2>The right crowd, <span class="italic">every single day.</span></h2>
+    <div class="divider red"></div>
+    <p class="lead">A Nungambakkam address puts us in front of exactly the people every brand wants to reach:</p>
+
+    <ul class="pill-list" style="margin-top: 24px;">
+      <li>HNIs &amp; families</li>
+      <li>Corporates &amp; team days</li>
+      <li>Celebrities &amp; influencers</li>
+      <li>Motorsport fans</li>
+      <li>Young aspiring drivers</li>
+      <li>Gamers &amp; esports</li>
+    </ul>
+
+    <div class="card accent" style="margin-top: 30px;">
+      <p style="font-size:16px; color:var(--ink); font-weight:600; line-height:1.5;">Every one of them is someone you'd want holding <span class="text-red">your gear</span> — and posting about it.</p>
+    </div>
+  </div>
+  <div class="corsair-corner"><span class="corsair-mark"><svg width="26" height="19" viewBox="0 0 42 30"><g fill="#0B0B0C"><path d="M2 28 L11 2 L15 2 L8 28 Z"/><path d="M14 28 L23 2 L27 2 L20 28 Z"/><path d="M26 28 L35 2 L39 2 L32 28 Z"/></g></svg><span class="wm">CORSAIR</span></span></div>
+</div>
+
+<!-- ===== SLIDE 5 — WHERE YOU COME IN (two divisions) ===== -->
+<div class="slide">
+  <div class="brand">RACESIMS · CHENNAI</div>
+  <div class="slide-num">05 / 08</div>
+  <div class="slide-inner">
+    <div class="eyebrow">04 · Now — here's where you come in</div>
+    <h2>One group. <span class="italic">Two halves of the same cockpit.</span></h2>
+    <div class="divider red"></div>
+    <p class="lead">Since 2024, Corsair owns <b>Fanatec</b> too — so between the two of you, you make almost the entire rig. We've kept the two businesses separate on purpose, so each team sees exactly what it's putting in:</p>
+
+    <div class="grid-2" style="margin-top: 26px;">
+      <div class="card accent">
+        <h3>Corsair — the PC</h3>
+        <p style="font-size:14px; color:var(--ink); line-height:1.55;">You're already half the build: <b>memory, cooling, power, cases and headsets</b> across all eight race PCs. The machines every lap runs on.</p>
+      </div>
+      <div class="card accent">
+        <h3>Fanatec — the cockpit</h3>
+        <p style="font-size:14px; color:var(--ink); line-height:1.55;">Now the part people actually touch: <b>wheelbases, wheels, pedals and the full cockpit</b> on our featured rigs. The kit they fall in love with.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 22px; border-left:3px solid var(--rs-red);">
+      <p style="font-size:14.5px; color:var(--ink); line-height:1.55;">And here's where you show up: <b>your name on every rig</b>, the leaderboard wall and the front door · a <b>branded Corsair + Fanatec zone</b> with your gear on show · and every video, championship and event we run — all carrying you.</p>
+    </div>
+  </div>
+  <div class="corsair-corner"><span class="corsair-mark"><svg width="26" height="19" viewBox="0 0 42 30"><g fill="#0B0B0C"><path d="M2 28 L11 2 L15 2 L8 28 Z"/><path d="M14 28 L23 2 L27 2 L20 28 Z"/><path d="M26 28 L35 2 L39 2 L32 28 Z"/></g></svg><span class="wm">CORSAIR</span></span></div>
+</div>
+
+<!-- ===== SLIDE 6 — THE DISTINCTION (two divisions, two numbers) ===== -->
+<div class="slide">
+  <div class="brand">RACESIMS · CHENNAI</div>
+  <div class="slide-num">06 / 08</div>
+  <div class="slide-inner">
+    <div class="eyebrow">05 · Two businesses, two clean numbers</div>
+    <h2>Same group. <span class="italic">Two separate asks.</span></h2>
+    <div class="divider red"></div>
+    <p class="note">Corsair and Fanatec run as different companies — so we've costed them apart. Each team has its own budget line; neither carries the other's.</p>
+
+    <div class="div-grid">
+      <div class="div-card">
+        <div class="who">DIVISION 01 · THE PC</div>
+        <div class="what">Corsair</div>
+        <div class="desc">RAM, cooling, power, cases &amp; headsets across all <b>8 race PCs</b>.</div>
+        <div class="num">₹5.9 L</div>
+        <div class="num-sub">8 RIGS · PC COMPONENTS AT INDIA RRP</div>
+      </div>
+      <div class="div-card" style="border-top-color:#0B0B0C;">
+        <div class="who">DIVISION 02 · THE COCKPIT</div>
+        <div class="what">Fanatec</div>
+        <div class="desc">Complete wheel, pedal, base &amp; cockpit on our <b>2 featured rigs</b>.</div>
+        <div class="num" style="color:#0B0B0C;">₹11.5 L</div>
+        <div class="num-sub">2 FEATURED RIGS · FULL FANATEC COCKPITS</div>
+      </div>
+    </div>
+
+    <div class="total-strip">
+      <span class="lab">Total partnership value — what we're asking the group to cover</span>
+      <span class="amt">₹17.4 L</span>
+    </div>
+  </div>
+  <div class="corsair-corner"><span class="corsair-mark"><svg width="26" height="19" viewBox="0 0 42 30"><g fill="#0B0B0C"><path d="M2 28 L11 2 L15 2 L8 28 Z"/><path d="M14 28 L23 2 L27 2 L20 28 Z"/><path d="M26 28 L35 2 L39 2 L32 28 Z"/></g></svg><span class="wm">CORSAIR</span></span></div>
+</div>
+
+<!-- ===== SLIDE 7 — THE BREAKDOWN ===== -->
+<div class="slide">
+  <div class="brand">RACESIMS · CHENNAI</div>
+  <div class="slide-num">07 / 08</div>
+  <div class="slide-inner">
+    <div class="eyebrow">06 · Exactly what we're asking for</div>
+    <h2>The parts list, <span class="italic">line by line.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-2" style="margin-top: 2px; align-items:start;">
+      <!-- CORSAIR TABLE -->
+      <div>
+        <h3 style="color:#0B0B0C;">Corsair · PC gear — all 8 rigs</h3>
+        <table>
+          <thead>
+            <tr><th>Component</th><th class="r">Qty</th><th class="r">Unit</th><th class="r">Total</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Dominator DDR5 RAM (32 GB)</td><td class="r mono">×8</td><td class="r mono">25,500</td><td class="r mono">2,04,000</td></tr>
+            <tr><td>iCUE 360 mm AIO cooling</td><td class="r mono">×8</td><td class="r mono">17,500</td><td class="r mono">1,40,000</td></tr>
+            <tr><td>RM850e power supply</td><td class="r mono">×8</td><td class="r mono">9,500</td><td class="r mono">76,000</td></tr>
+            <tr><td>3500X case</td><td class="r mono">×8</td><td class="r mono">9,000</td><td class="r mono">72,000</td></tr>
+            <tr><td>HS80 wireless headset</td><td class="r mono">×8</td><td class="r mono">12,250</td><td class="r mono">98,000</td></tr>
+            <tr class="total"><td>Corsair subtotal</td><td class="r">—</td><td class="r">—</td><td class="r">₹5,90,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- FANATEC TABLE -->
+      <div>
+        <h3>Fanatec · complete cockpit — 2 featured rigs</h3>
+        <table>
+          <thead>
+            <tr><th>Component</th><th class="r">Qty</th><th class="r">Unit</th><th class="r">Total</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>ClubSport DD+ wheelbase (15 Nm)</td><td class="r mono">×2</td><td class="r mono">2,05,999</td><td class="r mono">4,11,998</td></tr>
+            <tr><td>ClubSport Cockpit frame</td><td class="r mono">×2</td><td class="r mono">1,49,999</td><td class="r mono">2,99,998</td></tr>
+            <tr><td>ClubSport Pedals V3</td><td class="r mono">×2</td><td class="r mono">66,699</td><td class="r mono">1,33,398</td></tr>
+            <tr><td>Formula V2.5 X steering wheel</td><td class="r mono">×2</td><td class="r mono">59,999</td><td class="r mono">1,19,998</td></tr>
+            <tr><td>ClubSport Shifter SQ V1.5</td><td class="r mono">×2</td><td class="r mono">43,999</td><td class="r mono">87,998</td></tr>
+            <tr><td>ClubSport Handbrake V1.5</td><td class="r mono">×2</td><td class="r mono">31,999</td><td class="r mono">63,998</td></tr>
+            <tr><td>QR2 quick release</td><td class="r mono">×2</td><td class="r mono">16,999</td><td class="r mono">33,998</td></tr>
+            <tr class="total"><td>Fanatec subtotal</td><td class="r">—</td><td class="r">—</td><td class="r">₹11,51,386</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="tiny" style="margin-top:16px; line-height:1.6;">All figures India RRP incl. GST. Fanatec DD+ base &amp; Pedals V3 = confirmed Techxhub March-2026 RRP · wheel, cockpit, shifter, handbrake &amp; QR2 = indicative India RRP, to be firmed on a Techxhub quote. Corsair line is the branded-component share of each ₹3.24 L race-PC build (RAM elevated on the current DRAM market).</p>
+  </div>
+  <div class="corsair-corner"><span class="corsair-mark"><svg width="26" height="19" viewBox="0 0 42 30"><g fill="#0B0B0C"><path d="M2 28 L11 2 L15 2 L8 28 Z"/><path d="M14 28 L23 2 L27 2 L20 28 Z"/><path d="M26 28 L35 2 L39 2 L32 28 Z"/></g></svg><span class="wm">CORSAIR</span></span></div>
+</div>
+
+<!-- ===== SLIDE 8 — CLOSE ===== -->
+<div class="slide">
+  <div class="brand">RACESIMS · CHENNAI</div>
+  <div class="slide-num">08 / 08</div>
+  <div class="slide-inner cover">
+    <span class="badge">LET'S DO THIS</span>
+    <h1 style="font-size:60px; line-height:1.02;">Put Corsair on the start<br/>line of <span class="accent">Indian motorsport.</span></h1>
+    <p class="sub" style="margin-top:8px;">Own the room where India falls in love with racing — the PC and the cockpit, both carrying your name. And when we open the next centres, you're already on board.</p>
+    <div style="margin-top:30px;">
+      <span class="corsair-mark"><svg width="46" height="33" viewBox="0 0 42 30"><g fill="#0B0B0C"><path d="M2 28 L11 2 L15 2 L8 28 Z"/><path d="M14 28 L23 2 L27 2 L20 28 Z"/><path d="M26 28 L35 2 L39 2 L32 28 Z"/></g></svg><span class="wm" style="font-size:20px;">CORSAIR</span></span>
+    </div>
+    <div class="footer">
+      <span>THAMBU · RACESIMS · THAMBU@RACESIMS.IN</span>
+      <span>RACESIMS · CHENNAI — NUNGAMBAKKAM · DRIVE · TRAIN · COMPETE</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

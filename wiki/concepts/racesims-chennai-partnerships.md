@@ -17,23 +17,33 @@ If the partners cover even 30–40% of their components, equipment drops ~₹15�
 - **2 rigs — Conspit** · **2 rigs — VNM** · **2 rigs — Fanatec** · **2 rigs — reserved** (other brands).
 - RaceSims is already the [[conspit]]/[[vnm]] distributor (gets those at cost); Fanatec is a new partner pitch.
 
-## Partner targets & the ask (component value at list)
+## Partner targets & the ask (component value at India RRP)
 | Partner | Supplies | Ask value |
 |---|---|---|
-| **Corsair** | PC RAM, cooling, PSU, cases, headsets (all 8 PCs) — **and Fanatec** | ₹10–18L |
-| **Fanatec** (Corsair group) | wheelbases, pedals, wheels, shifters — featured rigs | ₹4–12L |
+| **Corsair** (the PC) | RAM, cooling, PSU, cases, headsets — all 8 PCs | **₹5.9L** |
+| **Fanatec** (the cockpit, Corsair group) | DD+ base, pedals, Formula wheel, shifter, handbrake, QR2, ClubSport cockpit — **2 featured rigs** | **₹11.5L** |
 | **Zotac** | 8 × RTX 5070 Ti GPUs | ₹9.1L |
 | **Samsung** | 24 × Odyssey G5 32″ monitors | ₹5.8L |
 | **AMD** | 8 × Ryzen 7 9700X CPUs | ₹2.5L |
 
-> **Key insight: Corsair now owns Fanatec** (acquired late 2024). So **one Corsair conversation covers both the PCs and the sim rigs** — the biggest, most attractive deal.
+> **Key insight: Corsair now owns Fanatec** (acquired late 2024). So **one Corsair conversation covers both the PCs and the sim rigs**. But the deck deliberately keeps them as **two divisions / two clean numbers** — Corsair (the PC) **₹5.9L** + Fanatec (the cockpit) **₹11.5L** = **₹17.4L total** — because the two run as separate businesses with separate budget lines.
+
+### Fanatec parts list (per featured rig × 2, India RRP incl. GST)
+- **ClubSport DD+ 15Nm wheelbase** — ₹2,05,999 *(confirmed [[techxhub]] Mar-2026 RRP)*
+- **ClubSport Cockpit frame** — ~₹1,49,999
+- **ClubSport Pedals V3** — ₹66,699 *(confirmed [[techxhub]] RRP)*
+- **Formula V2.5 X steering wheel** — ~₹59,999
+- **ClubSport Shifter SQ V1.5** — ~₹43,999
+- **ClubSport Handbrake V1.5** — ~₹31,999
+- **QR2 quick release** — ~₹16,999
+- Per rig ≈ ₹5.76L · **×2 = ₹11.5L**. (Non-confirmed lines = indicative India RRP, firm on Techxhub quote.) Dropped from the original wishlist: "Podium" tier base — DD+ 15Nm used throughout.
 
 ## The pitch (framing)
 "Official [Performance] Partner" + branding on every rig, the leaderboard wall, the entrance, social/video, championships, events, and the Academy materials. The ask is **full sponsorship of their components** — *implied, never stated as "free"*: the deck shows "what we're asking you to cover" + "you own the room." Story used: not a gaming café · ARKA pedigree (130+ titles) · [[racesims-drive-train-compete|Drive·Train·Compete]] + the [[racesims-motorsport-academy|Academy]] + the [[racesims-the-ladder|Ladder]] · high-profile Nungambakkam crowd · national-network vision.
 
 ## Decks
-- **Built:** `racesims/marketing/decks/racesims-chennai-partner-corsair.pdf` (7 slides — the template). Dark/cream RaceSims editorial + the real Corsair sails logo, space-filling, natural first-person copy.
-- **Pending:** Zotac, Samsung, AMD, Fanatec (same template; each with its real logo + ask value). Fanatec may fold into Corsair (same group).
+- **Built (rev 2026-05-30):** `racesims/marketing/decks/racesims-chennai-partner-corsair.pdf` + `.html` (**8 slides**, 1280×720). RaceSims editorial (cream + RS Red + Montserrat + JetBrains Mono) + Corsair sails mark. **HTML source now committed** (was PDF-only before). New slides: **S6 "two businesses, two clean numbers"** (Corsair ₹5.9L | Fanatec ₹11.5L → ₹17.4L) + **S7 itemized parts-list breakdown** (per-component qty × unit × total for both divisions). S5 reframed as "one group, two halves of the cockpit."
+- **Pending:** Zotac, Samsung, AMD (same template; each with its real logo + ask value). Fanatec is folded into the Corsair deck (same group, shown as a separate division).
 
 ## Refined component costing (sourced, 2025-26)
 - **PC (per rig) = ₹3,23,995** — MD Computers quote: Ryzen 7 9700X + **Zotac RTX 5070 Ti** + Gigabyte B850 + Corsair (Dominator RGB RAM ₹42,880, 360 AIO, RM850e, 3500X case) + **3 × Samsung Odyssey G5 32″** (₹72k) + Corsair headset. RAM is at market (DRAM prices spiked on AI demand — not bling).

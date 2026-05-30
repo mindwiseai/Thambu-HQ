@@ -8,7 +8,13 @@ updated: 2026-05-29
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-30 (latest) — Chennai partnerships + Nungambakkam + costing refine
+## 2026-05-30 (latest) — Corsair deck rev: two-division split + itemized cost
+
+- **Corsair partner deck revised → 8 slides** (`racesims-chennai-partner-corsair.pdf` + **`.html` now committed**, was PDF-only). Per [[thambu]]: break down the cost + show a **clear distinction between Corsair (the PC) and Fanatec (the cockpit)** — same group since 2024, but run as separate businesses, so **two clean numbers**: **Corsair PC ₹5.9L** (RAM/cooling/PSU/case/headset ×8 rigs) + **Fanatec ₹11.5L** (complete DD+ cockpit ×2 featured rigs) = **₹17.4L total**.
+- **Fanatec parts list locked:** ClubSport DD+ 15Nm base, ClubSport Cockpit, Pedals V3, Formula V2.5 X wheel, Shifter SQ V1.5, Handbrake V1.5, QR2. Dropped the "Podium" tier (voice-brief artifact) → DD+ throughout. Prices = [[techxhub]] India RRP (base ₹2.06L + pedals ₹66.7k confirmed; rest indicative). User's "₹10-12L" recollection reconciled: 3 hero parts ×2 = ₹6.6L, so added full cockpit kit per rig to land in-band.
+- See [[racesims-chennai-partnerships]]. **Next:** Zotac/Samsung/AMD decks pending.
+
+## 2026-05-30 — Chennai partnerships + Nungambakkam + costing refine
 
 - **Location: Nungambakkam** (central Chennai). **Brand-partnership/sponsorship plan** to cut the ₹73.5L list capital toward **~₹55-58L** — see [[racesims-chennai-partnerships]].
 - **Rig split:** 2 Conspit + 2 VNM + 2 Fanatec + 2 reserved (multi-brand showcase). **Partner pitches:** Corsair (PC + Fanatec — *Corsair owns Fanatec*), Zotac (8× RTX 5070 Ti ₹9.1L), Samsung (24× Odyssey G5 ₹5.8L), AMD (8× Ryzen 7 ₹2.5L). Ask = full sponsorship, *implied not stated*.
