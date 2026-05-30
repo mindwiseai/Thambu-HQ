@@ -23,7 +23,7 @@
 </style></head><body>
 <canvas id="c"></canvas>
 <div id="hud"><h1>RaceSims · <b>Chennai</b></h1>
- <div class="sub">3D LAYOUT v6 — NORTH-UP · VASTU-ORIENTED</div>
+ <div class="sub">3D LAYOUT — NORTH-UP · ALL RIGS FACE THEIR WALLS</div>
  <div class="card"><p>
   <span class="k">North is away</span> from you · <span class="k">East</span> is to the right<br>
   <span class="k">Office (NE corner)</span> top-right · <span class="k">motion rig faces North</span><br>
@@ -83,9 +83,9 @@ function rig(x,z,rotY,motion){const g=new THREE.Group();const col=motion?RED:STE
  const st=new THREE.Mesh(new THREE.BoxGeometry(1.5,0.05,0.1),new THREE.MeshStandardMaterial({color:0x222}));st.position.set(0,0.55,-0.7);g.add(st);
  g.position.set(x,0,z);g.rotation.y=rotY;scene.add(g);}
 // WEST wall rigs (face EAST = +x => rot -PI/2)
-[8.95,6.75,4.55,2.35].forEach(z=>rig(1.0,z,-Math.PI/2,false));
+[8.95,6.75,4.55,2.35].forEach(z=>rig(1.0,z,Math.PI/2,false));
 // SOUTH wall rigs (face NORTH = -z => rot 0)
-[2.7,4.5,6.3].forEach(x=>rig(x,11.15,0,false));
+[2.7,4.5,6.3].forEach(x=>rig(x,11.15,Math.PI,false));
 // MOTION hero — near NORTH wall, faces NORTH (rot 0)
 rig(3.3,1.25,0,true);
 const ring=new THREE.Mesh(new THREE.RingGeometry(1.45,1.5,48),new THREE.MeshBasicMaterial({color:GOLD,side:THREE.DoubleSide}));ring.rotation.x=-Math.PI/2;ring.position.set(3.3,0.02,1.25);scene.add(ring);

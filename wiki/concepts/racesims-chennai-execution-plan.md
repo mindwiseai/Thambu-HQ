@@ -18,7 +18,7 @@ The full build-and-launch plan for the chosen [[racesims-chennai-premium-baselin
 
 ## Layout (v6 — North-up · Vastu-oriented · see `racesims-chennai-floorplan.png` + `racesims-chennai-3d.html`)
 **Compass confirmed with [[thambu]]:** room taller N–S (**12.15 m**) than E–W (**8.73 m**). **Entrance = EAST** (right wall, off the lift lobby) · **Office/training = NORTH-EAST corner** (owner cabin, doubles as Phase-2 [[racesims-motorsport-academy|Academy]] room) · **motion rig faces NORTH**. Plan and 3D are both drawn North-up with a compass + north arrow.
-- **8 rigs:** 7 static grouped — **4 along the WEST wall** (face East) + **3 along the SOUTH wall** (face North) — plus the **motion hero near the NORTH wall** beside the office, screens facing North (clearance ring + spot lighting; the Instagram magnet).
+- **8 rigs:** 7 static grouped — **4 along the WEST wall** + **3 along the SOUTH wall** — plus the **motion hero near the NORTH wall** beside the office. **All rigs face their wall** (triple screens against the wall, driver facing out, back to the room — open behind for spectating; clearance ring + spot lighting on the motion rig).
 - **East (entrance) wall, N→S:** office (NE) → reception + **small coffee counter behind it** (SuperLap-style) → entrance → **two washroom doors** (kept clear).
 - **Lounge/spectator** centre; **leaderboard** on the north wall; **perimeter windows** on the west and south walls (bright property).
 - **Look & feel from SuperLap:** woven pendant lamps over reception, warm light, cream walls + light carpet, brushed-steel reception counter, menu board, ceiling track lighting. Editorial: cream + RS Red + Montserrat + JetBrains Mono.
