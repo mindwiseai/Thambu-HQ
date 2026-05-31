@@ -11,7 +11,7 @@ updated: 2026-05-30
 
 **Tier 1 · 4 sessions × 1 hr · ₹8,000 · cohorts of 4–6**
 
-Takes a complete beginner to a competent, licence-ready driver. The entry point to [[racesims-the-ladder|The Ladder]] — completing it earns the **Initiation Licence** (lifetime, unlocks Championship eligibility and the Advanced tier). Runs the [[racesims-academy-curriculum|B·D·A·D session model]].
+Takes a complete beginner to a competent, licence-ready driver. The entry point to [[racesims-the-ladder|The Ladder]] — completing it earns the **Initiation Licence** (lifetime, unlocks Championship eligibility and the Advanced tier). Runs the [[racesims-academy-curriculum|APEX session model]].
 
 > Outcome promise: *"In four hours, you go from never having driven a real sim to holding a licence and a logged lap time you're proud of."*
 

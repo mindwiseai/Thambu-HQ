@@ -31,7 +31,7 @@ Each has a **bronze / silver / gold** standard. Gold ≈ instructor pace.
 
 ## Challenge Gates ("Ready to test yourself?")
 
-Each [[racesims-academy-curriculum|skill Level]] ends with a **Challenge Gate** — a pass/fail test the driver must clear before the next Level's coached sessions. This is the [[racesims-academy-curriculum|B·D·A·D]] assessment, made self-serve and repeatable.
+Each [[racesims-academy-curriculum|skill Level]] ends with a **Challenge Gate** — a pass/fail test the driver must clear before the next Level's coached sessions. This is the [[racesims-academy-curriculum|APEX]] assessment, made self-serve and repeatable.
 
 | Gate | Sits after | Pass condition |
 |------|-----------|----------------|

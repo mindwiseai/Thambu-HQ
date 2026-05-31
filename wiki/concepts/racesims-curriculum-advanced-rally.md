@@ -11,7 +11,7 @@ updated: 2026-05-30
 
 **Tier 2 · 10 sessions × 1 hr · ₹25,000 · requires Initiation Licence**
 
-Takes a licensed driver to competitive rally driver. Platforms: **Assetto Corsa Rally + Richard Burns Rally**. **ARKA-endorsed syllabus** — [[mr-leela-krishnan|Mr. Leelakrishnan]]'s 7× national-champion technique informs the stage craft. Runs the [[racesims-academy-curriculum|B·D·A·D model]].
+Takes a licensed driver to competitive rally driver. Platforms: **Assetto Corsa Rally + Richard Burns Rally**. **ARKA-endorsed syllabus** — [[mr-leela-krishnan|Mr. Leelakrishnan]]'s 7× national-champion technique informs the stage craft. Runs the [[racesims-academy-curriculum|APEX model]].
 
 > Two extra sessions vs Circuit because rally adds two whole skill domains the circuit never touches: **the loose surface** and **the pace-note system**.
 

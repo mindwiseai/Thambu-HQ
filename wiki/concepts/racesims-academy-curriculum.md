@@ -43,28 +43,28 @@ Rally runs the same Level spine with discipline-specific content (loose surface,
 
 ---
 
-## The session model — the B·D·A·D loop
+## The session model — the APEX loop
 
-Every Academy session, in every programme, follows the same four-beat shape. Coaches are trained to run it identically so the experience is consistent across the network.
+Every Academy session, in every programme, follows the same four-beat shape — **APEX**: *Aim · Practice · eXecute · eXamine*. Named for the point every corner (and every session) is built around. Coaches run it identically so the experience is consistent across the network.
 
 ```
 ┌──────────┬──────────┬──────────┬──────────┐
-│  BRIEF   │  DRILL   │  APPLY   │ DEBRIEF  │
+│   AIM    │ PRACTICE │ eXECUTE  │ eXAMINE  │
 │ ~10 min  │ ~20 min  │ ~25 min  │  ~5 min  │
 ├──────────┼──────────┼──────────┼──────────┤
-│ Teach    │ Isolate  │ Put it   │ Review   │
+│ Teach    │ Isolate  │ Put it   │ Read the │
 │ the one  │ the      │ in a     │ telemetry│
-│ concept  │ skill in │ full-lap │ vs the   │
-│ of the   │ a closed │ / stage  │ target.  │
-│ session  │ exercise │ context  │ Set next │
-│          │          │          │ goal.    │
+│ concept; │ skill in │ full-lap │ vs the   │
+│ show BAD │ a closed │ / stage  │ target.  │
+│ vs GOOD  │ exercise │ context  │ Log it;  │
+│          │          │          │ set next │
 └──────────┴──────────┴──────────┴──────────┘
 ```
 
-- **Brief** — one concept per session. Never more. Whiteboard + telemetry example.
-- **Drill** — the skill isolated from everything else (e.g. braking with no steering). Repetition builds the motor pattern.
-- **Apply** — the skill returned to a full lap or stage, under realistic conditions.
-- **Debrief** — coach + driver read the telemetry trace together against the session target. The next session's goal is set here.
+- **Aim** — one concept per session. Never more. Set the target; show the BAD vs GOOD on the whiteboard + a telemetry example.
+- **Practice** — the skill isolated from everything else (e.g. braking with no steering). Repetition builds the motor pattern.
+- **eXecute** — the skill returned to a full lap or stage, under realistic conditions.
+- **eXamine** — coach + driver read the telemetry trace together against the session target, log the number, and set the next session's goal here.
 
 ## Progression logic — earned, never given
 
@@ -155,7 +155,7 @@ These are the named concepts illustrated in the curriculum deck. Each is introdu
 
 ## Output artefacts
 
-- **Illustrated deck:** `racesims/marketing/decks/motorsport-academy-curriculum.html` + `.pdf` (21 slides — aspirational open, 9 custom-SVG concept diagrams, per-programme session detail). RaceSims editorial system (cream + RS Red + Montserrat + JetBrains Mono).
+- **Illustrated deck:** `racesims/marketing/decks/motorsport-academy-curriculum.html` + `.pdf` (28 slides — aspirational open, APEX session loop, skill ladder, Drill Library, 9 custom-SVG concept diagrams, per-programme detail, Racecraft + Challenges, and the delivery block: Workshop format · Driver Record + Coach Playbook · the retention loop). RaceSims editorial system (cream + RS Red + Montserrat + JetBrains Mono).
 
 ## Connections
 

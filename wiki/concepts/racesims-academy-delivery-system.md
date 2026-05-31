@@ -25,7 +25,7 @@ The **conduct layer** of the [[racesims-academy-curriculum|Academy]]. The curric
 
 ## Layer 1 — The Session Engine
 
-The atomic unit. [[racesims-academy-curriculum|B·D·A·D]] specified to the minute, with explicit coach actions. **Hard rule: one concept per session. Never two.**
+The atomic unit. The [[racesims-academy-curriculum|APEX loop]] — *Aim · Practice · eXecute · eXamine* — specified to the minute, with explicit coach actions. **Hard rule: one concept per session. Never two.**
 
 ### 60-minute private session
 
@@ -85,7 +85,7 @@ This is what makes progress *compound* across visits — and what makes RaceSims
 
 The scaling layer — turns "good coaching" into a repeatable system.
 
-- **Certification** — coaches are trained and signed off to deliver the B·D·A·D format and the drill library to standard before they run paying sessions.
+- **Certification** — coaches are trained and signed off to deliver the APEX format and the drill library to standard before they run paying sessions.
 - **Per-drill cues** — each [[racesims-drill-library|drill]] card carries: what to *say*, what to *read in the trace*, and the *common error* to catch. A new coach runs the same session a veteran does.
 - **The quality bar** (audit-able): *every session ends with a logged number; every driver leaves knowing their next gate.* If either is missing, the session wasn't delivered.
 

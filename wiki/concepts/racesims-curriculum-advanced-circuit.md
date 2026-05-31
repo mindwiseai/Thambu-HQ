@@ -11,7 +11,7 @@ updated: 2026-05-30
 
 **Tier 2 · 8 sessions × 1 hr · ₹20,000 · requires Initiation Licence**
 
-Takes a licensed driver to championship-competitive circuit racer. Platforms: **Le Mans Ultimate + iRacing**. Runs the [[racesims-academy-curriculum|B·D·A·D model]]; every session is telemetry-led and taught **mistake-first** (here's the common error → here's the correct technique).
+Takes a licensed driver to championship-competitive circuit racer. Platforms: **Le Mans Ultimate + iRacing**. Runs the [[racesims-academy-curriculum|APEX model]]; every session is telemetry-led and taught **mistake-first** (here's the common error → here's the correct technique).
 
 This is the **car-handling** half of being race-ready — mastering the car against the clock. Racing other people is the parallel [[racesims-curriculum-racecraft|Racecraft]] pillar.
 
