@@ -76,6 +76,20 @@ export function Nav() {
               </Link>
             );
           })}
+          <Link
+            href="/account"
+            aria-label="Driver account"
+            className={`flex h-9 w-9 items-center justify-center rounded-full border transition-colors ${
+              pathname.startsWith("/account") || pathname === "/login"
+                ? "border-flame text-flame"
+                : "border-line text-fog hover:border-fog-2 hover:text-foreground"
+            }`}
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="5" r="2.6" stroke="currentColor" strokeWidth="1.3" />
+              <path d="M2.5 13.5c0-2.6 2.5-4 5.5-4s5.5 1.4 5.5 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+            </svg>
+          </Link>
           <Link href="/configurator" className="btn btn-flame !py-2.5 !px-4 text-[0.7rem]">
             Build yours
           </Link>
@@ -119,6 +133,9 @@ export function Nav() {
                 </Link>
               );
             })}
+            <Link href="/account" className="flex items-center justify-between border-b border-line px-5 py-4 mono text-sm uppercase tracking-wider text-fog hover:text-foreground">
+              Driver Account<span className="text-flame">→</span>
+            </Link>
             <Link href="/configurator" className="block px-5 py-4 mono text-sm uppercase tracking-wider text-flame">
               Build yours →
             </Link>
