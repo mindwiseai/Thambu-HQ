@@ -180,6 +180,15 @@
   .assess .al { font-family: var(--mono); font-size: 10px; color: var(--rs-red); letter-spacing: 0.16em; margin-bottom: 4px; }
   .assess .at { font-size: 13px; color: var(--ink); line-height: 1.45; }
   .assess .at b { font-weight: 700; }
+  /* BAD vs GOOD (mistake-first teaching) */
+  .badgood { margin-top: 16px; display: grid; gap: 9px; }
+  .bg-row { display: flex; gap: 10px; align-items: flex-start; padding: 10px 13px; border-radius: 4px; font-size: 12.5px; line-height: 1.42; color: var(--ink-mid); }
+  .bg-bad { background: var(--rs-red-soft); border-left: 3px solid var(--rs-red); }
+  .bg-good { background: rgba(30,107,58,0.07); border-left: 3px solid var(--green); }
+  .bg-row .mk { font-family: var(--mono); font-weight: 700; font-size: 10px; letter-spacing: 0.1em; flex-shrink: 0; padding-top: 2px; width: 38px; }
+  .bg-bad .mk { color: var(--rs-red); }
+  .bg-good .mk { color: var(--green); }
+  .bg-row b { color: var(--ink); font-weight: 700; }
 
   /* generic two/three column text */
   .cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; flex: 1; align-content: start; }
@@ -192,6 +201,9 @@
   .close h1 { font-size: 60px; line-height: 1.02; letter-spacing: -0.035em; margin-bottom: 24px; }
   .close h1 .red { color: var(--rs-red); }
   .close .quote { font-size: 22px; color: var(--ink-mid); font-style: italic; line-height: 1.5; max-width: 760px; }
+  body{counter-reset:slide;}
+  .slide{counter-increment:slide;}
+  .slide-num::after{content:counter(slide,decimal-leading-zero);}
 </style>
 </head>
 <body>
@@ -199,7 +211,7 @@
 <!-- 1 · COVER -->
 <div class="slide">
   <div class="brand">RACESIMS · CHENNAI</div>
-  <span class="slide-num">01</span>
+  <span class="slide-num"></span>
   <div class="slide-inner cover">
     <span class="badge">THE MOTORSPORT ACADEMY</span>
     <h1>Drive it.<br>Train for it.<br><span class="red">Race for real.</span></h1>
@@ -214,7 +226,7 @@
 <!-- 2 · WHAT IT IS -->
 <div class="slide">
   <div class="brand">THE MOTORSPORT ACADEMY</div>
-  <span class="slide-num">02</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">What the Academy is</span>
     <h2>Not track time. <span class="italic">A pathway.</span></h2>
@@ -232,7 +244,7 @@
 <!-- 3 · THE JOURNEY -->
 <div class="slide">
   <div class="brand">THE MOTORSPORT ACADEMY</div>
-  <span class="slide-num">03</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The journey · one customer, five steps</span>
     <h2>From your first lap to <span class="italic">a real seat.</span></h2>
@@ -280,7 +292,7 @@
 <!-- 4 · HOW WE TEACH -->
 <div class="slide">
   <div class="brand">THE MOTORSPORT ACADEMY</div>
-  <span class="slide-num">04</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">How we teach · the same shape, every session</span>
     <h2>The <span class="italic">B·D·A·D</span> loop.</h2>
@@ -310,10 +322,34 @@
   </div>
 </div>
 
+<!-- NEW · THE SKILL LADDER -->
+<div class="slide">
+  <div class="brand">THE MOTORSPORT ACADEMY</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">How a driver is built</span>
+    <h2>The right order of <span class="italic">skills.</span></h2>
+    <p class="lead" style="max-width:900px;">The most common mistake is chasing lap time first. We teach the order that actually compounds — speed is the <em>output</em> of control and consistency, never the starting point.</p>
+    <div class="loop" style="grid-template-columns:repeat(3,1fr); margin-bottom:24px;">
+      <div class="loop-cell"><div class="step-n">FIRST</div><div class="step-t">Stay on track</div><div class="step-time">CONTROL &amp; SAFETY</div><div class="step-d">Car control before everything. You can't be fast off the road.</div><span class="conn">→</span></div>
+      <div class="loop-cell"><div class="step-n">THEN</div><div class="step-t">Be consistent</div><div class="step-time">REPEATABLE LAPS</div><div class="step-d">Hit the same marks every lap before you try to lower them.</div><span class="conn">→</span></div>
+      <div class="loop-cell"><div class="step-n">ONLY THEN</div><div class="step-t">Lower lap time</div><div class="step-time">FIND THE LIMIT</div><div class="step-d">Now push — speed built on a foundation that holds under pressure.</div></div>
+    </div>
+    <h3 style="margin-bottom:12px;">THE FOUR SKILL LEVELS</h3>
+    <div class="tiers" style="grid-template-columns:repeat(4,1fr); gap:14px;">
+      <div class="tier" style="padding:16px;"><div class="tn">LEVEL 1</div><div class="th" style="font-size:17px;">Consistency &amp; Confidence</div><div class="ts" style="margin:0;">stay on track · clean laps · feel the grip limit</div></div>
+      <div class="tier" style="padding:16px;"><div class="tn">LEVEL 2</div><div class="th" style="font-size:17px;">Balance &amp; Speed</div><div class="ts" style="margin:0;">weight transfer · trail braking · the limit</div></div>
+      <div class="tier" style="padding:16px;"><div class="tn">LEVEL 3</div><div class="th" style="font-size:17px;">Precision</div><div class="ts" style="margin:0;">brake bias · rotation · complex corners</div></div>
+      <div class="tier" style="padding:16px;"><div class="tn">LEVEL 4</div><div class="th" style="font-size:17px;">Mastery</div><div class="ts" style="margin:0;">active driving · tyres · setup · conditions</div></div>
+    </div>
+    <p class="muted" style="margin-top:16px; font-size:12.5px;">Initiation delivers Level 1. Advanced delivers Levels 2–4. Each Level ends with a Challenge Gate you must clear to progress.</p>
+  </div>
+</div>
+
 <!-- 5 · THE MENU -->
 <div class="slide">
   <div class="brand">THE MOTORSPORT ACADEMY</div>
-  <span class="slide-num">05</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The programmes at a glance</span>
     <h2>Three tiers. <span class="italic">One clear path.</span></h2>
@@ -348,7 +384,7 @@
 <!-- 6 · RACING LINE -->
 <div class="slide">
   <div class="brand">CONCEPTS · CIRCUIT</div>
-  <span class="slide-num">06</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The concepts · 01</span>
     <h2 style="margin-bottom:6px;">The Racing Line</h2>
@@ -371,12 +407,10 @@
       <div class="explain">
         <span class="taught-tag">TAUGHT · INITIATION S2</span>
         <p class="why"><b>The fastest way through a corner is rarely the shortest.</b> Enter wide, clip the inside at the apex, run wide again on exit — straightening the corner to carry more speed.</p>
-        <ul class="points">
-          <li><b>Out</b> — start at the outer edge to open the corner up</li>
-          <li><b>In</b> — touch the apex, the latest point you meet the inside</li>
-          <li><b>Out</b> — let the car run to the outer edge on exit</li>
-          <li>The dashed line hugs the inside — shorter, but <b>slower</b>: it forces a tighter, lower-speed arc</li>
-        </ul>
+        <div class="badgood">
+          <div class="bg-row bg-bad"><span class="mk">✗ BAD</span><span>Take the shortest path — hug the inside kerb the whole way through.</span></div>
+          <div class="bg-row bg-good"><span class="mk">✓ GOOD</span><span><b>Out–in–out:</b> wide entry, clip the apex, run wide on exit — the straightest, fastest arc.</span></div>
+        </div>
         <div class="legend">
           <span><i style="border-top:4px solid #C8102E;"></i>Racing line</span>
           <span><i style="border-top:2.5px dashed #A39C94;"></i>Slow / geometric line</span>
@@ -389,7 +423,7 @@
 <!-- 7 · BRAKING -->
 <div class="slide">
   <div class="brand">CONCEPTS · CIRCUIT</div>
-  <span class="slide-num">07</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The concepts · 02</span>
     <h2 style="margin-bottom:6px;">Braking — Points &amp; Threshold</h2>
@@ -420,12 +454,10 @@
       <div class="explain">
         <span class="taught-tag">TAUGHT · INITIATION S3</span>
         <p class="why"><b>Brake hard, brake late, brake at the same place every lap.</b> Pick a fixed reference — a board, a kerb — and hit the pedal there. Then brake as hard as the tyres allow, just short of locking.</p>
-        <ul class="points">
-          <li><b>Braking point</b> — a fixed marker you can repeat lap after lap</li>
-          <li><b>Threshold braking</b> — maximum deceleration right up to the edge of grip</li>
-          <li>Push past it and the wheels <b>lock</b> — you slide straight on, slower</li>
-          <li>The load-cell pedal teaches this by <b>force</b>, exactly like a real car</li>
-        </ul>
+        <div class="badgood">
+          <div class="bg-row bg-bad"><span class="mk">✗ BAD</span><span>Brake early and gently, coasting in — and braking in a different place each lap.</span></div>
+          <div class="bg-row bg-good"><span class="mk">✓ GOOD</span><span>Brake <b>late and hard to the threshold</b> at a fixed marker — max grip, no lock-up, repeatable.</span></div>
+        </div>
         <div class="legend">
           <span><i style="border-top:4px solid #C8102E;"></i>Speed</span>
           <span><i style="border-top:3px solid #4A4440;"></i>Brake input</span>
@@ -438,7 +470,7 @@
 <!-- 8 · TRAIL BRAKING -->
 <div class="slide">
   <div class="brand">CONCEPTS · CIRCUIT</div>
-  <span class="slide-num">08</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The concepts · 03</span>
     <h2 style="margin-bottom:6px;">Trail Braking</h2>
@@ -466,12 +498,10 @@
       <div class="explain">
         <span class="taught-tag">TAUGHT · ADVANCED S1</span>
         <p class="why"><b>Don't finish braking before you turn — overlap them.</b> Keep bleeding off the brake as you add steering lock. The load stays on the front tyres, they keep biting, and the car rotates into the apex.</p>
-        <ul class="points">
-          <li>Brake and steering inputs <b>overlap</b> through the entry</li>
-          <li>Trailing brake pressure keeps weight on the <b>front tyres</b> for grip</li>
-          <li>The car <b>rotates</b> — pointing at the apex instead of running wide</li>
-          <li>The single biggest pace gain past beginner level</li>
-        </ul>
+        <div class="badgood">
+          <div class="bg-row bg-bad"><span class="mk">✗ BAD</span><span>Finish all braking in a straight line, then turn — the car won't rotate and runs wide.</span></div>
+          <div class="bg-row bg-good"><span class="mk">✓ GOOD</span><span><b>Bleed the brake as you add lock</b> — weight stays on the front tyres and the car rotates to the apex.</span></div>
+        </div>
         <div class="legend">
           <span><i style="border-top:3.5px solid #4A4440;"></i>Brake pressure</span>
           <span><i style="border-top:4px solid #C8102E;"></i>Steering angle</span>
@@ -484,7 +514,7 @@
 <!-- 9 · THROTTLE & EXIT -->
 <div class="slide">
   <div class="brand">CONCEPTS · CIRCUIT</div>
-  <span class="slide-num">09</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The concepts · 04</span>
     <h2 style="margin-bottom:6px;">Throttle &amp; Corner Exit</h2>
@@ -508,12 +538,10 @@
       <div class="explain">
         <span class="taught-tag">TAUGHT · ADVANCED S2</span>
         <p class="why"><b>Slow in, fast out.</b> Sacrifice a little entry speed for a later apex. It points the car straight earlier, so you can get on the throttle sooner — and that speed multiplies all the way down the next straight.</p>
-        <ul class="points">
-          <li>A <b>later apex</b> opens the exit and straightens the car</li>
-          <li>Get to <b>full throttle</b> earlier, feeding power to the grip limit</li>
-          <li>Exit speed carries down the <b>entire straight</b> — worth far more than entry</li>
-          <li>The dashed early-apex line looks fast on entry but runs wide and bogs the exit</li>
-        </ul>
+        <div class="badgood">
+          <div class="bg-row bg-bad"><span class="mk">✗ BAD</span><span>Apex early and floor it — the car runs wide on exit and you have to lift.</span></div>
+          <div class="bg-row bg-good"><span class="mk">✓ GOOD</span><span><b>Slow in, fast out:</b> a later apex straightens the exit, so you get on power early and carry speed down the straight.</span></div>
+        </div>
         <div class="legend">
           <span><i style="border-top:4px solid #C8102E;"></i>Fast out (late apex)</span>
           <span><i style="border-top:2.5px dashed #A39C94;"></i>Slow out (early apex)</span>
@@ -526,7 +554,7 @@
 <!-- 10 · UNDERSTEER / OVERSTEER -->
 <div class="slide">
   <div class="brand">CONCEPTS · CIRCUIT</div>
-  <span class="slide-num">10</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The concepts · 05</span>
     <h2 style="margin-bottom:6px;">Understeer vs Oversteer</h2>
@@ -569,12 +597,10 @@
       <div class="explain">
         <span class="taught-tag">TAUGHT · ADVANCED S4</span>
         <p class="why"><b>Every car has a balance — and you can read it, then change it.</b> Understeer is the front giving up first; oversteer is the rear. Knowing which you have tells you how to drive it, and which setup knob to turn.</p>
-        <ul class="points">
-          <li><b>Understeer</b> — nose pushes wide; ease off, or add front grip</li>
-          <li><b>Oversteer</b> — rear slides; catch it with steering + throttle</li>
-          <li>Setup shifts the balance: tyre pressures, anti-roll bars, wing, diff</li>
-          <li>Advanced teaches you to <b>dial out a problem</b> — Tuner Lab makes you an engineer</li>
-        </ul>
+        <div class="badgood">
+          <div class="bg-row bg-bad"><span class="mk">✗ BAD</span><span>Fight every slide with more steering and hope it sticks.</span></div>
+          <div class="bg-row bg-good"><span class="mk">✓ GOOD</span><span><b>Read which end let go</b> — front (understeer) or rear (oversteer) — then fix it with line, inputs, or setup.</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -583,7 +609,7 @@
 <!-- 11 · OVERTAKING -->
 <div class="slide">
   <div class="brand">CONCEPTS · RACECRAFT</div>
-  <span class="slide-num">11</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The concepts · 06</span>
     <h2 style="margin-bottom:6px;">Overtaking — The Switchback</h2>
@@ -618,12 +644,10 @@
       <div class="explain">
         <span class="taught-tag">TAUGHT · ADVANCED S5</span>
         <p class="why"><b>The best pass often happens on the way out, not the way in.</b> Sacrifice the entry, let the defender take the normal line, then cut back underneath for a far better drive onto the next straight.</p>
-        <ul class="points">
-          <li><b>1 · Sacrifice entry</b> — go in deeper and wider, off the normal line</li>
-          <li><b>2 · Cut back</b> — rotate behind the defender toward the apex</li>
-          <li><b>3 · Better exit</b> — superior drive lets you complete the pass cleanly</li>
-          <li>Also taught: the late-brake, the undercut, and racing etiquette — one move, leave space</li>
-        </ul>
+        <div class="badgood">
+          <div class="bg-row bg-bad"><span class="mk">✗ BAD</span><span>Send it down the inside and out-brake yourself — you both lose.</span></div>
+          <div class="bg-row bg-good"><span class="mk">✓ GOOD</span><span><b>Sacrifice the entry, cut back</b> behind them, and pass on the better exit onto the straight.</span></div>
+        </div>
         <div class="legend">
           <span><i style="border-top:4.5px solid #C8102E;"></i>Attacker</span>
           <span><i style="border-top:3.5px solid #4A4440;"></i>Defender</span>
@@ -636,7 +660,7 @@
 <!-- 12 · SCANDINAVIAN FLICK -->
 <div class="slide">
   <div class="brand">CONCEPTS · RALLY</div>
-  <span class="slide-num">12</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The concepts · 07 · rally</span>
     <h2 style="margin-bottom:6px;">The Scandinavian Flick</h2>
@@ -664,12 +688,10 @@
       <div class="explain">
         <span class="taught-tag">TAUGHT · RALLY S2</span>
         <p class="why"><b>On a loose surface, you steer with weight, not just the wheel.</b> A quick flick away from the corner loads the outside tyres — then releasing it swings the car like a pendulum, rotating it into the turn before you've even reached it.</p>
-        <ul class="points">
-          <li><b>1 · Flick away</b> — a deliberate jab toward the outside</li>
-          <li><b>2 · Weight transfers</b> — load swings, the rear goes light</li>
-          <li><b>3 · Rotate &amp; power</b> — the car pivots; you're already pointed at the exit</li>
-          <li>Pairs with <b>trailing-throttle oversteer</b> — lifting to rotate, not braking</li>
-        </ul>
+        <div class="badgood">
+          <div class="bg-row bg-bad"><span class="mk">✗ BAD</span><span>Just yank the wheel into the corner on gravel — the car pushes straight on.</span></div>
+          <div class="bg-row bg-good"><span class="mk">✓ GOOD</span><span><b>Flick away first,</b> then back in — the weight transfer rotates the car into the corner for you.</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -678,7 +700,7 @@
 <!-- 13 · PACE NOTES -->
 <div class="slide">
   <div class="brand">CONCEPTS · RALLY</div>
-  <span class="slide-num">13</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The concepts · 08 · rally</span>
     <h2 style="margin-bottom:6px;">Pace Notes</h2>
@@ -709,12 +731,10 @@
       <div class="explain">
         <span class="taught-tag">TAUGHT · RALLY S4–S5</span>
         <p class="why"><b>A rally driver races a road they've never seen — read to them, in code, by a co-driver.</b> Pace notes describe every corner before it arrives: how sharp, how far, what's hiding over the crest.</p>
-        <ul class="points">
-          <li><b>Number</b> — corner severity, 1 (hairpin) to 6 (flat-out)</li>
-          <li><b>Distance</b> — metres to the next call ("100")</li>
-          <li><b>Links &amp; modifiers</b> — "into", "tightens", "opens", "don't cut", "crest"</li>
-          <li>The skill is <b>rhythm and trust</b> — the call lands exactly when you need it</li>
-        </ul>
+        <div class="badgood">
+          <div class="bg-row bg-bad"><span class="mk">✗ BAD</span><span>Drive only what you can see — always reacting late to the next corner.</span></div>
+          <div class="bg-row bg-good"><span class="mk">✓ GOOD</span><span><b>Drive the note:</b> the co-driver calls the corner — severity, distance, hazards — before you see it.</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -723,7 +743,7 @@
 <!-- 14 · WEIGHT TRANSFER -->
 <div class="slide">
   <div class="brand">CONCEPTS · ENGINEERING</div>
-  <span class="slide-num">14</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The concepts · 09 · engineering</span>
     <h2 style="margin-bottom:6px;">Weight Transfer &amp; The Contact Patch</h2>
@@ -754,12 +774,10 @@
       <div class="explain">
         <span class="taught-tag">TAUGHT · TUNER LAB + EVERYWHERE</span>
         <p class="why"><b>Grip follows load.</b> Brake, and weight pitches onto the front tyres — their contact patch grows and they grip harder, while the rears go light. Every input you make moves weight, and weight is grip. This is the idea behind <em>all</em> of car control.</p>
-        <ul class="points">
-          <li>The <b>contact patch</b> — palm-sized — is all that connects car to road</li>
-          <li>Brake → load forward (front grip up). Accelerate → load rear. Turn → load outside</li>
-          <li><b>Trail braking</b> and the <b>Scandinavian flick</b> are just weight transfer, used deliberately</li>
-          <li>Tuner Lab turns this instinct into setup: springs, dampers, bars, pressures</li>
-        </ul>
+        <div class="badgood">
+          <div class="bg-row bg-bad"><span class="mk">✗ BAD</span><span>Stab the brake or throttle mid-corner — the sudden load change unsettles the car.</span></div>
+          <div class="bg-row bg-good"><span class="mk">✓ GOOD</span><span><b>Move weight smoothly</b> — load the tyre you need to grip: brake loads the front, throttle the rear, turning the outside.</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -768,7 +786,7 @@
 <!-- 15 · INITIATION CURRICULUM -->
 <div class="slide">
   <div class="brand">CURRICULUM · TIER 1</div>
-  <span class="slide-num">15</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The curriculum · session by session</span>
     <div class="prog-head">
@@ -791,7 +809,7 @@
 <!-- 16 · ADVANCED CIRCUIT -->
 <div class="slide">
   <div class="brand">CURRICULUM · TIER 2 · CIRCUIT</div>
-  <span class="slide-num">16</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The curriculum · session by session</span>
     <div class="prog-head">
@@ -822,7 +840,7 @@
 <!-- 17 · ADVANCED RALLY -->
 <div class="slide">
   <div class="brand">CURRICULUM · TIER 2 · RALLY</div>
-  <span class="slide-num">17</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The curriculum · session by session · ARKA-endorsed</span>
     <div class="prog-head">
@@ -855,7 +873,7 @@
 <!-- 18 · SIM + REALITY -->
 <div class="slide">
   <div class="brand">CURRICULUM · TIER 3</div>
-  <span class="slide-num">18</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">The curriculum · the pinnacle</span>
     <div class="prog-head">
@@ -877,7 +895,7 @@
 <!-- 19 · TRACK DAY -->
 <div class="slide">
   <div class="brand">CURRICULUM · SEPARATE · HNI</div>
-  <span class="slide-num">19</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">Outside the Academy path · Chennai-specific</span>
     <h2 style="margin-bottom:4px;">Track Day Programmes</h2>
@@ -906,7 +924,7 @@
 <!-- 20 · TUNER LAB -->
 <div class="slide">
   <div class="brand">CURRICULUM · SEPARATE · CORPORATE</div>
-  <span class="slide-num">20</span>
+  <span class="slide-num"></span>
   <div class="slide-inner">
     <span class="eyebrow">Outside the Academy path · corporate &amp; engineering</span>
     <div class="prog-head">
@@ -934,10 +952,60 @@
   </div>
 </div>
 
+<!-- NEW · RACECRAFT PILLAR -->
+<div class="slide">
+  <div class="brand">THE MOTORSPORT ACADEMY</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">The other half of fast · COMPETE</span>
+    <h2>Beating the clock is <span class="italic">half of it.</span></h2>
+    <p class="lead" style="max-width:900px;">Car handling makes you fast alone. <b>Racecraft</b> is racing other people — and it's what actually wins Live Races and unlocks the real seat. Taught through Championship weekends and ARKA pro masterclasses.</p>
+    <div class="tiers" style="grid-template-columns:repeat(4,1fr); gap:14px; margin-top:6px;">
+      <div class="tier"><div class="tn">01</div><div class="th" style="font-size:18px;">Foundations</div><ul><li>The rules of racing</li><li>Awareness &amp; patience</li><li>Win the exit, not the ego</li></ul></div>
+      <div class="tier"><div class="tn">02</div><div class="th" style="font-size:18px;">Battle Dynamics</div><ul><li>Switchback &amp; divebomb</li><li>The squeeze · multi-car</li><li>Drafting &amp; dirty air</li></ul></div>
+      <div class="tier"><div class="tn">03</div><div class="th" style="font-size:18px;">Strategies</div><ul><li>Race starts &amp; Turn 1</li><li>Tyre &amp; fuel over a race</li><li>Quali vs race pace</li></ul></div>
+      <div class="tier"><div class="tn">04</div><div class="th" style="font-size:18px;">Psychology</div><ul><li>Commitment</li><li>Assertive, not aggressive</li><li>Composure · the long game</li></ul></div>
+    </div>
+    <p class="muted" style="margin-top:18px; font-size:12.5px;">Most academies skip the mental game. We don't — the prepared, composed driver is the one who finishes.</p>
+  </div>
+</div>
+
+<!-- NEW · CHALLENGES & TRAINERS -->
+<div class="slide">
+  <div class="brand">THE MOTORSPORT ACADEMY</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">Between the coaching</span>
+    <h2>Something to <span class="italic">beat,</span> every visit.</h2>
+    <p class="lead" style="max-width:900px;">Coaching is rare; practice is constant. Self-serve, auto-scored trainers and challenge gates keep drivers sharpening between sessions — and gate the climb up the Levels.</p>
+    <div class="concept" style="grid-template-columns:1fr 1fr; gap:40px; align-items:start; margin-top:10px;">
+      <div>
+        <h3 style="margin-bottom:10px;">PRACTICE TRAINERS</h3>
+        <div class="sessions">
+          <div class="srow"><div class="sn" style="width:24px;">▸</div><div class="st" style="width:150px;">Brake Precision</div><div class="sd">Stop in a shrinking box without locking — accuracy + repeatability.</div></div>
+          <div class="srow"><div class="sn" style="width:24px;">▸</div><div class="st" style="width:150px;">Race Start</div><div class="sd">Reaction time + a clean run to Turn 1 vs AI.</div></div>
+          <div class="srow"><div class="sn" style="width:24px;">▸</div><div class="st" style="width:150px;">Consistency</div><div class="sd">Scored on lap-time spread, not outright pace.</div></div>
+          <div class="srow"><div class="sn" style="width:24px;">▸</div><div class="st" style="width:150px;">Limit Drill</div><div class="sd">Percentage of the lap held at optimal slip.</div></div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:10px;">CHALLENGE GATES</h3>
+        <div class="sessions">
+          <div class="srow"><div class="sn" style="width:24px;">L1</div><div class="st" style="width:150px;">Licence Lap</div><div class="sd">Beat the benchmark → Initiation Licence.</div></div>
+          <div class="srow"><div class="sn" style="width:24px;">L2</div><div class="st" style="width:150px;">Consistency Gate</div><div class="sd">5 laps inside a tight delta window.</div></div>
+          <div class="srow"><div class="sn" style="width:24px;">L3</div><div class="st" style="width:150px;">Precision Gate</div><div class="sd">Hit apex + braking targets across a lap.</div></div>
+          <div class="srow"><div class="sn" style="width:24px;">L4</div><div class="st" style="width:150px;">Limit Gate</div><div class="sd">Beat the Gold Standard → Championship-ready.</div></div>
+        </div>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:16px; font-size:12.5px;">Bronze / silver / gold standards · auto-scored by VMS · posted to the lounge leaderboard. Fail a gate, you repeat — that's what makes the certificate mean something.</p>
+  </div>
+</div>
+
 <!-- 21 · CLOSE -->
 <div class="slide">
   <div class="brand">THE MOTORSPORT ACADEMY</div>
-  <span class="slide-num">21</span>
+  <span class="slide-num"></span>
   <div class="slide-inner close">
     <span class="eyebrow">The pathway, in three words</span>
     <h1>Drive it. Train for it.<br><span class="red">Race for real.</span></h1>
