@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>RaceSims · Chennai — Corsair Partnership Proposal</title>
+<meta name="viewport" content="width=1280" />
+<style>
+  :root {
+    --black:    #16130e;   /* Corsair near-black */
+    --black-2:  #211d16;
+    --cream:    #F4EFE3;   /* light slide bg */
+    --cream-2:  #EAE3D4;
+    --ink:      #16130e;
+    --ink-mid:  #3A3528;
+    --ink-mut:  #6E665729;
+    --muted-d:  #CFC7B8;   /* muted text on dark */
+    --red:      #D81E33;   /* RaceSims red */
+    --yellow:   #FFD200;   /* Corsair yellow */
+    --rule-d:   #34302820;
+    --sans: 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+  }
+  @page { size: 1280px 720px; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #2a2620; font-family: var(--sans); color: var(--ink);
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  body { padding: 32px 0; }
+  .slide {
+    width: 1280px; height: 720px; margin: 0 auto 32px;
+    background: var(--cream); position: relative; overflow: hidden;
+    page-break-after: always; page-break-inside: avoid; break-inside: avoid;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.28);
+  }
+  .slide.dark { background: var(--black); color: var(--cream); }
+  .slide.red  { background: var(--red);   color: #fff; }
+  .slide:last-child { page-break-after: auto; margin-bottom: 0; }
+  @media print { html,body{background:#fff;} body{padding:0;margin:0;} .slide{margin:0 auto;box-shadow:none;} }
+  .inner { padding: 56px 64px; height: 100%; display: flex; flex-direction: column; position: relative; z-index: 2; }
+  .inner:not(.cover):not(.close) { padding-top: 90px; }   /* clear the corner lockups */
+
+  /* ---- Corsair logo + co-brand lockup ---- */
+  .sails { display:block; }
+  .sails path { fill: var(--logo, #16130e); }
+  .lockup { position: absolute; top: 44px; right: 64px; display: flex; align-items: center; gap: 12px; z-index: 4; }
+  .lockup .wm { font-weight: 700; letter-spacing: .26em; font-size: 17px; }
+  /* RaceSims wordmark — opposite corner (top-left) */
+  .rs-lockup { position: absolute; top: 42px; left: 64px; display: flex; align-items: center; gap: 9px; z-index: 4; }
+  .rs-lockup .rs-tick { width: 5px; height: 19px; border-radius: 1px; display: inline-block; }
+  .rs-lockup .rs-wm { font-weight: 800; letter-spacing: -0.01em; font-size: 19px; }
+  .slide:not(.dark):not(.red) .rs-lockup .rs-wm { color: #16130e; }
+  .slide:not(.dark):not(.red) .rs-lockup .rs-tick { background: var(--red); }
+  .slide.dark .rs-lockup .rs-wm { color: #F4EFE3; }
+  .slide.dark .rs-lockup .rs-tick { background: var(--yellow); }
+  .slide.red  .rs-lockup .rs-wm { color: #fff; }
+  .slide.red  .rs-lockup .rs-tick { background: #16130e; }
+  .slide:not(.dark):not(.red) .lockup { --logo:#16130e; } .slide:not(.dark):not(.red) .lockup .wm{ color:#16130e; }
+  .slide.dark .lockup { --logo:#FFD200; } .slide.dark .lockup .wm{ color:#F4EFE3; }
+  .slide.red  .lockup { --logo:#fff; }    .slide.red  .lockup .wm{ color:#fff; }
+
+  /* faint sails watermark, bottom-right */
+  .watermark { position:absolute; right:-60px; bottom:-90px; width:520px; height:520px; z-index:1; pointer-events:none; }
+  .watermark path { fill: rgba(22,19,14,0.05); }
+  .slide.red .watermark path { fill: rgba(255,255,255,0.09); }
+
+  /* ---- type ---- */
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .26em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
+  .slide.dark .eyebrow, .slide.red .eyebrow { color: var(--yellow); }
+  h1 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.02; }
+  h2 { font-size: 46px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.04; margin-bottom: 18px; }
+  .hl { color: var(--yellow); }
+  .red-t { color: var(--red); }
+  p { font-size: 19px; line-height: 1.5; color: var(--ink-mid); }
+  .slide.dark p, .slide.red p { color: var(--muted-d); }
+  p.lead { font-size: 21px; max-width: 940px; color: #2c2820; }
+  .slide.red p.lead { color: #fff; }
+  b { font-weight: 700; color: var(--ink); } .slide.dark b{color:#fff;} .slide.red b{color:#fff;}
+
+  /* ---- cover ---- */
+  .cover { justify-content: center; }
+  .cover .pp { color: var(--yellow); font-weight:700; letter-spacing:.26em; font-size:13px; text-transform:uppercase; margin-bottom:22px; }
+  .cover h1 { font-size: 82px; }
+  .cover h1 .dot { color: var(--cream); } .cover h1 .chennai { color: var(--red); }
+  .cover .teaming { color: var(--muted-d); font-weight:700; font-size:17px; margin-top:18px; letter-spacing:.02em; }
+  .cover-logo { position:absolute; right:96px; top:50%; transform:translateY(-46%); text-align:center; z-index:3; }
+  .cover-logo .sails path{ fill:var(--yellow); }
+  .cover-logo .wm { color:#F4EFE3; font-weight:700; letter-spacing:.22em; font-size:34px; margin-top:8px; }
+  .footer-band { position:absolute; left:0; right:0; bottom:0; background:var(--yellow); padding:22px 64px; z-index:3; }
+  .footer-band .l1 { color:#16130e; font-weight:700; font-size:19px; }
+  .footer-band .l2 { color:#16130e; font-weight:700; font-size:12.5px; letter-spacing:.04em; opacity:.85; margin-top:3px; }
+
+  /* ---- stat cards (dark on cream) ---- */
+  .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:auto; }
+  .stat { background:var(--black); border-radius:8px; padding:22px 22px 20px; }
+  .stat .v { color:var(--yellow); font-weight:700; font-size:42px; letter-spacing:-0.02em; line-height:1; margin-bottom:10px; }
+  .stat .v.sm { font-size:26px; }
+  .stat .n { color:var(--muted-d); font-size:13.5px; line-height:1.4; font-weight:500; }
+
+  /* ---- checklist ---- */
+  .checks { list-style:none; padding:0; margin-top:6px; }
+  .checks li { position:relative; padding:0 0 18px 40px; font-size:19px; line-height:1.45; color:#2c2820; }
+  .checks li::before { content:""; position:absolute; left:0; top:3px; width:18px; height:18px; background:var(--yellow); border-radius:3px; }
+  .pillars { color:var(--red); font-weight:700; font-size:22px; margin-top:10px; }
+
+  /* ---- two-up cards (cream) ---- */
+  .twoup { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:26px; }
+  .ucard { background:var(--black); border-radius:9px; padding:26px 28px; }
+  .ucard h3 { color:var(--yellow); font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; margin-bottom:12px; }
+  .ucard p { color:var(--muted-d); font-size:16px; line-height:1.55; }
+  .ucard b { color:#fff; }
+  .band { margin-top:22px; background:rgba(216,30,51,0.08); border-left:4px solid var(--red); border-radius:4px; padding:18px 24px; }
+  .band p { color:#2c2820; font-size:17px; line-height:1.5; }
+
+  /* ---- division cards (red ask slide) ---- */
+  .divs { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:10px; }
+  .dcard { background:var(--black); border-radius:10px; padding:30px 30px 26px; display:flex; flex-direction:column; }
+  .dcard .who { color:var(--muted-d); font-weight:700; font-size:12px; letter-spacing:.18em; text-transform:uppercase; margin-bottom:8px; }
+  .dcard .what { color:#fff; font-weight:700; font-size:30px; letter-spacing:-0.01em; margin-bottom:8px; }
+  .dcard .desc { color:var(--muted-d); font-size:15px; line-height:1.5; min-height:48px; margin-bottom:20px; }
+  .dcard .num { color:var(--yellow); font-weight:700; font-size:62px; letter-spacing:-0.03em; line-height:.9; }
+  .dcard .sub { color:var(--muted-d); font-size:12px; letter-spacing:.12em; margin-top:10px; font-weight:600; }
+  .totalbar { margin-top:22px; display:flex; align-items:center; justify-content:space-between;
+              background:var(--yellow); border-radius:10px; padding:20px 30px; }
+  .totalbar .lab { color:#16130e; font-weight:700; font-size:15px; letter-spacing:.06em; text-transform:uppercase; }
+  .totalbar .amt { color:#16130e; font-weight:700; font-size:40px; letter-spacing:-0.02em; }
+
+  /* ---- breakdown tables (cream) ---- */
+  .tables { display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-top:8px; align-items:start; }
+  .tbl-h { font-weight:700; font-size:13px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:12px; }
+  .tbl-h.c { color:#16130e; } .tbl-h.f { color:var(--red); }
+  table { width:100%; border-collapse:collapse; }
+  th { text-align:left; font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--red);
+       padding:8px 8px; border-bottom:2px solid var(--red); }
+  th.r, td.r { text-align:right; }
+  td { padding:7px 8px; font-size:13.5px; color:#2c2820; border-bottom:1px solid rgba(22,19,14,0.10); }
+  td.r { font-variant-numeric:tabular-nums; }
+  tr.total td { font-weight:700; color:#16130e; background:var(--yellow); border-bottom:none; padding-top:10px; padding-bottom:10px; }
+  tr.total td.r { color:#16130e; }
+  .fineprint { font-size:11px; line-height:1.6; color:#6b6354; margin-top:18px; }
+
+  /* close slide */
+  .close h1 { font-size:64px; color:var(--cream); }
+  .close h1 .hl { color:var(--yellow); }
+  .close .sub2 { color:var(--muted-d); font-size:20px; max-width:820px; margin-top:18px; line-height:1.5; }
+  .close .siglogo { margin-top:34px; display:flex; align-items:center; gap:14px; }
+  .close .siglogo .sails path{ fill:var(--yellow); } .close .siglogo .wm{ color:#F4EFE3; font-weight:700; letter-spacing:.22em; font-size:24px; }
+</style>
+</head>
+<body>
+
+<!-- reusable logo path is inlined per use; viewBox 0 0 24.5 24 -->
+
+<!-- ===== 1 · COVER ===== -->
+<div class="slide dark">
+  <div class="inner cover">
+    <div class="pp">A PARTNERSHIP PROPOSAL</div>
+    <h1>RaceSims <span class="dot">·</span> <span class="chennai">Chennai</span></h1>
+    <div class="teaming">teaming up with</div>
+  </div>
+  <div class="cover-logo">
+    <svg class="sails" width="230" height="225" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg>
+    <div class="wm">CORSAIR</div>
+  </div>
+  <div class="footer-band">
+    <div class="l1">India's first real motorsport sim-racing centre &nbsp;·&nbsp; Nungambakkam, Chennai</div>
+    <div class="l2">RACESIMS SOLUTIONS PVT LTD · OPENING JULY 2026 · DRIVE · TRAIN · COMPETE</div>
+  </div>
+</div>
+
+<!-- ===== 2 · WHAT WE'RE BUILDING ===== -->
+<div class="slide">
+  <div class="rs-lockup"><span class="rs-tick"></span><span class="rs-wm">RaceSims</span></div>
+  <div class="lockup"><svg class="sails" width="34" height="33" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg><span class="wm">CORSAIR</span></div>
+  <svg class="watermark" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg>
+  <div class="inner">
+    <div class="eyebrow">First — what we're building</div>
+    <h2>It's not a gaming café.<br>It's a real <span class="hl">motorsport centre.</span></h2>
+    <p class="lead">Eight pro racing rigs — one on a full 3-DOF motion platform — right in the middle of Nungambakkam. And it's run by the people behind <b>ARKA Motorsports</b>, a championship-winning race team with <b>130+ national titles</b>. This isn't a screen in a mall. It's the real thing, built by racers.</p>
+    <div class="stats">
+      <div class="stat"><div class="v">8</div><div class="n">pro rigs + a 3-DOF motion sim</div></div>
+      <div class="stat"><div class="v">130+</div><div class="n">ARKA national titles behind it</div></div>
+      <div class="stat"><div class="v">1st</div><div class="n">of its kind in India</div></div>
+      <div class="stat"><div class="v sm">Nungambakkam</div><div class="n">heart of central Chennai</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3 · THE JOURNEY ===== -->
+<div class="slide">
+  <div class="rs-lockup"><span class="rs-tick"></span><span class="rs-wm">RaceSims</span></div>
+  <div class="lockup"><svg class="sails" width="34" height="33" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg><span class="wm">CORSAIR</span></div>
+  <svg class="watermark" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg>
+  <div class="inner">
+    <div class="eyebrow">And there's a lot more than racing</div>
+    <h2>It's a whole <span class="hl">journey</span> under one roof.</h2>
+    <ul class="checks">
+      <li>People don't just drop in to drive — they come to learn. Our <b>Motorsport Academy</b> takes them from their very first lap to a real race car: sim mornings, real-track afternoons with ARKA.</li>
+      <li>We run our own championships and weekly hot-lap battles that keep people coming back.</li>
+      <li>And the best of them climb <b>the Ladder</b> — straight into actual race seats. This is where India's next drivers will start.</li>
+    </ul>
+    <div class="pillars">Drive. Train. Compete. All in one place — for the first time in India.</div>
+  </div>
+</div>
+
+<!-- ===== 4 · THE CROWD ===== -->
+<div class="slide">
+  <div class="rs-lockup"><span class="rs-tick"></span><span class="rs-wm">RaceSims</span></div>
+  <div class="lockup"><svg class="sails" width="34" height="33" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg><span class="wm">CORSAIR</span></div>
+  <svg class="watermark" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg>
+  <div class="inner">
+    <div class="eyebrow">And look who's walking in</div>
+    <h2>The right crowd, <span class="hl">every single day.</span></h2>
+    <p class="lead">A Nungambakkam address puts us in front of exactly the people every brand wants to reach:</p>
+    <ul class="checks" style="margin-top:22px; columns:2; column-gap:60px;">
+      <li>HNIs &amp; families</li>
+      <li>Corporates &amp; team days</li>
+      <li>Celebrities &amp; influencers</li>
+      <li>Motorsport fans</li>
+      <li>Young aspiring drivers</li>
+      <li>Gamers &amp; esports</li>
+    </ul>
+    <div class="pillars" style="margin-top:14px;">Every one of them is someone you'd want holding your gear — and posting about it.</div>
+  </div>
+</div>
+
+<!-- ===== 5 · WHERE YOU COME IN ===== -->
+<div class="slide">
+  <div class="rs-lockup"><span class="rs-tick"></span><span class="rs-wm">RaceSims</span></div>
+  <div class="lockup"><svg class="sails" width="34" height="33" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg><span class="wm">CORSAIR</span></div>
+  <div class="inner">
+    <div class="eyebrow">Now — here's where you come in</div>
+    <h2>One group. <span class="hl">Two halves of the same cockpit.</span></h2>
+    <p class="lead">Since 2024, Corsair owns <b>Fanatec</b> too — so between you, you make almost the entire rig. We've kept the two businesses separate on purpose, so each team sees exactly what it's putting in:</p>
+    <div class="twoup">
+      <div class="ucard"><h3>Corsair — the PC</h3><p>You're already half the build: <b>memory, storage, cooling, power, cases and headsets</b> across all eight race PCs. The machines every lap runs on.</p></div>
+      <div class="ucard"><h3>Fanatec — the cockpit</h3><p>Now the part people actually touch: <b>wheelbases, wheels, pedals and the full cockpit</b> on our featured rigs. The kit they fall in love with.</p></div>
+    </div>
+    <div class="band"><p><b>And here's where you show up:</b> <b>Corsair on all 8 rigs</b>, the leaderboard wall and the front door · <b>Fanatec on the 2 featured rigs it powers</b> · a branded Corsair + Fanatec zone with your gear on show · and every video, championship and event we run — all carrying you.</p></div>
+  </div>
+</div>
+
+<!-- ===== 6 · TWO BUSINESSES, TWO NUMBERS (red ask) ===== -->
+<div class="slide red">
+  <div class="rs-lockup"><span class="rs-tick"></span><span class="rs-wm">RaceSims</span></div>
+  <div class="lockup"><svg class="sails" width="34" height="33" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg><span class="wm">CORSAIR</span></div>
+  <svg class="watermark" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg>
+  <div class="inner">
+    <div class="eyebrow">So here's the ask</div>
+    <h2>Same group. <span class="hl">Two separate asks.</span></h2>
+    <p class="lead" style="margin-bottom:6px;">Corsair and Fanatec run as different companies — so we've costed them apart. Each team has its own budget line; neither carries the other's.</p>
+    <div class="divs">
+      <div class="dcard">
+        <div class="who">Division 01 · The PC</div>
+        <div class="what">Corsair</div>
+        <div class="desc">RAM, storage, cooling, power, cases &amp; headsets across all <b>8 race PCs</b>.</div>
+        <div class="num">₹7.1 L</div>
+        <div class="sub">8 RIGS · CORSAIR PARTS IN THE BUILD QUOTE</div>
+      </div>
+      <div class="dcard">
+        <div class="who">Division 02 · The Cockpit</div>
+        <div class="what">Fanatec</div>
+        <div class="desc">Complete wheel, pedal, base &amp; cockpit on our <b>2 featured rigs</b>.</div>
+        <div class="num">₹11.5 L</div>
+        <div class="sub">2 FEATURED RIGS · FULL FANATEC COCKPITS</div>
+      </div>
+    </div>
+    <div class="totalbar"><span class="lab">Total partnership value — what we're asking the group to cover</span><span class="amt">₹18.7 L</span></div>
+  </div>
+</div>
+
+<!-- ===== 7 · THE BREAKDOWN ===== -->
+<div class="slide">
+  <div class="rs-lockup"><span class="rs-tick"></span><span class="rs-wm">RaceSims</span></div>
+  <div class="lockup"><svg class="sails" width="34" height="33" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg><span class="wm">CORSAIR</span></div>
+  <div class="inner">
+    <div class="eyebrow">Exactly what we're asking for</div>
+    <h2>The parts list, <span class="hl">line by line.</span></h2>
+    <div class="tables">
+      <div>
+        <div class="tbl-h c">Corsair · PC gear — all 8 rigs</div>
+        <table>
+          <thead><tr><th>Component</th><th class="r">Qty</th><th class="r">Unit</th><th class="r">Total</th></tr></thead>
+          <tbody>
+            <tr><td>Dominator Platinum RGB 32GB DDR5</td><td class="r">×8</td><td class="r">42,880</td><td class="r">3,43,040</td></tr>
+            <tr><td>MP600 PRO NH 1TB Gen4 SSD</td><td class="r">×8</td><td class="r">15,316</td><td class="r">1,22,528</td></tr>
+            <tr><td>RM850e ATX 3.1 Gold PSU</td><td class="r">×8</td><td class="r">9,900</td><td class="r">79,200</td></tr>
+            <tr><td>3500X RS-R ARGB case</td><td class="r">×8</td><td class="r">9,320</td><td class="r">74,560</td></tr>
+            <tr><td>Nautilus 360 RS ARGB AIO cooler</td><td class="r">×8</td><td class="r">8,370</td><td class="r">66,960</td></tr>
+            <tr><td>HS35 v2 Carbon headset</td><td class="r">×8</td><td class="r">3,410</td><td class="r">27,280</td></tr>
+            <tr class="total"><td>Corsair subtotal</td><td class="r">—</td><td class="r">—</td><td class="r">₹7,13,568</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="tbl-h f">Fanatec · complete cockpit — 2 featured rigs</div>
+        <table>
+          <thead><tr><th>Component</th><th class="r">Qty</th><th class="r">Unit</th><th class="r">Total</th></tr></thead>
+          <tbody>
+            <tr><td>ClubSport DD+ wheelbase (15 Nm)</td><td class="r">×2</td><td class="r">2,05,999</td><td class="r">4,11,998</td></tr>
+            <tr><td>ClubSport Cockpit frame</td><td class="r">×2</td><td class="r">1,49,999</td><td class="r">2,99,998</td></tr>
+            <tr><td>ClubSport Pedals V3</td><td class="r">×2</td><td class="r">66,699</td><td class="r">1,33,398</td></tr>
+            <tr><td>Formula V2.5 X steering wheel</td><td class="r">×2</td><td class="r">59,999</td><td class="r">1,19,998</td></tr>
+            <tr><td>ClubSport Shifter SQ V1.5</td><td class="r">×2</td><td class="r">43,999</td><td class="r">87,998</td></tr>
+            <tr><td>ClubSport Handbrake V1.5</td><td class="r">×2</td><td class="r">31,999</td><td class="r">63,998</td></tr>
+            <tr><td>QR2 quick release</td><td class="r">×2</td><td class="r">16,999</td><td class="r">33,998</td></tr>
+            <tr class="total"><td>Fanatec subtotal</td><td class="r">—</td><td class="r">—</td><td class="r">₹11,51,386</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="fineprint">All figures incl. GST. Corsair line = the Corsair-branded parts in our actual MD Computers build quote (30 May 2026, ₹3,23,995/rig — balance is AMD CPU, Gigabyte board, Zotac GPU &amp; Samsung monitors, each its own partner ask). Fanatec DD+ base &amp; Pedals V3 = confirmed Techxhub March-2026 RRP · wheel, cockpit, shifter, handbrake &amp; QR2 = indicative India RRP, to be firmed on a Techxhub quote.</p>
+  </div>
+</div>
+
+<!-- ===== 8 · CLOSE ===== -->
+<div class="slide dark">
+  <svg class="watermark" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg>
+  <div class="inner close" style="justify-content:center;">
+    <div class="eyebrow">Let's do this</div>
+    <h1>Put Corsair on the start<br>line of <span class="hl">Indian motorsport.</span></h1>
+    <p class="sub2">Own the room where India falls in love with racing — the PC and the cockpit, both carrying your name. And when we open the next centres, you're already on board.</p>
+    <div class="siglogo">
+      <svg class="sails" width="56" height="55" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg>
+      <span class="wm">CORSAIR</span>
+    </div>
+    <div class="footer-band" style="background:var(--yellow);">
+      <div class="l1">Thambu · RaceSims · thambu@racesims.in</div>
+      <div class="l2">RACESIMS · CHENNAI — NUNGAMBAKKAM · DRIVE · TRAIN · COMPETE</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
