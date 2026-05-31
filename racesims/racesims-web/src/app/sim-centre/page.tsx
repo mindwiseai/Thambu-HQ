@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Reveal, CountUp } from "@/components/Reveal";
 import { Booking } from "@/components/simcentre/Booking";
 import { CENTRE, RATES, RIGS, SIMS, inr, type Rig } from "@/lib/simcentre";
@@ -17,9 +18,25 @@ export default function SimCentrePage() {
   return (
     <>
       {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[80vh] bg-carbon grain grid-lines grid-lines-fade flex flex-col justify-end overflow-hidden pt-20">
-        {/* Gradient fade at bottom */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-carbon to-transparent z-10" />
+      <section className="relative min-h-[88vh] bg-carbon flex flex-col justify-end overflow-hidden pt-20">
+        {/* full-bleed rig, anchored right, treated */}
+        <div className="pointer-events-none absolute inset-0 z-0" aria-hidden>
+          <div
+            className="absolute right-0 top-[18%] h-[55vh] w-[55vh] rounded-full"
+            style={{ background: "radial-gradient(circle, rgba(255,59,29,0.18) 0%, rgba(255,59,29,0.05) 42%, transparent 70%)" }}
+          />
+          <div className="absolute inset-y-0 right-0 w-full opacity-25 sm:w-[58%] sm:opacity-100">
+            <Image
+              src="/hero/rig-studio.png"
+              alt="RaceSims full-motion simulator at the Chennai Sim Centre"
+              fill priority sizes="(max-width:640px) 100vw, 58vw"
+              className="object-contain object-center sm:object-right"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-carbon via-carbon/75 to-transparent sm:via-carbon/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-carbon via-transparent to-transparent" />
+          <div className="grid-lines grid-lines-fade absolute inset-0 opacity-25" />
+        </div>
 
         <div className="relative z-20 mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8">
           <Reveal>

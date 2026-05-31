@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import {
@@ -62,15 +63,24 @@ export default function LeaguePage() {
   return (
     <div className="flex min-h-dvh flex-col bg-carbon">
       {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
-      <section className="grid-lines grain relative overflow-hidden border-b border-line pt-28 pb-20 sm:pt-36 sm:pb-28">
-        {/* subtle radial glow behind headline */}
-        <div
-          className="pointer-events-none absolute inset-0 opacity-20"
-          style={{
-            background:
-              "radial-gradient(ellipse 60% 50% at 50% 60%, rgba(255,59,29,0.18) 0%, transparent 70%)",
-          }}
-        />
+      <section className="relative overflow-hidden border-b border-line pt-28 pb-20 sm:pt-36 sm:pb-28">
+        {/* the wheel cutout, anchored right, treated */}
+        <div className="pointer-events-none absolute inset-0 z-0" aria-hidden>
+          <div
+            className="absolute right-[10%] top-1/4 h-[48vh] w-[48vh] rounded-full"
+            style={{ background: "radial-gradient(circle, rgba(255,59,29,0.20) 0%, rgba(255,59,29,0.05) 42%, transparent 70%)" }}
+          />
+          <div className="absolute inset-y-0 right-0 hidden w-[42%] lg:block">
+            <Image
+              src="/hero/league-wheel.png"
+              alt="Conspit GT steering wheel — the competition interface"
+              fill priority sizes="42vw"
+              className="object-contain object-right"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-carbon via-carbon/70 to-transparent lg:via-carbon/40" />
+          <div className="grid-lines grid-lines-fade absolute inset-0 opacity-25" />
+        </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
