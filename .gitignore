@@ -128,6 +128,11 @@ racesims/**/*.png
 racesims/**/*.jpg
 racesims/**/*.jpeg
 
+# Track the racesims-web Next.js app's public assets — the live website's
+# product/hero imagery (web-optimised), not raw marketing originals.
+!racesims/racesims-web/public/
+!racesims/racesims-web/public/**
+
 # Track the 3D-printing CAD outputs (authored here, small enough to version):
 # STEP/STL/GLB for printable parts + render PNGs for review.
 !racesims/technical/3d-printing/cad/**/*.step
