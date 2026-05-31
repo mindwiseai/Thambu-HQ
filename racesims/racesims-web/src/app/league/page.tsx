@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import {
   SEASON,
@@ -63,8 +61,6 @@ export default function LeaguePage() {
 
   return (
     <div className="flex min-h-dvh flex-col bg-carbon">
-      <Nav />
-
       {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
       <section className="grid-lines grain relative overflow-hidden border-b border-line pt-28 pb-20 sm:pt-36 sm:pb-28">
         {/* subtle radial glow behind headline */}
@@ -489,8 +485,6 @@ export default function LeaguePage() {
           </Reveal>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

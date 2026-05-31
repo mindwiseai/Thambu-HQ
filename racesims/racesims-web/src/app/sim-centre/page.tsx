@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
 import { Reveal, CountUp } from "@/components/Reveal";
 import { Booking } from "@/components/simcentre/Booking";
 import { CENTRE, RATES, RIGS, SIMS, inr, type Rig } from "@/lib/simcentre";
@@ -18,8 +16,6 @@ export default function SimCentrePage() {
 
   return (
     <>
-      <Nav />
-
       {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
       <section className="relative min-h-[80vh] bg-carbon grain grid-lines grid-lines-fade flex flex-col justify-end overflow-hidden pt-20">
         {/* Gradient fade at bottom */}
@@ -267,8 +263,6 @@ export default function SimCentrePage() {
           </Reveal>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { COMPONENTS, PRESETS, totalFor, inr, type ComponentGroup } from "@/lib/catalogue";
 import { GROUP_IMAGES } from "@/lib/optionImages";
@@ -502,16 +500,12 @@ function CTABand() {
 export default function ProductsPage() {
   return (
     <>
-      <Nav />
-      <main>
-        <Hero />
-        <Systems />
-        <TheStack />
-        <RaceEngineer />
-        <BrandPartners />
-        <CTABand />
-      </main>
-      <Footer />
+      <Hero />
+      <Systems />
+      <TheStack />
+      <RaceEngineer />
+      <BrandPartners />
+      <CTABand />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Chrome } from "@/components/Chrome";
 
 export const metadata: Metadata = {
   title: {
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-carbon text-foreground">
-        {children}
+        <Chrome>{children}</Chrome>
       </body>
     </html>
   );
