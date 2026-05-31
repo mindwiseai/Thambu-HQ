@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-31] edit | Academy delivery system — coach operating manual + drill library
+- Thambu: "how do we format our courses... proper format, workshops, exercises, everything... a very good structure for us to conduct." The training is RaceSims' centrepiece.
+- Created: 2 new pages — [[racesims-academy-delivery-system]] (the *conduct* layer: 5 layers — Session Engine to-the-minute, Drill Library, Workshop Format, Driver Record, Coach Playbook; built on 3 non-negotiables: data-not-vibes, spine-not-lessons, system-not-star-coach) + [[racesims-drill-library]] (named scored exercises mapped to every glossary concept, L1–L4 + rally + racecraft; drill-card template).
+- Updated: [[racesims-academy-curriculum]] (now framed as the *what*; points to delivery system as the *how*), [[wiki/index|index]].
+- Retention loop spine: TELEMETRY → DRILL → GATE → RECORD → CHAMPIONSHIP.
+- **Next (not done):** fold session-format + drill-card + workshop slides into the curriculum deck (held pending Thambu's reaction to the structure).
+
 ## [2026-05-30] ingest | Chennai fit-out real-world sourcing + line-by-line optimisation
 - Source: [[2026-05-30-chennai-fitout-optimisation]] — re-grounded the carried-forward ₹16.1L fit-out from real 2026 India listings/rate-cards (IndiaMART, Philips, Moglix, Chennai contractors) + C&W/JLL benchmarks; walked all 17 lines with [[thambu]].
 - Created: 2 new pages ([[racesims-chennai-fitout]] living schedule, [[2026-05-30-chennai-fitout-optimisation]] source) + 1 new entity ([[guru-moorthy]] architect).

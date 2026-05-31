@@ -9,7 +9,9 @@ updated: 2026-05-30
 
 # The Motorsport Academy — Curriculum System
 
-The teaching architecture behind every [[racesims-motorsport-academy|Motorsport Academy]] programme. This page defines the *how* — the session model, progression logic, and concept glossary that every programme inherits. Per-programme session plans link from the bottom.
+The teaching architecture behind every [[racesims-motorsport-academy|Motorsport Academy]] programme. This page defines the *what* — the session model, progression logic, and concept glossary that every programme inherits. Per-programme session plans link from the bottom.
+
+> **The conduct layer lives in [[racesims-academy-delivery-system]]** — the coach operating manual: session formats to the minute, the [[racesims-drill-library|Drill Library]], the workshop format, the Driver Record, and the Coach Playbook. Read that for *how a session is actually run*.
 
 > The Academy is not "track time with a coach nearby." Every session is a structured lesson with a concept, a drill, an application, and a data-backed debrief. This is what separates a *programme* from a *sim café*.
 
@@ -145,6 +147,11 @@ These are the named concepts illustrated in the curriculum deck. Each is introdu
 - [[racesims-curriculum-track-day]] — Track Day Prep + Advanced Performance (separate)
 - [[racesims-curriculum-tuner-lab]] — Corporate engineering programme (separate)
 - [[racesims-academy-challenges]] — challenges, practice trainers + test-yourself gates
+
+## Delivery (the *how*)
+
+- [[racesims-academy-delivery-system]] — coach operating manual: session formats, workshops, Driver Record, Coach Playbook
+- [[racesims-drill-library]] — the named, scored exercises every session is built from
 
 ## Output artefacts
 

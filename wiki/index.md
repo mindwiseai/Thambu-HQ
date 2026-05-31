@@ -123,6 +123,8 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ### Academy & curriculum
 - [[racesims-motorsport-academy]] — 3-tier training programme (Initiation · Advanced · Sim+Reality)
 - [[racesims-academy-curriculum]] ⭐ — curriculum system: B·D·A·D session model + concept glossary
+- [[racesims-academy-delivery-system]] ⭐ — coach operating manual: session formats · workshops · Driver Record · playbook
+- [[racesims-drill-library]] — the named, scored exercises every session is built from
 - [[racesims-curriculum-initiation]] · [[racesims-curriculum-advanced-circuit]] · [[racesims-curriculum-advanced-rally]]
 - [[racesims-curriculum-racecraft]] — COMPETE pillar (Battle Dynamics · Strategies · Psychology)
 - [[racesims-curriculum-sim-reality]] · [[racesims-curriculum-track-day]] · [[racesims-curriculum-tuner-lab]]
