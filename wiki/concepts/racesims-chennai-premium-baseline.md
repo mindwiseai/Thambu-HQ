@@ -17,8 +17,8 @@ A **conservative, ground-truth forecast** for the [[racesims-chennai-flagship|Ch
 
 ## Configuration — CHOSEN: Variant C (8 rigs)
 **Decision (2026-05-29): go with 8 rigs — 7 race/rally + 1 three-DOF motion**, 2 staff (lean). The live Excel base case (Summary + P&L) is now set to this; the 6-rig builds remain in the `Variants` tab for reference.
-- **Equipment:** 7 × ₹5,84,900 + 1 × ₹9,84,900 = **₹50,79,200** at [[conspit]]/[[vnm]] distributor cost (~₹85-95L retail → big day-one equity).
-- **Net cash deployed ₹68.3L · sunk ₹59.0L · break-even 10.0% occupancy** (below [[uday-hyderabad|Uday]]'s proven ~20%).
+- **Equipment:** 7 × ₹5,84,900 + 1 × ₹9,84,900 = ₹50,79,200 at [[conspit]]/[[vnm]] *distributor estimate* — **superseded by the actual landed BOM ₹44.64L** (see canonical capital table under "LOCKED" below and [[2026-05-30-chennai-landed-cost-bom]]).
+- ~~Net cash deployed ₹68.3L · sunk ₹59.0L · break-even 10.0%~~ — *superseded; canonical = **net ₹68.46L · at-risk ₹59.14L · break-even 11.5%** (project report).*
 - **Year 1: ₹29.3L EBITDA (brand-lands) / ₹8.6L (brand-lags — profitable even in the bad case)**, profitable from month 3, payback ~13 months sunk. *(Reconciled to [[racesims-master-rate-card]]: motion +₹500/hr → fleet blended ₹1,218/hr net. Source of truth: `racesims-chennai-economics.pdf` + `racesims-chennai-premium-forecast.xlsx`.)*
 
 ## LOCKED — property confirmed (2026-05-30)
@@ -26,14 +26,32 @@ Property **locked** in **Nungambakkam** (central Chennai); opens **July 2026**. 
 
 > **Primary report — landed-cost basis (2026-05-30):** the canonical project report, on **actual landed prices** — `racesims-chennai-project-report.pdf` (11 pp, promoted from the former `-landed-cost` name), source [[2026-05-30-chennai-landed-cost-bom]]. The distributor-value version is archived to `marketing/decks/archive/racesims-chennai-project-report-distributor.pdf`. Real Conspit/VNM rig BOM (incl. tax) replaces the ₹5.85L/rig distributor estimate: **4 Formula/GT** (Apex 2-pedal) + **4 Rally/GT** (VNM 3-pedal + shifter + handbrake), motion platform **₹3.70L**. **Fleet equipment ₹44.64L · net capital ₹70.2L · cost of capital ₹5.62L/yr · payback ~2.0 yr · ~3.0× multiple.** Premium/distributor report stays as-is. **[2026-05-30 update] Fit-out then re-sourced + optimised ₹16.10L → ₹14.20L → net capital ₹68.46L · CoC ₹5.48L/yr · break-even 11.5% · ~3.1× multiple. The landed report was rebuilt on this — see [[racesims-chennai-fitout]] / [[2026-05-30-chennai-fitout-optimisation]].**
 
-- **Capital (full room-only fit-out):** equipment ₹50.79L + deposit ₹9.32L + **fit-out ₹16.1L** (itemised) + WC ₹6.11L + contingency ₹3.81L → gross ₹86.1L, less GST ITC ₹9.84L = **net ₹76.3L** (sunk ₹67.0L; deposit refundable).
-- **Cost of capital:** 8% p.a. blended (part loan / part own) = **₹6.10L/yr**.
-- **5-year forecast (base case, occ 18→35%):** cumulative **EBITDA ₹3.57 cr · PAT ~₹2.11 cr · payback ~2.1 yrs · ~2.8× capital multiple.** Café & academy excluded (upside).
+> [!important] CANONICAL CAPITAL — single source of truth = `racesims-chennai-project-report.pdf`. All other figures on this page are superseded historical/variant scenarios; reconcile to these.
+> | Metric | Value |
+> |---|---|
+> | Fleet equipment (landed, incl. tax) | ₹44.64L |
+> | + refundable deposit | ₹9.32L |
+> | + fit-out (optimised) | ₹14.20L |
+> | + working capital | ₹6.11L |
+> | + contingency | ₹2.94L |
+> | **= Gross capital** | **₹77.21L** |
+> | less GST ITC reclaimable | (₹8.75L) |
+> | **Net cash deployed** | **₹68.46L** |
+> | Capital at risk (ex-refundable deposit) | ₹59.14L |
+> | Cost of capital (8% p.a.) | ₹5.48L/yr |
+> | **Break-even occupancy** (incl. CoC) | **11.5%** |
+> | 5-yr cumulative EBITDA / PAT | ₹3.57cr / ₹2.11cr |
+> | Payback / capital multiple | ~2.0 yrs / ~3.1× |
+
+- **~~Capital (full room-only fit-out): equipment ₹50.79L … gross ₹86.1L … net ₹76.3L~~** — *superseded; this used distributor equipment cost (₹50.79L) + ₹16.1L fit-out + 2.8× multiple. Use the canonical table above (landed equipment ₹44.64L, fit-out ₹14.20L, net ₹68.46L, ~3.1×).*
+- **5-year forecast (base case, occ 18→35%):** cumulative **EBITDA ₹3.57 cr · PAT ₹2.11 cr · payback ~2.0 yrs · ~3.1× capital multiple.** Café & academy excluded (upside).
 - **Fit-out ₹16.1L (room-only — brand-new building has power + fire in place):** AC 8T + in-room electrical/UPS + solar film/blinds + flooring + black ceiling/wall paint (exposed look) + acoustic + lighting + glass office partition + reception/coffee + furniture + branding (name boards at cost) + value TVs + simple networking + audio + CCTV + biometric access + mobile billing. Full breakdown in the archived `racesims-chennai-project-report-distributor.pdf`. *(This ₹16.1L is the original distributor-report estimate; the primary report now runs a re-sourced **₹14.20L** schedule — [[racesims-chennai-fitout]].)*
 - **AC:** calculated ~6 T peak; install **8 T**. **Exposed black ceiling (no false ceiling) → NO cassettes** — use **ceiling-suspended (slab-mount) or heavy-duty high-wall inverter units**. Glazing solar gain is the swing factor (solar film + blinds). See [[racesims-chennai-execution-plan]] HVAC note.
 
-### Floor fit (v7 — North-up · Vastu-oriented · LOCKED)
-North-up with compass. **Entrance EAST · office/training NORTH-EAST corner · motion rig faces NORTH.** 7 static rigs along the **west wall** + **south wall**, **all screens against the walls** (drivers face out, backs to the room for spectating); motion hero at the north wall by the office. Reception + small coffee counter on the **east wall** by the entrance; two washroom doors east-south (kept clear); lounge centre; leaderboard north wall; perimeter windows west/south. Room **8.73 m E–W × 12.15 m N–S**. SuperLap look (pendant lamps, cream + carpet, steel reception). See `racesims-chennai-floorplan.png` / `racesims-chennai-3d.html`.
+### Floor fit (v7 — Vastu-oriented · LOCKED · compass corrected 2026-05-31)
+> [!note] Direction correction (2026-05-31): the earlier compass was inverted — what was labelled **North is actually South** (a 180° flip: N↔S **and** E↔W). The **physical room layout is unchanged and remains Vastu-correct**; only the cardinal labels were wrong. All directions below are the corrected, true ones. The plan image's top edge is **South**.
+
+Plan view, image-top = **South**. **Entrance WEST · office/training SOUTH-WEST corner · motion rig faces SOUTH.** 7 static rigs along the **east wall** + **north wall**, **all screens against the walls** (drivers face out, backs to the room for spectating); motion hero at the south wall by the office. Reception + small coffee counter on the **west wall** by the entrance; two washroom doors west-north (kept clear); lounge centre; leaderboard south wall; perimeter windows east/north. Room **8.73 m E–W × 12.15 m N–S** (extents unchanged). SuperLap look (pendant lamps, cream + carpet, steel reception). See `racesims-chennai-floorplan.png` / `racesims-chennai-3d.html` *(floorplan PNG compass labels pending regeneration — flagged below)*.
 
 ### (earlier note — superseded by v4 above)
 Venue = typical floor (1st–4th), clear office hall **8.73 m × 12.15 m = 28.6 × 39.9 ft ≈ 1,142 sq ft** (service core separate). Final layout (`racesims-chennai-floorplan.png`, `racesims-chennai-3d.html`): **L-shape — 4 rigs back wall + 3 right wall + motion hero island**; **entrance on the lift-lobby wall** with a **reception + coffee counter** beside it; **two washroom doors kept clear** on the front-left wall; **glass training/academy room (~11.5 m², 6–8 seats)** back-left for Phase-2 [[racesims-motorsport-academy|Academy]]; lounge centre; leaderboard right wall. Feature footprint ~55% of floor — comfortable, and the hall could take 12–16 rigs, so **floor is not the constraint**; a 2nd floor is available later. Coffee + training room add ~₹2–2.5L one-time fit-out (folded into capex).
@@ -50,8 +68,10 @@ Venue = typical floor (1st–4th), clear office hall **8.73 m × 12.15 m = 28.6 
 ## Monthly OpEx — ₹3,17,000
 Rent ₹1,55,250 · building maint ₹17,250 · rig maint + replacement reserve ₹18,000 · staff 3×₹25,000 · electricity ₹37,500 · internet ₹4,000 · supplies ₹10,000. **Lean option: 2 staff = ₹2,92,000** (Uday runs 8 rigs on 2) — recommended at launch; cuts worst-case drawdown ~₹2L.
 
-## Capital
-| | ₹ |
+## Capital — ⚠️ 6-RIG VARIANT A (historical, NOT the build)
+> This table is the original **6-rig** conservative scenario. The project is built as **8-rig** — use the canonical 8-rig capital table under "LOCKED" above (net **₹68.46L**), source `racesims-chennai-project-report.pdf`. Retained only for the variant comparison.
+
+| | ₹ (6-rig variant) |
 |---|---|
 | Gross capital (incl 6-mo deposit, 2-mo WC, 5% contingency) | 64,62,445 |
 | less GST ITC reclaimable | (7,04,654) |

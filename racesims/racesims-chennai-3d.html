@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>RaceSims · Chennai — 3D Layout (North-up · Vastu)</title>
+<title>RaceSims · Chennai — 3D Layout (Vastu · compass corrected 2026-05-31 — image top = South)</title>
 <style>
  :root{--cream:#F4EFE3;--red:#D81E33;--gold:#C9A24A;}
  *{margin:0;padding:0;box-sizing:border-box}
@@ -16,23 +16,24 @@
  #views button:hover{background:var(--red);border-color:var(--red)}
  #compass{position:fixed;bottom:16px;right:16px;z-index:10;width:88px;height:88px;background:rgba(20,20,20,.72);border:1px solid rgba(201,162,74,.5);border-radius:50%;color:#e8e2d4;font-size:12px;font-weight:800}
  #compass i{position:absolute;left:50%;transform:translateX(-50%)}
- #compass .n{top:5px;color:var(--red)}#compass .s{bottom:5px}#compass .e{right:7px;top:50%;transform:translateY(-50%)}#compass .w{left:7px;top:50%;transform:translateY(-50%)}
- #compass .arr{top:14px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:30px solid var(--red)}
+ #compass .n{top:5px}#compass .s{bottom:5px;color:var(--red)}#compass .e{right:7px;top:50%;transform:translateY(-50%)}#compass .w{left:7px;top:50%;transform:translateY(-50%)}
+ #compass .arr{bottom:14px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:30px solid var(--red)}
  #legend{position:fixed;bottom:16px;left:16px;z-index:10;background:rgba(20,20,20,.7);border:1px solid rgba(201,162,74,.4);border-radius:10px;padding:10px 14px;color:#e8e2d4;font-size:11px}
  #legend span{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:middle}
 </style></head><body>
 <canvas id="c"></canvas>
 <div id="hud"><h1>RaceSims · <b>Chennai</b></h1>
- <div class="sub">3D LAYOUT — NORTH-UP · ALL RIGS FACE THEIR WALLS</div>
+ <div class="sub">3D LAYOUT — IMAGE TOP = SOUTH · ALL RIGS FACE THEIR WALLS</div>
  <div class="card"><p>
-  <span class="k">North is away</span> from you · <span class="k">East</span> is to the right<br>
-  <span class="k">Office (NE corner)</span> top-right · <span class="k">motion rig faces North</span><br>
-  <span class="k">Entrance EAST</span> (right wall) · reception + coffee beside it<br>
+  <span class="k">Compass corrected 2026-05-31</span> (was inverted; layout unchanged)<br>
+  <span class="k">South is away</span> from you · <span class="k">West</span> is to the right<br>
+  <span class="k">Office (SW corner)</span> top-right · <span class="k">motion rig faces South</span><br>
+  <span class="k">Entrance WEST</span> (right wall) · reception + coffee beside it<br>
   Drag to orbit · scroll zoom · right-drag pan</p></div></div>
 <div id="views">
  <button data-v="iso">Isometric</button><button data-v="top">Top (plan)</button>
- <button data-v="entry">From entry (E)</button><button data-v="office">Office (NE)</button><button data-v="motion">Motion rig</button></div>
-<div id="compass"><i class="arr"></i><i class="n">N</i><i class="s">S</i><i class="e">E</i><i class="w">W</i></div>
+ <button data-v="entry">From entry (W)</button><button data-v="office">Office (SW)</button><button data-v="motion">Motion rig</button></div>
+<div id="compass"><i class="arr"></i><i class="n">S</i><i class="s">N</i><i class="e">W</i><i class="w">E</i></div>
 <div id="legend">
  <div><span style="background:#3A4A5A"></span>Race rig <span style="background:#D81E33"></span>Motion <span style="background:#6F4A2F"></span>Coffee</div>
  <div style="margin-top:5px"><span style="background:#cfe0e6"></span>Office <span style="background:#B89968"></span>Pendant <span style="background:#8fb9d6"></span>Window</div></div>
@@ -43,7 +44,7 @@
 <script type="module">
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
-// world: x = EAST (0..EW, +x East) · z = North-South (z=0 NORTH wall, z=NS SOUTH wall)
+// world axes — LABELS CORRECTED 2026-05-31 (180° flip; geometry UNCHANGED): +x runs x=0 (now EAST wall) → x=EW (now WEST wall); +z runs z=0 (now SOUTH wall) → z=NS (now NORTH wall). NOTE: code comments below still carry the OLD inverted cardinal names unless edited — apply the 180° flip (N↔S, E↔W) to read them true.
 const EW=8.73,NS=12.15,WALL=2.8;
 const CREAM=0xF4EFE3,RED=0xD81E33,GOLD=0xC9A24A,STEEL=0x3A4A5A,LOUNGE=0xE4DAC2,COFFEE=0x6F4A2F,GREEN=0x2E8B30,WICKER=0xB89968;
 const renderer=new THREE.WebGLRenderer({canvas:document.getElementById('c'),antialias:true});
@@ -125,9 +126,9 @@ pendant(EW-1.4,4.3);pendant(EW-1.4,6.0);
 const entry=new THREE.Mesh(new THREE.PlaneGeometry(1.4,1.4),new THREE.MeshStandardMaterial({color:GREEN,transparent:true,opacity:.4}));entry.rotation.x=-Math.PI/2;entry.position.set(EW-0.6,0.02,6.85);scene.add(entry);
 for(const wz of[9.15,10.75]){const wc=new THREE.Mesh(new THREE.BoxGeometry(0.08,1.6,1.0),new THREE.MeshStandardMaterial({color:GREEN,transparent:true,opacity:.5}));wc.position.set(EW-0.05,0.8,wz);scene.add(wc);}
 const clr=new THREE.Mesh(new THREE.PlaneGeometry(1.7,3.3),new THREE.MeshStandardMaterial({color:GREEN,transparent:true,opacity:.07}));clr.rotation.x=-Math.PI/2;clr.position.set(EW-0.9,0.015,9.95);scene.add(clr);
-// NORTH arrow on the floor (points -z = North)
-const na=new THREE.Mesh(new THREE.ConeGeometry(0.3,0.7,4),new THREE.MeshStandardMaterial({color:GOLD,metalness:.4}));na.rotation.x=-Math.PI/2;na.position.set(EW-0.5,0.05,1.0);scene.add(na);
-const nshaft=new THREE.Mesh(new THREE.BoxGeometry(0.12,0.02,0.8),new THREE.MeshStandardMaterial({color:GOLD}));nshaft.position.set(EW-0.5,0.04,1.7);scene.add(nshaft);
+// NORTH arrow on the floor — CORRECTED 2026-05-31: true North is +z (z=NS end), so arrow now points +z
+const na=new THREE.Mesh(new THREE.ConeGeometry(0.3,0.7,4),new THREE.MeshStandardMaterial({color:GOLD,metalness:.4}));na.rotation.x=Math.PI/2;na.position.set(EW-0.5,0.05,1.7);scene.add(na);
+const nshaft=new THREE.Mesh(new THREE.BoxGeometry(0.12,0.02,0.8),new THREE.MeshStandardMaterial({color:GOLD}));nshaft.position.set(EW-0.5,0.04,1.0);scene.add(nshaft);
 
 const views={iso:[1.5,14,20],top:[EW/2,26,NS/2+4],entry:[EW+6,2.6,6.85],office:[EW+5,3.5,1.5],motion:[3.3,3,6]};
 function go(v){const p=views[v];cam.position.set(p[0],p[1],p[2]);

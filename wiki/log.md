@@ -9,6 +9,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-05-31] edit | Chennai compass correction (N↔S, 180°) + numbers standardised to project report
+- [[thambu]]: "what I told you north is actually south." Floorplan compass was inverted 180° (N↔S **and** E↔W). **Physical layout unchanged & still Vastu-correct — only labels were wrong.**
+- Corrected directions (entrance WEST · office SW · motion faces SOUTH · rigs east+north walls · leaderboard south · windows east/north) in: [[racesims-chennai-premium-baseline]] floor-fit section, `racesims-chennai-3d.html` (HUD/buttons/compass widget/floor north-arrow flipped to +z), `racesims-chennai-floorplan.png` (banner-stamped; no generator → flagged for full regen; `-PRECORRECTION-backup.png` saved).
+- **Numbers:** made `racesims-chennai-project-report.pdf` the single source of truth. Reconciled [[racesims-chennai-premium-baseline]] — canonical block (equip ₹44.64L landed · fit-out ₹14.20L · net ₹68.46L · break-even 11.5% · ~3.1×); marked old ₹50.79L/₹76.3L/2.8× superseded; tagged 6-rig table historical-variant.
+- Updated: [[wiki/hot|hot]], [[wiki/log|log]]. **TODO:** propagate canonical numbers to [[racesims-chennai-partnerships]] · [[racesims-chennai-flagship]] · [[racesims-chennai-execution-plan]].
+
 ## [2026-05-31] edit | Academy delivery system — coach operating manual + drill library
 - Thambu: "how do we format our courses... proper format, workshops, exercises, everything... a very good structure for us to conduct." The training is RaceSims' centrepiece.
 - Created: 2 new pages — [[racesims-academy-delivery-system]] (the *conduct* layer: 5 layers — Session Engine to-the-minute, Drill Library, Workshop Format, Driver Record, Coach Playbook; built on 3 non-negotiables: data-not-vibes, spine-not-lessons, system-not-star-coach) + [[racesims-drill-library]] (named scored exercises mapped to every glossary concept, L1–L4 + rally + racecraft; drill-card template).

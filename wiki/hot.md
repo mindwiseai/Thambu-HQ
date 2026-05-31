@@ -8,7 +8,11 @@ updated: 2026-05-30
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-31 (latest) — Academy DELIVERY system (the *how we conduct it*)
+## 2026-05-31 (latest) — Chennai compass corrected (N↔S) + numbers standardised to project report
+- **Direction fix:** [[thambu]] flagged the floorplan compass was **inverted** — what was labelled **North is actually South** (180° flip: N↔S **and** E↔W). **Physical layout unchanged and still Vastu-correct; only the labels were wrong.** True directions now: **entrance WEST · office/training SW corner · motion rig faces SOUTH · 7 static rigs on east+north walls · leaderboard south wall · windows east/north.** Updated [[racesims-chennai-premium-baseline]] floor-fit + `racesims-chennai-3d.html` (labels/compass/floor-arrow) + stamped a correction banner on `racesims-chennai-floorplan.png` (no generator → needs full regen; pre-correction backup saved).
+- **Numbers standardised:** the **project report is the single source of truth** for ALL Chennai figures — equipment (landed) ₹44.64L · fit-out ₹14.20L · gross ₹77.21L · ITC (₹8.75L) · **net ₹68.46L** · at-risk ₹59.14L · CoC ₹5.48L/yr · **break-even 11.5%** · EBITDA ₹3.57cr / PAT ₹2.11cr · payback ~2.0yr · **~3.1×**. Baseline reconciled (old ₹50.79L equip / ₹76.3L net / 2.8× → superseded; 6-rig table tagged historical). **TODO:** propagate to [[racesims-chennai-partnerships]] · [[racesims-chennai-flagship]] · [[racesims-chennai-execution-plan]].
+
+## 2026-05-31 — Academy DELIVERY system (the *how we conduct it*)
 - Thambu: training is the centrepiece — "proper format, workshops, exercises, everything... a very good structure for us to conduct." Built the **conduct layer** the wiki was missing (curriculum had the *what*, not the *how a coach runs it*).
 - NEW [[racesims-academy-delivery-system]] — coach operating manual, **5 layers**: (1) Session Engine = the **APEX loop** (Aim·Practice·eXecute·eXamine, renamed from B·D·A·D) to-the-minute, one-concept-per-session, open-on-data/close-on-data, one homework Trainer; (2) [[racesims-drill-library|Drill Library]]; (3) Workshop Format = Theatre→Stations→Race→Podium, themed monthly editions; (4) Driver Development Record on VMS; (5) Coach Playbook + certification (the scaling layer). Three non-negotiables: data-not-vibes · spine-not-lessons · system-not-star-coach.
 - NEW [[racesims-drill-library]] — named scored exercises (Braking Box, Release Ramp, Metronome, Slip Window, Rotation Point, The Flick, Switchback…) mapped to every glossary concept, L1–L4 + rally + racecraft; each = drill card (setup/metric/bronze-silver-gold/coach cue/common error). Coached drills = the self-serve Practice Trainers.
@@ -38,7 +42,7 @@ Most recently touched context. Read this first for any query — it often answer
 - **Location: Nungambakkam.** Brand-partnership/sponsorship plan to cut list capital toward ~₹55-58L — [[racesims-chennai-partnerships]]. Rig split 2 Conspit + 2 VNM + 2 Fanatec + 2 reserved (showcase). Partner pitches: **Corsair** (PC + Fanatec — Corsair owns Fanatec), Zotac (GPUs ₹9.1L), Samsung (monitors ₹5.8L + leaderboard TV), AMD (CPUs ₹2.5L). Corsair deck built; Zotac/Samsung/AMD/Fanatec pending.
 
 ## 2026-05-30 — Chennai property LOCKED · layout v7 · AC
-- **Property LOCKED, opens July 2026.** Layout v7 (North-up, Vastu): entrance EAST, office/training NE corner, motion rig faces NORTH, 7 static rigs on west+south walls, all screens against walls. Room 8.73 m E–W × 12.15 m N–S (~1,142 sqft). See [[racesims-chennai-premium-baseline]] (LOCKED), `racesims-chennai-floorplan.png`, `racesims-chennai-3d.html`.
+- **Property LOCKED, opens July 2026.** Layout v7 (Vastu) — *directions corrected 2026-05-31, see top entry:* entrance **WEST**, office/training **SW** corner, motion rig faces **SOUTH**, 7 static rigs on **east+north** walls, all screens against walls. Room 8.73 m E–W × 12.15 m N–S (~1,142 sqft). See [[racesims-chennai-premium-baseline]] (LOCKED), `racesims-chennai-floorplan.png`, `racesims-chennai-3d.html`.
 - **AC: ~6 T calc → install 8 T.** Master rate card: 30 min ₹750 · 1 hr ₹1,250 · Motion +₹500/hr ([[racesims-master-rate-card]]).
 
 ---
