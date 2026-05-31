@@ -34,28 +34,28 @@ export function Hero() {
         transition={{ duration: 1.6, ease: EASE_ARR }}
         aria-hidden
       >
-        {/* desktop: rig anchored right; mobile: centred + dimmer */}
-        <div className="absolute inset-0 opacity-40 sm:opacity-100">
+        {/* flame wash behind the rig's screens */}
+        <div
+          className="absolute right-[6%] top-1/4 h-[55vh] w-[55vh] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(255,59,29,0.20) 0%, rgba(255,59,29,0.05) 42%, transparent 70%)",
+          }}
+        />
+        {/* the studio cutout — anchored right on desktop, centred + dimmed on mobile */}
+        <div className="absolute inset-y-0 right-0 w-full sm:w-[62%] opacity-30 sm:opacity-100">
           <Image
-            src="/hero/rig.jpg"
+            src="/hero/rig-studio.png"
             alt="RaceSims full-motion simulator — triple curved screens, bucket seat, VNM 3DOF motion"
             fill
             priority
-            sizes="100vw"
-            className="object-cover object-[68%_center] sm:object-[78%_center]"
+            sizes="(max-width:640px) 100vw, 62vw"
+            className="object-contain object-center sm:object-right"
           />
         </div>
-        {/* readability gradients: dark from the left + bottom, carbon edges */}
-        <div className="absolute inset-0 bg-gradient-to-r from-carbon via-carbon/85 to-carbon/20 sm:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-carbon via-carbon/30 to-carbon/60" />
-        {/* flame wash behind the screens */}
-        <div
-          className="absolute right-0 top-1/4 h-[55vh] w-[55vh] rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(255,59,29,0.18) 0%, rgba(255,59,29,0.05) 42%, transparent 70%)",
-          }}
-        />
+        {/* feather the cutout's left edge into the carbon page */}
+        <div className="absolute inset-0 bg-gradient-to-r from-carbon via-carbon/70 to-transparent sm:via-carbon/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-carbon via-transparent to-transparent" />
       </motion.div>
 
       {/* faint speed grid over everything for cohesion */}
