@@ -10,6 +10,7 @@ const LINKS = [
   { href: "/sim-centre", label: "Sim Centre" },
   { href: "/league", label: "League" },
   { href: "/products", label: "Hardware" },
+  { href: "/about", label: "About" },
 ];
 
 export function Wordmark({ className = "" }: { className?: string }) {

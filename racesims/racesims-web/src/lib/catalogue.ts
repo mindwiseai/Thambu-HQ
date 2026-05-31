@@ -64,6 +64,8 @@ export const COMPONENTS: ComponentGroup[] = [
     why: "Built in Chennai from 40×40 / 40×80 aluminium profile. Local manufacturing = quick service and customisation no imported rig offers.",
     options: [
       { id: "gt-cockpit", label: "RaceSims GT Sim Cockpit", brand: "RaceSims", price: 38500, default: true, note: "Handles GT, formula (with formula wheel + 3-pedal) and rally (with handbrake add-on)." },
+      { id: "kids-cockpit", label: "Conspit GT-B Kids Cockpit", brand: "Conspit", price: 65000, note: "Scaled-down GT cockpit for younger drivers — start the next generation on real hardware." },
+      { id: "fp-lite", label: "Conspit FP-Lite Formula Cockpit", brand: "Conspit", price: 115000, note: "Open-wheel seating geometry — laid-back formula position for true single-seater feel." },
     ],
   },
   {
@@ -93,7 +95,9 @@ export const COMPONENTS: ComponentGroup[] = [
     name: "Sim PC",
     why: "Built to order. Ryzen X3D + RTX class GPU — the right compute for high-refresh triple at race speed.",
     options: [
-      { id: "standard", label: "Standard Build", brand: "RaceSims", price: 240000, default: true, note: "Ryzen 7 9800X3D · RTX 5070 Ti · 32GB DDR5-6000 · 1TB Gen4 · 360 AIO · Win 11." },
+      { id: "pc-spec", label: "SPEC Sim PC", brand: "RaceSims", price: 210000, note: "The entry race build — handles single-screen and triple 1080p at full refresh." },
+      { id: "standard", label: "Pro-Grade Sim PC", brand: "RaceSims", price: 260000, default: true, note: "Ryzen 7 X3D · RTX-class GPU · 32GB DDR5 · 1TB Gen4 · 360 AIO. The triple-1440p volume build." },
+      { id: "pc-pro-spec", label: "PRO-SPEC Sim PC", brand: "RaceSims", price: 320000, note: "Maxed for triple 1440p / 4K, OLED and motion — content-creation and streaming headroom." },
     ],
   },
   {
@@ -151,6 +155,35 @@ export const PRESETS: Preset[] = [
     selections: { wheelbase: "vnm-supreme-25", wheel: "pw-1", pedals: "cpp-evo-3", cockpit: "gt-cockpit", seat: "pro-xl", display: "triple-32", pc: "standard", audio: "sonos-arc", haptics: "standard" },
     addons: ["motion"],
   },
+];
+
+// Pre-priced bundles + standalone products live on racesims.in but sit outside
+// the configurator flow. Surfaced on the products page so the catalogue matches
+// the live store. Prices are live-store INR (scraped Nov 2026).
+export type LiveExtra = {
+  id: string; name: string; brand: string; price: number; kind: string;
+  note: string; soldOut?: boolean;
+};
+
+export const LIVE_EXTRAS: LiveExtra[] = [
+  { id: "apex-bundle", name: "Conspit Apex Bundle", brand: "Conspit", price: 127500, kind: "Bundle",
+    note: "8Nm wheelbase + CPP Apex 2-pedal + 310 wheelrim. The cleanest entry into real direct drive." },
+  { id: "gt-bundle", name: "GT Bundle", brand: "Conspit", price: 230000, kind: "Bundle",
+    note: "Ares Platinum 20Nm + H.OA hub + CPP EVO pedal set. The serious GT racer's controls stack." },
+  { id: "formula-bundle", name: "Formula Bundle", brand: "Conspit", price: 220000, kind: "Bundle",
+    note: "Ares Platinum 20Nm + 290GP formula wheel + CPP Lite. Open-wheel inputs, dialled." },
+  { id: "rally-bundle", name: "Rally Bundle", brand: "Conspit", price: 231000, kind: "Bundle",
+    note: "Ares 12Nm + round wheel + CPP Lite 3-pedal + H3 hydraulic handbrake. Everything rally needs." },
+  { id: "fp-lite", name: "Conspit FP-Lite Formula Cockpit", brand: "Conspit", price: 115000, kind: "Cockpit",
+    note: "True open-wheel seating geometry for single-seater immersion." },
+  { id: "kids", name: "Conspit GT-B Kids Cockpit", brand: "Conspit", price: 65000, kind: "Cockpit",
+    note: "Scaled GT cockpit — start the next generation on real hardware." },
+  { id: "pro-spec-pc", name: "PRO-SPEC Sim PC", brand: "RaceSims", price: 320000, kind: "Sim PC",
+    note: "Maxed for triple 1440p / 4K, OLED and motion. Streaming and content headroom." },
+  { id: "moza-r5", name: "Moza Racing R5 Bundle", brand: "Moza", price: 49999, kind: "Bundle", soldOut: true,
+    note: "Entry direct-drive bundle for the Moza ecosystem. Restock-dependent." },
+  { id: "g29", name: "Logitech G29", brand: "Logitech", price: 29500, kind: "Wheel",
+    note: "The gear-driven gateway — for the first-timer who'll upgrade to direct drive next." },
 ];
 
 export const inr = (n: number) =>

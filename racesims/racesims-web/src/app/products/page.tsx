@@ -301,7 +301,7 @@ function RaceEngineer() {
       index: "01",
       title: "Race-engineer founder",
       body:
-        "RaceSims is founded by a race engineer with championship-winning experience across national and international series. The hardware speccing, rig geometry, and setup philosophy come from a paddock background — not a retail one.",
+        "RaceSims is founded by Thambusamy T.D. — a motorsport race engineer with 14+ years in Indian motorsport: ECU calibration, powertrain tuning, and telemetry-driven driver coaching. The hardware speccing, rig geometry and setup philosophy come from the paddock, not a retail counter.",
     },
     {
       index: "02",

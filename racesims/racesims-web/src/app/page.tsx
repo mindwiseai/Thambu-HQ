@@ -296,12 +296,12 @@ export default function HomePage() {
               </FadeUp>
               <FadeUp delay={0.1} className="mt-8">
                 <p className="text-base leading-relaxed text-ink/70">
-                  Thambu, the founder, is a working race engineer — not a hobbyist who got
-                  lucky with a product. Championship-winning campaigns. The kind of insight
-                  that changes how you tune force-feedback, spec a pedal box, or configure
-                  motion settings for a specific circuit. You can hire a consultant. You can
-                  buy cheaper hardware. You cannot buy a 130-title championship legacy in sim
-                  racing.
+                  Thambusamy T.D., the founder, is a working motorsport race engineer with
+                  14+ years in Indian motorsport — not a hobbyist who got lucky with a
+                  product. ECU calibration, powertrain tuning, telemetry-driven driver
+                  coaching. The kind of insight that changes how you tune force-feedback,
+                  spec a pedal box, or configure motion for a specific circuit. You can hire
+                  a consultant. You can buy cheaper hardware. You cannot buy a paddock career.
                 </p>
               </FadeUp>
               <FadeUp delay={0.2} className="mt-6">
@@ -317,7 +317,7 @@ export default function HomePage() {
             <div>
               <Stagger className="grid gap-px border-t border-ink/10">
                 {[
-                  { label: "Race-engineer founder", detail: "130+ championship titles. The benchmark for what good sim-to-real training looks like." },
+                  { label: "Race-engineer founder", detail: "14+ years in Indian motorsport — ECU calibration, tuning, telemetry coaching. Mentored by champion tuner Mr. Leelakrishnan." },
                   { label: "Built in Chennai", detail: "Cockpit frames manufactured locally from 40×40 aluminium profile. No import lead times, full service support." },
                   { label: "Conspit + VNM partnership", detail: "Authorised distributor for both primary brands — the widest direct-drive range available in India." },
                   { label: "IERL — the proving ground", detail: "A live championship series across the partner network. Real competition, real data, real improvement." },

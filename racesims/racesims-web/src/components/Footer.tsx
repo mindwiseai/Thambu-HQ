@@ -24,6 +24,7 @@ export function Footer() {
           { href: "/sim-centre", label: "Sim Centre" },
           { href: "/league", label: "The League" },
           { href: "/products", label: "Hardware" },
+          { href: "/about", label: "About" },
         ]} />
 
         <FooterCol title="Company" links={[
