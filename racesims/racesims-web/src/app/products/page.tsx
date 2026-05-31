@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { COMPONENTS, PRESETS, totalFor, inr, type ComponentGroup } from "@/lib/catalogue";
+import { GROUP_IMAGES } from "@/lib/optionImages";
 
 export const metadata: Metadata = {
   title: "Hardware | RaceSims",
@@ -254,6 +256,18 @@ function TheStack() {
                       {group.name}
                     </h3>
                   </div>
+
+                  {GROUP_IMAGES[group.id] ? (
+                    <div className="relative mb-4 aspect-[4/3] w-full overflow-hidden rounded-sm border border-line">
+                      <Image
+                        src={GROUP_IMAGES[group.id]}
+                        alt={group.name}
+                        fill
+                        sizes="(max-width:1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                      />
+                    </div>
+                  ) : null}
 
                   <p className="text-xs leading-relaxed text-fog flex-1 mb-5">
                     {group.why}

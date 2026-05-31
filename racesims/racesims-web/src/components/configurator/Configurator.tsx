@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ADDONS,
@@ -14,6 +15,7 @@ import {
   type Option,
   type Preset,
 } from "@/lib/catalogue";
+import { OPTION_IMAGES } from "@/lib/optionImages";
 
 // ─── helpers ─────────────────────────────────────────────────────────────────
 
@@ -188,6 +190,17 @@ function OptionCard({
                 : "border-fog-2 bg-transparent group-hover:border-fog",
             ].join(" ")}
           />
+          {OPTION_IMAGES[option.id] ? (
+            <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-sm border border-line bg-carbon-3">
+              <Image
+                src={OPTION_IMAGES[option.id]}
+                alt={option.label}
+                fill
+                sizes="48px"
+                className="object-cover"
+              />
+            </span>
+          ) : null}
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-2">
               <span className="font-medium text-sm text-foreground leading-snug">
