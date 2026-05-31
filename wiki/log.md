@@ -44,6 +44,14 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 - **Layout LOCKED at v7:** North-up, entrance EAST, office NE, motion faces N, all rigs face their walls.
 - Deliverables in `racesims/marketing/decks/`: `racesims-chennai-project-report.pdf` (8-pg consolidated), `racesims-chennai-5yr-business-plan.pdf`, `racesims-chennai-economics.pdf`. Floor plan + 3D in `racesims/`.
 
+## [2026-05-30] build | Academy curriculum upgrade (Almeida-inspired)
+- Inspiration: Almeida Racing Academy "Racing Technique" guide + web courses (Thambu shared).
+- Updated [[racesims-academy-curriculum]]: added "right order of skills" (stay on track → consistent → faster), four named skill **Levels** (Consistency&Confidence → Balance&Speed → Precision → Mastery), expanded concept glossary (+slip angle, neutral steer, max rotation point, brake bias, racecraft set).
+- Re-framed [[racesims-curriculum-advanced-circuit]] into Levels 2–4, mistake-first (BAD→GOOD) teaching; Initiation = Level 1.
+- Created [[racesims-curriculum-racecraft]] (COMPETE pillar: Foundations · Battle Dynamics · Strategies · **Psychology**) and [[racesims-academy-challenges]] (practice trainers + challenge gates tied to VMS/championship).
+- Updated index. Visual direction: keep cream editorial. Deck update (BAD/GOOD + new slides) follows.
+- Domain: racesims
+
 ## [2026-05-30] fix | Rebuilt all 9 concept diagrams (were geometrically wrong)
 - All 9 SVG concept diagrams in `motorsport-academy-curriculum.html` rebuilt on verifiable geometry after the first versions read as nonsense.
 - Method: each diagram authored as an isolated standalone, rendered via headless Chrome, visually verified, then ported into the deck. Racing line / late-apex / overtake / flick now use a clean L-corner (apex = inner corner) instead of error-prone arc-sweeps; braking + trail-braking are proper aligned telemetry traces; understeer/oversteer show correct car attitudes; weight transfer is a clean side-view.

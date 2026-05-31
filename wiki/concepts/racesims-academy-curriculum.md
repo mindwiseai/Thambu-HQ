@@ -15,6 +15,32 @@ The teaching architecture behind every [[racesims-motorsport-academy|Motorsport 
 
 ---
 
+## The right order of skills
+
+The single most common beginner mistake is chasing lap time first. The Academy teaches skills in the order that actually compounds:
+
+```
+1 · STAY ON TRACK   →   2 · BE CONSISTENT   →   3 · LOWER LAP TIME
+   (control & safety)     (repeatable laps)       (find the limit)
+```
+
+You cannot be fast before you are consistent, and you cannot be consistent before you have car control. Speed is the *output* of the first two, never the starting point. (Industry rule of thumb, which we cite to set expectations: ~2,500 focused hours to competence, ~10,000 to mastery — the Academy gets you to *competence* efficiently and hands you the path for the rest.)
+
+## The four skill Levels
+
+The Academy's skill ladder has four named Levels — a confidence ladder, not a session count. [[racesims-curriculum-initiation|Initiation]] delivers **Level 1**; [[racesims-curriculum-advanced-circuit|Advanced]] delivers **Levels 2–4**. Each Level is a milestone a driver can name and feel.
+
+| Level | Theme | The driver can… |
+|-------|-------|-----------------|
+| **L1** | Consistency & Confidence | stay on track, repeat clean laps, feel the grip limit |
+| **L2** | Balance & Speed | use weight transfer, trail brake, control the car at the limit |
+| **L3** | Precision | place the car to the centimetre — brake bias, rotation, complex corners |
+| **L4** | Mastery | drive actively at the true limit; read tyres, setup, conditions |
+
+Rally runs the same Level spine with discipline-specific content (loose surface, pace notes); [[racesims-curriculum-racecraft|Racecraft]] is a parallel pillar (racing *other people*, not the clock).
+
+---
+
 ## The session model — the B·D·A·D loop
 
 Every Academy session, in every programme, follows the same four-beat shape. Coaches are trained to run it identically so the experience is consistent across the network.
@@ -91,15 +117,34 @@ These are the named concepts illustrated in the curriculum deck. Each is introdu
 | Scandinavian flick | Rally S2 | Pendulum weight transfer to rotate on loose surface |
 | Left-foot braking | Rally S3 | Braking without lifting, to set attitude + keep boost |
 | Pace notes | Rally S4 | The co-driver's coded description of the road ahead |
+| Vision / looking ahead | Initiation S4 | Eyes up the track; plan 1+ second ahead, not at the nose |
+| Slip angle | Advanced L2 | Angle between where a tyre points and where it travels — grip peaks just before the slide |
+| Neutral steer | Advanced L2 | The true limit — neither pushing nor sliding; the fastest balance |
+| Maximum rotation point | Advanced L3 | The instant mid-corner the car is most rotated — place it where you want it |
+| Double / compound corner | Advanced L3 | Linked corners where the line through one serves the next |
+| Brake bias | Advanced L4 | Front/rear brake split — shifts balance under braking |
+| Engine braking | Advanced L4 | Deceleration from lifting the throttle; managed for stability |
+
+### Racecraft concepts (taught in [[racesims-curriculum-racecraft|Racecraft]])
+
+| Concept | One-line |
+|---------|----------|
+| Switchback / cutback | Sacrifice entry for a better exit and pass on the way out |
+| The divebomb | A late, deep inside lunge — high risk, occasionally right |
+| The squeeze | Using track position to force an opponent to back out |
+| Drafting / slipstream | Tucking into the low-pressure wake for straight-line speed |
+| The defensive line | Cover the inside without over-defending (which kills your exit) |
 
 ## Programme curricula (session-by-session)
 
 - [[racesims-curriculum-initiation]] — Tier 1 · 4 sessions
-- [[racesims-curriculum-advanced-circuit]] — Tier 2 Circuit · 8 sessions
+- [[racesims-curriculum-advanced-circuit]] — Tier 2 Circuit · 8 sessions across 4 skill Levels
 - [[racesims-curriculum-advanced-rally]] — Tier 2 Rally · 10 sessions
+- [[racesims-curriculum-racecraft]] — racing other people: Foundations · Battle Dynamics · Strategies · Psychology
 - [[racesims-curriculum-sim-reality]] — Tier 3 · 4 prep + real-car day
 - [[racesims-curriculum-track-day]] — Track Day Prep + Advanced Performance (separate)
 - [[racesims-curriculum-tuner-lab]] — Corporate engineering programme (separate)
+- [[racesims-academy-challenges]] — challenges, practice trainers + test-yourself gates
 
 ## Output artefacts
 

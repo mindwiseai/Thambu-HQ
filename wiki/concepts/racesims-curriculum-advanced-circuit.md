@@ -3,7 +3,7 @@ title: Curriculum — Advanced Circuit (Tier 2)
 type: concept
 domain: racesims
 status: LOCKED
-tags: [curriculum, advanced, circuit, tier-2, racecraft]
+tags: [curriculum, advanced, circuit, tier-2, car-handling, levels]
 updated: 2026-05-30
 ---
 
@@ -11,65 +11,69 @@ updated: 2026-05-30
 
 **Tier 2 · 8 sessions × 1 hr · ₹20,000 · requires Initiation Licence**
 
-Takes a licensed driver to championship-competitive circuit racer. Platforms: **Le Mans Ultimate + iRacing**. Runs the [[racesims-academy-curriculum|B·D·A·D model]]; every session is telemetry-led.
+Takes a licensed driver to championship-competitive circuit racer. Platforms: **Le Mans Ultimate + iRacing**. Runs the [[racesims-academy-curriculum|B·D·A·D model]]; every session is telemetry-led and taught **mistake-first** (here's the common error → here's the correct technique).
 
-> Outcome: certified championship-ready, qualified to target [[racesims-championship-architecture|Quarterly Shootouts]] and the Annual Grand Final.
+This is the **car-handling** half of being race-ready — mastering the car against the clock. Racing other people is the parallel [[racesims-curriculum-racecraft|Racecraft]] pillar.
+
+> Advanced delivers **Levels 2–4** of the [[racesims-academy-curriculum|four-Level skill ladder]]. Level 1 (Consistency & Confidence) is [[racesims-curriculum-initiation|Initiation]].
 
 ---
 
-## S1 — Trail Braking
+## Level 2 · Balance & Speed
 
-- **Brief:** Releasing brake pressure *as* you add steering — keeping load on the front tyres to make them bite and rotate the car into the apex. The single biggest pace unlock past beginner level.
-- **Drill:** Medium corners, brake → bleed → rotate.
-- **Debrief:** Brake/steering overlap trace — the pressure should taper as lock increases.
+*Use weight transfer and the brakes to control the car at the limit.*
 
-## S2 — Throttle Control & Corner Exit
+### S1 — Trail Braking
+- **Mistake:** finish braking before turning → car won't rotate, runs wide.
+- **Technique:** bleed brake pressure as you add lock — load stays on the front, the car rotates to the apex. Brake/steering overlap on the trace.
 
-- **Brief:** **Throttle modulation** to the traction limit; the exit phase sets your speed down the entire next straight. Managing wheelspin out of slow corners.
-- **Drill:** Slow-corner-onto-straight; maximise exit speed.
-- **Debrief:** Throttle trace + exit-speed delta.
+### S2 — Weight Transfer, Slip Angle & Neutral Steer
+- **Mistake:** stiff hands, fighting the car; never finding the edge of grip.
+- **Technique:** feel **slip angle** (grip peaks *just* before the slide) and the **light-hands** touch; find **neutral steer** — the true limit where the car neither pushes nor slides.
 
-## S3 — Advanced Line & Compromise Corners
+### S3 — Throttle Control & Corner Exit
+- **Mistake:** flooring it at the apex → wheelspin, slow exit.
+- **Technique:** feed throttle to the traction limit; the exit sets your speed down the whole next straight. **Slow in, fast out.**
 
-- **Brief:** **Compromise lines** — sacrificing one corner to be fast through the more important next one. Double-apex corners, corner sequences (esses), elevation & camber effects.
-- **Drill:** A linked complex; find the line that serves the *exit* corner.
-- **Debrief:** Line overlay through the sequence.
+## Level 3 · Precision
 
-## S4 — Car Setup Basics
+*Place the car to the centimetre.*
 
-- **Brief:** **Understeer vs oversteer** and how setup shifts balance — tyre pressures, ARB, spring, differential, wing. Enough to *dial out a problem*, not become an engineer (that's [[racesims-curriculum-tuner-lab|Tuner Lab]]).
-- **Drill:** Drive base setup → diagnose the balance issue → make one change → feel it.
-- **Debrief:** Balance diagnosis from the data.
+### S4 — The Line & Maximum Rotation Point
+- **Mistake:** driving a fixed line regardless of the car's state.
+- **Technique:** drive the *car*, not the line; get the **maximum rotation point** where you want it, then unwind.
 
-## S5 — Race Craft I: Starts & Overtaking
+### S5 — Complex Corners
+- **Mistake:** treating linked corners as separate, sacrificing the important one.
+- **Technique:** double apexes, **compound** & **deceiving** corners, blind corners, elevation & camber — the line through one serves the next.
 
-- **Brief:** Race starts and the run to Turn 1. Where passes actually happen: **late-brake**, **switchback/cutback**, **undercut**. Racing etiquette — one move, leave a car's width.
-- **Drill:** AI race; execute clean passes.
+### S6 — Car Balance & Setup Basics
+- **Mistake:** blaming the driver for a setup problem (or vice-versa).
+- **Technique:** read **understeer vs oversteer**, intro to **brake bias**; make one change, feel it. (Depth in [[racesims-curriculum-tuner-lab|Tuner Lab]].)
 
-## S6 — Race Craft II: Defending & Wheel-to-Wheel
+## Level 4 · Mastery
 
-- **Brief:** The **defensive line** — cover the inside without over-defending (which kills your exit). Side-by-side through a corner; spatial awareness.
-- **Drill:** Scripted wheel-to-wheel scenarios.
+*Drive actively at the true limit; read tyres, conditions, the day.*
 
-## S7 — Tyre & Race Management
+### S7 — Tyre & Race Management
+- **Mistake:** qualifying pace every lap → tyres gone by half-distance.
+- **Technique:** degradation, stint pacing, qualifying vs race pace, reading the long run.
 
-- **Brief:** **Tyre degradation**; managing pace to keep tyres alive to the flag. Qualifying pace vs race pace. Reading the long run; stint pacing.
-- **Drill:** A full race stint — manage deg to the end.
-- **Debrief:** Lap-time consistency across the stint.
-
-## S8 — Race Simulation + Assessment
-
-- **Format:** Full weekend — qualifying + sprint + feature race.
-- **Assessed on:** pace (within % of instructor), consistency, clean racecraft, and a result.
-- **Outcome:** **Championship-ready certification**; eligible to enter the Circuit Championship and target Shootouts.
+### S8 — The Limit + Race Simulation & Assessment
+- **Mistake:** passive driving — reacting late, smooth only by accident.
+- **Technique:** **active driving** at the limit, *smooth is fast* (input speed), consistency under pressure.
+- **Assessment:** full weekend — qualifying + sprint + feature. Graded on pace (within % of instructor), consistency, and a result.
+- **Outcome:** **Championship-ready certification** → enter the Circuit Championship; begin the [[racesims-curriculum-racecraft|Racecraft]] pillar.
 
 ---
 
 ## Connections
 
-- [[racesims-academy-curriculum]] — session model + glossary
-- [[racesims-curriculum-initiation]] — prerequisite
+- [[racesims-academy-curriculum]] — session model, skill Levels, glossary
+- [[racesims-curriculum-initiation]] — Level 1 prerequisite
+- [[racesims-curriculum-racecraft]] — the parallel pillar (racing other people)
 - [[racesims-championship-architecture]] — where graduates race
+- [[racesims-academy-challenges]] — challenges + drills that gate progress
 - [[racesims-curriculum-sim-reality]] — Tier 3 (Circuit → Buzzing Hornet)
 - [[racesims-curriculum-tuner-lab]] — deeper setup engineering
 - [[domains/racesims/_index]]
