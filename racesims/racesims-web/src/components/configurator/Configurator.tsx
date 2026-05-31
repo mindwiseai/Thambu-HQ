@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { saveBuild } from "@/lib/saveBuild";
 import {
   ADDONS,
   COMPONENTS,
@@ -609,7 +611,7 @@ function SummaryPanel({
   const [formOpen, setFormOpen] = useState(false);
 
   return (
-    <div className="flex flex-col gap-0">
+    <div id="summary" className="flex flex-col gap-0">
       {/* Total */}
       <div className="border-b border-line pb-5 mb-5">
         <p className="kicker mb-2">Build total</p>
@@ -671,14 +673,78 @@ function SummaryPanel({
           onClose={() => setFormOpen(false)}
         />
       ) : (
-        <button
-          onClick={() => setFormOpen(true)}
-          className="btn btn-flame w-full"
-        >
-          Request this build
-        </button>
+        <div className="flex flex-col gap-2">
+          <button
+            onClick={() => setFormOpen(true)}
+            className="btn btn-flame w-full"
+          >
+            Request this build
+          </button>
+          <SaveBuildButton selections={selections} addons={addons} total={total} />
+        </div>
       )}
     </div>
+  );
+}
+
+// ─── Save build to account / local ─────────────────────────────────────────────
+
+function SaveBuildButton({
+  selections,
+  addons,
+  total,
+}: {
+  selections: Record<string, string>;
+  addons: string[];
+  total: number;
+}) {
+  const [state, setState] = useState<"idle" | "saving" | "saved" | "local" | "signedout">("idle");
+
+  async function onSave() {
+    setState("saving");
+    const preset = activePreset(selections, addons);
+    const res = await saveBuild({
+      name: preset ? `${preset.name} build` : "Custom build",
+      preset: preset?.id ?? "custom",
+      selections,
+      addons,
+      total,
+    });
+    if (res.ok && res.where === "account") setState("saved");
+    else if (res.ok) setState("local");
+    else if (!res.ok && res.reason === "signed-out") setState("signedout");
+    else setState("idle");
+  }
+
+  if (state === "saved") {
+    return (
+      <Link href="/account" className="btn btn-ghost w-full justify-center !border-signal/40 !text-signal">
+        ✓ Saved to your account — view →
+      </Link>
+    );
+  }
+  if (state === "signedout") {
+    return (
+      <Link href="/login?next=/account" className="btn btn-ghost w-full justify-center">
+        Saved — sign in to keep it →
+      </Link>
+    );
+  }
+  if (state === "local") {
+    return (
+      <Link href="/account" className="btn btn-ghost w-full justify-center !border-amber/40 !text-amber">
+        ✓ Saved on this device — see it →
+      </Link>
+    );
+  }
+  return (
+    <button
+      onClick={onSave}
+      disabled={state === "saving"}
+      className="btn btn-ghost w-full justify-center disabled:opacity-60"
+    >
+      {state === "saving" ? "Saving…" : "Save this build"}
+    </button>
   );
 }
 
