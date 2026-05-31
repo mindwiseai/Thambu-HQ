@@ -16,11 +16,13 @@ The full build-and-launch plan for the chosen [[racesims-chennai-premium-baselin
 - `racesims-chennai-premium-forecast.xlsx` — live financial model
 - raw input: `2nd, 3rd & 4th floor plan.pdf` (typical floor, hall 8.73 × 12.15 m)
 
-## Layout (v6 — North-up · Vastu-oriented · see `racesims-chennai-floorplan.png` + `racesims-chennai-3d.html`)
-**Compass confirmed with [[thambu]]:** room taller N–S (**12.15 m**) than E–W (**8.73 m**). **Entrance = EAST** (right wall, off the lift lobby) · **Office/training = NORTH-EAST corner** (owner cabin, doubles as Phase-2 [[racesims-motorsport-academy|Academy]] room) · **motion rig faces NORTH**. Plan and 3D are both drawn North-up with a compass + north arrow.
-- **8 rigs:** 7 static grouped — **4 along the WEST wall** + **3 along the SOUTH wall** — plus the **motion hero near the NORTH wall** beside the office. **All rigs face their wall** (triple screens against the wall, driver facing out, back to the room — open behind for spectating; clearance ring + spot lighting on the motion rig).
-- **East (entrance) wall, N→S:** office (NE) → reception + **small coffee counter behind it** (SuperLap-style) → entrance → **two washroom doors** (kept clear).
-- **Lounge/spectator** centre; **leaderboard** on the north wall; **perimeter windows** on the west and south walls (bright property).
+## Layout (v6 — Vastu-oriented · compass corrected 2026-05-31 · see `racesims-chennai-floorplan.png` + `racesims-chennai-3d.html`)
+> [!note] Direction correction (2026-05-31): the earlier compass was inverted — **North is actually South** (180° flip: N↔S **and** E↔W). Physical layout unchanged & still Vastu-correct; only the labels were wrong. Directions below are the corrected, true ones; the plan image's top edge = **South**.
+
+**Room** taller N–S (**12.15 m**) than E–W (**8.73 m**). **Entrance = WEST** (right wall, off the lift lobby) · **Office/training = SOUTH-WEST corner** (owner cabin, doubles as Phase-2 [[racesims-motorsport-academy|Academy]] room) · **motion rig faces SOUTH**. Plan and 3D image-top = South (compass + arrow corrected).
+- **8 rigs:** 7 static grouped — **4 along the EAST wall** + **3 along the NORTH wall** — plus the **motion hero near the SOUTH wall** beside the office. **All rigs face their wall** (triple screens against the wall, driver facing out, back to the room — open behind for spectating; clearance ring + spot lighting on the motion rig).
+- **West (entrance) wall, S→N:** office (SW) → reception + **small coffee counter behind it** (SuperLap-style) → entrance → **two washroom doors** (kept clear).
+- **Lounge/spectator** centre; **leaderboard** on the south wall; **perimeter windows** on the east and north walls (bright property).
 - **Look & feel from SuperLap:** woven pendant lamps over reception, warm light, cream walls + light carpet, brushed-steel reception counter, menu board, ceiling track lighting. Editorial: cream + RS Red + Montserrat + JetBrains Mono.
 
 ## Phased timeline
@@ -37,7 +39,7 @@ GST already registered — **SAC 999694** (amusement/recreation, 18%). Lease reg
 > **Tax flag:** [[startup-tax-exemption|80-IAC]] not yet claimed this year — Y1 tax ~₹4k anyway (depreciation), but the exemption matters in Y2–3. CA to confirm FY2027 window and file.
 
 ## Procurement (critical path)
-Rigs via RaceSims as [[conspit]]/[[vnm]] distributor at cost: 7 × ₹5,84,900 + 1 × ₹9,84,900 = **₹50,79,200**. **Order by week 4** (8-week lead time is the schedule driver). Plus 6 KVA UPS, managed switch + business fibre, 3-phase wiring + DB, flooring/acoustics, lighting, reception + **coffee counter** (machine + counter ~₹0.8–1L), **glass training-room partition** (~₹1–1.5L), 65″ leaderboard, CCTV, fire kit, branding. Import via existing IE code through Chennai Harbour.
+Rigs via RaceSims as [[conspit]]/[[vnm]] distributor: **actual landed BOM = ₹44.64L** (4 Formula/GT + 4 Rally/GT, one rally on the 3-DOF motion platform — see [[2026-05-30-chennai-landed-cost-bom]]; supersedes the old ₹50,79,200 distributor estimate). **Order by week 4** (8-week lead time is the schedule driver). Plus **UPS ~8 kVA, PC-only** (motion drops on power loss; APC stock is 6/10 kVA — confirm VA **and** W; sits outdoors → IP-rated enclosure + heat-derating watch), 16-port managed Gigabit switch + WiFi-6 AP + ER605 dual-WAN + business fibre, 3-phase wiring + DB, carpet-tile flooring (acoustics → Phase 2), magnetic-track lighting, reception + **coffee counter** (machine + counter ~₹0.8–1L), **black-framed glass training-room partition**, 65″ QLED leaderboard, 4-cam CCTV, fire kit, branding. Import via existing IE code through Chennai Harbour. *(Full fit-out schedule: [[racesims-chennai-fitout]]; canonical capital: [[racesims-chennai-premium-baseline]].)*
 
 **HVAC (air conditioning).** Calculated peak cooling load **~6 tons** (PCs+screens 5.4 kW · solar gain through glazing 9.2 kW · fresh air 2.5 kW · lighting 1.3 kW · people 2.3 kW = ~20.7 kW). **Install ~8 tons** (≈25% margin for Chennai summer, full-house crowds, PC heat spikes, 1-unit redundancy): **4 × 2-ton 5-star inverter splits** — 3 across the open hall + 1 in the NE office/training room. **The glazing is the swing factor** — spec solar film + internal blinds or step up to 9–10 T. Capex **~₹4.5L** (incl. copper, stabilisers, install). Running cost sits inside the ₹45–50k/mo electricity.
 
