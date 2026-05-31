@@ -9,6 +9,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-01] ingest | Chennai deck cleanup, compass correction & builder scripts
+- Source: [[2026-05-31-chennai-cleanup-compass-builders]]
+- Created: 2 new pages — [[2026-05-31-chennai-cleanup-compass-builders]] (source) · [[racesims-website]] (new concept: Next.js site)
+- Updated: [[racesims-chennai-premium-baseline]] (canonical capital block, compass, directions) · [[racesims-chennai-execution-plan]] (compass + numbers) · [[racesims-chennai-partnerships]] (₹70.2L→₹68.46L) · [[racesims-chennai-flagship]] (upside model banner) · [[wiki/hot|hot]] · [[wiki/log|log]] · [[wiki/index|index]]
+- Domain: racesims
+
 ## [2026-05-31] edit | Chennai compass correction (N↔S, 180°) + numbers standardised to project report
 - [[thambu]]: "what I told you north is actually south." Floorplan compass was inverted 180° (N↔S **and** E↔W). **Physical layout unchanged & still Vastu-correct — only labels were wrong.**
 - Corrected directions (entrance WEST · office SW · motion faces SOUTH · rigs east+north walls · leaderboard south · windows east/north) in: [[racesims-chennai-premium-baseline]] floor-fit section, `racesims-chennai-3d.html` (HUD/buttons/compass widget/floor north-arrow flipped to +z), `racesims-chennai-floorplan.png` (banner-stamped; no generator → flagged for full regen; `-PRECORRECTION-backup.png` saved).

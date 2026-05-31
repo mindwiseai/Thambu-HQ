@@ -130,6 +130,9 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[racesims-curriculum-sim-reality]] · [[racesims-curriculum-track-day]] · [[racesims-curriculum-tuner-lab]]
 - [[racesims-academy-challenges]] — challenges, practice trainers + test-yourself gates
 
+### Digital
+- [[racesims-website]] ⭐ — Next.js site (racesims-web): homepage, configurator, Chennai booking, Driver Account + Academy enrolment (Supabase)
+
 ### Ops
 - [[discord-server-setup-kit]]
 - [[racesims-bot]]

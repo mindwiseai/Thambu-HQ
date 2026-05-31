@@ -8,7 +8,15 @@ updated: 2026-05-30
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-31 (latest) — Chennai compass corrected (N↔S) + numbers standardised to project report
+## 2026-06-01 (latest) — Deck cleanup · worktree salvage · compass corrected · builders in-repo
+- **4 canonical decks** (all others archived): `racesims-chennai-project-report.pdf` · `racesims-multi-centre-rollout.pdf` · `racesims-chennai-partner-corsair.pdf` · `motorsport-academy-curriculum.pdf`.
+- **Worktrees** 16→9. 3 branches salvaged: `admiring-spence` → [[racesims-website]] (Next.js site, 104 files, Supabase auth); `brave-stonebraker` → improved Corsair deck + MD Computers quote; `wizardly-jemison` → GMC feed audit docs.
+- **Compass corrected** (N↔S, E↔W, 180° flip): entrance **WEST** · office **SW** · motion faces **SOUTH** · rigs **east+north** walls · leaderboard **south**. Layout unchanged, still Vastu-correct. All assets updated incl. project report pp.4-5 (re-generated).
+- **Builder scripts in-repo** at `racesims/marketing/decks/builders/`: `build-chennai-project-report.py` (11pp PDF) + `build-chennai-floorplan.py` (3174×2246px PNG). Regenerate with `python3 <script>`.
+- **Numbers**: project report = single source of truth everywhere. See [[racesims-chennai-premium-baseline]] canonical block.
+- Source: [[2026-05-31-chennai-cleanup-compass-builders]].
+
+## 2026-05-31 — Chennai compass corrected (N↔S) + numbers standardised to project report
 - **Direction fix:** [[thambu]] flagged the floorplan compass was **inverted** — what was labelled **North is actually South** (180° flip: N↔S **and** E↔W). **Physical layout unchanged and still Vastu-correct; only the labels were wrong.** True directions now: **entrance WEST · office/training SW corner · motion rig faces SOUTH · 7 static rigs on east+north walls · leaderboard south wall · windows east/north.** Updated [[racesims-chennai-premium-baseline]] floor-fit + `racesims-chennai-3d.html` (labels/compass/floor-arrow) + stamped a correction banner on `racesims-chennai-floorplan.png` (no generator → needs full regen; pre-correction backup saved).
 - **Numbers standardised:** the **project report is the single source of truth** for ALL Chennai figures — equipment (landed) ₹44.64L · fit-out ₹14.20L · gross ₹77.21L · ITC (₹8.75L) · **net ₹68.46L** · at-risk ₹59.14L · CoC ₹5.48L/yr · **break-even 11.5%** · EBITDA ₹3.57cr / PAT ₹2.11cr · payback ~2.0yr · **~3.1×**. Baseline reconciled (old ₹50.79L equip / ₹76.3L net / 2.8× → superseded; 6-rig table tagged historical). **TODO:** propagate to [[racesims-chennai-partnerships]] · [[racesims-chennai-flagship]] · [[racesims-chennai-execution-plan]].
 
@@ -38,12 +46,9 @@ Most recently touched context. Read this first for any query — it often answer
 - **Primary report:** `racesims-chennai-project-report.pdf` is now THE project report (landed-cost basis, 11 pp, optimised fit-out — promoted 2026-05-30 from `-landed-cost`). The old distributor-value version (10 pp) is archived to `marketing/decks/archive/`. Old drafts archived.
 - **Office (NE corner):** ~12.2 × 12.1 ft (~148 sq ft).
 
-## 2026-05-30 — Chennai partnerships + Nungambakkam + costing
-- **Location: Nungambakkam.** Brand-partnership/sponsorship plan to cut list capital toward ~₹55-58L — [[racesims-chennai-partnerships]]. Rig split 2 Conspit + 2 VNM + 2 Fanatec + 2 reserved (showcase). Partner pitches: **Corsair** (PC + Fanatec — Corsair owns Fanatec), Zotac (GPUs ₹9.1L), Samsung (monitors ₹5.8L + leaderboard TV), AMD (CPUs ₹2.5L). Corsair deck built; Zotac/Samsung/AMD/Fanatec pending.
-
-## 2026-05-30 — Chennai property LOCKED · layout v7 · AC
-- **Property LOCKED, opens July 2026.** Layout v7 (Vastu) — *directions corrected 2026-05-31, see top entry:* entrance **WEST**, office/training **SW** corner, motion rig faces **SOUTH**, 7 static rigs on **east+north** walls, all screens against walls. Room 8.73 m E–W × 12.15 m N–S (~1,142 sqft). See [[racesims-chennai-premium-baseline]] (LOCKED), `racesims-chennai-floorplan.png`, `racesims-chennai-3d.html`.
-- **AC: ~6 T calc → install 8 T.** Master rate card: 30 min ₹750 · 1 hr ₹1,250 · Motion +₹500/hr ([[racesims-master-rate-card]]).
+## 2026-05-30 — Chennai property LOCKED · layout v7 · partnerships
+- **Property LOCKED, opens July 2026.** Layout v7 (Vastu, directions corrected 2026-05-31): entrance **WEST** · office **SW** · motion faces **SOUTH** · rigs east+north walls. Room 8.73×12.15 m (~1,142 sqft). AC: ~6T calc → install **8T**. Rate card: 30 min ₹750 · 1 hr ₹1,250 · Motion +₹500/hr ([[racesims-master-rate-card]]).
+- **Partnerships**: sponsorship plan → cut list capital ~₹55-58L. Rig split 2 Conspit + 2 VNM + 2 Fanatec + 2 reserved. Corsair deck (PC + Fanatec) built; Zotac/Samsung/AMD pending.
 
 ---
 *Older entries trimmed (oldest-first per hot-cache rule); full history in `wiki/log.md` and the linked concept/source pages.*
