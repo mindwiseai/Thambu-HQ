@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { LineReveal, EASE } from "@/components/motion/primitives";
@@ -10,7 +11,6 @@ const EASE_ARR = EASE;
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
-  // Parallax: content drifts up & fades as you scroll past the hero.
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -18,6 +18,8 @@ export function Hero() {
   const contentY = useTransform(scrollYProgress, [0, 1], [0, -120]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
   const gridY = useTransform(scrollYProgress, [0, 1], [0, 160]);
+  const wheelY = useTransform(scrollYProgress, [0, 1], [0, -60]);
+  const wheelScale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
 
   return (
     <section
@@ -25,15 +27,9 @@ export function Hero() {
       className="relative flex min-h-screen flex-col justify-between overflow-hidden bg-carbon pt-36 md:pt-44"
     >
       {/* ── Animated speed-grid backdrop ─────────────────────────────── */}
-      <motion.div
-        style={{ y: gridY }}
-        className="pointer-events-none absolute inset-0 z-0"
-        aria-hidden
-      >
+      <motion.div style={{ y: gridY }} className="pointer-events-none absolute inset-0 z-0" aria-hidden>
         <div className="grid-lines grid-lines-fade absolute inset-0 opacity-70" />
-        {/* sweeping speed lines */}
         <SpeedLines />
-        {/* radial flame glow, breathing */}
         <motion.div
           className="absolute left-1/2 top-1/3 h-[60vh] w-[60vh] -translate-x-1/2 rounded-full"
           style={{
@@ -61,63 +57,98 @@ export function Hero() {
         transition={{ duration: 1.1, ease: EASE_ARR, delay: 0.45 }}
       />
 
-      {/* ── Hero body ────────────────────────────────────────────────── */}
-      <motion.div
-        style={{ y: contentY, opacity: contentOpacity }}
-        className="relative z-20 mx-auto w-full max-w-7xl px-5 sm:px-8"
-      >
-        {/* kicker */}
-        <motion.div
-          className="flex items-center gap-3"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-        >
-          <span className="live-dot-red live-dot" />
-          <span className="kicker tracking-[0.25em]">
-            Sim Racing · Engineered in India
-          </span>
+      {/* ── Hero body: text + product ────────────────────────────────── */}
+      <div className="relative z-20 mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 items-center gap-8 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr]">
+        {/* left — copy */}
+        <motion.div style={{ y: contentY, opacity: contentOpacity }}>
+          <motion.div
+            className="flex items-center gap-3"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
+            <span className="live-dot-red live-dot" />
+            <span className="kicker tracking-[0.25em]">Sim Racing · Engineered in India</span>
+          </motion.div>
+
+          <h1 className="headline mt-8 text-[clamp(3rem,9vw,7.5rem)] leading-[0.86]">
+            <LineReveal
+              delay={0.35}
+              lines={[
+                <span key="1" className="text-foreground">FEEL EVERY</span>,
+                <span key="2" className="text-flame">APEX</span>,
+              ]}
+            />
+          </h1>
+
+          <motion.p
+            className="mt-8 max-w-xl text-base leading-relaxed text-fog sm:text-lg"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: EASE_ARR, delay: 0.9 }}
+          >
+            Built by a race engineer with championship-winning pedigree. Spec a simulator from
+            first principles, book a rig at the Chennai Sim Centre, race the Indian Esports
+            Racing League.
+          </motion.p>
+
+          <motion.div
+            className="mt-10 flex flex-wrap gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: EASE_ARR, delay: 1.05 }}
+          >
+            <Link href="/configurator" className="btn btn-flame group">
+              Build your sim
+              <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+            </Link>
+            <Link href="/sim-centre" className="btn btn-ghost">
+              Book the Chennai centre
+            </Link>
+          </motion.div>
         </motion.div>
 
-        {/* headline — kinetic line reveal */}
-        <h1 className="headline mt-8 text-[clamp(3.5rem,12vw,9rem)] leading-[0.86]">
-          <LineReveal
-            delay={0.35}
-            lines={[
-              <span key="1" className="text-foreground">FEEL EVERY</span>,
-              <span key="2" className="text-flame">APEX</span>,
-            ]}
+        {/* right — the wheel, spotlit + floating */}
+        <motion.div
+          style={{ y: wheelY, scale: wheelScale }}
+          className="relative hidden aspect-square w-full max-w-lg justify-self-center lg:block"
+          initial={{ opacity: 0, scale: 0.92 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: EASE_ARR, delay: 0.5 }}
+        >
+          {/* glow disc behind */}
+          <div
+            aria-hidden
+            className="absolute inset-0 rounded-full"
+            style={{
+              background:
+                "radial-gradient(circle at 50% 45%, rgba(255,59,29,0.22) 0%, rgba(255,59,29,0.05) 38%, transparent 66%)",
+            }}
           />
-        </h1>
-
-        {/* subcopy */}
-        <motion.p
-          className="mt-8 max-w-xl text-base leading-relaxed text-fog sm:text-lg"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: EASE_ARR, delay: 0.9 }}
-        >
-          Built by a race engineer with championship-winning pedigree. Spec a
-          simulator from first principles, book a rig at the Chennai Sim Centre,
-          race the Indian Esports Racing League.
-        </motion.p>
-
-        {/* CTAs */}
-        <motion.div
-          className="mt-10 flex flex-wrap gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: EASE_ARR, delay: 1.05 }}
-        >
-          <Link href="/configurator" className="btn btn-flame group">
-            Build your sim
-            <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-          </Link>
-          <Link href="/sim-centre" className="btn btn-ghost">
-            Book the Chennai centre
-          </Link>
+          {/* slow float */}
+          <motion.div
+            className="relative h-full w-full"
+            animate={{ y: [0, -14, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <Image
+              src="/hero/wheel.jpg"
+              alt="Conspit GT steering wheel on a RaceSims direct-drive base"
+              fill
+              priority
+              sizes="(max-width:1024px) 0px, 40vw"
+              className="object-contain [mask-image:radial-gradient(circle_at_50%_48%,#000_52%,transparent_72%)]"
+            />
+          </motion.div>
+          {/* rotating accent ring */}
+          <motion.div
+            aria-hidden
+            className="absolute inset-[8%] rounded-full border border-flame/20"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+          />
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* telemetry stats strip */}
       <motion.div
