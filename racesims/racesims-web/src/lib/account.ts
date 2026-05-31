@@ -55,8 +55,34 @@ export type Booking = {
   status: string;
 };
 
+export type Enrolment = {
+  id: string;
+  programme: string;          // slug
+  programme_name: string;
+  sessions_total: number;
+  sessions_done: number;
+  status: string;             // enquiry | active | completed
+  centre: string;
+  created_at: string;
+};
+
+export type Licence = {
+  id: string;
+  name: string;
+  earned_at: string;
+};
+
 // Demo data shown in preview mode (no Supabase yet) so the dashboard reads as
 // real. Clearly fictional, labelled "preview" in the UI.
+export const DEMO_ENROLMENTS: Enrolment[] = [
+  { id: "e1", programme: "advanced-circuit", programme_name: "Advanced Circuit", sessions_total: 8, sessions_done: 5, status: "active", centre: "chennai", created_at: "2026-04-12" },
+  { id: "e2", programme: "initiation", programme_name: "Initiation", sessions_total: 4, sessions_done: 4, status: "completed", centre: "chennai", created_at: "2026-03-22" },
+];
+
+export const DEMO_LICENCES: Licence[] = [
+  { id: "l1", name: "Initiation Licence", earned_at: "2026-04-08" },
+];
+
 export const DEMO_PROFILE: Profile = {
   id: "demo",
   display_name: "Driver",

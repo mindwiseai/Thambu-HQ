@@ -56,17 +56,42 @@ create table if not exists public.bookings (
   created_at  timestamptz default now()
 );
 
+-- ── enrolments ──────────────────────────────────────────────────────────────
+-- A driver signing up for an Academy programme. Progress tracked by sessions.
+create table if not exists public.enrolments (
+  id              uuid primary key default gen_random_uuid(),
+  user_id         uuid not null references auth.users(id) on delete cascade,
+  programme       text not null,                 -- programme slug
+  programme_name  text not null,
+  sessions_total  integer not null default 0,
+  sessions_done   integer not null default 0,
+  status          text default 'enquiry',        -- enquiry | active | completed
+  centre          text default 'chennai',
+  created_at      timestamptz default now()
+);
+
+-- ── licences ────────────────────────────────────────────────────────────────
+-- Earned credentials — the rungs of the Ladder.
+create table if not exists public.licences (
+  id          uuid primary key default gen_random_uuid(),
+  user_id     uuid not null references auth.users(id) on delete cascade,
+  name        text not null,                     -- "Initiation Licence" etc
+  earned_at   timestamptz default now()
+);
+
 -- ── Row-Level Security ──────────────────────────────────────────────────────
 alter table public.profiles       enable row level security;
 alter table public.saved_builds   enable row level security;
 alter table public.journey_events enable row level security;
 alter table public.bookings       enable row level security;
+alter table public.enrolments     enable row level security;
+alter table public.licences       enable row level security;
 
 -- helper: a policy that lets a user touch only their own rows
 do $$
 declare t text;
 begin
-  foreach t in array array['saved_builds','journey_events','bookings'] loop
+  foreach t in array array['saved_builds','journey_events','bookings','enrolments','licences'] loop
     execute format('drop policy if exists "own rows" on public.%I', t);
     execute format(
       'create policy "own rows" on public.%I for all

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FadeUp, Stagger, StaggerItem } from "@/components/motion/primitives";
 import { PROGRAMMES, BDAD, inr } from "@/lib/academy";
 import { flagship } from "@/lib/centres";
+import { EnrolButton } from "@/components/academy/EnrolButton";
 
 export const metadata: Metadata = {
   title: "Train — The Motorsport Academy",
@@ -208,9 +209,11 @@ function ProgrammeCard({ p, trackLabel }: { p: { slug: string; tier: string; nam
         <span className="headline text-2xl text-amber">
           {p.price > 0 ? inr(p.price) : "On application"}
         </span>
-        <Link href="/sim-centre" className="mono text-xs uppercase tracking-widest text-flame transition-all group-hover:tracking-[0.2em]">
-          Enquire / book →
-        </Link>
+        <EnrolButton
+          programme={p.slug}
+          programmeName={p.name}
+          sessionsTotal={parseInt(p.sessions, 10) || 0}
+        />
       </div>
     </div>
   );

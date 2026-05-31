@@ -3,13 +3,16 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import {
-  DEMO_PROFILE, DEMO_JOURNEY, tierFor, nextTier, TIERS,
+  DEMO_PROFILE, DEMO_JOURNEY, DEMO_ENROLMENTS, DEMO_LICENCES, tierFor, nextTier, TIERS,
   type Profile, type JourneyEvent, type SavedBuild, type Booking,
+  type Enrolment, type Licence,
 } from "@/lib/account";
 import { TierProgress } from "@/components/account/TierProgress";
 import { JourneyTimeline } from "@/components/account/JourneyTimeline";
 import { SavedBuilds } from "@/components/account/SavedBuilds";
 import { Bookings } from "@/components/account/Bookings";
+import { Licences } from "@/components/account/Licences";
+import { ProgrammeProgress } from "@/components/account/ProgrammeProgress";
 import { inr } from "@/lib/account";
 
 export const metadata: Metadata = {
@@ -24,6 +27,8 @@ export default async function AccountPage() {
   let journey: JourneyEvent[] = DEMO_JOURNEY;
   let builds: SavedBuild[] = [];
   let bookings: Booking[] = [];
+  let enrolments: Enrolment[] = DEMO_ENROLMENTS;
+  let licences: Licence[] = DEMO_LICENCES;
   let preview = true;
   let email = "";
 
@@ -32,16 +37,20 @@ export default async function AccountPage() {
     if (user) {
       preview = false;
       email = user.email ?? "";
-      const [{ data: p }, { data: j }, { data: b }, { data: bk }] = await Promise.all([
+      const [{ data: p }, { data: j }, { data: b }, { data: bk }, { data: en }, { data: lic }] = await Promise.all([
         supabase.from("profiles").select("*").eq("id", user.id).single(),
         supabase.from("journey_events").select("*").eq("user_id", user.id).order("occurred_at", { ascending: false }),
         supabase.from("saved_builds").select("*").eq("user_id", user.id).order("created_at", { ascending: false }),
         supabase.from("bookings").select("*").eq("user_id", user.id).order("booked_for", { ascending: false }),
+        supabase.from("enrolments").select("*").eq("user_id", user.id).order("created_at", { ascending: false }),
+        supabase.from("licences").select("*").eq("user_id", user.id).order("earned_at", { ascending: false }),
       ]);
       if (p) profile = p as Profile;
       journey = (j as JourneyEvent[]) ?? [];
       builds = (b as SavedBuild[]) ?? [];
       bookings = (bk as Booking[]) ?? [];
+      enrolments = (en as Enrolment[]) ?? [];
+      licences = (lic as Licence[]) ?? [];
     }
   }
 
@@ -88,12 +97,22 @@ export default async function AccountPage() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
           <div className="space-y-12">
             <div>
-              <SectionHead n="01" title="Training journey"
+              <SectionHead n="01" title="Licences earned"
+                blurb="The rungs of the Ladder. Each programme you complete earns a credential." />
+              <Licences licences={licences} />
+            </div>
+            <div>
+              <SectionHead n="02" title="Programme progress"
+                blurb="Your Academy enrolments and how far through you are." />
+              <ProgrammeProgress enrolments={enrolments} preview={preview} />
+            </div>
+            <div>
+              <SectionHead n="03" title="Training journey"
                 blurb="Every session, milestone and league round — your development on record." />
               <JourneyTimeline events={journey} />
             </div>
             <div>
-              <SectionHead n="02" title="Saved builds"
+              <SectionHead n="04" title="Saved builds"
                 blurb="Configurator specs you've saved. Pick up where you left off." />
               <SavedBuilds builds={builds} preview={preview} />
             </div>
@@ -101,11 +120,11 @@ export default async function AccountPage() {
 
           <div className="space-y-12">
             <div>
-              <SectionHead n="03" title="Bookings" blurb="Chennai Sim Centre sessions." />
+              <SectionHead n="05" title="Bookings" blurb="Chennai Sim Centre sessions." />
               <Bookings bookings={bookings} preview={preview} />
             </div>
             <div>
-              <SectionHead n="04" title="Your tier perks" blurb="" />
+              <SectionHead n="06" title="Your tier perks" blurb="" />
               <ul className="mt-5 space-y-px border-t border-line">
                 {TIERS.map((t) => {
                   const reached = points >= t.min;
