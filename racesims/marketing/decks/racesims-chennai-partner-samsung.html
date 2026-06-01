@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>RaceSims · Chennai — Samsung Partnership Proposal</title>
+<meta name="viewport" content="width=1280"/>
+<style>
+
+  :root{
+    --black:#16130e; --cream:#F4EFE3; --cream-2:#EAE3D4;
+    --ink:#16130e; --ink-mid:#3A3528; --muted-d:#CFC7B8;
+    --red:#D81E33; --yellow:#FFD200;
+    --sig:#1428A0; --sigink:#ffffff;
+    --sans:'Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+  }
+  @page{ size:1280px 720px; margin:0; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:#2a2620; font-family:var(--sans); color:var(--ink); -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  body{ padding:32px 0; }
+  .slide{ width:1280px; height:720px; margin:0 auto 32px; background:var(--cream); position:relative; overflow:hidden; page-break-after:always; page-break-inside:avoid; break-inside:avoid; box-shadow:0 6px 30px rgba(0,0,0,0.28); }
+  .slide.dark{ background:var(--black); color:var(--cream); }
+  .slide.red{ background:var(--red); color:#fff; }
+  .slide:last-child{ page-break-after:auto; margin-bottom:0; }
+  @media print{ html,body{background:#fff;} body{padding:0;margin:0;} .slide{margin:0 auto;box-shadow:none;} }
+  .inner{ padding:56px 64px; height:100%; display:flex; flex-direction:column; position:relative; z-index:2; }
+  .inner:not(.cover):not(.close){ padding-top:90px; }
+
+  .sails{ display:block; } .sails path{ fill:var(--logo,#16130e); }
+  .lockup{ position:absolute; top:44px; right:64px; display:flex; align-items:center; gap:12px; z-index:4; }
+  .lockup .wm{ font-weight:700; letter-spacing:.26em; font-size:17px; }
+  .slide:not(.dark):not(.red) .lockup{ --logo:#16130e; } .slide:not(.dark):not(.red) .lockup .wm{ color:#16130e; }
+  .slide.dark .lockup{ --logo:var(--sigsail); } .slide.dark .lockup .wm{ color:#F4EFE3; }
+  .slide.red .lockup{ --logo:#fff; } .slide.red .lockup .wm{ color:#fff; }
+
+  .rs-lockup{ position:absolute; top:42px; left:64px; display:flex; align-items:center; gap:9px; z-index:4; }
+  .rs-lockup .rs-tick{ width:5px; height:19px; border-radius:1px; display:inline-block; }
+  .rs-lockup .rs-wm{ font-weight:800; letter-spacing:-0.01em; font-size:19px; }
+  .slide:not(.dark):not(.red) .rs-lockup .rs-wm{ color:#16130e; } .slide:not(.dark):not(.red) .rs-lockup .rs-tick{ background:var(--red); }
+  .slide.dark .rs-lockup .rs-wm{ color:#F4EFE3; } .slide.dark .rs-lockup .rs-tick{ background:var(--sig); }
+  .slide.red .rs-lockup .rs-wm{ color:#fff; } .slide.red .rs-lockup .rs-tick{ background:#16130e; }
+
+  .watermark{ position:absolute; right:-60px; bottom:-90px; width:520px; height:520px; z-index:1; pointer-events:none; }
+  .watermark path{ fill:rgba(22,19,14,0.05); }
+  .slide.red .watermark path{ fill:rgba(255,255,255,0.09); }
+  .slide.dark .watermark path{ fill:rgba(255,255,255,0.05); }
+
+  .eyebrow{ font-size:12px; font-weight:700; letter-spacing:.26em; text-transform:uppercase; color:var(--red); margin-bottom:14px; }
+  .slide.dark .eyebrow,.slide.red .eyebrow{ color:var(--sig); }
+  h1{ font-weight:700; letter-spacing:-0.02em; line-height:1.02; }
+  h2{ font-size:46px; font-weight:700; letter-spacing:-0.02em; line-height:1.04; margin-bottom:18px; }
+  .hl{ color:var(--sig); }
+  p{ font-size:19px; line-height:1.5; color:var(--ink-mid); }
+  .slide.dark p,.slide.red p{ color:var(--muted-d); }
+  p.lead{ font-size:21px; max-width:940px; color:#2c2820; }
+  .slide.dark p.lead{ color:var(--muted-d); } .slide.red p.lead{ color:#fff; }
+  b{ font-weight:700; color:var(--ink); } .slide.dark b{ color:#fff; } .slide.red b{ color:#fff; }
+
+  .cover{ justify-content:center; }
+  .cover .pp{ color:var(--sig); font-weight:700; letter-spacing:.26em; font-size:13px; text-transform:uppercase; margin-bottom:22px; }
+  .cover h1{ font-size:82px; }
+  .cover h1 .dot{ color:var(--cream); } .cover h1 .chennai{ color:var(--red); }
+  .cover .teaming{ color:var(--muted-d); font-weight:700; font-size:17px; margin-top:18px; }
+  .cover-logo{ position:absolute; right:96px; top:50%; transform:translateY(-46%); text-align:center; z-index:3; }
+  .cover-logo .sails path{ fill:var(--sigsail); }
+  .cover-logo .wm{ color:#F4EFE3; font-weight:700; letter-spacing:.22em; font-size:34px; margin-top:8px; }
+  .cover-logo .fanmark{ color:#F4EFE3; font-weight:800; letter-spacing:.1em; font-size:64px; line-height:1; }
+  .cover-fan{ position:absolute; right:96px; bottom:128px; font-weight:800; letter-spacing:.08em; font-size:84px; color:#F4EFE3; z-index:3; }
+  .footer-band{ position:absolute; left:0; right:0; bottom:0; background:var(--sig); padding:22px 64px; z-index:3; }
+  .footer-band .l1{ color:var(--sigink); font-weight:700; font-size:19px; }
+  .footer-band .l2{ color:var(--sigink); font-weight:700; font-size:12.5px; letter-spacing:.04em; opacity:.85; margin-top:3px; }
+
+  .stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:auto; }
+  .stat{ background:var(--black); border-radius:8px; padding:22px 22px 20px; }
+  .stat .v{ color:var(--sig); font-weight:700; font-size:42px; letter-spacing:-0.02em; line-height:1; margin-bottom:10px; }
+  .stat .v.sm{ font-size:26px; }
+  .stat .n{ color:var(--muted-d); font-size:13.5px; line-height:1.4; font-weight:500; }
+
+  .checks{ list-style:none; padding:0; margin-top:6px; }
+  .checks li{ position:relative; padding:0 0 18px 40px; font-size:19px; line-height:1.45; color:#2c2820; }
+  .checks li::before{ content:""; position:absolute; left:0; top:3px; width:18px; height:18px; background:var(--sig); border-radius:3px; }
+  .pillars{ color:var(--red); font-weight:700; font-size:22px; margin-top:10px; }
+
+  .where{ list-style:none; padding:0; margin-top:24px; }
+  .where li{ position:relative; padding:15px 0 15px 30px; font-size:18px; line-height:1.45; color:#2c2820; border-bottom:1px solid rgba(22,19,14,0.10); }
+  .where li:last-child{ border-bottom:none; }
+  .where li::before{ content:"\25B8"; position:absolute; left:0; color:var(--red); font-weight:700; }
+  .where li b{ font-weight:700; }
+
+  /* big single-ask number */
+  .askwrap{ margin-top:14px; display:flex; align-items:flex-end; gap:40px; }
+  .bignum{ font-weight:800; font-size:150px; letter-spacing:-0.04em; line-height:.8; color:var(--sig); }
+  .askmeta{ padding-bottom:14px; }
+  .askmeta .lab{ font-weight:700; font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted-d); margin-bottom:8px; }
+  .askmeta .desc{ font-size:18px; line-height:1.5; max-width:430px; }
+  .slide.red .askmeta .desc,.slide.dark .askmeta .desc{ color:#fff; }
+  .totalbar{ margin-top:26px; display:flex; align-items:center; justify-content:space-between; background:var(--sig); border-radius:10px; padding:20px 30px; }
+  .totalbar .lab{ color:var(--sigink); font-weight:700; font-size:15px; letter-spacing:.06em; text-transform:uppercase; }
+  .totalbar .amt{ color:var(--sigink); font-weight:700; font-size:36px; letter-spacing:-0.02em; }
+  .returnline{ margin-top:22px; font-size:17px; line-height:1.5; }
+  .slide.red .returnline,.slide.dark .returnline{ color:var(--muted-d); }
+  .slide.red .returnline{ color:#fff; }
+
+  /* breakdown */
+  .tblwrap{ margin-top:6px; max-width:780px; }
+  .tbl-h{ font-weight:700; font-size:13px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:12px; color:var(--red); }
+  table{ width:100%; border-collapse:collapse; }
+  th{ text-align:left; font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--red); padding:9px 8px; border-bottom:2px solid var(--red); }
+  th.r,td.r{ text-align:right; }
+  td{ padding:9px 8px; font-size:14px; color:#2c2820; border-bottom:1px solid rgba(22,19,14,0.10); }
+  td.r{ font-variant-numeric:tabular-nums; }
+  tr.total td{ font-weight:700; color:var(--sigink); background:var(--sig); border-bottom:none; padding-top:11px; padding-bottom:11px; }
+  .fineprint{ font-size:11.5px; line-height:1.6; color:#6b6354; margin-top:20px; max-width:900px; }
+
+  .close h1{ font-size:64px; color:var(--cream); }
+  .close h1 .hl{ color:var(--sig); }
+  .close .sub2{ color:var(--muted-d); font-size:20px; max-width:820px; margin-top:18px; line-height:1.5; }
+  .close .siglogo{ margin-top:34px; display:flex; align-items:center; gap:14px; }
+  .close .siglogo .sails path{ fill:var(--sigsail); }
+  .close .siglogo .wm{ color:#F4EFE3; font-weight:700; letter-spacing:.22em; font-size:24px; }
+  .close .siglogo .fanmark{ color:#F4EFE3; font-weight:800; letter-spacing:.1em; font-size:40px; }
+  :root{ --sigsail:#1428A0; }
+</style>
+</head>
+<body>
+<div class="slide" style="background:#1428A0;">
+  <div class="inner cover">
+    <div class="pp" style="color:rgba(255,255,255,0.6);">A PARTNERSHIP PROPOSAL</div>
+    <h1 style="color:#fff;">RaceSims <span style="color:#fff;">·</span> <span style="color:rgba(255,255,255,0.75);">Chennai</span></h1>
+    <div class="teaming" style="color:rgba(255,255,255,0.55);">teaming up with</div>
+  </div>
+  <div class="cover-fan" style="right:96px;bottom:128px;font-size:100px;color:#fff;font-weight:300;letter-spacing:.04em;font-style:italic;">Samsung</div>
+  <div class="footer-band" style="background:rgba(0,0,0,0.3);">
+    <div class="l1" style="color:#fff;">India's first real motorsport sim-racing centre &nbsp;·&nbsp; Nungambakkam, Chennai</div>
+    <div class="l2" style="color:rgba(255,255,255,0.7);">RACESIMS SOLUTIONS PVT LTD · OPENING JULY 2026 · DRIVE · TRAIN · COMPETE</div>
+  </div>
+</div>
+<div class="slide">
+  <div class="rs-lockup"><span class="rs-tick"></span><span class="rs-wm">RaceSims</span></div>
+  <div class="lockup"><span class="wm">FANATEC</span></div>
+  <svg class="watermark" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg>
+  <div class="inner">
+    <div class="eyebrow">First — what we're building</div>
+    <h2>It's not a gaming café.<br>It's a real <span class="hl">motorsport centre.</span></h2>
+    <p class="lead">Eight pro racing rigs — one on a full 3-DOF motion platform — right in the middle of Nungambakkam. And it's run by the people behind <b>ARKA Motorsports</b>, a championship-winning race team with <b>130+ national titles</b>. This isn't a screen in a mall. It's the real thing, built by racers.</p>
+    <div class="stats">
+      <div class="stat"><div class="v">8</div><div class="n">pro rigs + a 3-DOF motion sim</div></div>
+      <div class="stat"><div class="v">130+</div><div class="n">ARKA national titles behind it</div></div>
+      <div class="stat"><div class="v">1st</div><div class="n">of its kind in India</div></div>
+      <div class="stat"><div class="v sm">Nungambakkam</div><div class="n">heart of central Chennai</div></div>
+    </div>
+  </div>
+</div>
+<div class="slide">
+  <div class="rs-lockup"><span class="rs-tick"></span><span class="rs-wm">RaceSims</span></div>
+  <div class="lockup"><span class="wm">FANATEC</span></div>
+  <svg class="watermark" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg>
+  <div class="inner">
+    <div class="eyebrow">And there's a lot more than racing</div>
+    <h2>It's a whole <span class="hl">journey</span> under one roof.</h2>
+    <ul class="checks">
+      <li>People don't just drop in to drive — they come to learn. Our <b>Motorsport Academy</b> takes them from their very first lap to a real race car: sim mornings, real-track afternoons with ARKA.</li>
+      <li>We run our own championships and weekly hot-lap battles that keep people coming back.</li>
+      <li>And the best of them climb <b>the Ladder</b> — straight into actual race seats. This is where India's next drivers will start.</li>
+    </ul>
+    <div class="pillars">Drive. Train. Compete. All in one place — for the first time in India.</div>
+  </div>
+</div>
+<div class="slide">
+  <div class="rs-lockup"><span class="rs-tick"></span><span class="rs-wm">RaceSims</span></div>
+  <div class="lockup"><span class="wm">FANATEC</span></div>
+  <svg class="watermark" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008"/></svg>
+  <div class="inner">
+    <div class="eyebrow">And look who's walking in</div>
+    <h2>The right crowd, <span class="hl">every single day.</span></h2>
+    <p class="lead">A Nungambakkam address puts us in front of exactly the people every brand wants to reach:</p>
+    <ul class="checks" style="margin-top:22px; columns:2; column-gap:60px;">
+      <li>HNIs &amp; families</li><li>Corporates &amp; team days</li>
+      <li>Celebrities &amp; influencers</li><li>Motorsport fans</li>
+      <li>Young aspiring drivers</li><li>Gamers &amp; esports</li>
+    </ul>
+    <div class="pillars" style="margin-top:14px;">Every one of them is someone you'd want holding your gear — and posting about it.</div>
+  </div>
+</div>
+<div class="slide">
+  <div class="rs-lockup"><span class="rs-tick"></span><span class="rs-wm">RaceSims</span></div>
+  <div class="lockup"><span class="wm">FANATEC</span></div>
+  <div class="inner">
+    <div class="eyebrow">Now — here's where you come in</div>
+    <h2>The screens <span class="hl">every driver sees the world through.</span></h2>
+    <p class="lead">Three Odyssey G5s per rig. 24 Samsung screens in the building. Every driver, every session, every championship — they're looking at Samsung. Here's where you show up:</p>
+    <ul class="where">
+      <li><b>Samsung Odyssey G5 on all 8 rigs</b>, three screens each — 24 Samsung displays in the room.</li>
+      <li><b>Your name on every rig</b>, the leaderboard wall and the front door.</li>
+      <li>A branded <b>Samsung Odyssey zone</b> — the curved gaming monitor that makes sim look real.</li>
+      <li>Our social, our videos, our championships and events — all carrying Samsung.</li>
+    </ul>
+  </div>
+</div>
+<div class="slide" style="background:#1428A0;">
+  <div class="rs-lockup"><span class="rs-tick" style="background:#fff;"></span><span class="rs-wm" style="color:#fff;">RaceSims</span></div>
+  <div class="lockup"><span style="color:#fff;font-weight:300;letter-spacing:.04em;font-size:24px;font-style:italic;">Samsung</span></div>
+  <svg class="watermark" viewBox="0 0 24.5 24"><path d="M13.073 .41099999C13.073 .41099999 14.985 4.2939999 14.632999 5.911 14.632999 5.911 19.620999 7.526 20.175999 10.186 20.175999 10.186 22.906998 6.5909998 13.072998 .41100026M11.150998 6.236C11.637999 7.257 11.857998 8.354 12.144999 9.5L9.301 8.42C9.565 6.6940004 7.8849999 4.066 7.8849999 4.066L11.150998 6.236ZM6.107 8.91C6.421 9.74 6.779 10.78 6.969 11.6779999L4.4049999 11.039999C4.6679999 9.313999 3.0429998 7.2269995 3.0429998 7.2269995L6.107 8.91ZM11.691999 4.7599999C11.691999 4.7599999 23.127999 12.791 23.882 15.907 24.45 18.251 22.797 20.417 22.797 20.417 22.797 20.417 21.916 14.297 .001001358 23.589 2.2190014 21.114 3.4270015 17.954 3.1080015 14.544001 2.9851418 13.169439 2.626475 11.859439 2.0320016 10.614L7.1680018 13.336 7.1880018 13.580001C7.383002 15.665001 7.231002 17.692002 6.7600018 19.57 7.030633 19.000679 7.2620446 18.41584 7.454237 17.815484 7.6464288 17.215125 7.79768 16.604622 7.9079906 15.983977 8.018301 15.363334 8.086683 14.738104 8.113137 14.108288 8.139591 13.478472 8.123879 12.8497099 8.066002 12.222 7.926129 10.67065 7.539795 9.183316 6.907 7.76L12.396999 11.417C12.419999 11.599 12.431999 11.783 12.448999 11.967 12.664999 14.274 12.45 16.512001 11.856999 18.554 13.148 16.161002 13.782 13.399 13.511999 10.514001 13.419787 9.500735 13.220238 8.509069 12.913351 7.5390026 12.606463 6.5689356 12.199347 5.642935 11.691999 4.7610008" fill="rgba(255,255,255,0.06)"/></svg>
+  <div class="inner">
+    <div class="eyebrow" style="color:rgba(255,255,255,0.6);">So here's the ask</div>
+    <h2 style="color:#fff;">24 screens. <span style="color:rgba(255,255,255,0.65);">Every rig. Every view.</span></h2>
+    <div class="askwrap">
+      <div class="bignum" style="color:#fff;">₹5.8 L</div>
+      <div class="askmeta">
+        <div class="lab" style="color:rgba(255,255,255,0.5);">What we're asking you to cover</div>
+        <div class="desc" style="color:#fff;">24 × Samsung Odyssey G5 32" curved gaming monitors — <b style="color:#fff;">3 screens per rig</b>, all 8 rigs.</div>
+      </div>
+    </div>
+    <div class="returnline" style="color:rgba(255,255,255,0.65);">In return, Samsung Odyssey is the display India races on — every driver who walks through our door sees the world through your screen.</div>
+  </div>
+</div>
+<div class="slide">
+  <div class="rs-lockup"><span class="rs-tick"></span><span class="rs-wm">RaceSims</span></div>
+  <div class="lockup"><span class="wm">FANATEC</span></div>
+  <div class="inner">
+    <div class="eyebrow">Exactly what we're asking for</div>
+    <h2>One screen. <span class="hl">Twenty-four times.</span></h2>
+    <div class="tblwrap">
+      <div class="tbl-h">Samsung · displays — all 8 rigs × 3 screens</div>
+      <table>
+        <thead><tr><th>Component</th><th class="r">Qty</th><th class="r">Unit</th><th class="r">Total</th></tr></thead>
+        <tbody>
+          <tr><td>Samsung Odyssey G5 32" Curved Gaming Monitor (LS32FG502EWXXL)</td><td class="r">×24</td><td class="r">24,000</td><td class="r">5,76,000</td></tr>
+          <tr class="total"><td>Samsung total</td><td class="r">—</td><td class="r">—</td><td class="r">₹5,76,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fineprint" style="margin-top:32px;">Price from our actual MD Computers build quote (30 May 2026, incl. GST). Each rig runs 3 × Samsung Odyssey G5 32" in a triple-screen immersive setup. 8 rigs × 3 = 24 monitors total. The Samsung Odyssey branding is visible on every screen, every session — 24 display fronts facing drivers and spectators throughout the centre.</p>
+    <div style="margin-top:28px;padding:20px 24px;background:#1428A0;border-radius:8px;display:flex;justify-content:space-between;align-items:center;">
+      <span style="color:rgba(255,255,255,0.6);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;">8 rigs · 3 screens each · 24 Odyssey displays</span>
+      <span style="color:#fff;font-weight:800;font-size:30px;letter-spacing:-0.02em;">₹5,76,000</span>
+    </div>
+  </div>
+</div>
+<div class="slide" style="background:#1428A0;">
+  <div class="inner close" style="justify-content:center;">
+    <div class="eyebrow" style="color:rgba(255,255,255,0.6);">Let's do this</div>
+    <h1 style="color:#fff;">Put Samsung Odyssey at the<br>heart of <span style="color:rgba(255,255,255,0.75);font-style:italic;">every driver's view.</span></h1>
+    <p class="sub2" style="color:rgba(255,255,255,0.65);">24 curved Odyssey screens — the view India's next generation of drivers sees the world through. And when we open the next centres, you're already on every rig.</p>
+    <div class="siglogo" style="margin-top:34px;">
+      <span style="font-weight:300;font-size:40px;letter-spacing:.04em;color:#fff;font-style:italic;">Samsung</span>
+    </div>
+    <div class="footer-band" style="background:rgba(0,0,0,0.3);">
+      <div class="l1" style="color:#fff;">Thambu · RaceSims · thambu@racesims.in</div>
+      <div class="l2" style="color:rgba(255,255,255,0.7);">RACESIMS · CHENNAI — NUNGAMBAKKAM · DRIVE · TRAIN · COMPETE</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
