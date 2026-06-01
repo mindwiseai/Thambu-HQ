@@ -8,7 +8,13 @@ updated: 2026-05-29
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-05-30 (latest) — Corsair deck rev: two-division split + itemized cost
+## 2026-06-01 (latest) — Partner decks SPLIT into two separate proposals
+
+- [[thambu]]: Corsair & Fanatec want **separate proposals**. Split the combined deck into two standalone 8-slide decks, both generated from one script (`/tmp/gen_decks.py`) for consistency. Co-brand lockup on every content slide: **RaceSims top-left + partner mark top-right.**
+- **`racesims-chennai-partner-corsair`** = the PC, **₹7.1L** (black/yellow + real sails logo, red ask slide, "Corsair on all 8 rigs"). **`racesims-chennai-partner-fanatec`** = the cockpit, **₹11.5L** (black/white/red + FANATEC wordmark since Fanatec has no brand colour, black ask slide, "Fanatec only on the 2 featured rigs"). See [[racesims-chennai-partnerships]].
+- **Next:** Zotac/Samsung/AMD standalone decks pending.
+
+## 2026-05-30 — Corsair deck rev: two-division split + itemized cost
 
 - **Corsair partner deck revised → 8 slides** (`racesims-chennai-partner-corsair.pdf` + **`.html` now committed**, was PDF-only). Per [[thambu]]: break down the cost + show a **clear distinction between Corsair (the PC) and Fanatec (the cockpit)** — same group since 2024, but run as separate businesses, so **two clean numbers**: **Corsair PC ₹5.9L** (RAM/cooling/PSU/case/headset ×8 rigs) + **Fanatec ₹11.5L** (complete DD+ cockpit ×2 featured rigs) = **₹17.4L total**.
 - **Fanatec parts list locked:** ClubSport DD+ 15Nm base, ClubSport Cockpit, Pedals V3, Formula V2.5 X wheel, Shifter SQ V1.5, Handbrake V1.5, QR2. Dropped the "Podium" tier (voice-brief artifact) → DD+ throughout. Prices = [[techxhub]] India RRP (base ₹2.06L + pedals ₹66.7k confirmed; rest indicative). User's "₹10-12L" recollection reconciled: 3 hero parts ×2 = ₹6.6L, so added full cockpit kit per rig to land in-band.

@@ -9,6 +9,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-01] edit | Partner decks split into two separate proposals (Corsair + Fanatec)
+- Updated: [[racesims-chennai-partnerships]] (Decks section → two standalone proposals).
+- Split the combined deck into **`racesims-chennai-partner-corsair`** (the PC, ₹7.1L) and **`racesims-chennai-partner-fanatec`** (the cockpit, ₹11.5L) — `.html` + `.pdf` each, 8 slides. Per Thambu: Corsair & Fanatec are separate companies and want separate proposals.
+- Corsair deck = black/yellow + real sails logo, "Corsair on all 8 rigs". Fanatec deck = black/white/red + FANATEC wordmark (no brand colour), "Fanatec only on the 2 featured rigs". Both carry the RaceSims+partner co-brand lockup. Generated from one script for consistency.
+- Domain: racesims
+
 ## [2026-05-30] edit | Corsair partner deck rev — two-division split + itemized cost
 - Updated: [[racesims-chennai-partnerships]] (partner table → Corsair ₹5.9L + Fanatec ₹11.5L = ₹17.4L; added Fanatec parts list + deck rev notes).
 - Rebuilt `racesims/marketing/decks/racesims-chennai-partner-corsair.pdf` → **8 slides** + **committed `.html` source** (was PDF-only). New S6 (two businesses, two numbers) + S7 (itemized parts breakdown); S5 reframed.
