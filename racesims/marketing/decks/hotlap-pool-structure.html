@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>RaceSims Hot Lap — Prize Pool Structure</title>
+<meta name="viewport" content="width=1280" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:       #FAF9F5;
+    --cream-dark:  #F3EFEA;
+    --cream-mid:   #EDE8E2;
+    --rs-red:      #C8102E;
+    --rs-red-dim:  rgba(200, 16, 46, 0.10);
+    --rs-red-soft: rgba(200, 16, 46, 0.05);
+    --rs-black:    #0F0F10;
+    --ink:         #1F1B18;
+    --ink-mid:     #4A4440;
+    --ink-muted:   #7A7470;
+    --rule:        #DDD8D2;
+    --rule-mid:    #C8C0B8;
+    --green:       #1E6B3A;
+    --amber:       #B8731F;
+    --sans:        'Montserrat', -apple-system, sans-serif;
+    --mono:        'JetBrains Mono', 'SF Mono', monospace;
+  }
+  @page { size: 1280px 720px; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #E8E3DC;
+    font-family: var(--sans);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  body { padding: 32px 0; }
+  .slide {
+    width: 1280px;
+    height: 720px;
+    margin: 0 auto 32px;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    page-break-after: always;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+  .slide:last-child { page-break-after: auto; margin-bottom: 0; }
+  @media print {
+    html, body { background: white; }
+    body { padding: 0; margin: 0; }
+    .slide { margin: 0 auto; border: none; box-shadow: none; }
+  }
+  .slide-inner {
+    padding: 48px 64px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 5px;
+    background: var(--rs-red);
+    z-index: 2;
+  }
+  .slide-num {
+    position: absolute;
+    top: 22px; right: 28px;
+    font-family: var(--mono); font-size: 10px;
+    color: var(--ink-muted); letter-spacing: 0.18em;
+    z-index: 3;
+  }
+  .brand {
+    position: absolute;
+    top: 22px; left: 32px;
+    font-family: var(--mono); font-size: 10px;
+    color: var(--rs-red); letter-spacing: 0.22em;
+    font-weight: 600; z-index: 3;
+  }
+  .eyebrow {
+    font-family: var(--mono); font-size: 10px;
+    color: var(--rs-red); letter-spacing: 0.22em;
+    text-transform: uppercase; margin-bottom: 12px;
+    font-weight: 600;
+  }
+  h1 { font-family: var(--sans); color: var(--ink); }
+  h2 { font-family: var(--sans); font-size: 32px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 16px; color: var(--ink); }
+  h2 .italic { font-style: italic; color: var(--rs-red); font-weight: 600; }
+  h3 {
+    font-family: var(--sans); font-size: 11px;
+    font-weight: 700; color: var(--rs-red);
+    text-transform: uppercase; letter-spacing: 0.18em;
+    margin-bottom: 12px;
+  }
+  p { font-size: 14px; line-height: 1.55; color: var(--ink-mid); }
+
+  /* COVER */
+  .cover { display: flex; flex-direction: column; justify-content: center; padding: 0 96px; }
+  .cover .badge {
+    display: inline-block; padding: 7px 14px;
+    border: 1.5px solid var(--rs-red); color: var(--rs-red);
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.22em; margin-bottom: 28px;
+    width: max-content; font-weight: 600;
+  }
+  .cover h1 { font-family: var(--sans); font-size: 88px; font-weight: 800; line-height: 0.98; letter-spacing: -0.035em; margin-bottom: 22px; color: var(--ink); }
+  .cover h1 .accent { color: var(--rs-red); font-style: italic; font-weight: 700; }
+  .cover .sub { font-size: 19px; color: var(--ink-mid); font-weight: 500; line-height: 1.45; max-width: 760px; margin-bottom: 14px; }
+  .cover .centres { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); letter-spacing: 0.15em; }
+  .cover .footer {
+    position: absolute; bottom: 48px; left: 96px; right: 96px;
+    display: flex; justify-content: space-between;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-muted); letter-spacing: 0.18em; z-index: 3;
+  }
+
+  /* GRID & CARDS */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+  .card {
+    background: var(--cream-dark); border: 1px solid var(--rule);
+    border-radius: 4px; padding: 18px 20px;
+  }
+  .card.accent { border-left: 3px solid var(--rs-red); padding-left: 20px; }
+
+  .stat { display: flex; flex-direction: column; gap: 4px; }
+  .stat .label {
+    font-family: var(--mono); font-size: 9px;
+    color: var(--ink-muted); letter-spacing: 0.18em;
+    text-transform: uppercase; font-weight: 600;
+  }
+  .stat .value {
+    font-family: var(--sans); font-size: 36px; font-weight: 800;
+    color: var(--rs-red); letter-spacing: -0.025em; line-height: 1;
+  }
+  .stat .note { font-size: 11px; color: var(--ink-mid); margin-top: 3px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th {
+    text-align: left;
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--rs-red);
+    letter-spacing: 0.18em;
+    padding: 9px 8px;
+    border-bottom: 1.5px solid var(--rs-red);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  th.r, td.r { text-align: right; }
+  td {
+    padding: 8px 8px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink);
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr.total td {
+    font-weight: 700;
+    color: var(--rs-red);
+    border-top: 1.5px solid var(--rs-red);
+    border-bottom: none;
+    padding-top: 10px;
+    background: var(--rs-red-dim);
+  }
+
+  .divider { height: 1px; background: var(--rule); margin: 16px 0; }
+  .divider.tight { margin: 10px 0; }
+  .divider.red { background: var(--rs-red); height: 2px; width: 40px; margin: 12px 0 16px; }
+
+  /* PRIZE CARDS */
+  .prize-card { text-align: center; padding: 24px 18px; }
+  .prize-card .position {
+    font-family: var(--mono);
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .prize-card.gold .position   { color: #B8860B; }
+  .prize-card.silver .position { color: #707070; }
+  .prize-card.bronze .position { color: #8B4513; }
+  .prize-card .medal {
+    font-size: 36px; margin-bottom: 12px; opacity: 0.85;
+  }
+  .prize-card .amount {
+    font-family: var(--sans); font-size: 36px;
+    font-weight: 800; color: var(--ink);
+    letter-spacing: -0.025em; line-height: 1;
+    margin-bottom: 6px;
+  }
+  .prize-card .type {
+    font-size: 11px; color: var(--ink-mid);
+    font-style: italic;
+  }
+
+  /* TRANSFER ROWS */
+  .centre-card {
+    background: var(--cream-dark);
+    border-left: 3px solid var(--rs-red);
+    padding: 16px 20px;
+    border-radius: 4px;
+    border-top: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .centre-name {
+    font-size: 15px; font-weight: 700;
+    color: var(--ink); margin-bottom: 2px;
+    letter-spacing: -0.01em;
+  }
+  .centre-meta {
+    font-family: var(--mono); font-size: 10px;
+    color: var(--ink-muted); letter-spacing: 0.12em;
+    margin-bottom: 12px;
+  }
+  .transfer-row {
+    display: flex; justify-content: space-between;
+    align-items: center; padding: 6px 0;
+    font-size: 13px;
+    border-top: 1px solid var(--rule);
+  }
+  .transfer-row:first-of-type { border-top: 1px solid var(--rs-red); }
+  .transfer-row .amount {
+    font-weight: 700; color: var(--rs-red);
+    font-family: var(--mono); font-size: 13px;
+  }
+  .transfer-row .dest { color: var(--ink); font-weight: 500; }
+  .transfer-row .irc-dest { color: var(--ink-muted); font-weight: 500; }
+
+  /* TIMELINE */
+  .timeline-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: center;
+  }
+  .timeline-row:last-child { border-bottom: none; }
+  .timeline-day {
+    background: var(--rs-red);
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.3;
+    text-transform: uppercase;
+    border-radius: 2px;
+  }
+  .timeline-desc {
+    font-size: 13.5px; color: var(--ink); line-height: 1.5;
+  }
+
+  .warning-box {
+    background: var(--rs-red-soft);
+    border-left: 3px solid var(--rs-red);
+    padding: 12px 18px;
+    margin-top: 18px;
+    font-size: 13px;
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  .warning-box b { color: var(--rs-red); font-weight: 700; }
+
+  /* COMING SOON CARDS */
+  .coming-card {
+    background: var(--cream-dark);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--amber);
+    border-radius: 4px;
+    padding: 16px 18px;
+  }
+  .coming-card .cc-name {
+    font-size: 14px; font-weight: 700;
+    color: var(--ink); letter-spacing: -0.01em;
+    margin-bottom: 3px;
+  }
+  .coming-card .cc-meta {
+    font-family: var(--mono); font-size: 10px;
+    color: var(--ink-muted); letter-spacing: 0.12em;
+  }
+  .coming-card .cc-fee {
+    font-family: var(--mono); font-size: 13px;
+    font-weight: 700; color: var(--amber);
+    margin-top: 10px;
+  }
+
+  .small { font-size: 11.5px; line-height: 1.5; color: var(--ink-mid); }
+  .tiny { font-size: 10px; color: var(--ink-muted); font-family: var(--mono); letter-spacing: 0.15em; font-weight: 600; }
+  b { font-weight: 700; }
+  em { font-style: italic; }
+  .text-red { color: var(--rs-red); }
+  .text-amber { color: var(--amber); }
+
+  .note {
+    font-size: 12px; color: var(--ink-muted);
+    font-style: italic; margin-bottom: 14px;
+    padding-left: 12px; border-left: 2px solid var(--cream-mid);
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: COVER -->
+<div class="slide">
+  <div class="brand">RACESIMS · NETWORK</div>
+  <div class="slide-num">01 / 06</div>
+  <div class="slide-inner cover">
+    <span class="badge">PARTNER BRIEF · CONFIDENTIAL</span>
+    <h1>Hot Lap<br/><span class="accent">·</span> Prize Pool</h1>
+    <p class="sub">A community-owned monthly prize pool across the RaceSims network. Simple math. Proportional. Fully transparent.</p>
+    <div class="centres">RACING POINT ESPORTS · SIM RACING ADDA · NIYUSUKI · LIGHTS OUT RACING</div>
+    <div class="footer">
+      <span>RACESIMS SOLUTIONS PVT LTD</span>
+      <span>NETWORK PARTNERS ONLY</span>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 2: POOL OVERVIEW -->
+<div class="slide">
+  <div class="brand">RACESIMS · NETWORK</div>
+  <div class="slide-num">02 / 06</div>
+  <div class="slide-inner">
+    <div class="eyebrow">02 · The Pool at a Glance</div>
+    <h2>Simple math. <span class="italic">Proportional. Fully transparent.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-4" style="margin-top: 4px;">
+      <div class="card accent">
+        <div class="stat">
+          <span class="label">Network rigs</span>
+          <span class="value">18</span>
+          <span class="note">Across 4 centres</span>
+        </div>
+      </div>
+      <div class="card accent">
+        <div class="stat">
+          <span class="label">Collected monthly</span>
+          <span class="value">₹45K</span>
+          <span class="note">From all centres pooled</span>
+        </div>
+      </div>
+      <div class="card accent">
+        <div class="stat">
+          <span class="label">Back to winners</span>
+          <span class="value">100%</span>
+          <span class="note">Every rupee back to players</span>
+        </div>
+      </div>
+      <div class="card accent">
+        <div class="stat">
+          <span class="label">Platform</span>
+          <span class="value" style="font-size: 22px; line-height: 1.1; margin-top: 4px;">Le Mans<br/>Ultimate</span>
+          <span class="note">Hosted &amp; run by RaceSims</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="note" style="margin-top: 14px;">RaceSims manages the server, leaderboard, and winner coordination. Your full monthly fee goes to the prize pool — zero overhead deducted.</p>
+
+    <table style="margin-top: 6px;">
+      <thead>
+        <tr>
+          <th>Centre</th>
+          <th>City</th>
+          <th class="r">Rigs</th>
+          <th class="r">Monthly Fee</th>
+          <th class="r">→ Prize Pool</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Racing Point Esports</td>
+          <td style="color: var(--ink-muted); font-size: 12px;">Hyderabad</td>
+          <td class="r">8</td>
+          <td class="r">₹20,000</td>
+          <td class="r">₹20,000</td>
+        </tr>
+        <tr>
+          <td>Sim Racing Adda</td>
+          <td style="color: var(--ink-muted); font-size: 12px;">Delhi</td>
+          <td class="r">4</td>
+          <td class="r">₹10,000</td>
+          <td class="r">₹10,000</td>
+        </tr>
+        <tr>
+          <td>Niyusuki Sim Racers</td>
+          <td style="color: var(--ink-muted); font-size: 12px;">Cochin</td>
+          <td class="r">3</td>
+          <td class="r">₹7,500</td>
+          <td class="r">₹7,500</td>
+        </tr>
+        <tr>
+          <td>Lights Out Racing</td>
+          <td style="color: var(--ink-muted); font-size: 12px;">Delhi</td>
+          <td class="r">3</td>
+          <td class="r">₹7,500</td>
+          <td class="r">₹7,500</td>
+        </tr>
+        <tr class="total">
+          <td>TOTAL</td>
+          <td></td>
+          <td class="r">18</td>
+          <td class="r">₹45,000</td>
+          <td class="r">₹45,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- SLIDE 3: PRIZES -->
+<div class="slide">
+  <div class="brand">RACESIMS · NETWORK</div>
+  <div class="slide-num">03 / 06</div>
+  <div class="slide-inner">
+    <div class="eyebrow">03 · Monthly Prizes</div>
+    <h2>Every month. Every fastest lap. <span class="italic">Straight to the winner.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-3" style="margin-top: 8px;">
+      <div class="card prize-card gold" style="background: var(--cream-dark); border-top: 3px solid #B8860B; border-left: 1px solid var(--rule); border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
+        <div class="medal">🥇</div>
+        <div class="position">1st Place</div>
+        <div class="amount">₹27,500</div>
+        <div class="type">Amazon Gift Card</div>
+      </div>
+      <div class="card prize-card silver" style="background: var(--cream-dark); border-top: 3px solid #909090; border-left: 1px solid var(--rule); border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
+        <div class="medal">🥈</div>
+        <div class="position">2nd Place</div>
+        <div class="amount">₹10,000</div>
+        <div class="type">Amazon Gift Card</div>
+      </div>
+      <div class="card prize-card bronze" style="background: var(--cream-dark); border-top: 3px solid #A0522D; border-left: 1px solid var(--rule); border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
+        <div class="medal">🥉</div>
+        <div class="position">3rd Place</div>
+        <div class="amount">₹7,500</div>
+        <div class="type">Amazon Gift Card</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>How winners are decided</h3>
+    <ul style="list-style: none; padding: 0;">
+      <li style="padding-left: 22px; position: relative; margin-bottom: 9px; font-size: 14px; color: var(--ink); line-height: 1.5;">
+        <span style="position: absolute; left: 0; color: var(--rs-red); font-weight: 700; font-family: var(--mono);">01</span>
+        Fastest lap time set on any rig across all 4 centres during the calendar month
+      </li>
+      <li style="padding-left: 22px; position: relative; margin-bottom: 9px; font-size: 14px; color: var(--ink); line-height: 1.5;">
+        <span style="position: absolute; left: 0; color: var(--rs-red); font-weight: 700; font-family: var(--mono);">02</span>
+        <b>VMS tracks it automatically</b> — no manual submission, no disputes, no arguments
+      </li>
+      <li style="padding-left: 22px; position: relative; margin-bottom: 9px; font-size: 14px; color: var(--ink); line-height: 1.5;">
+        <span style="position: absolute; left: 0; color: var(--rs-red); font-weight: 700; font-family: var(--mono);">03</span>
+        Your customers race each other across cities — best lap wins, wherever they're driving from
+      </li>
+      <li style="padding-left: 22px; position: relative; font-size: 14px; color: var(--ink); line-height: 1.5;">
+        <span style="position: absolute; left: 0; color: var(--rs-red); font-weight: 700; font-family: var(--mono);">04</span>
+        RaceSims posts final leaderboard on the 1st · Transfers completed by the 5th
+      </li>
+    </ul>
+
+    <div class="warning-box" style="background: var(--cream-dark); border-left: 3px solid var(--ink-muted); color: var(--ink-mid);">
+      Total monthly payout · <b style="color: var(--rs-red);">₹45,000</b> · 100% back to winners. Prize pool grows proportionally as more centres join the network.
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4: TRANSFERS -->
+<div class="slide">
+  <div class="brand">RACESIMS · NETWORK</div>
+  <div class="slide-num">04 / 06</div>
+  <div class="slide-inner">
+    <div class="eyebrow">04 · Your Monthly Transfers</div>
+    <h2>1 transfer per centre. <span class="italic">5 minutes on the 1st. Done.</span></h2>
+    <div class="divider red"></div>
+
+    <div class="grid-2" style="margin-top: 4px;">
+
+      <div class="centre-card">
+        <div class="centre-name">Racing Point Esports</div>
+        <div class="centre-meta">HYDERABAD · 8 RIGS · ₹20,000 / MONTH</div>
+        <div class="transfer-row">
+          <span class="amount">₹20,000</span>
+          <span class="dest">→ 🥇 1st place winner</span>
+        </div>
+      </div>
+
+      <div class="centre-card">
+        <div class="centre-name">Sim Racing Adda</div>
+        <div class="centre-meta">DELHI · 4 RIGS · ₹10,000 / MONTH</div>
+        <div class="transfer-row">
+          <span class="amount">₹10,000</span>
+          <span class="dest">→ 🥈 2nd place winner</span>
+        </div>
+      </div>
+
+      <div class="centre-card">
+        <div class="centre-name">Niyusuki Sim Racers</div>
+        <div class="centre-meta">COCHIN · 3 RIGS · ₹7,500 / MONTH</div>
+        <div class="transfer-row">
+          <span class="amount">₹7,500</span>
+          <span class="dest">→ 🥇 1st place winner</span>
+        </div>
+      </div>
+
+      <div class="centre-card">
+        <div class="centre-name">Lights Out Racing</div>
+        <div class="centre-meta">DELHI · 3 RIGS · ₹7,500 / MONTH</div>
+        <div class="transfer-row">
+          <span class="amount">₹7,500</span>
+          <span class="dest">→ 🥉 3rd place winner</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="small" style="margin-top: 18px; text-align: center; font-style: italic;">RaceSims posts winner UPI details in the group on the 1st · Screenshot your transfer and drop it here · RaceSims confirms all received by the 6th</p>
+  </div>
+</div>
+
+<!-- SLIDE 5: RULES & TIMELINE -->
+<div class="slide">
+  <div class="brand">RACESIMS · NETWORK</div>
+  <div class="slide-num">05 / 06</div>
+  <div class="slide-inner">
+    <div class="eyebrow">05 · Rules &amp; Monthly Timeline</div>
+    <h2>Clean. Simple. <span class="italic">Self-enforcing.</span></h2>
+    <div class="divider red"></div>
+
+    <div style="margin-top: 6px;">
+      <div class="timeline-row">
+        <div class="timeline-day">Month End</div>
+        <div class="timeline-desc">Leaderboard locks at <b>11:59 PM</b>. No more laps counted.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-day">1st of Month</div>
+        <div class="timeline-desc">RaceSims posts final standings + winner UPI IDs in the WhatsApp group.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-day">By 5th</div>
+        <div class="timeline-desc">Each centre transfers directly to assigned winner(s) + IRC. Screenshot posted in group.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-day">6th</div>
+        <div class="timeline-desc">RaceSims confirms all transfers received. Publishes confirmation. Month closed.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-day">7th Onwards</div>
+        <div class="timeline-desc">New month leaderboard is live. Fastest lap wins again.</div>
+      </div>
+    </div>
+
+    <div class="warning-box">
+      <b>⚠ Miss the 5th deadline</b> = your rigs are excluded from the next month's leaderboard. No exceptions. No extensions.
+    </div>
+
+  </div>
+</div>
+
+<!-- SLIDE 6: COMING AUGUST -->
+<div class="slide">
+  <div class="brand">RACESIMS · NETWORK</div>
+  <div class="slide-num">06 / 06</div>
+  <div class="slide-inner">
+    <div class="eyebrow">06 · Network Expansion — August 2026</div>
+    <h2>4 new centres. 15 more rigs. <span class="italic">Live from August.</span></h2>
+    <div class="divider red"></div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 8px;">
+
+      <div>
+        <h3 style="margin-bottom: 14px;">Joining August 2026</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+
+          <div class="coming-card">
+            <div class="cc-name">RaceSims Studio</div>
+            <div class="cc-meta">CHENNAI · 8 RIGS</div>
+            <div class="cc-fee">₹20,000 / month</div>
+          </div>
+
+          <div class="coming-card">
+            <div class="cc-name">BBS Adrenaline Apex</div>
+            <div class="cc-meta">MANGALORE · 2 RIGS</div>
+            <div class="cc-fee">₹5,000 / month</div>
+          </div>
+
+          <div class="coming-card">
+            <div class="cc-name">Drivextreme</div>
+            <div class="cc-meta">COIMBATORE · 3 RIGS</div>
+            <div class="cc-fee">₹7,500 / month</div>
+          </div>
+
+          <div class="coming-card">
+            <div class="cc-name">Virtual Adda</div>
+            <div class="cc-meta">MUMBAI · 2 RIGS</div>
+            <div class="cc-fee">₹5,000 / month</div>
+          </div>
+
+        </div>
+        <p class="small" style="margin-top: 14px; font-style: italic;">Onboarded by 31 July · Live from 1 August 2026</p>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom: 14px;">Projected August Network</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+          <div class="card accent">
+            <div class="stat">
+              <span class="label">Total rigs</span>
+              <span class="value" style="font-size: 28px;">33</span>
+              <span class="note">8 centres nationwide</span>
+            </div>
+          </div>
+          <div class="card accent">
+            <div class="stat">
+              <span class="label">Monthly pool</span>
+              <span class="value" style="font-size: 28px;">₹82.5K</span>
+              <span class="note">Collected across network</span>
+            </div>
+          </div>
+          <div class="card" style="border-top: 3px solid var(--amber);">
+            <div class="stat">
+              <span class="label">Prize pool</span>
+              <span class="value" style="font-size: 28px; color: var(--amber);">₹82.5K</span>
+              <span class="note">100% back to winners</span>
+            </div>
+          </div>
+          <div class="card accent">
+            <div class="stat">
+              <span class="label">Cities</span>
+              <span class="value" style="font-size: 28px;">7</span>
+              <span class="note">Hyderabad · Delhi · Cochin · Chennai · Mangalore · Coimbatore · Mumbai</span>
+            </div>
+          </div>
+        </div>
+        <div class="warning-box" style="margin-top: 0; background: rgba(184, 115, 31, 0.06); border-left-color: var(--amber);">
+          Prize pool grows <b style="color: var(--amber);">1.83×</b> the moment August centres go live — ₹82,500/month, 100% to winners. Every rig you add today locks in your proportional share.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
