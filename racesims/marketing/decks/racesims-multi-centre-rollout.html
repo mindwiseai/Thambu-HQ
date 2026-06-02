@@ -253,6 +253,31 @@
     text-align: right; font-family: var(--mono);
     color: var(--rs-red); font-weight: 700; font-size: 12px;
   }
+
+  /* 4-LoB Quadrant */
+  .lob-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 12px; margin-top: 6px;
+  }
+  .lob-cell {
+    background: var(--cream-dark);
+    border-left: 3px solid var(--rs-red);
+    padding: 13px 16px;
+  }
+  .lob-cell .lob-num {
+    font-family: var(--mono); font-size: 10px;
+    color: var(--rs-red); letter-spacing: 0.2em;
+    font-weight: 700; margin-bottom: 3px;
+  }
+  .lob-cell .lob-name {
+    font-size: 16px; font-weight: 800;
+    color: var(--ink); letter-spacing: -0.015em;
+    line-height: 1.15; margin-bottom: 6px;
+  }
+  .lob-cell .lob-body {
+    font-size: 12px; line-height: 1.5; color: var(--ink);
+  }
+  .lob-cell .lob-body b { color: var(--ink); font-weight: 700; }
 </style>
 </head>
 <body>
@@ -264,7 +289,7 @@
   <div class="slide-inner cover">
     <span class="badge">NATIONAL NETWORK · Y2 → Y5 ROLLOUT</span>
     <h1>RaceSims<br/><span class="accent">·</span> National Network</h1>
-    <p class="sub">India's integrated motorsport development platform. Chennai is the proof point. This is the path from one centre to a national network — and to the next generation of Indian racing drivers.</p>
+    <p class="sub">India's gateway to motorsport. Chennai is the proof point. This is the path from one centre to a national network — and to the next generation of Indian racing drivers.</p>
     <div class="footer">
       <span>RACESIMS SOLUTIONS PVT LTD</span>
       <span>MULTI-CENTRE ROLLOUT · SERIES A PROPOSAL</span>
@@ -278,34 +303,37 @@
   <div class="slide-num">02 / 13</div>
   <div class="slide-inner">
     <div class="eyebrow">02 · What is RaceSims?</div>
-    <h2>India's integrated <span class="italic">motorsport development platform.</span></h2>
+    <h2>India's gateway <span class="italic">to motorsport.</span></h2>
     <div class="divider red"></div>
 
-    <p class="lead" style="margin-bottom: 12px; max-width: 1060px;">Indian motorsport is in a moment most of us have waited a long time for. <b>F1 viewership in India crossed 50 million</b> in the last season, growing <b>25%+ year on year</b>. The INRC delivers close racing season after season. <b>ARKA Motorsports</b> has spent four decades building championship pedigree. The audience is there. The talent is there. What's been missing is <b>a way in</b>.</p>
+    <p class="lead" style="margin-bottom: 10px; max-width: 1100px;"><b>Whether you want to try racing once or pursue it as a career — this is where you start.</b> India has thousands of motorsport aspirants. Unlike most other sports, the entry barrier into motorsport is excruciatingly high. Kart fees, equipment costs, training infrastructure, time — all gate the path to a real cockpit. Everyone aspires; few get to try. <b>RaceSims removes that gate.</b> We make racing accessible for the price of a movie ticket, and give those serious about it a structured ladder all the way to the grid.</p>
 
-    <p class="lead" style="margin-bottom: 14px; max-width: 1060px;"><b>Padel, cricket nets, climbing gyms, tennis clubs</b> — every other sport has a casual on-ramp. Motorsport hasn't. The cost of entry has kept it out of reach. And for those who want to take it further into real racing, the ladder up has been narrow and gated for too long.</p>
+    <div style="font-family: var(--mono); font-size: 10px; color: var(--rs-red); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-top: 10px; margin-bottom: 2px;">Built across four lines of business</div>
 
-    <p class="lead" style="margin-bottom: 14px; max-width: 1060px;"><b>RaceSims is built for both.</b> A place where anyone can try motorsport for the price of a movie ticket — and where those serious about it can find a real path to the racing grid through partnerships with <b>ARKA</b> and <b>Polo Cup</b>.</p>
-
-    <div class="divider tight"></div>
-
-    <div class="grid-3" style="margin-top: 4px;">
-      <div class="card accent">
-        <div class="pillar-num">01</div>
-        <div class="pillar-title">The equipment</div>
-        <div class="pillar-body">Direct-drive wheelbases, motion platforms, load-cell pedals — the same technology behind F1 driver simulators — has finally become affordable enough to deploy commercially in India.</div>
+    <div class="lob-grid">
+      <div class="lob-cell">
+        <div class="lob-num">01</div>
+        <div class="lob-name">RaceSims Experience Centres</div>
+        <div class="lob-body">Premium sim racing venues where anyone in India can come experience motorsport. <b>Walk-in sessions</b> · monthly memberships · corporate team events · private parties · café-lounge. <b>Chennai flagship opens 2026</b>, scaling to a <b>43-centre national network</b>.</div>
       </div>
-      <div class="card accent">
-        <div class="pillar-num">02</div>
-        <div class="pillar-title">The pedigree</div>
-        <div class="pillar-body">Founded by a working race engineer at <b>ARKA Motorsports</b> (130+ national championship titles). Every curriculum, every coaching session, every centre standard is shaped by motorsport people. The Ladder pathway to real-world seats is real.</div>
+      <div class="lob-cell">
+        <div class="lob-num">02</div>
+        <div class="lob-name">RaceSims Hardware Distribution</div>
+        <div class="lob-body">Official distributor and service partner in India for <b>world-leading premium sim racing hardware brands</b>. Bringing world-class racing equipment to Indian consumers, businesses, and our own centres — with full after-sales service.</div>
       </div>
-      <div class="card accent">
-        <div class="pillar-num">03</div>
-        <div class="pillar-title">The integration</div>
-        <div class="pillar-body"><b>Official distributor and service partner</b> in India for <b>Conspit</b> and <b>VNM</b> — favourable hardware economics on every centre. But the real edge isn't the kit — it's that we operate <b>the full development stack under one brand</b>: centres + hardware + championship + curriculum + sim-to-real pathway. Everyone else plays one part. We play all of them.</div>
+      <div class="lob-cell">
+        <div class="lob-num">03</div>
+        <div class="lob-name">RaceSims Motorsport Academy</div>
+        <div class="lob-body">Where Indians learn to race. <b>Beginner courses</b> · progressive curriculum (Initiation → Race Academy → Rally School → Pro Track) · <b>Track Day Programmes</b> for supercar owners · <b>Real Driving Experiences</b> with ARKA + Buzzing Hornet · 1-on-1 coaching · B2B team training.</div>
+      </div>
+      <div class="lob-cell">
+        <div class="lob-num">04</div>
+        <div class="lob-name">RaceSims Championships</div>
+        <div class="lob-body">India's first national-level sim racing leagues — both circuit and rally. <b>RaceSims Racing Championship</b> + <b>Rally Championship</b> launch 2027 · broadcast · sponsored · structured seasons with prize structures. Top finishers earn real race seats through our partnerships.</div>
       </div>
     </div>
+
+    <p class="small" style="margin-top: 12px;">Founded by <b>Thambu Samy</b>, working race engineer at <b>ARKA Motorsports</b> — India's most-decorated motorsport team with <b>130+ national championship titles since 1987</b>.</p>
   </div>
 </div>
 
@@ -566,7 +594,7 @@
     </div>
 
     <div class="closing-line" style="margin-top: 14px;">
-      Both formats share the <b>Drive · Train · Compete</b> framework, the Conspit/VNM kit, and the ARKA pedigree. <span class="em">The difference is scale, not DNA.</span>
+      Both formats share the <b>Drive · Train · Compete</b> framework, the same premium hardware stack, and the ARKA pedigree. <span class="em">The difference is scale, not DNA.</span>
     </div>
   </div>
 </div>
@@ -768,8 +796,8 @@
 
         <div class="moat-card">
           <div class="moat-label">03 · COST MOAT</div>
-          <div class="moat-title">Direct Conspit + VNM distribution</div>
-          <div class="moat-body">Favourable hardware economics through Conspit + VNM distribution rights. Combined with operating cash from mature centres from Y3 onward, the national network funds its own scale-out. <b>Capital-light scaling.</b></div>
+          <div class="moat-title">Premium hardware distribution rights</div>
+          <div class="moat-body">Official India distributor and service partner for world-leading premium sim racing hardware brands — favourable economics on every centre. Combined with operating cash from mature centres from Y3 onward, the network funds its own scale-out. <b>Capital-light scaling.</b></div>
         </div>
       </div>
 
