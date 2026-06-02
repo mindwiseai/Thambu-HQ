@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>RaceSims — Investor Brief · Three Questions</title>
+<meta name="viewport" content="width=794" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:    #FAF9F5;
+    --cream-dark: #F3EFEA;
+    --rs-red:   #C8102E;
+    --rs-red-soft: rgba(200, 16, 46, 0.05);
+    --rs-red-dim:  rgba(200, 16, 46, 0.10);
+    --rs-black: #0F0F10;
+    --ink:      #1F1B18;
+    --ink-mid:  #4A4440;
+    --ink-muted:#7A7470;
+    --rule:     #DDD8D2;
+    --sans:     'Montserrat', -apple-system, sans-serif;
+    --mono:     'JetBrains Mono', 'SF Mono', monospace;
+  }
+  @page { size: A4; margin: 18mm 16mm 18mm 16mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #E8E3DC;
+    font-family: var(--sans);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  body { font-size: 10pt; line-height: 1.5; }
+  .doc {
+    max-width: 794px;
+    margin: 32px auto;
+    background: var(--cream);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--rs-red);
+    padding: 48px 56px;
+  }
+  @media print {
+    html, body { background: white; }
+    .doc { box-shadow: none; margin: 0; max-width: 100%; padding: 0; border-left: 4px solid var(--rs-red); padding-left: 8mm; }
+  }
+  .header {
+    display: flex; justify-content: space-between;
+    align-items: baseline; margin-bottom: 22px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 12px;
+  }
+  .brand {
+    font-family: var(--mono); font-size: 9pt;
+    color: var(--rs-red); letter-spacing: 0.22em; font-weight: 600;
+  }
+  .doc-meta {
+    font-family: var(--mono); font-size: 8pt;
+    color: var(--ink-muted); letter-spacing: 0.18em;
+  }
+  h1 {
+    font-family: var(--sans); font-size: 22pt; font-weight: 800;
+    letter-spacing: -0.025em; line-height: 1.1;
+    color: var(--ink); margin-bottom: 4px;
+  }
+  h1 .accent { color: var(--rs-red); font-style: italic; font-weight: 700; }
+  .subtitle {
+    font-size: 11pt; color: var(--ink-mid);
+    font-weight: 500; letter-spacing: -0.005em;
+    margin-bottom: 18px;
+  }
+  .qsec {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1.5px solid var(--rs-red);
+  }
+  .qsec:first-of-type { margin-top: 6px; border-top: none; padding-top: 0; }
+  .qnum {
+    font-family: var(--mono); font-size: 8.5pt;
+    color: var(--rs-red); letter-spacing: 0.22em;
+    font-weight: 700; margin-bottom: 4px;
+  }
+  h2 {
+    font-family: var(--sans); font-size: 15pt; font-weight: 700;
+    color: var(--ink); letter-spacing: -0.02em; line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  p { margin-bottom: 9px; color: var(--ink); font-size: 10pt; line-height: 1.55; }
+  p.lead {
+    font-size: 11pt; line-height: 1.5; color: var(--ink);
+    font-weight: 500;
+  }
+  b { font-weight: 700; color: var(--ink); }
+  em, i { font-style: italic; }
+  .text-red { color: var(--rs-red); }
+
+  ul.bullets { list-style: none; padding: 0; margin: 6px 0 10px 0; }
+  ul.bullets li {
+    padding-left: 18px; position: relative;
+    margin-bottom: 6px; font-size: 10pt;
+    color: var(--ink); line-height: 1.5;
+  }
+  ul.bullets li:before {
+    content: ""; position: absolute;
+    left: 0; top: 8px;
+    width: 10px; height: 2px;
+    background: var(--rs-red);
+  }
+
+  table {
+    width: 100%; border-collapse: collapse;
+    font-size: 9pt; margin: 8px 0;
+  }
+  th {
+    text-align: left; font-family: var(--mono);
+    font-size: 7.5pt; color: var(--rs-red);
+    letter-spacing: 0.15em; padding: 6px 6px;
+    border-bottom: 1.5px solid var(--rs-red);
+    text-transform: uppercase; font-weight: 600;
+  }
+  th.r, td.r { text-align: right; }
+  td {
+    padding: 5px 6px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink); font-size: 9pt; line-height: 1.4;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr.highlight td {
+    background: var(--rs-red-dim);
+    font-weight: 700; color: var(--rs-red);
+  }
+
+  .pillar-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px; margin: 8px 0;
+  }
+  .pillar-cell {
+    background: var(--cream-dark);
+    border-left: 2px solid var(--rs-red);
+    padding: 10px 12px;
+  }
+  .pillar-cell .ph {
+    font-family: var(--mono); font-size: 7.5pt;
+    color: var(--rs-red); letter-spacing: 0.18em;
+    text-transform: uppercase; font-weight: 700; margin-bottom: 4px;
+  }
+  .pillar-cell .pshare {
+    font-size: 9pt; color: var(--ink); font-weight: 700; margin-bottom: 4px;
+  }
+  .pillar-cell .pbody {
+    font-size: 8.5pt; line-height: 1.45; color: var(--ink);
+  }
+
+  /* 4-LoB Quadrant */
+  .lob-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 10px; margin: 10px 0 4px;
+  }
+  .lob-cell {
+    background: var(--cream-dark);
+    border-left: 3px solid var(--rs-red);
+    padding: 10px 14px;
+    position: relative;
+  }
+  .lob-cell .lob-num {
+    font-family: var(--mono); font-size: 8pt;
+    color: var(--rs-red); letter-spacing: 0.18em;
+    font-weight: 700; margin-bottom: 2px;
+  }
+  .lob-cell .lob-name {
+    font-size: 11pt; font-weight: 800;
+    color: var(--ink); letter-spacing: -0.01em;
+    line-height: 1.2; margin-bottom: 5px;
+  }
+  .lob-cell .lob-body {
+    font-size: 9pt; line-height: 1.5; color: var(--ink);
+  }
+  .lob-cell .lob-body b { color: var(--ink); font-weight: 700; }
+
+  .stat-strip {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 8px; margin: 10px 0;
+  }
+  .stat-cell {
+    background: var(--cream-dark);
+    border-left: 2px solid var(--rs-red);
+    padding: 8px 10px;
+  }
+  .stat-cell .sk {
+    font-family: var(--mono); font-size: 7pt;
+    color: var(--ink-muted); letter-spacing: 0.15em;
+    text-transform: uppercase; font-weight: 600; margin-bottom: 2px;
+  }
+  .stat-cell .sv {
+    font-family: var(--sans); font-size: 14pt;
+    font-weight: 800; color: var(--rs-red);
+    letter-spacing: -0.02em; line-height: 1;
+  }
+  .stat-cell .sn { font-size: 7.5pt; color: var(--ink-mid); margin-top: 2px; }
+
+  /* India expansion timeline */
+  .rollout {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 6px; margin: 10px 0 6px;
+  }
+  .rollout-cell {
+    background: var(--cream-dark);
+    border-top: 2px solid var(--rs-red);
+    padding: 8px 9px 9px;
+  }
+  .rollout-cell .yk {
+    font-family: var(--mono); font-size: 7pt;
+    color: var(--rs-red); letter-spacing: 0.16em;
+    font-weight: 700; margin-bottom: 2px;
+  }
+  .rollout-cell .yc {
+    font-family: var(--sans); font-size: 13pt;
+    font-weight: 800; color: var(--ink);
+    letter-spacing: -0.02em; line-height: 1; margin-bottom: 5px;
+  }
+  .rollout-cell .yc small { font-size: 7.5pt; color: var(--ink-muted); font-weight: 500; letter-spacing: 0.1em; }
+  .rollout-cell .yb {
+    font-size: 8pt; line-height: 1.4; color: var(--ink);
+  }
+  .rollout-cell .yb b { color: var(--rs-red); font-weight: 700; }
+
+  .closing {
+    background: var(--rs-red-soft);
+    border-left: 3px solid var(--rs-red);
+    padding: 10px 14px; margin-top: 10px;
+    font-size: 10pt; line-height: 1.55; color: var(--ink);
+  }
+  .closing b { color: var(--ink); }
+  .closing .em { color: var(--rs-red); font-style: italic; }
+
+  .signoff {
+    margin-top: 24px; padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    font-size: 9pt; color: var(--ink-mid);
+    line-height: 1.5;
+  }
+  .signoff .name { color: var(--ink); font-weight: 700; font-size: 10pt; }
+  .signoff .contact {
+    font-family: var(--mono); font-size: 8pt;
+    letter-spacing: 0.12em; margin-top: 4px;
+    color: var(--ink-muted);
+  }
+</style>
+</head>
+<body>
+<div class="doc">
+
+  <div class="header">
+    <span class="brand">RACESIMS · INVESTOR BRIEF</span>
+    <span class="doc-meta">CHENNAI · MAY 2026</span>
+  </div>
+
+  <h1>Three questions, <span class="accent">answered.</span></h1>
+  <div class="subtitle">What is RaceSims? Where will we be in three years? What are the revenue streams?</div>
+
+  <!-- Q1 -->
+  <div class="qsec">
+    <div class="qnum">QUESTION ONE</div>
+    <h2>What is RaceSims?</h2>
+
+    <p class="lead"><b>RaceSims is India's gateway to motorsport.</b> Whether you want to try racing once or pursue it as a career — this is where you start.</p>
+
+    <p>India has thousands of motorsport aspirants — but unlike most other sports, the entry barrier into motorsport is excruciatingly high. Kart fees, equipment costs, training infrastructure, time: all gate the path to a real cockpit. Everyone aspires; few get the chance to try. <b>RaceSims removes that gate.</b> We make racing accessible for the price of a movie ticket, and we give those serious about it a structured ladder all the way to the grid.</p>
+
+    <p style="margin-bottom: 4px;">Built across <b>four lines of business</b>:</p>
+
+    <div class="lob-grid">
+      <div class="lob-cell">
+        <div class="lob-num">01</div>
+        <div class="lob-name">RaceSims Experience Centres</div>
+        <div class="lob-body">Premium sim racing venues where anyone in India can come experience motorsport. <b>Walk-in sessions</b> · monthly memberships · corporate team events · private parties · café-lounge. <b>Chennai flagship opens 2026</b>, with a <b>43-centre national rollout</b> over five years.</div>
+      </div>
+      <div class="lob-cell">
+        <div class="lob-num">02</div>
+        <div class="lob-name">RaceSims Hardware Distribution</div>
+        <div class="lob-body">Official distributor and service partner in India for <b>world-leading premium sim racing hardware brands</b>. Bringing world-class racing equipment to Indian consumers, businesses, and our own centres — with full after-sales service.</div>
+      </div>
+      <div class="lob-cell">
+        <div class="lob-num">03</div>
+        <div class="lob-name">RaceSims Motorsport Academy</div>
+        <div class="lob-body">Where Indians learn to race. <b>Beginner courses</b> for first-timers · progressive curriculum (Initiation → Race Academy → Rally School → Pro Track) for those serious about racing · <b>Track Day Programmes for supercar owners</b> preparing for real circuits · <b>Real Driving Experiences</b> combining simulator training with real-car days at the track · 1-on-1 coaching with race engineers · professional training for motorsport teams.</div>
+      </div>
+      <div class="lob-cell">
+        <div class="lob-num">04</div>
+        <div class="lob-name">RaceSims Championships</div>
+        <div class="lob-body">India's first national-level sim racing leagues — both circuit and rally. The <b>RaceSims Racing Championship</b> and <b>RaceSims Rally Championship</b> launch 2027 · broadcast on digital platforms · sponsored by major brands · with structured seasons and prize structures. Top finishers earn opportunities to race at real motorsport events through our exclusive partnerships.</div>
+      </div>
+    </div>
+
+    <p style="margin-top: 14px;">Founded by <b>Thambu Samy</b>, a working race engineer at ARKA Motorsports — India's most-decorated motorsport team with <b>130+ national championship titles since 1987</b>.</p>
+  </div>
+
+  <!-- Q2 -->
+  <div class="qsec">
+    <div class="qnum">QUESTION TWO</div>
+    <h2>Where do we see RaceSims in three years?</h2>
+
+    <p class="lead">By May 2029, RaceSims will be <b>India's category-defining premium motorsport development platform.</b></p>
+
+    <div class="stat-strip">
+      <div class="stat-cell"><div class="sk">Centres operating</div><div class="sv">17</div><div class="sn">7 Tier 1 + 5 Tier 2 cities</div></div>
+      <div class="stat-cell"><div class="sk">Network revenue</div><div class="sv">₹40 cr</div><div class="sn">RaceSims direct ₹25-28 cr</div></div>
+      <div class="stat-cell"><div class="sk">RaceSims EBITDA</div><div class="sv">₹8-10 cr</div><div class="sn">40% blended margin</div></div>
+      <div class="stat-cell"><div class="sk">Valuation</div><div class="sv">₹250-400 cr</div><div class="sn">Series B conversation</div></div>
+    </div>
+
+    <div style="font-family: var(--mono); font-size: 8pt; color: var(--rs-red); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-top: 12px; margin-bottom: 2px;">India expansion · 5-year rollout</div>
+
+    <div class="rollout">
+      <div class="rollout-cell">
+        <div class="yk">YEAR 1 · 2026</div>
+        <div class="yc">1<small> centre</small></div>
+        <div class="yb"><b>Chennai flagship</b> opens. Operating playbook documented as the franchise prototype. Hot Lap dealer pool live across 4 cities.</div>
+      </div>
+      <div class="rollout-cell">
+        <div class="yk">YEAR 2 · 2027</div>
+        <div class="yc">7<small> centres</small></div>
+        <div class="yb"><b>Mumbai Mega</b> (direct) + 5 boutique franchises: Hyderabad · Bangalore · Gurgaon · Pune · Kochi. <b>National Championship Season 1.</b></div>
+      </div>
+      <div class="rollout-cell">
+        <div class="yk">YEAR 3 · 2028</div>
+        <div class="yc">17<small> centres</small></div>
+        <div class="yb"><b>Bangalore + Delhi-NCR Megas</b> (direct). 8 boutiques: Chennai-OMR · Whitefield · Gachibowli · Bandra · Coimbatore · Jaipur · Chandigarh · Ahmedabad.</div>
+      </div>
+      <div class="rollout-cell">
+        <div class="yk">YEAR 4 · 2029</div>
+        <div class="yc">32<small> centres</small></div>
+        <div class="yb">3 Megas: <b>Hyderabad · Pune · Chennai-OMR.</b> 12 boutiques across Tier-2: Goa · Lucknow · Indore · Surat · Mysore · Mangalore · Vadodara · more.</div>
+      </div>
+      <div class="rollout-cell">
+        <div class="yk">YEAR 5 · 2030</div>
+        <div class="yc">43<small> centres</small></div>
+        <div class="yb"><b>Ahmedabad Mega + Kolkata.</b> Final 9 Tier-1 second-locations + Tier-2 boutiques. <b>India saturated.</b></div>
+      </div>
+    </div>
+
+    <p style="font-size: 9pt; color: var(--ink-mid); margin-top: 4px;"><b>7 Mega Flagships</b> in Tier-1 metros (direct-owned) · <b>36 Boutiques</b> across Tier-1 second-locations and 18 Tier-2 cities (5 direct + 31 franchise). Every centre runs the Chennai template.</p>
+
+    <p style="margin-top: 10px;">By Year 3, the platform will have served <b>100,000+ unique customers</b> across the network, produced <b>2,000+ Motorsport Academy graduates</b> through structured training, hosted the <b>RaceSims Championship in Season 3</b> (broadcast, sponsored, with established hero drivers), and placed the <b>first Academy graduates in real race seats</b> via ARKA Rally Drive, Polo Cup Follow Car, and INRC qualifying.</p>
+
+    <p style="margin-bottom: 0;"><b>Built on three things investors can underwrite:</b> ARKA Motorsports race-engineering pedigree (130+ titles); official Conspit + VNM distribution and service partnership in India; and the only integrated motorsport development stack in the country — centres + hardware + championship + curriculum + sim-to-real pathway under one brand.</p>
+  </div>
+
+  <!-- Q3 -->
+  <div class="qsec">
+    <div class="qnum">QUESTION THREE</div>
+    <h2>What are RaceSims' revenue streams?</h2>
+
+    <p>Two layers — <b>centre-level</b> (Drive · Train · Compete) and <b>HQ / network-level</b>.</p>
+
+    <div style="font-family: var(--mono); font-size: 8pt; color: var(--rs-red); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-top: 12px; margin-bottom: 6px;">Per-centre revenue · Y5 mature ~₹2.5 cr</div>
+
+    <div class="pillar-grid">
+      <div class="pillar-cell">
+        <div class="ph">Drive</div>
+        <div class="pshare">86% · ~₹2.17 cr</div>
+        <div class="pbody">Open Sessions (₹500-1K/hr) · Memberships (Pass 8/16 · ₹5-9K/mo) · Group · Corporate · Private hire (₹15-60K) · Café & F&amp;B · Merch</div>
+      </div>
+      <div class="pillar-cell">
+        <div class="ph">Train</div>
+        <div class="pshare">12% · ~₹29 L</div>
+        <div class="pbody">Motorsport Academy (Initiation ₹8K → Pro Track) · <b style="color:var(--rs-red);">Track Day Programmes</b> for supercar drivers (₹25-50K) · Real Driving Experiences (ARKA ₹1.75L · Buzzing Hornet ₹2.25L) · Pro Driver Training (B2B) · 1-on-1 coaching</div>
+      </div>
+      <div class="pillar-cell">
+        <div class="ph">Compete</div>
+        <div class="pshare">2% · ~₹6 L</div>
+        <div class="pbody">Championship round entries · Season passes · Hosted round share + sponsorship revenue · Broadcast + content monetisation</div>
+      </div>
+    </div>
+
+    <div style="font-family: var(--mono); font-size: 8pt; color: var(--rs-red); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-top: 12px; margin-bottom: 4px;">HQ / network-level revenue · Y5</div>
+
+    <table>
+      <tr>
+        <th>Stream</th>
+        <th class="r">Y5 ₹</th>
+      </tr>
+      <tr><td>Conspit + VNM hardware sales (franchise centres + consumers via showrooms)</td><td class="r">₹17.5 cr</td></tr>
+      <tr><td>Training programmes + corporate engagements</td><td class="r">₹5.5 cr</td></tr>
+      <tr><td>Championship sponsorships + broadcast revenue</td><td class="r">₹4.0 cr</td></tr>
+      <tr><td>Franchise royalty (6%) + franchise fees from new openings</td><td class="r">₹3.6 cr</td></tr>
+      <tr><td>VMS platform (network + external SaaS)</td><td class="r">₹1.8 cr</td></tr>
+    </table>
+
+    <div style="font-family: var(--mono); font-size: 8pt; color: var(--rs-red); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-top: 14px; margin-bottom: 4px;">Year 5 consolidated</div>
+    <div class="stat-strip">
+      <div class="stat-cell"><div class="sk">Network revenue</div><div class="sv">~₹105 cr</div><div class="sn">43 centres at saturation</div></div>
+      <div class="stat-cell"><div class="sk">RaceSims direct</div><div class="sv">~₹83 cr</div><div class="sn">All layers combined</div></div>
+      <div class="stat-cell"><div class="sk">EBITDA</div><div class="sv">~₹33 cr</div><div class="sn">40% blended margin</div></div>
+      <div class="stat-cell"><div class="sk">Valuation</div><div class="sv">₹1,000-1,300 cr</div><div class="sn">Realistic Y5 range</div></div>
+    </div>
+
+    <div class="closing">
+      <b>Drive</b> is the volume engine. <b>Train</b> is the depth and high-margin growth — Track Day Programmes is the Chennai-specific play for HNI supercar owners. <b>Compete</b> is the brand engine that <span class="em">compounds across the network</span> — every new centre's championship hosting feeds every other centre's leaderboards and sponsor value.
+    </div>
+  </div>
+
+  <div class="signoff">
+    <div class="name">Thambu Samy</div>
+    <div>Founder, RaceSims Solutions Pvt Ltd · Race Engineer, ARKA Motorsports</div>
+    <div class="contact">THAMBU@RACESIMS.IN</div>
+  </div>
+
+</div>
+</body>
+</html>
