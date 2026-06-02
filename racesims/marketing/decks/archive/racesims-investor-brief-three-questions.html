@@ -198,6 +198,32 @@
   }
   .stat-cell .sn { font-size: 7.5pt; color: var(--ink-mid); margin-top: 2px; }
 
+  /* India expansion timeline */
+  .rollout {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 6px; margin: 10px 0 6px;
+  }
+  .rollout-cell {
+    background: var(--cream-dark);
+    border-top: 2px solid var(--rs-red);
+    padding: 8px 9px 9px;
+  }
+  .rollout-cell .yk {
+    font-family: var(--mono); font-size: 7pt;
+    color: var(--rs-red); letter-spacing: 0.16em;
+    font-weight: 700; margin-bottom: 2px;
+  }
+  .rollout-cell .yc {
+    font-family: var(--sans); font-size: 13pt;
+    font-weight: 800; color: var(--ink);
+    letter-spacing: -0.02em; line-height: 1; margin-bottom: 5px;
+  }
+  .rollout-cell .yc small { font-size: 7.5pt; color: var(--ink-muted); font-weight: 500; letter-spacing: 0.1em; }
+  .rollout-cell .yb {
+    font-size: 8pt; line-height: 1.4; color: var(--ink);
+  }
+  .rollout-cell .yb b { color: var(--rs-red); font-weight: 700; }
+
   .closing {
     background: var(--rs-red-soft);
     border-left: 3px solid var(--rs-red);
@@ -283,7 +309,39 @@
       <div class="stat-cell"><div class="sk">Valuation</div><div class="sv">₹250-400 cr</div><div class="sn">Series B conversation</div></div>
     </div>
 
-    <p>The platform will have served <b>100,000+ unique customers</b> across the network, produced <b>2,000+ Motorsport Academy graduates</b> through structured training, hosted the <b>RaceSims Championship in Season 3</b> (broadcast, sponsored, with established hero drivers), and placed the <b>first Academy graduates in real race seats</b> via ARKA Rally Drive, Polo Cup Follow Car, and INRC qualifying.</p>
+    <div style="font-family: var(--mono); font-size: 8pt; color: var(--rs-red); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-top: 12px; margin-bottom: 2px;">India expansion · 5-year rollout</div>
+
+    <div class="rollout">
+      <div class="rollout-cell">
+        <div class="yk">YEAR 1 · 2026</div>
+        <div class="yc">1<small> centre</small></div>
+        <div class="yb"><b>Chennai flagship</b> opens. Operating playbook documented as the franchise prototype. Hot Lap dealer pool live across 4 cities.</div>
+      </div>
+      <div class="rollout-cell">
+        <div class="yk">YEAR 2 · 2027</div>
+        <div class="yc">7<small> centres</small></div>
+        <div class="yb"><b>Mumbai Mega</b> (direct) + 5 boutique franchises: Hyderabad · Bangalore · Gurgaon · Pune · Kochi. <b>National Championship Season 1.</b></div>
+      </div>
+      <div class="rollout-cell">
+        <div class="yk">YEAR 3 · 2028</div>
+        <div class="yc">17<small> centres</small></div>
+        <div class="yb"><b>Bangalore + Delhi-NCR Megas</b> (direct). 8 boutiques: Chennai-OMR · Whitefield · Gachibowli · Bandra · Coimbatore · Jaipur · Chandigarh · Ahmedabad.</div>
+      </div>
+      <div class="rollout-cell">
+        <div class="yk">YEAR 4 · 2029</div>
+        <div class="yc">32<small> centres</small></div>
+        <div class="yb">3 Megas: <b>Hyderabad · Pune · Chennai-OMR.</b> 12 boutiques across Tier-2: Goa · Lucknow · Indore · Surat · Mysore · Mangalore · Vadodara · more.</div>
+      </div>
+      <div class="rollout-cell">
+        <div class="yk">YEAR 5 · 2030</div>
+        <div class="yc">43<small> centres</small></div>
+        <div class="yb"><b>Ahmedabad Mega + Kolkata.</b> Final 9 Tier-1 second-locations + Tier-2 boutiques. <b>India saturated.</b></div>
+      </div>
+    </div>
+
+    <p style="font-size: 9pt; color: var(--ink-mid); margin-top: 4px;"><b>7 Mega Flagships</b> in Tier-1 metros (direct-owned) · <b>36 Boutiques</b> across Tier-1 second-locations and 18 Tier-2 cities (5 direct + 31 franchise). Every centre runs the Chennai template.</p>
+
+    <p style="margin-top: 10px;">By Year 3, the platform will have served <b>100,000+ unique customers</b> across the network, produced <b>2,000+ Motorsport Academy graduates</b> through structured training, hosted the <b>RaceSims Championship in Season 3</b> (broadcast, sponsored, with established hero drivers), and placed the <b>first Academy graduates in real race seats</b> via ARKA Rally Drive, Polo Cup Follow Car, and INRC qualifying.</p>
 
     <p style="margin-bottom: 0;"><b>Built on three things investors can underwrite:</b> ARKA Motorsports race-engineering pedigree (130+ titles); official Conspit + VNM distribution and service partnership in India; and the only integrated motorsport development stack in the country — centres + hardware + championship + curriculum + sim-to-real pathway under one brand.</p>
   </div>
