@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 600" width="1800" height="600">
+
+  <rect width="1800" height="600" fill="#0D0D0D"/>
+
+  <defs>
+    <!--
+      Mark: 560px wide, centred at x=900.
+      Bottom x=620→1180. Top x=648→1208 (lean=28px).
+      Three 35px bands — flag orientation.
+    -->
+    <clipPath id="flagClipB">
+      <polygon points="620,279 1180,279 1208,174 648,174"/>
+    </clipPath>
+
+    <!--
+      Chakra spoke — banner.
+      Centre = optical mid of mark at mid-band height:
+      cy=226 (white band centre), cx=914.
+      r_hub=2.5  r_outer=14
+    -->
+    <line id="spB"
+          x1="916.5" y1="226" x2="928" y2="226"
+          stroke="#000080" stroke-width="1.1" stroke-linecap="round"/>
+  </defs>
+
+  <!-- ── MARK ── -->
+  <rect x="0" y="174" width="1800" height="35" fill="#FF9933" clip-path="url(#flagClipB)"/>
+  <rect x="0" y="209" width="1800" height="35" fill="#FFFFFF"  clip-path="url(#flagClipB)"/>
+  <rect x="0" y="244" width="1800" height="35" fill="#138808" clip-path="url(#flagClipB)"/>
+
+  <!-- ── ASHOKA CHAKRA (white band, cx=914 cy=226) ── -->
+  <circle cx="914" cy="226" r="14"  fill="none"   stroke="#000080" stroke-width="1.4"/>
+  <circle cx="914" cy="226" r="2.5" fill="#000080"/>
+  <use href="#spB" transform="rotate(0,   914,226)"/>
+  <use href="#spB" transform="rotate(15,  914,226)"/>
+  <use href="#spB" transform="rotate(30,  914,226)"/>
+  <use href="#spB" transform="rotate(45,  914,226)"/>
+  <use href="#spB" transform="rotate(60,  914,226)"/>
+  <use href="#spB" transform="rotate(75,  914,226)"/>
+  <use href="#spB" transform="rotate(90,  914,226)"/>
+  <use href="#spB" transform="rotate(105, 914,226)"/>
+  <use href="#spB" transform="rotate(120, 914,226)"/>
+  <use href="#spB" transform="rotate(135, 914,226)"/>
+  <use href="#spB" transform="rotate(150, 914,226)"/>
+  <use href="#spB" transform="rotate(165, 914,226)"/>
+  <use href="#spB" transform="rotate(180, 914,226)"/>
+  <use href="#spB" transform="rotate(195, 914,226)"/>
+  <use href="#spB" transform="rotate(210, 914,226)"/>
+  <use href="#spB" transform="rotate(225, 914,226)"/>
+  <use href="#spB" transform="rotate(240, 914,226)"/>
+  <use href="#spB" transform="rotate(255, 914,226)"/>
+  <use href="#spB" transform="rotate(270, 914,226)"/>
+  <use href="#spB" transform="rotate(285, 914,226)"/>
+  <use href="#spB" transform="rotate(300, 914,226)"/>
+  <use href="#spB" transform="rotate(315, 914,226)"/>
+  <use href="#spB" transform="rotate(330, 914,226)"/>
+  <use href="#spB" transform="rotate(345, 914,226)"/>
+
+  <!-- ── WORDMARK ── -->
+  <text
+    x="900" y="389"
+    font-family="'Arial Black', 'Impact', 'Helvetica Neue', sans-serif"
+    font-size="120"
+    font-weight="900"
+    text-anchor="middle"
+    fill="#FFFFFF"
+    textLength="560"
+    lengthAdjust="spacing">IERL</text>
+
+  <!-- Tricolor divider — 560px, aligned to mark edges (x=620→1180) -->
+  <rect x="620" y="406" width="187" height="2.5" fill="#FF9933"/>
+  <rect x="807" y="406" width="186" height="2.5" fill="#FFFFFF" opacity="0.7"/>
+  <rect x="993" y="406" width="187" height="2.5" fill="#138808"/>
+
+  <!-- Full name — same 560px span -->
+  <text
+    x="900" y="436"
+    font-family="'Arial', 'Helvetica Neue', Helvetica, sans-serif"
+    font-size="17"
+    text-anchor="middle"
+    fill="#666666"
+    textLength="560"
+    lengthAdjust="spacing">INDIAN ESPORTS RACING LEAGUE</text>
+
+  <!-- Tagline -->
+  <text
+    x="900" y="468"
+    font-family="'Arial', Helvetica, sans-serif"
+    font-size="13"
+    text-anchor="middle"
+    fill="#3D3D3D"
+    letter-spacing="5">RACE · COMPETE · CONQUER</text>
+
+  <!-- ── BOTTOM TRICOLOR BAR ── -->
+  <rect x="0"    y="572" width="600" height="8" fill="#FF9933"/>
+  <rect x="600"  y="572" width="600" height="8" fill="#FFFFFF" opacity="0.85"/>
+  <rect x="1200" y="572" width="600" height="8" fill="#138808"/>
+
+</svg>
