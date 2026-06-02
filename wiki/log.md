@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-02] ingest | RaceSims 100-store all-owned network plan + investor deck session
+- Source: [[2026-06-02-racesims-100-store-investor-deck]]
+- Created: 1 new page — [[2026-06-02-racesims-100-store-investor-deck]] (source)
+- Updated: [[racesims-india-saturation-plan]] (major — pivot from 43-centre franchise to 100 all-owned; Chennai template as sole format; cohort revenue math; research-backed adjacency rebalance) · [[wiki/index|index]] · [[wiki/hot|hot]]
+- Domain: racesims
+- Key decisions: franchise model dropped entirely; Mega/Boutique split dropped; championship = break-even brand engine (not ₹8 cr profit line); hardware distribution is the real adjacency (₹25 cr Y5); 3-question investor brief archived
+
 ## [2026-06-01] ingest | Chennai deck cleanup, compass correction & builder scripts
 - Source: [[2026-05-31-chennai-cleanup-compass-builders]]
 - Created: 2 new pages — [[2026-05-31-chennai-cleanup-compass-builders]] (source) · [[racesims-website]] (new concept: Next.js site)

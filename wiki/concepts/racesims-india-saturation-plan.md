@@ -8,37 +8,32 @@ tags: [network, franchise, scaling, india-only, strategy, valuation]
 
 # RaceSims India Saturation Plan — 43-Centre 5-Year Network
 
-The pan-India network rollout for [[racesims-chennai-flagship|RaceSims]] over 5 years from Chennai opening. **43 centres across 8 Tier 1 + 18 Tier 2 cities** at saturation, ₹105 cr network revenue, ₹83 cr direct revenue to RaceSims, ₹33 cr EBITDA, valuation ₹1,000-1,300 cr. Strategically locked May 17 in [[2026-05-17-racesims-chennai-flagship-planning|the flagship planning session]] as the base case (Path B in conversation framing).
+The pan-India network rollout for [[racesims-chennai-flagship|RaceSims]] over 5 years from Chennai opening. **100 centres, all owned and operated** — single [[racesims-chennai-flagship|Chennai template]] replicated city by city. ₹150 cr Y5 revenue · ₹52 cr Y5 EBITDA · valuation ₹1,500-2,000 cr Y5 · ₹3,000-4,000 cr at maturity (Y8). Updated June 2 from original 43-centre (12 direct + 31 franchise) plan — franchise model dropped in favour of full ownership. See [[2026-06-02-racesims-100-store-investor-deck]] for research basis and full decision log.
 
 ## Network composition at saturation
 
-| | Mega Flagships | Boutiques | Total |
-|---|---------------|-----------|-------|
-| Tier 1 (A-town metros) | 7 | 18 | 25 |
-| Tier 2 (B-town metros) | 0 | 18 | 18 |
-| **Total** | **7** | **36** | **43** |
+> [!important] **Updated 2026-06-02** — pivot from 43-centre mixed franchise model to 100 all-owned. Mega/Boutique format split dropped. Single Chennai template across all 100.
 
-Of which:
-- **12 direct (RaceSims-owned)**: all 7 Megas + 5 strategic Boutiques
-- **31 franchise**: most Tier 1 second-locations + all Tier 2
+| | Owned | Franchise | Total |
+|---|-------|-----------|-------|
+| All centres | **100** | 0 | **100** |
 
-## Two formats
+All 100 are [[racesims-chennai-flagship|Chennai-template]] centres: 2,000 sq ft · 8 rigs (7 Rally + 1 Motion) · ₹95L Y1 cash · ₹2.62 cr Y5 revenue · 68% Y5 EBITDA margin.
 
-### Format A — Mega Flagship (7 Tier 1 locations)
-F1 Arcade-style premium experiential venue.
-- 4,000-6,000 sqft, 12-18 rigs
-- Café/F&B-led, corporate event hub, Live Race championship venue
-- Capex: ₹3-4 cr per location
-- Annual revenue at maturity: ₹5-7 cr
-- EBITDA margin: 30-35%
+## One format only — the Chennai template
 
-### Format B — Boutique Driver Development Centre (36 locations)
-The [[racesims-chennai-flagship|Chennai design]] replicated.
-- 1,800-2,200 sqft, 6 rigs
-- Training + competition focused
-- Capex: ₹65-75 lakh
-- Annual revenue at maturity: ₹1.5-2 cr
-- EBITDA margin: 28-32%
+**All 100 centres are identical-spec.** No Mega vs Boutique split.
+
+- 2,000 sq ft
+- 8 rigs: 7 Rally + 1 Motion
+- Hard capex: ₹72L · Working capital: ₹23L · **Total Y1: ₹95L**
+- Monthly opex Y1: ₹4.34L (v3.2 locked)
+- Y5 revenue at 68% util: ₹2.62 cr
+- Y5 EBITDA margin: 68%
+- Payback: 25 months
+- Capital multiple: 5.4×
+
+Why one format: same capex efficiency across 100 centres; one playbook; one brand standard; 68% margin vs 30-35% for Mega-format; faster rollout (8-week buildout per centre).
 
 ## City map — Tier 1 metros (multiple locations each)
 
@@ -64,107 +59,108 @@ The [[racesims-chennai-flagship|Chennai design]] replicated.
 
 ## 5-Year phased rollout
 
-### Year 1 — Foundation
-**Chennai opens** (already planned). Operating playbook documented as franchise prototype.
+### Year 1 — Foundation (2026)
+**Chennai opens.** Operating playbook documented as the network prototype. Hot Lap dealer pool seeded across 4 partner cities.
 
-| End of Y1 | 1 centre · ₹1.2 cr revenue · profitable |
+| End of Y1 | 1 centre · ₹0.7 cr revenue |
 
-### Year 2 — Tier 1 Ignition
-- **Mumbai Mega Flagship** opens (direct, Powai)
-- 5 boutique franchises: Hyderabad · Bangalore (Indiranagar) · Gurgaon · Pune · Kochi
-- National championship live across 7 centres
-- ARKA exclusivity contract signed
+### Year 2 — Tier 1 Ignition (2027)
+- 7 new centres: Mumbai · Bangalore · Hyderabad · Delhi-NCR · Pune · Kochi · Coimbatore
+- **National Championship Season 1 launches**
 
-| End of Y2 | 7 centres · ₹15-20 cr network revenue |
+| End of Y2 | 8 centres · ₹6 cr revenue (cohort-weighted) |
 
-### Year 3 — Tier 1 Build + Tier 2 Entry
-- **Bangalore Mega** opens (direct, Whitefield)
-- **Delhi-NCR Mega** opens (direct, Cyber Hub Gurgaon)
-- 8 boutique franchises: Chennai-OMR · Bangalore-Whitefield · Hyderabad-Gachibowli · Mumbai-Bandra · Coimbatore · Jaipur · Chandigarh · Ahmedabad
+### Year 3 — Tier 1 Build + Tier 2 Entry (2028)
+- 17 new centres: Tier-1 second locations (Whitefield · Bandra · OMR · Noida · Hinjewadi · Gachibowli · Anna Nagar · Gurgaon-2) + first Tier-2 cities (Jaipur · Chandigarh · Ahmedabad · Indore · Lucknow · Surat · Vadodara · Mysore · Goa)
+- **Series B trigger:** 25 centres + Championship S2 + ₹22 cr revenue run-rate
 
-| End of Y3 | 17 centres (4 direct, 13 franchise) · ₹35-45 cr network revenue |
+| End of Y3 | 25 centres · ₹22 cr revenue |
 
-### Year 4 — Acceleration
-- 3 more Mega Flagships: Hyderabad · Pune · Chennai (second venue)
-- 12 boutiques: Goa · Lucknow · Indore · Surat · Mysore · Mangalore · Vadodara · Trivandrum · Vijayawada · Madurai · Bhubaneswar · Visakhapatnam
+### Year 4 — Scale (2029)
+- 35 new centres: Tier-1 third locations + 12 new Tier-2 cities (Mangalore · Vijayawada · Trivandrum · Madurai · Bhubaneswar · Vizag · Nagpur · Dehradun · Kanpur · Ludhiana · Bhopal · Raipur)
 
-| End of Y4 | 32 centres · ₹70-85 cr network revenue |
+| End of Y4 | 60 centres · ₹61 cr revenue |
 
-### Year 5 — Full Saturation
-- Ahmedabad Mega opens
-- Kolkata first Boutique (direct)
-- Remaining 10 Tier 1 second-location boutiques
+### Year 5 — Full Saturation (2030)
+- 40 new centres: fills Tier-1 fourth locations, remaining Tier-2 metros, top Tier-3 entry
 
-| End of Y5 | 43 centres · ₹105-115 cr network revenue · India saturated |
+| End of Y5 | **100 centres · ₹121 cr centre revenue + ₹29 cr adjacencies = ₹150 cr · India saturated** |
 
-## Network revenue at saturation (Year 5)
+## Network revenue at saturation (Year 5) — cohort math
 
-| Source | Count | Avg Annual | Network Total |
-|--------|-------|-----------|---------------|
-| Mega Flagships (mature) | 7 | ₹6 cr | ₹42 cr |
-| Boutique direct (mature) | 5 | ₹1.8 cr | ₹9 cr |
-| Boutique franchise (mature) | 31 | ₹1.5 cr | ₹46.5 cr |
-| **Total network revenue** | | | **~₹97-115 cr** |
+All 100 centres are owned; no franchise leakage. Revenue is 100% RaceSims direct.
 
-## RaceSims Solutions direct revenue (Year 5)
+| Cohort | Centres | Age at Y5 | Revenue |
+|--------|---------|-----------|---------|
+| Y1 (Chennai) | 1 | 5y | ₹2.6 cr |
+| Y2 cohort | 7 | 4y | ₹15.6 cr |
+| Y3 cohort | 17 | 3y | ₹30.6 cr |
+| Y4 cohort | 35 | 2y | ₹44.7 cr |
+| Y5 cohort | 40 | 1y | ₹27.6 cr |
+| **Centre subtotal** | **100** | | **₹121.1 cr** |
 
-| Stream | Y5 ₹ |
-|--------|------|
-| Direct centre revenue (7 Mega + 5 Boutique owned) | 51.0 cr |
-| Franchise royalty (6% × 31 franchise centres) | 2.8 cr |
-| Franchise fees (new openings) | 0.8 cr |
-| Hardware sales to franchises | 5.5 cr |
-| Hardware to consumers (centres as showroom) | 12.0 cr |
-| [[racesims-vms-build|VMS fees from network]] | 0.6 cr |
-| VMS as SaaS (non-RaceSims customers) | 1.2 cr |
-| Championship sponsorships | 4.0 cr |
-| Training programmes | 3.5 cr |
-| Corporate partnerships | 2.0 cr |
-| **Total RaceSims direct revenue Y5** | **~₹83 cr** |
+## RaceSims total Y5 revenue
+
+| Stream | Y5 ₹ | Notes |
+|--------|------|-------|
+| Centre revenue (100 owned) | ₹121.1 cr | Cohort-weighted (see above) |
+| Hardware to consumers (800 rigs on showroom) | ₹25 cr | Real adjacency — VRH proves demand |
+| Training B2B + corporate (HQ-level) | ₹3 cr | Bespoke; most corporate already in centres |
+| Championship sponsorship + broadcast | ₹2.5 cr | **Break-even. Brand engine not profit line.** |
+| VMS SaaS (external customers) | ₹2 cr | |
+| **Total Y5 revenue** | **~₹150 cr** | **100% to RaceSims** |
 
 ## EBITDA at saturation
 
-| Stream | Revenue | Margin | EBITDA |
-|--------|---------|--------|--------|
-| Direct centres | ₹51 cr | 32% | ₹16.3 cr |
-| Hardware/Franchise/Software | ₹23.7 cr | 50% | ₹11.8 cr |
-| Sponsor/Training/Corporate | ₹9.5 cr | 55% | ₹5.2 cr |
-| **Total Y5 EBITDA** | **₹83 cr** | **40%** | **~₹33 cr** |
+| Stream | EBITDA |
+|--------|--------|
+| Centres (cohort blended ~50% margin) | ~₹60 cr |
+| Adjacencies (hardware + training + VMS) | ~₹7 cr |
+| HQ overhead | −₹15 cr |
+| **Total Y5 EBITDA** | **~₹52 cr (~35%)** |
+
+> [!important] **Championship modelled at break-even by design.** Research (F1 Arcade £31.9m FY24 still EBITDA-negative; global F1 Esports $750K prize funded by F1, not operators) confirms that independent leagues are cost centres. Championship ≈ ₹2.5 cr gross ≈ break-even after costs. Its value is funnel (Drive + Train) — not profit. See [[2026-06-02-racesims-100-store-investor-deck]].
 
 ## Capital required across 5 years
 
-| Year | Direct Capex | Franchise Support | Marketing | Total |
-|------|-------------|-------------------|-----------|-------|
-| Y1 | ₹0.65 cr | — | ₹0.5 cr | ₹1.15 cr |
-| Y2 | ₹4 cr (Mumbai Mega) | ₹1.5 cr | ₹2 cr | ₹7.5 cr |
-| Y3 | ₹8 cr (BLR+DEL Megas) | ₹3 cr | ₹3 cr | ₹14 cr |
-| Y4 | ₹12 cr (3 Mega+5 Boutique) | ₹4 cr | ₹4 cr | ₹20 cr |
-| Y5 | ₹6 cr (final builds) | ₹3 cr | ₹5 cr | ₹14 cr |
-| **5-year total** | **₹30.65 cr** | **₹11.5 cr** | **₹14.5 cr** | **₹56-60 cr** |
+100 × ₹95L per centre = ₹95 cr in centre capex. Plus brand/HQ build.
 
-**External capital actually required: ₹20-25 cr** (first 30 months). After Year 3, operating cash flow funds further expansion.
+| Year | New centres | Centres capex | Brand + HQ | Total |
+|------|-------------|---------------|------------|-------|
+| Y1 | 1 | ₹0.95 cr | ₹0.5 cr | ₹1.5 cr |
+| Y2 | 7 | ₹6.7 cr | ₹4.0 cr | ₹10.7 cr |
+| Y3 | 17 | ₹16.2 cr | ₹6.0 cr | ₹22.2 cr |
+| Y4 | 35 | ₹33.3 cr | ₹10.0 cr | ₹43.3 cr |
+| Y5 | 40 | ₹38.0 cr | ₹12.0 cr | ₹50.0 cr |
+| **Total** | **100** | **₹95.1 cr** | **₹32.5 cr** | **~₹127 cr** |
+
+**External capital: ₹75-90 cr across two rounds.** Operating cash from Y3+ cohorts self-funds ~₹45-50 cr of Y4-Y5 spend.
+
+- **Series A (now): ₹25-30 cr** — funds Y1 + Y2 (8 centres) + Championship Season 1 + brand + HQ
+- **Series B (Y3): ₹50-60 cr at ₹500-700 cr valuation** — accelerates 25 → 60 centres
 
 ## Cumulative position
 
-| End of | Centres | Network Rev | RaceSims Rev | EBITDA |
-|--------|---------|-------------|--------------|--------|
-| Y1 | 1 | ₹1.2 cr | ₹3 cr | ₹0.6 cr |
-| Y2 | 7 | ₹15 cr | ₹11 cr | ₹2.5 cr |
-| Y3 | 17 | ₹40 cr | ₹28 cr | ₹8 cr |
-| Y4 | 32 | ₹78 cr | ₹55 cr | ₹19 cr |
-| Y5 | 43 | ₹105 cr | ₹83 cr | ₹33 cr |
+| End of | Centres | Revenue | EBITDA |
+|--------|---------|---------|--------|
+| Y1 | 1 | ₹0.7 cr | ₹0.2 cr |
+| Y2 | 8 | ₹6 cr | ₹1.7 cr |
+| Y3 | 25 | ₹22 cr | ₹6 cr |
+| Y4 | 60 | ₹61 cr | ~₹22 cr |
+| Y5 | 100 | ₹150 cr | ₹52 cr |
+| Y8 (all mature) | 100 | ~₹300 cr | ~₹120 cr |
 
 ## Valuation at saturation
 
 | Lens | Multiple | Valuation |
 |------|----------|-----------|
-| Revenue (premium growing brand) | 12-15× | ₹1,000-1,250 cr |
-| EBITDA (mature platform) | 25-30× | ₹825-990 cr |
-| Strategic (PE buyer) | 15-18× revenue + growth | ₹1,250-1,500 cr |
+| Revenue (premium growing brand · Y5 ₹150 cr) | 10-12× | ₹1,500-1,800 cr |
+| EBITDA (mature platform · Y5 ₹52 cr) | 25-30× | ₹1,300-1,560 cr |
+| Strategic (PE / sports group) | 12-15× rev | ₹1,800-2,250 cr |
 
-**Realistic Y5 valuation range: ₹1,000-1,300 cr ($120-155M).**
+**Realistic Y5 valuation range: ₹1,500-2,000 cr.**
 
-With the [[racesims-revenue-stack|6 adjacency revenue streams]] layered: valuation moves to **₹1,250-1,650 cr.**
+**At full maturity (Y8, all 100 centres mature, ₹300 cr rev): ₹3,000-4,000 cr.**
 
 ## Why India saturation is the right base strategy
 

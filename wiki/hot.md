@@ -8,7 +8,18 @@ updated: 2026-05-30
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-01 (latest) — Deck cleanup · worktree salvage · compass corrected · builders in-repo
+## 2026-06-02 (latest) — 100-store all-owned network plan · investor deck rebuilt · championship reframed
+
+- **Strategic pivot:** [[racesims-india-saturation-plan]] updated from 43-centre (12 direct + 31 franchise) → **100 all-owned centres**. Franchise model dropped entirely.
+- **Single format:** [[racesims-chennai-flagship]] Chennai template replicated 100× — 2,000 sq ft · 8 rigs · ₹95L Y1 · ₹2.62 cr Y5 · 68% margin · 25-month payback. No Mega/Boutique split.
+- **Y5 numbers (research-backed):** ₹150 cr revenue · ₹52 cr EBITDA (~35%) · valuation ₹1,500-2,000 cr Y5 · ₹3,000-4,000 cr at Y8 maturity.
+- **Championship = break-even brand engine.** Research (F1 Arcade £31.9m FY24 still EBITDA-negative; F1 Esports $750K prize is subsidised) confirms leagues don't generate profit for operators. Modelled at break-even (₹2.5 cr). Real adjacency is hardware distribution (₹25 cr Y5 — 100 showrooms × 8 rigs each = 800 rigs on live display).
+- **Capital:** Series A ₹25-30 cr → 8 centres by Y2. Series B ₹50-60 cr at Y3 (₹500-700 cr valuation). Total external ₹75-90 cr.
+- **Gateway framing locked:** "RaceSims is India's gateway to motorsport." All 4 LoBs RaceSims-branded.
+- **Active investor artefact:** `racesims-multi-centre-rollout.pdf` (13 slides). Three-question brief archived.
+- Source: [[2026-06-02-racesims-100-store-investor-deck]]
+
+## 2026-06-01 — Deck cleanup · worktree salvage · compass corrected · builders in-repo
 - **4 canonical decks** (all others archived): `racesims-chennai-project-report.pdf` · `racesims-multi-centre-rollout.pdf` · `racesims-chennai-partner-corsair.pdf` · `motorsport-academy-curriculum.pdf`.
 - **Worktrees** 16→9. 3 branches salvaged: `admiring-spence` → [[racesims-website]] (Next.js site, 104 files, Supabase auth); `brave-stonebraker` → improved Corsair deck + MD Computers quote; `wizardly-jemison` → GMC feed audit docs.
 - **Compass corrected** (N↔S, E↔W, 180° flip): entrance **WEST** · office **SW** · motion faces **SOUTH** · rigs **east+north** walls · leaderboard **south**. Layout unchanged, still Vastu-correct. All assets updated incl. project report pp.4-5 (re-generated).
@@ -40,15 +51,6 @@ Most recently touched context. Read this first for any query — it often answer
 - **Capital reflow:** gross ₹77.21L · ITC ₹8.75L · **net ₹68.46L** · at-risk ₹59.14L · CoC ₹5.48L/yr · break-even 11.5% · **~3.1× multiple.** EBITDA ₹3.57cr / PAT ₹2.11cr hold. Landed report **rebuilt** (commit 2ce3d8d).
 - New architect: [[guru-moorthy]] — quoted paint ₹75k, measuring glazing/walls/frontage on-site 2026-05-31.
 - **Open:** 5 lines provisional (AC/UPS/lighting/solar/signage quotes pending, ±₹1–1.5L) · **washroom/sanitary** line unconfirmed (ask [[guru-moorthy]]) · Conspit/VNM-vs-sponsorship build of record.
-
-## 2026-05-30 — Chennai landed-cost BOM + two project reports
-- **Actual landed-cost rig BOM** from [[thambu]] (incl. tax) — [[2026-05-30-chennai-landed-cost-bom]]. **4 Formula/GT** (Apex 2-pedal, ₹1,60,750 sim hw) + **4 Rally/GT** (VNM 3-pedal + shifter + handbrake, ₹2,14,750). +PC+screens ₹3,23,995 ⇒ Formula ₹4,84,745 / Rally ₹5,38,745. **Motion platform ₹3,70,000** ⇒ motion rig ₹9,08,745. 7 static + 1 motion. **Fleet equipment ₹44.64L.**
-- **Primary report:** `racesims-chennai-project-report.pdf` is now THE project report (landed-cost basis, 11 pp, optimised fit-out — promoted 2026-05-30 from `-landed-cost`). The old distributor-value version (10 pp) is archived to `marketing/decks/archive/`. Old drafts archived.
-- **Office (NE corner):** ~12.2 × 12.1 ft (~148 sq ft).
-
-## 2026-05-30 — Chennai property LOCKED · layout v7 · partnerships
-- **Property LOCKED, opens July 2026.** Layout v7 (Vastu, directions corrected 2026-05-31): entrance **WEST** · office **SW** · motion faces **SOUTH** · rigs east+north walls. Room 8.73×12.15 m (~1,142 sqft). AC: ~6T calc → install **8T**. Rate card: 30 min ₹750 · 1 hr ₹1,250 · Motion +₹500/hr ([[racesims-master-rate-card]]).
-- **Partnerships**: sponsorship plan → cut list capital ~₹55-58L. Rig split 2 Conspit + 2 VNM + 2 Fanatec + 2 reserved. Corsair deck (PC + Fanatec) built; Zotac/Samsung/AMD pending.
 
 ---
 *Older entries trimmed (oldest-first per hot-cache rule); full history in `wiki/log.md` and the linked concept/source pages.*

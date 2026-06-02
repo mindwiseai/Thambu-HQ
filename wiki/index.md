@@ -92,7 +92,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[race-engineer-positioning]] — the moat
 - [[90-day-execution-plan]]
 - [[racesims-drive-train-compete]] ⭐ — locked positioning framework (Drive · Train · Compete)
-- [[racesims-india-saturation-plan]] ⭐ — 43-centre 5-year network roadmap
+- [[racesims-india-saturation-plan]] ⭐ — **100-centre all-owned** 5-year network roadmap (updated 2026-06-02)
 
 ### Chennai Flagship Centre
 - [[racesims-chennai-flagship]] ⭐ — ₹66L flagship venue, 6 seats, 1,800 sqft, Y1 EBITDA ₹32L
