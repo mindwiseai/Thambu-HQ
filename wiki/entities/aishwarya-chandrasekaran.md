@@ -7,6 +7,8 @@ tags: [person, founder, prenatal]
 
 # Aishwarya Chandrasekaran (Aishu)
 
+**Full legal name: Aishwarya Chandrasekaran Reddy** (as per AOA filing 10 May 2025). Also listed as co-director of [[racesims-company|Racesims Solutions Private Limited]].
+
 Founder of the [[domains/prenatal/_index|prenatal & postnatal supplement brand]]. [[thambu|Thambu's]] wife. Personally experienced the trust gap in Indian prenatal supplements — relied on imported brands during pregnancy because local options felt untrustworthy. This experience became the founding insight.
 
 ## Role

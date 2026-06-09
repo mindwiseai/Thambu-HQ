@@ -1,14 +1,22 @@
 ---
 title: Hot Cache
 type: meta
-updated: 2026-05-30
+updated: 2026-06-09
 ---
 
 # Hot Cache
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-02 (latest) — 100-store all-owned network plan · investor deck rebuilt · championship reframed
+## 2026-06-09 (latest) — Incorporation docs ingested · Master Operating Document filled
+
+- **Incorporation confirmed:** Racesims Solutions Private Limited incorporated **13 May 2025**. Startup India cert **DIPP211636** issued 08-07-2025, valid until 12-05-2035 (Toys & Games / Virtual Games).
+- **Legal names confirmed:** Thambu = **Theerthanagiri Dhandapani Thambusamy** · Aishu = **Aishwarya Chandrasekaran Reddy** — both first directors per AOA.
+- **CIN pending:** SRN 1-17644512045 — confirm on MCA portal.
+- **Master Operating Document v1.0** filled (120+ fields) and sent. Still needs: CIN, phone, auditor, cap table %, brand colours, investor contacts.
+- Source: [[2026-06-09-racesims-incorporation-docs]]
+
+## 2026-06-02 — 100-store all-owned network plan · investor deck rebuilt · championship reframed
 
 - **Strategic pivot:** [[racesims-india-saturation-plan]] updated from 43-centre (12 direct + 31 franchise) → **100 all-owned centres**. Franchise model dropped entirely.
 - **Single format:** [[racesims-chennai-flagship]] Chennai template replicated 100× — 2,000 sq ft · 8 rigs · ₹95L Y1 · ₹2.62 cr Y5 · 68% margin · 25-month payback. No Mega/Boutique split.

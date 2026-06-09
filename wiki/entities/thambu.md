@@ -38,6 +38,10 @@ Thambu has been trying to set up a robust personal knowledge system for a long t
 - Personal address (trademark filing): No.43 Seetharam Nagar, Puddupalayam, Cuddalore
 - Trademark "RaceSims" filed in Class 9 (hardware) and Class 41 (education/training)
 
+## Full legal name
+
+**Theerthanagiri Dhandapani Thambusamy** — as per AOA (Form INC-34, MCA filing, 10 May 2025). Common name: Thambu.
+
 ## Email
 - thambu@racesims.in
 

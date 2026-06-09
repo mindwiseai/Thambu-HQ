@@ -13,18 +13,22 @@ The legal entity behind [[domains/racesims/_index|RaceSims]]. Incorporated as a 
 
 | Field | Value |
 |-------|-------|
-| Company name | Racesims Solutions Pvt Ltd |
+| Company name | Racesims Solutions Private Limited |
+| Incorporation date | 13 May 2025 |
 | GSTIN | 33AAOCR6378K1ZO (Tamil Nadu) |
-| CIN | (on file, see Company ID documents) |
+| CIN | [TO CONFIRM via MCA — SRN 1-17644512045] |
+| MOA SRN | 1-17644512045 (Form INC-33) |
+| AOA SRN | 1-17644512035 (Form INC-34, Table F) |
 | MSME/Udyam | UDYAM-TN-02-0393822 |
 | PAN | AAOCR6378K |
-| Startup India | Certified |
+| Startup India | DIPP211636 — issued 08-07-2025 · valid until 12-05-2035 |
+| DIPP category | Toys and Games / Virtual Games |
 | IE Code | On file (import-export) |
 
 ## Directors
 
-- **Thambusamy T.D.** (PAN: ATRPT1767D) — founder, authorized signatory for GST, operational lead
-- **Aishwarya C** — co-director, signed board resolutions (e.g., GST application authorization)
+- **Theerthanagiri Dhandapani Thambusamy** (legal name) · common name: Thambu · PAN: ATRPT1767D — founder, authorized signatory for GST, operational lead
+- **Aishwarya Chandrasekaran Reddy** (legal name) · common name: Aishu — co-director, signed AOA and board resolutions
 
 ## Banking
 
@@ -51,10 +55,20 @@ Applicant: Thambusamy TD, No.43 Seetharam Nagar, Puddupalayam, Cuddalore.
 
 Using [[startup-tax-exemption]] — one of 3 allowed income-tax exemption years claimed for FY2026, driving the year-end sales push.
 
+## Company objects (from MOA)
+
+1. Design, assemble, import, export, sell, hire, lease sim racing equipment for professional motorsport training
+2. Retail + wholesale + import/export of sim racing equipment, systems, spare parts
+3. Service and maintenance support for sim racing equipment
+4. Simulation of real-time driving + driver training programmes + coaching
+5. Customised sim racing solutions for racing teams, drivers, motorsport organisations
+
 ## Connections
 
-- [[thambu]] — founder/director
+- [[thambu]] — founder/director · full legal name: Theerthanagiri Dhandapani Thambusamy
+- [[aishwarya-chandrasekaran]] — co-director · full legal name: Aishwarya Chandrasekaran Reddy
 - [[lumen-marketing-company]] — Thambu's other company (Mindwise), shares registered address
 - [[import-operations]] — customs and duty structure
 - [[startup-tax-exemption]] — FY2026 tax play
 - [[2026-04-13-racesims-raw-dump]] — source
+- [[2026-06-09-racesims-incorporation-docs]] — MOA, AOA, Startup India cert, Board Resolution

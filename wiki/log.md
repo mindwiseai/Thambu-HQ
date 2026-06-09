@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-09] ingest | RaceSims incorporation documents — MOA, AOA, Startup India cert, Board Resolution
+- Source: [[2026-06-09-racesims-incorporation-docs]]
+- Created: 1 new page — [[2026-06-09-racesims-incorporation-docs]] (source)
+- Updated: [[racesims-company]] (incorporation date, Startup India cert no., SRNs, full legal names, MOA objects) · [[thambu]] (full legal name confirmed) · [[aishwarya-chandrasekaran]] (full legal name + RaceSims co-director role confirmed) · [[wiki/hot|hot]]
+- Domain: racesims
+- Key facts confirmed: incorporated 13 May 2025 · DIPP211636 (Toys & Games / Virtual Games) · Thambu's full name: Theerthanagiri Dhandapani Thambusamy · Aishu's full name: Aishwarya Chandrasekaran Reddy · CIN still to confirm via MCA portal
+
 ## [2026-06-02] ingest | RaceSims 100-store all-owned network plan + investor deck session
 - Source: [[2026-06-02-racesims-100-store-investor-deck]]
 - Created: 1 new page — [[2026-06-02-racesims-100-store-investor-deck]] (source)
