@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>IERL — Partner Brief</title>
+<meta name="viewport" content="width=1280" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:      #FAF9F5;
+    --cream-dark: #F3EFEA;
+    --cream-mid:  #EDE8E2;
+    --rs-red:     #C8102E;
+    --rs-red-dim: rgba(200,16,46,0.10);
+    --rs-red-soft:rgba(200,16,46,0.05);
+    --ink:        #1F1B18;
+    --ink-mid:    #4A4440;
+    --ink-muted:  #7A7470;
+    --rule:       #DDD8D2;
+    --green:      #1E6B3A;
+    --green-soft: rgba(30,107,58,0.08);
+    --amber:      #B8731F;
+    --amber-soft: rgba(184,115,31,0.08);
+    --sans:       'Montserrat', -apple-system, sans-serif;
+    --mono:       'JetBrains Mono', 'SF Mono', monospace;
+  }
+  @page { size: 1280px 720px; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #E8E3DC;
+    font-family: var(--sans);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  body { padding: 32px 0; }
+  .slide {
+    width: 1280px; height: 720px;
+    margin: 0 auto 32px;
+    background: var(--cream);
+    position: relative; overflow: hidden;
+    border: 1px solid var(--rule);
+    page-break-after: always; break-inside: avoid;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+  .slide:last-child { margin-bottom: 0; }
+  @media print {
+    html,body { background: white; padding: 0; }
+    .slide { margin: 0; border: none; box-shadow: none; }
+  }
+  .slide::before {
+    content: ""; position: absolute;
+    top: 0; left: 0; bottom: 0; width: 5px;
+    background: var(--rs-red); z-index: 2;
+  }
+  .slide-inner { padding: 48px 64px; height: 100%; display: flex; flex-direction: column; }
+  .brand {
+    position: absolute; top: 22px; left: 32px;
+    font-family: var(--mono); font-size: 10px;
+    color: var(--rs-red); letter-spacing: 0.22em; font-weight: 600; z-index: 3;
+  }
+  .slide-num {
+    position: absolute; top: 22px; right: 28px;
+    font-family: var(--mono); font-size: 10px;
+    color: var(--ink-muted); letter-spacing: 0.18em; z-index: 3;
+  }
+  .eyebrow {
+    font-family: var(--mono); font-size: 10px; color: var(--rs-red);
+    letter-spacing: 0.22em; text-transform: uppercase;
+    margin-bottom: 12px; font-weight: 600;
+  }
+  h2 { font-size: 30px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 14px; }
+  h2 em { font-style: italic; color: var(--rs-red); font-weight: 600; }
+  h3 {
+    font-family: var(--mono); font-size: 10px; font-weight: 700;
+    color: var(--rs-red); text-transform: uppercase; letter-spacing: 0.18em;
+    margin-bottom: 10px;
+  }
+  .divider-red { height: 2px; width: 40px; background: var(--rs-red); margin: 10px 0 14px; }
+  .divider { height: 1px; background: var(--rule); margin: 14px 0; }
+
+  /* COVER */
+  .cover { justify-content: center; padding: 0 96px; }
+  .cover .badge {
+    display: inline-block; padding: 7px 14px;
+    border: 1.5px solid var(--rs-red); color: var(--rs-red);
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em;
+    margin-bottom: 24px; width: max-content; font-weight: 600;
+  }
+  .cover h1 {
+    font-size: 76px; font-weight: 800; line-height: 0.95;
+    letter-spacing: -0.035em; margin-bottom: 8px;
+  }
+  .cover h1 em { color: var(--rs-red); font-style: italic; font-weight: 700; }
+  .cover .by {
+    font-family: var(--mono); font-size: 13px; color: var(--ink-muted);
+    letter-spacing: 0.22em; margin-bottom: 20px; font-weight: 600;
+  }
+  .cover .sub { font-size: 18px; color: var(--ink-mid); font-weight: 500; line-height: 1.5; max-width: 680px; margin-bottom: 16px; }
+  .cover .centres { font-family: var(--mono); font-size: 10px; color: var(--ink-muted); letter-spacing: 0.14em; line-height: 1.8; }
+  .cover .footer {
+    position: absolute; bottom: 48px; left: 96px; right: 96px;
+    display: flex; justify-content: space-between;
+    font-family: var(--mono); font-size: 11px; color: var(--ink-muted); letter-spacing: 0.18em;
+  }
+
+  /* STAT CARDS */
+  .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .card {
+    background: var(--cream-dark); border: 1px solid var(--rule);
+    border-radius: 4px; padding: 16px 18px;
+  }
+  .card.red { border-left: 3px solid var(--rs-red); }
+  .card.green { border-left: 3px solid var(--green); }
+  .card.amber { border-top: 3px solid var(--amber); border-left: 1px solid var(--rule); }
+  .stat .label {
+    font-family: var(--mono); font-size: 9px; color: var(--ink-muted);
+    letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; margin-bottom: 6px;
+  }
+  .stat .value {
+    font-size: 34px; font-weight: 800; color: var(--rs-red);
+    letter-spacing: -0.025em; line-height: 1;
+  }
+  .stat .note { font-size: 11px; color: var(--ink-mid); margin-top: 4px; line-height: 1.4; }
+
+  /* TABLES */
+  table { width: 100%; border-collapse: collapse; }
+  th {
+    text-align: left; font-family: var(--mono); font-size: 9px;
+    color: var(--rs-red); letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 8px 8px; border-bottom: 1.5px solid var(--rs-red); font-weight: 600;
+  }
+  th.r, td.r { text-align: right; }
+  th.c, td.c { text-align: center; }
+  td {
+    padding: 7px 8px; border-bottom: 1px solid var(--rule);
+    color: var(--ink); font-size: 12.5px; line-height: 1.4;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr.total td {
+    font-weight: 700; color: var(--rs-red);
+    border-top: 1.5px solid var(--rs-red); border-bottom: none;
+    padding-top: 8px; background: var(--rs-red-dim);
+  }
+  tr.sub td { background: var(--cream-mid); font-size: 11.5px; color: var(--ink-mid); }
+  td.muted { color: var(--ink-muted); font-size: 11.5px; }
+  td.green { color: var(--green); font-weight: 700; }
+  td.amber-col { color: var(--amber); font-weight: 700; }
+
+  /* TIMELINE */
+  .tl-row {
+    display: grid; grid-template-columns: 130px 1fr;
+    gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--rule);
+    align-items: flex-start;
+  }
+  .tl-row:last-child { border-bottom: none; }
+  .tl-chip {
+    background: var(--rs-red); color: white;
+    padding: 8px 10px; text-align: center;
+    font-family: var(--mono); font-size: 10px; font-weight: 700;
+    letter-spacing: 0.1em; line-height: 1.3; text-transform: uppercase;
+    border-radius: 2px;
+  }
+  .tl-chip.green { background: var(--green); }
+  .tl-chip.amber { background: var(--amber); }
+  .tl-chip.ink { background: var(--ink); }
+  .tl-desc { font-size: 13px; color: var(--ink); line-height: 1.5; padding-top: 6px; }
+  .tl-desc b { font-weight: 700; }
+  .tl-desc span { color: var(--ink-muted); font-size: 12px; }
+
+  /* PROMOTION */
+  .promo-step {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 10px 0; border-bottom: 1px solid var(--rule);
+  }
+  .promo-step:last-child { border-bottom: none; }
+  .promo-num {
+    font-family: var(--mono); font-size: 11px; font-weight: 700;
+    color: var(--rs-red); min-width: 24px; padding-top: 1px;
+  }
+  .promo-text { font-size: 13px; color: var(--ink); line-height: 1.5; }
+  .promo-text b { font-weight: 700; }
+  .promo-text span { color: var(--ink-muted); font-size: 12px; }
+
+  /* PILLS / BADGES */
+  .pill {
+    display: inline-block; padding: 3px 10px;
+    border-radius: 2px; font-family: var(--mono); font-size: 10px;
+    font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  .pill.red { background: var(--rs-red-dim); color: var(--rs-red); }
+  .pill.green { background: var(--green-soft); color: var(--green); }
+  .pill.amber { background: var(--amber-soft); color: var(--amber); }
+
+  /* MISC */
+  .info-box {
+    background: var(--cream-dark); border-left: 3px solid var(--rs-red);
+    padding: 12px 16px; font-size: 13px; color: var(--ink); line-height: 1.55;
+    border-radius: 0 4px 4px 0;
+  }
+  .info-box.green { border-left-color: var(--green); }
+  .info-box.amber { border-left-color: var(--amber); }
+  .info-box b { font-weight: 700; }
+  small { font-size: 11px; color: var(--ink-muted); font-style: italic; }
+  b { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- ─── SLIDE 1: COVER ─── -->
+<div class="slide">
+  <div class="brand">IERL · BY RACESIMS</div>
+  <div class="slide-num">01 / 08</div>
+  <div class="slide-inner cover">
+    <span class="badge">PARTNER BRIEF · CONFIDENTIAL</span>
+    <h1>Indian Esports<br/>Racing <em>League</em></h1>
+    <p class="by">BY RACESIMS</p>
+    <p class="sub">A monthly hot lap competition across the RaceSims partner network. Your customers race. Your centre pays in. Winners take the pot.</p>
+    <div class="centres">
+      RACING POINT ESPORTS · SIM RACING ADDA · NIYUSUKI SIM RACERS · LIGHTS OUT RACING<br/>
+      DRIVEXTREME · BBS ADRENALINE APEX · VIRTUAL ADDA · RACESIMS STUDIO
+    </div>
+    <div class="footer">
+      <span>RACESIMS SOLUTIONS PVT LTD</span>
+      <span>PARTNER USE ONLY</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SLIDE 2: WHAT IS IERL ─── -->
+<div class="slide">
+  <div class="brand">IERL · BY RACESIMS</div>
+  <div class="slide-num">02 / 08</div>
+  <div class="slide-inner">
+    <div class="eyebrow">02 · What is IERL</div>
+    <h2>Your customers race each other <em>across India.</em></h2>
+    <div class="divider-red"></div>
+
+    <div class="grid-4" style="margin-bottom:16px;">
+      <div class="card red">
+        <div class="stat">
+          <div class="label">Network (August)</div>
+          <div class="value">8</div>
+          <div class="note">Centres across 7 cities</div>
+        </div>
+      </div>
+      <div class="card red">
+        <div class="stat">
+          <div class="label">Monthly prize pool</div>
+          <div class="value">₹80K</div>
+          <div class="note">100% back to players</div>
+        </div>
+      </div>
+      <div class="card red">
+        <div class="stat">
+          <div class="label">Classes</div>
+          <div class="value">2</div>
+          <div class="note">Amateur &amp; Pro</div>
+        </div>
+      </div>
+      <div class="card red">
+        <div class="stat">
+          <div class="label">Winners / month</div>
+          <div class="value">6+</div>
+          <div class="note">3 per class + local prize</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-3" style="gap:14px;">
+      <div class="info-box">
+        <b>How it works</b><br/>
+        Players walk into your centre, set their fastest lap on Assetto Corsa anytime during the month. Leaderboard updates live. Best laps across all centres compete for the monthly prize.
+      </div>
+      <div class="info-box green">
+        <b>What you do</b><br/>
+        Pay ₹2,500 per rig per month into the shared prize pool. One transfer at the start of the month. RaceSims handles servers, software, leaderboard, and prize coordination.
+      </div>
+      <div class="info-box amber">
+        <b>What your customers get</b><br/>
+        A live leaderboard at their centre. A local winner every month. The chance to beat drivers across India and win real cash prizes — without leaving your city.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SLIDE 3: THE NETWORK ─── -->
+<div class="slide">
+  <div class="brand">IERL · BY RACESIMS</div>
+  <div class="slide-num">03 / 08</div>
+  <div class="slide-inner">
+    <div class="eyebrow">03 · The Network</div>
+    <h2>Live July. Full network <em>2nd August.</em></h2>
+    <div class="divider-red"></div>
+
+    <div class="grid-2" style="margin-top:4px; align-items:start;">
+      <div>
+        <h3 style="margin-bottom:10px;">July — Live</h3>
+        <table>
+          <thead>
+            <tr><th>Centre</th><th>City</th><th class="r">Rigs</th><th class="r">Monthly</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Sim Racing Adda</td><td class="muted">Delhi</td><td class="r">4</td><td class="r">₹10,000</td></tr>
+            <tr><td>Niyusuki Sim Racers</td><td class="muted">Cochin</td><td class="r">3</td><td class="r">₹7,500</td></tr>
+            <tr><td>Lights Out Racing</td><td class="muted">Delhi</td><td class="r">3</td><td class="r">₹7,500</td></tr>
+            <tr><td>Drivextreme</td><td class="muted">Coimbatore</td><td class="r">3</td><td class="r">₹7,500</td></tr>
+            <tr><td>BBS Adrenaline Apex</td><td class="muted">Mangalore</td><td class="r">2</td><td class="r">₹5,000</td></tr>
+            <tr><td>Virtual Adda</td><td class="muted">Mumbai</td><td class="r">2</td><td class="r">₹5,000</td></tr>
+            <tr><td style="color:var(--ink-muted);font-style:italic;">Racing Point Esports</td><td class="muted">Hyderabad</td><td class="r" style="color:var(--ink-muted);">8</td><td class="r" style="color:var(--ink-muted);">TBC</td></tr>
+            <tr class="total"><td>Confirmed (6 centres)</td><td></td><td class="r">17</td><td class="r">₹42,500</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom:10px;">August 2nd — Joining</h3>
+        <table>
+          <thead>
+            <tr><th>Centre</th><th>City</th><th class="r">Rigs</th><th class="r">Monthly</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>RaceSims Studio</td><td class="muted">Chennai</td><td class="r">8</td><td class="r">₹20,000</td></tr>
+            <tr class="total"><td>Full network (8 centres)</td><td></td><td class="r">33</td><td class="r">₹82,500</td></tr>
+          </tbody>
+        </table>
+
+        <div style="margin-top:16px; display:flex; flex-direction:column; gap:10px;">
+          <div class="info-box" style="font-size:12px;">
+            <b>Racing Point Esports, Hyderabad</b> — joining once their internal software is ready. Confirmed for the network, TBC on July start date.
+          </div>
+          <div class="info-box green" style="font-size:12px;">
+            <b>Prize pool grows with every centre that joins.</b> Each new rig adds ₹2,500 to the monthly pot — directly into player prizes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SLIDE 4: PRIZE POOL ─── -->
+<div class="slide">
+  <div class="brand">IERL · BY RACESIMS</div>
+  <div class="slide-num">04 / 08</div>
+  <div class="slide-inner">
+    <div class="eyebrow">04 · Prize Pool</div>
+    <h2>₹2,500 per rig. <em>100% back to your players.</em></h2>
+    <div class="divider-red"></div>
+
+    <table style="margin-bottom:14px;">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="c">July<br/><span style="font-weight:400;font-style:italic;text-transform:none;font-size:9px;letter-spacing:0;">6 centres · 17 rigs</span></th>
+          <th class="c">July + Racing Point<br/><span style="font-weight:400;font-style:italic;text-transform:none;font-size:9px;letter-spacing:0;">7 centres · 25 rigs</span></th>
+          <th class="c">August<br/><span style="font-weight:400;font-style:italic;text-transform:none;font-size:9px;letter-spacing:0;">8 centres · 33 rigs</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Gross pool</td><td class="c">₹42,500</td><td class="c">₹62,500</td><td class="c">₹82,500</td></tr>
+        <tr><td>Server &amp; tech (shared)</td><td class="c" style="color:var(--ink-muted);">− ₹2,500</td><td class="c" style="color:var(--ink-muted);">− ₹2,500</td><td class="c" style="color:var(--ink-muted);">− ₹2,500</td></tr>
+        <tr class="total"><td>Net prize pool</td><td class="c">₹40,000</td><td class="c">₹60,000</td><td class="c">₹80,000</td></tr>
+        <tr><td style="padding-left:16px; color:var(--ink-mid); font-size:12px;">→ Amateur class (50%)</td><td class="c" style="color:var(--ink-mid); font-size:12px;">₹20,000</td><td class="c" style="color:var(--ink-mid); font-size:12px;">₹30,000</td><td class="c" style="color:var(--ink-mid); font-size:12px;">₹40,000</td></tr>
+        <tr><td style="padding-left:16px; color:var(--ink-mid); font-size:12px;">→ Pro class (50%)</td><td class="c" style="color:var(--ink-mid); font-size:12px;">₹20,000</td><td class="c" style="color:var(--ink-mid); font-size:12px;">₹30,000</td><td class="c" style="color:var(--ink-mid); font-size:12px;">₹40,000</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Prize per class</th>
+          <th class="c">July</th>
+          <th class="c">July + Racing Point</th>
+          <th class="c">August</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🥇 1st place</td>
+          <td class="c"><b>₹12,000</b></td>
+          <td class="c"><b>₹18,000</b></td>
+          <td class="c"><b>₹24,000</b></td>
+        </tr>
+        <tr>
+          <td>🥈 2nd place</td>
+          <td class="c">₹5,000</td>
+          <td class="c">₹7,500</td>
+          <td class="c">₹10,000</td>
+        </tr>
+        <tr>
+          <td>🥉 3rd place</td>
+          <td class="c">₹3,000</td>
+          <td class="c">₹4,500</td>
+          <td class="c">₹6,000</td>
+        </tr>
+        <tr>
+          <td>🏠 Local centre winner <small>(per centre)</small></td>
+          <td class="c" style="color:var(--amber); font-weight:600;">TBD</td>
+          <td class="c" style="color:var(--amber); font-weight:600;">TBD</td>
+          <td class="c" style="color:var(--amber); font-weight:600;">TBD</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top:10px; font-size:11.5px; color:var(--ink-muted); font-style:italic;">Both Amateur and Pro class run the same prize structure simultaneously — 6 network winners every month, plus a local winner at every participating centre.</p>
+  </div>
+</div>
+
+<!-- ─── SLIDE 5: THE TWO CLASSES ─── -->
+<div class="slide">
+  <div class="brand">IERL · BY RACESIMS</div>
+  <div class="slide-num">05 / 08</div>
+  <div class="slide-inner">
+    <div class="eyebrow">05 · The Two Classes</div>
+    <h2>Same track. Same month. <em>Different machines.</em></h2>
+    <div class="divider-red"></div>
+
+    <div class="grid-2" style="margin-top:6px; gap:24px;">
+
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+          <h3 style="margin:0;">Amateur Class</h3>
+          <span class="pill green">Open to all</span>
+        </div>
+        <table>
+          <tbody>
+            <tr><td style="width:38%; color:var(--ink-muted); font-size:12px; font-family:var(--mono); letter-spacing:0.08em;">CAR</td><td><b>Mazda MX-5 ND</b></td></tr>
+            <tr><td style="color:var(--ink-muted); font-size:12px; font-family:var(--mono); letter-spacing:0.08em;">SETUP</td><td>Fixed — locked for all drivers</td></tr>
+            <tr><td style="color:var(--ink-muted); font-size:12px; font-family:var(--mono); letter-spacing:0.08em;">ABS</td><td><span class="pill green">Allowed</span></td></tr>
+            <tr><td style="color:var(--ink-muted); font-size:12px; font-family:var(--mono); letter-spacing:0.08em;">TRACTION CONTROL</td><td><span class="pill green">Allowed</span></td></tr>
+            <tr><td style="color:var(--ink-muted); font-size:12px; font-family:var(--mono); letter-spacing:0.08em;">TRACK</td><td>Monza — Season 1</td></tr>
+            <tr><td style="color:var(--ink-muted); font-size:12px; font-family:var(--mono); letter-spacing:0.08em;">TRACK LIMITS</td><td>Strict — zero tolerance</td></tr>
+          </tbody>
+        </table>
+        <div class="info-box green" style="margin-top:12px; font-size:12px;">
+          Accessible for any customer. No sim racing experience required. The MX-5 is forgiving, fun, and fast enough to be exciting.
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+          <h3 style="margin:0;">Pro Class</h3>
+          <span class="pill red">Promoted drivers</span>
+        </div>
+        <table>
+          <tbody>
+            <tr><td style="width:38%; color:var(--ink-muted); font-size:12px; font-family:var(--mono); letter-spacing:0.08em;">CAR</td><td><b>Ferrari 488 GT3</b></td></tr>
+            <tr><td style="color:var(--ink-muted); font-size:12px; font-family:var(--mono); letter-spacing:0.08em;">SETUP</td><td>Fixed — locked for all drivers</td></tr>
+            <tr><td style="color:var(--ink-muted); font-size:12px; font-family:var(--mono); letter-spacing:0.08em;">ABS</td><td><span class="pill green">Allowed</span></td></tr>
+            <tr><td style="color:var(--ink-muted); font-size:12px; font-family:var(--mono); letter-spacing:0.08em;">TRACTION CONTROL</td><td><span class="pill red">Disabled</span></td></tr>
+            <tr><td style="color:var(--ink-muted); font-size:12px; font-family:var(--mono); letter-spacing:0.08em;">TRACK</td><td>Monza — Season 1</td></tr>
+            <tr><td style="color:var(--ink-muted); font-size:12px; font-family:var(--mono); letter-spacing:0.08em;">TRACK LIMITS</td><td>Strict — zero tolerance</td></tr>
+          </tbody>
+        </table>
+        <div class="info-box" style="margin-top:12px; font-size:12px;">
+          For experienced drivers who want a real challenge. GT3-level performance, no traction control safety net. Earn your way in through the promotion system.
+        </div>
+      </div>
+
+    </div>
+
+    <p style="margin-top:14px; font-size:11.5px; color:var(--ink-muted); text-align:center; font-style:italic;">Any driver can enter either class — or both. The car is the class. Track rotates from Season 2 onwards.</p>
+  </div>
+</div>
+
+<!-- ─── SLIDE 6: DRIVER PROGRESSION ─── -->
+<div class="slide">
+  <div class="brand">IERL · BY RACESIMS</div>
+  <div class="slide-num">06 / 08</div>
+  <div class="slide-inner">
+    <div class="eyebrow">06 · Driver Progression &amp; Fair Competition</div>
+    <h2>Fast drivers move up. <em>Everyone has a chance.</em></h2>
+    <div class="divider-red"></div>
+
+    <div class="grid-2" style="margin-top:6px; gap:24px; align-items:start;">
+
+      <div>
+        <h3 style="margin-bottom:12px;">Promotion Ladder</h3>
+        <div class="promo-step">
+          <div class="promo-num">01</div>
+          <div class="promo-text"><b>First visit</b> — every new driver starts in Amateur by default. No entry barrier.</div>
+        </div>
+        <div class="promo-step">
+          <div class="promo-num">02</div>
+          <div class="promo-text"><b>Voluntary upgrade</b> — any driver can choose Pro at any time from the kiosk.</div>
+        </div>
+        <div class="promo-step">
+          <div class="promo-num">03</div>
+          <div class="promo-text"><b>Win Amateur network-wide</b> — automatically promoted to Pro the following month.</div>
+        </div>
+        <div class="promo-step">
+          <div class="promo-num">04</div>
+          <div class="promo-text"><b>Finish top 3 in Amateur twice</b> — mandatory Pro promotion. No exceptions.</div>
+        </div>
+        <div class="promo-step">
+          <div class="promo-num">05</div>
+          <div class="promo-text"><b>Pro is permanent.</b> <span>No downgrade. No sandbagging back to Amateur for easier prizes.</span></div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom:12px;">Three Layers of Fair Competition</h3>
+
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div class="info-box">
+            <b>1 — Promotion system</b><br/>
+            Dominant amateur drivers graduate to Pro within 1–2 months. The amateur class stays genuinely competitive for newer players. Natural refresh every season.
+          </div>
+          <div class="info-box green">
+            <b>2 — Local centre prize</b><br/>
+            Every centre has its own leaderboard. The fastest driver <em>at your centre</em> wins a local prize each month — regardless of network standings. Every centre, every month, guaranteed winner.
+          </div>
+          <div class="info-box amber">
+            <b>3 — Track rotation from Season 2</b><br/>
+            A Monza specialist won't necessarily dominate Spa. Rotating tracks every month levels the field naturally across the season.
+          </div>
+        </div>
+
+        <p style="margin-top:12px; font-size:11.5px; color:var(--ink-muted); font-style:italic;">
+          The driver who wins every month is your best marketing asset — not a problem. "Can you beat the record?" is a more compelling reason to come back than a blank leaderboard.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ─── SLIDE 7: HOW IT WORKS ─── -->
+<div class="slide">
+  <div class="brand">IERL · BY RACESIMS</div>
+  <div class="slide-num">07 / 08</div>
+  <div class="slide-inner">
+    <div class="eyebrow">07 · How It Works</div>
+    <h2>Walk in. Enter your name. <em>Set your lap. Done.</em></h2>
+    <div class="divider-red"></div>
+
+    <div class="grid-2" style="margin-top:6px; gap:24px; align-items:start;">
+
+      <div>
+        <h3 style="margin-bottom:12px;">The Customer Experience</h3>
+        <div class="promo-step">
+          <div class="promo-num">01</div>
+          <div class="promo-text"><b>Kiosk screen on each rig</b> — customer enters their name. System sets it automatically in the game.</div>
+        </div>
+        <div class="promo-step">
+          <div class="promo-num">02</div>
+          <div class="promo-text"><b>Picks Amateur or Pro</b> — game launches directly into the IERL server. No menus to navigate.</div>
+        </div>
+        <div class="promo-step">
+          <div class="promo-num">03</div>
+          <div class="promo-text"><b>Sets their fastest lap</b> — live leaderboard on screen shows where they rank across all centres.</div>
+        </div>
+        <div class="promo-step">
+          <div class="promo-num">04</div>
+          <div class="promo-text"><b>Session ends</b> — kiosk resets for the next customer. Lap time is recorded permanently for the month.</div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom:12px;">Platform Details</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td style="width:40%; color:var(--ink-muted); font-size:11.5px; font-family:var(--mono); letter-spacing:0.08em;">GAME</td>
+              <td style="font-size:13px;">Assetto Corsa</td>
+            </tr>
+            <tr>
+              <td style="color:var(--ink-muted); font-size:11.5px; font-family:var(--mono); letter-spacing:0.08em;">SERVER</td>
+              <td style="font-size:13px;">Hosted by RaceSims — 24/7, always on</td>
+            </tr>
+            <tr>
+              <td style="color:var(--ink-muted); font-size:11.5px; font-family:var(--mono); letter-spacing:0.08em;">SESSIONS</td>
+              <td style="font-size:13px;">60-min qualifying loops, non-stop</td>
+            </tr>
+            <tr>
+              <td style="color:var(--ink-muted); font-size:11.5px; font-family:var(--mono); letter-spacing:0.08em;">LEADERBOARD</td>
+              <td style="font-size:13px;">Live — updates every lap, every centre</td>
+            </tr>
+            <tr>
+              <td style="color:var(--ink-muted); font-size:11.5px; font-family:var(--mono); letter-spacing:0.08em;">TRACK LIMITS</td>
+              <td style="font-size:13px;">Enforced server-side — cuts = invalid lap</td>
+            </tr>
+            <tr>
+              <td style="color:var(--ink-muted); font-size:11.5px; font-family:var(--mono); letter-spacing:0.08em;">YOUR SETUP</td>
+              <td style="font-size:13px;">Assetto Corsa on each rig — we handle the rest</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="info-box" style="margin-top:12px; font-size:12px;">
+          <b>Two servers run simultaneously</b> — one for Amateur, one for Pro. Separate leaderboards, same track, same month. RaceSims manages all software, updates, and results.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ─── SLIDE 8: MONTHLY CALENDAR & LAUNCH ─── -->
+<div class="slide">
+  <div class="brand">IERL · BY RACESIMS</div>
+  <div class="slide-num">08 / 08</div>
+  <div class="slide-inner">
+    <div class="eyebrow">08 · Monthly Calendar &amp; Launch Timeline</div>
+    <h2>One transfer. One month. <em>Six winners.</em></h2>
+    <div class="divider-red"></div>
+
+    <div class="grid-2" style="margin-top:6px; gap:32px; align-items:start;">
+
+      <div>
+        <h3 style="margin-bottom:12px;">Every Month</h3>
+        <div class="tl-row">
+          <div class="tl-chip">1st</div>
+          <div class="tl-desc">Leaderboard goes live. New month begins. Both servers reset.</div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-chip" style="background:var(--ink-mid);">All Month</div>
+          <div class="tl-desc">Players race anytime the centre is open. Live leaderboard updates every lap.</div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-chip" style="background:var(--ink-mid);">Last Day<br/>11:59 PM</div>
+          <div class="tl-desc">Leaderboard locks. No more laps counted.</div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-chip">1st</div>
+          <div class="tl-desc">IERL posts top 3 per class + winner UPI IDs in the WhatsApp group.</div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-chip amber">By 5th</div>
+          <div class="tl-desc">Each centre transfers directly to winners — <b>half your fee to Amateur, half to Pro.</b> Screenshot in group.</div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-chip green">6th</div>
+          <div class="tl-desc">All transfers confirmed. Month closed. Season standings updated.</div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom:12px;">Launch Timeline</h3>
+        <div class="tl-row">
+          <div class="tl-chip amber">July 1st</div>
+          <div class="tl-desc"><b>IERL goes live.</b> 6 confirmed centres. Server running. Kiosk software deployed to all rigs.</div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-chip amber">July<br/>(TBC)</div>
+          <div class="tl-desc"><b>Racing Point Esports, Hyderabad</b> joins once internal software is ready. Network grows to 25 rigs.</div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-chip green">Aug 2nd</div>
+          <div class="tl-desc"><b>Official launch.</b> RaceSims Studio Chennai joins. Full 33-rig network. Public announcement on social.</div>
+        </div>
+
+        <div class="info-box green" style="margin-top:14px; font-size:12px;">
+          <b>What you need to do before July 1st</b><br/>
+          1. Confirm you're in &amp; make payment<br/>
+          2. Assetto Corsa installed on all rigs<br/>
+          3. We deploy kiosk software remotely<br/>
+          That's it — RaceSims handles everything else.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
