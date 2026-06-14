@@ -17,6 +17,7 @@ generated_imgs/
 
 # Sensitive files - do not commit
 raw/mindwise/Sales channels/Website/rzp-2.csv
+raw/mindwise/Life Essence/Website/rzp-2.csv
 raw/racesims/01_Company/Security/
 raw/racesims/08_Software/
 **/2FA*

@@ -119,6 +119,7 @@ Source: [[2026-04-13-mindwise-raw-dump]]
 - [[2026-03-24-meeting-manik-pricing-website]]
 - [[2026-03-23-binita-packaging-feedback]]
 - [[2026-03-17-meeting-binita-strategic-decisions]]
+- [[2026-01-23-brand-communication-strategy-workshop]] — 3C framework (context/community/category), competitor landscape, Brain Hackers network, core positioning locked
 - [[2026-01-to-02-meetings-1-to-5]] — Sorted strategy meetings (Jan 6 → Feb 12)
 - [[2026-ctd-module-2.5-clinical-overview]]
 - [[2026-ctd-module-2.4-nonclinical-overview]]
