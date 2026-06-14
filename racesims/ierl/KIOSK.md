@@ -35,11 +35,23 @@ all each rig needs. The unrelated `race/online/join` link has **no** name param.
 First launch, the browser asks "Open Content Manager?" — tick *always allow* so
 it never prompts again.
 
-## Central config
+## Central config (+ auto-discovery)
 
-The two class servers (IP / TCP port / HTTP port / car id) live in
-`worker/src/kiosk.ts` → `KIOSK_CONFIG`. Edit there, `wrangler deploy`, and every
-rig picks it up from `GET /api/kiosk/config`. No per-rig config files.
+The two class servers live in `worker/src/kiosk.ts` → `KIOSK_CONFIG`. Every rig
+pulls them from `GET /api/kiosk/config` — **no per-rig config, centres enter
+nothing.**
+
+With `autodiscover: true` you only set **`ip` + `httpPort`** per class. The
+Worker queries the live server's `http://ip:httpPort/INFO` and fills in the TCP
+**`port`** and the current **`car`** automatically (so the car always matches
+what the server is actually running). The static `port`/`car` are just the
+fallback if the server is unreachable. Result is cached 60s in KV. Edit +
+`wrangler deploy` only when the server IP itself changes.
+
+> The AC server's HTTP port must be reachable from Cloudflare for auto-discovery.
+> Verify once: `GET https://<worker>/api/kiosk/config` should show the live TCP
+> port + car. If a server is down, it falls back to the static values and the
+> kiosk keeps working.
 
 ## Testing on a rig before deploy — Setup panel
 

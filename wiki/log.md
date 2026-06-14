@@ -9,8 +9,15 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
-## [2026-06-14] edit | IERL driver identification + kiosk build
-- Driver-sign-in kiosk built at `racesims/ierl/kiosk/` (zero-dep Python + branded UI): name+phone → unique handle → writes AC name field → launches [[content-manager|Content Manager]] into class server → auto-reset. Tested in simulate mode.
+## [2026-06-14] ingest | IERL hosted web kiosk + deeplink finding + auto-discovery
+- Source: [[2026-06-14-ierl-kiosk-build]]
+- Confirmed from [[content-manager|CM]] source: `acmanager://race/online` accepts `name` (sets DriverName) → browser can launch AC with the customer's name, no local app. `race/online/join` has no name.
+- Built **hosted web kiosk** in the IERL site (`site/kiosk.html` + assets; Worker `/api/kiosk/config` + `/api/kiosk/signin`; D1 `0003_kiosk_signins`). Deploy = a browser bookmark per rig, **centres configure nothing**.
+- **Auto-discovery**: Worker reads each server's `/INFO` to fill TCP port + current car from just `ip`+`httpPort` (KV-cached, static fallback).
+- Created: [[2026-06-14-ierl-kiosk-build]] (source). Updated: [[ierl-driver-identification]] · [[content-manager]] · `racesims/ierl/KIOSK.md` · [[wiki/hot|hot]]. Python kiosk demoted to fallback.
+
+## [2026-06-14] edit | IERL driver identification + kiosk build (Python interim)
+- Driver-sign-in kiosk built at `racesims/ierl/kiosk/` (zero-dep Python + branded UI): name+phone → unique handle → writes AC name field → launches [[content-manager|Content Manager]] into class server → auto-reset. Tested in simulate mode. (Superseded as primary by the hosted web kiosk above; kept as fallback.)
 - Created: [[ierl-driver-identification]] (concept) · [[content-manager]] (entity) · [[le-mans-ultimate]] (entity, migration target)
 - Updated: [[ierl-indian-esports-racing-league]] · [[assetto-corsa]] · [[domains/racesims/_index]] · [[wiki/hot|hot]]
 - Key: shared rig = one GUID → laps keyed on driver NAME; handle = FIRSTNAME-#### (last4 phone); leaderboard must dedupe by name not GUID; CM may override race.ini (on-rig verify). AC now → LMU later.
