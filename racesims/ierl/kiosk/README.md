@@ -1,4 +1,10 @@
-# IERL Kiosk
+# IERL Kiosk (Python — fallback)
+
+> **The primary kiosk is now the hosted web kiosk** (`../KIOSK.md`, `../site/kiosk.html`).
+> It needs no install — a browser opening `acmanager://race/online?…&name=<handle>`
+> launches Content Manager with the driver name set (confirmed in CM source). Use
+> this Python version only if the deeplink `name` ever fails on a given CM/server
+> combo — it writes the name to `race.ini` locally instead.
 
 Driver sign-in screen for a **shared Assetto Corsa rig**. The customer enters
 their name + phone, the kiosk builds a unique leaderboard handle, writes it

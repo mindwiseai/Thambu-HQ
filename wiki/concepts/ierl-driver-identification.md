@@ -28,16 +28,28 @@ AC sends the driver name from `Documents\Assetto Corsa\cfg\race.ini` → `[REMOT
 - **Private map:** a per-rig log (`entries-YYYY-MM.csv`) records `handle → name → phone → class`. The public leaderboard shows only the handle; the phone stays private. **PII — git-ignored, never committed.**
 - **Anti-mistake guard:** reset the name to a placeholder (`— SET NAME —`) after each session. A lap under the placeholder instantly flags a forgotten sign-in rather than mis-attributing the time.
 
-## The kiosk (`racesims/ierl/kiosk/`)
+## Confirmed: the deeplink can set the driver name (2026-06-14)
 
-Zero-dependency Python (stdlib only) + branded fullscreen web UI. Per rig:
+Verified in Content Manager's source ([`ArgumentsHandler.Race.cs`](https://github.com/gro-ove/actools/blob/master/AcManager/Tools/ArgumentsHandler.Race.cs)):
 
-1. Greets the customer → they enter **name + phone**, pick **Amateur / Pro**.
-2. Builds the unique handle, **writes it to the AC name field**, logs the entry.
-3. Launches [[content-manager|Content Manager]] into the class server via deeplink (`acmanager://race/online/join?ip=…&httpPort=…`).
-4. Auto-resets for the next customer.
+- `acmanager://race/online/join` reads only `ip`, `httpPort`, `password` — **no name** (just opens the server page).
+- `acmanager://race/online` reads `ip`, `port` (TCP), `httpPort`, `car` (required) **plus optional `name`** → assigned to `DriverName` and **launches the game directly**.
 
-A `simulate` mode previews the UI without touching AC. This kiosk is the interim manual-era tool and the same component that later folds into [[uday-hyderabad|Uday]]'s [[racesims-vms-build|VMS]] automation.
+So the working deeplink is:
+```
+acmanager://race/online?ip=<ip>&port=<tcpPort>&httpPort=<httpPort>&car=<carId>&name=<HANDLE>
+```
+Because a **browser** can open this and CM launches AC with the name set, **no local file-writing or local app is required** — which is what makes a hosted kiosk possible.
+
+## The kiosk — hosted web (primary)
+
+Built into the IERL site: `site/kiosk.html` + `site/assets/kiosk.{css,js}`, config from `worker/src/kiosk.ts` (`GET /api/kiosk/config`), sign-ins to D1 via `POST /api/kiosk/signin` (`0003_kiosk_signins.sql`). See `racesims/ierl/KIOSK.md`.
+
+- **Deployment = a browser bookmark**, no install: `…/kiosk?centre=<slug>&rig=<n>`, fullscreen. Each rig already has CM + Steam + AC.
+- Customer enters **name + phone** → unique handle → page opens the `race/online` deeplink → CM launches with the name → sign-in logged to D1 (`kiosk_signins`, PII, private).
+- Central config: edit the two class servers (ip/port/httpPort/car) once in `kiosk.ts` → every rig updates. A per-device **Setup panel** (⚙ / `?setup=1`) overrides via localStorage for on-rig testing before deploy.
+
+> Fallback: the **Python kiosk** (`racesims/ierl/kiosk/`, stdlib only) writes the name to `race.ini` locally instead of relying on the deeplink — kept in case `name` ever fails on a given CM/server combo. The hosted web kiosk is primary.
 
 ## Migration to LMU
 

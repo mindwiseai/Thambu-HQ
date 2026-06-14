@@ -7,6 +7,19 @@ export default {
     const url = new URL(req.url);
 
     if (url.pathname.startsWith('/api/')) {
+      // CORS preflight (kiosk POSTs application/json from the Pages origin).
+      if (req.method === 'OPTIONS') {
+        return new Response(null, {
+          status: 204,
+          headers: {
+            'access-control-allow-origin': '*',
+            'access-control-allow-methods': 'GET, POST, OPTIONS',
+            'access-control-allow-headers': 'content-type',
+            'access-control-max-age': '86400',
+          },
+        });
+      }
+
       // Admin force-refresh — gated by ADMIN_TOKEN.
       if (url.pathname === '/api/admin/scrape' && req.method === 'POST') {
         const token = url.searchParams.get('token') ?? req.headers.get('x-admin-token') ?? '';

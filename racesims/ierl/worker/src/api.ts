@@ -1,5 +1,6 @@
 import type { Env, EventRow } from './types';
 import { computeChampionship, computeEventLeaderboard } from './standings';
+import { getKioskConfig, recordSignin } from './kiosk';
 
 const HOME_CACHE_KEY = 'home:v1';
 const HOME_CACHE_TTL_S = 300; // 5 minutes
@@ -20,6 +21,19 @@ export async function handleApi(req: Request, env: Env, url: URL): Promise<Respo
     return json(await getPartner(env, slug));
   }
   if (path === '/api/status') return json(await getStatus(env));
+
+  // Kiosk: central per-rig config + sign-in logging (driver identity on shared rigs).
+  if (path === '/api/kiosk/config') return json(getKioskConfig());
+  if (path === '/api/kiosk/signin' && req.method === 'POST') {
+    let body: Record<string, unknown> = {};
+    try {
+      body = (await req.json()) as Record<string, unknown>;
+    } catch {
+      return json({ ok: false, error: 'invalid_json' }, 400);
+    }
+    const result = await recordSignin(env, body as Parameters<typeof recordSignin>[1]);
+    return json(result, result.ok ? 200 : 400);
+  }
 
   return json({ error: 'not_found' }, 404);
 }

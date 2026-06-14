@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>IERL · Sign In</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name="robots" content="noindex" />
+<link rel="icon" href="/assets/img/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/tokens.css" />
+<link rel="stylesheet" href="/assets/kiosk.css" />
+</head>
+<body class="kiosk">
+
+<button id="setup-btn" class="setup-btn" title="Setup" aria-label="Setup">⚙</button>
+<div class="rig-tag" id="rig-tag">—</div>
+
+<!-- WELCOME -->
+<section class="screen is-active" id="s-welcome">
+  <div class="screen-inner welcome">
+    <div class="eyebrow">Indian Esports Racing League · Season 1 · Mugello</div>
+    <h1>Ready to set<br/>a <em>fast lap?</em></h1>
+    <p class="lede">Sign in, pick your class, and your time goes on the national leaderboard across every IERL centre in India.</p>
+    <button class="btn-primary big" id="btn-start"><span class="dot"></span> Tap to start</button>
+  </div>
+</section>
+
+<!-- ENTRY -->
+<section class="screen" id="s-entry">
+  <div class="screen-inner">
+    <h2>Who's <em>driving?</em></h2>
+    <p class="sub">Your name goes on the leaderboard. Your phone keeps your times yours — and is how we reach you if you win.</p>
+
+    <div id="cfg-warning" class="warning" hidden>⚠ This rig isn't configured yet — open <b>Setup ⚙</b> to enter the server details.</div>
+
+    <label class="field">
+      <span class="flabel">Your name</span>
+      <input id="in-name" type="text" autocomplete="off" maxlength="20" placeholder="e.g. Rahul" />
+      <span class="hint">On the leaderboard as <b id="preview" class="mono">—</b></span>
+    </label>
+
+    <label class="field">
+      <span class="flabel">Phone number</span>
+      <input id="in-phone" type="tel" inputmode="numeric" autocomplete="off" maxlength="14" placeholder="10-digit mobile" />
+    </label>
+
+    <span class="flabel">Pick your class</span>
+    <div class="classes" id="classes"></div>
+
+    <div class="row">
+      <button class="btn-ghost" id="btn-back">Back</button>
+      <button class="btn-primary" id="btn-go" disabled>Let's go →</button>
+    </div>
+    <div class="err" id="err"></div>
+  </div>
+</section>
+
+<!-- GO -->
+<section class="screen" id="s-go">
+  <div class="screen-inner go">
+    <div class="check">✓</div>
+    <h2>You're on track!</h2>
+    <div class="handle mono" id="out-handle">—</div>
+    <p class="go-class" id="out-class">Launching…</p>
+    <p class="go-tip">The sim is loading your session. <b>Good luck.</b></p>
+    <p class="go-fallback">Didn't open? <a id="relaunch" href="#">Tap here to launch</a></p>
+    <div class="lb mono" id="out-lb"></div>
+    <div class="countdown" id="cd"></div>
+  </div>
+</section>
+
+<!-- SETUP PANEL -->
+<div class="setup-overlay" id="setup-overlay" hidden>
+  <div class="setup-card">
+    <h3>Rig Setup</h3>
+    <p class="setup-note">Overrides the central config on <b>this device only</b> (saved locally). Use it to test on a rig before the Worker config is deployed. Leave blank and tap “Use central config” to follow the league server.</p>
+    <div class="setup-grid">
+      <label>Leaderboard URL<input id="su-lb" type="text" placeholder="https://indianesportsracingleague.com" /></label>
+      <label>Return after (sec)<input id="su-ret" type="number" min="3" max="60" placeholder="12" /></label>
+    </div>
+    <div class="setup-class">
+      <div class="sc-title">Amateur</div>
+      <div class="setup-grid">
+        <label>Car id<input id="su-a-car" type="text" placeholder="ks_mazda_mx5_cup" /></label>
+        <label>Server IP<input id="su-a-ip" type="text" placeholder="1.2.3.4" /></label>
+        <label>TCP port<input id="su-a-port" type="number" placeholder="9600" /></label>
+        <label>HTTP port<input id="su-a-http" type="number" placeholder="8081" /></label>
+      </div>
+    </div>
+    <div class="setup-class">
+      <div class="sc-title">Pro</div>
+      <div class="setup-grid">
+        <label>Car id<input id="su-p-car" type="text" placeholder="ks_ferrari_488_gt3" /></label>
+        <label>Server IP<input id="su-p-ip" type="text" placeholder="1.2.3.4" /></label>
+        <label>TCP port<input id="su-p-port" type="number" placeholder="9610" /></label>
+        <label>HTTP port<input id="su-p-http" type="number" placeholder="8082" /></label>
+      </div>
+    </div>
+    <div class="setup-grid">
+      <label>Centre slug<input id="su-centre" type="text" placeholder="sim-racing-adda" /></label>
+      <label>Rig<input id="su-rig" type="text" placeholder="1" /></label>
+    </div>
+    <p class="setup-preview">Test link (Amateur): <a id="su-test" class="mono" href="#">—</a></p>
+    <div class="setup-actions">
+      <button class="btn-ghost" id="su-clear">Use central config</button>
+      <button class="btn-ghost" id="su-cancel">Cancel</button>
+      <button class="btn-primary" id="su-save">Save</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/assets/kiosk.js"></script>
+</body>
+</html>
