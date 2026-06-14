@@ -50,16 +50,18 @@ Notable opex: Transportation ₹4,22,103 · Bank charges ₹2,59,313 · Travel �
 
 ## Cleanup punch-list (priority order)
 
-1. **GST** — reconcile the 4 mismatching months (Zoho vs portal), fix deltas, mark filed.
-2. **TDS** — CA to confirm deductions due, deposit ₹644 + interest, set up TDS going forward.
-3. **Book studio advance** as Rental Deposit / Capital Advance asset (~₹9.31L).
-4. **Fix negative Finished Goods** −₹24,470 (inventory/COGS posting).
-5. **Clear Opening Balance Adjustments** suspense ₹24,453 (migration leftover).
-6. **Fix negative Duty** −₹1,49,551 — trace to source, reclassify.
-7. **Fix Tax Payable** −₹292 reclassification.
-8. **Book real payroll / founder salary** to normalize earnings.
-9. **ARKA ₹6.24L receivable** — decide: collect or provide/write off.
-10. **Categorize remaining uncategorized bank txns** (Razorpay escrow, UPI refund, sukraasventure, SBI OD item).
+Status as of 2026-06-14 session (✅ done · 🔎 diagnosed, awaiting CA · ⬜ open).
+
+1. ⬜ **GST** — reconcile the 4 mismatching months (Zoho vs portal), fix deltas, mark filed. *(auditor's item)*
+2. ⬜ **TDS** — CA to confirm deductions due, deposit ₹644 + interest, set up TDS going forward.
+3. ✅ **Studio advance booked** — ₹9,31,501 categorized to new **Rental & Security Deposits (Studio)** ledger (Other Current Asset) via the 3 ICICI "vaithamaniti" transfers (05/06 ₹4,81,500 · 04/06 ₹4,50,000 · 04/06 ₹1). Refundable security deposit per [[thambu]]. CA may reclassify to non-current if lease is long-term.
+4. ⬜ **Fix negative Finished Goods** −₹24,470 (inventory/COGS posting). *(not yet traced)*
+5. ⬜ **Clear Opening Balance Adjustments** suspense ₹24,453 (migration leftover).
+6. 🔎 **Negative Duty −₹1,49,551 = year-end CUT-OFF timing, not an error.** A Landed Cost allocation (Cr Duty ₹1,54,552.60) was posted 30/03/2026 but its matching **Bill of Entry (Dr Duty ₹1,54,552.60) was entered 15/05/2026 — next FY**, so FY25-26 has an unmatched credit. Across both years Duty nets to just ₹5,001.92 Dr (one 31/03 Journal #5). **Fix:** CA to decide cut-off — most likely back-date the Bill of Entry to ≤31/03/2026 so both legs land in FY25-26 (duty → inventory, ~0 P&L impact); or move the 30/03 Landed Cost to FY26-27 if customs cleared in April/May. Also check Journal #5 (₹5,001.92). Not auto-fixed (touches customs/GST records).
+7. ⬜ **Fix Tax Payable** −₹292 reclassification.
+8. ⬜ **Book real payroll / founder salary** to normalize earnings.
+9. ⬜ **ARKA ₹6.24L receivable** — decide: collect or provide/write off.
+10. ✅/⬜ **Uncategorized bank txns** — ✅ 2 Razorpay settlements (₹47,355.40 + ₹40,519.62) booked as transfers from Razorpay Clearing; ⬜ still open: ICICI ₹13,675 "lokhandeamit" refund + ₹47,000 "sukraasventure" payment (await [[thambu]] description) + 1 SBI OD line. ICICI uncategorized went 7 → 2.
 
 ## Rating & indicative valuation
 
