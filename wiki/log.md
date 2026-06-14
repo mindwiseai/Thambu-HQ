@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-15] ingest | Mindwise Brand Communication Strategy Workshop (Jan 23, 2026)
+- Source: [[2026-01-23-brand-communication-strategy-workshop]]
+- Created: 1 new page — [[2026-01-23-brand-communication-strategy-workshop]] (source; comprehensive workshop extract: 3C framework, competitor analysis, Brain Hackers network, strategic decisions)
+- Updated: [[domains/mindwise/_index]] (added source to chronological list) · [[wiki/hot|hot]]
+- Domain: mindwise
+- Key facts captured: **3C Framework** — Context (nutraceuticalization post-COVID; $800M→$2.9B market 2035; 5 pillars regenerative health), Community (universal cognitive strain; popcorn brain; dopamine-driven feedback loops; consumers in "cognitive panic" state), Category (polarized Ayurveda vs modern nootropics; Himalaya/Organic India (legacy) vs Mind Lab Pro/Qualia (inaccessible) → MindWise = bridge). **Strategic decisions:** position as uniter of Bacopa credibility + evidence-based efficacy; "Placebo Wellness" = enemy; brand personality = Minimalist/Ordinary model (scientist-forward, transparent, confident); target network = "Brain Hackers" (treat brain as lifelong asset). **Core brand:** tagline "Your Unfair Advantage" · claim "Only Govt-Backed Daily Brain Supplement for Sharper Mind" · purpose "We Help You Build New Neural Links For Peak Brain Performance". **Brain Hackers shared beliefs:** brain health = personal responsibility; focus = superpower; prevention > panic; inside jokes ("If it worked instantly, it wouldn't last"; "Brain gains > brain hacks"; forgetting words mid-sentence). **Immediate action items:** update CDRI website (remove ProMind, feature Mindwise only — critical before launch); PR content blast on CDRI-08 + clinical trials; website optimization for research timeline + papers + efficacy data.
+
 ## [2026-06-15] ingest | Mindwise Packaging Brief presentation (March 17-23, 2026)
 - Source: [[2026-03-17-mindwise-packaging-brief-presentation]]
 - Created: 1 new page — [[2026-03-17-mindwise-packaging-brief-presentation]] (source, comprehensive specification)
