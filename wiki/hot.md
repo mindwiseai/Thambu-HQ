@@ -8,6 +8,14 @@ updated: 2026-06-15
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
+## 2026-06-15 (latest) — Mindwise raw folder ingest · WhatsApp timeline + early meetings captured
+
+- **Raw folder processed:** `raw/mindwise/` (9.5GB, 96 documents). 6 parallel agents extracted meeting transcripts. Security check completed (Razorpay credentials confirmed in .gitignore). [[2026-06-15-mindwise-raw-ingest-whatsapp]] source created with full Dec 2025–Mar 2026 timeline.
+- **WhatsApp highlights:** Group created Dec 19, 2025 by [[jaiman]] (departed Jan 29); [[manik]] + [[avantika]] took over. **Mar 16 LOCKED:** [[route-3-architecture-of-intelligence]] logo + neon green/black colors. **Mar 17 LOCKED:** [[two-track-bottle-strategy]]. **Mar 18 DISCOVERED:** [[patco-pharmaceuticals]] vendor. **Feb 12 ANNOUNCED:** [[marketing-budget-25l]] (₹25L annual).
+- **[[2026-06-15-aarti-first-call]]** — Foundational discovery (~late 2025). [[thambu]] explains full [[cdri-08]] story. [[aarti-samant]] blunt feedback: "too clinical/medical," shift to "human" personality (Whoop/SuperYou, not pharma). Decided: engage [[sorted-agency]], remove CDRI from brand name, delete Instagram, logo refresh, [[thambu]] as founder/creator.
+- **[[2026-03-23-sorted-intro-call-manik]]** — Formal proposal (₹11.5L, 9 weeks). Brain health market validated. Two Brothers Organic Farms case study. Define competitor traction (3-4 lakhs → 50-60 lakhs/month).
+- New entities: [[jaiman]] (Sorted account manager, Dec 19–Jan 29) · [[marketing-budget-25l]] (₹25L annual, Feb 12).
+
 ## 2026-06-15 — Mindwise Brand Communication Strategy Workshop ingested · 3C framework + Brain Hackers network
 
 - **[[2026-01-23-brand-communication-strategy-workshop]]** extracted from Sorted deck (Jan 23, 2026 Zoom recording, ~76 min transcript). **3C Framework locked:**

@@ -9,6 +9,19 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-15] ingest | Mindwise raw folder — meetings, WhatsApp, security check
+- Source: raw/mindwise/ folder (9.5GB, 96 documents processed)
+- Created: 4 new source pages — [[2026-06-15-mindwise-raw-ingest-whatsapp]] (WhatsApp Dec 2025–Mar 2026) · [[2026-06-15-aarti-first-call]] (discovery call, late 2025/early 2026) · [[2026-03-23-sorted-intro-call-manik]] (formal proposal, Mar 23) · 3 additional sources from background agents
+- Created: 2 new entity pages — [[jaiman]] (original Sorted account manager, departed Jan 29, 2026) · [[marketing-budget-25l]] (₹25L annual budget, announced Feb 12)
+- Updated: .gitignore (added second Razorpay credential path)
+- Domain: mindwise
+- **Security:** Razorpay credentials at `raw/mindwise/Sales channels/Website/rzp-2.csv` and `raw/mindwise/Life Essence/Website/rzp-2.csv` confirmed in .gitignore (already protected, second path added)
+- **WhatsApp timeline:** Dec 19, 2025 (group created by [[jaiman]]) → Mar 23, 2026 (packaging spec finalization). Key moments: logo lock Mar 16 ([[route-3-architecture-of-intelligence]]), [[patco-pharmaceuticals]] discovered Mar 18, [[two-track-bottle-strategy]] established Mar 17, [[marketing-budget-25l]] announced Feb 12, [[jaiman]] departed Jan 29
+- **Aarti first call:** Foundational discovery where [[thambu]] explains complete [[cdri-08]] story; [[aarti-samant]] delivers blunt feedback (too clinical/medical), recommends brand communication strategy, WHY/WHAT/HOW framework, shift to "human" personality
+- **Manik intro call:** Formal [[sorted-agency]] proposal (₹11.5L combined, 9 weeks); brain health market validation; Two Brothers Organic Farms case study
+- **Process:** 6 parallel agents launched for meeting transcript extraction; security check completed; wiki source pages created with dense linking
+- **Raw folder state:** 5,621 files total (38.5GB); Mindwise 96 text documents; RaceSims 29GB (not processed this session)
+
 ## [2026-06-15] ingest | Mindwise visual identity meeting — 3 routes, Route 3 locked
 - Source: [[2026-03-23-mindwise-visual-identity-meeting]]
 - Created: 4 new pages — [[2026-03-23-mindwise-visual-identity-meeting]] (source, 35-min meeting + 62-slide deck + video) · [[route-3-architecture-of-intelligence]] (LOCKED, concept) · [[route-1-peak-and-stoic-mind]] (explored, archived) · [[route-2-neural-network]] (explored, archived; legibility gap flagged)
