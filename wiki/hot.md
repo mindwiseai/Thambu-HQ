@@ -1,14 +1,18 @@
 ---
 title: Hot Cache
 type: meta
-updated: 2026-06-14
+updated: 2026-06-15
 ---
 
 # Hot Cache
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-14 (latest) — IERL July launch structure locked · partner deck built
+## 2026-06-15 — Mindwise packaging brief finalized · 4-side label + regulatory architecture locked
+
+- **[[2026-03-17-mindwise-packaging-brief-presentation|Packaging brief (March 17-23, 2026)]]** — comprehensive specification ingested from Sorted deck (18 slides). Bottle specs: 100mL translucent, [[60-capsule-bottle-decision|60 capsules]], cylinder + rectangle options, [[patco-pharmaceuticals]] vendor. [[packaging-content-layout|4-side label architecture]] locked per April 8: **Side 1** (hero: "Your Unfair Advantage" + "Government-Backed Brain Supplement"), **Side 2** (science: "Not All Bacopa Is Created Equal" + 55% bacosides claim), **Side 3** (formulation: CSIR-CDRI logo + GMP/allergen-free/gluten-free badges), **Side 4** (benefits: focus/clarity/performance). Outer box: front hero + regulatory clutter (nutrition/dosage/storage). Key decisions: drop "cruelty free" (animal testing history), use "vegetarian capsules" not vegan, min 2-3 bottle purchase to span [[8-12-week-onset-claim|8-12 week onset]]. [[tic-tac-seal-concept]] feasibility TBD. Critical path: June 1 launch.
+
+## 2026-06-14 — IERL July launch structure locked · partner deck built
 
 - **[[ierl-indian-esports-racing-league|IERL]] launches July 1, 2026** — monthly hot-lap league across the RaceSims partner network on [[assetto-corsa|Assetto Corsa]]. Deck: `racesims/marketing/decks/ierl-july-2026.html` (10 slides). Source: [[2026-06-14-ierl-july-launch]].
 - **Brand:** lead with **IERL**, not "by RaceSims" — all centres pool, shared community brand. RaceSims Studio Chennai is one centre among equals.

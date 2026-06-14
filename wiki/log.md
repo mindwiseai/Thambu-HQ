@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-15] ingest | Mindwise Packaging Brief presentation (March 17-23, 2026)
+- Source: [[2026-03-17-mindwise-packaging-brief-presentation]]
+- Created: 1 new page — [[2026-03-17-mindwise-packaging-brief-presentation]] (source, comprehensive specification)
+- Updated: [[wiki/hot|hot]] · [[packaging-content-layout]] (cross-check with April 8 lock) · [[wiki/index|index]]
+- Domain: mindwise
+- Key facts captured: **Bottle specs:** 100mL translucent, [[60-capsule-bottle-decision|60 capsules]], cylinder + rectangle options, [[patco-pharmaceuticals|Patco]] vendor. **4-side label architecture locked (April 8):** Side 1 = hero ("Your Unfair Advantage" + "Government-Backed Brain Supplement" + 60 caps), Side 2 = science ("Not All Bacopa Is Created Equal" + 55% bacosides + 40yr research + 7 clinical trials), Side 3 = formulation (CSIR-CDRI logo + GMP/allergen-free/gluten-free/vegetarian icons), Side 4 = benefits (focus/clarity/performance). **Outer box:** front hero + regulatory (nutrition/dosage/storage/batch info). **Key decisions:** drop "cruelty free" (animal testing history [[cdri-08-safety-profile]]), use "vegetarian capsules" not "vegan", min 2-3 bottle purchase to span [[8-12-week-onset-claim|8-12 week onset window]]. **Open:** CSIR-CDRI logo artwork delivery, [[tic-tac-seal-concept|Tic Tac seal]] feasibility, outer box decision (cost vs compliance clutter), QR destination (website vs Amazon vs Linktree), blister pack (30-cap B2B). **Critical path:** June 1, 2026 launch.
+
 ## [2026-06-14] edit | IERL driver identification + kiosk build
 - Driver-sign-in kiosk built at `racesims/ierl/kiosk/` (zero-dep Python + branded UI): name+phone → unique handle → writes AC name field → launches [[content-manager|Content Manager]] into class server → auto-reset. Tested in simulate mode.
 - Created: [[ierl-driver-identification]] (concept) · [[content-manager]] (entity) · [[le-mans-ultimate]] (entity, migration target)
