@@ -34,9 +34,6 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 - Domain: mindwise
 - Key facts captured: **Bottle specs:** 100mL translucent, [[60-capsule-bottle-decision|60 capsules]], cylinder + rectangle options, [[patco-pharmaceuticals|Patco]] vendor. **4-side label architecture locked (April 8):** Side 1 = hero ("Your Unfair Advantage" + "Government-Backed Brain Supplement" + 60 caps), Side 2 = science ("Not All Bacopa Is Created Equal" + 55% bacosides + 40yr research + 7 clinical trials), Side 3 = formulation (CSIR-CDRI logo + GMP/allergen-free/gluten-free/vegetarian icons), Side 4 = benefits (focus/clarity/performance). **Outer box:** front hero + regulatory (nutrition/dosage/storage/batch info). **Key decisions:** drop "cruelty free" (animal testing history [[cdri-08-safety-profile]]), use "vegetarian capsules" not "vegan", min 2-3 bottle purchase to span [[8-12-week-onset-claim|8-12 week onset window]]. **Open:** CSIR-CDRI logo artwork delivery, [[tic-tac-seal-concept|Tic Tac seal]] feasibility, outer box decision (cost vs compliance clutter), QR destination (website vs Amazon vs Linktree), blister pack (30-cap B2B). **Critical path:** June 1, 2026 launch.
 
-## [2026-06-14] edit | IERL driver identification + kiosk build
-- Driver-sign-in kiosk built at `racesims/ierl/kiosk/` (zero-dep Python + branded UI): name+phone → unique handle → writes AC name field → launches [[content-manager|Content Manager]] into class server → auto-reset. Tested in simulate mode.
-=======
 ## [2026-06-14] ingest | IERL hosted web kiosk + deeplink finding + auto-discovery
 - Source: [[2026-06-14-ierl-kiosk-build]]
 - Confirmed from [[content-manager|CM]] source: `acmanager://race/online` accepts `name` (sets DriverName) → browser can launch AC with the customer's name, no local app. `race/online/join` has no name.
@@ -46,7 +43,6 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ## [2026-06-14] edit | IERL driver identification + kiosk build (Python interim)
 - Driver-sign-in kiosk built at `racesims/ierl/kiosk/` (zero-dep Python + branded UI): name+phone → unique handle → writes AC name field → launches [[content-manager|Content Manager]] into class server → auto-reset. Tested in simulate mode. (Superseded as primary by the hosted web kiosk above; kept as fallback.)
->>>>>>> 9fe9a24d47167b29a2633c6628f210fc5780e5a7
 - Created: [[ierl-driver-identification]] (concept) · [[content-manager]] (entity) · [[le-mans-ultimate]] (entity, migration target)
 - Updated: [[ierl-indian-esports-racing-league]] · [[assetto-corsa]] · [[domains/racesims/_index]] · [[wiki/hot|hot]]
 - Key: shared rig = one GUID → laps keyed on driver NAME; handle = FIRSTNAME-#### (last4 phone); leaderboard must dedupe by name not GUID; CM may override race.ini (on-rig verify). AC now → LMU later.
