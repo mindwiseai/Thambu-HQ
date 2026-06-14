@@ -594,7 +594,7 @@
             </tr>
             <tr>
               <td style="color:var(--ink-muted);font-size:11.5px;font-family:var(--mono);letter-spacing:0.08em;">TRACK LIMITS</td>
-              <td><span class="pill red">Zero tolerance</span></td>
+              <td><span class="pill red">Real Penalty</span> <span style="font-size:11px;color:var(--ink-muted);">zero tolerance</span></td>
             </tr>
           </tbody>
         </table>
@@ -629,7 +629,7 @@
             </tr>
             <tr>
               <td style="color:var(--ink-muted);font-size:11.5px;font-family:var(--mono);letter-spacing:0.08em;">TRACK LIMITS</td>
-              <td><span class="pill red">Zero tolerance</span></td>
+              <td><span class="pill red">Real Penalty</span> <span style="font-size:11px;color:var(--ink-muted);">zero tolerance</span></td>
             </tr>
           </tbody>
         </table>
@@ -785,7 +785,7 @@
             </tr>
             <tr>
               <td style="color:var(--ink-muted);font-size:11.5px;font-family:var(--mono);letter-spacing:0.08em;">TRACK LIMITS</td>
-              <td>Server-side enforcement · cuts = invalid · no disputes possible</td>
+              <td><b>Real Penalty</b> tool — strict limits + automatic penalties</td>
             </tr>
             <tr>
               <td style="color:var(--ink-muted);font-size:11.5px;font-family:var(--mono);letter-spacing:0.08em;">LEADERBOARD</td>
@@ -805,6 +805,11 @@
           <b>Automation is on the way.</b> While the league's software is being built, July runs on a manually-updated leaderboard. Once it's ready, name entry and lap logging become fully automatic.
         </div>
       </div>
+    </div>
+
+    <div style="margin-top:14px;background:var(--rs-black);border-radius:4px;padding:12px 20px;display:flex;align-items:center;gap:16px;">
+      <span style="font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.18em;color:var(--rs-red);text-transform:uppercase;white-space:nowrap;">Why centre-only</span>
+      <span style="font-size:12.5px;color:rgba(255,255,255,0.85);line-height:1.5;">Every rig runs identical hardware and the <b style="color:white;">Real Penalty</b> enforcement software — strict track limits, automatic penalties, no modified files. A fully controlled environment with <b style="color:white;">zero scope for cheating</b>. That's why IERL runs in-centre, never from home.</span>
     </div>
   </div>
 </div>
@@ -842,11 +847,11 @@
           </div>
           <div class="tl-row">
             <div class="tl-chip">Aug 1<br/>Morning</div>
-            <div class="tl-desc"><b>Results posted.</b> The league shares final leaderboard + winner UPI IDs in the group. Each centre gets assigned winner(s) to pay.</div>
+            <div class="tl-desc"><b>Results + settlement posted.</b> The league shares the final leaderboard and the settlement sheet — exactly which winner each dealer pays, and how much.</div>
           </div>
           <div class="tl-row">
             <div class="tl-chip amber">By Aug 5</div>
-            <div class="tl-desc"><b>Transfers due.</b> Each centre pays their assigned network winner + their local champion. Screenshot in the group.</div>
+            <div class="tl-desc"><b>Transfers due.</b> Each dealer pays the winner(s) the settlement assigns — 1–2 transfers — plus their local champion. Screenshot in the group.</div>
           </div>
           <div class="tl-row">
             <div class="tl-chip green">Aug 6</div>
@@ -869,7 +874,7 @@
           </div>
           <div class="card amber" style="padding:14px 16px;">
             <div style="font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.18em;color:var(--amber);text-transform:uppercase;margin-bottom:6px;">By August 5</div>
-            <div style="font-size:13px;color:var(--ink);line-height:1.6;">✓ Transfer network prize to assigned winner<br/>✓ Pay your local champion (₹500 × rigs)<br/>✓ Screenshot both transfers in WhatsApp group</div>
+            <div style="font-size:13px;color:var(--ink);line-height:1.6;">✓ Pay the winner(s) the settlement assigns (1–2 transfers)<br/>✓ Pay your local champion (₹500 × rigs)<br/>✓ Screenshot transfers in WhatsApp group</div>
           </div>
 
           <div class="info red" style="font-size:12px;margin-top:2px;">
@@ -888,65 +893,63 @@
   <div class="brand">INDIAN ESPORTS RACING LEAGUE</div>
   <div class="slide-num">09 / 10</div>
   <div class="slide-inner">
-    <div class="eyebrow">09 · Payment Flow — How Money Moves</div>
-    <h2>One transfer out. One local prize. <em>Done by the 5th.</em></h2>
+    <div class="eyebrow">09 · Payment Flow — Direct Settlement</div>
+    <h2>No central pot. <em>Money moves like Splitwise.</em></h2>
     <div class="divider-red"></div>
 
-    <div class="grid-2" style="gap:28px;margin-top:8px;align-items:start;">
+    <p style="margin-bottom:14px;max-width:1000px;">The league never holds your money. At month-end it calculates who pays whom — matching each dealer's contribution straight to winners — so every payout is peer-to-peer and each dealer makes just <b>one or two UPI transfers</b>.</p>
 
-      <!-- Left: centre cards -->
-      <div style="display:flex;flex-direction:column;gap:10px;">
-        <div class="cc">
-          <div class="cc-name">Sim Racing Adda</div>
-          <div class="cc-meta">DELHI · 4 RIGS · ₹10,000 / MONTH</div>
-          <div class="cc-row"><span style="color:var(--ink);">Network prize transfer</span><span class="cc-amount">₹10,000 → winner</span></div>
-          <div class="cc-row"><span style="color:var(--ink);">Local champion (4 × ₹500)</span><span class="cc-local">₹2,000 → fastest driver</span></div>
-        </div>
-        <div class="cc">
-          <div class="cc-name">Niyusuki · Lights Out · Drivextreme</div>
-          <div class="cc-meta">3 RIGS EACH · ₹7,500 / MONTH</div>
-          <div class="cc-row"><span style="color:var(--ink);">Network prize transfer</span><span class="cc-amount">₹7,500 → winner</span></div>
-          <div class="cc-row"><span style="color:var(--ink);">Local champion (3 × ₹500)</span><span class="cc-local">₹1,500 → fastest driver</span></div>
-        </div>
-        <div class="cc">
-          <div class="cc-name">BBS Adrenaline Apex · Virtual Adda</div>
-          <div class="cc-meta">2 RIGS EACH · ₹5,000 / MONTH</div>
-          <div class="cc-row"><span style="color:var(--ink);">Network prize transfer</span><span class="cc-amount">₹5,000 → winner</span></div>
-          <div class="cc-row"><span style="color:var(--ink);">Local champion (2 × ₹500)</span><span class="cc-local">₹1,000 → fastest driver</span></div>
-        </div>
-      </div>
+    <div class="grid-2" style="gap:28px;align-items:start;">
 
-      <!-- Right: how it works -->
+      <!-- Left: how it works -->
       <div>
-        <h3 style="margin-bottom:12px;">How the League Assigns Transfers</h3>
-
-        <div class="steps" style="margin-bottom:16px;">
+        <h3 style="margin-bottom:12px;">How the settlement works</h3>
+        <div class="steps" style="margin-bottom:14px;">
           <div class="step">
             <div class="step-num">1</div>
-            <div class="step-text"><b>Aug 1 — Results posted in group</b><br/><span>Final top 3 per class + centre-level champions listed. Each centre is told which winner to pay.</span></div>
+            <div class="step-text"><b>Aug 1 — Leaderboard locked</b><br/><span>Top 3 per class confirmed. Prize amounts known.</span></div>
           </div>
           <div class="step">
             <div class="step-num">2</div>
-            <div class="step-text"><b>Winner UPI ID shared privately</b><br/><span>The league collects UPI from winners and tells each centre exactly who to pay and how much.</span></div>
+            <div class="step-text"><b>The league runs the settlement</b><br/><span>Each dealer's contribution is matched to specific winners, minimising the number of transfers — Splitwise-style.</span></div>
           </div>
           <div class="step">
             <div class="step-num">3</div>
-            <div class="step-text"><b>Centre pays by Aug 5</b><br/><span>One UPI transfer to the network winner. One to your local champion. Post both screenshots in group.</span></div>
+            <div class="step-text"><b>Each dealer gets one simple instruction</b><br/><span>"Pay ₹X to [winner's UPI]." Usually one transfer, sometimes two.</span></div>
           </div>
           <div class="step">
             <div class="step-num">4</div>
-            <div class="step-text"><b>Confirmed by Aug 6</b><br/><span>The league verifies all transfers. Month closed. Season standings updated on the website.</span></div>
+            <div class="step-text"><b>Dealers pay directly by Aug 5</b><br/><span>Screenshot in the group. The league verifies. Month closed.</span></div>
           </div>
         </div>
 
-        <div style="background:var(--cream-dark);border:1px solid var(--rule);border-radius:4px;padding:14px 16px;">
-          <div style="font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.18em;color:var(--ink-muted);text-transform:uppercase;margin-bottom:8px;">July totals across network</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-            <div><div style="font-size:11px;color:var(--ink-muted);margin-bottom:2px;">Network prize pool</div><div style="font-size:20px;font-weight:800;color:var(--rs-red);font-family:var(--mono);">₹40,000</div></div>
-            <div><div style="font-size:11px;color:var(--ink-muted);margin-bottom:2px;">Total local prizes</div><div style="font-size:20px;font-weight:800;color:var(--green);font-family:var(--mono);">₹8,500</div></div>
-            <div><div style="font-size:11px;color:var(--ink-muted);margin-bottom:2px;">Network winners paid</div><div style="font-size:20px;font-weight:800;color:var(--ink);font-family:var(--mono);">6</div></div>
-            <div><div style="font-size:11px;color:var(--ink-muted);margin-bottom:2px;">Centre champions paid</div><div style="font-size:20px;font-weight:800;color:var(--ink);font-family:var(--mono);">6</div></div>
-          </div>
+        <div class="info green" style="font-size:12px;">
+          <b>Why this matters:</b> the league never touches a rupee — every payout is dealer → winner. No middleman holding the pot, no "only one party handles the money." The full settlement sheet is shared with everyone. Total transparency.
+        </div>
+      </div>
+
+      <!-- Right: worked example -->
+      <div>
+        <h3 style="margin-bottom:12px;">July settlement — worked example</h3>
+        <table style="margin-bottom:10px;">
+          <thead>
+            <tr><th>Dealer <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:9px;color:var(--ink-muted);">(contribution)</span></th><th class="c">Pays</th><th>To</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>Sim Racing Adda</b> <span style="font-size:10.5px;color:var(--ink-muted);">₹10,000</span></td><td class="c">₹10,000</td><td>🥇 Amateur 1st</td></tr>
+            <tr><td><b>Niyusuki</b> <span style="font-size:10.5px;color:var(--ink-muted);">₹7,500</span></td><td class="c">₹7,500</td><td>🥇 Pro 1st</td></tr>
+            <tr><td><b>Drivextreme</b> <span style="font-size:10.5px;color:var(--ink-muted);">₹7,500</span></td><td class="c">₹4,500<br/>₹3,000</td><td>🥇 Pro 1st<br/>🥉 Pro 3rd</td></tr>
+            <tr><td><b>BBS Adrenaline Apex</b> <span style="font-size:10.5px;color:var(--ink-muted);">₹5,000</span></td><td class="c">₹2,000<br/>₹3,000</td><td>🥇 Amateur 1st<br/>🥉 Amateur 3rd</td></tr>
+            <tr><td><b>Lights Out Racing</b> <span style="font-size:10.5px;color:var(--ink-muted);">₹7,500</span></td><td class="c">₹5,000<br/>₹2,500</td><td>🥈 Pro 2nd<br/><span style="color:var(--ink-muted);">Server cost</span></td></tr>
+            <tr><td><b>Virtual Adda</b> <span style="font-size:10.5px;color:var(--ink-muted);">₹5,000</span></td><td class="c">₹5,000</td><td>🥈 Amateur 2nd</td></tr>
+          </tbody>
+        </table>
+
+        <div class="info red" style="font-size:11.5px;margin-bottom:8px;">
+          A prize can be funded by two dealers — e.g. <b>Amateur 1st (₹12,000)</b> = Sim Racing Adda ₹10,000 + BBS ₹2,000. The winner gets two transfers; each dealer still sends just one.
+        </div>
+        <div class="info green" style="font-size:11.5px;">
+          <b>Local champions are separate</b> — each centre pays its own fastest driver directly (₹500 × rigs). One quick transfer from your own customer's prize.
         </div>
       </div>
     </div>
