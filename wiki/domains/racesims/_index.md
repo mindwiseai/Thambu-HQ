@@ -22,6 +22,14 @@ India's pro-grade sim-racing hardware company. Domain: racesims.in. Founder/owne
 - [[geo-first-mover-advantage]] — AI search head start
 - [[brand-name-consistency-issue]] — "Race Sims" vs "RaceSims" entity-recognition problem
 
+## IERL — Indian Esports Racing League (launching Jul 1, 2026)
+- [[ierl-indian-esports-racing-league]] — **the league.** Network-wide monthly hot-lap on [[assetto-corsa|Assetto Corsa]]; shared brand, all centres pool. Read this first for IERL.
+- [[ierl-direct-settlement]] — Splitwise-style peer-to-peer payouts (no central pot)
+- [[ierl-promotion-ladder]] — Amateur/Pro classes + fair-competition design
+- [[real-penalty]] — track-limits / penalty enforcement tool (anti-cheat)
+- [[assetto-corsa]] — platform (chosen over LMU for 24/7 self-hosting)
+- Partner centres: [[sim-racing-adda]] · [[niyusuki-sim-racers]] · [[lights-out-racing]] · [[drivextreme]] · [[bbs-adrenaline-apex]] · [[virtual-adda]] · [[racing-point-esports]] · [[racesims-chennai-flagship|RaceSims Studio]]
+
 ## Competitive intel
 - [[virtual-racing-hub]] (VRH) — main competitor (~15× our IG following)
 - [[indian-racing-community]] (IRC) — largest Indian sim-racing community / partnership target

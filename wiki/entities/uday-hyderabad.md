@@ -16,6 +16,7 @@ RaceSims **dealer in Hyderabad** (bought rigs from [[racesims-company|RaceSims]]
 - Implied occupancy at peak: ₹4.5L ÷ ₹800 ÷ (8×12×30) ≈ **~20%** at month 6.
 - **Overhead ~₹2.5L/month:** rent ₹1.6L · electricity ₹45k · 2 staff (1/shift) ₹50k. Note: he does **not** book a rig-maintenance/replacement reserve — under-reserved, not truly leaner.
 - **Shut his store** to develop the [[racesims-vms-build|Venue Management Software]] — which RaceSims (and the network) will use. Took the downtime and dev cost; Chennai gets the tool.
+- **His centre = [[racing-point-esports|Racing Point Esports]]** (Hyderabad, 8 rigs). Confirmed for the [[ierl-indian-esports-racing-league|IERL]] network but **joins once his [[racesims-vms-build|VMS automation]] is ready** — the same software the whole league waits on before it can drop the manual-leaderboard interim (2026-06-14, [[2026-06-14-ierl-july-launch]]).
 
 ## Why he matters
 - His ~20%-by-month-6 ramp is the **empirical anchor** for the [[racesims-chennai-premium-baseline]] forecast — it reality-checked the [[racesims-chennai-flagship]] v3.1 deck's 30-68% occupancy assumptions as optimistic.
@@ -29,4 +30,5 @@ RaceSims **dealer in Hyderabad** (bought rigs from [[racesims-company|RaceSims]]
 ## Backlinks
 - [[racesims-chennai-premium-baseline]] — forecast anchored to his numbers
 - [[racesims-vms-build]] — software he is building for the network
+- [[ierl-indian-esports-racing-league]] — his Racing Point Esports centre joins once the VMS is ready
 - [[2026-05-29-chennai-premium-baseline-forecast]] — source

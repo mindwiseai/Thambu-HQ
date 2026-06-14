@@ -16,6 +16,14 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 - Domain: racesims
 - Key facts: ops started June 2025 (10-month FY) · net rev ₹1.96cr · net profit ₹54.4L (overstated, unnormalized) · BS ₹1.35cr · GST paid on portal but 4/11 months mismatch Zoho (auditor) · TDS barely applied (₹644, ₹0 deposited) · ₹9.31L studio advance ("vaithamaniti") to be booked as asset · ARKA ₹6.24L related-party AR · rating 6.5/10 · indicative valuation ₹1.2–2.2cr · 10-item books cleanup punch-list
 
+## [2026-06-14] ingest | IERL July 2026 launch — structure & partner deck
+- Source: [[2026-06-14-ierl-july-launch]]
+- Created: 6 new pages — [[2026-06-14-ierl-july-launch]] (source) · [[ierl-indian-esports-racing-league]] · [[ierl-direct-settlement]] · [[ierl-promotion-ladder]] · [[real-penalty]] · [[assetto-corsa]]
+- Updated: [[uday-hyderabad]] (his centre = Racing Point Esports, joins IERL when VMS ready) · [[racesims-championship-architecture]] (contradiction callout — LMU/iRacing vs IERL Assetto Corsa) · [[domains/racesims/_index]] (new IERL section) · [[wiki/hot|hot]]
+- Domain: racesims
+- Key decisions: IERL = shared community brand (not "by RaceSims") · July runs manual until [[racesims-vms-build|Uday's VMS]] ready · [[ierl-direct-settlement|Splitwise-style settlement]] (no central pot) · [[real-penalty|Real Penalty]] + centre-only = no cheating · [[mugello]] / MX-5 ND + Ferrari 488 GT3 · local prize ₹500 × rigs (centre-funded)
+- Open: platform contradiction with LOCKED [[racesims-championship-architecture]]; partner-centre entity pages pending (6 dead links flagged for next ingest)
+
 ## [2026-06-09] ingest | RaceSims incorporation documents — MOA, AOA, Startup India cert, Board Resolution
 - Source: [[2026-06-09-racesims-incorporation-docs]]
 - Created: 1 new page — [[2026-06-09-racesims-incorporation-docs]] (source)

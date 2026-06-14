@@ -38,6 +38,9 @@ LAYER 1  ALWAYS-ON   Drive & Race →  Walk in, drive, leaderboard
 | Championship Pass | ₹4,500/year (single) · ₹7,500/year (dual) | ₹4,500/year (single) · ₹7,500/year (dual) |
 | Annual Champion prize | Polo Cup Follow Car Programme (₹1.5L value) | [[arka-motorsports|ARKA Rally Drive]] (₹1L value) |
 
+> [!contradiction] Platform vs the live [[ierl-indian-esports-racing-league|IERL]] network league
+> This LOCKED architecture names **Le Mans Ultimate + iRacing** (Circuit). The [[ierl-indian-esports-racing-league|Indian Esports Racing League]] — the **network-wide partner league** launching July 1, 2026 — runs on **plain [[assetto-corsa|Assetto Corsa]]** (LMU 24/7 hosting proved unviable; see [[assetto-corsa]]). IERL appears to be a sibling to (not a replacement for) this in-centre Chennai championship, but the platform choice needs reconciling with [[thambu]]. Flagged 2026-06-14 in [[2026-06-14-ierl-july-launch]].
+
 **Championship Pass covers:** competition entry + VMS points tracking + event priority booking. **Rig time is always billed separately** — Time Trial rounds at Pass holder rates (Pass 8/16), Live Race rounds as normal rig bookings. Pass holders are expected to carry Pass 8 or Pass 16 to cover their weekly TT practice.
 
 Drivers can hold a Pass in one or both. Separate points, separate champions, separate Grand Finals.
@@ -208,6 +211,7 @@ With lean Year 1 event production: ~₹7.8L.
 
 ## Connections
 
+- [[ierl-indian-esports-racing-league]] — the network-wide partner hot-lap league (Assetto Corsa); related but distinct from this in-centre championship
 - [[racesims-the-ladder]] — the sim-to-reality pathway built on top of this
 - [[racesims-drive-train-compete]] — the COMPETE tier housed here
 - [[racesims-chennai-flagship]] — first venue

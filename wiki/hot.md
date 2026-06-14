@@ -8,7 +8,17 @@ updated: 2026-06-14
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-14 (latest) — RaceSims Zoho Books year-end health review
+## 2026-06-14 (latest) — IERL July launch structure locked · partner deck built
+
+- **[[ierl-indian-esports-racing-league|IERL]] launches July 1, 2026** — monthly hot-lap league across the RaceSims partner network on [[assetto-corsa|Assetto Corsa]]. Deck: `racesims/marketing/decks/ierl-july-2026.html` (10 slides). Source: [[2026-06-14-ierl-july-launch]].
+- **Brand:** lead with **IERL**, not "by RaceSims" — all centres pool, shared community brand. RaceSims Studio Chennai is one centre among equals.
+- **July = manual** (league-hosted 24/7 server + manual leaderboard) until [[uday-hyderabad|Uday]]'s [[racesims-vms-build|VMS]] automation is ready; [[racing-point-esports|Racing Point Esports]] (his Hyderabad centre) joins then.
+- **[[ierl-direct-settlement|Splitwise-style settlement]]** — league never holds money; matches each dealer's contribution to winners; 1–2 UPI transfers each.
+- **[[real-penalty|Real Penalty]]** tool + identical centre hardware = controlled env, no cheating → reason it's centre-only, never home.
+- **Season 1:** [[mugello]] · Amateur MX-5 ND / Pro Ferrari 488 GT3 · [[ierl-promotion-ladder|promotion ladder]]. **July pool ₹40K** (6 centres, 17 rigs); **local prize ₹500 × rigs** (centre-funded, separate). Aug 2: +Chennai → 33 rigs / ₹80K.
+- ⚠ Platform contradiction flagged with LOCKED [[racesims-championship-architecture]] (LMU/iRacing vs AC).
+
+## 2026-06-14 — RaceSims Zoho Books year-end health review
 
 - **FY25-26 = ~10-month first year** (ops started **June 2025**). Net revenue **₹1.96cr** · gross profit ₹67.3L (34.3%) · **net profit ₹54.4L (27.7%) — but overstated** (payroll barely booked ₹1.39L, no founder salary, studio rent not yet in P&L). Balance sheet ties out **₹1.35cr**. Inventory-heavy (₹53L) + running on SBI OD.
 - **GST:** [[thambu]] confirmed returns are **paid/filed on the portal, up to date**; Zoho just not marked filed (cosmetic). Auditor flagged **4 of 11 months mismatch** Zoho vs portal → reconcile. BS net GST ~₹4.72L is a Zoho artifact.
@@ -59,14 +69,6 @@ Most recently touched context. Read this first for any query — it often answer
 - Thambu shared **Almeida Racing Academy** (Suellio Almeida) as inspiration — their "Racing Technique" driver-dev guide + Car Handling/Racecraft web courses. Folding in 4 things (cream editorial kept): **BAD-vs-GOOD** mistake-first teaching, themed skill **Levels**, a deepened **Racecraft pillar + Psychology**, and a **Challenges/practice-trainer** layer.
 - Wiki done: [[racesims-academy-curriculum]] (added skill-order philosophy + 4 Levels + bigger glossary), [[racesims-curriculum-advanced-circuit]] (re-framed into Levels 2–4, mistake-first; Initiation = L1), NEW [[racesims-curriculum-racecraft]] (Foundations·Battle Dynamics·Strategies·Psychology) + NEW [[racesims-academy-challenges]] (Brake Precision / Race Start trainers + challenge gates → VMS/championship).
 - **Next:** update the deck — add BAD/GOOD blocks to the 9 concept slides + new slides (skill-order, Levels overview, Racecraft pillar, Psychology, Challenges), render-verify, regenerate PDF.
-
-## 2026-05-30 — Chennai fit-out re-sourced & optimised ₹16.1L → ₹14.2L
-- [[thambu]] challenged the carried-forward ₹16.1L fit-out ("where are these numbers from?"). Re-grounded all 17 lines from **real 2026 India quotes/listings** (IndiaMART, Philips, Moglix, Chennai contractors) + C&W/JLL benchmarks, then walked every line with him. Living schedule: [[racesims-chennai-fitout]]; method: [[2026-05-30-chennai-fitout-optimisation]].
-- **Fit-out ₹16.10L → ₹14.20L** (15 funded lines). Key calls: carpet **tiles** (not SPC, −₹1L) · **black-framed** glass (−₹47k) · mid-tier magnetic-track lighting (−₹76k) · **4-cam** CCTV · attendance-only biometric (door is a shutter) · 65″ QLED leaderboard (₹0 if Samsung) · tablet POS. **Acoustic + ambient audio → Phase 2.** AC stays **8 T** (don't undersize); UPS PC-only, outdoors → weatherproof enclosure + heat-derating watch (lithium vs VRLA).
-- **Founder insight:** old ₹16.1L = ₹1,240/sqft = a *lean* finish, not premium (real premium ₹1,800–2,700/sqft; honest MID ₹21.3L) — and it was *incomplete* (buried UPS, no WiFi). ₹14.2L is lower **and** complete.
-- **Capital reflow:** gross ₹77.21L · ITC ₹8.75L · **net ₹68.46L** · at-risk ₹59.14L · CoC ₹5.48L/yr · break-even 11.5% · **~3.1× multiple.** EBITDA ₹3.57cr / PAT ₹2.11cr hold. Landed report **rebuilt** (commit 2ce3d8d).
-- New architect: [[guru-moorthy]] — quoted paint ₹75k, measuring glazing/walls/frontage on-site 2026-05-31.
-- **Open:** 5 lines provisional (AC/UPS/lighting/solar/signage quotes pending, ±₹1–1.5L) · **washroom/sanitary** line unconfirmed (ask [[guru-moorthy]]) · Conspit/VNM-vs-sponsorship build of record.
 
 ---
 *Older entries trimmed (oldest-first per hot-cache rule); full history in `wiki/log.md` and the linked concept/source pages.*
