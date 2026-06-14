@@ -11,6 +11,9 @@ tags: [organization, racing-team, real-world-motorsport, moat-proof, coimbatore,
 
 Formerly known as **Red Rooster Performance**.
 
+> [!note] Related-party receivable (2026-06-14)
+> ARKA owes [[racesims-company]] **₹6,24,551**, all **>45 days overdue** — 46% of RaceSims' total receivables and the single largest AR concentration. As [[thambu]] is race engineer at ARKA, this is a **related-party** balance. Decision pending: collect vs provide/write off. See [[racesims-financials-fy2526]].
+
 ## Source of truth
 Per the official ARKA Motorsports website (https://www.arkamotorsports.com), captured via Browser MCP on 2026-04-12. All facts below are direct-quote grade unless marked as inference.
 

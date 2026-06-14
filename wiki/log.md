@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-14] ingest | RaceSims Zoho Books year-end health review (FY25-26)
+- Source: [[2026-06-14-zoho-books-health-review]]
+- Created: 3 new pages — [[2026-06-14-zoho-books-health-review]] (source) · [[racesims-financials-fy2526]] (concept) · [[racesims-studio]] (entity)
+- Updated: [[racesims-company]] (financial state + fuller banking: SBI OD/Current, gateways) · [[arka-motorsports]] (₹6.24L related-party receivable) · [[wiki/hot|hot]]
+- Domain: racesims
+- Key facts: ops started June 2025 (10-month FY) · net rev ₹1.96cr · net profit ₹54.4L (overstated, unnormalized) · BS ₹1.35cr · GST paid on portal but 4/11 months mismatch Zoho (auditor) · TDS barely applied (₹644, ₹0 deposited) · ₹9.31L studio advance ("vaithamaniti") to be booked as asset · ARKA ₹6.24L related-party AR · rating 6.5/10 · indicative valuation ₹1.2–2.2cr · 10-item books cleanup punch-list
+
 ## [2026-06-09] ingest | RaceSims incorporation documents — MOA, AOA, Startup India cert, Board Resolution
 - Source: [[2026-06-09-racesims-incorporation-docs]]
 - Created: 1 new page — [[2026-06-09-racesims-incorporation-docs]] (source)

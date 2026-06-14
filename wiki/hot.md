@@ -1,14 +1,22 @@
 ---
 title: Hot Cache
 type: meta
-updated: 2026-06-09
+updated: 2026-06-14
 ---
 
 # Hot Cache
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-09 (latest) — Incorporation docs ingested · Master Operating Document filled
+## 2026-06-14 (latest) — RaceSims Zoho Books year-end health review
+
+- **FY25-26 = ~10-month first year** (ops started **June 2025**). Net revenue **₹1.96cr** · gross profit ₹67.3L (34.3%) · **net profit ₹54.4L (27.7%) — but overstated** (payroll barely booked ₹1.39L, no founder salary, studio rent not yet in P&L). Balance sheet ties out **₹1.35cr**. Inventory-heavy (₹53L) + running on SBI OD.
+- **GST:** [[thambu]] confirmed returns are **paid/filed on the portal, up to date**; Zoho just not marked filed (cosmetic). Auditor flagged **4 of 11 months mismatch** Zoho vs portal → reconcile. BS net GST ~₹4.72L is a Zoho artifact.
+- **"vaithamaniti" ₹9.31L = rental/capital advance for the [[racesims-studio]] space** (Apr–Jun 2026, uncategorized in ICICI) → book as **asset**, not expense.
+- **[[arka-motorsports]] owes ₹6.24L** (>45d, related party) — 46% of AR. **TDS** barely applied (₹644, ₹0 deposited).
+- **Rating 6.5/10** · indicative valuation **₹1.2–2.2cr (central ~₹1.5cr)**, provisional. 10-item cleanup punch-list + full numbers in [[racesims-financials-fy2526]]. Source: [[2026-06-14-zoho-books-health-review]].
+
+## 2026-06-09 — Incorporation docs ingested · Master Operating Document filled
 
 - **Incorporation confirmed:** Racesims Solutions Private Limited incorporated **13 May 2025**. Startup India cert **DIPP211636** issued 08-07-2025, valid until 12-05-2035 (Toys & Games / Virtual Games).
 - **Legal names confirmed:** Thambu = **Theerthanagiri Dhandapani Thambusamy** · Aishu = **Aishwarya Chandrasekaran Reddy** — both first directors per AOA.

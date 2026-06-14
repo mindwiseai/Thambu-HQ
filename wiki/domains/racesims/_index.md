@@ -64,6 +64,8 @@ India's pro-grade sim-racing hardware company. Domain: racesims.in. Founder/owne
 - [[racesims-chennai-premium-baseline]] — conservative sim-only Chennai forecast (Uday-anchored, ₹11.7L Y1 EBITDA, break-even 13.8%)
 - [[uday-hyderabad]] — Hyderabad dealer + VMS builder; real-data benchmark for centre economics
 - [[racesims-company]] — legal entity (Racesims Solutions Pvt Ltd, GSTIN, MSME, Startup India)
+- [[racesims-financials-fy2526]] — FY25-26 financials, books status, GST/TDS, cleanup punch-list, valuation
+- [[racesims-studio]] — the studio space (rental advance pending booking)
 - [[import-operations]] — HS code 9023.00.90, duty ~31%, supplier chain, landed costs
 - [[can-bus-telemetry]] — sim-to-real R&D bridging rally car CAN bus to sim
 - [[discord-server-setup-kit]] — already drafted, not yet deployed

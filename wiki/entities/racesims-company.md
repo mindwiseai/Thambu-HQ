@@ -32,9 +32,14 @@ The legal entity behind [[domains/racesims/_index|RaceSims]]. Incorporated as a 
 
 ## Banking
 
-- **ICICI Bank**, KK Nagar branch
-- A/C: 007705022712
-- Used for all import remittances (SWIFT copies on file)
+- **ICICI Bank**, KK Nagar branch — A/C: 007705022712 (xxxx2712). Used for all import remittances (SWIFT copies on file).
+- **SBI Overdraft (OD)** — A/C xxxx9069. Primary working-capital line; the business runs on this OD.
+- **SBI Current** — A/C xxxx5186.
+- Payment gateways: Razorpay + Zoho Payments (clearing accounts in Zoho Books).
+
+## Financial state (FY25-26)
+
+Operations **started June 2025** (incorporated 13 May 2025), so FY25-26 is a ~10-month first year. Net revenue **₹1.96cr**, net profit **₹54.4L** (overstated — see linked page), balance sheet **₹1.35cr**. Full numbers, AR/AP aging, GST/TDS status, books cleanup punch-list, rating (6.5/10) and indicative valuation (₹1.2–2.2cr) live in **[[racesims-financials-fy2526]]** (review: [[2026-06-14-zoho-books-health-review]]). Books are accounted in Zoho (org 60042251146) and need cleanup before year-end filing. A ~₹9.31L advance for the [[racesims-studio]] space is pending booking.
 
 ## Registered address
 
