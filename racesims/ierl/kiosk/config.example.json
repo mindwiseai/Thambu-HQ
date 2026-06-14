@@ -1,0 +1,24 @@
+{
+  "rig_name": "RIG 1",
+  "centre": "Sim Racing Adda — Delhi",
+  "ac_cfg_dir": "C:\\Users\\Player\\Documents\\Assetto Corsa\\cfg",
+  "leaderboard_url": "https://indianesportsracingleague.com",
+  "session_return_seconds": 12,
+  "simulate": true,
+
+  "name_targets": [
+    { "file": "race.ini", "section": "REMOTE", "key": "NAME" },
+    { "file": "race.ini", "section": "CAR_0", "key": "DRIVER_NAME" }
+  ],
+
+  "classes": {
+    "Amateur": {
+      "label": "Amateur — Mazda MX-5",
+      "deeplink": "acmanager://race/online/join?ip=YOUR_SERVER_IP&httpPort=8081"
+    },
+    "Pro": {
+      "label": "Pro — Ferrari 488 GT3",
+      "deeplink": "acmanager://race/online/join?ip=YOUR_SERVER_IP&httpPort=8082"
+    }
+  }
+}

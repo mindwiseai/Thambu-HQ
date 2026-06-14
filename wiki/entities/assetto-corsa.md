@@ -18,9 +18,11 @@ PC racing simulator (Kunos Simulazioni). The platform [[ierl-indian-esports-raci
 
 ## IERL config
 
+- Everything is run through **[[content-manager|Content Manager]]** (launcher + server config) on the rigs.
 - 2 dedicated servers (Amateur + Pro), 24/7, 60-min qualifying loops.
 - Track limits enforced via [[real-penalty|Real Penalty]]; fixed/common car setups.
-- July: lap times submitted **manually** to the leaderboard until [[racesims-vms-build|the VMS]] automates it.
+- Shared-rig driver identity handled by the [[ierl-driver-identification|kiosk]].
+- July: lap times submitted **manually** to the leaderboard until [[racesims-vms-build|the VMS]] automates it. Migration target: [[le-mans-ultimate|LMU]].
 
 > Note: the LOCKED [[racesims-championship-architecture]] specifies LMU + iRacing for the in-centre Chennai championship — a platform difference from IERL flagged for reconciliation. See [[2026-06-14-ierl-july-launch]].
 

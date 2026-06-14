@@ -1,0 +1,5 @@
+# Per-rig config (copied from config.example.json, holds real server IPs)
+config.json
+
+# Customer sign-in logs (contains names + phone numbers — PII, never commit)
+entries-*.csv

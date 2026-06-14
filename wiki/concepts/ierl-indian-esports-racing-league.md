@@ -46,7 +46,11 @@ A monthly **hot-lap league across the [[racesims-company|RaceSims]] partner netw
 
 ## Manual interim → automation
 
-July runs **manually**: the league hosts the 24/7 server and updates the leaderboard from submitted times. Full automation — kiosk name-entry + live auto-logging — ships once [[uday-hyderabad|Uday]]'s [[racesims-vms-build|VMS]] is ready. [[racing-point-esports|Racing Point Esports]] joins when that software lands.
+July runs **manually**: the league hosts the 24/7 server (managed via [[content-manager|Content Manager]]) and updates the leaderboard from submitted times. Full automation — live auto-logging — ships once [[uday-hyderabad|Uday]]'s [[racesims-vms-build|VMS]] is ready. [[racing-point-esports|Racing Point Esports]] joins when that software lands.
+
+**Shared-rig driver identity** is solved now by the [[ierl-driver-identification|kiosk]] (`racesims/ierl/kiosk/`): the customer signs in with name + phone, gets a unique handle, and Content Manager launches into their class server — see [[ierl-driver-identification]].
+
+**Platform path:** start on [[assetto-corsa|Assetto Corsa]], migrate to [[le-mans-ultimate|Le Mans Ultimate]] once the software is ready.
 
 ## Why centre-only (anti-cheat)
 

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>IERL · Sign In</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0F0F10; --panel:#17171A; --panel-2:#1E1E22;
+    --cream:#FAF9F5; --red:#C8102E; --red-dim:rgba(200,16,46,.14);
+    --green:#1E6B3A; --amber:#B8731F;
+    --muted:rgba(250,249,245,.55); --faint:rgba(250,249,245,.32);
+    --rule:rgba(250,249,245,.12);
+    --sans:'Montserrat',-apple-system,sans-serif; --mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  html,body{height:100%;}
+  body{
+    background:var(--bg); color:var(--cream); font-family:var(--sans);
+    overflow:hidden; user-select:none;
+    background-image:
+      repeating-linear-gradient(0deg,rgba(255,255,255,.015) 0 1px,transparent 1px 44px),
+      repeating-linear-gradient(90deg,rgba(255,255,255,.015) 0 1px,transparent 1px 44px);
+  }
+  .stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;}
+  .red-bar{position:fixed;top:0;left:0;bottom:0;width:6px;background:var(--red);z-index:5;}
+  .brandmark{position:fixed;top:26px;left:34px;font-family:var(--mono);font-size:12px;
+    letter-spacing:.28em;color:var(--red);font-weight:700;z-index:6;}
+  .rigtag{position:fixed;top:26px;right:34px;font-family:var(--mono);font-size:12px;
+    letter-spacing:.18em;color:var(--faint);z-index:6;text-align:right;}
+  .sim-flag{position:fixed;bottom:18px;left:0;right:0;text-align:center;font-family:var(--mono);
+    font-size:11px;letter-spacing:.18em;color:var(--amber);z-index:6;display:none;}
+
+  .screen{display:none;width:100%;max-width:920px;padding:0 64px;animation:fade .4s ease;}
+  .screen.active{display:block;}
+  @keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+
+  /* WELCOME */
+  .eyebrow{font-family:var(--mono);font-size:14px;letter-spacing:.3em;color:var(--faint);
+    text-transform:uppercase;margin-bottom:22px;}
+  .welcome h1{font-size:104px;font-weight:800;line-height:.92;letter-spacing:-.04em;margin-bottom:24px;}
+  .welcome h1 em{font-style:italic;color:var(--red);}
+  .welcome p{font-size:22px;color:var(--muted);font-weight:500;margin-bottom:56px;max-width:680px;}
+  .tap{display:inline-flex;align-items:center;gap:16px;background:var(--red);color:#fff;
+    font-size:22px;font-weight:700;letter-spacing:.02em;padding:22px 44px;border:none;border-radius:8px;
+    cursor:pointer;transition:transform .12s,box-shadow .12s;box-shadow:0 8px 32px rgba(200,16,46,.35);}
+  .tap:active{transform:scale(.97);}
+  .tap .pulse{width:12px;height:12px;border-radius:50%;background:#fff;animation:blink 1.3s infinite;}
+  @keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
+
+  /* ENTRY */
+  .entry h2{font-size:46px;font-weight:800;letter-spacing:-.03em;margin-bottom:6px;}
+  .entry h2 em{font-style:italic;color:var(--red);}
+  .entry .sub{font-size:16px;color:var(--muted);margin-bottom:34px;}
+  .field{margin-bottom:22px;}
+  .field label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--faint);margin-bottom:9px;}
+  .field input{width:100%;background:var(--panel);border:1.5px solid var(--rule);border-radius:8px;
+    color:var(--cream);font-family:var(--sans);font-size:26px;font-weight:600;padding:18px 20px;outline:none;}
+  .field input:focus{border-color:var(--red);background:var(--panel-2);}
+  .field .hint{font-size:13px;color:var(--faint);margin-top:8px;}
+  .classes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+  .class-btn{background:var(--panel);border:1.5px solid var(--rule);border-radius:10px;padding:20px;
+    cursor:pointer;text-align:left;transition:.12s;}
+  .class-btn .ck{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--faint);text-transform:uppercase;}
+  .class-btn .cl{font-size:22px;font-weight:700;margin-top:6px;color:var(--cream);}
+  .class-btn.sel{border-color:var(--red);background:var(--red-dim);}
+  .class-btn.sel .ck{color:var(--red);}
+  .row{display:flex;gap:14px;align-items:center;margin-top:8px;}
+  .go{flex:1;background:var(--red);color:#fff;font-size:24px;font-weight:800;letter-spacing:.02em;
+    padding:22px;border:none;border-radius:10px;cursor:pointer;transition:transform .12s,opacity .12s;}
+  .go:disabled{opacity:.4;cursor:not-allowed;}
+  .go:active:not(:disabled){transform:scale(.98);}
+  .back{background:none;border:1.5px solid var(--rule);color:var(--muted);font-size:18px;font-weight:600;
+    padding:22px 28px;border-radius:10px;cursor:pointer;}
+  .err{color:var(--red);font-size:15px;font-weight:600;margin-top:14px;min-height:20px;}
+
+  /* GO */
+  .go-scr{text-align:center;}
+  .go-scr .check{width:96px;height:96px;border-radius:50%;background:var(--green);margin:0 auto 28px;
+    display:flex;align-items:center;justify-content:center;font-size:52px;animation:pop .4s ease;}
+  @keyframes pop{from{transform:scale(.4);opacity:0;}to{transform:scale(1);opacity:1;}}
+  .go-scr h2{font-size:52px;font-weight:800;letter-spacing:-.03em;margin-bottom:10px;}
+  .go-scr .handle{font-family:var(--mono);font-size:30px;font-weight:700;color:var(--red);
+    letter-spacing:.04em;margin-bottom:26px;}
+  .go-scr p{font-size:20px;color:var(--muted);margin-bottom:10px;}
+  .go-scr .lb{font-family:var(--mono);font-size:15px;color:var(--faint);letter-spacing:.12em;margin-top:24px;}
+  .countdown{font-family:var(--mono);font-size:13px;color:var(--faint);letter-spacing:.2em;margin-top:30px;}
+  .kbd-space{height:6px;}
+</style>
+</head>
+<body>
+  <div class="red-bar"></div>
+  <div class="brandmark">INDIAN ESPORTS RACING LEAGUE</div>
+  <div class="rigtag" id="rigtag">RIG</div>
+  <div class="sim-flag" id="simflag">● SIMULATE MODE — NO LAUNCH</div>
+
+  <!-- WELCOME -->
+  <div class="stage"><div class="screen welcome active" id="s-welcome">
+    <div class="eyebrow">Hot Lap Challenge · Season 1 · Mugello</div>
+    <h1>Ready to set<br/>a <em>fast lap?</em></h1>
+    <p>Sign in, pick your class, and your time goes on the national leaderboard across every IERL centre in India.</p>
+    <button class="tap" onclick="show('entry');document.getElementById('in-name').focus()">
+      <span class="pulse"></span> TAP TO START
+    </button>
+  </div></div>
+
+  <!-- ENTRY -->
+  <div class="stage"><div class="screen entry" id="s-entry">
+    <h2>Who's <em>driving?</em></h2>
+    <div class="sub">Your name goes on the leaderboard. Phone keeps your times yours — and is how we pay you if you win.</div>
+
+    <div class="field">
+      <label>Your name</label>
+      <input id="in-name" type="text" autocomplete="off" maxlength="20" placeholder="e.g. Rahul" oninput="validate()"/>
+      <div class="hint">Shown on the leaderboard as <span id="preview" style="color:var(--cream);font-family:var(--mono)">—</span></div>
+    </div>
+
+    <div class="field">
+      <label>Phone number</label>
+      <input id="in-phone" type="tel" inputmode="numeric" autocomplete="off" maxlength="14" placeholder="10-digit mobile" oninput="validate()"/>
+    </div>
+
+    <label style="display:block;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-bottom:9px;">Pick your class</label>
+    <div class="classes" id="classes"></div>
+
+    <div class="row">
+      <button class="back" onclick="show('welcome')">Back</button>
+      <button class="go" id="go" disabled onclick="start()">LET'S GO →</button>
+    </div>
+    <div class="err" id="err"></div>
+  </div></div>
+
+  <!-- GO -->
+  <div class="stage"><div class="screen go-scr" id="s-go">
+    <div class="check">✓</div>
+    <h2>You're on track!</h2>
+    <div class="handle" id="out-handle">—</div>
+    <p id="out-class">Joining…</p>
+    <p>The sim is loading your session. <b style="color:var(--cream)">Good luck.</b></p>
+    <div class="lb" id="out-lb"></div>
+    <div class="countdown" id="cd"></div>
+  </div></div>
+
+<script>
+let CFG = {classes:{}}, selectedClass = null, returnTimer = null;
+
+async function boot(){
+  const r = await fetch('/api/config'); CFG = await r.json();
+  document.getElementById('rigtag').textContent =
+    (CFG.rig_name||'RIG') + (CFG.centre ? ' · ' + CFG.centre : '');
+  if (CFG.simulate) document.getElementById('simflag').style.display='block';
+  const wrap = document.getElementById('classes'); wrap.innerHTML='';
+  Object.entries(CFG.classes).forEach(([key,label])=>{
+    const b=document.createElement('button');
+    b.className='class-btn'; b.dataset.key=key;
+    b.innerHTML=`<div class="ck">Class</div><div class="cl">${label}</div>`;
+    b.onclick=()=>{selectedClass=key;document.querySelectorAll('.class-btn').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');validate();};
+    wrap.appendChild(b);
+  });
+}
+function show(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById('s-'+id).classList.add('active');
+  if(id==='welcome') reset();
+}
+function clean(n){return (n||'').trim().split(/\s+/)[0].replace(/[^A-Za-z0-9]/g,'').toUpperCase().slice(0,12);}
+function last4(p){const d=(p||'').replace(/\D/g,'');return d.length>=4?d.slice(-4):d;}
+function validate(){
+  const name=document.getElementById('in-name').value;
+  const phone=document.getElementById('in-phone').value;
+  const base=clean(name)||'DRIVER', t=last4(phone);
+  document.getElementById('preview').textContent = t?`${base}-${t}`:base;
+  document.getElementById('go').disabled = !(clean(name) && selectedClass);
+}
+async function start(){
+  const name=document.getElementById('in-name').value.trim();
+  const phone=document.getElementById('in-phone').value.trim();
+  document.getElementById('err').textContent='';
+  document.getElementById('go').disabled=true;
+  try{
+    const r=await fetch('/api/start',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({name,phone,class:selectedClass})});
+    const d=await r.json();
+    if(!r.ok||!d.ok){throw new Error(d.error||'Could not start.');}
+    document.getElementById('out-handle').textContent=d.handle;
+    document.getElementById('out-class').textContent='Joining '+d.class_label;
+    document.getElementById('out-lb').textContent = CFG.leaderboard_url ? 'LIVE LEADERBOARD · '+CFG.leaderboard_url.replace(/^https?:\/\//,'') : '';
+    show('go');
+    let secs=CFG.return_seconds||12;
+    const cd=document.getElementById('cd');
+    cd.textContent='Returns in '+secs+'s';
+    returnTimer=setInterval(()=>{secs--;cd.textContent='Returns in '+secs+'s';if(secs<=0){clearInterval(returnTimer);show('welcome');}},1000);
+  }catch(e){
+    document.getElementById('err').textContent=e.message;
+    document.getElementById('go').disabled=false;
+  }
+}
+function reset(){
+  if(returnTimer)clearInterval(returnTimer);
+  selectedClass=null;
+  document.getElementById('in-name').value='';
+  document.getElementById('in-phone').value='';
+  document.querySelectorAll('.class-btn').forEach(x=>x.classList.remove('sel'));
+  document.getElementById('preview').textContent='—';
+  document.getElementById('go').disabled=true;
+  document.getElementById('err').textContent='';
+  fetch('/api/reset',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'}).catch(()=>{});
+}
+boot();
+</script>
+</body>
+</html>

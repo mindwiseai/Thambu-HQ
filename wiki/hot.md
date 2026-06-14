@@ -16,7 +16,8 @@ Most recently touched context. Read this first for any query — it often answer
 - **[[ierl-direct-settlement|Splitwise-style settlement]]** — league never holds money; matches each dealer's contribution to winners; 1–2 UPI transfers each.
 - **[[real-penalty|Real Penalty]]** tool + identical centre hardware = controlled env, no cheating → reason it's centre-only, never home.
 - **Season 1:** [[mugello]] · Amateur MX-5 ND / Pro Ferrari 488 GT3 · [[ierl-promotion-ladder|promotion ladder]]. **July pool ₹40K** (6 centres, 17 rigs); **local prize ₹500 × rigs** (centre-funded, separate). Aug 2: +Chennai → 33 rigs / ₹80K.
-- ⚠ Platform contradiction flagged with LOCKED [[racesims-championship-architecture]] (LMU/iRacing vs AC).
+- ⚠ Platform contradiction flagged with LOCKED [[racesims-championship-architecture]] (LMU/iRacing vs AC). Resolution: **AC now → migrate to [[le-mans-ultimate|LMU]] once software ready.**
+- **Shared-rig driver identity solved** via [[ierl-driver-identification|kiosk]] (`racesims/ierl/kiosk/`): name+phone → unique handle (`FIRSTNAME-####`) → writes AC name field → launches [[content-manager|Content Manager]] into class server. Leaderboard must dedupe by **name not GUID**. CM run on every rig.
 
 ## 2026-06-14 — RaceSims Zoho Books year-end health review
 

@@ -9,6 +9,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-14] edit | IERL driver identification + kiosk build
+- Driver-sign-in kiosk built at `racesims/ierl/kiosk/` (zero-dep Python + branded UI): name+phone → unique handle → writes AC name field → launches [[content-manager|Content Manager]] into class server → auto-reset. Tested in simulate mode.
+- Created: [[ierl-driver-identification]] (concept) · [[content-manager]] (entity) · [[le-mans-ultimate]] (entity, migration target)
+- Updated: [[ierl-indian-esports-racing-league]] · [[assetto-corsa]] · [[domains/racesims/_index]] · [[wiki/hot|hot]]
+- Key: shared rig = one GUID → laps keyed on driver NAME; handle = FIRSTNAME-#### (last4 phone); leaderboard must dedupe by name not GUID; CM may override race.ini (on-rig verify). AC now → LMU later.
+
 ## [2026-06-14] ingest | RaceSims Zoho Books year-end health review (FY25-26)
 - Source: [[2026-06-14-zoho-books-health-review]]
 - Created: 3 new pages — [[2026-06-14-zoho-books-health-review]] (source) · [[racesims-financials-fy2526]] (concept) · [[racesims-studio]] (entity)
