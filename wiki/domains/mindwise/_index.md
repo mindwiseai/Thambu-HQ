@@ -23,8 +23,10 @@ Cognitive wellness supplement (CDRI-08 Bacopa monnieri extract) launching 2026-0
 - [[brain-health-community-vision]] — long-term vision
 
 ## Visual identity & packaging
-- [[semi-transparent-bottle]] — hero design choice
-- [[route-3-architecture-of-intelligence]] — locked logo direction
+- [[route-3-architecture-of-intelligence]] — LOCKED logo direction (M→brain geometric transform, Helvetica Neue, Mind bold + wise light, neon green + black)
+- [[route-1-peak-and-stoic-mind]] — explored (1A Peak Mind, 1B Stoic Mind; archived, not locked)
+- [[route-2-neural-network]] — explored (neural interconnection concept; legibility gap in retail, archived)
+- [[semi-transparent-bottle]] — hero design choice (matte finish, shows capsules)
 - [[two-track-bottle-strategy]] — aspirational + realistic backup
 - [[60-capsule-bottle-decision]] — D2C SKU
 - [[csir-cdri-logo-requirement]] — credit requirement
@@ -109,6 +111,7 @@ Source: [[2026-04-13-mindwise-raw-dump]]
 - [[epaphra]] — podcast/content collaboration partner (exploratory, April 2026)
 
 ## Sources (chronological, most recent first)
+- [[2026-03-23-mindwise-visual-identity-meeting]] — Sorted visual identity presentation (3 routes, 4 options; Route 3 locked; March 13-23 meeting)
 - [[2026-raw-mindwise-unique-files]] — packaging regulatory, NDAs, marketing, technical (bulk unique files)
 - [[2026-onedrive-mindwise-folder]] — OneDrive full ingest: packaging, Dibiz, Epaphra (Mar-Apr 2026)
 - [[2025-11-to-2026-03-onenote-notebook]] — OneNote meetings & research (Nov 2025 – Mar 2026)

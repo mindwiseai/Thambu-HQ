@@ -9,6 +9,17 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-15] ingest | Mindwise visual identity meeting — 3 routes, Route 3 locked
+- Source: [[2026-03-23-mindwise-visual-identity-meeting]]
+- Created: 4 new pages — [[2026-03-23-mindwise-visual-identity-meeting]] (source, 35-min meeting + 62-slide deck + video) · [[route-3-architecture-of-intelligence]] (LOCKED, concept) · [[route-1-peak-and-stoic-mind]] (explored, archived) · [[route-2-neural-network]] (explored, archived; legibility gap flagged)
+- Updated: [[wiki/hot|hot]] (new 2026-06-15 entry + visual identity section) · [[domains/mindwise/_index]] (added visual identity routes section) · [[wiki/index|index]] (added 3 route pages)
+- Domain: mindwise
+- **Design LOCKED:** Route 3 "Architecture of Intelligence" — M transforms into geometric brain silhouette (vs literal drawing). Typography: Helvetica Neue with Mind (bold) + wise (light) = strength ↔ subtlety. Color: neon green + black (energy/performance vs grounding). Insignia: works as standalone icon.
+- **Why Route 3 won:** Unanimous internal consensus ("all of us universally had this was the third one... it's bang out there"). Superior legibility, memorability, sophistication. Route 1A (Peak Mind) too bold/intimidating. Route 1B (Stoic Mind) better but lacked "smartness". Route 2 (Neural Network) clever concept but **unresolved cold-start legibility gap** in retail (concept requires animation/website context to decode; assumes customer discovers brand online first, not in-store).
+- **Packaging:** semi-transparent matte-finish bottle (shows green capsules), neon logo placement TBD (black vs white bottle). Sleeve ideal but volumes don't support; labels fallback. Neon bottle sourcing being explored.
+- **Next steps:** refined color mockups (promised Mar 24); internal review (Krishna + Selva); packaging integration; web/collateral rollout.
+- **Design process note:** 7 initial routes filtered to 4 via external rater feedback (feeling-word rating system, not good/bad) — these 4 are the winners presented.
+
 ## [2026-06-15] ingest | Mindwise Brand Communication Strategy Workshop (Jan 23, 2026)
 - Source: [[2026-01-23-brand-communication-strategy-workshop]]
 - Created: 1 new page — [[2026-01-23-brand-communication-strategy-workshop]] (source; comprehensive workshop extract: 3C framework, competitor analysis, Brain Hackers network, strategic decisions)
@@ -25,6 +36,17 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ## [2026-06-14] edit | IERL driver identification + kiosk build
 - Driver-sign-in kiosk built at `racesims/ierl/kiosk/` (zero-dep Python + branded UI): name+phone → unique handle → writes AC name field → launches [[content-manager|Content Manager]] into class server → auto-reset. Tested in simulate mode.
+=======
+## [2026-06-14] ingest | IERL hosted web kiosk + deeplink finding + auto-discovery
+- Source: [[2026-06-14-ierl-kiosk-build]]
+- Confirmed from [[content-manager|CM]] source: `acmanager://race/online` accepts `name` (sets DriverName) → browser can launch AC with the customer's name, no local app. `race/online/join` has no name.
+- Built **hosted web kiosk** in the IERL site (`site/kiosk.html` + assets; Worker `/api/kiosk/config` + `/api/kiosk/signin`; D1 `0003_kiosk_signins`). Deploy = a browser bookmark per rig, **centres configure nothing**.
+- **Auto-discovery**: Worker reads each server's `/INFO` to fill TCP port + current car from just `ip`+`httpPort` (KV-cached, static fallback).
+- Created: [[2026-06-14-ierl-kiosk-build]] (source). Updated: [[ierl-driver-identification]] · [[content-manager]] · `racesims/ierl/KIOSK.md` · [[wiki/hot|hot]]. Python kiosk demoted to fallback.
+
+## [2026-06-14] edit | IERL driver identification + kiosk build (Python interim)
+- Driver-sign-in kiosk built at `racesims/ierl/kiosk/` (zero-dep Python + branded UI): name+phone → unique handle → writes AC name field → launches [[content-manager|Content Manager]] into class server → auto-reset. Tested in simulate mode. (Superseded as primary by the hosted web kiosk above; kept as fallback.)
+>>>>>>> 9fe9a24d47167b29a2633c6628f210fc5780e5a7
 - Created: [[ierl-driver-identification]] (concept) · [[content-manager]] (entity) · [[le-mans-ultimate]] (entity, migration target)
 - Updated: [[ierl-indian-esports-racing-league]] · [[assetto-corsa]] · [[domains/racesims/_index]] · [[wiki/hot|hot]]
 - Key: shared rig = one GUID → laps keyed on driver NAME; handle = FIRSTNAME-#### (last4 phone); leaderboard must dedupe by name not GUID; CM may override race.ini (on-rig verify). AC now → LMU later.

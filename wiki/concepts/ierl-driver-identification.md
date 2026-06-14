@@ -47,7 +47,8 @@ Built into the IERL site: `site/kiosk.html` + `site/assets/kiosk.{css,js}`, conf
 
 - **Deployment = a browser bookmark**, no install: `…/kiosk?centre=<slug>&rig=<n>`, fullscreen. Each rig already has CM + Steam + AC.
 - Customer enters **name + phone** → unique handle → page opens the `race/online` deeplink → CM launches with the name → sign-in logged to D1 (`kiosk_signins`, PII, private).
-- Central config: edit the two class servers (ip/port/httpPort/car) once in `kiosk.ts` → every rig updates. A per-device **Setup panel** (⚙ / `?setup=1`) overrides via localStorage for on-rig testing before deploy.
+- Central config: maintain only **`ip` + `httpPort`** per class in `kiosk.ts`. **Auto-discovery** fetches each server's `http://ip:httpPort/INFO` and fills in the TCP `port` + current `car` (cached 60s, static fallback) — so the car always matches the running server and centres configure nothing.
+- A per-device **Setup panel** (⚙ / `?setup=1`) overrides via localStorage for on-rig testing before deploy.
 
 > Fallback: the **Python kiosk** (`racesims/ierl/kiosk/`, stdlib only) writes the name to `race.ini` locally instead of relying on the deeplink — kept in case `name` ever fails on a given CM/server combo. The hosted web kiosk is primary.
 
@@ -63,4 +64,4 @@ Whatever ingests server results (stracker / [[real-penalty|Real Penalty]] / the 
 - [[ierl-indian-esports-racing-league]]
 - [[ierl-direct-settlement]]
 - [[content-manager]] · [[real-penalty]] · [[assetto-corsa]]
-- [[2026-06-14-ierl-july-launch]]
+- [[2026-06-14-ierl-july-launch]] · [[2026-06-14-ierl-kiosk-build]]

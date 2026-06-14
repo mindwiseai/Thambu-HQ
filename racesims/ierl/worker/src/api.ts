@@ -1,6 +1,6 @@
 import type { Env, EventRow } from './types';
 import { computeChampionship, computeEventLeaderboard } from './standings';
-import { getKioskConfig, recordSignin } from './kiosk';
+import { resolveKioskConfig, recordSignin } from './kiosk';
 
 const HOME_CACHE_KEY = 'home:v1';
 const HOME_CACHE_TTL_S = 300; // 5 minutes
@@ -23,7 +23,7 @@ export async function handleApi(req: Request, env: Env, url: URL): Promise<Respo
   if (path === '/api/status') return json(await getStatus(env));
 
   // Kiosk: central per-rig config + sign-in logging (driver identity on shared rigs).
-  if (path === '/api/kiosk/config') return json(getKioskConfig());
+  if (path === '/api/kiosk/config') return json(await resolveKioskConfig(env));
   if (path === '/api/kiosk/signin' && req.method === 'POST') {
     let body: Record<string, unknown> = {};
     try {

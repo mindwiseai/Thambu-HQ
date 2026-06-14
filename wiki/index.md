@@ -33,8 +33,10 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[four-cohorts]]
 
 ### Visual identity & packaging
+- [[route-3-architecture-of-intelligence]] — LOCKED direction (M→brain, Helvetica Neue, neon+black)
+- [[route-1-peak-and-stoic-mind]] — explored (not locked)
+- [[route-2-neural-network]] — explored (not locked; legibility gap flagged)
 - [[semi-transparent-bottle]]
-- [[route-3-architecture-of-intelligence]]
 - [[two-track-bottle-strategy]]
 - [[60-capsule-bottle-decision]]
 - [[csir-cdri-logo-requirement]]
@@ -258,6 +260,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ## Sources (chronological, most recent first)
 
 ### Mindwise
+- [[2026-03-23-mindwise-visual-identity-meeting]] — visual identity meeting (March 13-23, 3 routes, 4 options, Route 3 locked)
 - [[2026-raw-mindwise-unique-files]] — packaging regulatory, NDAs (Chemiloids, Aavishkar), marketing, technical
 - [[2026-onedrive-mindwise-folder]] — OneDrive full ingest: packaging, Dibiz, Epaphra (Mar-Apr 2026)
 - [[2025-11-to-2026-03-onenote-notebook]] — OneNote meetings & research (Nov 2025 – Mar 2026)

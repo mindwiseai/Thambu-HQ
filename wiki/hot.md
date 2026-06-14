@@ -8,6 +8,17 @@ updated: 2026-06-15
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
+## 2026-06-15 — Mindwise Brand Communication Strategy Workshop ingested · 3C framework + Brain Hackers network
+
+- **[[2026-01-23-brand-communication-strategy-workshop]]** extracted from Sorted deck (Jan 23, 2026 Zoom recording, ~76 min transcript). **3C Framework locked:**
+  - **Context:** Nutraceuticalization post-COVID (market $800M→$2.9B by 2035); adaptogens fastest-growing; Gen Z aging faster than millennials (regenerative health = real science, not myth).
+  - **Community:** Universal cognitive strain (popcorn brain + dopamine loops, students 6hr/day screens = "digital obesity"). Consumers in **"cognitive panic"** state (aware damage, hesitant to act because market flooded with hype).
+  - **Category:** Polarized — Himalaya/Organic India (legacy, weak trials) vs Mind Lab Pro/Qualia (inaccessible). **MindWise = bridge:** natural Bacopa credibility + evidence-based efficacy.
+- **Strategic decisions:** Position as uniter. Enemy = "Placebo Wellness" (generic powder, borrowed claims). Brand role = educate on what trials mean. Personality = Minimalist/Ordinary model (scientist-forward, transparent, confident).
+- **Brain Hackers network** (target): Treat brain as lifelong asset. Shared beliefs: focus = superpower, prevention > panic, small habits compound. Inside jokes: "If it worked instantly, wouldn't last"; forgetting words mid-sentence; "Wait what was I saying?"
+- **Immediate actions:** CDRI website license update (remove ProMind, feature Mindwise only — critical pre-launch); PR blast on CDRI-08/trials; website repo for 40yr timeline + papers + safety.
+- Source: [[2026-01-23-brand-communication-strategy-workshop]].
+
 ## 2026-06-15 — Mindwise visual identity LOCKED · Route 3 Architecture of Intelligence + neon green
 
 - **[[route-3-architecture-of-intelligence|Route 3 LOCKED]]** as primary visual identity direction (meeting March 23, now ingested 06-15). **Concept:** Brain is architectural foundation of everything; M **transforms into geometric brain silhouette** (not literal drawing). **Insignia:** Works as standalone icon. **Typography:** Helvetica Neue with Mind (bold) + wise (light) creating strength ↔ subtlety balance. **Color locked:** **Neon green + black** (energy/performance vs. grounding). **Why Route 3 won:** Unanimous internal consensus — "all of us universally had this was the third one... bang out there... makes it smart." Superior to Route 1A (Peak Mind, too bold/intimidating), Route 1B (Stoic Mind, better but lacked smartness), Route 2 (Neural Network, clever concept but legibility gap in retail discovery — assumes website-first).
@@ -28,7 +39,7 @@ Most recently touched context. Read this first for any query — it often answer
 - **[[real-penalty|Real Penalty]]** tool + identical centre hardware = controlled env, no cheating → reason it's centre-only, never home.
 - **Season 1:** [[mugello]] · Amateur MX-5 ND / Pro Ferrari 488 GT3 · [[ierl-promotion-ladder|promotion ladder]]. **July pool ₹40K** (6 centres, 17 rigs); **local prize ₹500 × rigs** (centre-funded, separate). Aug 2: +Chennai → 33 rigs / ₹80K.
 - ⚠ Platform contradiction flagged with LOCKED [[racesims-championship-architecture]] (LMU/iRacing vs AC). Resolution: **AC now → migrate to [[le-mans-ultimate|LMU]] once software ready.**
-- **Shared-rig driver identity solved** via [[ierl-driver-identification|kiosk]] (`racesims/ierl/kiosk/`): name+phone → unique handle (`FIRSTNAME-####`) → writes AC name field → launches [[content-manager|Content Manager]] into class server. Leaderboard must dedupe by **name not GUID**. CM run on every rig.
+- **Shared-rig identity solved — hosted web kiosk** (`racesims/ierl/site/kiosk.html`, [[ierl-driver-identification]]). Confirmed [[content-manager|CM]] `acmanager://race/online?...&name=HANDLE` sets the driver name → browser launches AC with it, **no install**; deploy = a bookmark per rig (`/kiosk?centre=&rig=`), centres configure nothing. Worker `/api/kiosk/config` (+ **auto-discovery** of TCP port/car from server `/INFO`) + `/api/kiosk/signin` → D1. Leaderboard must dedupe by **name not GUID**. Python kiosk = fallback. Source: [[2026-06-14-ierl-kiosk-build]].
 
 ## 2026-06-14 — RaceSims Zoho Books year-end health review
 
