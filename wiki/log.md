@@ -14,7 +14,73 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 - Created: 3 new pages — [[2026-06-16-dispatch-pipeline-session]] · [[2026-06-16-qt-000370-davlish-updated]] · [[davlish-singh]]
 - Updated: [[customer-pipeline]] (major — 5-order dispatch queue, 7-customer quote pipeline, 11 critical shortfalls, procurement action list) · [[hot]] · [[log]] · [[index]]
 - Domain: racesims
-- Key decisions: dispatch priority P1=Asif (paid) → P2=Dhruv (collect payment) → P3=Amruth (paid) → P4=Adhyan (paid) → P5=Ragav (overdue). PO-00054 (151 items, $26,294.90, ENSU Shanghai) arrived tonight. QT-000370 supersedes QT-000348 for Davlish — 4→3 rigs, ₹7.42L→₹5.50L. Ares 12nm shortfall is −11 units (urgent reorder); GT rigs, PC/KB trays, monitor stands all need fabrication runs.
+- Key decisions: dispatch priority P1=Asif → P2=Dhruv (collect payment) → P3=Amruth → P4=Adhyan → P5=Ragav (overdue, blocked on MAX01 Wheel). PO-00054 (151 items, $26,294.90, ENSU Shanghai) arrived tonight. QT-000370 supersedes QT-000348 — Davlish 4→3 rigs, ₹7.42L→₹5.50L. Ares 12nm shortfall −11 units (urgent reorder). GT rigs, PC/KB trays, monitor stands all need fabrication.
+
+## [2026-06-15] ingest | Mindwise raw folder — meetings, WhatsApp, security check
+- Source: raw/mindwise/ folder (9.5GB, 96 documents processed)
+- Created: 4 new source pages — [[2026-06-15-mindwise-raw-ingest-whatsapp]] (WhatsApp Dec 2025–Mar 2026) · [[2026-06-15-aarti-first-call]] (discovery call, late 2025/early 2026) · [[2026-03-23-sorted-intro-call-manik]] (formal proposal, Mar 23) · 3 additional sources from background agents
+- Created: 2 new entity pages — [[jaiman]] (original Sorted account manager, departed Jan 29, 2026) · [[marketing-budget-25l]] (₹25L annual budget, announced Feb 12)
+- Updated: .gitignore (added second Razorpay credential path)
+- Domain: mindwise
+- **Security:** Razorpay credentials at `raw/mindwise/Sales channels/Website/rzp-2.csv` and `raw/mindwise/Life Essence/Website/rzp-2.csv` confirmed in .gitignore (already protected, second path added)
+- **WhatsApp timeline:** Dec 19, 2025 (group created by [[jaiman]]) → Mar 23, 2026 (packaging spec finalization). Key moments: logo lock Mar 16 ([[route-3-architecture-of-intelligence]]), [[patco-pharmaceuticals]] discovered Mar 18, [[two-track-bottle-strategy]] established Mar 17, [[marketing-budget-25l]] announced Feb 12, [[jaiman]] departed Jan 29
+- **Aarti first call:** Foundational discovery where [[thambu]] explains complete [[cdri-08]] story; [[aarti-samant]] delivers blunt feedback (too clinical/medical), recommends brand communication strategy, WHY/WHAT/HOW framework, shift to "human" personality
+- **Manik intro call:** Formal [[sorted-agency]] proposal (₹11.5L combined, 9 weeks); brain health market validation; Two Brothers Organic Farms case study
+- **Process:** 6 parallel agents launched for meeting transcript extraction; security check completed; wiki source pages created with dense linking
+- **Raw folder state:** 5,621 files total (38.5GB); Mindwise 96 text documents; RaceSims 29GB (not processed this session)
+
+## [2026-06-15] ingest | Mindwise visual identity meeting — 3 routes, Route 3 locked
+- Source: [[2026-03-23-mindwise-visual-identity-meeting]]
+- Created: 4 new pages — [[2026-03-23-mindwise-visual-identity-meeting]] (source, 35-min meeting + 62-slide deck + video) · [[route-3-architecture-of-intelligence]] (LOCKED, concept) · [[route-1-peak-and-stoic-mind]] (explored, archived) · [[route-2-neural-network]] (explored, archived; legibility gap flagged)
+- Updated: [[wiki/hot|hot]] (new 2026-06-15 entry + visual identity section) · [[domains/mindwise/_index]] (added visual identity routes section) · [[wiki/index|index]] (added 3 route pages)
+- Domain: mindwise
+- **Design LOCKED:** Route 3 "Architecture of Intelligence" — M transforms into geometric brain silhouette (vs literal drawing). Typography: Helvetica Neue with Mind (bold) + wise (light) = strength ↔ subtlety. Color: neon green + black (energy/performance vs grounding). Insignia: works as standalone icon.
+- **Why Route 3 won:** Unanimous internal consensus ("all of us universally had this was the third one... it's bang out there"). Superior legibility, memorability, sophistication. Route 1A (Peak Mind) too bold/intimidating. Route 1B (Stoic Mind) better but lacked "smartness". Route 2 (Neural Network) clever concept but **unresolved cold-start legibility gap** in retail (concept requires animation/website context to decode; assumes customer discovers brand online first, not in-store).
+- **Packaging:** semi-transparent matte-finish bottle (shows green capsules), neon logo placement TBD (black vs white bottle). Sleeve ideal but volumes don't support; labels fallback. Neon bottle sourcing being explored.
+- **Next steps:** refined color mockups (promised Mar 24); internal review (Krishna + Selva); packaging integration; web/collateral rollout.
+- **Design process note:** 7 initial routes filtered to 4 via external rater feedback (feeling-word rating system, not good/bad) — these 4 are the winners presented.
+
+## [2026-06-15] ingest | Mindwise Brand Communication Strategy Workshop (Jan 23, 2026)
+- Source: [[2026-01-23-brand-communication-strategy-workshop]]
+- Created: 1 new page — [[2026-01-23-brand-communication-strategy-workshop]] (source; comprehensive workshop extract: 3C framework, competitor analysis, Brain Hackers network, strategic decisions)
+- Updated: [[domains/mindwise/_index]] (added source to chronological list) · [[wiki/hot|hot]]
+- Domain: mindwise
+- Key facts captured: **3C Framework** — Context (nutraceuticalization post-COVID; $800M→$2.9B market 2035; 5 pillars regenerative health), Community (universal cognitive strain; popcorn brain; dopamine-driven feedback loops; consumers in "cognitive panic" state), Category (polarized Ayurveda vs modern nootropics; Himalaya/Organic India (legacy) vs Mind Lab Pro/Qualia (inaccessible) → MindWise = bridge). **Strategic decisions:** position as uniter of Bacopa credibility + evidence-based efficacy; "Placebo Wellness" = enemy; brand personality = Minimalist/Ordinary model (scientist-forward, transparent, confident); target network = "Brain Hackers" (treat brain as lifelong asset). **Core brand:** tagline "Your Unfair Advantage" · claim "Only Govt-Backed Daily Brain Supplement for Sharper Mind" · purpose "We Help You Build New Neural Links For Peak Brain Performance". **Brain Hackers shared beliefs:** brain health = personal responsibility; focus = superpower; prevention > panic; inside jokes ("If it worked instantly, it wouldn't last"; "Brain gains > brain hacks"; forgetting words mid-sentence). **Immediate action items:** update CDRI website (remove ProMind, feature Mindwise only — critical before launch); PR content blast on CDRI-08 + clinical trials; website optimization for research timeline + papers + efficacy data.
+
+## [2026-06-15] ingest | Mindwise Packaging Brief presentation (March 17-23, 2026)
+- Source: [[2026-03-17-mindwise-packaging-brief-presentation]]
+- Created: 1 new page — [[2026-03-17-mindwise-packaging-brief-presentation]] (source, comprehensive specification)
+- Updated: [[wiki/hot|hot]] · [[packaging-content-layout]] (cross-check with April 8 lock) · [[wiki/index|index]]
+- Domain: mindwise
+- Key facts captured: **Bottle specs:** 100mL translucent, [[60-capsule-bottle-decision|60 capsules]], cylinder + rectangle options, [[patco-pharmaceuticals|Patco]] vendor. **4-side label architecture locked (April 8):** Side 1 = hero ("Your Unfair Advantage" + "Government-Backed Brain Supplement" + 60 caps), Side 2 = science ("Not All Bacopa Is Created Equal" + 55% bacosides + 40yr research + 7 clinical trials), Side 3 = formulation (CSIR-CDRI logo + GMP/allergen-free/gluten-free/vegetarian icons), Side 4 = benefits (focus/clarity/performance). **Outer box:** front hero + regulatory (nutrition/dosage/storage/batch info). **Key decisions:** drop "cruelty free" (animal testing history [[cdri-08-safety-profile]]), use "vegetarian capsules" not "vegan", min 2-3 bottle purchase to span [[8-12-week-onset-claim|8-12 week onset window]]. **Open:** CSIR-CDRI logo artwork delivery, [[tic-tac-seal-concept|Tic Tac seal]] feasibility, outer box decision (cost vs compliance clutter), QR destination (website vs Amazon vs Linktree), blister pack (30-cap B2B). **Critical path:** June 1, 2026 launch.
+
+## [2026-06-14] ingest | IERL hosted web kiosk + deeplink finding + auto-discovery
+- Source: [[2026-06-14-ierl-kiosk-build]]
+- Confirmed from [[content-manager|CM]] source: `acmanager://race/online` accepts `name` (sets DriverName) → browser can launch AC with the customer's name, no local app. `race/online/join` has no name.
+- Built **hosted web kiosk** in the IERL site (`site/kiosk.html` + assets; Worker `/api/kiosk/config` + `/api/kiosk/signin`; D1 `0003_kiosk_signins`). Deploy = a browser bookmark per rig, **centres configure nothing**.
+- **Auto-discovery**: Worker reads each server's `/INFO` to fill TCP port + current car from just `ip`+`httpPort` (KV-cached, static fallback).
+- Created: [[2026-06-14-ierl-kiosk-build]] (source). Updated: [[ierl-driver-identification]] · [[content-manager]] · `racesims/ierl/KIOSK.md` · [[wiki/hot|hot]]. Python kiosk demoted to fallback.
+
+## [2026-06-14] edit | IERL driver identification + kiosk build (Python interim)
+- Driver-sign-in kiosk built at `racesims/ierl/kiosk/` (zero-dep Python + branded UI): name+phone → unique handle → writes AC name field → launches [[content-manager|Content Manager]] into class server → auto-reset. Tested in simulate mode. (Superseded as primary by the hosted web kiosk above; kept as fallback.)
+- Created: [[ierl-driver-identification]] (concept) · [[content-manager]] (entity) · [[le-mans-ultimate]] (entity, migration target)
+- Updated: [[ierl-indian-esports-racing-league]] · [[assetto-corsa]] · [[domains/racesims/_index]] · [[wiki/hot|hot]]
+- Key: shared rig = one GUID → laps keyed on driver NAME; handle = FIRSTNAME-#### (last4 phone); leaderboard must dedupe by name not GUID; CM may override race.ini (on-rig verify). AC now → LMU later.
+
+## [2026-06-14] ingest | RaceSims Zoho Books year-end health review (FY25-26)
+- Source: [[2026-06-14-zoho-books-health-review]]
+- Created: 3 new pages — [[2026-06-14-zoho-books-health-review]] (source) · [[racesims-financials-fy2526]] (concept) · [[racesims-studio]] (entity)
+- Updated: [[racesims-company]] (financial state + fuller banking: SBI OD/Current, gateways) · [[arka-motorsports]] (₹6.24L related-party receivable) · [[wiki/hot|hot]]
+- Domain: racesims
+- Key facts: ops started June 2025 (10-month FY) · net rev ₹1.96cr · net profit ₹54.4L (overstated, unnormalized) · BS ₹1.35cr · GST paid on portal but 4/11 months mismatch Zoho (auditor) · TDS barely applied (₹644, ₹0 deposited) · ₹9.31L studio advance ("vaithamaniti") to be booked as asset · ARKA ₹6.24L related-party AR · rating 6.5/10 · indicative valuation ₹1.2–2.2cr · 10-item books cleanup punch-list
+
+## [2026-06-14] ingest | IERL July 2026 launch — structure & partner deck
+- Source: [[2026-06-14-ierl-july-launch]]
+- Created: 6 new pages — [[2026-06-14-ierl-july-launch]] (source) · [[ierl-indian-esports-racing-league]] · [[ierl-direct-settlement]] · [[ierl-promotion-ladder]] · [[real-penalty]] · [[assetto-corsa]]
+- Updated: [[uday-hyderabad]] (his centre = Racing Point Esports, joins IERL when VMS ready) · [[racesims-championship-architecture]] (contradiction callout — LMU/iRacing vs IERL Assetto Corsa) · [[domains/racesims/_index]] (new IERL section) · [[wiki/hot|hot]]
+- Domain: racesims
+- Key decisions: IERL = shared community brand (not "by RaceSims") · July runs manual until [[racesims-vms-build|Uday's VMS]] ready · [[ierl-direct-settlement|Splitwise-style settlement]] (no central pot) · [[real-penalty|Real Penalty]] + centre-only = no cheating · [[mugello]] / MX-5 ND + Ferrari 488 GT3 · local prize ₹500 × rigs (centre-funded)
+- Open: platform contradiction with LOCKED [[racesims-championship-architecture]]; partner-centre entity pages pending (6 dead links flagged for next ingest)
 
 ## [2026-06-09] ingest | RaceSims incorporation documents — MOA, AOA, Startup India cert, Board Resolution
 - Source: [[2026-06-09-racesims-incorporation-docs]]
