@@ -154,7 +154,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[racesims-company]] — legal entity, GSTIN, MSME, trademark
 - [[import-operations]] — HS code, duty structure, supplier chain
 - [[startup-tax-exemption]] — FY2026 tax strategy, year-end rush driver
-- [[customer-pipeline]] — known customers and prospects
+- [[customer-pipeline]] ⭐ — dispatch queue, B2B quote pipeline, procurement shortfalls (updated 2026-06-16)
 
 ## Entities — Mindwise people & orgs
 
@@ -231,6 +231,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ### RaceSims customers (notable)
 - [[jeeva-rathnam]] — race car driver, simulator transfer
 - [[jay-kularia]] — Mumbai motion system buyer
+- [[davlish-singh]] — Delhi, 3-rig order QT-000370 ₹5.5L (Jun 2026)
 
 ### RaceSims field operations
 - [[abdul]] — field technical installer (Bangalore, ex-ARKA)
@@ -284,6 +285,8 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[2026-ctd-module-2.4-nonclinical-overview]]
 
 ### RaceSims
+- [[2026-06-16-dispatch-pipeline-session]] ⭐ — full dispatch planning: 5 orders, 7 B2B quotes, stock × PO matrix, 11 shortfalls
+- [[2026-06-16-qt-000370-davlish-updated]] — Davlish's revised quote (supersedes QT-000348), 3 rigs ₹5.5L
 - [[2026-05-17-racesims-chennai-flagship-planning]] ⭐ — Chennai flagship planning conversation (positioning, championship, ladder, VMS, India saturation, revenue stack)
 - [[2026-04-13-racesims-raw-dump]] — full operational dump (sales, finance, partners, pricing)
 - [[2026-03-26-thambu-voice-brief]] — also covers RaceSims year-end + ARKA
