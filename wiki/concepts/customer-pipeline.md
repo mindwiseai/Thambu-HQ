@@ -38,28 +38,31 @@ All items below are invoiced and waiting dispatch. PO-00054 (ENSU Shanghai, $26,
 | [[davlish-singh|Davlish Singh]] (Delhi) | QT-000370 | ₹5,49,900 | 3 | Quoted | CPP Apex 3-pedal (not in PO) |
 | Star Enterprises (TN) | QT-000331 | ₹24,49,559 | 2 | Quoted | 6× Samsung G5 32" (short 3), 2× PC Spec #1.5, 2× VNM 3DOF (stock OK) |
 | RaceSims Studio (Thambusamy) | QT-000360 | ₹27,99,459 | 7 | Quoted (internal) | 7× basic Triple Monitor stands (−9 stock), 6× Ares 12nm |
-| Garvish (Kerala) | QT-000368 + 369 | ₹30,71,824 | 7 | Quoted | 2× VNM 3DOF (blocked — reorder needed, 30-45 days) |
+| Garvish (Kerala) | QT-000368 + 369 | ₹30,71,824 | 7 | **POSTPONED ~2 months (Jun 2026)** | Deferred by customer — re-engage ~Aug 2026 |
 | INVRSE | QT-000320 | TBD | 6 | Quoted | Accessories not yet itemised |
 | PS8 | QT-000317 | TBD | 4 | Quoted | 12× Samsung G5 32" monitors (critical) |
 | Manoj | TBD | TBD | 1 | Active | 1× Ares Platinum 20nm |
 
-**Combined B2B GT rig demand: 3+2+7+7+6+4+1 = 30 rigs.** Current stock = −2. All need fabrication.
+**Active B2B GT rig demand (Garvish deferred): 3+2+7+6+4+1 = 23 rigs.** Current stock = −2. All need fabrication. (Garvish's 7 rigs = ~Aug 2026.)
 
-## Critical procurement actions (from [[2026-06-16-dispatch-pipeline-session]])
+## Critical procurement actions (updated 2026-06-18 — Garvish deferred)
 
 | Item | Shortfall | Action |
 |------|-----------|--------|
-| Ares 12nm Wheelbase | −11 | Urgent reorder from [[conspit]]/ENSU on top of PO-00054 |
-| PC tray / Keyboard tray | −15 each | Fabrication queue — urgent |
-| Triple Monitor stand basic | −9 | Fabrication queue |
-| Triple Monitor stand precision | −8 | Fabrication queue |
-| VNM 3DOF Motion | −2 (for Garvish) | Reorder from [[vnm]] (30-45 day lead time) |
+| GT rig PRO | −25 | Fabrication queue — dominant constraint |
+| Triple Monitor stand basic | −8 | Fabrication queue (Studio 7× + Asif invoiced) |
+| PC tray / Keyboard tray | −8 each | Fabrication queue (was −15 with Garvish) |
 | Samsung G5 32" curved | −15 (Star 6 + PS8 12) | Separate procurement |
-| CPP Apex 2-pedal | −3 | Next ENSU order |
+| Ares 12nm Wheelbase | −2 | Next ENSU order (was −11 with Garvish) |
+| Triple Monitor stand precision | −1 | Next ENSU/fabrication (was −8 with Garvish) |
+| Standalone Monitor stand | −3 | Fabrication |
+| CPP Lite 2-pedal | −1 | Next order (was −3 with Garvish) |
 | MAX01 Wheel | −1 | Source urgently — Ragav blocker |
 | CPP Apex 3-pedal | −1 | Separate order — Davlish blocker |
 | PC Spec #1.5 | −2 | Build 2 PCs for Star |
+| Conspit HB + Shifter | −1 each | Source for Ragav (not in PO) |
 | Recliner seat (std) | −1 | Source for Amruth |
+| **VNM 3DOF Motion** | **0** | **✅ CLEARED** — Star 2 + Studio 1 = stock 3 exact. No reorder needed. |
 
 ## Confirmed historical customers (pre-June 2026)
 

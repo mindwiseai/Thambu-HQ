@@ -9,6 +9,11 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-18] update | Garvish order postponed 2 months — pipeline and shortfalls revised
+- Updated: [[customer-pipeline]] (Garvish row → POSTPONED, active rig demand 30→23, shortfall table rebuilt), [[hot]] (new 2026-06-18 entry)
+- Domain: racesims
+- Key decision: Garvish (QT-000368+369, ₹30.7L, 7 rigs, Kerala) deferred ~Aug 2026. Impact: Ares 12nm −11→−2, Triple Monitor precision −8→−1, VNM 3DOF −2→0 (no reorder needed), PC/KB tray −15→−8 each. Active quote rig demand = 23.
+
 ## [2026-06-16] ingest | Dispatch pipeline planning session + QT-000370 Davlish updated quote
 - Source: [[2026-06-16-dispatch-pipeline-session]] · [[2026-06-16-qt-000370-davlish-updated]]
 - Created: 3 new pages — [[2026-06-16-dispatch-pipeline-session]] · [[2026-06-16-qt-000370-davlish-updated]] · [[davlish-singh]]

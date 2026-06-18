@@ -8,13 +8,19 @@ updated: 2026-06-16
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-16 (latest) — Dispatch pipeline planned · PO-00054 arriving tonight · Davlish quote revised
+## 2026-06-18 (latest) — Garvish postponed 2 months · shortfalls significantly improved
 
-- **Dispatch queue (priority):** Asif P1 (paid ₹3.33L, Kozhikode) → Dhruv P2 (collect ₹3.03L on delivery) → Amruth P3 (paid ₹2.20L, Markapur) → Adhyan P4 (paid ₹38K, easiest) → Ragav P5 (overdue ₹3.77L, blocked on MAX01 Wheel — not in stock, not in PO).
-- **PO-00054 (ENSU Shanghai):** 151 items, $26,294.90, arrived tonight. Key items: 10× Ares 12nm, 8× Ares Platinum 20nm, 38× CDR NRG QR, 8× CPP Apex 2-pedal, 15× 300 GT.
-- **Davlish (QT-000370):** Updated quote ₹5,49,900 (was ₹7,42,007). Rigs 4→3, removed Shifter mount, VNM Lite 3 Pedal, dropped Ares 8nm/290 GP/310 Apex. Added CPP Lite 2-pedal + 3-pedal. CPP Apex 3-pedal (×1) still a blocker — not in PO.
-- **Critical shortfalls:** Ares 12nm −11 (urgent ENSU reorder), PC/KB tray −15 each (fabricate), Triple Monitor basic −9 / precision −8 (fabricate), Samsung G5 32" −15, VNM 3DOF −2 (Garvish blocked, VNM reorder 30-45 days).
-- **Pending B2B quotes:** Davlish ₹5.5L · Star ₹24.5L · RaceSims Studio ₹28L · Garvish ₹30.7L · INVRSE + PS8 (accessories TBD).
+- **Garvish (QT-000368+369, ₹30.7L, 7 rigs) deferred ~Aug 2026.** Removes his demand from active pipeline. Active rig demand now 23 (was 30).
+- **Shortfall improvements with Garvish out:** Ares 12nm −2 (was −11), Triple Monitor precision −1 (was −8), VNM 3DOF **0** (was −2 — Star 2 + Studio 1 = stock 3 exactly, **no VNM reorder needed**), PC/KB tray −8 each (was −15), CPP Apex 2-pedal +7 (was 0).
+- **Remaining critical shortfalls (active quotes only):** GT rig PRO −25 (fabrication), Triple Monitor basic −8, PC/KB tray −8 each, Samsung G5 32" −15, Ares 12nm −2, CPP Apex 3-pedal −1 (Davlish), MAX01 Wheel −1 (Ragav).
+- **Dispatch queue unchanged:** Asif P1 (paid ₹3.33L) → Dhruv P2 (collect ₹3.03L on delivery) → Amruth P3 (paid ₹2.20L) → Adhyan P4 (paid ₹38K) → Ragav P5 (overdue ₹3.77L, MAX01 blocker).
+- **Active B2B quotes (ex-Garvish):** Davlish ₹5.5L · Star ₹24.5L · Studio ₹28L · INVRSE + PS8 (TBD) · Manoj (1 rig).
+- Sources: [[2026-06-16-dispatch-pipeline-session]] · [[customer-pipeline]] · [[davlish-singh]]
+
+## 2026-06-16 — Dispatch pipeline planned · PO-00054 arrived · Davlish quote revised
+
+- **PO-00054 (ENSU Shanghai):** 151 items, $26,294.90, arrived 16/06. Key items: 10× Ares 12nm, 8× Ares Platinum 20nm, 38× CDR NRG QR, 8× CPP Apex 2-pedal, 15× 300 GT.
+- **Davlish (QT-000370):** Updated quote ₹5,49,900 (was ₹7,42,007). Rigs 4→3, CPP Apex 3-pedal ×1 still a blocker (not in PO).
 - Sources: [[2026-06-16-dispatch-pipeline-session]] · [[2026-06-16-qt-000370-davlish-updated]] · [[davlish-singh]]
 
 ## 2026-06-15 (latest) — Mindwise raw folder ingest · WhatsApp timeline + early meetings captured
