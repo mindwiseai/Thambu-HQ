@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-19] ingest | Octupie scripts ready — 9 video scripts delivered for trial batch
+- Source: [[2026-06-18-octupie-scripts-ready]]
+- Created: 3 new pages — [[2026-06-18-octupie-scripts-ready]] (source) · [[octupie]] (entity) · [[shivank-goura]] (entity)
+- Updated: [[hot]] · [[log]]
+- Domain: mindwise
+- Key facts: 9 video scripts delivered in shared Google Doc (edit access for Shivendra, Selvam, team); pick 7 for trial batch. Lights arrived. Next: lock shoot date (coming week), provide Chennai office address for lighting/setup. Signed onboarding doc attached. First line of each script = hook (straight to camera). Editing encouraged — add Selvam's lines/memories to make scripts authentic ("His voice is the whole point").
+
 ## [2026-06-18] ingest | Dispatch amendments session — all orders unblocked
 - Source: [[2026-06-18-dispatch-amendments]]
 - Created: 1 new page — [[2026-06-18-dispatch-amendments]]

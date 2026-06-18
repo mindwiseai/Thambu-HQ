@@ -8,7 +8,16 @@ updated: 2026-06-16
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-18 (latest) — All 5 dispatch orders unblocked · Studio deferred · final swaps confirmed
+## 2026-06-19 (latest) — Octupie video scripts ready · shoot planning underway
+
+- **[[octupie]]** delivered **9 video scripts** for [[mindwise]] trial batch (pick 7). Shared Google Doc with edit access for [[shivendra-selvam]], [[thambu]], team. [[shivank-goura]] primary contact.
+- **Editing encouraged:** Add Selvam's own lines, memories, corrections — "His voice is the whole point." First line of each script = hook (straight to camera).
+- **Shoot logistics:** Lights arrived. Need to lock date (coming week) + provide Chennai office address for lighting/setup planning.
+- **Onboarding doc:** Signed by both parties (Mindwise-Octupie-Onboarding.pdf) — scope and responsibilities.
+- **Next:** Script review, select 7 from 9, confirm Selvam's availability, share Chennai office address.
+- Source: [[2026-06-18-octupie-scripts-ready]]
+
+## 2026-06-18 — All 5 dispatch orders unblocked · Studio deferred · final swaps confirmed
 
 - **All dispatch orders clear:** Asif ✅ · Dhruv ✅ (collect ₹3.03L) · Amruth ✅ (recliner confirmed in stock) · Adhyan ✅ · Ragav ✅ (MAX01 → 290 GP; Conspit HB+Shifter ship separately when in stock).
 - **Davlish pedal swap:** CPP Apex 3-pedal removed → replaced with CPP Apex 2-pedal + CPP Apex Clutch (both surplus). Davlish no longer blocked.
