@@ -50,6 +50,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[lead-the-room-campaign]]
 - [[content-strategy-three-piece]]
 - [[hero-hub-hygiene-framework]] — Hero/Hub/Hygiene content model
+- [[mindwise-video-content-strategy]] — Octupie trial batch (9 scripts, pick 7, Selvam as founder/creator)
 
 ### Operations & launch
 - [[launch-plan-june-1-2026]]
@@ -179,6 +180,8 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[dibiz-solution]] — growth marketing agency (agreed ~Rs.2.75-2.8L/month, starts May 2026)
 - [[snigdha-singh]] — Dibiz Co-founder & CMO
 - [[epaphra]] — podcast/content collaboration partner (exploratory)
+- [[octupie]] — video content production agency (trial batch 9 scripts, Jun 2026)
+- [[shivank-goura]] — Octupie primary contact
 
 ### Packaging vendors & references
 - [[elicura-bottle-reference]] — frosted bottle reference brand
@@ -261,6 +264,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ## Sources (chronological, most recent first)
 
 ### Mindwise
+- [[2026-06-18-octupie-scripts-ready]] — Octupie video scripts delivery (9 scripts, pick 7, shoot coming week)
 - [[2026-03-23-mindwise-visual-identity-meeting]] — visual identity meeting (March 13-23, 3 routes, 4 options, Route 3 locked)
 - [[2026-raw-mindwise-unique-files]] — packaging regulatory, NDAs (Chemiloids, Aavishkar), marketing, technical
 - [[2026-onedrive-mindwise-folder]] — OneDrive full ingest: packaging, Dibiz, Epaphra (Mar-Apr 2026)
