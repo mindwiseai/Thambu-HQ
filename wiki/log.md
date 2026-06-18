@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-18] ingest | Dispatch amendments session — all orders unblocked
+- Source: [[2026-06-18-dispatch-amendments]]
+- Created: 1 new page — [[2026-06-18-dispatch-amendments]]
+- Updated: [[davlish-singh]] (pedal swap noted), [[customer-pipeline]] (dispatch statuses + procurement table), [[index]], [[hot]], [[log]]
+- Domain: racesims
+- Key decisions: Asif EVO 3-pedal confirmed. Ragav MAX01→290 GP + Conspit HB/Shifter follow separately. Amruth recliner in stock. Davlish CPP Apex 3-pedal→2-pedal+Clutch. Garvish deferred 2mo. Studio deferred (internal-last). All 5 dispatches clear. Only import need: Ares 12nm −2.
+
 ## [2026-06-18] update | All dispatch orders unblocked — final swaps + Studio deferred
 - Updated: [[customer-pipeline]] (all 5 dispatches cleared, procurement table finalised), [[hot]]
 - Domain: racesims

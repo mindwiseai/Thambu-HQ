@@ -285,6 +285,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[2026-ctd-module-2.4-nonclinical-overview]]
 
 ### RaceSims
+- [[2026-06-18-dispatch-amendments]] ⭐ — all 5 dispatch orders unblocked; Garvish+Studio deferred; Ragav/Davlish/Asif order swaps; Ares 12nm only open import need
 - [[2026-06-16-dispatch-pipeline-session]] ⭐ — full dispatch planning: 5 orders, 7 B2B quotes, stock × PO matrix, 11 shortfalls
 - [[2026-06-16-qt-000370-davlish-updated]] — Davlish's revised quote (supersedes QT-000348), 3 rigs ₹5.5L
 - [[2026-05-17-racesims-chennai-flagship-planning]] ⭐ — Chennai flagship planning conversation (positioning, championship, ladder, VMS, India saturation, revenue stack)

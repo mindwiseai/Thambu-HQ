@@ -27,7 +27,8 @@ Active quote. Not yet invoiced/paid.
 | CDR NRG QR | 2 | 15% |
 | CPP Lite 3-pedal | 1 | 15% |
 | CPP Lite 2-pedal | 1 | 15% |
-| CPP Apex 3-pedal | 1 | 15% |
+| CPP Apex 2-pedal | 1 | 15% | *(substituted for CPP Apex 3-pedal, 2026-06-18)* |
+| CPP Apex Clutch | 1 | 15% | *(substituted for CPP Apex 3-pedal, 2026-06-18)* |
 | Recliner Sport seat | 1 | 30% |
 | Fixed Back seat | 1 | 35% |
 | Shipping (IGST 18%) | — | — |
@@ -36,8 +37,7 @@ Supersedes QT-000348 (₹7,42,007, 4 rigs, 36 items). Key drops: rig count 4→3
 
 ### Dispatch blockers for this order
 
-- **CPP Apex 3-pedal (×1):** zero stock, not in [[2026-06-16-dispatch-pipeline-session|PO-00054]] — needs separate order.
-- Everything else should be available once rigs are fabricated and PO-00054 lands.
+- ✅ All blockers resolved (2026-06-18). CPP Apex 3-pedal substituted with CPP Apex 2-pedal + Clutch (both in surplus). Rigs and stands = fabrication. See [[2026-06-18-dispatch-amendments]].
 
 ## Order history
 
