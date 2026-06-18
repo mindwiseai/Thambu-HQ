@@ -9,6 +9,11 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-18] update | All dispatch orders unblocked — final swaps + Studio deferred
+- Updated: [[customer-pipeline]] (all 5 dispatches cleared, procurement table finalised), [[hot]]
+- Domain: racesims
+- Decisions: Ragav MAX01 → 290 GP (7 in stock). Conspit HB+Shifter ship separately. Amruth recliner confirmed in stock. Davlish CPP Apex 3-pedal → 2-pedal + Clutch. Studio (QT-000360) deferred — internal order, external first. Only active import need: Ares 12nm (−2).
+
 ## [2026-06-18] update | Garvish order postponed 2 months — pipeline and shortfalls revised
 - Updated: [[customer-pipeline]] (Garvish row → POSTPONED, active rig demand 30→23, shortfall table rebuilt), [[hot]] (new 2026-06-18 entry)
 - Domain: racesims

@@ -23,13 +23,13 @@ All items below are invoiced and waiting dispatch. PO-00054 (ENSU Shanghai, $26,
 | **P4** | Adhyan | INV-26/0026 | ✅ PAID | ₹38,230 | Bengaluru |
 | **P5** | Ragav | INV-000133 | 🔴 OVERDUE since 28/05 | ₹3,76,956 | Coimbatore |
 
-### Dispatch blockers by customer
+### Dispatch blockers by customer (updated 2026-06-18)
 
-- **Asif:** should clear after PO-00054 received. 1× GT rig PRO (fabricate), 1× Triple Monitor stand basic (fabricate).
-- **Dhruv:** collect ₹3,03,429 before dispatch. 1× GT rig PRO, 1× Standalone Monitor stand.
-- **Amruth:** 1× Recliner seat (std) = zero stock, not in PO — needs separate order. All other items available.
-- **Adhyan:** CPP Apex 2-pedal + Clutch — both in PO. Easiest dispatch.
-- **Ragav:** **MAX01 Steering Wheel = zero stock, not in PO** — completely blocked until sourced.
+- **Asif:** ✅ Clear after PO-00054. GT rig PRO + Triple Monitor stand basic = fabricate.
+- **Dhruv:** ✅ Clear. Collect ₹3,03,429 at dispatch.
+- **Amruth:** ✅ Clear. Recliner seat (std) confirmed 1× in stock.
+- **Adhyan:** ✅ Clear. CPP Apex 2-pedal + Clutch both in PO.
+- **Ragav:** ✅ Substantially clear. MAX01 → swapped to 290 GP (7 in stock post-PO). Conspit HB + Shifter (−1 each) to ship separately when next stock arrives — not a full dispatch blocker.
 
 ## Pending B2B quotes (quote pipeline)
 
@@ -45,24 +45,19 @@ All items below are invoiced and waiting dispatch. PO-00054 (ENSU Shanghai, $26,
 
 **Active B2B GT rig demand (Garvish deferred): 3+2+7+6+4+1 = 23 rigs.** Current stock = −2. All need fabrication. (Garvish's 7 rigs = ~Aug 2026.)
 
-## Critical procurement actions (updated 2026-06-18 — Garvish deferred)
+## Procurement actions (updated 2026-06-18)
 
-| Item | Shortfall | Action |
-|------|-----------|--------|
-| GT rig PRO | −25 | Fabrication queue — dominant constraint |
-| Triple Monitor stand basic | −8 | Fabrication queue (Studio 7× + Asif invoiced) |
-| PC tray / Keyboard tray | −8 each | Fabrication queue (was −15 with Garvish) |
-| Samsung G5 32" curved | −15 (Star 6 + PS8 12) | Separate procurement |
-| Ares 12nm Wheelbase | −2 | Next ENSU order (was −11 with Garvish) |
-| Triple Monitor stand precision | −1 | Next ENSU/fabrication (was −8 with Garvish) |
-| Standalone Monitor stand | −3 | Fabrication |
-| CPP Lite 2-pedal | −1 | Next order (was −3 with Garvish) |
-| MAX01 Wheel | −1 | Source urgently — Ragav blocker |
-| CPP Apex 3-pedal | −1 | Separate order — Davlish blocker |
-| PC Spec #1.5 | −2 | Build 2 PCs for Star |
-| Conspit HB + Shifter | −1 each | Source for Ragav (not in PO) |
-| Recliner seat (std) | −1 | Source for Amruth |
-| **VNM 3DOF Motion** | **0** | **✅ CLEARED** — Star 2 + Studio 1 = stock 3 exact. No reorder needed. |
+Rigs, monitor stands, PC/KB trays, monitors, PCs = local/fabricated — not import-constrained.
+
+| Item | Gap (active quotes) | Action |
+|------|---------------------|--------|
+| Ares 12nm Wheelbase | −2 | Next ENSU order (low urgency — no active quote blocker) |
+| CPP Lite 2-pedal | 0 (Davlish exact) | Watch stock; order if more quote demand |
+| Conspit HB + Shifter | −1 each (Ragav dispatch) | Ship to Ragav when next stock arrives — not blocking main dispatch |
+| **VNM 3DOF Motion** | **0** | **✅ CLEARED** — Star 2 + Studio 1 = stock 3 exact |
+| MAX01 Wheel | **RESOLVED** | Ragav swapped to 290 GP (7 in stock post-PO) |
+| CPP Apex 3-pedal | **RESOLVED** | Davlish swapped to CPP Apex 2-pedal + Clutch |
+| Recliner seat (std) | **RESOLVED** | 1× confirmed in stock for Amruth |
 
 ## Confirmed historical customers (pre-June 2026)
 

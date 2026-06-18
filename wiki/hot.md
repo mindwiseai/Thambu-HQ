@@ -8,14 +8,14 @@ updated: 2026-06-16
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-18 (latest) — Garvish postponed 2 months · shortfalls significantly improved
+## 2026-06-18 (latest) — All 5 dispatch orders unblocked · Studio deferred · final swaps confirmed
 
-- **Garvish (QT-000368+369, ₹30.7L, 7 rigs) deferred ~Aug 2026.** Removes his demand from active pipeline. Active rig demand now 23 (was 30).
-- **Shortfall improvements with Garvish out:** Ares 12nm −2 (was −11), Triple Monitor precision −1 (was −8), VNM 3DOF **0** (was −2 — Star 2 + Studio 1 = stock 3 exactly, **no VNM reorder needed**), PC/KB tray −8 each (was −15), CPP Apex 2-pedal +7 (was 0).
-- **Remaining critical shortfalls (active quotes only):** GT rig PRO −25 (fabrication), Triple Monitor basic −8, PC/KB tray −8 each, Samsung G5 32" −15, Ares 12nm −2, CPP Apex 3-pedal −1 (Davlish), MAX01 Wheel −1 (Ragav).
-- **Dispatch queue unchanged:** Asif P1 (paid ₹3.33L) → Dhruv P2 (collect ₹3.03L on delivery) → Amruth P3 (paid ₹2.20L) → Adhyan P4 (paid ₹38K) → Ragav P5 (overdue ₹3.77L, MAX01 blocker).
-- **Active B2B quotes (ex-Garvish):** Davlish ₹5.5L · Star ₹24.5L · Studio ₹28L · INVRSE + PS8 (TBD) · Manoj (1 rig).
-- Sources: [[2026-06-16-dispatch-pipeline-session]] · [[customer-pipeline]] · [[davlish-singh]]
+- **All dispatch orders clear:** Asif ✅ · Dhruv ✅ (collect ₹3.03L) · Amruth ✅ (recliner confirmed in stock) · Adhyan ✅ · Ragav ✅ (MAX01 → 290 GP; Conspit HB+Shifter ship separately when in stock).
+- **Davlish pedal swap:** CPP Apex 3-pedal removed → replaced with CPP Apex 2-pedal + CPP Apex Clutch (both surplus). Davlish no longer blocked.
+- **Studio (QT-000360, ₹28L, 7 rigs) deferred** — internal order, fulfil external quotes first. Garvish (₹30.7L) already deferred 2 months. Active B2B quote rig demand = 16.
+- **Procurement: only Ares 12nm (−2) needs next ENSU order.** Everything else clear. Rigs/stands/trays/monitors/PCs = local or fabrication — not import-constrained.
+- **VNM 3DOF ✅ cleared** — Star 2 + Studio 1 = stock 3 exact. No reorder needed.
+- Sources: [[customer-pipeline]] · [[2026-06-16-dispatch-pipeline-session]]
 
 ## 2026-06-16 — Dispatch pipeline planned · PO-00054 arrived · Davlish quote revised
 
