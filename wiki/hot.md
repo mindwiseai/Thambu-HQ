@@ -8,14 +8,13 @@ updated: 2026-06-16
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-19 (latest) — Octupie video scripts ready · shoot planning underway
+## 2026-06-19 — Octupie video scripts ready for Mindwise trial batch
 
-- **[[octupie]]** delivered **9 video scripts** for [[mindwise]] trial batch (pick 7). Shared Google Doc with edit access for [[shivendra-selvam]], [[thambu]], team. [[shivank-goura]] primary contact.
-- **Editing encouraged:** Add Selvam's own lines, memories, corrections — "His voice is the whole point." First line of each script = hook (straight to camera).
-- **Shoot logistics:** Lights arrived. Need to lock date (coming week) + provide Chennai office address for lighting/setup planning.
-- **Onboarding doc:** Signed by both parties (Mindwise-Octupie-Onboarding.pdf) — scope and responsibilities.
-- **Next:** Script review, select 7 from 9, confirm Selvam's availability, share Chennai office address.
-- Source: [[2026-06-18-octupie-scripts-ready]]
+- **[[octupie]]** delivered **9 video scripts** for [[mindwise]] trial batch (pick 7 best). Google Doc with edit access: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing
+- **Hook-first format:** First line of each script = hook (straight to camera). [[shivank-goura]] directive: "Selvam's voice is the whole point" — edit freely, add [[thambu|Selvam]]'s own lines/memories/corrections for authenticity.
+- **Shoot ready:** Lights arrived ✅. Signed contract (Mindwise-Octupie-Onboarding.pdf) ✅. Location: Chennai office (address needed). Date: coming week (awaiting Selvam's availability).
+- **Action items:** (1) Review scripts, select 7 from 9 (2) Selvam adds personal touches (3) Share shoot availability (4) Provide Chennai office address (5) Confirm date.
+- New: [[mindwise-video-content-strategy]] created. Source: [[2026-06-18-octupie-scripts-ready]]
 
 ## 2026-06-18 — All 5 dispatch orders unblocked · Studio deferred · final swaps confirmed
 

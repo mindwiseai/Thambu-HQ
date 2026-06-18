@@ -31,6 +31,12 @@ Secondary lead working with [[thambu]] across both [[domains/mindwise/_index|Min
 - Introduced [[andrea-zangara]] to [[thambu]] (Feb 3, 2026)
 - Referenced as "Shivendra – Indus (Vikash)" in the OneNote notes, suggesting he is the primary liaison
 
+## Video content coordination
+
+- **2026-06-18:** [[octupie]] delivered 9 video scripts via [[shivank-goura]]. Shivendra has edit access to review scripts and coordinate with team.
+- Action items: Script selection (pick 7 from 9), collect Selvam's shoot availability, provide Chennai office address to Octupie.
+
 ## Notes
 - Works as Thambu's secondary on calls; Thambu remains primary decision-maker
-- Email / contact details unknown (need to capture on next ingest)
+- Primary email: shiv_selvam@hotmail.com
+- Also: shivendraselvam@gmail.com

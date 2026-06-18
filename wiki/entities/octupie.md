@@ -24,9 +24,10 @@ Video production agency engaged for [[mindwise]] founder-led social content. Pro
 
 ## Deliverables
 
-- 9 scripts in shared Google Doc (edit access for Shivendra, Selvam, team)
-- Trial batch: 7 videos from the 9 scripts
+- **9 scripts delivered** (2026-06-18) in shared Google Doc: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing
+- Trial batch: 7 videos from the 9 scripts (team to select)
 - Hook-first structure: first line straight to camera
+- Signed onboarding document: Mindwise-Octupie-Onboarding.pdf (scope and responsibilities)
 
 ## Approach
 
