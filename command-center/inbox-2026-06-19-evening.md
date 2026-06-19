@@ -1,13 +1,31 @@
 # Command Center Inbox — 2026-06-19 (Evening Check)
 
-**Checked:** 2026-06-19 19:43 IST  
-**Status:** 1 new item (Shivank script review update)
+**Checked:** 2026-06-19 19:43 IST (updated 20:38 IST)  
+**Status:** 2 items (Shivank script review + GitHub Pages deploy failure)
 
 ---
 
 ## 📬 New Items
 
-### 1. ✅ Shivank Shared Script Review Document (EDIT ACCESS)
+### 1. 🔴 GitHub Pages Deploy Failed (main branch)
+
+**From:** notifications@github.com  
+**Date:** 2026-06-19 12:18 UTC (17:48 IST)  
+**Repo:** mindwiseai/Thambu-HQ  
+**Branch:** main  
+**Commit:** b54ae06  
+**Status:** All jobs failed (deploy job failed in 26 seconds)
+
+**Action required:**
+- Check workflow logs at GitHub Actions
+- Fix deployment configuration or permissions issue
+- Re-run deploy once fixed
+
+**Context:** GitHub Pages workflow is set up for this monorepo but deployment is consistently failing. This needs investigation.
+
+---
+
+### 2. ✅ Shivank Shared Script Review Document (EDIT ACCESS)
 
 **From:** Shivank Goura (gourashivank@gmail.com) via Google Drive  
 **Date:** 2026-06-19 08:43 UTC (14:13 IST)  
@@ -34,31 +52,31 @@
 
 ## 📋 Previously Processed (No Action)
 
-### 2. OpenAI Marketing Email
+### 3. OpenAI Marketing Email
 **From:** noreply@email.openai.com  
 **Date:** 2026-06-19 02:42 UTC  
 **Subject:** "Get real help, not just answers"  
 **Type:** Marketing/promotional  
 **Action:** None (ChatGPT study mode promo)
 
-### 3. Octupie Script Delivery (Original)
+### 4. Octupie Script Delivery (Original)
 **From:** shivank@octupie.com  
 **Date:** 2026-06-18 18:22 UTC  
 **Status:** Already processed  
 **Action:** See item #1 above (same doc, now with edit access)
 
-### 4. Shivendra Forward
+### 5. Shivendra Forward
 **From:** shivendraselvam@gmail.com  
 **Date:** 2026-06-19 08:34 UTC  
 **Type:** Forward of the original June 18 script share notification  
-**Action:** None (duplicate of item #3)
+**Action:** None (duplicate of item #4)
 
 ---
 
 ## 📊 Summary Stats
 
-- **Total new emails since 2026-06-18:** 4
-- **Action required:** 1 (Shivank script review doc)
+- **Total new emails since 2026-06-18:** 5
+- **Action required:** 2 (Shivank script review doc + GitHub Pages deploy failure)
 - **Marketing/noise:** 1 (OpenAI)
 - **Duplicates/forwards:** 2
 
@@ -87,16 +105,22 @@
 
 ## 🎯 Recommended Next Actions
 
-1. **Open the Google Doc** (edit access now granted): https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing
+1. **Fix GitHub Pages deployment:**
+   - Check workflow logs at https://github.com/mindwiseai/Thambu-HQ/actions
+   - Review `.github/workflows/` config for Pages workflow
+   - Fix permissions or configuration issue
+   - Re-run deploy
 
-2. **Review the 9 scripts** — identify which 7 to shoot for trial batch
+2. **Open the Google Doc** (edit access now granted): https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing
 
-3. **Coordinate with Selvam:**
+3. **Review the 9 scripts** — identify which 7 to shoot for trial batch
+
+4. **Coordinate with Selvam:**
    - Have him add personal voice/memories to make scripts authentic
    - Collect his availability for shoot (target: coming week)
    - Get Chennai office address for Octupie lighting setup
 
-4. **Reply to Shivank** once scripts are reviewed + availability known
+5. **Reply to Shivank** once scripts are reviewed + availability known
 
 ---
 
