@@ -1,6 +1,6 @@
 {
   "partners": [
-    { "slug": "racesims-chennai",   "name": "RaceSims Chennai",   "city": "Chennai",   "state": "Tamil Nadu" },
+    { "slug": "racesims-chennai",   "name": "RaceSims Chennai",   "city": "Chennai",   "state": "Tamil Nadu",  "rig_count": 8, "ierl_joins": "2026-08" },
     { "slug": "racesims-bengaluru", "name": "RaceSims Bengaluru", "city": "Bengaluru", "state": "Karnataka" },
     { "slug": "racesims-mumbai",    "name": "RaceSims Mumbai",    "city": "Mumbai",    "state": "Maharashtra" },
     { "slug": "racesims-delhi",     "name": "RaceSims Delhi",     "city": "New Delhi", "state": "Delhi" },
