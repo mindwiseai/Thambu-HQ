@@ -8,6 +8,16 @@ updated: 2026-06-19
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
+## 2026-06-19 — IERL July launch planning · 27 rigs · ₹1L prize pool · sim-to-reality
+
+- **Network:** 7 centres, 6 cities, **27 rigs total** for July 2026 launch. [[racing-point-esports]] (Uday, Hyderabad, 10 rigs) added.
+- **[[ierl-prize-pool-formula]]:** **₹1,00,000 ÷ total rigs** = per-rig fee. July: ₹3,704/rig. August preview: Chennai joins (8 rigs) → 35 rigs → ₹2,857/rig. Pool always ₹1L; per-rig cost **drops as network grows** — incentive for partners to recruit.
+- **Track/car combo:** Chosen monthly by [[uday]] (league lead); no fixed Mugello+MX-5 anymore.
+- **[[ierl-sim-to-reality]]:** Hot lap → championship → **winner drives real race car**. [[arka-motorsports]]: 4 rally/race cars committed. Coimbatore: dedicated test track + circuit. [[buzzing-hornet-motorsports]]: VW Polo Cup track experiences (Chennai).
+- **Eligibility:** Triple monitor + 12Nm load cell base + Uday's VMS software + vision alignment.
+- **Partner message drafted** (approved) communicating sim-to-reality vision + motorsport partnerships.
+- Source: [[2026-06-19-ierl-july-launch]] · deck: `racesims/marketing/decks/ierl-july-2026.html`
+
 ## 2026-06-19 — Octupie scripts ready · shoot this week pending Selvam availability
 
 - **Scripts delivered:** [[octupie]] delivered **9 video scripts** for [[mindwise]] trial batch via [[shivank-goura]] (pick 7 best). Edit access: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing
