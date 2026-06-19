@@ -17,18 +17,11 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 - Key facts: July network 7 centres / 27 rigs. Prize pool formula: ₹1,00,000 ÷ total rigs (July: ₹3,704/rig; Aug preview: 35 rigs → ₹2,857/rig). ARKA Motorsports: 4 rally/race cars for sim-to-reality program. Buzzing Hornet: VW Polo Cup track experiences (Chennai). Track/car combo now chosen monthly by Uday. Partner WhatsApp message drafted (approved). Eligibility: triple monitor + 12Nm load cell + VMS + vision alignment.
 
 ## [2026-06-19] ingest | Command Center inbox check — Octupie scripts ready
-- Source: [[2026-06-18-octupie-scripts-ready-shoot-planning]] (Gmail thread from shivank@octupie.com, 2026-06-18)
-- Created: 1 new source page — [[2026-06-18-octupie-scripts-ready-shoot-planning]]
+- Source: [[2026-06-18-octupie-scripts-ready]] (Gmail thread from shivank@octupie.com, 2026-06-18)
+- Created: 1 new source page — [[2026-06-18-octupie-scripts-ready]]
 - Updated: [[hot]] (refreshed 2026-06-19 entry), [[log]]
 - Domain: mindwise
 - Key facts: **9 video scripts delivered** via Google Doc (edit access: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit). **Select 7 for trial batch.** ✅ Lights arrived ✅ Signed contract (Mindwise-Octupie-Onboarding.pdf) ✅ Team ready (Jay, Vishnu, Shivank). **Hook-first format** (first line straight to camera). Shivank: "**Selvam's voice is the whole point**" — add personal lines/memories for authenticity. **Action items:** (1) Selvam's shoot availability in coming week (2) Chennai office address for lighting/setup planning (3) Lock shoot date this week.
-
-## [2026-06-19] ingest | Octupie video scripts ready
-- Source: [[2026-06-18-octupie-scripts-ready]] (Gmail thread from shivank@octupie.com, 2026-06-18)
-- Created: 1 new concept page — [[mindwise-video-content-strategy]]
-- Updated: [[octupie]] (delivery details + Google Doc link), [[shivendra-selvam]] (video coordination + action items), [[hot]], [[log]]
-- Domain: mindwise
-- Key facts: 9 video scripts delivered in shared Google Doc (edit access for Shivendra, Selvam, team); pick 7 for trial batch. Lights arrived. Next: lock shoot date (coming week), provide Chennai office address for lighting/setup. Signed onboarding doc (Mindwise-Octupie-Onboarding.pdf) attached. Hook-first format (first line straight to camera). Editing encouraged — add Selvam's lines/memories to make scripts authentic ("His voice is the whole point").
 
 ## [2026-06-18] ingest | Dispatch amendments session — all orders unblocked
 - Source: [[2026-06-18-dispatch-amendments]]
