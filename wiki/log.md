@@ -9,6 +9,11 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-20] inbox-check | Command Center inbox check — 2026-06-20 afternoon (1 actionable still pending: Octupie scripts)
+- Source: Gmail inbox check (mindwise.ai1@gmail.com, 7 unread)
+- Domain: cross
+- Key finding: **Same 1 actionable item still pending** — [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] from [[shivank-goura]] (2026-06-18) with **5 outstanding actions**: (1) Review 9 scripts → select 7 best for trial batch (2) [[thambu|Selvam]] adds personal lines/memories/corrections (3) Share Selvam's availability for shoot this week (4) Provide Chennai office address for lighting/setup (5) Lock shoot date. ✅ Ready: Lights arrived, signed contract, team ready (Jay, Vishnu, Shivank). Google Doc: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit. **All other unread = non-actionable:** GitHub Pages deploy failures (×2, already logged), OpenAI/Framer promotional emails.
+
 ## [2026-06-20] inbox-check | Command Center inbox check — 2026-06-20 morning (1 actionable: Mindwise script review from Shivank)
 - Source: [[2026-06-20-command-center-inbox-check]] (Gmail inbox, mindwise.ai1@gmail.com, 201 unread)
 - Domain: cross

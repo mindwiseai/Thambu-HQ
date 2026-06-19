@@ -8,7 +8,13 @@ updated: 2026-06-20
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-20 — Command Center inbox: 1 actionable (Octupie scripts — 5 actions pending)
+## 2026-06-20 — Command Center inbox: 1 actionable (Octupie scripts — 5 actions still pending)
+
+- **Inbox check (afternoon):** Gmail mindwise.ai1@gmail.com shows **same 1 actionable item** from this morning — [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (Shivank, 2026-06-18) with **all 5 actions still pending**: (1) Review 9 scripts → select 7 best (2) [[thambu|Selvam]] adds personal lines/memories (3) Share Selvam's availability for shoot this week (4) Provide Chennai office address for lighting/setup (5) Lock shoot date. ✅ Ready: Lights arrived, signed contract, team ready (Jay, Vishnu, Shivank). Google Doc: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit.
+- **Other unread:** All non-actionable — GitHub Pages deploy failures (×2, already logged), OpenAI/Framer promotional.
+- Source: [[log]] 2026-06-20 afternoon entry
+
+## 2026-06-20 — Command Center inbox: 1 actionable (Octupie scripts — 5 actions pending) [morning check]
 
 - **Inbox status:** 201 unread (Gmail mindwise.ai1@gmail.com), but only **1 actionable item** requiring attention.
 - **🔴 ACTIONABLE:** [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] from [[shivank-goura]] (2026-06-18 18:22) — **5 actions still pending:** (1) Review 9 scripts → select 7 best for trial batch (2) [[thambu|Selvam]] adds personal lines/memories/corrections ("His voice is the whole point") (3) Share Selvam's availability this coming week (4) Provide Chennai office address for lighting/setup (5) Lock shoot date this week.
