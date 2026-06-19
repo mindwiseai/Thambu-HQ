@@ -19,6 +19,7 @@ Primary contact at [[octupie]], video production agency for [[mindwise]].
 - Main point of contact for Mindwise video production
 - Delivered 9 scripts for trial batch (June 18, 2026)
 - Managing shoot logistics (date lock, address collection, lighting/setup)
+- Emphasized "Selvam's voice is the whole point" — encourages authentic personalization over polished corporate scripts
 
 ## Key communications
 

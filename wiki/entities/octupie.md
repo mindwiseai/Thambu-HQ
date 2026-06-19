@@ -11,10 +11,11 @@ Video production agency engaged for [[mindwise]] founder-led social content. Pro
 
 ## Key facts
 
-- **2026-06-18:** Delivered 9 video scripts (pick 7 for trial batch). [[2026-06-18-octupie-scripts-ready]]
-- **Shoot planned:** Coming week (June 2026), Chennai office location
-- **Equipment:** Lights have arrived, ready for shoot
-- **Onboarding doc:** Signed by both parties (Mindwise-Octupie-Onboarding.pdf)
+- **2026-06-18:** Delivered 9 video scripts (pick 7 for trial batch) via shared Google Doc. [[2026-06-18-octupie-scripts-ready]]
+- **Shoot planned:** Coming week (June 2026), Chennai office location (address needed for lighting/setup)
+- **Equipment:** Lights arrived ✅, ready for shoot
+- **Onboarding doc:** Signed by both parties (Mindwise-Octupie-Onboarding.pdf) ✅
+- **Next:** Awaiting Selvam's shoot availability + Chennai office address
 
 ## Team
 
