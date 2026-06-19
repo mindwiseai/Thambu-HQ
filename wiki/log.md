@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-19] ingest | Octupie scripts delivered — 9 scripts for Mindwise trial batch
+- Source: [[2026-06-18-octupie-scripts-delivered]] (Gmail thread 19edbf8deec6d8ca, shivank@octupie.com → shiv_selvam@hotmail.com, 2026-06-18 18:22 UTC)
+- Created: 1 new source page — [[2026-06-18-octupie-scripts-delivered]]
+- Updated: [[hot]] (new 2026-06-19 entry at top), [[log]]
+- Domain: mindwise
+- Key facts: **9 video scripts delivered** via Google Doc (https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit). **Select 7 for trial batch.** Hook-first format (first line = camera hook). Shivank: "**Selvam's voice is the whole point**" — add personal lines/memories/corrections. ✅ Lights arrived ✅ Signed contract (Mindwise-Octupie-Onboarding.pdf attached) ✅ Team ready (Jay, Vishnu, Shivank). **Waiting on:** (1) Selvam's availability this coming week (2) Chennai office address for lighting/setup. **Lock shoot date this week.**
+
 ## [2026-06-19] ingest | IERL July 2026 launch planning — 27 rigs, ₹1L prize pool, sim-to-reality
 - Source: [[2026-06-19-ierl-july-launch]] (planning deck: `racesims/marketing/decks/ierl-july-2026.html`)
 - Created: 7 new pages — [[2026-06-19-ierl-july-launch]] (source) · [[ierl]] (entity) · [[uday]] (entity) · [[racing-point-esports]] (entity) · [[buzzing-hornet-motorsports]] (entity) · [[ierl-prize-pool-formula]] (concept) · [[ierl-sim-to-reality]] (concept)

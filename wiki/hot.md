@@ -8,6 +8,16 @@ updated: 2026-06-19
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
+## 2026-06-19 — Octupie scripts delivered · 9 scripts for Mindwise trial batch · shoot this week
+
+- **Scripts ready:** [[octupie]] delivered **9 video scripts** for [[mindwise]] (pick 7 best for trial batch). Google Doc with edit access: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing
+- **Format:** Hook-first (first line = straight to camera hook). [[shivank-goura]]: "**Selvam's voice is the whole point**" — team should add [[thambu|Selvam]]'s own lines/memories/corrections for authenticity.
+- **Shoot readiness:** ✅ Lights arrived ✅ Signed contract (Mindwise-Octupie-Onboarding.pdf attached) ✅ Team ready (Jay, Vishnu, Shivank).
+- **Waiting on:** (1) Selvam's availability in coming week (2) Chennai office address for lighting/setup planning.
+- **Action items:** (1) Review 9 scripts → select 7 (2) Selvam adds personal touches to scripts (3) Share shoot availability dates (4) Provide Chennai office address (5) Lock shoot date this week.
+- **Email:** 2026-06-18 18:22 UTC, Shivank → Shivendra (cc: Jay, Vishnu, Selvam, Thambu, mindwise.ai1@gmail.com).
+- Source: [[2026-06-18-octupie-scripts-delivered]]
+
 ## 2026-06-19 — IERL July launch planning · 27 rigs · ₹1L prize pool · sim-to-reality
 
 - **Network:** 7 centres, 6 cities, **27 rigs total** for July 2026 launch. [[racing-point-esports]] (Uday, Hyderabad, 10 rigs) added.
