@@ -38,12 +38,11 @@
       },
 
       "wheelbase": { "model": "Simucube 2 Pro", "status": "IN STOCK ✓" },
-      "wheel": {
-        "model": "TBD — Simucube-compatible (SC2 Pro uses SQR/SimSteering hub; 290GP is Conspit hub, incompatible without adapter)",
-        "status": "PROCURE"
-      },
+      "wheel": { "model": "HOA Hub + D-rim (SC2 Pro QR → HOA hub → D-rim)", "status": "IN STOCK ✓" },
       "pedals": { "model": "Simtrecs Pro 3-pedal (clutch + brake + throttle)", "status": "IN STOCK ✓" },
-      "motion": { "model": "VNM 3-DOF motion platform", "status": "FROM IERL SPEC" },
+      "shifter": { "model": "VNM sequential shifter", "status": "IN STOCK ✓" },
+      "handbrake": { "model": "VNM handbrake", "status": "IN STOCK ✓" },
+      "motion": { "model": "VNM 3-DOF motion platform", "status": "PROCURE" },
 
       "monitors": {
         "count": 3,
@@ -77,7 +76,7 @@
       },
 
       "wheelbase": { "model": "Conspit Ares 12Nm", "status": "PROCURE" },
-      "wheel": { "model": "Conspit rim", "status": "PROCURE" },
+      "wheel": { "model": "Conspit 310 Apex", "status": "IN STOCK ✓" },
       "pedals": { "model": "Heusinkveld Sprint 2-pedal (brake + throttle, load cell)", "status": "IN STOCK ✓" },
       "shifter": { "model": "TBD", "status": "PROCURE if rally mode wanted" },
       "handbrake": null,
@@ -334,10 +333,9 @@
   },
 
   "open_questions": [
-    "SC2 Pro QR confirmed — which wheel rim to pair? (Cube Controls, OMP SQR hub + rim, or other SQR-compatible)",
-    "Standard rig pedal split (SIM-04/05/06/07): how many get VNM 3-pedal + shifter vs Apex 2-pedal only?",
-    "Fanatec wheels (SIM-01/02): which Fanatec-compatible steering wheels?",
-    "Samsung 34\" curved (1 unit in stock, unassigned): studio display, reception, or sell?"
+    "Max 01 — is this a wheelbase or a wheel? Which rig does it go on?",
+    "Standard rig pedal split (SIM-04/05/06/07): Conspit Apex 2-pedal or VNM 3-pedal?",
+    "Fanatec wheels (SIM-01/02): which Fanatec-compatible steering wheels?"
   ],
 
   "kiosk_deploy_note": "Per rig: open kiosk_url in browser, F11 fullscreen, set as startup tab. Server IPs go in worker/src/kiosk.ts KIOSK_CONFIG — one deploy updates all 8 rigs.",
