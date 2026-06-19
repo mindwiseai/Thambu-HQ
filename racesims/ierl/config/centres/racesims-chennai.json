@@ -1,4 +1,5 @@
 {
+  "_source": "Studio62 electrical layout 19.06.2026 (Project No. 90873) — supersedes earlier wiki floor plan",
   "centre": "racesims-chennai",
   "name": "RaceSims Chennai",
   "city": "Chennai",
@@ -6,22 +7,27 @@
   "opens": "2026-07",
   "ierl_joins": "2026-08",
   "rig_count": 8,
+  "total_area_sqft": 1146.6,
+
   "floor_plan": {
-    "entrance": "WEST",
-    "east_wall": "4 rigs (Rigs 1–4) — screens against wall, drivers face centre",
-    "north_wall": "3 rigs (Rigs 5–7) — screens against wall, drivers face centre",
-    "south_wall": "Motion hero rig (Rig 8) — island unit near office/training room"
+    "note": "Sim numbers match architectural drawing labels (SIMULATOR-01 through SIMULATOR-08)",
+    "east_row": "SIM-03 to SIM-07 — 5 rigs in a row, drivers facing east, triple 32\" monitors, screens against/toward east",
+    "west_wall_hero": "SIM-08 — hero island, driver faces west wall, triple 45\" monitors, 3-DOF motion platform",
+    "entry_south": "SIM-01 — entry level, driver faces south, triple 27\" monitors",
+    "entry_north": "SIM-02 — entry level, driver faces north, triple 27\" monitors"
   },
+
   "rigs": [
     {
+      "sim": "SIM-01",
       "rig": 1,
-      "wall": "east",
-      "position": "southernmost",
-      "type": "Formula/GT",
+      "tier": "Entry Level",
+      "facing": "south",
+      "monitors": { "count": 3, "size_inches": 27, "model": "TBD" },
       "hardware": {
-        "wheelbase": "Conspit Ares 12Nm",
-        "wheel": "Conspit 300GT",
-        "pedals": "Conspit Apex 2-pedal (brake + throttle)",
+        "wheelbase": "TBD — entry level",
+        "wheel": "TBD",
+        "pedals": "TBD — 2-pedal (brake + throttle)",
         "shifter": null,
         "handbrake": null,
         "motion": null
@@ -29,25 +35,28 @@
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=1"
     },
     {
+      "sim": "SIM-02",
       "rig": 2,
-      "wall": "east",
-      "position": "2nd from south",
-      "type": "Rally/GT",
+      "tier": "Entry Level",
+      "facing": "north",
+      "monitors": { "count": 3, "size_inches": 27, "model": "TBD" },
       "hardware": {
-        "wheelbase": "Conspit Ares 12Nm",
-        "wheel": "Conspit 300GT",
-        "pedals": "VNM 3-pedal (brake + throttle + clutch)",
-        "shifter": "VNM sequential shifter",
-        "handbrake": "VNM handbrake",
+        "wheelbase": "TBD — entry level",
+        "wheel": "TBD",
+        "pedals": "TBD — 2-pedal (brake + throttle)",
+        "shifter": null,
+        "handbrake": null,
         "motion": null
       },
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=2"
     },
     {
+      "sim": "SIM-03",
       "rig": 3,
-      "wall": "east",
-      "position": "3rd from south",
-      "type": "Formula/GT",
+      "tier": "Standard",
+      "facing": "east",
+      "position": "easternmost of the 5-rig row",
+      "monitors": { "count": 3, "size_inches": 32, "model": "Samsung Odyssey G5 32\"" },
       "hardware": {
         "wheelbase": "Conspit Ares 12Nm",
         "wheel": "Conspit 300GT",
@@ -59,10 +68,11 @@
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=3"
     },
     {
+      "sim": "SIM-04",
       "rig": 4,
-      "wall": "east",
-      "position": "northernmost on east wall",
-      "type": "Rally/GT",
+      "tier": "Standard",
+      "facing": "east",
+      "monitors": { "count": 3, "size_inches": 32, "model": "Samsung Odyssey G5 32\"" },
       "hardware": {
         "wheelbase": "Conspit Ares 12Nm",
         "wheel": "Conspit 300GT",
@@ -74,10 +84,12 @@
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=4"
     },
     {
+      "sim": "SIM-05",
       "rig": 5,
-      "wall": "north",
-      "position": "easternmost on north wall",
-      "type": "Formula/GT",
+      "tier": "Standard",
+      "facing": "east",
+      "position": "centre of the 5-rig row",
+      "monitors": { "count": 3, "size_inches": 32, "model": "Samsung Odyssey G5 32\"" },
       "hardware": {
         "wheelbase": "Conspit Ares 12Nm",
         "wheel": "Conspit 300GT",
@@ -89,25 +101,11 @@
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=5"
     },
     {
+      "sim": "SIM-06",
       "rig": 6,
-      "wall": "north",
-      "position": "centre of north wall",
-      "type": "Formula/GT",
-      "hardware": {
-        "wheelbase": "Conspit Ares 12Nm",
-        "wheel": "Conspit 300GT",
-        "pedals": "Conspit Apex 2-pedal (brake + throttle)",
-        "shifter": null,
-        "handbrake": null,
-        "motion": null
-      },
-      "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=6"
-    },
-    {
-      "rig": 7,
-      "wall": "north",
-      "position": "westernmost on north wall",
-      "type": "Rally/GT",
+      "tier": "Standard",
+      "facing": "east",
+      "monitors": { "count": 3, "size_inches": 32, "model": "Samsung Odyssey G5 32\"" },
       "hardware": {
         "wheelbase": "Conspit Ares 12Nm",
         "wheel": "Conspit 300GT",
@@ -116,13 +114,32 @@
         "handbrake": "VNM handbrake",
         "motion": null
       },
+      "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=6"
+    },
+    {
+      "sim": "SIM-07",
+      "rig": 7,
+      "tier": "Standard",
+      "facing": "east",
+      "position": "westernmost of the 5-rig row",
+      "monitors": { "count": 3, "size_inches": 32, "model": "Samsung Odyssey G5 32\"" },
+      "hardware": {
+        "wheelbase": "Conspit Ares 12Nm",
+        "wheel": "Conspit 300GT",
+        "pedals": "Conspit Apex 2-pedal (brake + throttle)",
+        "shifter": null,
+        "handbrake": null,
+        "motion": null
+      },
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=7"
     },
     {
+      "sim": "SIM-08",
       "rig": 8,
-      "wall": "south",
-      "position": "hero island near office/training room",
-      "type": "Motion",
+      "tier": "Hero",
+      "facing": "west wall",
+      "position": "island unit — hero centrepiece",
+      "monitors": { "count": 3, "size_inches": 45, "model": "TBD — premium large-format curved" },
       "hardware": {
         "wheelbase": "Conspit Ares 12Nm",
         "wheel": "Conspit 300GT",
@@ -132,24 +149,30 @@
         "motion": "VNM 3-DOF motion platform"
       },
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=8",
-      "notes": "Motion surcharge +₹500/hr. Kiosk shows same Amateur/Pro classes — motion is a rig upgrade, not a separate class."
+      "notes": "Motion surcharge +₹500/hr. Same IERL kiosk classes — motion is a rig upgrade, not a separate IERL class."
     }
   ],
+
   "rig_summary": {
-    "Formula/GT": 4,
-    "Rally/GT_static": 3,
-    "Motion": 1
+    "Entry_Level_triple27": 2,
+    "Standard_triple32": 5,
+    "Hero_Motion_triple45": 1
   },
-  "kiosk_deploy_note": "Per rig: open kiosk_url in browser, press F11 (fullscreen), set as startup tab. First launch: tick 'Always allow' on the Content Manager protocol dialog. Server IPs go in worker/src/kiosk.ts KIOSK_CONFIG — one deploy updates all 8 rigs at once.",
-  "compute_per_rig": {
-    "pc": "Ryzen 7 9700X + Zotac RTX 5070 Ti (₹2,51,995)",
-    "monitors": "3× Samsung Odyssey G5 32\" (₹72,000)",
-    "total_compute": "₹3,23,995"
-  },
-  "bom_costs_landed": {
-    "Formula_GT": "₹4,84,745/rig",
-    "Rally_GT_static": "₹5,38,745/rig",
-    "Motion": "₹9,08,745/rig",
-    "fleet_total": "₹44,63,960"
+
+  "open_questions": [
+    "Entry level hardware spec — wheelbase/pedals/wheel brand and model (SIM-01, SIM-02)",
+    "Triple 45\" monitor model for SIM-08 hero rig",
+    "Standard rig pedal split — confirm which 3 of 5 get VNM 3-pedal vs Apex 2-pedal",
+    "SIM-01 vs SIM-02 facing direction — confirm which label is south-facing, which is north-facing"
+  ],
+
+  "kiosk_deploy_note": "Per rig: open kiosk_url in browser, F11 fullscreen, set as startup tab. First launch: tick 'Always allow' on Content Manager protocol dialog. Server IPs go in worker/src/kiosk.ts KIOSK_CONFIG — one deploy updates all 8 rigs at once.",
+
+  "electrical_ref": {
+    "drawing": "90873 - MR.THAMBU RACE SIMS - ELECTRICAL LAYOUT - 19.06.2026",
+    "architect": "Studio62 (studio62.design@gmail.com)",
+    "ups": "10 KV UPS at north/storage corner",
+    "ac": "Four-way cassette ACs + split ACs per legend",
+    "wifi": "2x WiFi routers shown (reception area + interior)"
   }
 }

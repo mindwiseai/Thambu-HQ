@@ -48,7 +48,18 @@ Property **locked** in **Nungambakkam** (central Chennai); opens **July 2026**. 
 - **Fit-out ₹16.1L (room-only — brand-new building has power + fire in place):** AC 8T + in-room electrical/UPS + solar film/blinds + flooring + black ceiling/wall paint (exposed look) + acoustic + lighting + glass office partition + reception/coffee + furniture + branding (name boards at cost) + value TVs + simple networking + audio + CCTV + biometric access + mobile billing. Full breakdown in the archived `racesims-chennai-project-report-distributor.pdf`. *(This ₹16.1L is the original distributor-report estimate; the primary report now runs a re-sourced **₹14.20L** schedule — [[racesims-chennai-fitout]].)*
 - **AC:** calculated ~6 T peak; install **8 T**. **Exposed black ceiling (no false ceiling) → NO cassettes** — use **ceiling-suspended (slab-mount) or heavy-duty high-wall inverter units**. Glazing solar gain is the swing factor (solar film + blinds). See [[racesims-chennai-execution-plan]] HVAC note.
 
-### Floor fit (v7 — Vastu-oriented · LOCKED · compass corrected 2026-05-31)
+### Floor fit (v8 — Studio62 electrical layout 19.06.2026 · SUPERSEDES v7)
+
+> [!important] Layout revised 2026-06-19. Studio62 (Project 90873) electrical drawings confirm a new rig arrangement — different from the v7 L-shape. Config of record: `racesims/ierl/config/centres/racesims-chennai.json`.
+>
+> | Rig | SIM # | Tier | Facing | Monitors |
+> |-----|--------|------|--------|----------|
+> | 1 | SIM-01 | Entry Level | South | Triple 27" |
+> | 2 | SIM-02 | Entry Level | North | Triple 27" |
+> | 3–7 | SIM-03 to SIM-07 | Standard | East (row of 5) | Triple 32" |
+> | 8 | SIM-08 | Hero (Motion) | West wall | Triple 45" |
+
+### Floor fit (v7 — superseded · compass corrected 2026-05-31)
 > [!note] Direction correction (2026-05-31): the earlier compass was inverted — what was labelled **North is actually South** (a 180° flip: N↔S **and** E↔W). The **physical room layout is unchanged and remains Vastu-correct**; only the cardinal labels were wrong. All directions below are the corrected, true ones. The plan image's top edge is **South**.
 
 Plan view, image-top = **South**. **Entrance WEST · office/training SOUTH-WEST corner · motion rig faces SOUTH.** 7 static rigs along the **east wall** + **north wall**, **all screens against the walls** (drivers face out, backs to the room for spectating); motion hero at the south wall by the office. Reception + small coffee counter on the **west wall** by the entrance; two washroom doors west-north (kept clear); lounge centre; leaderboard south wall; perimeter windows east/north. Room **8.73 m E–W × 12.15 m N–S** (extents unchanged). SuperLap look (pendant lamps, cream + carpet, steel reception). See `racesims-chennai-floorplan.png` / `racesims-chennai-3d.html` *(floorplan PNG compass labels pending regeneration — flagged below)*.
