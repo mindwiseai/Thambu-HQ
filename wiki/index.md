@@ -100,6 +100,9 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ### Chennai Flagship Centre
 - [[racesims-chennai-flagship]] ⭐ — ₹66L flagship venue, 6 seats, 1,800 sqft, Y1 EBITDA ₹32L
 - [[racesims-championship-architecture]] — 4-layer competition season + Grand Final
+- [[ierl]] ⭐ — Indian Esports Racing League: monthly sim racing league, ₹1L prize pool, sim-to-reality vision
+- [[ierl-prize-pool-formula]] — ₹1,00,000 ÷ total rigs formula; per-rig cost drops as network grows
+- [[ierl-sim-to-reality]] — hot lap → championship → winner drives real race car pathway
 - [[racesims-the-ladder]] ⭐⭐ — sim-to-reality pathway, ARKA + Polo Cup Real-Drive Prizes
 - [[racesims-vms-build]] — custom Venue Management Software platform
 - [[racesims-revenue-stack]] — 6 adjacencies (AMC, Junior Academy, Merch, Coaching/Engineering, Karting, College)
@@ -225,6 +228,10 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 ### Racing ecosystem (the moat proof)
 - [[arka-motorsports]] ⭐ — Thambu's active racing team
 - [[mr-leela-krishnan]] — ARKA boss, design mentor
+- [[ierl]] ⭐ — Indian Esports Racing League (brand + league entity)
+- [[racing-point-esports]] — Uday's Hyderabad centre, 10 rigs, leads VMS + hot lap execution
+- [[uday]] — RPE operator; VMS software creator; IERL technical lead
+- [[buzzing-hornet-motorsports]] — Chennai, VW Polo Cup car, real-world track experiences
 
 ### RaceSims dealer network
 - [[raghav-coimbatore-dealer]] — Coimbatore
@@ -289,6 +296,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[2026-ctd-module-2.4-nonclinical-overview]]
 
 ### RaceSims
+- [[2026-06-19-ierl-july-launch]] — IERL July 2026 launch: RPE joins, ₹1L formula, sim-to-reality, partner WhatsApp
 - [[2026-06-18-dispatch-amendments]] ⭐ — all 5 dispatch orders unblocked; Garvish+Studio deferred; Ragav/Davlish/Asif order swaps; Ares 12nm only open import need
 - [[2026-06-16-dispatch-pipeline-session]] ⭐ — full dispatch planning: 5 orders, 7 B2B quotes, stock × PO matrix, 11 shortfalls
 - [[2026-06-16-qt-000370-davlish-updated]] — Davlish's revised quote (supersedes QT-000348), 3 rigs ₹5.5L
