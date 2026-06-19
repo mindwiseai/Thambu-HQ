@@ -16,6 +16,7 @@ Most recently touched context. Read this first for any query — it often answer
 - **Waiting on:** (1) Selvam's availability in coming week (2) Chennai office address for lighting/setup planning.
 - **Action items:** (1) Review 9 scripts → select 7 (2) Selvam adds personal touches to scripts (3) Share shoot availability dates (4) Provide Chennai office address (5) Lock shoot date this week.
 - **Email:** 2026-06-18 18:22 UTC, Shivank → Shivendra (cc: Jay, Vishnu, Selvam, Thambu, mindwise.ai1@gmail.com).
+- **Attachment:** Mindwise-Octupie-Onboarding.pdf (signed contract, executed by both parties)
 - Source: [[2026-06-18-octupie-scripts-delivered]]
 
 ## 2026-06-19 — IERL July launch planning · 27 rigs · ₹1L prize pool · sim-to-reality
