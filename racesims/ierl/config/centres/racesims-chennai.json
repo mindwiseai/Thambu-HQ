@@ -203,9 +203,15 @@
       "position": "position 5 of 5 in east row",
 
       "pc": {
-        "status": "IN STOCK ✓ — existing full PC",
-        "gpu": "Nvidia RTX 5070 Ti",
-        "note": "Existing full build — use as-is for this position"
+        "status": "BUILD NEW",
+        "cpu": "AMD Ryzen 9 9800X3D",
+        "motherboard": "Gigabyte B850 Gaming X WiFi 6",
+        "gpu": "Nvidia RTX 5080 (incoming ✓)",
+        "ram": "32GB (2× 16GB DDR5 6000MHz)",
+        "storage": "1TB M.2 Gen4 NVMe SSD",
+        "psu": "Corsair RM1000x",
+        "cooling": "360mm AIO",
+        "case": "Corsair 3500X"
       },
 
       "wheelbase": { "model": "Conspit Ares 12Nm", "status": "PROCURE" },
@@ -266,19 +272,19 @@
         "status": "IN STOCK ✓ — existing PC",
         "cpu": "AMD Ryzen 7 5700-series",
         "gpu": "Nvidia RTX 4070",
-        "note": "Existing build — use for entry rig. Lower spec but fine for 27\" triple at entry-level pricing."
+        "note": "Existing build — confirmed fully stocked including wheel and pedals"
       },
 
       "wheelbase": { "model": "Fanatec 8Nm #2", "status": "IN STOCK ✓" },
-      "wheel": { "model": "Fanatec-compatible wheel", "status": "PROCURE" },
-      "pedals": { "model": "Entry-level pedals — Fanatec CSL or equivalent", "status": "PROCURE" },
+      "wheel": { "model": "Fanatec-compatible wheel", "status": "IN STOCK ✓" },
+      "pedals": { "model": "Entry-level pedals — Fanatec CSL", "status": "IN STOCK ✓" },
       "motion": null,
 
       "monitors": {
-        "count": 3,
-        "size_inches": 27,
-        "model": "TBD",
-        "status": "PROCURE (3× 27\" needed)"
+        "count": 1,
+        "size_inches": 34,
+        "model": "Samsung 34\" curved (ultrawide)",
+        "status": "IN STOCK ✓"
       },
 
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=2"
@@ -296,9 +302,9 @@
       "Fanatec 8Nm #2 → SIM-02",
       "3× Samsung 32\" G6 NOS (triple set) → SIM-03",
       "3× Samsung 32\" G5 NOS (triple set) → SIM-04",
-      "1× Samsung 34\" curved → UNASSIGNED (hero confirmed triple 45\" — repurpose as studio display)",
-      "Full PC RTX 5070 Ti (existing build) → SIM-07",
-      "Full PC Ryzen 5700 + RTX 4070 (existing build) → SIM-02"
+      "1× Samsung 34\" curved → SIM-02 monitor (in stock)",
+      "Full PC Ryzen 5700 + RTX 4070 (existing build) → SIM-02",
+      "RTX 5080 (incoming) → SIM-07 GPU"
     ]
   },
 
