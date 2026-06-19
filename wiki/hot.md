@@ -1,12 +1,21 @@
 ---
 title: Hot Cache
 type: meta
-updated: 2026-06-19
+updated: 2026-06-20
 ---
 
 # Hot Cache
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
+
+## 2026-06-20 — Command Center inbox: 1 actionable (Octupie scripts — 5 actions pending)
+
+- **Inbox status:** 201 unread (Gmail mindwise.ai1@gmail.com), but only **1 actionable item** requiring attention.
+- **🔴 ACTIONABLE:** [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] from [[shivank-goura]] (2026-06-18 18:22) — **5 actions still pending:** (1) Review 9 scripts → select 7 best for trial batch (2) [[thambu|Selvam]] adds personal lines/memories/corrections ("His voice is the whole point") (3) Share Selvam's availability this coming week (4) Provide Chennai office address for lighting/setup (5) Lock shoot date this week.
+- **Ready to shoot:** ✅ Lights arrived ✅ Signed contract (Mindwise-Octupie-Onboarding.pdf) ✅ Team ready (Jay, Vishnu, Shivank).
+- **Google Doc:** https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing
+- **Other unread:** All non-actionable — promotional emails (OpenAI ×3, Anthropic ×2, Google ×2, Framer, Apify), meeting invites (already processed), duplicates, GitHub Pages deploy failure (logged 2026-06-19).
+- Source: [[2026-06-20-command-center-inbox-check]]
 
 ## 2026-06-19 — Octupie scripts delivered · 9 scripts for Mindwise trial batch · shoot this week
 
