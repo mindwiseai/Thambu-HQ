@@ -112,7 +112,7 @@
       },
 
       "wheelbase": { "model": "Conspit Ares 12Nm", "status": "PROCURE" },
-      "wheel": { "model": "Conspit 300GT", "status": "PROCURE" },
+      "wheel": { "model": "Conspit Max 01 (high-end)", "status": "IN STOCK ✓" },
       "pedals": { "model": "Conspit Apex 2-pedal or VNM 3-pedal", "status": "PROCURE" },
       "motion": null,
 
@@ -333,7 +333,6 @@
   },
 
   "open_questions": [
-    "Max 01 — is this a wheelbase or a wheel? Which rig does it go on?",
     "Standard rig pedal split (SIM-04/05/06/07): Conspit Apex 2-pedal or VNM 3-pedal?",
     "Fanatec wheels (SIM-01/02): which Fanatec-compatible steering wheels?"
   ],
