@@ -47,10 +47,11 @@
 
       "monitors": {
         "count": 3,
-        "size_inches": "34 or 45",
-        "status": "1× Samsung 34\" curved IN STOCK — need 2 more (see open questions)",
-        "note": "Options: (A) Triple 34\" — buy 2 more Samsung 34\"; (B) 34\" center + 2× 32\" G6 flanking; (C) Triple 45\" per original spec — buy 3 new"
+        "size_inches": 45,
+        "model": "TBD — triple 45\" curved",
+        "status": "PROCURE (3× needed)"
       },
+      "monitors_note": "Samsung 34\" curved (1 unit in stock) is UNASSIGNED — repurpose as studio display or secondary screen",
 
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=8"
     },
@@ -295,7 +296,7 @@
       "Fanatec 8Nm #2 → SIM-02",
       "3× Samsung 32\" G6 NOS (triple set) → SIM-03",
       "3× Samsung 32\" G5 NOS (triple set) → SIM-04",
-      "1× Samsung 34\" curved → SIM-08 (1 of 3 needed — see open questions)",
+      "1× Samsung 34\" curved → UNASSIGNED (hero confirmed triple 45\" — repurpose as studio display)",
       "Full PC RTX 5070 Ti (existing build) → SIM-07",
       "Full PC Ryzen 5700 + RTX 4070 (existing build) → SIM-02"
     ]
@@ -317,7 +318,7 @@
     "monitors": [
       "9× Samsung 32\" curved for SIM-05, 06, 07 (3 each)",
       "6× 27\" monitors for SIM-01, SIM-02 (3 each)",
-      "HERO (SIM-08) — DECISION NEEDED: (A) 2× more Samsung 34\" to make triple 34\"; (B) 34\" center + 2× 32\" flanking; (C) 3× 45\" as per original spec"
+      "3× 45\" monitors for SIM-08 hero rig — PROCURE"
     ],
     "pcs_to_build": [
       "1× Hero — 9800X3D + RTX 5080 (RM1200x, 360AIO, B850, 3500X)",
@@ -327,10 +328,10 @@
   },
 
   "open_questions": [
-    "Hero monitor (SIM-08): Triple 34\", mixed 34\"+32\", or triple 45\"? Decide before procurement.",
+    "SC2 Pro QR confirmed — which wheel rim to pair? (Cube Controls, OMP SQR hub + rim, or other SQR-compatible)",
     "Standard rig pedal split (SIM-04/05/06/07): how many get VNM 3-pedal + shifter vs Apex 2-pedal only?",
-    "SC2 Pro wheel (SIM-08): what wheel to pair with the Simucube 2 Pro? Note: 290GP is Conspit hub, not compatible without adapter.",
-    "Fanatec wheels (SIM-01/02): which Fanatec steering wheels?"
+    "Fanatec wheels (SIM-01/02): which Fanatec-compatible steering wheels?",
+    "Samsung 34\" curved (1 unit in stock, unassigned): studio display, reception, or sell?"
   ],
 
   "kiosk_deploy_note": "Per rig: open kiosk_url in browser, F11 fullscreen, set as startup tab. Server IPs go in worker/src/kiosk.ts KIOSK_CONFIG — one deploy updates all 8 rigs.",
