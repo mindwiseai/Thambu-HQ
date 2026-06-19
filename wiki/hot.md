@@ -8,13 +8,13 @@ updated: 2026-06-16
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-19 — Octupie video scripts ready for Mindwise trial batch
+## 2026-06-19 — Octupie ready to shoot · scripts + lights + contract complete
 
-- **[[octupie]]** delivered **9 video scripts** for [[mindwise]] trial batch (pick 7 best). Google Doc with edit access: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing
-- **Hook-first format:** First line of each script = hook (straight to camera). [[shivank-goura]] directive: "Selvam's voice is the whole point" — edit freely, add [[thambu|Selvam]]'s own lines/memories/corrections for authenticity.
-- **Shoot ready:** Lights arrived ✅. Signed contract (Mindwise-Octupie-Onboarding.pdf) ✅. Location: Chennai office (address needed). Date: coming week (awaiting Selvam's availability).
-- **Action items:** (1) Review scripts, select 7 from 9 (2) Selvam adds personal touches (3) Share shoot availability (4) Provide Chennai office address (5) Confirm date.
-- New: [[mindwise-video-content-strategy]] created. Source: [[2026-06-18-octupie-scripts-ready]]
+- **Scripts delivered:** [[octupie]] delivered **9 video scripts** for [[mindwise]] trial batch via [[shivank-goura]] (pick 7 best). Edit access: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing
+- **Hook-first format:** First line = hook (straight to camera). Shivank: "**Selvam's voice is the whole point**" — add [[thambu|Selvam]]'s own lines/memories/corrections for authenticity.
+- **Shoot logistics locked:** ✅ Lights arrived ✅ Signed contract (Mindwise-Octupie-Onboarding.pdf) ✅ Team ready (Jay, Vishnu, Shivank). **Waiting on:** (1) Selvam's availability in coming week (2) Chennai office address for lighting/setup planning.
+- **Action items for Thambu/Shivendra:** (1) Review 9 scripts → select 7 (2) Selvam adds personal touches to scripts (3) Share shoot availability dates (4) Provide Chennai office address (5) Lock shoot date this week.
+- Source: [[2026-06-18-scripts-ready-shoot-planning]] (email 2026-06-18, Shivank → Shivendra)
 
 ## 2026-06-18 — All 5 dispatch orders unblocked · Studio deferred · final swaps confirmed
 
