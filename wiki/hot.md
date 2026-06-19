@@ -28,14 +28,6 @@ Most recently touched context. Read this first for any query — it often answer
 - **Partner message drafted** (approved) communicating sim-to-reality vision + motorsport partnerships.
 - Source: [[2026-06-19-ierl-july-launch]] · deck: `racesims/marketing/decks/ierl-july-2026.html`
 
-## 2026-06-19 — Octupie scripts ready · shoot this week pending Selvam availability
-
-- **Scripts delivered:** [[octupie]] delivered **9 video scripts** for [[mindwise]] trial batch via [[shivank-goura]] (pick 7 best). Edit access: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing
-- **Hook-first format:** First line = hook (straight to camera). Shivank: "**Selvam's voice is the whole point**" — add [[thambu|Selvam]]'s own lines/memories/corrections for authenticity.
-- **Shoot logistics locked:** ✅ Lights arrived ✅ Signed contract (Mindwise-Octupie-Onboarding.pdf) ✅ Team ready (Jay, Vishnu, Shivank). **Waiting on:** (1) Selvam's availability in coming week (2) Chennai office address for lighting/setup planning.
-- **Action items for Thambu/Shivendra:** (1) Review 9 scripts → select 7 (2) Selvam adds personal touches to scripts (3) Share shoot availability dates (4) Provide Chennai office address (5) Lock shoot date this week.
-- Source: [[2026-06-18-scripts-ready-shoot-planning]] (email 2026-06-18, Shivank → Shivendra)
-
 ## 2026-06-18 — All 5 dispatch orders unblocked · Studio deferred · final swaps confirmed
 
 - **All dispatch orders clear:** Asif ✅ · Dhruv ✅ (collect ₹3.03L) · Amruth ✅ (recliner confirmed in stock) · Adhyan ✅ · Ragav ✅ (MAX01 → 290 GP; Conspit HB+Shifter ship separately when in stock).

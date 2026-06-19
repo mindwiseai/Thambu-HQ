@@ -9,12 +9,11 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
-## [2026-06-19] inbox-check | Command Center inbox check — Octupie scripts (deduplicated log entry)
-- Source: Gmail inbox check (mindwise.ai1@gmail.com, 6 unread threads last 3 days)
-- Created: 1 inbox file — `command-center/inbox/2026-06-19-command-center-check.md`
-- Updated: [[log]]
+## [2026-06-19] inbox-check | Command Center inbox check — Octupie scripts (duplicates cleaned)
+- Source: Gmail inbox check (mindwise.ai1@gmail.com, 4 unread messages since 2026-06-18)
+- Updated: [[log]], [[hot]] (duplicates removed), removed 2 duplicate source files
 - Domain: cross
-- Key finding: **Octupie scripts delivery already processed** (see entry below from earlier today). Duplicate inbox entries cleaned. No new actionable messages. Next check recommended: 2026-06-20 morning.
+- Key finding: **Octupie scripts delivery already processed** (earlier today). Cleaned 3 duplicate source files → kept [[2026-06-18-octupie-scripts-delivered]]. Cleaned duplicate hot.md entries. OpenAI ChatGPT marketing email (not actionable). No new work items.
 
 ## [2026-06-19] ingest | Octupie scripts delivered — 9 scripts for Mindwise trial batch
 - Source: [[2026-06-18-octupie-scripts-delivered]] (Gmail thread 19edbf8deec6d8ca, shivank@octupie.com → shiv_selvam@hotmail.com, 2026-06-18 18:22 UTC)
@@ -29,13 +28,6 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 - Updated: [[hot]] (new 2026-06-19 entry) · [[log]] · [[index]] (IERL entities + concepts added)
 - Domain: racesims
 - Key facts: July network 7 centres / 27 rigs. Prize pool formula: ₹1,00,000 ÷ total rigs (July: ₹3,704/rig; Aug preview: 35 rigs → ₹2,857/rig). ARKA Motorsports: 4 rally/race cars for sim-to-reality program. Buzzing Hornet: VW Polo Cup track experiences (Chennai). Track/car combo now chosen monthly by Uday. Partner WhatsApp message drafted (approved). Eligibility: triple monitor + 12Nm load cell + VMS + vision alignment.
-
-## [2026-06-19] ingest | Command Center inbox check — Octupie scripts ready
-- Source: [[2026-06-18-octupie-scripts-ready]] (Gmail thread from shivank@octupie.com, 2026-06-18)
-- Created: 1 new source page — [[2026-06-18-octupie-scripts-ready]]
-- Updated: [[hot]] (refreshed 2026-06-19 entry), [[log]]
-- Domain: mindwise
-- Key facts: **9 video scripts delivered** via Google Doc (edit access: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit). **Select 7 for trial batch.** ✅ Lights arrived ✅ Signed contract (Mindwise-Octupie-Onboarding.pdf) ✅ Team ready (Jay, Vishnu, Shivank). **Hook-first format** (first line straight to camera). Shivank: "**Selvam's voice is the whole point**" — add personal lines/memories for authenticity. **Action items:** (1) Selvam's shoot availability in coming week (2) Chennai office address for lighting/setup planning (3) Lock shoot date this week.
 
 ## [2026-06-18] ingest | Dispatch amendments session — all orders unblocked
 - Source: [[2026-06-18-dispatch-amendments]]
