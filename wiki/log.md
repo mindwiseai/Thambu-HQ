@@ -11,8 +11,8 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ## [2026-06-19] ingest | IERL July 2026 launch planning — 27 rigs, ₹1L prize pool, sim-to-reality
 - Source: [[2026-06-19-ierl-july-launch]] (planning deck: `racesims/marketing/decks/ierl-july-2026.html`)
-- Created: 6 new pages — [[ierl]] (entity) · [[uday]] (entity) · [[racing-point-esports]] (entity) · [[buzzing-hornet-motorsports]] (entity) · [[ierl-prize-pool-formula]] (concept) · [[ierl-sim-to-reality]] (concept)
-- Updated: [[hot]] (new 2026-06-19 entry), [[log]]
+- Created: 7 new pages — [[2026-06-19-ierl-july-launch]] (source) · [[ierl]] (entity) · [[uday]] (entity) · [[racing-point-esports]] (entity) · [[buzzing-hornet-motorsports]] (entity) · [[ierl-prize-pool-formula]] (concept) · [[ierl-sim-to-reality]] (concept)
+- Updated: [[hot]] (new 2026-06-19 entry) · [[log]] · [[index]] (IERL entities + concepts added)
 - Domain: racesims
 - Key facts: July network 7 centres / 27 rigs. Prize pool formula: ₹1,00,000 ÷ total rigs (July: ₹3,704/rig; Aug preview: 35 rigs → ₹2,857/rig). ARKA Motorsports: 4 rally/race cars for sim-to-reality program. Buzzing Hornet: VW Polo Cup track experiences (Chennai). Track/car combo now chosen monthly by Uday. Partner WhatsApp message drafted (approved). Eligibility: triple monitor + 12Nm load cell + VMS + vision alignment.
 
