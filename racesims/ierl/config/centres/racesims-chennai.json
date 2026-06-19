@@ -1,5 +1,5 @@
 {
-  "_source": "Studio62 electrical layout 19.06.2026 (Project No. 90873) — supersedes earlier wiki floor plan",
+  "_source": "Studio62 electrical layout 19.06.2026 (Project No. 90873) · PC specs confirmed 2026-06-19",
   "centre": "racesims-chennai",
   "name": "RaceSims Chennai",
   "city": "Chennai",
@@ -10,11 +10,50 @@
   "total_area_sqft": 1146.6,
 
   "floor_plan": {
-    "note": "Sim numbers match architectural drawing labels (SIMULATOR-01 through SIMULATOR-08)",
-    "east_row": "SIM-03 to SIM-07 — 5 rigs in a row, drivers facing east, triple 32\" monitors, screens against/toward east",
-    "west_wall_hero": "SIM-08 — hero island, driver faces west wall, triple 45\" monitors, 3-DOF motion platform",
+    "note": "Sim numbers match Studio62 architectural drawing labels (SIMULATOR-01 through SIMULATOR-08)",
+    "east_row": "SIM-03 to SIM-07 — 5 rigs in a row, drivers facing east, triple 32\" monitors",
+    "west_wall_hero": "SIM-08 — hero island, driver faces west wall, triple 45\" monitors, 3-DOF motion",
     "entry_south": "SIM-01 — entry level, driver faces south, triple 27\" monitors",
     "entry_north": "SIM-02 — entry level, driver faces north, triple 27\" monitors"
+  },
+
+  "pc_specs": {
+    "hero": {
+      "label": "Hero PC — SIM-08",
+      "cpu": "AMD Ryzen 9 9800X3D",
+      "motherboard": "Gigabyte B850 Gaming X WiFi 6",
+      "gpu": "Nvidia RTX 5080",
+      "ram": "32GB (2× 16GB DDR5 6000MHz)",
+      "storage": "1TB M.2 Gen4 NVMe SSD",
+      "psu": "Corsair RM1200x",
+      "cooling": "360mm AIO liquid cooler",
+      "case": "Corsair 3500X",
+      "qty": 1
+    },
+    "pro": {
+      "label": "Pro PC — SIM-03 to SIM-07",
+      "cpu": "AMD Ryzen 9 9800X3D",
+      "motherboard": "Gigabyte B850 Gaming X WiFi 6",
+      "gpu": "Nvidia RTX 5070 Ti",
+      "ram": "32GB (2× 16GB DDR5 6000MHz)",
+      "storage": "1TB M.2 Gen4 NVMe SSD",
+      "psu": "Corsair RM850x",
+      "cooling": "360mm AIO liquid cooler",
+      "case": "Corsair 3500X",
+      "qty": 5
+    },
+    "entry": {
+      "label": "Entry PC — SIM-01, SIM-02",
+      "cpu": "AMD Ryzen 7 9700",
+      "motherboard": "Gigabyte B850 Gaming X WiFi 6",
+      "gpu": "Nvidia RTX 5070",
+      "ram": "32GB (2× 16GB DDR5 6000MHz)",
+      "storage": "1TB M.2 Gen4 NVMe SSD",
+      "psu": "Corsair RM850x",
+      "cooling": "360mm AIO liquid cooler",
+      "case": "Corsair 3500X",
+      "qty": 2
+    }
   },
 
   "rigs": [
@@ -24,6 +63,7 @@
       "tier": "Entry Level",
       "facing": "south",
       "monitors": { "count": 3, "size_inches": 27, "model": "TBD" },
+      "pc": "entry",
       "hardware": {
         "wheelbase": "TBD — entry level",
         "wheel": "TBD",
@@ -40,6 +80,7 @@
       "tier": "Entry Level",
       "facing": "north",
       "monitors": { "count": 3, "size_inches": 27, "model": "TBD" },
+      "pc": "entry",
       "hardware": {
         "wheelbase": "TBD — entry level",
         "wheel": "TBD",
@@ -55,14 +96,15 @@
       "rig": 3,
       "tier": "Standard",
       "facing": "east",
-      "position": "easternmost of the 5-rig row",
+      "position": "position 1 of 5 in east row",
       "monitors": { "count": 3, "size_inches": 32, "model": "Samsung Odyssey G5 32\"" },
+      "pc": "pro",
       "hardware": {
         "wheelbase": "Conspit Ares 12Nm",
         "wheel": "Conspit 300GT",
-        "pedals": "Conspit Apex 2-pedal (brake + throttle)",
-        "shifter": null,
-        "handbrake": null,
+        "pedals": "TBD — Apex 2-pedal or VNM 3-pedal",
+        "shifter": "TBD",
+        "handbrake": "TBD",
         "motion": null
       },
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=3"
@@ -72,13 +114,15 @@
       "rig": 4,
       "tier": "Standard",
       "facing": "east",
+      "position": "position 2 of 5 in east row",
       "monitors": { "count": 3, "size_inches": 32, "model": "Samsung Odyssey G5 32\"" },
+      "pc": "pro",
       "hardware": {
         "wheelbase": "Conspit Ares 12Nm",
         "wheel": "Conspit 300GT",
-        "pedals": "VNM 3-pedal (brake + throttle + clutch)",
-        "shifter": "VNM sequential shifter",
-        "handbrake": "VNM handbrake",
+        "pedals": "TBD — Apex 2-pedal or VNM 3-pedal",
+        "shifter": "TBD",
+        "handbrake": "TBD",
         "motion": null
       },
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=4"
@@ -88,14 +132,15 @@
       "rig": 5,
       "tier": "Standard",
       "facing": "east",
-      "position": "centre of the 5-rig row",
+      "position": "position 3 of 5 in east row (centre)",
       "monitors": { "count": 3, "size_inches": 32, "model": "Samsung Odyssey G5 32\"" },
+      "pc": "pro",
       "hardware": {
         "wheelbase": "Conspit Ares 12Nm",
         "wheel": "Conspit 300GT",
-        "pedals": "Conspit Apex 2-pedal (brake + throttle)",
-        "shifter": null,
-        "handbrake": null,
+        "pedals": "TBD — Apex 2-pedal or VNM 3-pedal",
+        "shifter": "TBD",
+        "handbrake": "TBD",
         "motion": null
       },
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=5"
@@ -105,13 +150,15 @@
       "rig": 6,
       "tier": "Standard",
       "facing": "east",
+      "position": "position 4 of 5 in east row",
       "monitors": { "count": 3, "size_inches": 32, "model": "Samsung Odyssey G5 32\"" },
+      "pc": "pro",
       "hardware": {
         "wheelbase": "Conspit Ares 12Nm",
         "wheel": "Conspit 300GT",
-        "pedals": "VNM 3-pedal (brake + throttle + clutch)",
-        "shifter": "VNM sequential shifter",
-        "handbrake": "VNM handbrake",
+        "pedals": "TBD — Apex 2-pedal or VNM 3-pedal",
+        "shifter": "TBD",
+        "handbrake": "TBD",
         "motion": null
       },
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=6"
@@ -121,14 +168,15 @@
       "rig": 7,
       "tier": "Standard",
       "facing": "east",
-      "position": "westernmost of the 5-rig row",
+      "position": "position 5 of 5 in east row",
       "monitors": { "count": 3, "size_inches": 32, "model": "Samsung Odyssey G5 32\"" },
+      "pc": "pro",
       "hardware": {
         "wheelbase": "Conspit Ares 12Nm",
         "wheel": "Conspit 300GT",
-        "pedals": "Conspit Apex 2-pedal (brake + throttle)",
-        "shifter": null,
-        "handbrake": null,
+        "pedals": "TBD — Apex 2-pedal or VNM 3-pedal",
+        "shifter": "TBD",
+        "handbrake": "TBD",
         "motion": null
       },
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=7"
@@ -140,6 +188,7 @@
       "facing": "west wall",
       "position": "island unit — hero centrepiece",
       "monitors": { "count": 3, "size_inches": 45, "model": "TBD — premium large-format curved" },
+      "pc": "hero",
       "hardware": {
         "wheelbase": "Conspit Ares 12Nm",
         "wheel": "Conspit 300GT",
@@ -149,7 +198,7 @@
         "motion": "VNM 3-DOF motion platform"
       },
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=8",
-      "notes": "Motion surcharge +₹500/hr. Same IERL kiosk classes — motion is a rig upgrade, not a separate IERL class."
+      "notes": "Motion surcharge +₹500/hr. RTX 5080 drives triple 45\" at full fidelity."
     }
   ],
 
@@ -160,10 +209,11 @@
   },
 
   "open_questions": [
-    "Entry level hardware spec — wheelbase/pedals/wheel brand and model (SIM-01, SIM-02)",
-    "Triple 45\" monitor model for SIM-08 hero rig",
-    "Standard rig pedal split — confirm which 3 of 5 get VNM 3-pedal vs Apex 2-pedal",
-    "SIM-01 vs SIM-02 facing direction — confirm which label is south-facing, which is north-facing"
+    "Entry level sim hardware — wheelbase/wheel/pedals for SIM-01, SIM-02",
+    "Triple 27\" monitor model for entry rigs (SIM-01, SIM-02)",
+    "Triple 45\" monitor model for hero rig (SIM-08)",
+    "Standard rig (SIM-03 to SIM-07) pedal split — how many get VNM 3-pedal vs Apex 2-pedal",
+    "SIM-01 vs SIM-02 facing direction — confirm from drawing which label is south-facing"
   ],
 
   "kiosk_deploy_note": "Per rig: open kiosk_url in browser, F11 fullscreen, set as startup tab. First launch: tick 'Always allow' on Content Manager protocol dialog. Server IPs go in worker/src/kiosk.ts KIOSK_CONFIG — one deploy updates all 8 rigs at once.",
@@ -171,8 +221,8 @@
   "electrical_ref": {
     "drawing": "90873 - MR.THAMBU RACE SIMS - ELECTRICAL LAYOUT - 19.06.2026",
     "architect": "Studio62 (studio62.design@gmail.com)",
-    "ups": "10 KV UPS at north/storage corner",
+    "ups": "10KV UPS at north/storage corner",
     "ac": "Four-way cassette ACs + split ACs per legend",
-    "wifi": "2x WiFi routers shown (reception area + interior)"
+    "wifi": "2× WiFi routers (reception area + interior)"
   }
 }
