@@ -1,14 +1,14 @@
 ---
 title: Hot Cache
 type: meta
-updated: 2026-06-16
+updated: 2026-06-19
 ---
 
 # Hot Cache
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-19 — Octupie ready to shoot · scripts + lights + contract complete
+## 2026-06-19 — Octupie scripts ready · shoot this week pending Selvam availability
 
 - **Scripts delivered:** [[octupie]] delivered **9 video scripts** for [[mindwise]] trial batch via [[shivank-goura]] (pick 7 best). Edit access: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing
 - **Hook-first format:** First line = hook (straight to camera). Shivank: "**Selvam's voice is the whole point**" — add [[thambu|Selvam]]'s own lines/memories/corrections for authenticity.

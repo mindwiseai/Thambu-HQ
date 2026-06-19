@@ -9,12 +9,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
-## [2026-06-19] ingest | Octupie ready to shoot — scripts + lights + contract complete
-- Source: [[2026-06-18-scripts-ready-shoot-planning]] (Gmail thread from shivank@octupie.com, 2026-06-18)
-- Created: 1 new source page — [[2026-06-18-scripts-ready-shoot-planning]]
-- Updated: [[hot]] (updated 2026-06-19 entry with latest logistics), [[log]]
+## [2026-06-19] ingest | Command Center inbox check — Octupie scripts ready
+- Source: [[2026-06-18-octupie-scripts-ready-shoot-planning]] (Gmail thread from shivank@octupie.com, 2026-06-18)
+- Created: 1 new source page — [[2026-06-18-octupie-scripts-ready-shoot-planning]]
+- Updated: [[hot]] (refreshed 2026-06-19 entry), [[log]]
 - Domain: mindwise
-- Key facts: **9 video scripts delivered** via Google Doc (edit access: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit). **Select 7 for trial batch.** ✅ Lights arrived ✅ Signed contract (Mindwise-Octupie-Onboarding.pdf) ✅ Team ready (Jay, Vishnu, Shivank). **Hook-first format** (first line straight to camera). Shivank: "**Selvam's voice is the whole point**" — add personal lines/memories for authenticity. **Waiting on:** (1) Selvam's shoot availability in coming week (2) Chennai office address for lighting/setup planning. Lock shoot date this week.
+- Key facts: **9 video scripts delivered** via Google Doc (edit access: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit). **Select 7 for trial batch.** ✅ Lights arrived ✅ Signed contract (Mindwise-Octupie-Onboarding.pdf) ✅ Team ready (Jay, Vishnu, Shivank). **Hook-first format** (first line straight to camera). Shivank: "**Selvam's voice is the whole point**" — add personal lines/memories for authenticity. **Action items:** (1) Selvam's shoot availability in coming week (2) Chennai office address for lighting/setup planning (3) Lock shoot date this week.
 
 ## [2026-06-19] ingest | Octupie video scripts ready
 - Source: [[2026-06-18-octupie-scripts-ready]] (Gmail thread from shivank@octupie.com, 2026-06-18)
