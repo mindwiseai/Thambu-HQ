@@ -9,70 +9,10 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
-## [2026-06-20] inbox-check | Command Center inbox check — 2026-06-20 afternoon #2 (1 actionable: Octupie scripts)
-- Source: Gmail inbox check (mindwise.ai1@gmail.com, 4 unread)
-- Domain: cross
-- Key finding: **Same 1 actionable item still pending** — [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] from [[shivank-goura]] (2026-06-18) with **5 outstanding actions**: (1) Review 9 scripts → select 7 best for trial batch (2) [[thambu|Selvam]] adds personal lines/memories/corrections (3) Share Selvam's availability for shoot this week (4) Provide Chennai office address for lighting/setup (5) Lock shoot date. ✅ Ready: Lights arrived, signed contract, team ready (Jay, Vishnu, Shivank). Google Doc: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit. **GitHub Pages failures**: 2 deploy failures on 2026-06-19 (8:39 PM and 12:18 PM both failed) — needs investigation.
-
-## [2026-06-20] inbox-check | Command Center inbox check — 2026-06-20 night (1 actionable still pending: Octupie scripts)
-- Source: Gmail inbox check (mindwise.ai1@gmail.com, 6 unread)
-- Domain: cross
-- Key finding: **Same 1 actionable item still pending** — [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] from [[shivank-goura]] (2026-06-18) with **5 outstanding actions**: (1) Review 9 scripts → select 7 best for trial batch (2) [[thambu|Selvam]] adds personal lines/memories/corrections (3) Share Selvam's availability for shoot this week (4) Provide Chennai office address for lighting/setup (5) Lock shoot date. ✅ Ready: Lights arrived, signed contract, team ready (Jay, Vishnu, Shivank). Google Doc: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit. **GitHub Pages:** Deploy failures from June 19 now resolved (all recent runs successful). **All other unread = non-actionable:** OpenAI promotional.
-
-## [2026-06-20] inbox-check | Command Center inbox check — 2026-06-20 afternoon (1 actionable still pending: Octupie scripts)
-- Source: Gmail inbox check (mindwise.ai1@gmail.com, 7 unread)
-- Domain: cross
-- Key finding: **Same 1 actionable item still pending** — [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] from [[shivank-goura]] (2026-06-18) with **5 outstanding actions**: (1) Review 9 scripts → select 7 best for trial batch (2) [[thambu|Selvam]] adds personal lines/memories/corrections (3) Share Selvam's availability for shoot this week (4) Provide Chennai office address for lighting/setup (5) Lock shoot date. ✅ Ready: Lights arrived, signed contract, team ready (Jay, Vishnu, Shivank). Google Doc: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit. **All other unread = non-actionable:** GitHub Pages deploy failures (×2, already logged), OpenAI/Framer promotional emails.
-
-## [2026-06-20] inbox-check | Command Center inbox check — 2026-06-20 morning (1 actionable: Mindwise script review from Shivank)
-- Source: [[2026-06-20-command-center-inbox-check]] (Gmail inbox, mindwise.ai1@gmail.com, 201 unread)
-- Domain: cross
-- Key finding: **1 actionable item still pending** — [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (Shivank, 2026-06-18) with **5 outstanding actions**: (1) Review 9 scripts → select 7 best (2) Selvam adds personal touches (3) Share availability for shoot this week (4) Provide Chennai office address (5) Lock shoot date. Ready: ✅ Lights arrived ✅ Signed contract ✅ Team ready. All other unread = promotional (OpenAI, Anthropic, Google, Framer, Apify), meeting invites (already processed), duplicates, GitHub Pages deploy failure (already logged 2026-06-19).
-
-## [2026-06-19] inbox-check | Command Center inbox check — 2026-06-19 night (already processed)
-- Source: Gmail inbox check (mindwise.ai1@gmail.com, 5 unread threads)
-- Domain: cross
-- Key finding: **All messages already processed.** (1) GitHub Pages deploy failure (2026-06-19 12:18) — already logged in prior commits. (2) Shivank Google Doc share #2 (edit access, 08:43) — same doc as [[2026-06-18-octupie-scripts-delivered]], permissions upgrade only. (3) OpenAI ChatGPT marketing (02:42) — promotional. (4) Octupie script delivery (2026-06-18 18:22) — already ingested. (5) Shivendra forward — duplicate. **No new work items.**
-
-## [2026-06-19] inbox-check | Command Center inbox check — 2026-06-19 night status (no new messages)
-- Source: Gmail inbox check (mindwise.ai1@gmail.com, 2026-06-19 ~20:30 local time)
-- Domain: cross
-- Key finding: **GitHub Pages deploy failure logged.** Workflow "Deploy to GitHub Pages" failed on main (commit b54ae06) at 2026-06-19 12:18 UTC — all jobs failed in 26s. All other messages already processed or non-actionable (Octupie scripts ingested, marketing emails from OpenAI/Framer). **No new work items beyond deploy failure notification.**
-
-## [2026-06-19] inbox-check | Command Center inbox check — Shivank script review doc (edit access granted)
-- Source: Gmail inbox check (mindwise.ai1@gmail.com, 2026-06-19 08:43 UTC)
-- Domain: cross
-- Key finding: **No new content.** Google Doc share notification from Shivank (edit access granted, previously comment access). Same doc as [[2026-06-18-octupie-scripts-delivered]] (link: `1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw`). Permissions update only, content already ingested. No other actionable emails (OpenAI/Framer marketing, meeting forwards). **No new work items.**
-
-## [2026-06-19] inbox-check | Command Center inbox check (third check, evening — no new items)
-- Source: Gmail inbox check (mindwise.ai1@gmail.com, 6 threads since 2026-06-17)
-- Domain: cross
-- Key finding: **All messages already processed or non-actionable.** Octupie script delivery (shivank@octupie.com, 2026-06-18 18:22) — already ingested as [[2026-06-18-octupie-scripts-delivered]]. Shivendra forward + Google Doc share notification — duplicates. OpenAI ChatGPT + Framer emails — promotional. **No new work items.**
-
-## [2026-06-19] inbox-check | Command Center inbox check — Octupie scripts (second check, evening)
-- Source: Gmail inbox check (mindwise.ai1@gmail.com, 5 unread messages since 2026-06-17)
-- Domain: cross
-- Key finding: **All messages already processed or non-actionable.** (1) Octupie script delivery (shivank@octupie.com, 2026-06-18 18:22) — already ingested as [[2026-06-18-octupie-scripts-delivered]], hot.md up to date. (2) Shivendra's forward of Octupie script notification — duplicate. (3) Shivank Google Doc share notification — duplicate. (4) OpenAI ChatGPT marketing email (2026-06-19 02:42) — promotional, not actionable. (5) Framer 3.0 announcement (2026-06-17) — promotional, not actionable. **No new work items.** Gmail unlabel failed (insufficient scopes) — MCP server read-only mode.
-
-## [2026-06-19] inbox-check | Command Center inbox check — Octupie scripts (duplicates cleaned)
-- Source: Gmail inbox check (mindwise.ai1@gmail.com, 4 unread messages since 2026-06-18)
-- Updated: [[log]], [[hot]] (duplicates removed), removed 2 duplicate source files
-- Domain: cross
-- Key finding: **Octupie scripts delivery already processed** (earlier today). Cleaned 3 duplicate source files → kept [[2026-06-18-octupie-scripts-delivered]]. Cleaned duplicate hot.md entries. OpenAI ChatGPT marketing email (not actionable). No new work items.
-
-## [2026-06-19] ingest | Octupie scripts delivered — 9 scripts for Mindwise trial batch
-- Source: [[2026-06-18-octupie-scripts-delivered]] (Gmail thread 19edbf8deec6d8ca, shivank@octupie.com → shiv_selvam@hotmail.com, 2026-06-18 18:22 UTC)
-- Created: 1 new source page — [[2026-06-18-octupie-scripts-delivered]]
-- Updated: [[hot]] (new 2026-06-19 entry at top), [[log]]
-- Domain: mindwise
-- Key facts: **9 video scripts delivered** via Google Doc (https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit). **Select 7 for trial batch.** Hook-first format (first line = camera hook). Shivank: "**Selvam's voice is the whole point**" — add personal lines/memories/corrections. ✅ Lights arrived ✅ Signed contract (Mindwise-Octupie-Onboarding.pdf attached) ✅ Team ready (Jay, Vishnu, Shivank). **Waiting on:** (1) Selvam's availability this coming week (2) Chennai office address for lighting/setup. **Lock shoot date this week.**
-
-## [2026-06-19] ingest | IERL July 2026 launch planning — 27 rigs, ₹1L prize pool, sim-to-reality
-- Source: [[2026-06-19-ierl-july-launch]] (planning deck: `racesims/marketing/decks/ierl-july-2026.html`)
-- Created: 7 new pages — [[2026-06-19-ierl-july-launch]] (source) · [[ierl]] (entity) · [[uday]] (entity) · [[racing-point-esports]] (entity) · [[buzzing-hornet-motorsports]] (entity) · [[ierl-prize-pool-formula]] (concept) · [[ierl-sim-to-reality]] (concept)
-- Updated: [[hot]] (new 2026-06-19 entry) · [[log]] · [[index]] (IERL entities + concepts added)
+## [2026-06-18] update | Davlish pedal swap — all CPP → VNM pedals
+- Updated: [[davlish-singh]] (pedal line items replaced), [[2026-06-18-dispatch-amendments]] (decision noted)
 - Domain: racesims
-- Key facts: July network 7 centres / 27 rigs. Prize pool formula: ₹1,00,000 ÷ total rigs (July: ₹3,704/rig; Aug preview: 35 rigs → ₹2,857/rig). ARKA Motorsports: 4 rally/race cars for sim-to-reality program. Buzzing Hornet: VW Polo Cup track experiences (Chennai). Track/car combo now chosen monthly by Uday. Partner WhatsApp message drafted (approved). Eligibility: triple monitor + 12Nm load cell + VMS + vision alignment.
+- Decision: Davlish QT-000370 pedals replaced entirely. CPP Lite 3-pedal + CPP Lite 2-pedal + CPP Apex 2-pedal + CPP Apex Clutch all removed. New: 2× VNM Pedals 2 + 1× VNM Lite 2 Pedal + 1× VNM Clutch. Stock confirmed: VNM Clutch 2×, VNM Lite Clutch 2× in store. All in surplus.
 
 ## [2026-06-18] ingest | Dispatch amendments session — all orders unblocked
 - Source: [[2026-06-18-dispatch-amendments]]

@@ -25,10 +25,9 @@ Active quote. Not yet invoiced/paid.
 | Ares 12nm Wheelbase | 2 | 15% |
 | 300 GT wheel | 2 | 15% |
 | CDR NRG QR | 2 | 15% |
-| CPP Lite 3-pedal | 1 | 15% |
-| CPP Lite 2-pedal | 1 | 15% |
-| CPP Apex 2-pedal | 1 | 15% | *(substituted for CPP Apex 3-pedal, 2026-06-18)* |
-| CPP Apex Clutch | 1 | 15% | *(substituted for CPP Apex 3-pedal, 2026-06-18)* |
+| VNM Pedals 2 | 2 | TBD | *(replaces all CPP pedals, 2026-06-18)* |
+| VNM Lite 2 Pedal | 1 | TBD | *(replaces all CPP pedals, 2026-06-18)* |
+| VNM Clutch | 1 | TBD | *(replaces all CPP pedals, 2026-06-18)* |
 | Recliner Sport seat | 1 | 30% |
 | Fixed Back seat | 1 | 35% |
 | Shipping (IGST 18%) | — | — |

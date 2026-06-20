@@ -23,7 +23,7 @@ Follow-up to the [[2026-06-16-dispatch-pipeline-session|16 Jun dispatch planning
 
 ### Quote order amendments
 
-- **[[davlish-singh|Davlish]] (QT-000370):** CPP Apex 3-pedal (×1, zero stock, not in PO) removed; replaced with CPP Apex 2-pedal (×1) + CPP Apex Clutch (×1). Both in surplus after PO. Davlish is no longer blocked on pedals.
+- **[[davlish-singh|Davlish]] (QT-000370):** All CPP pedals removed (CPP Lite 3-pedal, CPP Lite 2-pedal, CPP Apex 2-pedal, CPP Apex Clutch). Replaced with 2× VNM Pedals 2 + 1× VNM Lite 2 Pedal + 1× VNM Clutch. All in surplus. New stock confirmed: VNM Clutch 2×, VNM Lite Clutch 2×.
 
 ### Pipeline deferrals
 
