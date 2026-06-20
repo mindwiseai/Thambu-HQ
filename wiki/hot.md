@@ -50,14 +50,13 @@ Most recently touched context. Read this first for any query — it often answer
 - **Partner message drafted** (approved) communicating sim-to-reality vision + motorsport partnerships.
 - Source: [[2026-06-19-ierl-july-launch]] · deck: `racesims/marketing/decks/ierl-july-2026.html`
 
-## 2026-06-18 — All 5 dispatch orders unblocked · Studio deferred · final swaps confirmed
+## 2026-06-18 — All 5 dispatch orders unblocked · Studio deferred · Davlish pedals → VNM
 
-- **All dispatch orders clear:** Asif ✅ · Dhruv ✅ (collect ₹3.03L) · Amruth ✅ (recliner confirmed in stock) · Adhyan ✅ · Ragav ✅ (MAX01 → 290 GP; Conspit HB+Shifter ship separately when in stock).
-- **Davlish pedal swap:** CPP Apex 3-pedal removed → replaced with CPP Apex 2-pedal + CPP Apex Clutch (both surplus). Davlish no longer blocked.
-- **Studio (QT-000360, ₹28L, 7 rigs) deferred** — internal order, fulfil external quotes first. Garvish (₹30.7L) already deferred 2 months. Active B2B quote rig demand = 16.
-- **Procurement: only Ares 12nm (−2) needs next ENSU order.** Everything else clear. Rigs/stands/trays/monitors/PCs = local or fabrication — not import-constrained.
-- **VNM 3DOF ✅ cleared** — Star 2 + Studio 1 = stock 3 exact. No reorder needed.
-- Sources: [[customer-pipeline]] · [[2026-06-16-dispatch-pipeline-session]]
+- **All dispatch orders clear:** Asif ✅ · Dhruv ✅ (collect ₹3.03L) · Amruth ✅ · Adhyan ✅ · Ragav ✅ (MAX01→290 GP; Conspit HB+Shifter follow separately).
+- **Davlish (QT-000370) pedals:** All CPP removed. Now: 2× VNM Pedals 2 + 1× VNM Lite 2 Pedal + 1× VNM Clutch. Stock confirmed: VNM Clutch ×2, VNM Lite Clutch ×2 in store. All in surplus.
+- **Studio deferred** (internal-last). Garvish deferred 2mo. Active B2B rig demand = 16.
+- **Only import need: Ares 12nm −2.** Everything else local/fabricated.
+- Sources: [[customer-pipeline]] · [[2026-06-18-dispatch-amendments]] · [[davlish-singh]]
 
 ## 2026-06-16 — Dispatch pipeline planned · PO-00054 arrived · Davlish quote revised
 
