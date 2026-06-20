@@ -9,6 +9,11 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-21] inbox | Command Center morning check — 0 new items
+- Updated: [[hot]] (new 2026-06-21 entry)
+- Domain: cross
+- Inbox status: Gmail mindwise.ai1@gmail.com checked. 13 threads newer_than:7d, all previously logged or promotional. Standing actionable: [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (all 5 actions still pending).
+
 ## [2026-06-18] update | Davlish pedal swap — all CPP → VNM pedals
 - Updated: [[davlish-singh]] (pedal line items replaced), [[2026-06-18-dispatch-amendments]] (decision noted)
 - Domain: racesims
