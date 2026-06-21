@@ -9,6 +9,11 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-21] inbox | Command Center night check — 0 new items
+- Updated: [[hot]] (new 2026-06-21 night entry)
+- Domain: cross
+- Inbox status: Gmail mindwise.ai1@gmail.com checked. 21 threads newer_than:14d, all previously logged or promotional. No voice briefs found (checked from:thambu@racesims.in and from:thambusamytd@gmail.com after:2026/06/18). Last voice briefs: 2026-06-18 Octupie scripts (already ingested). Standing actionable: [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (all 5 actions still pending).
+
 ## [2026-06-21] inbox | Command Center morning check — 0 new items
 - Updated: [[hot]] (new 2026-06-21 entry)
 - Domain: cross

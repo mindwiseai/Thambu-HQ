@@ -8,6 +8,11 @@ updated: 2026-06-21
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
+## 2026-06-21 — Command Center inbox: 0 new items [night check]
+
+- **Inbox check (night):** Gmail mindwise.ai1@gmail.com shows **0 new actionable items** since morning check. 21 threads newer_than:14d, but all previously logged or promotional (Octupie scripts docs from June 18-19 already ingested, Shivank email about scripts already in wiki, Google Drive shares logged, OpenAI/Framer/Anthropic/Google promotional).
+- **Standing actionable:** [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (Shivank, 2026-06-18) — **all 5 actions still pending** (same as previous 5 checks).
+
 ## 2026-06-21 — Command Center inbox: 0 new items [morning check]
 
 - **Inbox check (morning):** Gmail mindwise.ai1@gmail.com shows **0 new actionable items** since June 20 night check #2. All unread items are either previously logged (GitHub Pages failures from June 19, already resolved) or promotional (OpenAI, Framer, Google, Anthropic).
