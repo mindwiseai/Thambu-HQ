@@ -1,12 +1,17 @@
 ---
 title: Hot Cache
 type: meta
-updated: 2026-06-23
+updated: 2026-06-24
 ---
 
 # Hot Cache
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
+
+## 2026-06-24 — Command Center inbox: 1 new item (Teams meeting invite) [late night check #4]
+
+- **Inbox check (late night #4):** Gmail mindwise.ai1@gmail.com shows **1 new item** — [[2026-06-23-website-review-teams-meeting|Microsoft Teams meeting invite]] from [[shivendra-selvam]] (2026-06-23), subject "Website review", recipients: Himani, mindwise.ai1, Thambu, Ankita (added in 2nd message). Meeting ID 937... (partial). Likely [[website-development]] review session with Sorted stakeholders.
+- **Standing actionable:** [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (Shivank, 2026-06-18) — **all 5 actions still pending** (same as previous 11 checks).
 
 ## 2026-06-23 — Command Center inbox: 0 new items [evening check #3]
 
