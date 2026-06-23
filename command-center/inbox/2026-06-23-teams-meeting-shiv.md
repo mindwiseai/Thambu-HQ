@@ -4,7 +4,7 @@ time: 17:39
 from: shiv_selvam@hotmail.com
 to: himani.lumen@gmail.com, mindwise.ai1@gmail.com, thambusamytd@gmail.com, ankitaduseja95@gmail.com
 type: meeting-invite
-status: new
+status: processed
 ---
 
 # Teams Meeting - Website Review
