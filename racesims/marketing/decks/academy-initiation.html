@@ -1,0 +1,1084 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Initiation — The Motorsport Academy · RaceSims</title>
+<meta name="viewport" content="width=1280" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:       #FAF9F5;
+    --cream-dark:  #F3EFEA;
+    --cream-mid:   #EDE8E2;
+    --rs-red:      #C8102E;
+    --rs-red-dim:  rgba(200, 16, 46, 0.12);
+    --rs-red-soft: rgba(200, 16, 46, 0.06);
+    --rs-black:    #0F0F10;
+    --ink:         #1F1B18;
+    --ink-mid:     #4A4440;
+    --ink-muted:   #7A7470;
+    --rule:        #DDD8D2;
+    --rule-mid:    #C8C0B8;
+    --green:       #1E6B3A;
+    --green-soft:  rgba(30,107,58,0.08);
+    --amber:       #B8731F;
+    --amber-soft:  rgba(184,115,31,0.10);
+    --track-fill:  #E2DDD6;
+    --track-line:  #C5BEB5;
+    --sans:        'Montserrat', -apple-system, sans-serif;
+    --mono:        'JetBrains Mono', 'SF Mono', monospace;
+  }
+  @page { size: 1280px 720px; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #E0DBD4;
+    font-family: var(--sans);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body { padding: 32px 0; }
+  .slide {
+    width: 1280px; height: 720px;
+    margin: 0 auto 32px;
+    background: var(--cream);
+    position: relative; overflow: hidden;
+    border: 1px solid var(--rule);
+    page-break-after: always; page-break-inside: avoid; break-inside: avoid;
+    box-shadow: 0 4px 28px rgba(0,0,0,0.10);
+  }
+  .slide:last-child { margin-bottom: 0; }
+  @media print {
+    html, body { background: white; padding: 0; }
+    .slide { margin: 0; border: none; box-shadow: none; }
+  }
+  .slide::before {
+    content: ""; position: absolute; top: 0; left: 0; bottom: 0;
+    width: 5px; background: var(--rs-red); z-index: 2;
+  }
+  .brand {
+    position: absolute; top: 22px; left: 32px;
+    font-family: var(--mono); font-size: 10px; color: var(--rs-red);
+    letter-spacing: 0.22em; font-weight: 600; z-index: 3;
+  }
+  .slide-inner { padding: 52px 68px 48px; height: 100%; display: flex; flex-direction: column; }
+  .eyebrow {
+    font-family: var(--mono); font-size: 10px; color: var(--rs-red);
+    letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 12px; font-weight: 600;
+  }
+  h1 { font-size: 54px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+  h2 { font-size: 34px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; margin-bottom: 14px; }
+  h2 em { font-style: italic; color: var(--rs-red); font-weight: 600; }
+  h3.label {
+    font-size: 10px; font-weight: 700; color: var(--rs-red);
+    text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 8px;
+  }
+  p.lead { font-size: 17px; color: var(--ink); line-height: 1.55; font-weight: 400; }
+  p.body { font-size: 13.5px; color: var(--ink-mid); line-height: 1.55; }
+  .muted { color: var(--ink-muted); font-size: 12.5px; line-height: 1.45; }
+
+  /* COVER */
+  .cover { display: flex; flex-direction: column; justify-content: center; padding: 0 96px; }
+  .cover .badge {
+    display: inline-block; padding: 7px 14px; border: 1.5px solid var(--rs-red);
+    color: var(--rs-red); font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em;
+    margin-bottom: 26px; width: max-content; font-weight: 600;
+  }
+  .cover h1 { font-size: 84px; font-weight: 800; line-height: 0.97; letter-spacing: -0.035em; margin-bottom: 24px; }
+  .cover h1 .red { color: var(--rs-red); }
+  .cover .sub { font-size: 19px; color: var(--ink-mid); max-width: 700px; line-height: 1.5; }
+  .cover .foot { position: absolute; bottom: 48px; left: 96px; right: 96px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .cover .foot .mono { font-size: 11px; color: var(--ink-muted); font-family: var(--mono); letter-spacing: 0.12em; }
+
+  /* OUTCOMES GRID */
+  .outcomes { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-top: 6px; flex: 1; align-content: center; }
+  .oc {
+    background: #fff; border: 1px solid var(--rule); border-radius: 4px;
+    padding: 22px 20px; display: flex; flex-direction: column;
+  }
+  .oc .oc-n { font-family: var(--mono); font-size: 10px; color: var(--rs-red); letter-spacing: 0.16em; margin-bottom: 10px; }
+  .oc .oc-h { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; line-height: 1.1; }
+  .oc .oc-d { font-size: 12px; color: var(--ink-mid); line-height: 1.45; }
+  .oc.featured { border-top: 3px solid var(--rs-red); background: #fff; }
+
+  /* APEX LOOP */
+  .loop4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-top: 8px; }
+  .lc { background: #fff; border: 1px solid var(--rule); border-radius: 4px; padding: 20px 18px; position: relative; }
+  .lc .ln { font-family: var(--mono); font-size: 10px; color: var(--rs-red); letter-spacing: 0.16em; }
+  .lc .lt { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; margin: 6px 0 3px; }
+  .lc .ls { font-family: var(--mono); font-size: 10px; color: var(--ink-muted); margin-bottom: 10px; }
+  .lc .ld { font-size: 12px; color: var(--ink-mid); line-height: 1.45; }
+  .lc .arr { position: absolute; top: 50%; right: -11px; color: var(--rule-mid); font-size: 18px; z-index: 4; line-height: 1; }
+
+  /* SESSION LAYOUT: left column detail, right column diagram */
+  .sess { display: grid; grid-template-columns: 1fr 1.1fr; gap: 36px; flex: 1; align-items: stretch; margin-top: 6px; }
+  .sess-left { display: flex; flex-direction: column; gap: 0; }
+  .beat { border-top: 1px solid var(--rule); padding: 11px 0; display: flex; gap: 16px; align-items: baseline; }
+  .beat:first-child { border-top: none; }
+  .beat .bk { font-family: var(--mono); font-size: 10px; color: var(--rs-red); letter-spacing: 0.14em; flex-shrink: 0; width: 68px; padding-top: 1px; }
+  .beat .bv { font-size: 13px; color: var(--ink-mid); line-height: 1.45; }
+  .beat .bv b { color: var(--ink); font-weight: 700; }
+  .target-bar {
+    margin-top: auto; background: var(--rs-red-soft); border: 1px solid var(--rs-red-dim);
+    border-left: 3px solid var(--rs-red); border-radius: 3px; padding: 11px 16px;
+  }
+  .target-bar .tl { font-family: var(--mono); font-size: 10px; color: var(--rs-red); letter-spacing: 0.16em; margin-bottom: 3px; }
+  .target-bar .tv { font-size: 13px; color: var(--ink); line-height: 1.45; }
+
+  /* DIAGRAM BOX */
+  .diag { background: var(--cream-dark); border: 1px solid var(--rule); border-radius: 5px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; height: 100%; }
+  .diag svg { width: 100%; max-height: 390px; }
+  .diag-cap { font-family: var(--mono); font-size: 10px; color: var(--ink-muted); letter-spacing: 0.08em; margin-top: 10px; text-align: center; }
+
+  /* BAD / GOOD */
+  .badgood { display: flex; flex-direction: column; gap: 9px; margin-top: 12px; }
+  .bg { display: flex; gap: 12px; align-items: flex-start; padding: 11px 14px; border-radius: 4px; font-size: 12.5px; line-height: 1.45; color: var(--ink-mid); }
+  .bg-bad  { background: var(--rs-red-soft); border-left: 3px solid var(--rs-red); }
+  .bg-good { background: var(--green-soft); border-left: 3px solid var(--green); }
+  .bg .mk { font-family: var(--mono); font-weight: 700; font-size: 10px; letter-spacing: 0.1em; flex-shrink: 0; padding-top: 2px; width: 38px; }
+  .bg-bad  .mk { color: var(--rs-red); }
+  .bg-good .mk { color: var(--green); }
+  .bg b { color: var(--ink); font-weight: 700; }
+
+  /* CONCEPT FULL WIDTH */
+  .concept2 { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 36px; flex: 1; align-items: center; margin-top: 6px; }
+  .concept3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; flex: 1; align-items: start; margin-top: 10px; }
+  .concept-box { background: #fff; border: 1px solid var(--rule); border-radius: 4px; padding: 20px 20px; }
+  .concept-box .cb-l { font-family: var(--mono); font-size: 10px; color: var(--rs-red); letter-spacing: 0.14em; margin-bottom: 6px; }
+  .concept-box .cb-h { font-size: 17px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
+  .concept-box .cb-d { font-size: 12px; color: var(--ink-mid); line-height: 1.5; }
+
+  /* LICENCE SLIDE */
+  .licence { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; flex: 1; margin-top: 6px; }
+  .lic-col { display: flex; flex-direction: column; gap: 12px; }
+  .lic-grade {
+    flex: 1; border-radius: 5px; padding: 22px 24px; display: flex; flex-direction: column; justify-content: flex-end;
+  }
+  .lic-pass { background: var(--cream-dark); border: 1px solid var(--rule); }
+  .lic-dist { background: var(--amber-soft); border: 1px solid rgba(184,115,31,0.3); }
+  .lic-win  { background: var(--rs-black); color: var(--cream); }
+  .lic-grade .gk { font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; margin-bottom: 6px; }
+  .lic-pass .gk, .lic-dist .gk { color: var(--ink-muted); }
+  .lic-win  .gk { color: #E8A0AC; }
+  .lic-grade .gh { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 4px; }
+  .lic-win  .gh { color: #fff; }
+  .lic-grade .gd { font-size: 12px; line-height: 1.45; }
+  .lic-pass .gd { color: var(--ink-mid); }
+  .lic-dist .gd { color: var(--ink-mid); }
+  .lic-win  .gd { color: #C8C0B8; }
+  .next-steps { display: flex; flex-direction: column; gap: 10px; }
+  .ns-item { display: flex; gap: 16px; align-items: center; background: #fff; border: 1px solid var(--rule); border-radius: 4px; padding: 14px 18px; }
+  .ns-item .ns-n { font-family: var(--mono); font-size: 22px; font-weight: 600; color: var(--rs-red); flex-shrink: 0; }
+  .ns-item .ns-h { font-size: 14px; font-weight: 700; letter-spacing: -0.01em; }
+  .ns-item .ns-d { font-size: 12px; color: var(--ink-muted); }
+
+  /* TELEMETRY */
+  .tele-wrap { background: var(--rs-black); border-radius: 5px; padding: 20px 24px; height: 100%; display: flex; flex-direction: column; }
+  .tele-wrap .tw-label { font-family: var(--mono); font-size: 10px; color: #E8A0AC; letter-spacing: 0.18em; margin-bottom: 10px; }
+  .tele-wrap svg { flex: 1; }
+
+  /* VISION CONCEPT */
+  .vis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; flex: 1; margin-top: 6px; }
+  .vis-box { border-radius: 5px; padding: 20px; display: flex; flex-direction: column; }
+  .vis-box-bad  { background: var(--rs-red-soft); border: 1px solid var(--rs-red-dim); }
+  .vis-box-good { background: var(--green-soft); border: 1px solid rgba(30,107,58,0.2); }
+  .vis-box .vb-l { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; margin-bottom: 8px; font-weight: 700; }
+  .vis-box-bad  .vb-l { color: var(--rs-red); }
+  .vis-box-good .vb-l { color: var(--green); }
+  .vis-box .vb-h { font-size: 18px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
+  .vis-box .vb-d { font-size: 12px; color: var(--ink-mid); line-height: 1.5; }
+  .vis-box svg { flex: 1; margin-top: 14px; }
+
+  /* COUNTER */
+  body { counter-reset: slide; }
+  .slide { counter-increment: slide; }
+  .slide-num {
+    position: absolute; top: 22px; right: 28px; z-index: 3;
+    font-family: var(--mono); font-size: 10px; color: var(--ink-muted); letter-spacing: 0.14em;
+  }
+  .slide-num::after { content: counter(slide, decimal-leading-zero) " / 14"; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════ SLIDE 01 · COVER ════════ -->
+<div class="slide">
+  <div class="brand">RACESIMS · CHENNAI</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner cover">
+    <span class="badge">THE MOTORSPORT ACADEMY · TIER 1</span>
+    <h1>Learn to drive it.<br><span class="red">Earn the licence.</span></h1>
+    <p class="sub">Initiation — 4 coached sessions from complete beginner to licence-ready driver. The first step on The Ladder.</p>
+    <div class="foot">
+      <div class="mono">4 SESSIONS · 1 HR EACH · ₹8,000</div>
+      <div class="mono">ENDORSED BY ARKA MOTORSPORTS · 130+ TITLES</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ SLIDE 02 · OUTCOME PROMISE ════════ -->
+<div class="slide">
+  <div class="brand">INITIATION · WHAT YOU LEAVE WITH</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">The outcome promise</span>
+    <h2>In four hours, you go from <em>never driven a sim</em> to licence-ready.</h2>
+    <p class="lead" style="max-width:900px; margin-bottom:22px;">This is not supervised seat time. Every session has a concept, a drill, a measured application, and a data-backed debrief. You leave each session with a number that improved — and knowing exactly what you're working on next.</p>
+    <div class="outcomes">
+      <div class="oc featured">
+        <div class="oc-n">LEAVE WITH 01</div>
+        <div class="oc-h">Initiation Licence</div>
+        <div class="oc-d">Lifetime. Unlocks Championship eligibility and the Advanced tier. Earned only by clearing the benchmark lap.</div>
+      </div>
+      <div class="oc featured">
+        <div class="oc-n">LEAVE WITH 02</div>
+        <div class="oc-h">Your Driver Card</div>
+        <div class="oc-d">Your logged baseline lap time lives on VMS — your permanent record that every future session builds on.</div>
+      </div>
+      <div class="oc featured">
+        <div class="oc-n">LEAVE WITH 03</div>
+        <div class="oc-h">4 Real Skills</div>
+        <div class="oc-d">Car control · the racing line · braking points · vision. Not theory — each skill verified on telemetry.</div>
+      </div>
+      <div class="oc featured">
+        <div class="oc-n">LEAVE WITH 04</div>
+        <div class="oc-h">Step 1 of The Ladder</div>
+        <div class="oc-d">Championship-eligible. Clear the Licence Lap and the path to a real motorsport seat is open.</div>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:16px;">Cohorts of 4–6 drivers · sessions bookable individually or as a block · assessment in Session 4</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ SLIDE 03 · WHERE YOU ARE ON THE PATH ════════ -->
+<div class="slide">
+  <div class="brand">INITIATION · THE LADDER</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">Your place on the pathway</span>
+    <h2>Initiation is <em>Step 1</em> of The Ladder.</h2>
+    <p class="lead" style="max-width:880px; margin-bottom:24px;">Every RaceSims driver starts here. The Ladder is the sim-to-reality pathway — every step is earned against a measurable benchmark, never given for attendance.</p>
+    <div style="display:flex; gap:0; align-items:stretch; flex:1; margin-bottom:16px;">
+      <!-- Step 0 -->
+      <div style="flex:0.8; background:var(--cream-dark); border:1px solid var(--rule); border-radius:4px 0 0 4px; padding:20px 18px; display:flex; flex-direction:column;">
+        <div style="font-family:var(--mono); font-size:10px; color:var(--ink-muted); letter-spacing:0.14em; margin-bottom:8px;">BEFORE</div>
+        <div style="font-size:18px; font-weight:800; letter-spacing:-0.02em; margin-bottom:6px; color:var(--ink-muted);">Open Session</div>
+        <div style="font-size:12px; color:var(--ink-muted); line-height:1.4; flex:1;">Walk in. Try the sim. No commitment.</div>
+        <div style="font-family:var(--mono); font-size:12px; color:var(--ink-muted); margin-top:10px;">₹750 / 30 min</div>
+      </div>
+      <div style="display:flex; align-items:center; padding:0 6px; color:var(--rule-mid); font-size:22px;">→</div>
+      <!-- INITIATION — highlighted -->
+      <div style="flex:1.2; background:#fff; border:2px solid var(--rs-red); border-radius:4px; padding:22px 20px; display:flex; flex-direction:column; position:relative;">
+        <div style="font-family:var(--mono); font-size:10px; color:var(--rs-red); letter-spacing:0.14em; margin-bottom:8px;">TIER 1 · YOU ARE HERE</div>
+        <div style="font-size:22px; font-weight:800; color:var(--rs-red); letter-spacing:-0.02em; margin-bottom:6px;">Initiation</div>
+        <div style="font-size:12px; color:var(--ink-mid); line-height:1.4; flex:1;">4 coached sessions · 1 hr each<br>Car control · Line · Braking · Vision<br><b style="color:var(--ink);">Earn the Initiation Licence.</b></div>
+        <div style="font-family:var(--mono); font-size:13px; font-weight:600; color:var(--rs-red); margin-top:10px;">₹8,000</div>
+      </div>
+      <div style="display:flex; align-items:center; padding:0 6px; color:var(--rule-mid); font-size:22px;">→</div>
+      <!-- Advanced -->
+      <div style="flex:1; background:var(--cream-dark); border:1px solid var(--rule); border-radius:4px; padding:20px 18px; display:flex; flex-direction:column;">
+        <div style="font-family:var(--mono); font-size:10px; color:var(--ink-muted); letter-spacing:0.14em; margin-bottom:8px;">TIER 2 · NEXT</div>
+        <div style="font-size:18px; font-weight:800; letter-spacing:-0.02em; margin-bottom:6px;">Advanced</div>
+        <div style="font-size:12px; color:var(--ink-mid); line-height:1.4; flex:1;">8–10 sessions · Circuit or Rally<br>Levels 2–4 · Championship-ready</div>
+        <div style="font-family:var(--mono); font-size:12px; color:var(--ink); margin-top:10px;">₹20–25K</div>
+      </div>
+      <div style="display:flex; align-items:center; padding:0 6px; color:var(--rule-mid); font-size:22px;">→</div>
+      <!-- Sim + Reality -->
+      <div style="flex:1; background:var(--cream-dark); border:1px solid var(--rule); border-radius:4px; padding:20px 18px; display:flex; flex-direction:column;">
+        <div style="font-family:var(--mono); font-size:10px; color:var(--ink-muted); letter-spacing:0.14em; margin-bottom:8px;">TIER 3</div>
+        <div style="font-size:18px; font-weight:800; letter-spacing:-0.02em; margin-bottom:6px;">Sim + Reality</div>
+        <div style="font-size:12px; color:var(--ink-mid); line-height:1.4; flex:1;">Sim prep + a real car. ARKA rally or Buzzing Hornet circuit. Earned or bought.</div>
+        <div style="font-family:var(--mono); font-size:12px; color:var(--ink); margin-top:10px;">₹1.75–2.25L</div>
+      </div>
+      <div style="display:flex; align-items:center; padding:0 6px; color:var(--rule-mid); font-size:22px;">→</div>
+      <!-- Real seat -->
+      <div style="flex:0.8; background:var(--rs-black); border-radius:0 4px 4px 0; padding:20px 18px; display:flex; flex-direction:column;">
+        <div style="font-family:var(--mono); font-size:10px; color:#E8A0AC; letter-spacing:0.14em; margin-bottom:8px;">DESTINATION</div>
+        <div style="font-size:18px; font-weight:800; letter-spacing:-0.02em; margin-bottom:6px; color:#fff;">A Real Seat</div>
+        <div style="font-size:12px; color:#C8C0B8; line-height:1.4; flex:1;">Annual Grand Final champion drives a real car. One seat, every year.</div>
+        <div style="font-family:var(--mono); font-size:11px; color:#E8A0AC; margin-top:10px;">THE LADDER</div>
+      </div>
+    </div>
+    <p class="muted">Progression is earned, not given — every gate is a benchmark lap you must beat. Initiation Licence ≠ attendance certificate.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ SLIDE 04 · HOW WE TEACH ════════ -->
+<div class="slide">
+  <div class="brand">INITIATION · HOW EVERY SESSION WORKS</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">The session model · the same every time</span>
+    <h2>Every session follows <em>APEX.</em></h2>
+    <p class="lead" style="max-width:880px; margin-bottom:22px;">Named for the point every corner is built around. One concept per session — always. We Aim at it, Practice it in isolation, eXecute it on a real lap, then eXamine the telemetry together.</p>
+    <div class="loop4">
+      <div class="lc">
+        <div class="ln">A · ~10 MIN</div>
+        <div class="lt">Aim</div>
+        <div class="ls">SET THE TARGET</div>
+        <div class="ld">Coach opens the last session's data. States today's <b>one concept</b>. Shows the BAD vs GOOD on a real telemetry example — you see what you're fixing before you start.</div>
+        <span class="arr">→</span>
+      </div>
+      <div class="lc">
+        <div class="ln">P · ~20 MIN</div>
+        <div class="lt">Practice</div>
+        <div class="ls">ISOLATED DRILL</div>
+        <div class="ld">The skill stripped of everything else — braking with no steering, one corner on repeat. Coach calls your delta after every rep. Repetition builds the motor pattern.</div>
+        <span class="arr">→</span>
+      </div>
+      <div class="lc">
+        <div class="ln">X · ~22 MIN</div>
+        <div class="lt">eXecute</div>
+        <div class="ls">FULL LAPS</div>
+        <div class="ld">Put the skill back into a full lap under realistic conditions. Make it hold up at pace — not just in isolation.</div>
+        <span class="arr">→</span>
+      </div>
+      <div class="lc">
+        <div class="ln">X · ~8 MIN</div>
+        <div class="lt">eXamine</div>
+        <div class="ls">READ THE DATA</div>
+        <div class="ld">Coach + driver read the telemetry against the target together. Log the improvement number. Set homework: one Practice Trainer to beat before next session.</div>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:20px;">Open on data · close on data · one homework Trainer · always. If it's not on the telemetry, it didn't happen.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ SLIDE 05 · SESSION 1 ════════ -->
+<div class="slide">
+  <div class="brand">INITIATION · SESSION 1 OF 4</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">Session 1 · Cockpit &amp; Car Control</span>
+    <h2>The rig is not a <em>game controller.</em></h2>
+    <div class="sess">
+      <div class="sess-left">
+        <div class="beat"><div class="bk">AIM</div><div class="bv"><b>Concept:</b> Weight transfer — the car has physical balance. Every input shifts it. Smooth inputs keep it settled; sudden ones unsettle it. The direct-drive wheel gives real feedback. The load-cell brake responds to <b>force, not distance.</b></div></div>
+        <div class="beat"><div class="bk">PRACTICE</div><div class="bv"><b>Drill A — Braking Box:</b> Brake in a straight line, stop within the box. No steering. Feel the load-cell pressure build. <br><b>Drill B — Smooth Slalom:</b> Gentle steering inputs through cones. Goal: car never feels unsettled between gates.</div></div>
+        <div class="beat"><div class="bk">EXECUTE</div><div class="bv"><b>10 laps</b> of a simple circuit at 70% pace. Target is clean laps only — no spins. Speed is irrelevant in Session 1.</div></div>
+        <div class="beat"><div class="bk">EXAMINE</div><div class="bv">Review the <b>input smoothness trace.</b> Jagged steering/throttle vs smooth — the difference is visible. Coach logs the best clean-lap count.</div></div>
+        <div class="target-bar" style="margin-top:14px;">
+          <div class="tl">SESSION 1 TARGET</div>
+          <div class="tv">Complete clean laps unassisted · feel the force-feedback weight shifts · understand why the brake is different</div>
+        </div>
+      </div>
+      <!-- Weight Transfer Diagram -->
+      <div class="diag">
+        <svg viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg">
+          <!-- Title -->
+          <text x="260" y="24" font-family="'Montserrat',sans-serif" font-size="10" font-weight="700" fill="#C8102E" text-anchor="middle" letter-spacing="2">WEIGHT TRANSFER</text>
+          <!-- BAD label -->
+          <text x="130" y="52" font-family="'JetBrains Mono',monospace" font-size="9" fill="#C8102E" text-anchor="middle" letter-spacing="1.5">BAD · JERKY INPUT</text>
+          <!-- Car silhouette BAD (top-down simple rectangle) -->
+          <rect x="70" y="62" width="120" height="60" rx="8" fill="#EDE8E2" stroke="#DDD8D2" stroke-width="1.5"/>
+          <rect x="85" y="70" width="90" height="44" rx="5" fill="#C8C0B8" opacity="0.4"/>
+          <!-- Wheels bad -->
+          <rect x="62" y="64" width="14" height="22" rx="3" fill="#7A7470"/>
+          <rect x="164" y="64" width="14" height="22" rx="3" fill="#7A7470"/>
+          <rect x="62" y="96" width="14" height="22" rx="3" fill="#7A7470"/>
+          <rect x="164" y="96" width="14" height="22" rx="3" fill="#7A7470"/>
+          <!-- Big sharp weight arrow (braking) -->
+          <path d="M130,58 L130,40" stroke="#C8102E" stroke-width="4" marker-end="url(#arr-red)"/>
+          <text x="140" y="36" font-family="'JetBrains Mono',monospace" font-size="9" fill="#C8102E">JERK</text>
+          <!-- Wavy lines showing instability -->
+          <path d="M80,145 Q110,138 130,148 Q150,158 180,145" stroke="#C8102E" stroke-width="2" fill="none" stroke-dasharray="4,3" opacity="0.7"/>
+          <text x="130" y="162" font-family="'Montserrat',sans-serif" font-size="10" fill="#C8102E" text-anchor="middle">Car unsettled · grip lost</text>
+
+          <!-- GOOD label -->
+          <text x="390" y="52" font-family="'JetBrains Mono',monospace" font-size="9" fill="#1E6B3A" text-anchor="middle" letter-spacing="1.5">GOOD · SMOOTH INPUT</text>
+          <!-- Car silhouette GOOD -->
+          <rect x="330" y="62" width="120" height="60" rx="8" fill="#EDE8E2" stroke="#DDD8D2" stroke-width="1.5"/>
+          <rect x="345" y="70" width="90" height="44" rx="5" fill="#C8C0B8" opacity="0.4"/>
+          <!-- Wheels good -->
+          <rect x="322" y="64" width="14" height="22" rx="3" fill="#7A7470"/>
+          <rect x="424" y="64" width="14" height="22" rx="3" fill="#7A7470"/>
+          <rect x="322" y="96" width="14" height="22" rx="3" fill="#7A7470"/>
+          <rect x="424" y="96" width="14" height="22" rx="3" fill="#7A7470"/>
+          <!-- Smooth gradual arrow -->
+          <path d="M390,58 L390,42" stroke="#1E6B3A" stroke-width="2.5" stroke-dasharray="none" marker-end="url(#arr-grn)"/>
+          <text x="400" y="38" font-family="'JetBrains Mono',monospace" font-size="9" fill="#1E6B3A">RAMP</text>
+          <!-- Smooth line -->
+          <path d="M340,145 Q370,143 390,145 Q410,147 440,145" stroke="#1E6B3A" stroke-width="2" fill="none" opacity="0.8"/>
+          <text x="390" y="162" font-family="'Montserrat',sans-serif" font-size="10" fill="#1E6B3A" text-anchor="middle">Car settled · grip maintained</text>
+
+          <!-- Divider -->
+          <line x1="260" y1="55" x2="260" y2="170" stroke="#DDD8D2" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+          <!-- Second section: load cell brake -->
+          <text x="260" y="200" font-family="'JetBrains Mono',monospace" font-size="9" fill="#C8102E" text-anchor="middle" letter-spacing="2">THE LOAD-CELL BRAKE</text>
+          <!-- Pressure bar visual -->
+          <rect x="60" y="212" width="400" height="18" rx="3" fill="#EDE8E2" stroke="#DDD8D2" stroke-width="1"/>
+          <!-- Distance pedal (grey) -->
+          <rect x="60" y="212" width="130" height="18" rx="3" fill="#C8C0B8" opacity="0.5"/>
+          <text x="125" y="226" font-family="'JetBrains Mono',monospace" font-size="9" fill="#7A7470" text-anchor="middle">push to a spot</text>
+          <!-- Force pedal (red) -->
+          <rect x="235" y="212" width="225" height="18" rx="3" fill="#C8102E" opacity="0.15"/>
+          <text x="347" y="226" font-family="'JetBrains Mono',monospace" font-size="9" fill="#C8102E" text-anchor="middle">push with force</text>
+          <text x="60" y="246" font-family="'Montserrat',sans-serif" font-size="10" fill="#7A7470">Normal pedal — position</text>
+          <text x="235" y="246" font-family="'Montserrat',sans-serif" font-size="10" fill="#C8102E">Load-cell — force sensing</text>
+          <line x1="215" y1="205" x2="215" y2="250" stroke="#DDD8D2" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+          <!-- Key takeaway -->
+          <rect x="60" y="264" width="400" height="52" rx="4" fill="#FAF9F5" stroke="#DDD8D2" stroke-width="1"/>
+          <text x="80" y="283" font-family="'Montserrat',sans-serif" font-size="11" font-weight="700" fill="#1F1B18">You feel grip through the wheel.</text>
+          <text x="80" y="300" font-family="'Montserrat',sans-serif" font-size="11" fill="#4A4440">The FFB wheel reproduces the load the tyres are generating.</text>
+          <text x="80" y="316" font-family="'Montserrat',sans-serif" font-size="11" fill="#4A4440">Listen to it — it tells you when you're near the limit.</text>
+
+          <!-- Arrow markers -->
+          <defs>
+            <marker id="arr-red" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#C8102E"/>
+            </marker>
+            <marker id="arr-grn" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#1E6B3A"/>
+            </marker>
+          </defs>
+        </svg>
+        <div class="diag-cap">WEIGHT TRANSFER + LOAD-CELL BRAKE — SESSION 1 CONCEPTS</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ SLIDE 06 · RACING LINE CONCEPT ════════ -->
+<div class="slide">
+  <div class="brand">INITIATION · CONCEPT · THE RACING LINE</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">Session 2 concept · before we drive</span>
+    <h2>The fastest path through a corner is <em>not the shortest.</em></h2>
+    <div class="concept2">
+      <!-- Diagram -->
+      <div class="diag" style="padding:24px;">
+        <svg viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="a1" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><circle cx="3.5" cy="3.5" r="2.5" fill="#C8102E"/></marker>
+            <marker id="a2" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><circle cx="3.5" cy="3.5" r="2.5" fill="#7A7470" opacity="0.6"/></marker>
+            <marker id="a3" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#C8102E"/></marker>
+            <marker id="a4" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#7A7470" opacity="0.6"/></marker>
+          </defs>
+          <!-- TRACK SHAPE: straight approaching from top, right-hand corner curving to bottom-right -->
+          <!-- Outer track boundary -->
+          <path d="M 80,20 L 80,200 Q 80,340 220,360 L 440,360" stroke="#C8C0B8" stroke-width="2" fill="none"/>
+          <!-- Inner track boundary -->
+          <path d="M 190,20 L 190,200 Q 190,270 260,270 L 440,270" stroke="#C8C0B8" stroke-width="2" fill="none"/>
+          <!-- Track fill -->
+          <path d="M 80,20 L 80,200 Q 80,340 220,360 L 440,360 L 440,270 L 260,270 Q 190,270 190,200 L 190,20 Z" fill="#E8E3DC" stroke="none"/>
+          <!-- Kerb at apex (inside of corner) -->
+          <path d="M 190,220 Q 190,270 235,270" stroke="#C8102E" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.4"/>
+          <!-- Kerb at outer edge top -->
+          <rect x="76" y="20" width="8" height="160" fill="none" stroke="#C8C0B8" stroke-width="1" stroke-dasharray="6,6"/>
+          <!-- Kerb at outer edge exit -->
+          <rect x="432" y="352" width="12" height="12" rx="2" fill="#C8C0B8" opacity="0.5"/>
+
+          <!-- GEOMETRIC LINE (wrong - early apex, early turn-in) -->
+          <path d="M 135,20 L 135,165 Q 138,225 220,240 Q 310,250 380,315" stroke="#7A7470" stroke-width="2.5" fill="none" stroke-dasharray="8,5" opacity="0.6"/>
+          <!-- early apex dot -->
+          <circle cx="200" cy="240" r="6" fill="#7A7470" opacity="0.5"/>
+          <text x="168" y="258" font-family="'JetBrains Mono',monospace" font-size="9" fill="#7A7470" opacity="0.8">EARLY APEX</text>
+
+          <!-- CORRECT LINE (late apex, RS Red) -->
+          <path d="M 135,20 L 135,188 Q 140,250 230,262 Q 320,268 400,315" stroke="#C8102E" stroke-width="3" fill="none"/>
+          <!-- Late apex dot -->
+          <circle cx="232" cy="264" r="7" fill="#C8102E"/>
+          <text x="244" y="268" font-family="'JetBrains Mono',monospace" font-size="9" fill="#C8102E" font-weight="600">LATE APEX</text>
+
+          <!-- Labels -->
+          <!-- ENTRY label -->
+          <text x="90" y="16" font-family="'JetBrains Mono',monospace" font-size="9" fill="#4A4440" letter-spacing="1">ENTRY WIDE</text>
+          <!-- Turn-in arrow -->
+          <line x1="135" y1="188" x2="155" y2="188" stroke="#C8102E" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <text x="158" y="192" font-family="'JetBrains Mono',monospace" font-size="9" fill="#C8102E">TURN-IN</text>
+
+          <!-- EXIT annotations -->
+          <text x="380" y="350" font-family="'JetBrains Mono',monospace" font-size="9" fill="#C8102E">EXIT WIDE →</text>
+          <text x="360" y="308" font-family="'JetBrains Mono',monospace" font-size="9" fill="#7A7470" opacity="0.7">exit too tight →</text>
+
+          <!-- Speed callouts -->
+          <rect x="316" y="20" width="190" height="72" rx="4" fill="white" stroke="#DDD8D2" stroke-width="1"/>
+          <text x="330" y="40" font-family="'JetBrains Mono',monospace" font-size="9" fill="#C8102E" letter-spacing="1">CORRECT LINE</text>
+          <text x="330" y="56" font-family="'Montserrat',sans-serif" font-size="10" font-weight="700" fill="#1F1B18">Exit speed: HIGH</text>
+          <text x="330" y="70" font-family="'Montserrat',sans-serif" font-size="10" fill="#4A4440">Clean exit onto the straight →</text>
+          <text x="330" y="84" font-family="'JetBrains Mono',monospace" font-size="9" fill="#7A7470">early apex: exit runs wide, scrubs speed</text>
+
+          <!-- Key: lines legend -->
+          <line x1="80" y1="388" x2="115" y2="388" stroke="#C8102E" stroke-width="3"/>
+          <text x="120" y="392" font-family="'JetBrains Mono',monospace" font-size="9" fill="#C8102E">CORRECT (late apex)</text>
+          <line x1="270" y1="388" x2="305" y2="388" stroke="#7A7470" stroke-width="2.5" stroke-dasharray="6,4" opacity="0.7"/>
+          <text x="310" y="392" font-family="'JetBrains Mono',monospace" font-size="9" fill="#7A7470">GEOMETRIC (early apex)</text>
+        </svg>
+        <div class="diag-cap">TOP-DOWN: RIGHT-HAND CORNER · GEOMETRIC vs LATE APEX LINE</div>
+      </div>
+      <!-- Explanation -->
+      <div>
+        <h3 class="label" style="margin-bottom:16px;">THREE PRINCIPLES</h3>
+        <div class="concept-box" style="margin-bottom:12px;">
+          <div class="cb-l">PRINCIPLE 01</div>
+          <div class="cb-h">Out – In – Out</div>
+          <div class="cb-d">Enter wide, aim for the apex (inside of the corner), exit wide. The larger the radius you create through the corner, the faster you can carry speed through it.</div>
+        </div>
+        <div class="concept-box" style="margin-bottom:12px;">
+          <div class="cb-l">PRINCIPLE 02</div>
+          <div class="cb-h">Late Apex &gt; Geometric Apex</div>
+          <div class="cb-d">Turn in <b>later</b> than instinct says. A late apex means you unwind the car early — maximising the straight speed after the corner. Early apex = runs wide on exit = scrubbed speed.</div>
+        </div>
+        <div class="concept-box">
+          <div class="cb-l">PRINCIPLE 03</div>
+          <div class="cb-h">Slow In, Fast Out</div>
+          <div class="cb-d">Sacrifice a little entry speed to carry maximum <b>exit</b> speed onto a straight. The straight is where you gain time; the corner entry is where beginners waste it chasing entry speed they don't need.</div>
+        </div>
+        <div class="badgood" style="margin-top:14px;">
+          <div class="bg bg-bad"><div class="mk">BAD</div><div>"I turned in early to hit the inside sooner" → runs wide on exit, tyres off the track, time lost on the straight.</div></div>
+          <div class="bg bg-good"><div class="mk">GOOD</div><div>Wait. Turn in late. Clip the apex at the last moment. Unwind with power — straight-line exit speed is the reward.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ SLIDE 07 · SESSION 2 ════════ -->
+<div class="slide">
+  <div class="brand">INITIATION · SESSION 2 OF 4</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">Session 2 · The Racing Line</span>
+    <h2>One corner. Perfect it. <em>Then build.</em></h2>
+    <div class="sess">
+      <div class="sess-left">
+        <div class="beat"><div class="bk">AIM</div><div class="bv"><b>Concept:</b> The racing line — out–in–out, geometric vs late apex, slow in fast out. Coach shows the correct and incorrect lines on the whiteboard. Driver sees the speed trace difference before touching the wheel.</div></div>
+        <div class="beat"><div class="bk">PRACTICE</div><div class="bv"><b>Drill — The Apex Clip:</b> Single corner on repeat. Hit the apex cone, unwind to wide exit. No lap, no pressure — just the one corner, repeated until the pattern is automatic. Coach calls apex miss or hit after every rep.</div></div>
+        <div class="beat"><div class="bk">EXECUTE</div><div class="bv">Full lap, <b>line-focused.</b> Same corner type, now in context — other corners are at 70% pace. The session corner is where we look at the exit speed.</div></div>
+        <div class="beat"><div class="bk">EXAMINE</div><div class="bv">Line overlay: the actual path vs the ideal. Coach shows exactly where the line broke down — too early, too late, too wide on exit. Logs the <b>exit-speed delta.</b></div></div>
+        <div class="target-bar" style="margin-top:14px;">
+          <div class="tl">SESSION 2 TARGET</div>
+          <div class="tv">Consistent line within benchmark + 4s · apex hit &gt;80% of laps · no "runaway" exits</div>
+        </div>
+      </div>
+      <!-- Corner types diagram -->
+      <div class="diag">
+        <svg viewBox="0 0 520 390" xmlns="http://www.w3.org/2000/svg">
+          <text x="260" y="22" font-family="'JetBrains Mono',monospace" font-size="10" fill="#C8102E" text-anchor="middle" letter-spacing="2">CORNER TYPES &amp; APEX POSITION</text>
+
+          <!-- HAIRPIN -->
+          <text x="88" y="50" font-family="'JetBrains Mono',monospace" font-size="9" fill="#4A4440" text-anchor="middle" letter-spacing="1">HAIRPIN</text>
+          <!-- Track outer -->
+          <path d="M 50,60 L 50,160 Q 50,200 88,200 Q 126,200 126,160 L 126,60" stroke="#C8C0B8" stroke-width="2" fill="#E8E3DC"/>
+          <!-- Track inner -->
+          <path d="M 70,60 L 70,145 Q 70,178 88,178 Q 106,178 106,145 L 106,60" stroke="#C8C0B8" stroke-width="2" fill="#F3EFEA"/>
+          <!-- Line -->
+          <path d="M 58,60 L 58,148 Q 58,188 88,188 Q 118,188 118,148 L 118,60" stroke="#C8102E" stroke-width="2.5" fill="none"/>
+          <!-- Late apex dot -->
+          <circle cx="88" cy="188" r="5" fill="#C8102E"/>
+          <text x="88" y="218" font-family="'Montserrat',sans-serif" font-size="10" fill="#C8102E" text-anchor="middle" font-weight="700">Very late apex</text>
+          <text x="88" y="232" font-family="'Montserrat',sans-serif" font-size="10" fill="#7A7470" text-anchor="middle">sacrifice entry speed</text>
+
+          <!-- MEDIUM CORNER -->
+          <text x="268" y="50" font-family="'JetBrains Mono',monospace" font-size="9" fill="#4A4440" text-anchor="middle" letter-spacing="1">MEDIUM CORNER</text>
+          <path d="M 200,60 L 200,180 Q 200,230 268,230 L 340,230" stroke="#C8C0B8" stroke-width="2" fill="none"/>
+          <path d="M 225,60 L 225,175 Q 225,205 268,205 L 340,205" stroke="#C8C0B8" stroke-width="2" fill="none"/>
+          <path d="M 200,60 L 225,60 L 225,175 Q 225,205 268,205 L 340,205 L 340,230 L 268,230 Q 200,230 200,180 L 200,60 Z" fill="#E8E3DC"/>
+          <!-- Line -->
+          <path d="M 213,60 L 213,174 Q 213,218 268,218 L 340,218" stroke="#C8102E" stroke-width="2.5" fill="none"/>
+          <!-- Apex dot -->
+          <circle cx="250" cy="218" r="5" fill="#C8102E"/>
+          <text x="268" y="248" font-family="'Montserrat',sans-serif" font-size="10" fill="#C8102E" text-anchor="middle" font-weight="700">Moderate late apex</text>
+
+          <!-- SWEEPER -->
+          <text x="440" y="50" font-family="'JetBrains Mono',monospace" font-size="9" fill="#4A4440" text-anchor="middle" letter-spacing="1">SWEEPER</text>
+          <path d="M 380,60 Q 380,170 440,200 L 500,200" stroke="#C8C0B8" stroke-width="2" fill="none"/>
+          <path d="M 380,80 Q 380,165 430,180 L 500,180" stroke="#C8C0B8" stroke-width="2" fill="none"/>
+          <path d="M 380,60 Q 380,170 440,200 L 500,200 L 500,180 L 430,180 Q 380,165 380,80 Z" fill="#E8E3DC"/>
+          <!-- Line -->
+          <path d="M 380,70 Q 380,168 435,190 L 500,190" stroke="#C8102E" stroke-width="2.5" fill="none"/>
+          <!-- Apex dot -->
+          <circle cx="416" cy="184" r="5" fill="#C8102E"/>
+          <text x="440" y="220" font-family="'Montserrat',sans-serif" font-size="10" fill="#C8102E" text-anchor="middle" font-weight="700">Geometric ≈ OK</text>
+          <text x="440" y="234" font-family="'Montserrat',sans-serif" font-size="10" fill="#7A7470" text-anchor="middle">carry speed through</text>
+
+          <!-- Divider line -->
+          <line x1="40" y1="262" x2="490" y2="262" stroke="#DDD8D2" stroke-width="1"/>
+
+          <!-- Key rule -->
+          <rect x="40" y="274" width="440" height="88" rx="4" fill="white" stroke="#DDD8D2" stroke-width="1"/>
+          <text x="56" y="296" font-family="'JetBrains Mono',monospace" font-size="9" fill="#C8102E" letter-spacing="2">THE APEX RULE</text>
+          <text x="56" y="316" font-family="'Montserrat',sans-serif" font-size="12" font-weight="700" fill="#1F1B18">Turn-in later than feels right.</text>
+          <text x="56" y="334" font-family="'Montserrat',sans-serif" font-size="11" fill="#4A4440">A late apex means you're pointing at the EXIT when you hit it.</text>
+          <text x="56" y="352" font-family="'Montserrat',sans-serif" font-size="11" fill="#4A4440">An early apex means you're pointing at the wall. Every time.</text>
+        </svg>
+        <div class="diag-cap">CORNER TYPES — HAIRPIN · MEDIUM · SWEEPER — AND WHERE THE APEX SITS</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ SLIDE 08 · BRAKING CONCEPT ════════ -->
+<div class="slide">
+  <div class="brand">INITIATION · CONCEPT · BRAKING</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">Session 3 concept · before we drive</span>
+    <h2>Where you brake is a decision. <em>How you brake is a skill.</em></h2>
+    <div class="concept2">
+      <!-- Telemetry trace diagram -->
+      <div class="diag" style="background:var(--rs-black); padding:22px;">
+        <svg viewBox="0 0 520 380" xmlns="http://www.w3.org/2000/svg">
+          <text x="260" y="22" font-family="'JetBrains Mono',monospace" font-size="10" fill="#E8A0AC" text-anchor="middle" letter-spacing="2">SPEED TRACE — BRAKING ZONE</text>
+
+          <!-- Axes -->
+          <line x1="60" y1="290" x2="470" y2="290" stroke="#4A4440" stroke-width="1.5"/>
+          <line x1="60" y1="60" x2="60" y2="290" stroke="#4A4440" stroke-width="1.5"/>
+          <text x="265" y="315" font-family="'JetBrains Mono',monospace" font-size="9" fill="#7A7470" text-anchor="middle">TRACK POSITION →</text>
+          <text x="20" y="175" font-family="'JetBrains Mono',monospace" font-size="9" fill="#7A7470" text-anchor="middle" transform="rotate(-90,20,175)">SPEED</text>
+
+          <!-- Y grid lines -->
+          <line x1="60" y1="130" x2="470" y2="130" stroke="#2A2A2A" stroke-width="1"/>
+          <line x1="60" y1="190" x2="470" y2="190" stroke="#2A2A2A" stroke-width="1"/>
+          <text x="48" y="134" font-family="'JetBrains Mono',monospace" font-size="8" fill="#4A4440" text-anchor="end">HIGH</text>
+          <text x="48" y="194" font-family="'JetBrains Mono',monospace" font-size="8" fill="#4A4440" text-anchor="end">MED</text>
+
+          <!-- Braking reference marker -->
+          <line x1="200" y1="60" x2="200" y2="290" stroke="#4A4440" stroke-width="1" stroke-dasharray="4,3"/>
+          <text x="200" y="52" font-family="'JetBrains Mono',monospace" font-size="9" fill="#7A7470" text-anchor="middle">100m BOARD</text>
+
+          <!-- BAD LINE: brakes late, lock-up spike, slow corner speed -->
+          <path d="M 60,130 L 200,128 L 260,140 L 270,260 L 290,230 L 320,215 L 380,200 L 470,195" stroke="#C8102E" stroke-width="2.5" fill="none"/>
+          <!-- Lock-up spike annotation -->
+          <circle cx="272" cy="260" r="4" fill="#C8102E"/>
+          <line x1="272" y1="260" x2="310" y2="245" stroke="#C8102E" stroke-width="1" stroke-dasharray="3,2"/>
+          <text x="312" y="243" font-family="'JetBrains Mono',monospace" font-size="8" fill="#C8102E">LOCK-UP</text>
+
+          <!-- BAD label -->
+          <rect x="62" y="62" width="70" height="18" rx="2" fill="#C8102E" opacity="0.15"/>
+          <text x="97" y="75" font-family="'JetBrains Mono',monospace" font-size="9" fill="#C8102E" text-anchor="middle">BAD</text>
+          <text x="180" y="118" font-family="'Montserrat',sans-serif" font-size="9" fill="#C8102E">brakes late</text>
+
+          <!-- GOOD LINE: brakes at board, smooth threshold, high corner speed -->
+          <path d="M 60,130 L 198,128 L 202,155 L 260,210 L 290,210 L 350,200 L 470,192" stroke="#1E6B3A" stroke-width="2.5" fill="none"/>
+          <!-- Threshold zone shading -->
+          <path d="M 202,128 L 202,155 L 260,210 L 260,128 Z" fill="#1E6B3A" opacity="0.07"/>
+          <text x="228" y="150" font-family="'JetBrains Mono',monospace" font-size="8" fill="#1E6B3A" text-anchor="middle">THRESHOLD</text>
+
+          <!-- GOOD label -->
+          <text x="80" y="108" font-family="'JetBrains Mono',monospace" font-size="9" fill="#1E6B3A">GOOD</text>
+
+          <!-- Corner minimum speed callouts -->
+          <line x1="290" y1="192" x2="290" y2="265" stroke="#7A7470" stroke-width="1" stroke-dasharray="3,2"/>
+          <text x="295" y="270" font-family="'JetBrains Mono',monospace" font-size="8" fill="#7A7470">min speed here</text>
+          <!-- Delta arrow -->
+          <line x1="275" y1="210" x2="275" y2="230" stroke="#DDD8D2" stroke-width="1.5"/>
+          <text x="280" y="224" font-family="'JetBrains Mono',monospace" font-size="8" fill="#DDD8D2">Δ speed</text>
+
+          <!-- Key insight -->
+          <rect x="60" y="320" width="410" height="44" rx="3" fill="#1A1A1B" stroke="#2A2A2A"/>
+          <text x="80" y="338" font-family="'Montserrat',sans-serif" font-size="11" font-weight="700" fill="#FAF9F5">The exit speed is where your lap time lives.</text>
+          <text x="80" y="356" font-family="'Montserrat',sans-serif" font-size="10" fill="#C8C0B8">More speed through the minimum = more speed down the straight = faster lap.</text>
+        </svg>
+        <div class="diag-cap" style="color:#7A7470;">SPEED TRACE: BAD (late + lock) vs GOOD (threshold braking)</div>
+      </div>
+      <!-- Explanation -->
+      <div>
+        <h3 class="label" style="margin-bottom:12px;">TWO THINGS TO MASTER</h3>
+        <div class="concept-box" style="margin-bottom:12px;">
+          <div class="cb-l">SKILL 01</div>
+          <div class="cb-h">Braking Points &amp; Reference Markers</div>
+          <div class="cb-d">Pick a fixed reference — the 100m board, a kerb edge, a marshal post — and always brake there. Consistency before anything else. A variable braking point = variable lap times forever.</div>
+        </div>
+        <div class="concept-box" style="margin-bottom:14px;">
+          <div class="cb-l">SKILL 02</div>
+          <div class="cb-h">Threshold Braking</div>
+          <div class="cb-d">Maximum deceleration <b>just short of locking.</b> The load-cell brake makes this teachable — you can feel the threshold through the pedal. Brake at the board, apply hard, then ramp off as you turn in. Not on/off — a <b>pressure ramp.</b></div>
+        </div>
+        <div class="badgood">
+          <div class="bg bg-bad"><div class="mk">BAD</div><div><b>Braking late</b> to "go faster" — forces a lock or a panic lift. You lose more time in the corner than you saved on the approach.</div></div>
+          <div class="bg bg-bad"><div class="mk">BAD</div><div><b>On/off brake</b> — stabbing and releasing. Unsettles the car at the moment it needs to be most planted.</div></div>
+          <div class="bg bg-good"><div class="mk">GOOD</div><div><b>Brake at the marker.</b> Squeeze hard, hold threshold, release smoothly as steering input begins. The car stays planted. The corner speed is higher.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ SLIDE 09 · SESSION 3 ════════ -->
+<div class="slide">
+  <div class="brand">INITIATION · SESSION 3 OF 4</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">Session 3 · Braking</span>
+    <h2>Stop in the same place, <em>every time.</em></h2>
+    <div class="sess">
+      <div class="sess-left">
+        <div class="beat"><div class="bk">AIM</div><div class="bv"><b>Concept:</b> Reference markers and threshold braking. Coach shows a speed trace from the previous session — highlights where time is being lost in the braking zone. Identifies the driver's current braking point and shows the benchmark.</div></div>
+        <div class="beat"><div class="bk">PRACTICE</div><div class="bv"><b>Drill A — Braking Box (scored):</b> Brake at the marker, stop inside the box. Metric: brake-point consistency (±m) and zero lockups. Bronze/silver/gold targets set before the drill starts.<br><b>Drill B — Brake-and-Turn:</b> Same drill into an actual corner entry — when does the brake release begin?</div></div>
+        <div class="beat"><div class="bk">EXECUTE</div><div class="bv">Full lap with proper braking markers for every corner. Pace can come up — Session 3 is the first session where lap time starts to drop meaningfully.</div></div>
+        <div class="beat"><div class="bk">EXAMINE</div><div class="bv"><b>Brake trace + speed trace.</b> Lockups, early/late braking points, release shape. The telemetry is the judge — not feel. Coach logs the <b>best consistent braking point.</b></div></div>
+        <div class="target-bar" style="margin-top:14px;">
+          <div class="tl">SESSION 3 TARGET</div>
+          <div class="tv">Zero lockups · repeatable braking point (±2m) · no "panic" early lifts</div>
+        </div>
+      </div>
+      <!-- Braking zone diagram -->
+      <div class="diag">
+        <svg viewBox="0 0 520 390" xmlns="http://www.w3.org/2000/svg">
+          <text x="260" y="22" font-family="'JetBrains Mono',monospace" font-size="10" fill="#C8102E" text-anchor="middle" letter-spacing="2">THE BRAKING ZONE — REFERENCE MARKERS</text>
+
+          <!-- Straight track top-down -->
+          <rect x="190" y="40" width="140" height="240" fill="#E8E3DC" stroke="#C8C0B8" stroke-width="1.5"/>
+          <!-- Centre line -->
+          <line x1="260" y1="40" x2="260" y2="280" stroke="#DDD8D2" stroke-width="1" stroke-dasharray="8,6"/>
+
+          <!-- Corner entry (bottom) -->
+          <path d="M 190,280 Q 190,330 260,340 L 400,340" stroke="#C8C0B8" stroke-width="1.5" fill="none"/>
+          <path d="M 330,280 Q 330,310 370,320 L 400,320" stroke="#C8C0B8" stroke-width="1.5" fill="none"/>
+          <path d="M 190,280 L 330,280 Q 330,310 370,320 L 400,320 L 400,340 L 260,340 Q 190,330 190,280 Z" fill="#E8E3DC"/>
+
+          <!-- Reference boards -->
+          <!-- 100m board -->
+          <rect x="172" y="90" width="10" height="28" rx="2" fill="#C8102E"/>
+          <text x="162" y="100" font-family="'JetBrains Mono',monospace" font-size="9" fill="#C8102E" text-anchor="end">100</text>
+          <line x1="182" y1="104" x2="190" y2="104" stroke="#C8102E" stroke-width="1" stroke-dasharray="3,2"/>
+          <!-- 75m board -->
+          <rect x="172" y="132" width="9" height="24" rx="2" fill="#B8731F"/>
+          <text x="162" y="140" font-family="'JetBrains Mono',monospace" font-size="9" fill="#B8731F" text-anchor="end">75</text>
+          <!-- 50m board -->
+          <rect x="172" y="170" width="8" height="20" rx="2" fill="#1E6B3A" opacity="0.7"/>
+          <text x="162" y="178" font-family="'JetBrains Mono',monospace" font-size="9" fill="#1E6B3A" text-anchor="end">50</text>
+
+          <!-- Car position approaching -->
+          <rect x="236" y="48" width="48" height="30" rx="5" fill="#7A7470" opacity="0.4"/>
+          <text x="260" y="67" font-family="'Montserrat',sans-serif" font-size="9" fill="#4A4440" text-anchor="middle" font-weight="700">CAR</text>
+
+          <!-- Threshold zone (red bar) -->
+          <rect x="340" y="88" width="60" height="90" rx="3" fill="#C8102E" opacity="0.12" stroke="#C8102E" stroke-width="1" stroke-dasharray="4,3"/>
+          <text x="370" y="106" font-family="'JetBrains Mono',monospace" font-size="8" fill="#C8102E" text-anchor="middle">THRESHOLD</text>
+          <text x="370" y="120" font-family="'JetBrains Mono',monospace" font-size="8" fill="#C8102E" text-anchor="middle">ZONE</text>
+          <line x1="330" y1="104" x2="340" y2="104" stroke="#C8102E" stroke-width="1" stroke-dasharray="3,2"/>
+          <line x1="330" y1="178" x2="340" y2="178" stroke="#C8102E" stroke-width="1" stroke-dasharray="3,2"/>
+
+          <!-- Trail brake zone (amber) -->
+          <rect x="340" y="180" width="60" height="70" rx="3" fill="#B8731F" opacity="0.12" stroke="#B8731F" stroke-width="1" stroke-dasharray="4,3"/>
+          <text x="370" y="200" font-family="'JetBrains Mono',monospace" font-size="8" fill="#B8731F" text-anchor="middle">TRAIL</text>
+          <text x="370" y="214" font-family="'JetBrains Mono',monospace" font-size="8" fill="#B8731F" text-anchor="middle">BRAKE</text>
+          <text x="370" y="228" font-family="'JetBrains Mono',monospace" font-size="8" fill="#B8731F" text-anchor="middle">(session 4+)</text>
+
+          <!-- Pressure curve visual -->
+          <text x="60" y="330" font-family="'JetBrains Mono',monospace" font-size="9" fill="#C8102E" letter-spacing="1">BRAKE PRESSURE OVER THE ZONE</text>
+          <path d="M 60,370 L 70,370 L 72,346 L 90,344 L 130,344 L 155,355 L 175,370 L 180,370" stroke="#1E6B3A" stroke-width="2.5" fill="none"/>
+          <!-- Fill under curve -->
+          <path d="M 60,370 L 70,370 L 72,346 L 90,344 L 130,344 L 155,355 L 175,370 Z" fill="#1E6B3A" opacity="0.08"/>
+          <text x="60" y="386" font-family="'Montserrat',sans-serif" font-size="9" fill="#1E6B3A">squeeze → hold → ramp off</text>
+          <!-- BAD pressure (spike) -->
+          <path d="M 60,370 L 70,370 L 71,342 L 72,370 L 90,370 L 100,365 L 180,370" stroke="#C8102E" stroke-width="2" fill="none" stroke-dasharray="5,3" opacity="0.6"/>
+          <text x="95" y="358" font-family="'Montserrat',sans-serif" font-size="9" fill="#C8102E" opacity="0.8">stab → lockup → lift</text>
+        </svg>
+        <div class="diag-cap">BRAKING ZONE: REFERENCE MARKERS + THRESHOLD PRESSURE PROFILE</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ SLIDE 10 · VISION CONCEPT ════════ -->
+<div class="slide">
+  <div class="brand">INITIATION · CONCEPT · VISION</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">Session 4 concept · the invisible skill</span>
+    <h2>Your eyes lead. <em>The car follows.</em></h2>
+    <p class="lead" style="max-width:860px; margin-bottom:18px;">The fastest driver on any circuit is looking 1–2 seconds ahead — not at the kerb in front of them. Where your eyes go, your hands will follow. Most beginners drive by reacting to what's already at the nose. That's always too late.</p>
+    <div class="vis-grid">
+      <div class="vis-box vis-box-bad">
+        <div class="vb-l">BAD · SHORT VISION</div>
+        <div class="vb-h">Looking at the nose of the car</div>
+        <div class="vb-d">Driver reacts to what's already in front. Turn-in is late. Braking corrections are jerky. Every decision is a surprise. The car feels out of control — because the driver is always catching up.</div>
+        <svg viewBox="0 0 300 160">
+          <!-- Track corner top-down -->
+          <path d="M 30,20 L 30,100 Q 30,140 80,140 L 270,140" stroke="#C5BEB5" stroke-width="2" fill="#F3EFEA"/>
+          <path d="M 80,20 L 80,95 Q 80,110 105,110 L 270,110" stroke="#C5BEB5" stroke-width="2" fill="none"/>
+          <!-- Car position -->
+          <rect x="42" y="40" width="28" height="18" rx="3" fill="#7A7470" opacity="0.5"/>
+          <!-- SHORT vision cone (only to right in front) -->
+          <path d="M 56,49 L 62,30 L 80,30 L 56,49 Z" fill="#C8102E" opacity="0.25"/>
+          <text x="74" y="26" font-family="'JetBrains Mono',monospace" font-size="8" fill="#C8102E">eyes HERE</text>
+          <!-- Consequence: wiggly path -->
+          <path d="M 56,58 L 52,80 L 64,100 Q 84,132 106,130 L 270,128" stroke="#C8102E" stroke-width="2" fill="none" stroke-dasharray="5,4" opacity="0.7"/>
+          <text x="140" y="158" font-family="'Montserrat',sans-serif" font-size="9" fill="#C8102E">Reactive · late · correction after correction</text>
+        </svg>
+      </div>
+      <div class="vis-box vis-box-good">
+        <div class="vb-l">GOOD · LONG VISION</div>
+        <div class="vb-h">Looking through the apex to the exit</div>
+        <div class="vb-d">By the time you reach the turn-in point, your eyes are already at the apex. By the apex, they're at the exit. The car feels smooth because your hands are responding to what you're <b>about to reach</b>, not what you're already at.</div>
+        <svg viewBox="0 0 300 160">
+          <!-- Track corner top-down -->
+          <path d="M 30,20 L 30,100 Q 30,140 80,140 L 270,140" stroke="#C5BEB5" stroke-width="2" fill="#F3EFEA"/>
+          <path d="M 80,20 L 80,95 Q 80,110 105,110 L 270,110" stroke="#C5BEB5" stroke-width="2" fill="none"/>
+          <!-- Car position -->
+          <rect x="42" y="40" width="28" height="18" rx="3" fill="#1E6B3A" opacity="0.4"/>
+          <!-- LONG vision cone (all the way through corner to exit) -->
+          <path d="M 56,49 L 105,108 L 200,120 L 56,49 Z" fill="#1E6B3A" opacity="0.14"/>
+          <text x="180" y="106" font-family="'JetBrains Mono',monospace" font-size="8" fill="#1E6B3A">eyes HERE</text>
+          <!-- Clean racing line -->
+          <path d="M 56,58 L 54,95 Q 62,128 95,130 L 270,122" stroke="#1E6B3A" stroke-width="2.5" fill="none"/>
+          <text x="140" y="158" font-family="'Montserrat',sans-serif" font-size="9" fill="#1E6B3A">Proactive · smooth · in control</text>
+        </svg>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:14px;">The coach will call "eyes up" during apply laps. The telemetry shows the effect immediately — smoother steering trace, better line consistency, higher corner speed.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ SLIDE 11 · SESSION 4 ════════ -->
+<div class="slide">
+  <div class="brand">INITIATION · SESSION 4 OF 4</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">Session 4 · The Complete Lap + Assessment</span>
+    <h2>Link it all together. <em>Then prove it.</em></h2>
+    <div class="sess">
+      <div class="sess-left">
+        <div class="beat"><div class="bk">AIM</div><div class="bv"><b>Concept:</b> Linking corners into rhythm — each corner serves the next. <b>Vision:</b> eyes up, look where you want to go, not at the nose. Consistency beats heroics. "One fast lap" doesn't mean you've learned anything.</div></div>
+        <div class="beat"><div class="bk">PRACTICE</div><div class="bv"><b>Warm-up laps:</b> 5 laps building pace from 70% → 90%. Coach watches the rhythm — does the braking point move? Does the line hold as pace increases?</div></div>
+        <div class="beat"><div class="bk">ASSESS</div><div class="bv"><b>Timed run:</b> Best lap from a 10-lap window. Must beat the <b>Licence Lap benchmark.</b> No coaching during the assessment laps — the driver operates independently. Followed by a <b>cohort race</b> (optional: 5 laps, standing start).</div></div>
+        <div class="beat"><div class="bk">EXAMINE</div><div class="bv">Full-lap review of the benchmark lap. Every corner assessed. <b>Driver Card created on VMS</b> — the baseline that every future session builds on.</div></div>
+        <div class="target-bar" style="margin-top:14px;">
+          <div class="tl">ASSESSMENT OUTCOMES</div>
+          <div class="tv"><b>Pass</b> → beat Licence Lap benchmark → Licence issued &nbsp;·&nbsp; <b>Distinction</b> → beat Gold Standard time &nbsp;·&nbsp; <b>Win</b> → top the cohort race</div>
+        </div>
+      </div>
+      <!-- Assessment / licence visual -->
+      <div class="diag">
+        <svg viewBox="0 0 520 390" xmlns="http://www.w3.org/2000/svg">
+          <text x="260" y="22" font-family="'JetBrains Mono',monospace" font-size="10" fill="#C8102E" text-anchor="middle" letter-spacing="2">WHAT YOU'RE RACING AGAINST</text>
+
+          <!-- Three benchmark bars -->
+          <text x="60" y="52" font-family="'JetBrains Mono',monospace" font-size="9" fill="#7A7470" letter-spacing="1.5">LAP TIME →</text>
+
+          <!-- Slower end label -->
+          <text x="60" y="80" font-family="'Montserrat',sans-serif" font-size="10" fill="#7A7470">Slower</text>
+          <text x="460" y="80" font-family="'Montserrat',sans-serif" font-size="10" fill="#7A7470" text-anchor="end">Faster</text>
+
+          <!-- Full bar background -->
+          <rect x="60" y="88" width="400" height="20" rx="3" fill="#EDE8E2"/>
+
+          <!-- Licence Lap zone (everything left of the benchmark) -->
+          <rect x="60" y="88" width="255" height="20" rx="3" fill="#DDD8D2" opacity="0.7"/>
+          <!-- Pass zone -->
+          <rect x="315" y="88" width="90" height="20" rx="2" fill="#C8102E" opacity="0.18"/>
+          <!-- Distinction zone -->
+          <rect x="405" y="88" width="55" height="20" rx="2" fill="#B8731F" opacity="0.25"/>
+
+          <!-- Markers -->
+          <line x1="315" y1="82" x2="315" y2="115" stroke="#C8102E" stroke-width="1.5"/>
+          <text x="315" y="126" font-family="'JetBrains Mono',monospace" font-size="9" fill="#C8102E" text-anchor="middle">LICENCE LAP</text>
+
+          <line x1="405" y1="82" x2="405" y2="115" stroke="#B8731F" stroke-width="1.5"/>
+          <text x="405" y="126" font-family="'JetBrains Mono',monospace" font-size="9" fill="#B8731F" text-anchor="middle">GOLD STD</text>
+
+          <!-- Labels inside bar -->
+          <text x="185" y="102" font-family="'JetBrains Mono',monospace" font-size="8" fill="#7A7470" text-anchor="middle">not yet there</text>
+          <text x="360" y="102" font-family="'JetBrains Mono',monospace" font-size="8" fill="#C8102E" text-anchor="middle">PASS</text>
+          <text x="432" y="102" font-family="'JetBrains Mono',monospace" font-size="8" fill="#B8731F" text-anchor="middle">DIST.</text>
+
+          <!-- Three outcome boxes -->
+          <!-- PASS -->
+          <rect x="60" y="148" width="270" height="68" rx="4" fill="#FAF9F5" stroke="#DDD8D2" stroke-width="1" stroke-dasharray="none"/>
+          <rect x="60" y="148" width="4" height="68" rx="2" fill="#C8102E"/>
+          <text x="78" y="170" font-family="'JetBrains Mono',monospace" font-size="10" fill="#C8102E" letter-spacing="2">PASS</text>
+          <text x="78" y="188" font-family="'Montserrat',sans-serif" font-size="13" font-weight="800" fill="#1F1B18">Initiation Licence</text>
+          <text x="78" y="206" font-family="'Montserrat',sans-serif" font-size="11" fill="#4A4440">Lifetime · Championship-eligible · Advanced unlocked</text>
+
+          <!-- DISTINCTION -->
+          <rect x="60" y="228" width="270" height="56" rx="4" fill="#B8731F" opacity="0.08" stroke="rgba(184,115,31,0.3)" stroke-width="1"/>
+          <rect x="60" y="228" width="4" height="56" rx="2" fill="#B8731F"/>
+          <text x="78" y="248" font-family="'JetBrains Mono',monospace" font-size="10" fill="#B8731F" letter-spacing="2">DISTINCTION</text>
+          <text x="78" y="264" font-family="'Montserrat',sans-serif" font-size="12" font-weight="700" fill="#1F1B18">Beat Gold Standard Time</text>
+          <text x="78" y="279" font-family="'Montserrat',sans-serif" font-size="11" fill="#4A4440">≈ instructor pace. Logged on your Driver Card.</text>
+
+          <!-- WIN -->
+          <rect x="60" y="296" width="270" height="56" rx="4" fill="#0F0F10"/>
+          <rect x="60" y="296" width="4" height="56" rx="2" fill="#C8102E"/>
+          <text x="78" y="316" font-family="'JetBrains Mono',monospace" font-size="10" fill="#E8A0AC" letter-spacing="2">WIN</text>
+          <text x="78" y="332" font-family="'Montserrat',sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">Top the Cohort Race</text>
+          <text x="78" y="347" font-family="'Montserrat',sans-serif" font-size="11" fill="#C8C0B8">Counts as Step 1 "win" on The Ladder.</text>
+
+          <!-- Integrity note -->
+          <rect x="345" y="148" width="115" height="204" rx="4" fill="#EDE8E2" stroke="#DDD8D2"/>
+          <text x="402" y="174" font-family="'JetBrains Mono',monospace" font-size="9" fill="#4A4440" text-anchor="middle">NOT A</text>
+          <text x="402" y="190" font-family="'JetBrains Mono',monospace" font-size="9" fill="#4A4440" text-anchor="middle">PARTICIPATION</text>
+          <text x="402" y="206" font-family="'JetBrains Mono',monospace" font-size="9" fill="#4A4440" text-anchor="middle">CERTIFICATE</text>
+          <line x1="365" y1="218" x2="440" y2="218" stroke="#DDD8D2" stroke-width="1"/>
+          <text x="402" y="240" font-family="'Montserrat',sans-serif" font-size="10" fill="#4A4440" text-anchor="middle">Miss the</text>
+          <text x="402" y="256" font-family="'Montserrat',sans-serif" font-size="10" fill="#4A4440" text-anchor="middle">benchmark?</text>
+          <text x="402" y="280" font-family="'Montserrat',sans-serif" font-size="10" font-weight="700" fill="#1F1B18" text-anchor="middle">You repeat.</text>
+          <text x="402" y="298" font-family="'Montserrat',sans-serif" font-size="10" fill="#4A4440" text-anchor="middle">That's what</text>
+          <text x="402" y="314" font-family="'Montserrat',sans-serif" font-size="10" fill="#4A4440" text-anchor="middle">makes the</text>
+          <text x="402" y="330" font-family="'Montserrat',sans-serif" font-size="10" fill="#C8102E" text-anchor="middle" font-weight="700">licence worth</text>
+          <text x="402" y="346" font-family="'Montserrat',sans-serif" font-size="10" fill="#C8102E" text-anchor="middle" font-weight="700">something.</text>
+
+          <!-- Repeat -->
+          <text x="260" y="380" font-family="'JetBrains Mono',monospace" font-size="8" fill="#7A7470" text-anchor="middle" letter-spacing="1">A driver who repeats Session 4 is not failing — they are being held to a standard.</text>
+        </svg>
+        <div class="diag-cap">ASSESSMENT BENCHMARK — THREE OUTCOMES · PASS / DISTINCTION / WIN</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ SLIDE 12 · WHAT TELEMETRY SHOWS ════════ -->
+<div class="slide">
+  <div class="brand">INITIATION · THE DATA IS THE TEACHER</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">After every session · the debrief you actually use</span>
+    <h2>You will <em>see</em> your improvement. Not just feel it.</h2>
+    <p class="lead" style="max-width:860px; margin-bottom:20px;">Every session generates a telemetry trace. Coach and driver read four channels together. There is no "I think I was braking better" — the data confirms it or it doesn't.</p>
+    <div class="concept3">
+      <div class="concept-box">
+        <div class="cb-l">CHANNEL 01</div>
+        <div class="cb-h">Speed Trace</div>
+        <div class="cb-d" style="margin-bottom:12px;">Corner-by-corner speed — where time is won and lost. Minimum speed at each apex, maximum on each straight. If it went up, you improved.</div>
+        <svg viewBox="0 0 200 70" style="width:100%; margin-top:4px;">
+          <path d="M 10,20 L 60,20 L 80,55 L 100,55 L 130,20 L 190,20" stroke="#C8102E" stroke-width="2" fill="none"/>
+          <path d="M 10,20 L 60,20 L 80,45 L 100,45 L 130,20 L 190,20" stroke="#1E6B3A" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+          <text x="100" y="68" font-family="'JetBrains Mono',monospace" font-size="7" fill="#7A7470" text-anchor="middle">RED = before · GREEN = after</text>
+        </svg>
+      </div>
+      <div class="concept-box">
+        <div class="cb-l">CHANNEL 02</div>
+        <div class="cb-h">Brake Trace</div>
+        <div class="cb-d" style="margin-bottom:12px;">Brake pressure over the zone. Is the point consistent? Is the pressure a ramp or a spike? Did you lock? The trace shows all three — nothing hides.</div>
+        <svg viewBox="0 0 200 70" style="width:100%; margin-top:4px;">
+          <!-- Spike (bad) -->
+          <path d="M 10,65 L 40,65 L 42,18 L 44,65 L 100,65 L 115,55 L 190,65" stroke="#C8102E" stroke-width="2" fill="none" opacity="0.7"/>
+          <!-- Ramp (good) -->
+          <path d="M 10,65 L 40,65 L 42,22 L 80,22 L 110,50 L 130,65 L 190,65" stroke="#1E6B3A" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+          <text x="100" y="68" font-family="'JetBrains Mono',monospace" font-size="7" fill="#7A7470" text-anchor="middle">SPIKE (bad) · RAMP (good)</text>
+        </svg>
+      </div>
+      <div class="concept-box">
+        <div class="cb-l">CHANNEL 03 + 04</div>
+        <div class="cb-h">Throttle + Line Overlay</div>
+        <div class="cb-d" style="margin-bottom:12px;">Throttle application on corner exit — on/off vs ramp. Line overlay shows the actual path taken vs the ideal. Where the line diverges is exactly where you focus next session.</div>
+        <svg viewBox="0 0 200 70" style="width:100%; margin-top:4px;">
+          <!-- On/off throttle -->
+          <path d="M 10,65 L 60,65 L 60,20 L 190,20" stroke="#C8102E" stroke-width="2" fill="none" opacity="0.7"/>
+          <!-- Ramp throttle -->
+          <path d="M 10,65 L 65,65 L 100,40 L 140,25 L 190,22" stroke="#1E6B3A" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+          <text x="100" y="68" font-family="'JetBrains Mono',monospace" font-size="7" fill="#7A7470" text-anchor="middle">ON/OFF (bad) · RAMP (good)</text>
+        </svg>
+      </div>
+    </div>
+    <div style="background:var(--rs-red-soft); border:1px solid var(--rs-red-dim); border-left:3px solid var(--rs-red); border-radius:4px; padding:14px 20px; margin-top:18px;">
+      <p style="font-size:13.5px; color:var(--ink); line-height:1.5;"><b>The coach doesn't say "you were a bit late on the brakes."</b> The coach opens the trace and says "here, at Turn 3, your braking point moved 18 metres across these 10 laps — that's the inconsistency costing you 0.4s." That is what a programme feels like versus seat time.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ SLIDE 13 · PRACTICE BETWEEN SESSIONS ════════ -->
+<div class="slide">
+  <div class="brand">INITIATION · BETWEEN SESSIONS</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">Between sessions · homework that actually trains you</span>
+    <h2>Every session leaves you with <em>one task.</em></h2>
+    <p class="lead" style="max-width:860px; margin-bottom:20px;">You will leave each session with exactly one Practice Trainer to beat before the next. Not "work on your braking" — a specific scored exercise with a bronze/silver/gold target. This is how deliberate practice works.</p>
+    <div class="concept3">
+      <div class="concept-box">
+        <div class="cb-l">AFTER SESSION 1</div>
+        <div class="cb-h">Drill: Smooth Slalom</div>
+        <div class="cb-d">Complete 5 slalom passes with no steering correction in between. Your steering trace should look like a sine wave — not a jagged spike. <b>Target: 5 clean passes, input rate &lt; threshold.</b></div>
+      </div>
+      <div class="concept-box">
+        <div class="cb-l">AFTER SESSION 2</div>
+        <div class="cb-h">Drill: The Apex Clip</div>
+        <div class="cb-d">The session corner, repeated alone. Hit the apex gate and exit wide: <b>Bronze — 6/10 · Silver — 8/10 · Gold — 10/10 with exit speed &gt; benchmark.</b> Coach reviews your best attempt at Session 3 open.</div>
+      </div>
+      <div class="concept-box">
+        <div class="cb-l">AFTER SESSION 3</div>
+        <div class="cb-h">Drill: The Braking Box</div>
+        <div class="cb-d">Stop inside a shrinking box, zero lockups. <b>Bronze — in the large box · Silver — small box, 0 locks · Gold — small box, 0 locks, consistent ±1m point across 5 reps.</b></div>
+      </div>
+    </div>
+    <div style="display:flex; gap:20px; margin-top:20px;">
+      <div style="flex:1; background:#fff; border:1px solid var(--rule); border-radius:4px; padding:16px 20px;">
+        <div style="font-family:var(--mono); font-size:9px; color:var(--rs-red); letter-spacing:0.16em; margin-bottom:6px;">HOW IT WORKS</div>
+        <div style="font-size:13px; color:var(--ink-mid); line-height:1.5;">The coached drill and the homework Practice Trainer are <b style="color:var(--ink);">the same named exercise.</b> Same setup, same metric, same bronze/silver/gold marks. Homework isn't something extra — it's the session drill you can now do unsupervised. The motor pattern builds across both.</div>
+      </div>
+      <div style="flex:1; background:#fff; border:1px solid var(--rule); border-radius:4px; padding:16px 20px;">
+        <div style="font-family:var(--mono); font-size:9px; color:var(--rs-red); letter-spacing:0.16em; margin-bottom:6px;">WHAT THE COACH SEES</div>
+        <div style="font-size:13px; color:var(--ink-mid); line-height:1.5;">Your Practice Trainer results are on your <b style="color:var(--ink);">VMS Driver Card.</b> Session 2 opens with: "Silver on the Apex Clip — let's get you to Gold." The progression is visible, the next step is always named, and nothing resets.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ SLIDE 14 · YOUR LICENCE + WHAT'S NEXT ════════ -->
+<div class="slide">
+  <div class="brand">INITIATION · YOUR LICENCE</div>
+  <span class="slide-num"></span>
+  <div class="slide-inner">
+    <span class="eyebrow">After Initiation · what your licence opens</span>
+    <h2>Beat the benchmark. Earn the <em>Initiation Licence.</em></h2>
+    <div class="licence">
+      <div class="lic-col">
+        <p style="font-size:14px; color:var(--ink-mid); line-height:1.55; margin-bottom:10px;">The Initiation Licence is permanent — it never expires. It is recorded on your VMS Driver Card and marks you as a driver who cleared a real benchmark, not just attended four sessions.</p>
+        <div class="lic-grade lic-pass">
+          <div class="gk">OUTCOME 01</div>
+          <div class="gh">PASS → Licence Issued</div>
+          <div class="gd">Beat the Licence Lap benchmark. Initiation Licence printed + issued. Lifetime validity. Step 1 of The Ladder is complete.</div>
+        </div>
+        <div class="lic-grade lic-dist">
+          <div class="gk">OUTCOME 02</div>
+          <div class="gh">DISTINCTION → Gold Standard</div>
+          <div class="gd">Beat the Gold Standard time — approximately instructor pace. Logged on your Driver Card with the notation. First session of Advanced begins at Level 2 briefing, not Level 1 recap.</div>
+        </div>
+        <div class="lic-grade lic-win">
+          <div class="gk">OUTCOME 03</div>
+          <div class="gh" style="color:#fff;">WIN → Cohort Champion</div>
+          <div class="gd">Top the cohort race. Counts as the Session 4 "Win" on The Ladder — your first competitive result. Logged and visible when you register for the Championship.</div>
+        </div>
+      </div>
+      <div class="lic-col">
+        <h3 class="label" style="margin-bottom:14px;">WHAT YOUR LICENCE UNLOCKS</h3>
+        <div class="next-steps">
+          <div class="ns-item">
+            <div class="ns-n">01</div>
+            <div>
+              <div class="ns-h">Championship Eligibility</div>
+              <div class="ns-d">Enter RaceSims monthly championship events. Earn Ladder points toward the Annual Grand Final.</div>
+            </div>
+          </div>
+          <div class="ns-item">
+            <div class="ns-n">02</div>
+            <div>
+              <div class="ns-h">Advanced — Circuit or Rally</div>
+              <div class="ns-d">8 sessions (Circuit) or 10 sessions (Rally). Levels 2–4: trail braking, weight transfer, the limit, racecraft. ₹20,000 / ₹25,000.</div>
+            </div>
+          </div>
+          <div class="ns-item">
+            <div class="ns-n">03</div>
+            <div>
+              <div class="ns-h">Workshop Entry</div>
+              <div class="ns-d">Monthly themed group workshops — Brake Later, Race Starts & Turn 1, Wet Weather. Open to Initiation graduates.</div>
+            </div>
+          </div>
+          <div class="ns-item">
+            <div class="ns-n">04</div>
+            <div>
+              <div class="ns-h">The Ladder — Step 1 Complete</div>
+              <div class="ns-d">The sim-to-reality pathway is open. Win the Annual Grand Final → a real rally or circuit drive with ARKA Motorsports or Buzzing Hornet. Every Initiation graduate is one step closer.</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:16px; background:var(--rs-black); border-radius:4px; padding:14px 18px;">
+          <div style="font-family:var(--mono); font-size:9px; color:#E8A0AC; letter-spacing:0.16em; margin-bottom:5px;">ARKA MOTORSPORTS · 130+ TITLES</div>
+          <div style="font-size:12px; color:#C8C0B8; line-height:1.45;">The rally Sim + Reality drive is run with ARKA — India's most decorated rally team. The circuit drive with Buzzing Hornet, VW Polo Cup partners in Chennai. The destination is real.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
