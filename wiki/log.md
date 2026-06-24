@@ -9,6 +9,11 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-25] inbox | Command Center afternoon check #2 — duplicate Read.ai report archived
+- Updated: [[hot]] (new 2026-06-25 late afternoon entry)
+- Domain: cross
+- Inbox status: Gmail mindwise.ai1@gmail.com checked. **1 duplicate Read.ai meeting report archived** — "Website review" June 24 (same meeting already ingested as [[2026-06-24-website-review-meeting]]). No new actionable info. Report saved to `racesims/.claude/worktrees/` for reference, duplicate ingest skipped. Standing actionable: [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (all 5 actions still pending).
+
 ## [2026-06-25] inbox | Command Center afternoon check — 0 new actionable items
 - Updated: [[hot]] (new 2026-06-25 afternoon inbox check entry)
 - Domain: cross

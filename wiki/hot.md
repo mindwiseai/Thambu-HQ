@@ -8,9 +8,9 @@ updated: 2026-06-24
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-25 — Command Center: duplicate meeting file detected (late afternoon)
+## 2026-06-25 — Command Center: duplicate Read.ai meeting report (late afternoon check #2)
 
-- **Duplicate source detected:** `raw/meetings/2026-06-24-website-review.txt` (Read.ai email from executiveassistant@e.read.ai). Same meeting as already-ingested [[2026-06-24-website-review-meeting]]. File moved to `mindwise/raw/` for archival. No new information.
+- **Duplicate Read.ai report archived:** Gmail inbox shows second "Website review" meeting report (June 24, 12:45-12:50 PM, Read.ai executiveassistant@e.read.ai). Same meeting already ingested as [[2026-06-24-website-review-meeting]] (administrative clarification call, no real website review content). No new information. First duplicate voice brief earlier today (808 bytes), now duplicate Read.ai email (94K). Both archived, not re-ingested.
 - **Standing actionable:** [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (Shivank, 2026-06-18) — **all 5 actions still pending**: (1) Review 9 scripts → select 7 best (2) [[thambu|Selvam]] adds personal lines/memories (3) Share Selvam's availability for shoot this week (4) Provide Chennai office address for lighting/setup (5) Lock shoot date. ✅ Ready: Lights arrived, signed contract, team ready (Jay, Vishnu, Shivank). Google Doc: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit.
 
 ## 2026-06-25 — Command Center inbox check — afternoon (0 new actionable)
