@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-25] duplicate-check | Voice brief duplicate detected — no ingest needed
+- Duplicate: `voice-briefs/2026-06-24-website-review.md` (808 bytes)
+- Original: [[2026-06-24-website-review-meeting]] (already ingested 2026-06-24)
+- Updated: [[hot]] (new 2026-06-25 afternoon entry)
+- Domain: cross
+- Action: File added to git, duplicate ingest skipped (no new information).
+
 ## [2026-06-24] inbox | Command Center evening check #7 — 0 new items
 - Updated: [[hot]] (new 2026-06-24 evening #7 entry)
 - Domain: cross

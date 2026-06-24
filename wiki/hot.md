@@ -8,6 +8,11 @@ updated: 2026-06-24
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
+## 2026-06-25 — Command Center: duplicate voice brief detected [afternoon]
+
+- **Voice brief detected:** `voice-briefs/2026-06-24-website-review.md` (808 bytes, simplified version of already-ingested [[2026-06-24-website-review-meeting]]). Same meeting content, lower detail. No new information. Marked in git, skipping duplicate ingest.
+- **Standing actionable:** [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (Shivank, 2026-06-18) — **all 5 actions still pending** (same as previous 15 checks).
+
 ## 2026-06-24 — Command Center inbox: 0 new items [evening check #7]
 
 - **Inbox check (evening #7):** Gmail mindwise.ai1@gmail.com shows **0 new actionable items** since evening check #6. All unread emails previously logged: Read.ai meeting report (already ingested), GitHub Pages deploy failures (×2), OpenAI promotional. No new voice briefs (last: 2026-06-18 Octupie scripts, already ingested).
