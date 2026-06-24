@@ -1,11 +1,21 @@
-Subject: Website review on June 24, 2026 | Read Meeting Report
-From: executiveassistant@e.read.ai
-Date: 2026-06-24T12:52:17Z
-
-Meeting: Website review
+Meeting Report: Website review
 Date: June 24, 2026
+Duration: 5 minutes 55 seconds (12:45 - 12:50)
+Platform: Microsoft Teams
+Participants: Himani (42s talk time), Shivendra Selvam (33s talk time)
+Source: executiveassistant@e.read.ai (2026-06-24T12:52:17Z)
 
-Summary from Read.ai:
-The participants clarified ownership and distribution of meeting notes and a MindWise AID recipient list. The group stated that the notes were not owned by Shivendra Selvam and that the MindWise AID recipients had been sent, while one participant said they would remove an item from the meeting because they...
+Summary:
+The participants clarified ownership and distribution of meeting notes and a MindWise AID recipient list. The group stated that the notes were not owned by Shivendra Selvam and that the MindWise AID recipients had been sent.
 
-[Full meeting transcript and details in the email body - needs to be extracted from the saved JSON file]
+Key Discussion Points:
+- Ownership of meeting notes disputed and confirmed not to belong to Shivendra Selvam
+- Discussion centered on who owns the meeting notes and whether MindWise AID recipients were included
+- Kishama and Himani exchanged greetings before addressing note ownership
+- MindWise AID recipients have been sent
+- Another participant indicated they would remove an unknown item from the meeting
+
+Action Items:
+- Meeting participant will remove an unidentified item from the meeting
+
+Status: Administrative/clarification meeting - very brief (under 6 minutes). No major decisions or strategic content.
