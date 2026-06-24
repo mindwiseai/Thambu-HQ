@@ -1,5 +1,20 @@
 # Command Center Inbox Log
 
+## [2026-06-24] 17:15 IST (afternoon - comprehensive)
+**Source:** Gmail + Calendar + Voice briefs + Raw folder check
+**Actionable items:** 1 IMMEDIATE (meeting in ~1h)
+**Status:** ⚠️ Meeting upcoming
+- Gmail: 2 items
+  - OpenAI marketing email (2026-06-24 06:19) — skip
+  - Shivendra Teams meeting "Website review" (2026-06-23, updated with Ankita)
+- Calendar: **Website review meeting TODAY 18:15–18:45 IST** (in ~1 hour)
+- Voice briefs: No new briefs (last: 2026-06-18 Octupie scripts, 6 days old)
+- Raw folder: No new files
+- **IMMEDIATE**: Join Teams meeting at 6:15 PM
+- **Pending from backlog**: Octupie shoot scheduling (Selvam availability + Chennai address + script selection)
+
+---
+
 ## [2026-06-24] 17:50 IST (late afternoon #2)
 **Source:** Gmail check (Discord permission denied)
 **Actionable items:** 0 new items
