@@ -1,9 +1,37 @@
 # Command Center Inbox Log
 
+## [2026-06-24] ~19:00 IST (evening v2)
+**Source:** Gmail check (deep review)
+**Actionable items:** 2 new items (from backlog)
+**Status:** 🔔 Action required
+
+### New Items Found (previously unread but not processed)
+
+#### 1. Octupie Scripts Ready + Shoot Scheduling
+**From:** shivank@octupie.com  
+**Date:** 2026-06-18 18:22 UTC  
+**Priority:** HIGH  
+**Type:** Mindwise video production  
+**Detailed note:** `inbox/2026-06-18-octupie-scripts-ready.md`  
+**Thread:** 19edbf8deec6d8ca
+
+**Summary:**
+- 9 video scripts written, pick 7 for trial batch
+- Lights arrived, ready to schedule shoot next week
+- **Action needed:** Selvam review + availability + Chennai office address
+
+**Links:**
+- Scripts: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing
+
+#### 2. Google Doc Share (duplicate notification)
+Same doc as #1, auto-notification from Google Drive (2026-06-19 08:43 UTC). No separate action.
+
+---
+
 ## [2026-06-24] 18:30 IST (evening)
 **Source:** Gmail + WhatsApp + Voice briefs check
-**Actionable items:** 0 new items
-**Status:** ✅ All clear
+**Actionable items:** 0 new items (incomplete check — missed backlog items)
+**Status:** ✅ All clear (INCORRECT — see 19:00 update above)
 - Gmail: 1 unread thread (Shiv Teams meeting from 2026-06-23, already processed)
 - WhatsApp: No new exports in past 24h
 - Voice briefs: No new briefs (last: 2026-06-19 Octupie scripts)
