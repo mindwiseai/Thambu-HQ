@@ -1,9 +1,9 @@
 ---
-title: Website review meeting (June 24, 2026)
+title: Website review meeting — June 24, 2026
 type: source
 source_type: meeting
 domain: mindwise
-raw_path: voice-briefs/2026-06-24-website-review-meeting.txt
+raw_path: mindwise/raw/2026-06-24-website-review-meeting.txt
 ingested: 2026-06-24
 ---
 
@@ -11,32 +11,34 @@ ingested: 2026-06-24
 
 ## Summary
 
-5-minute Teams meeting (12:45-12:50 PM) between [[himani-jain]] and [[shivendra-selvam]] on June 24, 2026 to clarify meeting note ownership and MindWise AID recipient list distribution. Brief administrative clarification — Shivendra confirmed meeting notes are not his ownership, MindWise AID recipients were already sent, and one participant would remove an unidentified item from the meeting.
+Brief administrative Teams call (5m55s, 12:45-12:50 PM) between [[himani-jain]] and [[shivendra-selvam]]. Despite the "website review" title, the actual discussion was about **meeting note ownership clarification** and confirming the **MindWise AID recipient list distribution**. Notes confirmed NOT owned by Shivendra. MindWise AID recipients already sent. One participant indicated they would remove an unidentified item from the meeting.
 
 ## Key facts
 
-- **Duration:** 5 minutes 55 seconds (12:45:00 - 12:50:55)
 - **Platform:** Microsoft Teams
-- **Participants:** [[himani-jain]] (42s talk time, 65%), [[shivendra-selvam]] (33s talk time, 35%)
-- **Subject:** "Website review" (but actual content was administrative clarification)
-- **Started late:** 4m 39s after scheduled time
-- **Invited participants:** Himani, mindwise.ai1@gmail.com, thambusamytd@gmail.com, ankitaduseja95@gmail.com
-- **Action item:** Meeting participant will remove the unidentified item from the meeting
+- **Duration:** 5m55s (12:45:00 - 12:50:55)
+- **Late start:** 4m39s after scheduled time
+- **Participants:** [[himani-jain]] (42s talk time, 55%) + [[shivendra-selvam]] (33s talk time, 45%)
+- **Topic mismatch:** Title says "Website review" but content was administrative (note ownership + recipient list)
+- **Read.ai session ID:** 01KVWSYAPG6D36AMBTYFQSFVCZ
 
-## Discussion
+## People mentioned
 
-- **Chapter:** Clarifying meeting notes and MindWise recipient distribution
-- Ownership of meeting notes was disputed and confirmed **not to belong to Shivendra Selvam**
-- MindWise AID recipients had been sent
-- One participant indicated they would remove an unknown item from the meeting
-- Kishama and Himani exchanged greetings before addressing note ownership
+- [[himani-jain]] — top talker (42s, 55%)
+- [[shivendra-selvam]] — denied ownership of meeting notes, confirmed MindWise AID recipients sent
+- [[thambu]] — cc'd on Read.ai report (thambusamy t d added Read to meeting)
+
+## Decisions
+
+- Meeting notes ownership: **NOT Shivendra's**
+- MindWise AID recipients: **already sent**
 
 ## Open questions
 
-- What was the "unidentified item" to be removed from the meeting?
-- Why was there uncertainty about note ownership?
-- What are the "meeting notes" being referenced (from a previous meeting)?
-- What is "MindWise AID" (likely AID = auto-generated recipient list)?
+- What was the "unidentified item" that needed to be removed from the meeting?
+- Why was a 5-minute administrative call titled "Website review"?
+- Were there other attendees beyond Himani + Shivendra? (Read.ai shows 2 attendees, but Kishama mentioned in transcript)
 
 ## Backlinks
 
+(Auto-emerges as other pages link back)

@@ -8,11 +8,11 @@ updated: 2026-06-24
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-24 — Command Center inbox: 1 actionable (meeting report) [evening check #5]
+## 2026-06-24 — Command Center inbox: 1 actionable (meeting report) [evening check #6]
 
-- **Inbox check (evening #5):** Gmail mindwise.ai1@gmail.com shows **1 new actionable item** — [[2026-06-24-website-review-meeting|Read.ai meeting report]] for "Website review" Teams call (June 24, 12:45-12:50 PM, 5m55s). Participants: [[himani-jain]] + [[shivendra-selvam]]. Topic was administrative (clarifying meeting note ownership + MindWise AID recipient list), not actual website review. Key takeaway: notes confirmed NOT Shivendra's ownership, MindWise AID recipients already sent. Saved to voice-briefs/, ingested to wiki.
-- **Other inbox:** GitHub Pages deploy failure (June 24, 16:01), OpenAI promotional (June 24, 06:19).
-- **Standing actionable:** [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (Shivank, 2026-06-18) — **all 5 actions still pending** (same as previous 12 checks).
+- **Inbox check (evening #6):** Gmail mindwise.ai1@gmail.com shows **1 actionable item** — [[2026-06-24-website-review-meeting|Read.ai meeting report]] for "Website review" Teams call (June 24, 12:45-12:50 PM, 5m55s). Participants: [[himani-jain]] + [[shivendra-selvam]]. Topic was administrative (clarifying meeting note ownership + MindWise AID recipient list), not actual website review. Key takeaway: notes confirmed NOT Shivendra's ownership, MindWise AID recipients already sent. Meeting report saved to `mindwise/raw/2026-06-24-website-review-meeting.txt`, ingested to wiki as [[2026-06-24-website-review-meeting]].
+- **Other inbox:** 2× GitHub Pages deploy failures (June 24, 16:38 + 16:01), OpenAI promotional (June 24, 06:19).
+- **Standing actionable:** [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (Shivank, 2026-06-18) — **all 5 actions still pending** (same as previous 13 checks).
 
 ## 2026-06-23 — Command Center inbox: 0 new items [evening check #3]
 

@@ -9,6 +9,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-24] inbox | Command Center evening check #6 — 1 actionable (meeting report)
+- Source: [[2026-06-24-website-review-meeting]]
+- Updated: [[hot]] (updated 2026-06-24 evening #6 entry)
+- Domain: mindwise
+- Inbox status: Gmail mindwise.ai1@gmail.com checked. 1 actionable item: Read.ai meeting report for "Website review" Teams call (June 24, 12:45-12:50 PM, 5m55s) between [[himani-jain]] and [[shivendra-selvam]]. Administrative clarification (meeting note ownership + MindWise AID recipient list), not actual website review content. Meeting report already ingested as [[2026-06-24-website-review-meeting]]. Other inbox: 2× GitHub Pages deploy failures, OpenAI promotional. Standing actionable: [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (all 5 actions still pending).
+
 ## [2026-06-24] ingest | Website review meeting — June 24, 2026
 - Source: [[2026-06-24-website-review-meeting]]
 - Created: 1 new page — [[2026-06-24-website-review-meeting]]
