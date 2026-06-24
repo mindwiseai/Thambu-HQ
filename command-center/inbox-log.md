@@ -1,5 +1,17 @@
 # Command Center Inbox Log
 
+## [2026-06-25] 14:45 IST (afternoon)
+**Source:** Gmail check
+**Actionable items:** 0 new items
+**Status:** ✅ All clear
+- Gmail: 4 unread threads
+  - 2× GitHub Actions failures "Deploy to GitHub Pages - main" (2026-06-24 16:38, 16:01) — deployment issues, non-actionable for Command Center
+  - Read.ai meeting report "Website review" (2026-06-24 12:52) — post-meeting recap from 6/24, minimal content (5min meeting about note ownership), no substantive decisions to ingest
+  - OpenAI marketing "Pick the better photo edit" (2026-06-24 06:19) — marketing, skip
+- **Pending action items from backlog**: Octupie shoot scheduling (Selvam availability + Chennai address + script selection)
+
+---
+
 ## [2026-06-24] 17:15 IST (afternoon - comprehensive)
 **Source:** Gmail + Calendar + Voice briefs + Raw folder check
 **Actionable items:** 1 IMMEDIATE (meeting in ~1h)
