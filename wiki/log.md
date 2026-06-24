@@ -9,6 +9,13 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-24] ingest | Website review meeting — June 24, 2026
+- Source: [[2026-06-24-website-review-meeting]]
+- Created: 1 new page — [[2026-06-24-website-review-meeting]]
+- Updated: [[hot]] (new 2026-06-24 evening #5 entry)
+- Domain: mindwise
+- Meeting report (Read.ai): 5-minute Teams call between [[himani-jain]] and [[shivendra-selvam]] clarifying meeting note ownership (not Shivendra's) and MindWise AID recipient list distribution (already sent). Administrative clarification, not actual website review content.
+
 ## [2026-06-24] inbox | Command Center late night #4 — 1 item (Teams meeting invite)
 - Source: [[2026-06-23-website-review-teams-meeting]]
 - Created: 1 new page — [[2026-06-23-website-review-teams-meeting]]
