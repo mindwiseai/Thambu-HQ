@@ -9,6 +9,11 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-25] inbox | Command Center evening check — 0 new actionable items
+- Updated: [[hot]] (new 2026-06-25 evening entry)
+- Domain: cross
+- Inbox status: Gmail mindwise.ai1@gmail.com checked (5 threads after:2026/06/24). **0 new actionable items** since late afternoon check #2. All emails logged: 3× GitHub Pages deploy failures (June 24), 1× duplicate Read.ai "Website review" meeting report (same meeting as [[2026-06-24-website-review-meeting]]), 1× OpenAI promotional. Standing actionable: [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (all 5 actions still pending).
+
 ## [2026-06-25] inbox | Command Center afternoon check #2 — duplicate Read.ai report archived
 - Updated: [[hot]] (new 2026-06-25 late afternoon entry)
 - Domain: cross

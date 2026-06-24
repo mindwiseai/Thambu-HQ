@@ -1,12 +1,17 @@
 ---
 title: Hot Cache
 type: meta
-updated: 2026-06-24
+updated: 2026-06-25
 ---
 
 # Hot Cache
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
+
+## 2026-06-25 — Command Center evening check — 0 new actionable items
+
+- **Inbox check (evening):** Gmail mindwise.ai1@gmail.com shows **0 new actionable items** since late afternoon check #2. 5 emails after:2026/06/24 scanned. All non-actionable: GitHub Pages deploy failures (×3, June 24, already resolved — wiki/index.html deployed successfully on latest commits), duplicate Read.ai "Website review" meeting report (same as [[2026-06-24-website-review-meeting]]), OpenAI promotional email.
+- **Standing actionable:** [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (Shivank, 2026-06-18) — **all 5 actions still pending**: (1) Review 9 scripts → select 7 best (2) [[thambu|Selvam]] adds personal lines/memories (3) Share Selvam's availability for shoot this week (4) Provide Chennai office address for lighting/setup (5) Lock shoot date. ✅ Ready: Lights arrived, signed contract, team ready (Jay, Vishnu, Shivank). Google Doc: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit.
 
 ## 2026-06-25 — Command Center: duplicate Read.ai meeting report (late afternoon check #2)
 
