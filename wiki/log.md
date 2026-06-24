@@ -9,6 +9,11 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-25] inbox | Command Center afternoon check — 0 new actionable items
+- Updated: [[hot]] (new 2026-06-25 afternoon inbox check entry)
+- Domain: cross
+- Inbox status: Gmail mindwise.ai1@gmail.com checked (10 unread, excluding GitHub/OpenAI noise). 0 new actionable items since 2026-06-24 evening check #7. All previously logged: Read.ai website review (already ingested), Teams meeting invites (×2, June 23), Octupie script doc shares (×2, June 18-19, already tracked), promotional emails. Voice briefs: 2 files modified last 48hr (both duplicate website review), no new briefs since 2026-06-18. Standing actionable: [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (all 5 actions still pending).
+
 ## [2026-06-25] duplicate-check | Voice brief duplicate detected — no ingest needed
 - Duplicate: `voice-briefs/2026-06-24-website-review.md` (808 bytes)
 - Original: [[2026-06-24-website-review-meeting]] (already ingested 2026-06-24)
