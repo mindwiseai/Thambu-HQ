@@ -1,36 +1,31 @@
----
-date: 2026-06-24
-time: 12:52:17
-from: executiveassistant@e.read.ai
-to: mindwise.ai1@gmail.com
-type: meeting-report
-status: processed
----
+# Website Review Meeting
 
-# Website Review Meeting — June 24, 2026
+**Source:** Read.ai meeting report  
+**Date:** June 24, 2026  
+**Platform:** Microsoft Teams  
+**Duration:** ~6 minutes (12:45–12:50)  
+**Participants:** Himani, Shivendra Selvam, Kishama  
 
-**Meeting Platform:** Microsoft Teams  
-**Distributor:** thambusamy t d  
-**Attendees:** 2 participants  
-**Late by:** 4m 39s
+## Summary
+The participants clarified ownership and distribution of meeting notes and a MindWise AID recipient list. The group stated that the notes were not owned by Shivendra Selvam and that the MindWise AID recipients had been sent.
+
+## Key Discussion Points
+- Clarifying meeting notes and MindWise recipient distribution
+- Ownership of the meeting notes was disputed and confirmed not to belong to Shivendra Selvam
+- MindWise AID recipients had been sent
 
 ## Action Items
-- Meeting participant will remove the unidentified item from the meeting.
+- [ ] Meeting participant will remove the unidentified item from the meeting
 
-## Key Topics
-**Chapter: Clarifying meeting notes and MindWise recipient distribution**
-- Ownership of the meeting notes was disputed and confirmed not to belong to Shivendra Selvam.
-- The participants clarified ownership and distribution of meeting notes and a MindWise AID recipient list.
-- The group stated that the notes were not owned by Shivendra Selvam and that the MindWise AID recipients had been sent.
-- One participant said they would remove an item from the meeting.
+## Notes
+- Meeting ran 4m 39s late
+- Very brief meeting (6 minutes)
+- Top talkers: Himani (42s), Shivendra Selvam (33s)
+- Full report available at Read.ai (requires login)
+- Session ID: 01KVWSYAPG6D36AMBTYFQSFVCZ
 
-## AI-Generated Questions
-- Why is there uncertainty about the AI participant details?
-- How should participant details be handled in transcripts?
-- What is the main topic of this meeting?
-- Who is responsible for the meeting notes?
-- Should MindWise AID recipients be removed from the list?
-- When were the meeting notes intended to be shared?
-
-## Status
-Processed 2026-06-25. Low actionability — meeting notes ownership clarification only.
+## Context Questions
+The meeting seems incomplete or truncated based on:
+- Very short duration for a "website review"
+- Unclear what "unidentified item" needs to be removed
+- Unclear what the actual website review content was

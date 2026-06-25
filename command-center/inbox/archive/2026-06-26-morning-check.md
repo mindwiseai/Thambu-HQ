@@ -1,30 +1,45 @@
-# Command Center Check — 2026-06-26 Morning
+# Command Center Inbox Check — 2026-06-26 Morning
 
-**Status**: 2 new items processed
+**Checked:** Gmail, WhatsApp  
+**Time:** ~01:09 UTC  
 
-## 1. GitHub Pages Deploy Failure
-- **Source**: GitHub Actions notification
-- **Date**: 2026-06-25 16:12 UTC
-- **Status**: Failed
-- **Details**: 
-  - Repository: mindwiseai/Thambu-HQ
-  - Workflow: Deploy to GitHub Pages
-  - Job: deploy (failed in 23 seconds)
-  - Annotations: 5 errors
-  - Run ID: 28184031384
-- **Action needed**: Investigate deployment failure and fix configuration
+## New Items (2)
 
-## 2. Website Review Meeting Report (Jun 24)
-- **Source**: Read.ai meeting report
-- **Date**: 2026-06-24 12:52 UTC
-- **Meeting**: Website review on June 24, 2026
-- **Key points**: 
-  - Clarified ownership and distribution of meeting notes
-  - Discussed MindWise AID recipient list
-  - Notes stated to not be owned by Shivendra Selvam
-- **Action needed**: Review full meeting report for decisions/specs to ingest into wiki
+### 1. GitHub Pages Deploy Failure ❌
+**Source:** GitHub Actions  
+**Date:** 2026-06-25 16:12 UTC  
 
-## Next Actions
-1. Check GitHub Actions logs for deploy failure root cause
-2. Pull full Read.ai meeting report content for wiki ingest
-3. Archive this inbox item after processing
+**Status:** Deploy to GitHub Pages workflow failed on main branch (commit 1d6f4b6)
+- Job failed in 23 seconds with 5 annotations
+- Run URL: https://github.com/mindwiseai/Thambu-HQ/actions/runs/28184031384
+
+**Action Required:** Review error annotations and fix deployment configuration
+
+**Filed:** `2026-06-26-github-deploy-fail.md`
+
+---
+
+### 2. Website Review Meeting Report 📄
+**Source:** Read.ai  
+**Date:** June 24, 2026  
+**Participants:** Himani, Shivendra Selvam, Kishama  
+
+**Summary:** Very brief 6-minute meeting about MindWise AID recipient distribution and meeting notes ownership clarification.
+
+**Notes:** 
+- Meeting seems incomplete or truncated (very short for a "website review")
+- Unclear what actual website content was reviewed
+- Action item about removing "unidentified item" from meeting
+
+**Filed:** `2026-06-24-website-review-meeting.md`
+
+---
+
+## Actions Taken
+- [x] Checked Gmail for messages from past 24h
+- [x] Created inbox files for both new items
+- [x] Archived previous check files (4 files → archive/)
+
+## Status
+**Inbox:** 2 new items pending review  
+**Next Check:** Next session or user request
