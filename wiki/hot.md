@@ -8,6 +8,11 @@ updated: 2026-06-25
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
+## 2026-06-25 — Command Center evening check #5 — 1 meeting report needs extraction
+
+- **Inbox check (evening #5):** 1 voice brief detected in `voice-briefs/2026-06-25-website-review-meeting.md` (768 bytes, same Gmail thread 19ef9b045ff7d33c as already-ingested [[2026-06-24-website-review-meeting]]). **Duplicate — skipped ingest.** Both files reference same 5m55s Teams call about MindWise AID recipient list + note ownership. Gmail inbox has 0 new actionable items.
+- **Standing actionable:** [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (Shivank, 2026-06-18) — **all 5 actions still pending**: (1) Review 9 scripts → select 7 best (2) [[thambu|Selvam]] adds personal lines/memories (3) Share Selvam's availability for shoot this week (4) Provide Chennai office address for lighting/setup (5) Lock shoot date. ✅ Ready: Lights arrived, signed contract, team ready (Jay, Vishnu, Shivank). Google Doc: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit.
+
 ## 2026-06-25 — Command Center evening check #4 — 0 new actionable items
 
 - **Inbox check (evening #4):** Gmail mindwise.ai1@gmail.com shows **0 new actionable items** since evening check #3. 5 threads scanned (is:unread after:2026/06/24). All non-actionable: GitHub Pages deploy failures (×3, June 24) **now resolved** — recent runs show success; duplicate Read.ai website review report (same as [[2026-06-24-website-review-meeting]], already ingested); OpenAI promotional.
