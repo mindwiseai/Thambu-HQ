@@ -1,5 +1,18 @@
 # Command Center Inbox Log
 
+## [2026-06-26] 09:45 IST (morning)
+**Source:** Gmail check
+**Actionable items:** 0 new items
+**Status:** ⚠️ 2 backlog items pending
+- Gmail: 2 threads from after:2026/06/25
+  - 1× GitHub Pages deploy failure (commit 1d6f4b6, 2026-06-25 16:12 — known issue, non-actionable)
+  - 1× Read.ai meeting report "Website review on June 24, 2026" (thread 19ef9b045ff7d33c — already flagged)
+- **Pending action items from backlog**: 
+  - Meeting report extraction and wiki ingest (thread 19ef9b045ff7d33c)
+  - Octupie shoot scheduling (7+ days overdue)
+
+---
+
 ## [2026-06-25] 23:52 IST (late night)
 **Source:** Gmail + WhatsApp check
 **Actionable items:** 1 meeting report needs processing
