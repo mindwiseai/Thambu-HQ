@@ -744,3 +744,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 ---
 
 **Older entries (Apr 11–13, 2026):** See [[meta/log-archive-2026-04-11-to-2026-04-13|log archive]] — covers wiki bootstrap, first 12 ingests, first lint pass, full lint cleanup.
+
+## [2026-06-25] inbox-check | Command Center morning check
+- Gmail: 5 unread messages (last 24h)
+  - 3x GitHub Pages deploy failures (technical/automation)
+  - 1x Read.ai meeting recap "Website review" (June 24) — administrative only, no strategic content
+  - 1x OpenAI promotional email
+- Decision: Website review meeting (6 min, Himani + Shivendra) covered note ownership clarification — no ingest needed
+- Voice briefs: None in last 24h
+- Status: **0 new actionable items**
