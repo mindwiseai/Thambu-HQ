@@ -8,6 +8,11 @@ updated: 2026-06-25
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
+## 2026-06-25 — March 26 voice brief already ingested (April 12)
+
+- **Voice brief check:** `voice-briefs/2026-03-26-thambu-voice-brief.md` (untracked file) — already fully ingested as [[2026-03-26-thambu-voice-brief]] on 2026-04-12. Source covers: [[startup-tax-exemption|FY2026 tax exemption usage]], year-end RaceSims push (Zoho Books reconciliation, close motion system sale), multi-city trip (Coimbatore → Bangalore → Mumbai), [[arka-motorsports|ARKA simulator install]], [[next-gen-racesims-rigs|next-gen rig design input]] from [[mr-leela-krishnan]], dealer/installer coordination ([[raghav-coimbatore-dealer|Raghav]], [[abdul]], [[trayas]], [[lakshay]]), Mumbai vendor meetings ([[patco-pharmaceuticals|Patco bottle]], [[imcd|IMCD]] + [[beta-free-bacopa-extract|bitter-free Bacopa]] exploration). Voice brief is **3 months old**; most tasks likely completed or superseded. No re-ingest needed.
+- **Standing actionable:** [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (Shivank, 2026-06-18) — **all 5 actions still pending**: (1) Review 9 scripts → select 7 best (2) [[thambu|Selvam]] adds personal lines/memories (3) Share Selvam's availability for shoot this week (4) Provide Chennai office address for lighting/setup (5) Lock shoot date. ✅ Ready: Lights arrived, signed contract, team ready (Jay, Vishnu, Shivank). Google Doc: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit.
+
 ## 2026-06-25 — Command Center evening check #3 — 0 new actionable items
 
 - **Inbox check (evening #3):** Gmail mindwise.ai1@gmail.com shows **0 new actionable items** since evening check #2. 10 threads scanned (is:unread OR newer_than:1d). All non-actionable: GitHub Pages deploy failures (×3, June 24, CI issues), Read.ai website review report (already archived), Teams meeting invites (already completed), OpenAI promotional (×2), previously logged items from June 19. Source: [[2026-06-25-command-center-evening]].

@@ -9,6 +9,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-25] ingest-verify | March 26 voice brief — already ingested April 12
+- Source: [[2026-03-26-thambu-voice-brief]]
+- Status: Verified existing ingest (from 2026-04-12)
+- Domain: cross
+- Note: User requested re-ingest; confirmed source page already complete with 14 entities, 3 concepts (ARKA, beta-free Bacopa, startup tax exemption, dealers, installers, next-gen rigs). No updates needed — voice brief is 3 months old; tasks likely completed or superseded by June 2026 operational state.
+
 ## [2026-06-25] inbox | Command Center evening check #2 — 0 new actionable items
 - Source: [[2026-06-25-command-center-evening]]
 - Created: 1 new page — [[2026-06-25-command-center-evening]]
