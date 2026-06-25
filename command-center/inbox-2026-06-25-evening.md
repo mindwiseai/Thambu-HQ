@@ -1,34 +1,79 @@
----
-date: 2026-06-25
-time: evening
-sources: gmail
-status: processed
----
-
-# Command Center Check — June 25 Evening
+# Command Center Inbox Check — 2026-06-25 evening
 
 ## Summary
-0 new actionable items. No change from afternoon check.
+- **Total unread**: 20+ messages
+- **Actionable**: 2 high-priority items
+- **Spam/marketing**: ~15 (OpenAI, Framer, Google promotional emails)
+- **GitHub notifications**: 5 failed deployment runs
 
-## Gmail (after June 23)
-**Total threads:** 6 (unchanged)
+## 🔴 High Priority (requires action)
 
-### Non-actionable
-1. **GitHub Actions failures** (3 threads) — Deploy to GitHub Pages workflow failing on main branch (commits 7496bc4, f167b41, e4dfe47). All jobs failed in 20-25 seconds. No user action needed.
+### 1. Octupie Scripts Ready — NEEDS RESPONSE
+**From**: Shivank @ Octupie  
+**Date**: 2026-06-18 (7 days ago)  
+**To**: Shivendra + team (cc: Thambu, Selvam, Jay, Vishnu)
 
-2. **Read.ai meeting report** — "Website review" June 24 meeting. Already processed as `2026-06-24-website-review-meeting.md`.
+**What they need:**
+1. ✅ **Pick 7 scripts** from the 9 they wrote (Google Doc link: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing)
+2. ✅ **Selvam to edit/add his voice** to the scripts (memories, corrections, tone)
+3. ✅ **Share Selvam's availability** for shoot next week
+4. ✅ **Provide Chennai office address** for lighting/setup planning
+5. 📎 Signed onboarding doc attached (Mindwise-Octupie-Onboarding.pdf)
 
-3. **OpenAI marketing email** — "Pick the better photo edit" promotional email.
+**Status**: 7 days old — urgency HIGH if shoot is supposed to happen "next week"
 
-4. **Teams meeting invites** (2 threads) — "Website review" meeting invites from Shivendra for June 23. Meeting already occurred.
+**Action needed**: Thambu/Shivendra to respond with availability + address, coordinate script review with Selvam
 
-### Actionable
-None.
+---
 
-## Actions Taken
-- Created this report
-- Updated inbox-log.md
-- No wiki ingest needed (no new content)
+### 2. Website Review Meeting (June 24) — Read.ai Report
+**From**: Read.ai  
+**Date**: 2026-06-24 12:52 PM (yesterday)  
+**Participants**: Shivendra + team
 
-## Next Check
-Recommended: morning June 26.
+**Key points** (from snippet):
+- Clarified ownership and distribution of meeting notes
+- MindWise AID recipient list was sent
+- One participant said they'd remove an item from the meeting
+
+**Status**: Recent meeting notes available  
+**Action needed**: Review full meeting report for any decisions or action items
+
+---
+
+## 🟡 Medium Priority
+
+### GitHub Pages Deploy Failures (5 instances)
+- 2026-06-24 19:27 (main 7496bc4)
+- 2026-06-24 16:38 (main f167b41)
+- 2026-06-24 16:01 (main e4dfe47)
+- 2026-06-19 20:39 (main ce54990)
+- 2026-06-19 12:18 (main b54ae06)
+
+**Pattern**: All jobs failing in ~20-26 seconds  
+**Action needed**: Check GitHub Actions workflow, likely a config or credential issue
+
+---
+
+## 🟢 Low Priority / FYI
+
+- **Shared doc**: "Mindwise - Script review" (Shivank Goura) — 2026-06-19 08:43
+- **Anthropic**: Credit change paused (2026-06-16 02:00)
+- **Google AI Studio**: Imagen 4 model discontinuation notice (action required by Aug 17, 2026)
+- **Marketing emails**: OpenAI (3), Framer 3.0, Google Gemini, Apify MCP connectors
+
+---
+
+## Next Steps
+
+1. **URGENT**: Respond to Octupie (7 days overdue) — coordinate script review + shoot logistics
+2. Review Read.ai meeting report for action items
+3. Fix GitHub Pages deployment workflow
+4. Archive/mark as read: promotional emails
+
+---
+
+## Files Referenced
+- Octupie scripts: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing
+- Read.ai meeting report: saved to tool-results/mcp-claude_ai_Gmail-get_thread-1782346046853.txt
+- Signed onboarding: attachment in Octupie email (Mindwise-Octupie-Onboarding.pdf)
