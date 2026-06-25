@@ -9,6 +9,11 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-25] inbox | Command Center evening check #4 — 0 new actionable items
+- Updated: [[hot]] (new 2026-06-25 evening #4 entry)
+- Domain: cross
+- Inbox status: Gmail mindwise.ai1@gmail.com checked (5 threads is:unread after:2026/06/24). **0 new actionable items** since evening check #3. Emails: 3× GitHub Pages deploy failures (June 24) **now resolved** — all recent workflow runs show success; 1× duplicate Read.ai website review report (already ingested as [[2026-06-24-website-review-meeting]]); 1× OpenAI promotional. Standing actionable: [[2026-06-18-octupie-scripts-delivered|Octupie scripts]] (all 5 actions still pending).
+
 ## [2026-06-25] ingest-verify | March 26 voice brief — already ingested April 12
 - Source: [[2026-03-26-thambu-voice-brief]]
 - Status: Verified existing ingest (from 2026-04-12)
