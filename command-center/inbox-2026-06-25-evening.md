@@ -77,3 +77,18 @@
 - Octupie scripts: https://docs.google.com/document/d/1xCJHUrgGsUIb-FFLF8QGOv9vwc8Go-xC_Q88mRPXvZw/edit?usp=sharing
 - Read.ai meeting report: saved to tool-results/mcp-claude_ai_Gmail-get_thread-1782346046853.txt
 - Signed onboarding: attachment in Octupie email (Mindwise-Octupie-Onboarding.pdf)
+
+---
+
+## Follow-up Check — 2026-06-25 19:15
+
+Pulled latest Read.ai meeting report (full extraction):
+
+### Website review meeting (June 24, 12:45-12:50 PM)
+- **Duration:** 6 minutes, Microsoft Teams
+- **Participants:** Himani (42s talk), Shivendra Selvam (33s), Kishama, thambusamy t d
+- **Content:** Administrative only — meeting notes ownership dispute (confirmed NOT Shivendra's), MindWise AID recipient list sent
+- **No actual website feedback discussed** in transcript (title misleading or off-record discussion)
+- **Action item:** One participant removing unspecified item from meeting
+
+**Assessment:** No new actionable website decisions. Meeting primarily administrative.
