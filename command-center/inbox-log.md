@@ -1,5 +1,21 @@
 # Command Center Inbox Log
 
+## [2026-06-25] 23:52 IST (late night)
+**Source:** Gmail + WhatsApp check
+**Actionable items:** 1 meeting report needs processing
+**Status:** ⚠️ 1 action pending
+- Gmail: 3 unread threads
+  - 2× GitHub Pages deploy failures (commits 1d6f4b6, 7496bc4 — 2026-06-24/25, known issue)
+  - 1× Read.ai meeting report "Website review on June 24, 2026" (thread 19ef9b045ff7d33c)
+    - Key topics: MindWise AID recipient list, notes ownership clarification (NOT Shivendra's)
+    - **Action required**: Extract structured content from HTML report and ingest to wiki
+- **Pending action items from backlog**: 
+  - Meeting report extraction and wiki ingest
+  - Octupie shoot scheduling (7+ days overdue)
+  - GitHub Pages deployment investigation (if recurring)
+
+---
+
 ## [2026-06-25] 20:36 IST (night)
 **Source:** Gmail check
 **Actionable items:** 0 new items
