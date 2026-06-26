@@ -18,6 +18,23 @@
      - Status: 📧 Report not yet viewed
      - **Action needed:** Review full meeting report
 - Discord: Not configured
+
+---
+
+## [2026-06-26] 16:30 IST (processed)
+**Processed by:** Command Center assistant
+**Items:** 2 items from inbox
+**Outcome:**
+1. ⚠️ **GitHub Pages deploy failure** (medium priority)
+   - Root cause: Workflow misconfigured — deploys entire repo (`.`) instead of build output
+   - Should point to `command-center/` directory for the HTML interface
+   - **Status:** Known issue, deferred (Command Center works locally)
+   - **Fix ready when needed:** Update `.github/workflows/*.yml` path field
+2. 📄 **Meeting report - Website review (June 24)** (low priority)
+   - Meeting about MindWise AID recipients and notes ownership
+   - **Status:** Flagged for manual review
+   - May contain decisions worth capturing in wiki
+**Both items archived to inbox/archive/**
 - Voice briefs: No new briefs since 2026-06-19
 - **Pending backlog**: Octupie shoot scheduling (7+ days overdue)
 
