@@ -61,7 +61,7 @@
       "tier": "Standard — Premium",
       "facing": "east",
       "position": "position 1 of 5 in east row",
-      "note": "Best standard rig — Conspit 20Nm + 290GP + Heusinkveld is the premium combo",
+      "note": "310 Apex wheel + VNM Lite pedals",
 
       "pc": {
         "status": "BUILD NEW",
@@ -77,7 +77,7 @@
 
       "wheelbase": { "model": "Conspit Ares 12Nm", "status": "PROCURE" },
       "wheel": { "model": "Conspit 310 Apex", "status": "IN STOCK ✓" },
-      "pedals": { "model": "Heusinkveld Sprint 2-pedal (brake + throttle, load cell)", "status": "IN STOCK ✓" },
+      "pedals": { "model": "VNM Lite pedals", "status": "IN STOCK ✓" },
       "shifter": { "model": "TBD", "status": "PROCURE if rally mode wanted" },
       "handbrake": null,
       "motion": null,
@@ -113,7 +113,7 @@
 
       "wheelbase": { "model": "Conspit Ares 12Nm", "status": "PROCURE" },
       "wheel": { "model": "Conspit Max 01 (high-end)", "status": "IN STOCK ✓" },
-      "pedals": { "model": "Conspit Apex 2-pedal or VNM 3-pedal", "status": "PROCURE" },
+      "pedals": { "model": "Conspit CPP Apex", "status": "IN STOCK ✓" },
       "motion": null,
 
       "monitors": {
@@ -145,9 +145,9 @@
         "case": "Corsair 3500X"
       },
 
-      "wheelbase": { "model": "Conspit 20Nm (swapped from SIM-07)", "status": "IN STOCK ✓" },
-      "wheel": { "model": "Conspit 290GP (swapped from SIM-07)", "status": "IN STOCK ✓" },
-      "pedals": { "model": "TBD", "status": "PROCURE" },
+      "wheelbase": { "model": "Conspit 20Nm", "status": "IN STOCK ✓" },
+      "wheel": { "model": "Conspit 290GP", "status": "IN STOCK ✓" },
+      "pedals": { "model": "Conspit CPP Lite", "status": "IN STOCK ✓" },
       "motion": null,
 
       "monitors": {
@@ -181,7 +181,7 @@
 
       "wheelbase": { "model": "Conspit Ares 12Nm", "status": "PROCURE" },
       "wheel": { "model": "Conspit 300GT", "status": "PROCURE" },
-      "pedals": { "model": "Conspit Apex 2-pedal or VNM 3-pedal", "status": "PROCURE" },
+      "pedals": { "model": "Conspit Evo", "status": "IN STOCK ✓" },
       "motion": null,
 
       "monitors": {
@@ -293,48 +293,64 @@
   "stock_summary": {
     "IN_STOCK": [
       "Simucube 2 Pro wheelbase → SIM-08",
-      "Conspit 20Nm wheelbase → SIM-03",
-      "Conspit 290GP wheel → SIM-03",
-      "Heusinkveld Sprint 2-pedal → SIM-03",
+      "HOA Hub + D-rim → SIM-08",
       "Simtrecs Pro 3-pedal → SIM-08",
-      "Fanatec 8Nm #1 → SIM-01",
-      "Fanatec 8Nm #2 → SIM-02",
-      "3× Samsung 32\" G6 NOS (triple set) → SIM-03",
-      "3× Samsung 32\" G5 NOS (triple set) → SIM-04",
-      "1× Samsung 34\" curved → SIM-02 monitor (in stock)",
+      "VNM sequential shifter → SIM-08",
+      "VNM handbrake → SIM-08",
+      "Conspit 20Nm wheelbase → SIM-05",
+      "Conspit 290GP wheel → SIM-05",
+      "Conspit CPP Lite pedals → SIM-05",
+      "Conspit 310 Apex wheel → SIM-03",
+      "Conspit Max 01 wheel → SIM-04",
+      "Conspit CPP Apex pedals → SIM-04",
+      "Conspit Evo pedals → SIM-06",
+      "VNM Xtreme 32Nm wheelbase → SIM-07",
+      "VNM GT steering wheel → SIM-07",
+      "VNM V1 pedals → SIM-07",
+      "VNM Lite pedals → SIM-03",
+      "Fanatec 8Nm #1 → SIM-01 (needs function check)",
+      "Fanatec 8Nm #2 → SIM-02 (confirmed working)",
+      "Fanatec CSL McLaren GT3 V2 rim → SIM-01",
+      "Fanatec CSL Formula 2.5 rim → SIM-02",
+      "Fanatec CSL 3-pedal → SIM-02",
+      "Heusinkveld Sprint 2-pedal (1 set only) → SIM-01",
+      "3× Samsung 32\" G6 → SIM-03",
+      "3× Samsung 32\" G5 → SIM-04",
+      "1× Samsung 34\" curved → SIM-02",
+      "RTX 5070 Ti (extra) → SIM-03 GPU",
+      "RTX 5080 (incoming) → SIM-07 GPU",
       "Full PC Ryzen 5700 + RTX 4070 (existing build) → SIM-02",
-      "RTX 5080 (incoming) → SIM-07 GPU"
+      "All SIM-08 PC components → in stock"
     ]
   },
 
   "procurement_needed": {
     "wheelbases": [
-      "4× Conspit Ares 12Nm → SIM-04, 05, 06, 07"
+      "3× Conspit Ares 12Nm → SIM-03, SIM-04, SIM-06"
     ],
     "wheels": [
-      "1× Simucube-compatible wheel for SC2 Pro → SIM-08 (e.g. Cube Controls, OMP, Sim-Lab hub + rim)",
-      "4× Conspit 300GT (or equivalent) → SIM-04, 05, 06, 07",
-      "2× Fanatec-compatible wheels → SIM-01, SIM-02"
+      "1× Conspit rim → SIM-06 (model TBD)"
     ],
-    "pedals": [
-      "4× sets for SIM-04, 05, 06, 07 — confirm: Conspit Apex 2-pedal or VNM 3-pedal per rig",
-      "2× entry-level sets for SIM-01, SIM-02 — Fanatec CSL pedals or equivalent"
+    "pedals": [],
+    "motion": [
+      "1× VNM 3-DOF motion platform → SIM-08"
     ],
     "monitors": [
-      "9× Samsung 32\" curved for SIM-05, 06, 07 (3 each)",
-      "6× 27\" monitors for SIM-01, SIM-02 (3 each)",
-      "3× 45\" monitors for SIM-08 hero rig — PROCURE"
+      "9× Samsung 32\" curved → SIM-05, SIM-06, SIM-07 (3 each)",
+      "3× 27\" monitors → SIM-01 (triple)",
+      "3× 45\" monitors → SIM-08 hero rig"
     ],
     "pcs_to_build": [
-      "1× Hero — 9800X3D + RTX 5080 (RM1200x, 360AIO, B850, 3500X)",
-      "4× Standard — 9800X3D + RTX 5070Ti (RM850x, 360AIO, B850, 3500X) for SIM-03, 04, 05, 06",
-      "1× Entry — Ryzen 7 9700 + RTX 5070 (RM850x, 360AIO, B850, 3500X) for SIM-01"
+      "1× Hero — 9800X3D + RTX 5080 + RM1200x, B850, 32GB DDR5, 1TB, 360AIO, 3500X → SIM-08",
+      "5× Standard — 9800X3D + RTX 5070Ti + RM850x, B850, 32GB DDR5, 1TB, 360AIO, 3500X → SIM-03/04/05/06 (note: SIM-03 GPU in stock)",
+      "1× Standard-high — 9800X3D + RTX 5080 (incoming) + RM1000x, B850, 32GB DDR5, 1TB, 360AIO, 3500X → SIM-07",
+      "1× Entry — Ryzen 7 9700 + RTX 5070 + RM850x, B850, 32GB DDR5, 1TB, 360AIO, 3500X → SIM-01"
     ]
   },
 
   "open_questions": [
     "SIM-01 Fanatec 8Nm #1 — must function-check before launch",
-    "Pedals for SIM-04, SIM-06, SIM-07 — still TBD (Conspit Apex 2P or VNM 3P?)"
+    "SIM-06 wheel — which Conspit rim to procure?"
   ],
 
   "kiosk_deploy_note": "Per rig: open kiosk_url in browser, F11 fullscreen, set as startup tab. Server IPs go in worker/src/kiosk.ts KIOSK_CONFIG — one deploy updates all 8 rigs.",
