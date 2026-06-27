@@ -145,9 +145,9 @@
         "case": "Corsair 3500X"
       },
 
-      "wheelbase": { "model": "Conspit Ares 12Nm", "status": "PROCURE" },
-      "wheel": { "model": "Conspit 300GT", "status": "PROCURE" },
-      "pedals": { "model": "Conspit Apex 2-pedal or VNM 3-pedal", "status": "PROCURE" },
+      "wheelbase": { "model": "VNM Xtreme 32Nm", "status": "IN STOCK ✓" },
+      "wheel": { "model": "VNM GT steering wheel", "status": "IN STOCK ✓" },
+      "pedals": { "model": "VNM V1 pedals", "status": "IN STOCK ✓" },
       "motion": null,
 
       "monitors": {
@@ -246,9 +246,9 @@
         "case": "Corsair 3500X"
       },
 
-      "wheelbase": { "model": "Fanatec 8Nm #1", "status": "IN STOCK ✓" },
-      "wheel": { "model": "Fanatec-compatible wheel (CSL Universal Hub + wheel or CSL Elite)", "status": "PROCURE" },
-      "pedals": { "model": "Entry-level pedals — Fanatec CSL or equivalent", "status": "PROCURE" },
+      "wheelbase": { "model": "Fanatec 8Nm #1", "status": "IN STOCK ✓ — NEEDS FUNCTION CHECK before launch" },
+      "wheel": { "model": "Fanatec CSL McLaren GT3 V2 rim", "status": "IN STOCK ✓" },
+      "pedals": { "model": "Heusinkveld Sprint 2-pedal", "status": "IN STOCK ✓" },
       "motion": null,
 
       "monitors": {
@@ -274,9 +274,9 @@
         "note": "Existing build — confirmed fully stocked including wheel and pedals"
       },
 
-      "wheelbase": { "model": "Fanatec 8Nm #2", "status": "IN STOCK ✓" },
-      "wheel": { "model": "Fanatec-compatible wheel", "status": "IN STOCK ✓" },
-      "pedals": { "model": "Entry-level pedals — Fanatec CSL", "status": "IN STOCK ✓" },
+      "wheelbase": { "model": "Fanatec 8Nm #2", "status": "IN STOCK ✓ — confirmed working" },
+      "wheel": { "model": "Fanatec CSL Formula 2.5 rim", "status": "IN STOCK ✓" },
+      "pedals": { "model": "Fanatec CSL 3-pedal", "status": "IN STOCK ✓" },
       "motion": null,
 
       "monitors": {
@@ -333,8 +333,8 @@
   },
 
   "open_questions": [
-    "Standard rig pedal split (SIM-04/05/06/07): Conspit Apex 2-pedal or VNM 3-pedal?",
-    "Fanatec wheels (SIM-01/02): which Fanatec-compatible steering wheels?"
+    "SIM-01 Fanatec 8Nm #1 — must function-check before launch",
+    "Pedals for SIM-04, SIM-06, SIM-07 — still TBD (Conspit Apex 2P or VNM 3P?)"
   ],
 
   "kiosk_deploy_note": "Per rig: open kiosk_url in browser, F11 fullscreen, set as startup tab. Server IPs go in worker/src/kiosk.ts KIOSK_CONFIG — one deploy updates all 8 rigs.",
