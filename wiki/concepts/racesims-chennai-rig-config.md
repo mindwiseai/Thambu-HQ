@@ -32,7 +32,7 @@ All PC builds (except SIM-02): Gigabyte B850 Gaming X WiFi 6 · 32GB DDR5 6000MH
 
 Costing finalized 2026-06-27 — source: [[2026-06-27-chennai-per-rig-costing]].
 
-**Total capital to open: ₹29,14,637** (all items known). Pending: if 3× GT rigs (SIM-01/02/08) and their seats still need to be fabricated/procured, add ₹1,23,527 → **₹30,38,164**.
+**Total capital to open: ₹29,38,637** — all items resolved. All seats in stock. 2× GT rigs to fabricate (₹44,000); 1× triple stand owned.
 
 | Rig | Cockpit+Seat | PC | Sim HW | Monitors+Stand | Total est. |
 |-----|-------------|-----|--------|----------------|------------|

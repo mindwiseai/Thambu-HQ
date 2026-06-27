@@ -8,9 +8,9 @@ updated: 2026-06-26
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-27 — Chennai per-rig costing finalized · capital ₹29.1L
+## 2026-06-27 — Chennai per-rig costing finalized · capital ₹29,38,637
 
-- **Capital required: ₹29,14,637** to open Chennai studio — all line items fully confirmed. If 3× GT rigs (SIM-01/02/08, ₹22K each) + their 3 seats (₹57,527) still need fabricating, add ₹1,23,527 → **₹30,38,164**. Open question pending Thambu confirmation.
+- **Capital required: ₹29,38,637** — all seats confirmed in stock (XP×2, Phantom×2, Apex×2, Raptor×2). 2× GT rigs to fabricate (₹44,000). 1× triple stand owned. Still to pay after Visuvam invoice: ~₹27,51,887.
 - **Key price confirmations:** RTX 5080 FE ₹1,16,000 · RM1200x ₹17,000 · SIM-08 full PC owned · Samsung 32" G5 ₹20,750 (Visuvam VC/26-27/1079, 9 units = ₹1,86,750 already invoiced) · Monitor stands: triple ₹20,000, single ₹10,000.
 - **PC components (Navkar Quote Jun 2026):** 9800X3D ₹47,790 · 9700X ₹30,975 · B850 ₹17,464 · 5070 Ti ₹1,12,100 · 5070 ₹71,980 · 32GB DDR5 ₹43,070 · 1TB ₹17,700 · AIO ₹8,083 · RM850e ₹10,325 · RM1000e ₹17,110 · Case ₹8,555.
 - Source: [[2026-06-27-chennai-per-rig-costing]] · Updated: [[racesims-chennai-rig-config]]
