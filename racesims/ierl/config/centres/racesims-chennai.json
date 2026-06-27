@@ -25,6 +25,9 @@
       "facing": "west wall",
       "position": "island centrepiece",
 
+      "cockpit": { "model": "RaceSims GT Rig (existing)", "status": "IN STOCK ✓" },
+      "seat": { "model": "Phantom", "status": "IN STOCK ✓" },
+
       "pc": {
         "status": "BUILD NEW",
         "cpu": "AMD Ryzen 9 9800X3D",
@@ -63,6 +66,9 @@
       "position": "position 1 of 5 in east row",
       "note": "310 Apex wheel + VNM Lite pedals",
 
+      "cockpit": { "model": "RaceSims GT PRO Rig (new design)", "status": "BUILD NEW" },
+      "seat": { "model": "Raptor", "status": "IN STOCK ✓" },
+
       "pc": {
         "status": "BUILD NEW",
         "cpu": "AMD Ryzen 9 9800X3D",
@@ -98,6 +104,8 @@
       "tier": "Standard",
       "facing": "east",
       "position": "position 2 of 5 in east row",
+      "cockpit": { "model": "RaceSims GT PRO Rig (new design)", "status": "BUILD NEW" },
+      "seat": { "model": "Raptor", "status": "IN STOCK ✓" },
 
       "pc": {
         "status": "BUILD NEW",
@@ -129,6 +137,8 @@
     {
       "sim": "SIM-05",
       "rig": 5,
+      "cockpit": { "model": "RaceSims GT PRO Rig (new design)", "status": "BUILD NEW" },
+      "seat": { "model": "Apex", "status": "IN STOCK ✓" },
       "tier": "Standard",
       "facing": "east",
       "position": "position 3 of 5 in east row (centre)",
@@ -167,6 +177,9 @@
       "facing": "east",
       "position": "position 4 of 5 in east row",
 
+      "cockpit": { "model": "RaceSims GT PRO Rig (new design)", "status": "BUILD NEW" },
+      "seat": { "model": "Phantom", "status": "IN STOCK ✓" },
+
       "pc": {
         "status": "BUILD NEW",
         "cpu": "AMD Ryzen 9 9800X3D",
@@ -201,6 +214,9 @@
       "facing": "east",
       "position": "position 5 of 5 in east row",
 
+      "cockpit": { "model": "RaceSims GT PRO Rig (new design)", "status": "BUILD NEW" },
+      "seat": { "model": "Apex", "status": "IN STOCK ✓" },
+
       "pc": {
         "status": "BUILD NEW",
         "cpu": "AMD Ryzen 9 9800X3D",
@@ -234,6 +250,9 @@
       "tier": "Entry Level",
       "facing": "south",
 
+      "cockpit": { "model": "RaceSims GT Rig (existing)", "status": "IN STOCK ✓" },
+      "seat": { "model": "XP", "status": "IN STOCK ✓" },
+
       "pc": {
         "status": "BUILD NEW",
         "cpu": "AMD Ryzen 7 9700",
@@ -266,6 +285,9 @@
       "rig": 2,
       "tier": "Entry Level",
       "facing": "north",
+
+      "cockpit": { "model": "RaceSims GT Rig (existing)", "status": "IN STOCK ✓" },
+      "seat": { "model": "XP", "status": "IN STOCK ✓" },
 
       "pc": {
         "status": "IN STOCK ✓ — existing PC",
