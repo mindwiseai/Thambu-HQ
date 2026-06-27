@@ -28,6 +28,25 @@ Layout: 1 Hero (SIM-08, west wall, 3-DOF) · 5 Standard east row (SIM-03–07) �
 
 All PC builds (except SIM-02): Gigabyte B850 Gaming X WiFi 6 · 32GB DDR5 6000MHz · 1TB M.2 Gen4 · 360mm AIO · Corsair 3500X.
 
+## Landed cost & capital required
+
+Costing finalized 2026-06-27 — source: [[2026-06-27-chennai-per-rig-costing]].
+
+**Total capital to open: ₹29,14,637** (all items known). Pending: if 3× GT rigs (SIM-01/02/08) and their seats still need to be fabricated/procured, add ₹1,23,527 → **₹30,38,164**.
+
+| Rig | Cockpit+Seat | PC | Sim HW | Monitors+Stand | Total est. |
+|-----|-------------|-----|--------|----------------|------------|
+| SIM-01 | ₹39,346 | ₹2,08,152 | ₹1,28,331 | ₹53,630 | **~₹4,29,459** |
+| SIM-02 | ₹39,346 | ~₹70,000 | ₹1,16,314 | ~₹45,000 | **~₹2,70,660** |
+| SIM-03 | ₹58,055 | ₹1,52,987 | ₹96,156 | ₹82,250 | **~₹3,89,448** |
+| SIM-04 | ₹58,055 | ₹2,65,087 | ₹1,10,523 | ₹82,250 | **~₹5,15,915** |
+| SIM-05 | ₹56,957 | ₹2,65,087 | ₹1,23,252 | ₹82,250 | **~₹5,27,546** |
+| SIM-06 | ₹57,835 | ₹2,65,087 | ₹1,70,560 | ₹82,250 | **~₹5,75,732** |
+| SIM-07 | ₹56,957 | ₹2,75,772 | ₹1,68,487 | ~₹1,04,000 | **~₹6,05,216** |
+| SIM-08 | ₹44,835 | owned | ~₹6,70,000 | ₹3,95,000 | **~₹11,09,835** |
+
+Key unit prices: RTX 5080 FE ₹1,16,000 · RTX 5070 Ti ₹1,12,100 · 9800X3D ₹47,790 · Samsung 32" G5 ₹20,750 · 45" OLED ₹1,25,000 · Triple stand ₹20,000 · Single stand ₹10,000.
+
 ## Extras / spares
 
 - **Fanatec 8Nm #1** — spare (repair + intel/loan use). Original SIM-01 unit, condition uncertain.

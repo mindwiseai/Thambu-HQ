@@ -9,6 +9,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-27] ingest | RaceSims Chennai — Per-Rig Costing Session
+- Source: [[2026-06-27-chennai-per-rig-costing]]
+- Created: 1 new page ([[2026-06-27-chennai-per-rig-costing]])
+- Updated: 1 existing page ([[racesims-chennai-rig-config]] — added costing + capital section)
+- Domain: racesims
+
 ## [2026-06-27] ingest | RaceSims Chennai — 8-Rig Hardware Config Session
 - Source: [[2026-06-27-racesims-chennai-rig-config]]
 - Created: 2 new pages ([[2026-06-27-racesims-chennai-rig-config]], [[racesims-chennai-rig-config]])
