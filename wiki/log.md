@@ -9,6 +9,12 @@ Append-only chronological record of every ingest, lint, and major edit. **Newest
 
 ---
 
+## [2026-06-27] ingest | RaceSims Chennai — 8-Rig Hardware Config Session
+- Source: [[2026-06-27-racesims-chennai-rig-config]]
+- Created: 2 new pages ([[2026-06-27-racesims-chennai-rig-config]], [[racesims-chennai-rig-config]])
+- Updated: 2 existing pages ([[racesims-chennai-premium-baseline]], [[domains/racesims/_index]])
+- Domain: racesims
+
 ## [2026-06-26] inbox | Command Center late night check — 0 new actionable items
 - Updated: [[hot]] (new 2026-06-26 late night entry)
 - Domain: cross

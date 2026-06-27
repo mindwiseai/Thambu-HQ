@@ -71,6 +71,7 @@ India's pro-grade sim-racing hardware company. Domain: racesims.in. Founder/owne
 
 ## Operations & company
 - [[racesims-chennai-premium-baseline]] — conservative sim-only Chennai forecast (Uday-anchored, ₹11.7L Y1 EBITDA, break-even 13.8%)
+- [[racesims-chennai-rig-config]] ⭐ — per-rig hardware BOM, all 8 rigs locked (2026-06-27)
 - [[uday-hyderabad]] — Hyderabad dealer + VMS builder; real-data benchmark for centre economics
 - [[racesims-company]] — legal entity (Racesims Solutions Pvt Ltd, GSTIN, MSME, Startup India)
 - [[racesims-financials-fy2526]] — FY25-26 financials, books status, GST/TDS, cleanup punch-list, valuation

@@ -50,7 +50,7 @@ Property **locked** in **Nungambakkam** (central Chennai); opens **July 2026**. 
 
 ### Floor fit (v8 — Studio62 electrical layout 19.06.2026 · SUPERSEDES v7)
 
-> [!important] Layout revised 2026-06-19. Studio62 (Project 90873) electrical drawings confirm a new rig arrangement — different from the v7 L-shape. Config of record: `racesims/ierl/config/centres/racesims-chennai.json`.
+> [!important] Layout revised 2026-06-19. Studio62 (Project 90873) electrical drawings confirm a new rig arrangement — different from the v7 L-shape. Config of record: `racesims/ierl/config/centres/racesims-chennai.json`. **Per-rig hardware BOM finalized 2026-06-27** — see [[racesims-chennai-rig-config]].
 >
 > | Rig | SIM # | Tier | Facing | Monitors |
 > |-----|--------|------|--------|----------|

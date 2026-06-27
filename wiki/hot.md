@@ -8,6 +8,12 @@ updated: 2026-06-26
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
+## 2026-06-27 — Chennai 8-rig BOM finalized · zero open questions
+
+- **[[racesims-chennai-rig-config]] locked** — all 8 rigs fully specified: wheelbase, wheel, pedals, PC, monitors. Config of record: `racesims/ierl/config/centres/racesims-chennai.json`.
+- **Key decisions:** VNM Xtreme 32Nm kit → SIM-07; Conspit 20Nm + 290GP → SIM-05. SIM-01 base swapped to Conspit Apex 8Nm (Fanatec uncertain condition). Fanatec 8Nm #1 → spare. McLaren GT3 rim → SIM-02 alternate.
+- **Buy list:** 3× Ares 12Nm + 1× Apex 8Nm + 2× 300GT + monitors (9× 32", 3× 27", 3× 45") + 1× VNM 3-DOF motion + 7 PC builds.
+
 ## 2026-06-26 — Command Center late night check — 0 new actionable items
 
 - **Inbox check (late night):** Gmail mindwise.ai1@gmail.com shows **0 new actionable items** since evening check #2. 2 unread threads newer_than:1d: GitHub Pages deploy failure (June 25 16:12, already resolved), duplicate Read.ai meeting report reminder (June 25 12:07, same [[2026-06-24-website-review-meeting]]). No new voice briefs. No new raw files.
