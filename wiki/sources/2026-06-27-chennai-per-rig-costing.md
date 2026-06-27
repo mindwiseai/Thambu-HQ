@@ -62,7 +62,7 @@ Full per-rig landed cost table built for all 8 Chennai rigs. **Capital required 
 | GT PRO Rigs × 5 | 1,75,000 |
 | GT Rigs × 2 (fabricate — 1 of 3 owned) | 44,000 |
 | Seats × 3 (XP×2 + Phantom — all in stock) | 0 |
-| PC builds × 6 (SIM-01, 03–07) | 16,32,172 |
+| PC builds × 6 (SIM-01, 03–07) | 14,32,172 |
 | Conspit wheelbases × 4 | 1,57,633 |
 | Conspit 300GT wheel × 1 | 32,775 |
 | Monitors (32"×9 + 27"×3 + 45"×3) | 5,95,380 |
