@@ -32,7 +32,7 @@ All PC builds (except SIM-02): Gigabyte B850 Gaming X WiFi 6 · 32GB DDR5 6000MH
 
 Costing finalized 2026-06-27 — source: [[2026-06-27-chennai-per-rig-costing]].
 
-**Bank asset register (2026-06-27):** Total studio hardware value **₹45,67,236** = Owned (promoter contribution in kind) **₹18,98,624** + To-purchase (loan ask) **₹26,68,612**. All seats owned (XP ₹17,346 · Phantom ₹22,835 · Apex/Raptor ₹25,000 each). See [[2026-06-27-chennai-per-rig-costing]] for the own-vs-buy breakdown and open items.
+**Bank asset register (2026-06-27):** Total studio hardware value **₹48,30,434** = Owned (promoter contribution in kind) **₹18,98,624** + To-purchase (loan ask) **₹29,31,810**. PC + displays sourced to the [[2026-06-27-navkar-pc-display-quote|Navkar quote]] ₹19,88,000 (incl. a flagged 3-set over-quote ~₹2.63L). All seats owned (XP ₹17,346 · Phantom ₹22,835 · Apex/Raptor ₹25,000 each). See [[2026-06-27-chennai-per-rig-costing]] for the own-vs-buy breakdown and open items.
 
 | Rig | Cockpit+Seat | PC | Sim HW | Monitors+Stand | Total est. |
 |-----|-------------|-----|--------|----------------|------------|

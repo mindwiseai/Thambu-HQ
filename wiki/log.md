@@ -5,6 +5,13 @@ type: meta
 
 # Wiki Operation Log
 
+## [2026-06-27] ingest | Navkar Computers PC & Display Quote
+- Source: [[2026-06-27-navkar-pc-display-quote]] (₹19,88,000 grand total; raw xlsx copied to `racesims/marketing/partnerships/quotes/`)
+- Created: 1 new page ([[2026-06-27-navkar-pc-display-quote]])
+- Updated: [[2026-06-27-chennai-per-rig-costing]], [[racesims-chennai-rig-config]], hot.md
+- Confirmed 45″ Corsair XENEON FLEX OLED ₹1,24,999.76 + 27″ MSI MAG 275F ₹11,210. Flagged 3-set over-quote (~₹2.63L). Loan ask → ₹29,31,810.
+- Domain: racesims
+
 Append-only chronological record of every ingest, lint, and major edit. **Newest entries at top.** Format: `## [YYYY-MM-DD] <operation> | <title>` so `grep "^## \[" log.md | head -20` shows recent activity.
 
 ---

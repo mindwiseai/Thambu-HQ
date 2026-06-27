@@ -13,7 +13,7 @@ Costing session deriving landed unit prices and capital-required table for the [
 
 ## Summary
 
-Full per-rig landed cost table built for all 8 Chennai rigs, restructured 2026-06-27 into a bank-grade **asset register** (own vs buy) for a loan application. **Total studio hardware value ₹45,67,236 = Owned (promoter contribution) ₹18,98,624 + To-purchase (loan ask) ₹26,68,612.** Apex & Raptor seats confirmed ₹25,000 each (firm); SIM-07 RTX 5080 confirmed PAID (owned). Rebuilding bottom-up from `racesims-chennai.json` corrected two errors in the earlier ₹29,38,637 figure: (1) 9× Visuvam monitors ₹1,86,750 are invoiced/paid → owned, not loan; (2) SIM-07 RTX 5080 ₹1,16,000 is incoming/owned, was double-counted in PC build; (3) Conspit 300GT needs 2× (SIM-01+06), earlier had 1× (+₹32,750). Deliverable: `~/Desktop/RaceSims-Chennai-Loan-Proposal.xlsx` (5 tabs). All seats in stock (owned, shown at landed value).
+Full per-rig landed cost table built for all 8 Chennai rigs, restructured 2026-06-27 into a bank-grade **asset register** (own vs buy) for a loan application. **Total studio hardware value ₹48,30,434 = Owned (promoter contribution) ₹18,98,624 + To-purchase (loan ask) ₹29,31,810.** Apex & Raptor seats ₹25,000 each (firm); SIM-07 RTX 5080 PAID (owned). PC + display portion now sourced to the actual [[2026-06-27-navkar-pc-display-quote|Navkar Computers quote]] (₹19,88,000) — which raised the PC line ₹2.63L vs the per-rig reconstruction because it provisions 9 component sets vs 6 builds (flagged for confirmation; trimming → loan ₹26,68,611). Rebuilding bottom-up from `racesims-chennai.json` corrected two errors in the earlier ₹29,38,637 figure: (1) 9× Visuvam monitors ₹1,86,750 are invoiced/paid → owned, not loan; (2) SIM-07 RTX 5080 ₹1,16,000 is incoming/owned, was double-counted in PC build; (3) Conspit 300GT needs 2× (SIM-01+06), earlier had 1× (+₹32,750). Deliverable: `~/Desktop/RaceSims-Chennai-Loan-Proposal.xlsx` (5 tabs). All seats in stock (owned, shown at landed value).
 
 ## Key facts
 
@@ -75,13 +75,14 @@ Still to pay: ~₹27,51,887.
 
 ## Open questions (confirm before bank submission)
 
-- **45″ OLED ₹1,25,000/unit (×3 = ₹3,75,000):** Thambu says the price is in the Navkar quote, but that quote is not ingested in the repo (only PC-component lines were). Need the actual Navkar 45″ line (and 27″) — largest soft figure in the loan ask.
+- **Navkar quote 3 extra component sets (~₹2,63,199):** quote has 9× RAM/SSD/cooler + 8× PSU/case but only 6 new CPU+board builds. Confirm intended (spares / SIM-02+08 upgrades) or trim → loan drops to ₹26,68,611. See [[2026-06-27-navkar-pc-display-quote]].
 - **Owned sim-hardware values (wheelbases/wheels/pedals):** EST landed/replacement values for the in-kind contribution total; confirm if bank wants documented valuation.
 
 ## Resolved (2026-06-27, round 2)
 
 - **SIM-07 RTX 5080 (₹1,16,000):** PAID last week → confirmed owned, stays out of loan.
 - **Apex & Raptor seats:** ₹25,000 each (firm) — was ₹20,000 placeholder. Owned-value +₹20,000.
+- **45″ OLED & 27″ pricing:** confirmed from actual [[2026-06-27-navkar-pc-display-quote|Navkar quote]] — 45″ Corsair XENEON FLEX ₹1,24,999.76/unit, 27″ MSI MAG 275F ₹11,210/unit (both matched prior estimates exactly).
 
 ## Resolved
 

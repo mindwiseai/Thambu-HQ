@@ -8,11 +8,11 @@ updated: 2026-06-26
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-27 — Chennai costing → bank asset register · loan ask ₹26,68,612
+## 2026-06-27 — Chennai bank asset register · loan ask ₹29,31,810 (Navkar quote in)
 
-- **Restructured into own-vs-buy for a bank loan.** Total studio hardware value **₹45,67,236** = Owned (promoter contribution) **₹18,98,624** + To-purchase (loan ask) **₹26,68,612**. Promoter contributes 42% in kind. Deliverable: `~/Desktop/RaceSims-Chennai-Loan-Proposal.xlsx` (5 tabs: Loan Summary, To Purchase, Owned, Per-Rig BOM, PC Components).
-- **Corrected 2 errors in old ₹29,38,637:** Visuvam 9× monitors ₹1,86,750 = paid/owned (not loan); SIM-07 RTX 5080 ₹1,16,000 = owned, PAID last week (was double-counted); +1× Conspit 300GT ₹32,750 (config needs 2×).
-- **Confirmed:** SIM-07 5080 paid; Apex & Raptor seats ₹25,000 each. **Still open:** actual 45″ OLED line from Navkar quote (not yet ingested), owned sim-hardware valuations.
+- **Bank own-vs-buy register.** Total studio hardware value **₹48,30,434** = Owned (promoter contribution) **₹18,98,624** (39%) + To-purchase (loan ask) **₹29,31,810** (61%). Deliverable: `~/Desktop/RaceSims-Chennai-Loan-Proposal.xlsx` (5 tabs: Loan Summary, To Purchase, Navkar Quote, Owned, Per-Rig BOM).
+- **Navkar Computers quote ingested** ([[2026-06-27-navkar-pc-display-quote]], `racesims/marketing/partnerships/quotes/`) — grand total **₹19,88,000**. Confirmed 45″ Corsair XENEON FLEX OLED ₹1,24,999.76 + 27″ MSI MAG 275F ₹11,210 (matched estimates). **⚠ Over-quote flag:** 9× RAM/SSD/cooler + 8× PSU/case vs 6 builds = 3 spare sets ₹2.63L — confirm or trim (→ loan ₹26,68,611).
+- **Confirmed:** SIM-07 5080 paid (owned); Apex & Raptor seats ₹25,000 each. **Open:** Navkar 3-set question; owned sim-hardware valuations.
 - **Key price confirmations:** RTX 5080 FE ₹1,16,000 · RM1200x ₹17,000 · SIM-08 full PC owned · Samsung 32" G5 ₹20,750 (Visuvam VC/26-27/1079, 9 units = ₹1,86,750 already invoiced) · Monitor stands: triple ₹20,000, single ₹10,000.
 - **PC components (Navkar Quote Jun 2026):** 9800X3D ₹47,790 · 9700X ₹30,975 · B850 ₹17,464 · 5070 Ti ₹1,12,100 · 5070 ₹71,980 · 32GB DDR5 ₹43,070 · 1TB ₹17,700 · AIO ₹8,083 · RM850e ₹10,325 · RM1000e ₹17,110 · Case ₹8,555.
 - Source: [[2026-06-27-chennai-per-rig-costing]] · Updated: [[racesims-chennai-rig-config]]
