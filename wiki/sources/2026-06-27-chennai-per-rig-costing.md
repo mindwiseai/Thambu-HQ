@@ -13,7 +13,7 @@ Costing session deriving landed unit prices and capital-required table for the [
 
 ## Summary
 
-Full per-rig landed cost table built for all 8 Chennai rigs. **Capital required to open: ₹29,38,637** — all items fully resolved. All seats confirmed in stock (XP×2 for SIM-01/02, Phantom for SIM-08); 2 GT rigs to fabricate at ₹22,000 each; 1 triple stand already owned.
+Full per-rig landed cost table built for all 8 Chennai rigs, restructured 2026-06-27 into a bank-grade **asset register** (own vs buy) for a loan application. **Total studio hardware value ₹45,47,236 = Owned (promoter contribution) ₹18,78,624 + To-purchase (loan ask) ₹26,68,612.** Rebuilding bottom-up from `racesims-chennai.json` corrected two errors in the earlier ₹29,38,637 figure: (1) 9× Visuvam monitors ₹1,86,750 are invoiced/paid → owned, not loan; (2) SIM-07 RTX 5080 ₹1,16,000 is incoming/owned, was double-counted in PC build; (3) Conspit 300GT needs 2× (SIM-01+06), earlier had 1× (+₹32,750). Deliverable: `~/Desktop/RaceSims-Chennai-Loan-Proposal.xlsx` (5 tabs). All seats in stock (owned, shown at landed value).
 
 ## Key facts
 
@@ -73,9 +73,12 @@ Full per-rig landed cost table built for all 8 Chennai rigs. **Capital required 
 Already invoiced (committed): Samsung 32" G5 ×9 = ₹1,86,750 (Visuvam VC/26-27/1079).
 Still to pay: ~₹27,51,887.
 
-## Open questions
+## Open questions (confirm before bank submission)
 
-- SIM-07 RTX 5080 FE status: treated as owned; confirm if SIM-07 unit has been ordered separately.
+- **SIM-07 RTX 5080 (₹1,16,000):** treated as owned (incoming). If not yet paid → loan ask rises to ₹27,84,612.
+- **Apex & Raptor seat landed costs:** firm figures are XP ₹17,346 / Phantom ₹22,835; Apex & Raptor are placeholder ₹20,000 each — need actuals (affects owned value only, not loan).
+- **45″ OLED ₹1,25,000/unit (×3 = ₹3,75,000):** estimate — largest single soft figure in the loan ask; confirm supplier quote.
+- **Owned sim-hardware values (wheelbases/wheels/pedals):** EST landed/replacement values for the in-kind contribution total; confirm if bank wants documented valuation.
 
 ## Resolved
 

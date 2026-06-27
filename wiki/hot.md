@@ -8,9 +8,11 @@ updated: 2026-06-26
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-06-27 — Chennai per-rig costing finalized · capital ₹29,38,637
+## 2026-06-27 — Chennai costing → bank asset register · loan ask ₹26,68,612
 
-- **Capital required: ₹29,38,637** — all seats confirmed in stock (XP×2, Phantom×2, Apex×2, Raptor×2). 2× GT rigs to fabricate (₹44,000). 1× triple stand owned. Still to pay after Visuvam invoice: ~₹27,51,887.
+- **Restructured into own-vs-buy for a bank loan.** Total studio hardware value **₹45,47,236** = Owned (promoter contribution) **₹18,78,624** + To-purchase (loan ask) **₹26,68,612**. Promoter contributes 41% in kind. Deliverable: `~/Desktop/RaceSims-Chennai-Loan-Proposal.xlsx` (5 tabs: Loan Summary, To Purchase, Owned, Per-Rig BOM, PC Components).
+- **Corrected 2 errors in old ₹29,38,637:** Visuvam 9× monitors ₹1,86,750 = paid/owned (not loan); SIM-07 RTX 5080 ₹1,16,000 = owned (was double-counted); +1× Conspit 300GT ₹32,750 (config needs 2×).
+- **Confirm before submission:** SIM-07 5080 paid status (±₹1.16L), Apex/Raptor seat actuals, 45″ OLED ₹1.25L/unit quote, owned sim-hardware valuations.
 - **Key price confirmations:** RTX 5080 FE ₹1,16,000 · RM1200x ₹17,000 · SIM-08 full PC owned · Samsung 32" G5 ₹20,750 (Visuvam VC/26-27/1079, 9 units = ₹1,86,750 already invoiced) · Monitor stands: triple ₹20,000, single ₹10,000.
 - **PC components (Navkar Quote Jun 2026):** 9800X3D ₹47,790 · 9700X ₹30,975 · B850 ₹17,464 · 5070 Ti ₹1,12,100 · 5070 ₹71,980 · 32GB DDR5 ₹43,070 · 1TB ₹17,700 · AIO ₹8,083 · RM850e ₹10,325 · RM1000e ₹17,110 · Case ₹8,555.
 - Source: [[2026-06-27-chennai-per-rig-costing]] · Updated: [[racesims-chennai-rig-config]]
