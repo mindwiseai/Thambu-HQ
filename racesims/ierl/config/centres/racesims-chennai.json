@@ -145,9 +145,9 @@
         "case": "Corsair 3500X"
       },
 
-      "wheelbase": { "model": "VNM Xtreme 32Nm", "status": "IN STOCK ✓" },
-      "wheel": { "model": "VNM GT steering wheel", "status": "IN STOCK ✓" },
-      "pedals": { "model": "VNM V1 pedals", "status": "IN STOCK ✓" },
+      "wheelbase": { "model": "Conspit 20Nm (swapped from SIM-07)", "status": "IN STOCK ✓" },
+      "wheel": { "model": "Conspit 290GP (swapped from SIM-07)", "status": "IN STOCK ✓" },
+      "pedals": { "model": "TBD", "status": "PROCURE" },
       "motion": null,
 
       "monitors": {
@@ -213,9 +213,9 @@
         "case": "Corsair 3500X"
       },
 
-      "wheelbase": { "model": "Conspit 20Nm (Ares Platinum)", "status": "IN STOCK ✓" },
-      "wheel": { "model": "Conspit 290GP", "status": "IN STOCK ✓" },
-      "pedals": { "model": "TBD", "status": "PROCURE" },
+      "wheelbase": { "model": "VNM Xtreme 32Nm", "status": "IN STOCK ✓" },
+      "wheel": { "model": "VNM GT steering wheel", "status": "IN STOCK ✓" },
+      "pedals": { "model": "VNM V1 pedals", "status": "IN STOCK ✓" },
       "motion": null,
 
       "monitors": {
