@@ -13,11 +13,11 @@ Costing session deriving landed unit prices and capital-required table for the [
 
 ## Summary
 
-Full per-rig landed cost table built for all 8 Chennai rigs. Capital required to open: **~₹29.1L** (all items fully known). An open question on GT rigs and seats for SIM-01/02/08 may add ₹1.23L if not yet fabricated/in-stock.
+Full per-rig landed cost table built for all 8 Chennai rigs. **Capital required to open: ₹29,78,818** — all items fully resolved. GT rigs/seats clarified: 1 rig + 1 Apex seat + 1 triple stand already owned; 2 GT rigs to fabricate + 2 seats to procure.
 
 ## Key facts
 
-- **Total capital required: ₹29,14,637** — excl. GT rig/seat clarification (see open questions)
+- **Total capital required: ₹29,78,818** — fully resolved. Breakdown: ₹29,14,637 base + ₹44,000 (2× GT rig fabrication) + ₹40,181 (XP + Phantom seats) − ₹20,000 (1 triple stand already owned)
 - **Samsung 32" G5 (LS32CG550E): ₹20,750/unit** — Visuvam Computech invoice VC/26-27/1079 dated 22-Jun-26; 9 units × ₹20,750 = ₹1,86,750 already invoiced
 - **RTX 5080 Founders Edition: ₹1,16,000** — confirmed by Thambu; both SIM-07 and SIM-08 units treated as owned
 - **RM1200x PSU (SIM-08): ₹17,000** — confirmed by Thambu; already owned
@@ -60,21 +60,28 @@ Full per-rig landed cost table built for all 8 Chennai rigs. Capital required to
 | Category | Amount (₹) |
 |----------|------------|
 | GT PRO Rigs × 5 | 1,75,000 |
+| GT Rigs × 2 (fabricate — 1 of 3 owned) | 44,000 |
+| Seats × 2 (XP + Phantom — 1 Apex owned) | 40,181 |
 | PC builds × 6 (SIM-01, 03–07) | 16,32,172 |
 | Conspit wheelbases × 4 | 1,57,633 |
 | Conspit 300GT wheel × 1 | 32,775 |
 | Monitors (32"×9 + 27"×3 + 45"×3) | 5,95,380 |
-| Monitor stands (7× triple + 1× single) | 1,50,000 |
+| Monitor stands (6× triple + 1× single — 1 triple owned) | 1,30,000 |
 | VNM 3-DOF motion platform | 3,71,677 |
-| **Total** | **29,14,637** |
+| **Total** | **29,78,818** |
 
 Already invoiced (committed): Samsung 32" G5 ×9 = ₹1,86,750 (Visuvam VC/26-27/1079).
-Still to pay: ~₹27,27,887.
+Still to pay: ~₹27,92,068.
 
 ## Open questions
 
-- **GT Rigs SIM-01/02/08 and their seats**: Thambu flagged these 3 GT rigs (custom fabrication, ₹22,000 each) and seats may not yet exist. If to be built/procured: +₹66,000 (rigs) + ₹57,527 (XP × 2 + Phantom × 1) = **+₹1,23,527 → revised total ₹30,38,164**.
 - SIM-07 RTX 5080 FE status: treated as owned; confirm if SIM-07 unit has been ordered separately.
+
+## Resolved
+
+- **GT rigs SIM-01/02/08**: 1 GT rig already owned; 2 more to fabricate at ₹22,000 each = ₹44,000.
+- **Seats**: 1 Apex seat owned (covers one entry rig); 2 remaining seats to procure: XP ₹17,346 + Phantom ₹22,835 = ₹40,181.
+- **Triple monitor stand**: 1 already owned; 6 to buy (not 7), saving ₹20,000 vs earlier estimate.
 
 ## Backlinks
 
