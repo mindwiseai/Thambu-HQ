@@ -85,8 +85,8 @@
       "monitors": {
         "count": 3,
         "size_inches": 32,
-        "model": "Samsung Odyssey G6 32\" (triple)",
-        "status": "IN STOCK ✓ (3× G6 NOS)"
+        "model": "Samsung 32\" (triple)",
+        "status": "PROCURE (3× needed)"
       },
 
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=3"
@@ -221,8 +221,8 @@
       "monitors": {
         "count": 3,
         "size_inches": 32,
-        "model": "Samsung 32\" (triple)",
-        "status": "PROCURE (3× needed)"
+        "model": "Samsung Odyssey G6 32\" (triple)",
+        "status": "IN STOCK ✓ (3× G6 NOS)"
       },
 
       "kiosk_url": "https://indianesportsracingleague.com/kiosk?centre=racesims-chennai&rig=7"
@@ -314,7 +314,7 @@
       "Fanatec CSL Formula 2.5 rim → SIM-02",
       "Fanatec CSL 3-pedal → SIM-02",
       "Heusinkveld Sprint 2-pedal (1 set only) → SIM-01",
-      "3× Samsung 32\" G6 → SIM-03",
+      "3× Samsung 32\" G6 → SIM-07",
       "3× Samsung 32\" G5 → SIM-04",
       "1× Samsung 34\" curved → SIM-02",
       "RTX 5070 Ti (extra) → SIM-03 GPU",
@@ -337,7 +337,7 @@
       "1× VNM 3-DOF motion platform → SIM-08"
     ],
     "monitors": [
-      "9× Samsung 32\" curved → SIM-05, SIM-06, SIM-07 (3 each)",
+      "6× Samsung 32\" curved → SIM-05, SIM-06 (3 each)",
       "3× 27\" monitors → SIM-01 (triple)",
       "3× 45\" monitors → SIM-08 hero rig"
     ],
