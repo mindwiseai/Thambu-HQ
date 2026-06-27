@@ -247,7 +247,7 @@
       },
 
       "wheelbase": { "model": "Conspit Apex 8Nm", "status": "PROCURE" },
-      "wheel": { "model": "Conspit rim (TBD — Fanatec McLaren GT3 rim incompatible with Conspit base)", "status": "PROCURE" },
+      "wheel": { "model": "Conspit 300GT", "status": "PROCURE" },
       "pedals": { "model": "Heusinkveld Sprint 2-pedal", "status": "IN STOCK ✓" },
       "motion": null,
 
@@ -308,9 +308,9 @@
       "VNM GT steering wheel → SIM-07",
       "VNM V1 pedals → SIM-07",
       "VNM Lite pedals → SIM-03",
-      "Fanatec 8Nm #1 → UNASSIGNED (replaced by Conspit Apex 8Nm on SIM-01)",
+      "Fanatec 8Nm #1 → SPARE (repair + keep for intel/loan)",
       "Fanatec 8Nm #2 → SIM-02 (confirmed working)",
-      "Fanatec CSL McLaren GT3 V2 rim → UNASSIGNED (Fanatec QR incompatible with Conspit base)",
+      "Fanatec CSL McLaren GT3 V2 rim → SIM-02 (additional rim, swappable)",
       "Fanatec CSL Formula 2.5 rim → SIM-02",
       "Fanatec CSL 3-pedal → SIM-02",
       "Heusinkveld Sprint 2-pedal (1 set only) → SIM-01",
@@ -330,8 +330,7 @@
       "1× Conspit Apex 8Nm → SIM-01"
     ],
     "wheels": [
-      "1× Conspit 300GT → SIM-06",
-      "1× Conspit rim (TBD) → SIM-01 (Fanatec McLaren GT3 rim is unassigned — Fanatec QR incompatible)"
+      "2× Conspit 300GT → SIM-01, SIM-06"
     ],
     "pedals": [],
     "motion": [
@@ -350,10 +349,7 @@
     ]
   },
 
-  "open_questions": [
-    "SIM-01 wheel — which Conspit rim to pair with Conspit Apex 8Nm?",
-    "Fanatec 8Nm #1 + McLaren GT3 rim — repurpose or sell?"
-  ],
+  "open_questions": [],
 
   "kiosk_deploy_note": "Per rig: open kiosk_url in browser, F11 fullscreen, set as startup tab. Server IPs go in worker/src/kiosk.ts KIOSK_CONFIG — one deploy updates all 8 rigs.",
 
