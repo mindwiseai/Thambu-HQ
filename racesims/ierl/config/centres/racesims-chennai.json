@@ -246,8 +246,8 @@
         "case": "Corsair 3500X"
       },
 
-      "wheelbase": { "model": "Fanatec 8Nm #1", "status": "IN STOCK ✓ — NEEDS FUNCTION CHECK before launch" },
-      "wheel": { "model": "Fanatec CSL McLaren GT3 V2 rim", "status": "IN STOCK ✓" },
+      "wheelbase": { "model": "Conspit Apex 8Nm", "status": "PROCURE" },
+      "wheel": { "model": "Conspit rim (TBD — Fanatec McLaren GT3 rim incompatible with Conspit base)", "status": "PROCURE" },
       "pedals": { "model": "Heusinkveld Sprint 2-pedal", "status": "IN STOCK ✓" },
       "motion": null,
 
@@ -308,9 +308,9 @@
       "VNM GT steering wheel → SIM-07",
       "VNM V1 pedals → SIM-07",
       "VNM Lite pedals → SIM-03",
-      "Fanatec 8Nm #1 → SIM-01 (needs function check)",
+      "Fanatec 8Nm #1 → UNASSIGNED (replaced by Conspit Apex 8Nm on SIM-01)",
       "Fanatec 8Nm #2 → SIM-02 (confirmed working)",
-      "Fanatec CSL McLaren GT3 V2 rim → SIM-01",
+      "Fanatec CSL McLaren GT3 V2 rim → UNASSIGNED (Fanatec QR incompatible with Conspit base)",
       "Fanatec CSL Formula 2.5 rim → SIM-02",
       "Fanatec CSL 3-pedal → SIM-02",
       "Heusinkveld Sprint 2-pedal (1 set only) → SIM-01",
@@ -326,10 +326,12 @@
 
   "procurement_needed": {
     "wheelbases": [
-      "3× Conspit Ares 12Nm → SIM-03, SIM-04, SIM-06"
+      "3× Conspit Ares 12Nm → SIM-03, SIM-04, SIM-06",
+      "1× Conspit Apex 8Nm → SIM-01"
     ],
     "wheels": [
-      "1× Conspit rim → SIM-06 (model TBD)"
+      "1× Conspit 300GT → SIM-06",
+      "1× Conspit rim (TBD) → SIM-01 (Fanatec McLaren GT3 rim is unassigned — Fanatec QR incompatible)"
     ],
     "pedals": [],
     "motion": [
@@ -349,8 +351,8 @@
   },
 
   "open_questions": [
-    "SIM-01 Fanatec 8Nm #1 — must function-check before launch",
-    "SIM-06 wheel — which Conspit rim to procure?"
+    "SIM-01 wheel — which Conspit rim to pair with Conspit Apex 8Nm?",
+    "Fanatec 8Nm #1 + McLaren GT3 rim — repurpose or sell?"
   ],
 
   "kiosk_deploy_note": "Per rig: open kiosk_url in browser, F11 fullscreen, set as startup tab. Server IPs go in worker/src/kiosk.ts KIOSK_CONFIG — one deploy updates all 8 rigs.",
