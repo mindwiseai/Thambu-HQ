@@ -14,8 +14,8 @@ The **living, sourced fit-out schedule** for [[racesims-chennai-premium-baseline
 ## The 15 funded lines (locked targets, 2026-05-30)
 | # | Line | ₹ | Status |
 |---|---|--:|---|
-| 1 | Air conditioning — 8 T (4×2 T 5-star high-wall splits) | 2,60,000 | ~ procurement/timing |
-| 2 | Electrical + UPS (PC-only) | 2,25,000 | ◆ UPS quoted ₹1,95,408 (Soundry/APC SRV10KUXI-IN 10kVA); wiring ~₹25k; **no sub-DB needed** (existing 3-phase MCB in venue, ample capacity). IP20 → weatherproof enclosure needed if outdoor; ask electrician to quote. |
+| 1 | Air conditioning — 2×4T cassette (main floor) + 1×1.5T split (office) | 3,84,576 | ✓ **CONFIRMED** — Subhashree Solutions ref SSS/NEW AC/LEAD NO-0071/26-27 Rev03 (25 Jun 2026). Spec changed from 4×1.5T high-wall splits to **2× LG 4-Way Cassette 4.0TR R32 + 1× LG Hi-Wall 1.5TR 5-Star R32**. Includes equipment GST ₹45,731 + install+materials ₹71,850 + install GST ₹12,933. See [[2026-06-30-racesims-chennai-tracker]]. |
+| 2 | Electrical + UPS (PC-only) | 2,88,800 | ◆ UPS **CONFIRMED ₹1,88,800** (Soundry Power Systems ref SPS/369R1/26-27, 09 Jun 2026: APC SRV10KUXI-IN 10kVA + 16× Exide 26Ah SMF batteries + rack). Advance ₹1,00,000 PAID to Venus Electricals ([[guru-moorthy]]). Balance + wiring quote pending. No sub-DB needed (existing 3-phase MCB). |
 | 3 | Lighting — Philips magnetic track (4 rows, 28× 30W spots) | 1,30,800 | ◆ Engineered: 3,150 lm/light, 36° beam, 3m ceiling → 7 lights/row × 4 rows; 52m track @₹900 + 28 lights @₹3,000 |
 | 4 | Branding — exterior lit fascia | 1,10,000 | ~ frontage + quote |
 | 5 | Flooring — commercial carpet **tiles**, ~1,100 sqft | 1,00,000 | ✓ |
@@ -43,9 +43,15 @@ The **living, sourced fit-out schedule** for [[racesims-chennai-premium-baseline
 ## Sourcing basis
 Real 2026 listings/rate-cards: IndiaMART, Philips India, Moglix, Sunshine Decors (Chennai film), Ravs Glass (Chennai), CP Plus/eSSL, TP-Link Omada; benchmarks from Cushman & Wakefield + JLL India fit-out guides.
 
-## Open items
-- 3 provisional lines remaining (AC, solar, signage). **Lighting confirmed: 28× Philips 30W spots + 52m track = ₹1,30,800 (ceiling height assumed 3m conservative; verify on-site).** → firm vendor quotes pending; ±₹1–1.5L swing. **UPS confirmed: ₹1,95,408 (Soundry Power Systems, Chennai, quote SPS/369/26-27, valid until ~14 June 2026). Venue has 3-phase MCB with ample spare ways — no sub-DB required.**
-- **Washroom/sanitary** not yet a line — confirm developer-done with [[guru-moorthy]].
+## Open items (updated 2026-06-30)
+- **AC CONFIRMED** (Subhashree Solutions ₹3,84,576) — see [[2026-06-30-racesims-chennai-tracker]].
+- **UPS CONFIRMED** (Soundry Power Systems ₹1,88,800 ref SPS/369R1/26-27) — revised down from earlier ₹1,95,408 estimate.
+- **Electrical balance + labour** — advance ₹1,00,000 PAID to Venus Electricals; balance pending quote.
+- **Lighting** — quote pending (Philips track system engineered at ₹1,30,800 but not yet formally quoted).
+- **TP-Link CCTV/data/WiFi** — site visit done, quote pending.
+- **Solar film + signage** — still provisional.
+- **Section 5 (11 fit-out items)** — unquoted as of 2026-06-30.
+- **Washroom/sanitary** — confirm developer-done with [[guru-moorthy]].
 - Build of record: landed Conspit/VNM vs sponsorship showcase ([[racesims-chennai-partnerships]]).
 
 ## Backlinks

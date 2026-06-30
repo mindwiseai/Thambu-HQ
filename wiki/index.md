@@ -247,8 +247,10 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[abdul]] — field technical installer (Bangalore, ex-ARKA)
 - [[shahid-moto-mind]] — cladding design vendor (direction being rejected)
 
-### RaceSims Chennai centre (Nungambakkam)
-- [[guru-moorthy]] — architect, fit-out (see [[racesims-chennai-fitout]])
+### RaceSims Chennai centre (Ashok Nagar)
+- [[guru-moorthy]] — architect, fit-out lead (Venus Electricals); see [[racesims-chennai-fitout]]
+- [[subhashree-solutions]] — AC vendor for Chennai Studio (confirmed quote ₹3,84,576)
+- [[navkar-computers]] — PC & monitor vendor for Chennai Studio (quote ₹19,88,000)
 
 ### Influencers
 - [[jamie-shaw-racing]]
@@ -296,6 +298,7 @@ The catalog. Read this **second** (after [[hot]]) when answering any question. U
 - [[2026-ctd-module-2.4-nonclinical-overview]]
 
 ### RaceSims
+- [[2026-06-30-racesims-chennai-tracker]] — Chennai Studio procurement tracker: 8 rigs, ₹49.6L quoted, ₹4.5L paid, vendor quotes confirmed (Navkar/Subhashree/Soundry)
 - [[2026-06-19-ierl-july-launch]] — IERL July 2026 launch: RPE joins, ₹1L formula, sim-to-reality, partner WhatsApp
 - [[2026-06-18-dispatch-amendments]] ⭐ — all 5 dispatch orders unblocked; Garvish+Studio deferred; Ragav/Davlish/Asif order swaps; Ares 12nm only open import need
 - [[2026-06-16-dispatch-pipeline-session]] ⭐ — full dispatch planning: 5 orders, 7 B2B quotes, stock × PO matrix, 11 shortfalls

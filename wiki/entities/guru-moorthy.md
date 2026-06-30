@@ -18,7 +18,12 @@ Architect working with [[thambu]] on the [[racesims-chennai-premium-baseline|Rac
 
 ## Open items he's resolving
 - Confirm whether **washroom/sanitary fit-out** is developer-done or a missing cost line.
-- Lighting fixture count (the lever on the ₹1.90L lighting line).
+- Lighting fixture count (the lever on the ₹1.30L lighting line).
+- Electrical balance + labour quote from Venus Electricals (advance ₹1,00,000 already PAID as of 2026-06-30).
+
+## Financial activity (2026-06-30)
+- **Venus Electricals advance: ₹1,00,000 PAID** (GuruMoorthy / Venus Electricals). Balance electrical quote pending.
+- Source: [[2026-06-30-racesims-chennai-tracker]]
 
 ## Backlinks
-- [[racesims-chennai-fitout]] · [[2026-05-30-chennai-fitout-optimisation]] · [[thambu]]
+- [[racesims-chennai-fitout]] · [[racesims-studio]] · [[2026-05-30-chennai-fitout-optimisation]] · [[2026-06-30-racesims-chennai-tracker]] · [[thambu]]

@@ -19,6 +19,13 @@ type: meta
 - Confirmed post-July pipeline: Drivextreme 3 + RaceSims Studio 8 + Garvish 7 + Davlish 3 = 21 new pods → 10 centres / 45 rigs if all onboard
 - Domain: racesims
 
+## [2026-06-30] ingest | RaceSims Chennai Studio — Project Tracker (30 Jun 2026)
+- Source: [[2026-06-30-racesims-chennai-tracker]]
+- Created: 3 new pages ([[2026-06-30-racesims-chennai-tracker]] · [[subhashree-solutions]] · [[navkar-computers]])
+- Updated: 4 existing pages ([[racesims-studio]] · [[racesims-chennai-fitout]] · [[guru-moorthy]] · [[hot]])
+- Domain: racesims
+- Key facts: Studio confirmed at 1,146 sq ft, Ashok Nagar Chennai · 8 rigs SIM-01→SIM-08 · all-quoted total ₹49,63,126 · paid ₹4,52,750 · outstanding ₹45,10,376 · Section 5 (11 items) unquoted. AC confirmed Subhashree Solutions ₹3,84,576 (2×4TR cassette + 1×1.5TR split). UPS confirmed Soundry ₹1,88,800. PC/monitors Navkar ₹19,88,000.
+
 ## [2026-06-27] ingest | Navkar Computers PC & Display Quote
 - Source: [[2026-06-27-navkar-pc-display-quote]] (₹19,88,000 grand total; raw xlsx copied to `racesims/marketing/partnerships/quotes/`)
 - Created: 1 new page ([[2026-06-27-navkar-pc-display-quote]])

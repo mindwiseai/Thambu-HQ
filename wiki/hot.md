@@ -16,6 +16,17 @@ Most recently touched context. Read this first for any query — it often answer
 - **Cowork framework:** `racesims/ierl/PROJECT-INSTRUCTIONS.md` (monthly cycle) + `racesims/ierl/SESSION-HANDOFF.md` (current state).
 - ⚠ **Deck still shows OLD numbers** (₹4,200/pod, ₹1L, 24 pods) — regenerate to match this locked round.
 - Source: [[ierl-prize-pool-formula]].
+## 2026-06-30 — RaceSims Chennai Studio procurement tracker ingested
+
+- **Studio confirmed:** Ground Floor, 9 First Cross Street, Second Avenue, Ashok Nagar, Chennai — **1,146 sq ft**, 8 rigs (SIM-01→SIM-08). SIM-02 existing (Ryzen 5700/RTX 4070); SIM-08 PC in stock.
+- **All-quoted total: ₹49,63,126 · Paid: ₹4,52,750 · Outstanding: ₹45,10,376** · Section 5 (11 fit-out items) still unquoted.
+- **AC CONFIRMED — [[subhashree-solutions]] ₹3,84,576** (2× LG 4-Way Cassette 4TR main floor + 1× LG Hi-Wall 1.5TR office). Ref SSS/NEW AC/LEAD NO-0071/26-27 Rev03 (25 Jun 2026). ⚠ Spec changed from 4× wall-splits to 2 cassettes + 1 split; budget was ₹2,60,000 → overage ~₹1,24,576.
+- **UPS CONFIRMED — Soundry Power Systems ₹1,88,800** (APC 10KVA + 16× Exide 26Ah SMF batteries). Ref SPS/369R1/26-27. Revised down from earlier ₹1,95,408.
+- **PC/monitors — [[navkar-computers]] ₹19,88,000** (19 Jun 2026). SIM-08 → 3× LG XENEON FLEX 45" OLED (premium VIP). SIM-07 → RTX 5080 FE (PAID separately ₹1,16,000). SIM-04/05/06 → RTX 5070 Ti. SIM-03/04/05/06/07 → Samsung 32" × 9 (PAID ₹1,86,750).
+- **Paid separately:** Samsung monitors ₹1,86,750 + RTX 5080 FE ₹1,16,000 + Sorted designer fee ₹50,000 + Venus Electricals advance ₹1,00,000.
+- **Pending:** electrical balance + lighting quote + TP-Link CCTV/data/WiFi quote (site visit done).
+- Source: [[2026-06-30-racesims-chennai-tracker]]
+
 
 
 ## 2026-06-27 — Chennai loan proposal · ask ₹29,31,810
