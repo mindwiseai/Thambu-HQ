@@ -3,7 +3,7 @@ title: IERL Prize Pool Formula
 type: concept
 domain: racesims
 created: 2026-06-19
-updated: 2026-06-27
+updated: 2026-07-03
 ---
 
 ## Formula
@@ -18,7 +18,6 @@ Fees are rounded to clean numbers; any overage is retained in the pool.
 | Round | Centres | Rigs | Per-rig fee | Total |
 |-------|---------|------|-------------|-------|
 | July 2026 | 6 | 24 | ₹4,200 | ₹1,00,800 |
-| August 2026 (est.) | 7 | 32 | ₹3,200 | ₹1,02,400 |
 
 ## July 2026 network contributions
 
@@ -32,7 +31,18 @@ Fees are rounded to clean numbers; any overage is retained in the pool.
 | Virtual Adda (Mumbai) | 2 | ₹8,400 | ₹1,000 |
 | **Total** | **24** | **₹1,00,800** | **₹12,000** |
 
-Note: Drivextreme (Coimbatore, 3 rigs) is not participating in July 2026. May rejoin later.
+## Upcoming centres (confirmed pipeline)
+Confirmed to join after July (Aug/Sep onward). Not yet in the July round.
+
+| Centre | Pods |
+|--------|------|
+| [[drivextreme]] (Coimbatore, Raghav) | 3 |
+| [[racesims-studio]] | 8 |
+| [[garvish]] | 7 |
+| [[davlish]] | 3 |
+| **New pods** | **21** |
+
+If all four onboard, the network grows to **10 centres / 45 rigs**, dropping the per-rig fee to **₹2,222** at the ₹1,00,000 pool. Exact month each centre joins is TBD.
 
 ## Settlement example (July)
 Settlement flows through prize results — centres contribute their per-rig amount and the total is disbursed to prize winners via UPI.
