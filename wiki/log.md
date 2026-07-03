@@ -5,6 +5,13 @@ type: meta
 
 # Wiki Operation Log
 
+## [2026-07-03] ingest | IERL upcoming centre pipeline confirmed
+- Source: Thambu direct (chat)
+- Created: 3 new pages ([[drivextreme]], [[garvish]], [[davlish]])
+- Updated: [[ierl-prize-pool-formula]] (added Upcoming centres section), [[racesims-studio]] referenced
+- Confirmed post-July pipeline: Drivextreme 3 + RaceSims Studio 8 + Garvish 7 + Davlish 3 = 21 new pods → 10 centres / 45 rigs if all onboard
+- Domain: racesims
+
 ## [2026-06-27] ingest | Navkar Computers PC & Display Quote
 - Source: [[2026-06-27-navkar-pc-display-quote]] (₹19,88,000 grand total; raw xlsx copied to `racesims/marketing/partnerships/quotes/`)
 - Created: 1 new page ([[2026-06-27-navkar-pc-display-quote]])
