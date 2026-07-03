@@ -8,6 +8,13 @@ updated: 2026-06-26
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
+## 2026-07-03 — IERL upcoming centre pipeline confirmed
+
+- **Post-July pipeline (Thambu, confirmed):** [[drivextreme]] (Coimbatore, Raghav) 3 pods · [[racesims-studio]] 8 pods · [[garvish]] 7 pods · [[davlish]] 3 pods = **21 new pods**. If all onboard → **10 centres / 45 rigs**, per-rig fee ₹2,222 at the ₹1L pool. Month each joins TBD.
+- **July round (confirmed roster of 6):** RPE 10 · Sim Racing Adda 4 · Niyusuki 3 · Lights Out 3 · BBS 2 · Virtual Adda 2 = **24 rigs**, ₹4,200/rig, ₹1,00,800.
+- ⚠ Open: RPE rig count (wiki/deck say 10; earlier chat said Uday=8) and pool size (₹1L vs a ₹50K variant explored in chat) both need Thambu to confirm before the deck is regenerated.
+- Source: [[ierl-prize-pool-formula]], [[2026-06-19-ierl-july-launch]].
+
 ## 2026-06-27 — Chennai bank asset register · loan ask ₹29,31,810 (Navkar quote in)
 
 - **Bank own-vs-buy register.** Total studio hardware value **₹48,30,434** = Owned (promoter contribution) **₹18,98,624** (39%) + To-purchase (loan ask) **₹29,31,810** (61%). Deliverable: `~/Desktop/RaceSims-Chennai-Loan-Proposal.xlsx` (5 tabs: Loan Summary, To Purchase, Navkar Quote, Owned, Per-Rig BOM).
