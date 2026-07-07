@@ -17,9 +17,8 @@ Current state always lives in `racesims/ierl/SESSION-HANDOFF.md` — read it fir
    Do not fill gaps from memory. (This has caused real errors — cities were once fabricated.)
 2. **Flag every contradiction**, don't resolve it silently. If two sources disagree, show both
    and ask which is authoritative.
-3. **Nothing is "locked" until I confirm it.** Two decisions are currently OPEN and block the
-   deck: RPE pod count (8 vs 10) and pool size (₹1L vs ₹50K). Never regenerate the deck with
-   assumed values.
+3. **Nothing is "locked" until I confirm it.** Never regenerate the deck with assumed values —
+   pod counts, pool size, and the prize schedule must be confirmed for the round before build.
 4. **Commit + push after every change.** Update the wiki and `SESSION-HANDOFF.md` as you go.
 5. Terse replies. Say what changed and what's next. No filler.
 
@@ -81,9 +80,8 @@ Current state always lives in `racesims/ierl/SESSION-HANDOFF.md` — read it fir
 - **Brand:** lead with IERL, not "by RaceSims." All centres are equals in one shared brand.
 - **Settlement principle:** league never holds money; direct centre→winner UPI transfers.
 
-## Standing open decisions (resolve before deck regen)
-1. RPE pod count — 8 or 10?
-2. Pool size — ₹1,00,000 or ₹50,000?
+## Resolved (July 2026)
+- RPE = **8 pods**; July pool = **₹50,000**. See `SESSION-HANDOFF.md` for the locked round.
 
 ## Standing backlog
 - Kiosk: Cloudflare Pages deploy (Wrangler login), D1 migration 0003, real server IPs in `kiosk.ts`.
