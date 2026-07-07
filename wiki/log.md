@@ -5,6 +5,13 @@ type: meta
 
 # Wiki Operation Log
 
+## [2026-07-07] decision | IERL July round LOCKED
+- RPE confirmed 8 pods; July pool set to ₹50,000 (soft launch).
+- July: 6 centres / 22 pods / ₹2,300 per pod / ₹50,600 collected / ₹600 surplus. No local prizes.
+- Split 40/60; settlement = max 2 UPI transfers per centre, Pro-first.
+- Updated: [[ierl-prize-pool-formula]], [[racing-point-esports]], hot.md, SESSION-HANDOFF.md, PROJECT-INSTRUCTIONS.md
+- Domain: racesims
+
 ## [2026-07-03] ingest | IERL upcoming centre pipeline confirmed
 - Source: Thambu direct (chat)
 - Created: 3 new pages ([[drivextreme]], [[garvish]], [[davlish]])
