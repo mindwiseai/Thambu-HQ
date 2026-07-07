@@ -5,6 +5,12 @@ type: meta
 
 # Wiki Operation Log
 
+## [2026-07-07] decision | Chennai Navkar spares KEPT
+- Thambu confirmed the 3 spare Navkar component sets (₹2,63,199) are **kept as inventory** — not trimmed.
+- Navkar quote stands at ₹19,88,000; loan ask stays **₹29,31,810** (the ₹26,68,611 trim option is closed).
+- Updated: brief (`racesims/Racesims Studio, Chennai/`) + tracker xlsx (both sheets), [[2026-06-30-racesims-chennai-tracker]], [[2026-06-27-navkar-pc-display-quote]] (contradiction resolved), [[2026-06-27-chennai-per-rig-costing]], [[hot]].
+- Domain: racesims
+
 ## [2026-07-07] decision | IERL July round LOCKED
 - RPE confirmed 8 pods; July pool set to ₹50,000 (soft launch).
 - July: 6 centres / 22 pods / ₹2,300 per pod / ₹50,600 collected / ₹600 surplus. No local prizes.

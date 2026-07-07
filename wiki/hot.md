@@ -31,7 +31,7 @@ Most recently touched context. Read this first for any query — it often answer
 
 ## 2026-06-27 — Chennai loan proposal · ask ₹29,31,810
 - Bank own-vs-buy register: total studio hardware **₹48,30,434** = Owned ₹18,98,624 (39%) + loan ask ₹29,31,810 (61%). Deliverable: `~/Desktop/RaceSims-Chennai-Loan-Proposal.xlsx`.
-- [[2026-06-27-navkar-pc-display-quote]] grand total **₹19,88,000**. ⚠ Over-quote: 3 spare component sets (~₹2.63L) — confirm or trim → loan ₹26,68,611.
+- [[2026-06-27-navkar-pc-display-quote]] grand total **₹19,88,000**. ✅ 3 spare component sets (~₹2.63L) **kept as inventory** (Thambu, 2026-07-07) — loan ask stays ₹29,31,810 (not trimmed).
 - [[racesims-chennai-rig-config]] **locked** — all 8 rigs specified. Config: `racesims/ierl/config/centres/racesims-chennai.json`. Source: [[2026-06-27-chennai-per-rig-costing]].
 
 ## 2026-06-19 — Octupie Mindwise video shoot ready

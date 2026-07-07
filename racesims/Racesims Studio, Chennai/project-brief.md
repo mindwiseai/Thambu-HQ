@@ -49,7 +49,7 @@ There are two legitimate lenses on Chennai, built for different audiences. They 
 | To purchase (loan ask) | ₹29,31,810 |
 | **Total studio hardware** | **₹48,30,434** |
 
-*Loan ask ₹29,31,810 assumes keeping 3 spare Navkar component sets (₹2,63,199). Trimming them → loan ₹26,68,611.*
+*Loan ask ₹29,31,810 — **confirmed final (2026-07-07)**: the 3 spare Navkar component sets (₹2,63,199) are kept as inventory, not trimmed.*
 
 **Lens B — Payment tracker (this file):** *cash paid to vendors*, incl. fit-out, excl. in-stock sim hardware. Known ₹30,14,126 (above).
 
@@ -83,7 +83,7 @@ Section 5 (11 fit-out items) + electrical balance + lighting + TP-Link are still
 | RM1000e PSU | ×1 | ₹17,110 | SIM-07 |
 | 3500X Cabinet ★ SPARE | ×8 | ₹68,440 | 6 needed + 2 spare |
 | 4000D Cabinet ★ SPARE | ×1 | ₹8,555 | 1 spare |
-> **Spare components embedded: ₹2,63,199** — confirm keep or trim before ordering
+> **Spare components embedded: ₹2,63,199** — ✅ confirmed kept as spare inventory (2026-07-07). Included in the Navkar PO.
 
 ### Section 1B — Purchased Separately (PAID)
 | Item | Total | Status |
@@ -140,7 +140,7 @@ Interior woodwork · Flooring (tiled carpet) · Painting · Reception desk · Pa
 
 ## Open Items (action required)
 
-1. **Navkar order** — Confirm keep or trim ₹2.63L of spare components before placing PO
+1. ~~**Navkar order** — Confirm keep or trim ₹2.63L of spare components~~ ✅ **RESOLVED (2026-07-07): spares kept.** Loan ask stays ₹29,31,810. Ready to place PO.
 2. **Electrical** — Get final quote from GuruMoorthy (balance after ₹1L advance)
 3. **Lighting** — Get LED panel quote
 4. **TP-Link** — Quote expected after site visit

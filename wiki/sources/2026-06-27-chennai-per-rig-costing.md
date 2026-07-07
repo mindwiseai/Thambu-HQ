@@ -75,7 +75,7 @@ Still to pay: ~₹27,51,887.
 
 ## Open questions (confirm before bank submission)
 
-- **Navkar quote 3 extra component sets (~₹2,63,199):** quote has 9× RAM/SSD/cooler + 8× PSU/case but only 6 new CPU+board builds. Confirm intended (spares / SIM-02+08 upgrades) or trim → loan drops to ₹26,68,611. See [[2026-06-27-navkar-pc-display-quote]].
+- ~~**Navkar quote 3 extra component sets (~₹2,63,199):** quote has 9× RAM/SSD/cooler + 8× PSU/case but only 6 new CPU+board builds. Confirm intended or trim → loan drops to ₹26,68,611.~~ ✅ **RESOLVED (2026-07-07):** spares kept as inventory; loan ask stays ₹29,31,810. See [[2026-06-27-navkar-pc-display-quote]].
 - **Owned sim-hardware values (wheelbases/wheels/pedals):** EST landed/replacement values for the in-kind contribution total; confirm if bank wants documented valuation.
 
 ## Resolved (2026-06-27, round 2)

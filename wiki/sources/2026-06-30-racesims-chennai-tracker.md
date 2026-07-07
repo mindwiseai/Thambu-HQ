@@ -24,7 +24,7 @@ The Chennai Studio at 1,146 sq ft (Ground Floor, 9 First Cross Street, Second Av
 - **Paid to date:** ₹4,52,750
 - **Outstanding (quoted):** ₹25,61,376
 - **Unquoted section:** Section 5 — 11 fit-out items still pending quote
-- **Reconciliation:** unified project ₹55,53,810 = hardware asset register ₹48,30,434 + known fit-out ₹7,23,376. Funded by in-kind ₹15,95,874 + paid ₹4,52,750 + loan ₹29,31,810 + fit-out to pay ₹5,73,376. (Loan drops to ₹26,68,611 if 3 Navkar spare sets trimmed.)
+- **Reconciliation:** unified project ₹55,53,810 = hardware asset register ₹48,30,434 + known fit-out ₹7,23,376. Funded by in-kind ₹15,95,874 + paid ₹4,52,750 + loan ₹29,31,810 + fit-out to pay ₹5,73,376. (Loan ask final: 3 Navkar spare sets ₹2,63,199 **kept as inventory**, confirmed 2026-07-07.)
 
 ## Vendor quotes — confirmed
 

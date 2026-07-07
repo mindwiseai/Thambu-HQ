@@ -25,6 +25,8 @@ Dated supplier quote from Navkar Computers for the [[racesims-chennai-flagship|C
 
 > [!contradiction]
 > **Quantity mismatch — possible over-quote.** The quote provisions **9× RAM, 9× SSD, 9× AIO cooler, 8× RM850e PSU, 8× 3500X case** but only **6× CPU + 6× motherboard + 4× GPU**. The build plan is 6 new PCs (SIM-01, 03–07). That leaves **3 extra sets of RAM/SSD/cooler + 2 extra PSU/case ≈ ₹2,63,199** with no CPU/board/GPU. Either intended (spares / new internals for the SIM-02 & SIM-08 owned PCs) or Navkar forgot to trim component qty when the owned CPUs/boards were removed. **Confirm with Navkar before payment** — trimming drops the loan ask from ₹29,31,810 to ₹26,68,611.
+>
+> ✅ **RESOLVED (2026-07-07, Thambu):** spares are **intentional — kept as inventory**. Quote stands at ₹19,88,000; loan ask stays **₹29,31,810** (not trimmed).
 
 ## Backlinks
 
