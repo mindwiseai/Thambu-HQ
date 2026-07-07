@@ -72,6 +72,9 @@ raw/racesims/08_Software/
 *.woff
 *.woff2
 **/*.i2wkb
+
+# Co-work project trackers — keep these tracked despite the *.xlsx rule above
+!racesims/Racesims Studio, Chennai/*.xlsx
 **/*.c125v64
 *.asc
 *.blf
