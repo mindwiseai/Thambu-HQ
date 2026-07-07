@@ -8,11 +8,15 @@ updated: 2026-07-03
 
 Most recently touched context. Read this first for any query — it often answers the question alone. Trim to ~500 words; drop oldest entries first.
 
-## 2026-07-03 — IERL upcoming centre pipeline confirmed
-- **Post-July pipeline (Thambu, confirmed):** [[drivextreme]] (Coimbatore, Raghav) 3 · [[racesims-studio]] 8 · [[garvish]] 7 · [[davlish]] 3 = **21 new pods**. If all onboard → **10 centres / 45 rigs**, ₹2,222/rig at the ₹1L pool. Month each joins TBD.
-- **July round (confirmed roster of 6):** RPE 10 · Sim Racing Adda 4 · Niyusuki 3 · Lights Out 3 · BBS 2 · Virtual Adda 2 = **24 rigs**, ₹4,200/rig, ₹1,00,800.
-- ⚠ **Open before deck regen:** RPE rig count (wiki/deck say 10; earlier chat said Uday=8) and pool size (₹1L vs a ₹50K variant explored in chat). Both need Thambu to confirm.
-- Source: [[ierl-prize-pool-formula]], [[2026-06-19-ierl-july-launch]].
+## 2026-07-07 — IERL July round LOCKED (₹50K pool, 22 pods)
+- **Decisions resolved (Thambu):** RPE = **8 pods**; July pool = **₹50,000**.
+- **July roster (6 centres, 22 pods, ₹2,300/pod, ₹50,600 collected, ₹600 surplus):** RPE 8 · Sim Racing Adda 4 · Niyusuki 3 · Lights Out 3 · BBS 2 · Virtual Adda 2. No local prizes.
+- **Split 40/60:** Am (₹20K) 12,500/5,000/2,500 · Pro (₹30K) 17,500/7,500/5,000. Settlement = max 2 UPI transfers/centre, Pro-first; ₹600 surplus stays with Virtual Adda.
+- **Upcoming pipeline:** [[drivextreme]] 3 · [[racesims-studio]] 8 · [[garvish]] 7 · [[davlish]] 3 = +21 pods.
+- **Cowork framework:** `racesims/ierl/PROJECT-INSTRUCTIONS.md` (monthly cycle) + `racesims/ierl/SESSION-HANDOFF.md` (current state).
+- ⚠ **Deck still shows OLD numbers** (₹4,200/pod, ₹1L, 24 pods) — regenerate to match this locked round.
+- Source: [[ierl-prize-pool-formula]].
+
 
 ## 2026-06-27 — Chennai loan proposal · ask ₹29,31,810
 - Bank own-vs-buy register: total studio hardware **₹48,30,434** = Owned ₹18,98,624 (39%) + loan ask ₹29,31,810 (61%). Deliverable: `~/Desktop/RaceSims-Chennai-Loan-Proposal.xlsx`.
