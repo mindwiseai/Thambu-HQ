@@ -26,11 +26,44 @@
 
 ## Payment Tracker Summary
 
-### Known Totals
+### Known Totals (cash payable to vendors)
+
+This tracker covers **cash going out to vendors** — PCs/monitors, AC, UPS, electrical, design. It deliberately **excludes imported sim hardware** (wheelbases, seats, motion platform, frames — built from RaceSims stock, not a cash purchase).
+
 | Category | Total | Paid | Outstanding |
 |----------|-------|------|-------------|
-| All quoted lines | ₹49,63,126 | ₹4,52,750 | ₹45,10,376 |
+| All quoted lines | ₹30,14,126 | ₹4,52,750 | ₹25,61,376 |
 | Section 5 fit-out (unquoted) | TBD | — | TBD |
+
+> Composition: Navkar PC/displays ₹19,88,000 + already-paid Samsung/RTX 5080 ₹3,02,750 + AC ₹3,84,576 + UPS ₹1,88,800 + design & electrical advance ₹1,50,000.
+
+### Reconciliation — two views of the same project
+
+There are two legitimate lenses on Chennai, built for different audiences. They measure different scopes, so they are **not** meant to be equal — but they reconcile exactly once separated.
+
+**Lens A — Bank asset register (loan application):** total rig *hardware value*, owned vs to-buy. Excludes all fit-out.
+
+| | Amount |
+|--|--|
+| Owned (promoter in-kind, in stock) | ₹18,98,624 |
+| To purchase (loan ask) | ₹29,31,810 |
+| **Total studio hardware** | **₹48,30,434** |
+
+*Loan ask ₹29,31,810 assumes keeping 3 spare Navkar component sets (₹2,63,199). Trimming them → loan ₹26,68,611.*
+
+**Lens B — Payment tracker (this file):** *cash paid to vendors*, incl. fit-out, excl. in-stock sim hardware. Known ₹30,14,126 (above).
+
+**Unified project view (the bridge — ties to ₹55,53,810):**
+
+| Funding source | Amount | Notes |
+|----------------|--------|-------|
+| Promoter in-kind (owned hardware, no cash) | ₹15,95,874 | Asset register owned ₹18,98,624 − paid Samsung/5080 ₹3,02,750 |
+| Cash already paid | ₹4,52,750 | Samsung + RTX 5080 + design + electrical advance |
+| Loan ask (hardware to buy) | ₹29,31,810 | Lens A loan portion |
+| Fit-out still to pay (AC + UPS) | ₹5,73,376 | Design & electrical advance already counted as paid |
+| **Total project (ex Section 5)** | **₹55,53,810** | = hardware ₹48,30,434 + known fit-out ₹7,23,376 |
+
+Section 5 (11 fit-out items) + electrical balance + lighting + TP-Link are still unquoted and sit on top of this.
 
 ### Section 1A — Navkar Computers (PC & Monitors)
 **Quote ref:** Navkar_Quote_Converted.xlsx · 19 Jun 2026 · **₹19,88,000**

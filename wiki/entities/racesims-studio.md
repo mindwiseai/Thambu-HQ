@@ -26,12 +26,14 @@ The RaceSims Chennai Studio — the direct-operated sim racing centre under [[ra
 
 | Category | Status | Amount |
 |----------|--------|--------|
-| All quoted lines total | Quoted | ₹49,63,126 |
+| Tracker cash-out (excl. in-stock sim HW) | Quoted | ₹30,14,126 |
 | Paid to date | Paid | ₹4,52,750 |
-| Outstanding (quoted) | Pending | ₹45,10,376 |
+| Outstanding (quoted) | Pending | ₹25,61,376 |
 | Section 5 (11 fit-out items) | Unquoted | TBD |
 
 **Paid items:** Samsung monitors ₹1,86,750 · RTX 5080 FE ₹1,16,000 · Sorted designer fee ₹50,000 · Venus Electricals advance ₹1,00,000.
+
+**Two-lens reconciliation:** the tracker (vendor cash-out) and the [[racesims-chennai-rig-config|bank asset register]] (hardware-only ₹48,30,434 = owned ₹18,98,624 + loan ₹29,31,810) measure different scopes and reconcile to a **unified project total of ₹55,53,810** (hardware ₹48,30,434 + known fit-out ₹7,23,376). Funded by in-kind ₹15,95,874 + paid ₹4,52,750 + loan ₹29,31,810 + fit-out to pay ₹5,73,376. See [[2026-06-30-racesims-chennai-tracker]].
 
 ## Existing rigs (pre-procurement)
 

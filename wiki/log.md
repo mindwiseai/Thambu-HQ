@@ -24,7 +24,13 @@ type: meta
 - Created: 3 new pages ([[2026-06-30-racesims-chennai-tracker]] · [[subhashree-solutions]] · [[navkar-computers]])
 - Updated: 4 existing pages ([[racesims-studio]] · [[racesims-chennai-fitout]] · [[guru-moorthy]] · [[hot]])
 - Domain: racesims
-- Key facts: Studio confirmed at 1,146 sq ft, Ashok Nagar Chennai · 8 rigs SIM-01→SIM-08 · all-quoted total ₹49,63,126 · paid ₹4,52,750 · outstanding ₹45,10,376 · Section 5 (11 items) unquoted. AC confirmed Subhashree Solutions ₹3,84,576 (2×4TR cassette + 1×1.5TR split). UPS confirmed Soundry ₹1,88,800. PC/monitors Navkar ₹19,88,000.
+- Key facts: Studio confirmed at 1,146 sq ft, Ashok Nagar Chennai · 8 rigs SIM-01→SIM-08 · tracker cash-out ₹30,14,126 · paid ₹4,52,750 · outstanding ₹25,61,376 · Section 5 (11 items) unquoted. AC confirmed Subhashree Solutions ₹3,84,576 (2×4TR cassette + 1×1.5TR split). UPS confirmed Soundry ₹1,88,800. PC/monitors Navkar ₹19,88,000. Reconciled to asset register (hardware ₹48,30,434) → unified project ₹55,53,810.
+
+## [2026-07-07] edit | Chennai tracker figures reconciled + corrected
+- Corrected erroneous ₹49,63,126 all-quoted headline (double-counted vendor cash-out + in-kind hardware) → tracker cash-out ₹30,14,126 / outstanding ₹25,61,376.
+- Added two-lens reconciliation (payment tracker vs [[racesims-chennai-rig-config|bank asset register]]) → unified project ₹55,53,810. New Reconciliation tab in tracker xlsx.
+- Updated: brief (`racesims/Racesims Studio, Chennai/`), [[2026-06-30-racesims-chennai-tracker]], [[racesims-studio]], [[hot]].
+- Domain: racesims
 
 ## [2026-06-27] ingest | Navkar Computers PC & Display Quote
 - Source: [[2026-06-27-navkar-pc-display-quote]] (₹19,88,000 grand total; raw xlsx copied to `racesims/marketing/partnerships/quotes/`)

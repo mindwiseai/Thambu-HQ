@@ -13,17 +13,18 @@ Verified figures from confirmed vendor quotes and paid invoices as at 30 June 20
 
 ## Summary
 
-The Chennai Studio at 1,146 sq ft (Ground Floor, 9 First Cross Street, Second Avenue, Ashok Nagar) has 8 simulator rigs (SIM-01 through SIM-08). Total quoted spend across all confirmed vendors is ₹49,63,126. Of that, ₹4,52,750 has been paid. Outstanding quoted balance is ₹45,10,376. A further 11 fit-out items (Section 5) are still unquoted.
+The Chennai Studio at 1,146 sq ft (Ground Floor, 9 First Cross Street, Second Avenue, Ashok Nagar) has 8 simulator rigs (SIM-01 through SIM-08). The payment tracker covers **vendor cash-out** (PCs/monitors, AC, UPS, electrical, design), excluding imported sim hardware built from RaceSims stock: known quoted **₹30,14,126**, of which **₹4,52,750** is paid, leaving **₹25,61,376** outstanding, plus 11 unquoted Section-5 fit-out items. This is a different scope from the [[racesims-chennai-rig-config|bank asset register]] (hardware-only ₹48,30,434 = owned ₹18,98,624 + loan ask ₹29,31,810); the two reconcile to a unified project total of **₹55,53,810** (hardware ₹48,30,434 + known fit-out ₹7,23,376).
 
 ## Key facts
 
 - **Location:** Ground Floor, 9 First Cross Street, Second Avenue, Ashok Nagar, Chennai — 1,146 sq ft
 - **Rig count:** 8 rigs (SIM-01 through SIM-08)
 - **Existing rigs:** SIM-02 (Ryzen 5700 / RTX 4070, existing PC), SIM-08 (PC fully in stock)
-- **All-quoted total:** ₹49,63,126
+- **Tracker known cash-out (excl. in-stock sim hardware):** ₹30,14,126
 - **Paid to date:** ₹4,52,750
-- **Outstanding (quoted):** ₹45,10,376
+- **Outstanding (quoted):** ₹25,61,376
 - **Unquoted section:** Section 5 — 11 fit-out items still pending quote
+- **Reconciliation:** unified project ₹55,53,810 = hardware asset register ₹48,30,434 + known fit-out ₹7,23,376. Funded by in-kind ₹15,95,874 + paid ₹4,52,750 + loan ₹29,31,810 + fit-out to pay ₹5,73,376. (Loan drops to ₹26,68,611 if 3 Navkar spare sets trimmed.)
 
 ## Vendor quotes — confirmed
 
@@ -104,9 +105,9 @@ The Chennai Studio at 1,146 sq ft (Ground Floor, 9 First Cross Street, Second Av
 | Soundry Power Systems (UPS) | ₹1,88,800 |
 | Sorted Agency designer fee (PAID) | ₹50,000 |
 | Venus Electricals advance (PAID) | ₹1,00,000 |
-| **All quoted total** | **₹49,63,126** |
+| **All quoted total (cash-out)** | **₹30,14,126** |
 | **Paid to date** | **₹4,52,750** |
-| **Outstanding (quoted)** | **₹45,10,376** |
+| **Outstanding (quoted)** | **₹25,61,376** |
 | Section 5 — 11 fit-out items unquoted | TBD | |
 
 ## Decisions
