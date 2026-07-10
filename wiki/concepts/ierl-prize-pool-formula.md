@@ -24,9 +24,9 @@ Default target pool is ₹1,00,000. **July 2026 launches at a ₹50,000 pool** (
 | [[racing-point-esports]] | Hyderabad | 8 | ₹18,400 |
 | Sim Racing Adda | Delhi | 4 | ₹9,200 |
 | Niyusuki Sim Racers | Cochin | 3 | ₹6,900 |
-| Lights Out Racing | Delhi | 3 | ₹6,900 |
+| Lights Out Racing | Gurgaon | 3 | ₹6,900 |
 | BBS Adrenaline Apex | Mangalore | 2 | ₹4,600 |
-| Virtual Adda | Mumbai | 2 | ₹4,600 |
+| Virtual Adda | Thane | 2 | ₹4,600 |
 | **Total** | | **22** | **₹50,600** |
 
 No local prizes this round.
