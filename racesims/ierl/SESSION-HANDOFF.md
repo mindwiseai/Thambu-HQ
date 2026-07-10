@@ -20,9 +20,9 @@ Working on the **Indian Esports Racing League (IERL)** — a monthly sim-racing 
 | Racing Point Esports (Uday) | Hyderabad | 8 | ₹18,400 |
 | Sim Racing Adda | Delhi | 4 | ₹9,200 |
 | Niyusuki Sim Racers | Cochin | 3 | ₹6,900 |
-| Lights Out Racing | Delhi | 3 | ₹6,900 |
+| Lights Out Racing | Gurgaon | 3 | ₹6,900 |
 | BBS Adrenaline Apex | Mangalore | 2 | ₹4,600 |
-| Virtual Adda | Mumbai | 2 | ₹4,600 |
+| Virtual Adda | Thane | 2 | ₹4,600 |
 
 ### Prize split — Amateur 40% (₹20K) / Pro 60% (₹30K)
 | Place | Amateur | Pro |
